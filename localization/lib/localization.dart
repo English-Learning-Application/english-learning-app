@@ -1,4 +1,4 @@
-library mexer_app;
+library localization;
 
 /// A Calculator.
 class Calculator {

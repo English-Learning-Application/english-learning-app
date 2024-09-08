@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:mexer_app/mexer_app.dart';
+import 'package:localization/localization.dart';
 
 void main() {
   test('adds one to input values', () {
