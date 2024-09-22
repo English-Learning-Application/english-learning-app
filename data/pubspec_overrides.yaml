@@ -1,4 +1,12 @@
-# melos_managed_dependency_overrides: services
+# melos_managed_dependency_overrides: services,logic,app,design,initializer
 dependency_overrides:
+  app:
+    path: ../app
+  design:
+    path: ../design
+  initializer:
+    path: ../initializer
+  logic:
+    path: ../logic
   services:
     path: ../services

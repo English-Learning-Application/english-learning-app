@@ -2,6 +2,7 @@ name: initializer
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
+publish_to: 'none'
 
 environment:
   sdk: '>=3.3.4 <4.0.0'
@@ -10,6 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  services:
+    path: ../services
+  logic:
+    path: ../logic
+  data:
+    path: ../data
 
 dev_dependencies:
   flutter_test:

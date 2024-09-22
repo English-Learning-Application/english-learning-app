@@ -23,6 +23,11 @@ dependencies:
   tuple: ^2.0.2
   services:
     path: ../services
+  logic:
+    path: ../logic
+  connectivity_plus: ^6.0.5
+  dio_cache_interceptor: ^3.5.0
+  dartx: ^1.2.0
 
 dev_dependencies:
   flutter_test:

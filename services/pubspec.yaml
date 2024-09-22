@@ -25,6 +25,10 @@ dependencies:
   rxdart: ^0.28.0
   timezone: ^0.9.4
   package_info_plus: ^8.0.2
+  firebase_messaging: ^15.1.2
+  logic:
+    path: ../logic
+  flutter_local_notifications: ^17.2.3
 
 dev_dependencies:
   flutter_test:
