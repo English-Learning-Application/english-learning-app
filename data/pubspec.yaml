@@ -34,6 +34,9 @@ dev_dependencies:
   objectbox_generator: ^4.0.2
   build_runner: ^2.4.9
 
+objectbox:
+  output_dir: src/app_repository/source/database/objectbox
+
 flutter:
 
   # To add assets to your package, add an assets section, like this:

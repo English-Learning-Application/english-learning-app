@@ -1,7 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'objectbox.g.dart' show getObjectBoxModel;
 import 'package:objectbox/objectbox.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:services/services.dart';
@@ -18,9 +17,16 @@ abstract class DataModule {
   Future<Store> getStore() async {
     final dir = await getApplicationDocumentsDirectory();
     final directory = '${dir.path}/${DatabaseConstants.databaseName}';
-
-    return Store(getObjectBoxModel(),
-        directory: '${dir.path}/${DatabaseConstants.databaseName}');
+    if (Store.isOpen(directory)) {
+      return Store.attach(
+        getObjectBoxModel(),
+        directory,
+      );
+    }
+    return Store(
+      getObjectBoxModel(),
+      directory: directory,
+    );
   }
 }
 
