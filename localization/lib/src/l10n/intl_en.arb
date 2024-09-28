@@ -1,3 +1,18 @@
 {
-    "login": "Login"
+    "login": "Login",
+    "ok": "OK",
+    "error1": "Unidentified error",
+    "unknownException": "Unidentified error ({errorCode})",
+    "parseException": "Parse Exception",
+    "cancellationException": "Cancellation",
+    "noInternetException": "No Internet",
+    "timeoutException": "Timeout",
+    "badCertificateException": "Bad Certificate",
+    "canNotConnectToHost": "Can not connect to host",
+    "tokenExpired": "Token expired",
+    "invalidUserName": "Wrong username format",
+    "invalidDateTime": "Wrong date time format",
+    "cancel": "Cancel",
+    "retry": "Retry",
+    "pressAgainToExit": "Press again to exit"
 }

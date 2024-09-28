@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  melos: 6.0.0
+  melos: 6.1.0
 
 dev_dependencies:
   flutter_test:

@@ -11,6 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  services:
+    path: ../services
+  app:
+    path: ../app
 
 dev_dependencies:
   flutter_test:

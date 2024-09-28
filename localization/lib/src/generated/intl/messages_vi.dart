@@ -20,8 +20,33 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'vi';
 
+  static String m0(errorCode) => "Lỗi không xác định (${errorCode})";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "login": MessageLookupByLibrary.simpleMessage("Đăng nhập")
+        "badCertificateException":
+            MessageLookupByLibrary.simpleMessage("Lỗi bảo mật chứng chỉ"),
+        "canNotConnectToHost": MessageLookupByLibrary.simpleMessage(
+            "Không thể kết nối đến máy chủ"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
+        "cancellationException":
+            MessageLookupByLibrary.simpleMessage("Lỗi hủy"),
+        "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
+        "invalidDateTime":
+            MessageLookupByLibrary.simpleMessage("Định dạng ngày giờ sai"),
+        "invalidUserName":
+            MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
+        "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
+        "noInternetException":
+            MessageLookupByLibrary.simpleMessage("Không có mạng"),
+        "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "parseException": MessageLookupByLibrary.simpleMessage("Lỗi định dạng"),
+        "pressAgainToExit":
+            MessageLookupByLibrary.simpleMessage("Bấm lại để thoát"),
+        "retry": MessageLookupByLibrary.simpleMessage("Thử lại"),
+        "timeoutException":
+            MessageLookupByLibrary.simpleMessage("Quá thời gian kết nối"),
+        "tokenExpired": MessageLookupByLibrary.simpleMessage("Token hết hạn"),
+        "unknownException": m0
       };
 }

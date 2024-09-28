@@ -2,7 +2,6 @@ import 'package:initializer/initializer.dart';
 import 'package:services/services.dart';
 
 import '../di/di.dart';
-import '../app.dart';
 
 class AppConfig extends ApplicationConfig {
   static final AppConfig _instance = AppConfig._();

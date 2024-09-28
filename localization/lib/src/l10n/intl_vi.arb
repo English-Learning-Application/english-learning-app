@@ -1,3 +1,18 @@
 {
-    "login": "Đăng nhập"
+    "login": "Đăng nhập",
+    "ok": "OK",
+    "error1": "Lỗi không xác định",
+    "unknownException": "Lỗi không xác định ({errorCode})",
+    "parseException": "Lỗi định dạng",
+    "cancellationException": "Lỗi hủy",
+    "noInternetException": "Không có mạng",
+    "timeoutException": "Quá thời gian kết nối",
+    "badCertificateException": "Lỗi bảo mật chứng chỉ",
+    "canNotConnectToHost": "Không thể kết nối đến máy chủ",
+    "tokenExpired": "Token hết hạn",
+    "invalidUserName": "Định dạng username sai",
+    "invalidDateTime": "Định dạng ngày giờ sai",
+    "cancel": "Huỷ",
+    "retry": "Thử lại",
+    "pressAgainToExit": "Bấm lại để thoát"
 }

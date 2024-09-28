@@ -59,6 +59,156 @@ class S {
       args: [],
     );
   }
+
+  /// `OK`
+  String get ok {
+    return Intl.message(
+      'OK',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unidentified error`
+  String get error1 {
+    return Intl.message(
+      'Unidentified error',
+      name: 'error1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unidentified error ({errorCode})`
+  String unknownException(Object errorCode) {
+    return Intl.message(
+      'Unidentified error ($errorCode)',
+      name: 'unknownException',
+      desc: '',
+      args: [errorCode],
+    );
+  }
+
+  /// `Parse Exception`
+  String get parseException {
+    return Intl.message(
+      'Parse Exception',
+      name: 'parseException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancellation`
+  String get cancellationException {
+    return Intl.message(
+      'Cancellation',
+      name: 'cancellationException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Internet`
+  String get noInternetException {
+    return Intl.message(
+      'No Internet',
+      name: 'noInternetException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Timeout`
+  String get timeoutException {
+    return Intl.message(
+      'Timeout',
+      name: 'timeoutException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bad Certificate`
+  String get badCertificateException {
+    return Intl.message(
+      'Bad Certificate',
+      name: 'badCertificateException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Can not connect to host`
+  String get canNotConnectToHost {
+    return Intl.message(
+      'Can not connect to host',
+      name: 'canNotConnectToHost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Token expired`
+  String get tokenExpired {
+    return Intl.message(
+      'Token expired',
+      name: 'tokenExpired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong username format`
+  String get invalidUserName {
+    return Intl.message(
+      'Wrong username format',
+      name: 'invalidUserName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong date time format`
+  String get invalidDateTime {
+    return Intl.message(
+      'Wrong date time format',
+      name: 'invalidDateTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Retry`
+  String get retry {
+    return Intl.message(
+      'Retry',
+      name: 'retry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Press again to exit`
+  String get pressAgainToExit {
+    return Intl.message(
+      'Press again to exit',
+      name: 'pressAgainToExit',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

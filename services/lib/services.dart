@@ -55,3 +55,4 @@ export 'src/services/notifications/local_push_notification_service.dart';
 export 'src/services/notifications/remote_push_notification_service.dart';
 export 'src/global_constants/notification/notification_constants.dart';
 export 'src/global_constants/format/date_time_format_constants.dart';
+export 'src/utils/num_utils.dart';

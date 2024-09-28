@@ -1,5 +1,5 @@
+import 'package:app/resource/styles/app_themes.dart';
 import 'package:flutter/material.dart';
-import 'package:app/app.dart';
 import 'package:services/services.dart';
 
 enum InitialAppRoute {

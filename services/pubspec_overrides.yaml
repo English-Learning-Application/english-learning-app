@@ -1,4 +1,4 @@
-# melos_managed_dependency_overrides: logic,app,design,initializer,data
+# melos_managed_dependency_overrides: logic,app,design,initializer,data,localization
 dependency_overrides:
   app:
     path: ../app
@@ -8,5 +8,7 @@ dependency_overrides:
     path: ../design
   initializer:
     path: ../initializer
+  localization:
+    path: ../localization
   logic:
     path: ../logic

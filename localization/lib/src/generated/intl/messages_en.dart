@@ -20,8 +20,33 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(errorCode) => "Unidentified error (${errorCode})";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "login": MessageLookupByLibrary.simpleMessage("Login")
+        "badCertificateException":
+            MessageLookupByLibrary.simpleMessage("Bad Certificate"),
+        "canNotConnectToHost":
+            MessageLookupByLibrary.simpleMessage("Can not connect to host"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "cancellationException":
+            MessageLookupByLibrary.simpleMessage("Cancellation"),
+        "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
+        "invalidDateTime":
+            MessageLookupByLibrary.simpleMessage("Wrong date time format"),
+        "invalidUserName":
+            MessageLookupByLibrary.simpleMessage("Wrong username format"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "noInternetException":
+            MessageLookupByLibrary.simpleMessage("No Internet"),
+        "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "parseException":
+            MessageLookupByLibrary.simpleMessage("Parse Exception"),
+        "pressAgainToExit":
+            MessageLookupByLibrary.simpleMessage("Press again to exit"),
+        "retry": MessageLookupByLibrary.simpleMessage("Retry"),
+        "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),
+        "tokenExpired": MessageLookupByLibrary.simpleMessage("Token expired"),
+        "unknownException": m0
       };
 }
