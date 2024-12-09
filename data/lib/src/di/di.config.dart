@@ -84,6 +84,29 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     final dataModule = _$DataModule();
+    gh.factory<_i626.ApiCountryDataMapper>(() => _i626.ApiCountryDataMapper());
+    gh.factory<_i728.ApiMediaDataMapper>(() => _i728.ApiMediaDataMapper());
+    gh.factory<_i305.ApiAppNotificationDataMapper>(
+        () => _i305.ApiAppNotificationDataMapper());
+    gh.factory<_i348.ApiRandomUserNameDataMapper>(
+        () => _i348.ApiRandomUserNameDataMapper());
+    gh.factory<_i639.ApiTokenDataMapper>(() => _i639.ApiTokenDataMapper());
+    gh.factory<_i68.ApiUserInfoDataMapper>(() => _i68.ApiUserInfoDataMapper());
+    gh.factory<_i646.AppThemeDataMapper>(() => _i646.AppThemeDataMapper());
+    gh.factory<_i551.CommonErrorResponseMapper>(
+        () => _i551.CommonErrorResponseMapper());
+    gh.factory<_i478.FirebaseStorageErrorResponseMapper>(
+        () => _i478.FirebaseStorageErrorResponseMapper());
+    gh.factory<_i117.GoongErrorResponseMapper>(
+        () => _i117.GoongErrorResponseMapper());
+    gh.factory<_i198.JsonArrayErrorResponseMapper>(
+        () => _i198.JsonArrayErrorResponseMapper());
+    gh.factory<_i8.JsonObjectErrorResponseMapper>(
+        () => _i8.JsonObjectErrorResponseMapper());
+    gh.factory<_i342.LineErrorResponseMapper>(
+        () => _i342.LineErrorResponseMapper());
+    gh.factory<_i441.TwitterErrorResponseMapper>(
+        () => _i441.TwitterErrorResponseMapper());
     await gh.factoryAsync<_i460.SharedPreferences>(
       () => dataModule.prefs,
       preResolve: true,
@@ -95,29 +118,6 @@ extension GetItInjectableX on _i174.GetIt {
       () => dataModule.getStore(),
       preResolve: true,
     );
-    gh.factory<_i646.AppThemeDataMapper>(() => _i646.AppThemeDataMapper());
-    gh.factory<_i639.ApiTokenDataMapper>(() => _i639.ApiTokenDataMapper());
-    gh.factory<_i68.ApiUserInfoDataMapper>(() => _i68.ApiUserInfoDataMapper());
-    gh.factory<_i728.ApiMediaDataMapper>(() => _i728.ApiMediaDataMapper());
-    gh.factory<_i348.ApiRandomUserNameDataMapper>(
-        () => _i348.ApiRandomUserNameDataMapper());
-    gh.factory<_i305.ApiAppNotificationDataMapper>(
-        () => _i305.ApiAppNotificationDataMapper());
-    gh.factory<_i626.ApiCountryDataMapper>(() => _i626.ApiCountryDataMapper());
-    gh.factory<_i342.LineErrorResponseMapper>(
-        () => _i342.LineErrorResponseMapper());
-    gh.factory<_i198.JsonArrayErrorResponseMapper>(
-        () => _i198.JsonArrayErrorResponseMapper());
-    gh.factory<_i8.JsonObjectErrorResponseMapper>(
-        () => _i8.JsonObjectErrorResponseMapper());
-    gh.factory<_i117.GoongErrorResponseMapper>(
-        () => _i117.GoongErrorResponseMapper());
-    gh.factory<_i551.CommonErrorResponseMapper>(
-        () => _i551.CommonErrorResponseMapper());
-    gh.factory<_i478.FirebaseStorageErrorResponseMapper>(
-        () => _i478.FirebaseStorageErrorResponseMapper());
-    gh.factory<_i441.TwitterErrorResponseMapper>(
-        () => _i441.TwitterErrorResponseMapper());
     gh.factory<_i77.HeaderInterceptor>(
         () => _i77.HeaderInterceptor(gh<_i473.AppInfo>()));
     gh.factory<_i1028.ApiUserDataMapper>(() => _i1028.ApiUserDataMapper(

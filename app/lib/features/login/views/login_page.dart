@@ -14,7 +14,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends BasePageState<LoginPage, LoginViewModel> {
   @override
   Widget buildPage(BuildContext context) {
-    return CommonScaffold(body: Container());
+    return CommonScaffold(
+      body: Assets.icons.icArrowLeft.svg(),
+    );
   }
 
   @override

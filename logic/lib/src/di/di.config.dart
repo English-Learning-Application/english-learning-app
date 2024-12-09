@@ -44,22 +44,22 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.AppRepository>(),
           gh<_i182.AppNavigator>(),
         ));
-    gh.factory<_i732.TrackConnectivityUseCase>(
-        () => _i732.TrackConnectivityUseCase(gh<_i182.AppRepository>()));
-    gh.factory<_i162.GetInitialAppDataUseCase>(
-        () => _i162.GetInitialAppDataUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i900.ClearCurrentUserDataUseCase>(
+        () => _i900.ClearCurrentUserDataUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i75.GetCurrentPrefUserUseCase>(
         () => _i75.GetCurrentPrefUserUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i162.GetInitialAppDataUseCase>(
+        () => _i162.GetInitialAppDataUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i281.GetUsersUseCase>(
+        () => _i281.GetUsersUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i688.IsLoggedInUseCase>(
+        () => _i688.IsLoggedInUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i616.SaveLanguageCodeUseCase>(
         () => _i616.SaveLanguageCodeUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i783.SaveThemeModeUseCase>(
         () => _i783.SaveThemeModeUseCase(gh<_i182.AppRepository>()));
-    gh.factory<_i900.ClearCurrentUserDataUseCase>(
-        () => _i900.ClearCurrentUserDataUseCase(gh<_i182.AppRepository>()));
-    gh.factory<_i688.IsLoggedInUseCase>(
-        () => _i688.IsLoggedInUseCase(gh<_i182.AppRepository>()));
-    gh.factory<_i281.GetUsersUseCase>(
-        () => _i281.GetUsersUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i732.TrackConnectivityUseCase>(
+        () => _i732.TrackConnectivityUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i119.RegisterFcmTokenUseCase>(
         () => _i119.RegisterFcmTokenUseCase(
               gh<_i182.NotificationRepository>(),

@@ -35,8 +35,8 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i1056.LoginViewModel>(() => _i1056.LoginViewModel());
     gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel());
+    gh.factory<_i1056.LoginViewModel>(() => _i1056.LoginViewModel());
     gh.lazySingleton<_i137.BaseRouteInfoMapper>(
         () => _i48.AppRouteInfoMapper());
     gh.factory<_i635.SplashViewModel>(() => _i635.SplashViewModel(

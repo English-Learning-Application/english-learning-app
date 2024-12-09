@@ -25,14 +25,12 @@ class AppRouter extends $AppRouter {
           path: '/login',
           page: LoginRoute.page,
         ),
-        CustomRoute(
+        AutoRoute(
           path: '/home',
           guards: [
             _routeGuard,
           ],
           page: HomeRoute.page,
-          transitionsBuilder: TransitionsBuilders.slideRightWithFade,
-          durationInMilliseconds: 300,
         ),
       ];
 }
