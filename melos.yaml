@@ -1,4 +1,4 @@
-name: mexer_app_user
+name: english_app_user
 
 packages:
   - ./**

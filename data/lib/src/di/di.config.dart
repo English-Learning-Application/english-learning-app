@@ -64,6 +64,14 @@ import 'package:data/src/base/middleware/header_interceptor.dart' as _i77;
 import 'package:data/src/base/middleware/refresh_token_interceptor.dart'
     as _i193;
 import 'package:data/src/di/di.dart' as _i102;
+import 'package:data/src/features/authentication/data_source/api/authentication_api_data_source.dart'
+    as _i920;
+import 'package:data/src/features/authentication/repository/authentication_repository_impl.dart'
+    as _i322;
+import 'package:data/src/features/notification/data_source/api/notification_api_service.dart'
+    as _i82;
+import 'package:data/src/features/notification/repository/notification_repository_impl.dart'
+    as _i946;
 import 'package:dio_cache_interceptor/dio_cache_interceptor.dart' as _i695;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
@@ -131,6 +139,9 @@ extension GetItInjectableX on _i174.GetIt {
         _i416.ApiRandomUserDataMapper(gh<_i437.ApiRandomUserNameDataMapper>()));
     gh.lazySingleton<_i936.NonAuthAppServerApiClient>(
         () => _i936.NonAuthAppServerApiClient(gh<_i437.HeaderInterceptor>()));
+    gh.lazySingleton<_i920.AuthenticationApiDataSource>(() =>
+        _i920.AuthenticationApiDataSource(
+            gh<_i437.NonAuthAppServerApiClient>()));
     gh.lazySingleton<_i906.RandomUserApiClient>(
         () => _i906.RandomUserApiClient(gh<_i695.DioCacheInterceptor>()));
     gh.lazySingleton<_i6.AppDatabase>(
@@ -142,6 +153,9 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.AccessTokenInterceptor>(),
               gh<_i437.HeaderInterceptor>(),
             ));
+    gh.lazySingleton<_i182.AuthenticationRepository>(() =>
+        _i322.AuthenticationRepositoryImpl(
+            gh<_i920.AuthenticationApiDataSource>()));
     gh.lazySingleton<_i600.RefreshTokenApiService>(
         () => _i600.RefreshTokenApiService(gh<_i437.RefreshTokenApiClient>()));
     gh.lazySingleton<_i261.AppApiService>(
@@ -166,6 +180,10 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.RefreshTokenInterceptor>(),
               gh<_i695.DioCacheInterceptor>(),
             ));
+    gh.lazySingleton<_i82.NotificationApiDataSource>(() =>
+        _i82.NotificationApiDataSource(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i182.NotificationRepository>(() =>
+        _i946.NotificationRepositoryImpl(gh<_i82.NotificationApiDataSource>()));
     return this;
   }
 }

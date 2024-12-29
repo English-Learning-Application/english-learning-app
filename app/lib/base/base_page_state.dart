@@ -87,23 +87,26 @@ abstract class BasePageStateDelegate<T extends StatefulWidget,
         create: (_) => navigator,
         child: MultiProvider(
           providers: [
-            Provider<VM>(
+            ListenableProvider<VM>(
               create: (_) => viewModel,
             ),
-            Provider<CommonViewModel>(
+            ListenableProvider<CommonViewModel>(
               create: (_) => commonViewModel,
             ),
           ],
-          child: Selector<CommonViewModel, AppExceptionWrapper?>(
+          child: Selector<CommonViewModel, CommonViewModelData>(
             selector: (_, viewModel) {
-              return viewModel.viewModelData.appExceptionWrapper;
+              return viewModel.viewModelData;
             },
             shouldRebuild: (prev, next) {
-              return prev != next && next != null;
+              final prevAppExceptionWrapper = prev.appExceptionWrapper;
+              final nextAppExceptionWrapper = next.appExceptionWrapper;
+              return prevAppExceptionWrapper != nextAppExceptionWrapper &&
+                  nextAppExceptionWrapper != null;
             },
-            builder: (_, appExceptionWrapper, __) {
-              if (appExceptionWrapper != null) {
-                handleException(appExceptionWrapper);
+            builder: (_, vm, __) {
+              if (vm.appExceptionWrapper != null) {
+                handleException(vm.appExceptionWrapper!);
               }
               return buildPageListeners(
                 child: isAppWidget

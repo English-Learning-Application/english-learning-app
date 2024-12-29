@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:app/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/widgets.dart';
 import 'package:initializer/initializer.dart';
 import 'package:services/services.dart';
@@ -17,6 +19,7 @@ void _reportError(Object error, StackTrace stack) {
 
 Future<void> _runMyApp() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await AppInitializer(AppConfig.getInstance()).init();
   runApp(const App());
 }

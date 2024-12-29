@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "401966118457",
+    "project_id": "flutter-english-learning-app",
+    "storage_bucket": "flutter-english-learning-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401966118457:android:7fc8d4e18afd68a3c83fe8",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWHv0JtGFOBEvJ05JAdTmPd1zpKfJZQzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
