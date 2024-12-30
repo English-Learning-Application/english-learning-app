@@ -31,12 +31,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Cancellation"),
+        "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Wrong date time format"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Wrong username format"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginDescription": MessageLookupByLibrary.simpleMessage(
+            "Login to access all of our services"),
         "loginSubTitle": MessageLookupByLibrary.simpleMessage(
             "Learnings, resources, and support to help you every step of the way on your journey to success."),
         "loginTitle": MessageLookupByLibrary.simpleMessage(
@@ -44,8 +49,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("No Internet"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "or": MessageLookupByLibrary.simpleMessage("Or"),
         "parseException":
             MessageLookupByLibrary.simpleMessage("Parse Exception"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordHint":
+            MessageLookupByLibrary.simpleMessage("Enter your password"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Press again to exit"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),

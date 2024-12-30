@@ -8,7 +8,9 @@ class UIConstants {
 
   static const materialAppTitle = 'Fluentify';
 
-  static const taskMenuMaterialAppColor = Color(0xff50B498);
+  static const appIconHeroTag = 'appIconHeroTag';
+
+  static const taskMenuMaterialAppColor = FoundationColors.primary50;
 
   static const mobileOrientation = [
     DeviceOrientation.portraitUp,

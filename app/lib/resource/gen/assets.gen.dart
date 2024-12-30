@@ -46,14 +46,23 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_arrow_left.svg
   SvgGenImage get icArrowLeft => const SvgGenImage('assets/icons/ic_arrow_left.svg');
 
+  /// File path: assets/icons/ic_eye_close.svg
+  SvgGenImage get icEyeClose => const SvgGenImage('assets/icons/ic_eye_close.svg');
+
+  /// File path: assets/icons/ic_eye_open.svg
+  SvgGenImage get icEyeOpen => const SvgGenImage('assets/icons/ic_eye_open.svg');
+
   /// File path: assets/icons/ic_facebook.svg
   SvgGenImage get icFacebook => const SvgGenImage('assets/icons/ic_facebook.svg');
+
+  /// File path: assets/icons/ic_google.svg
+  SvgGenImage get icGoogle => const SvgGenImage('assets/icons/ic_google.svg');
 
   /// File path: assets/icons/ic_quit.svg
   SvgGenImage get icQuit => const SvgGenImage('assets/icons/ic_quit.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [icArrowLeft, icFacebook, icQuit];
+  List<SvgGenImage> get values => [icArrowLeft, icEyeClose, icEyeOpen, icFacebook, icGoogle, icQuit];
 }
 
 class $AssetsImagesGen {

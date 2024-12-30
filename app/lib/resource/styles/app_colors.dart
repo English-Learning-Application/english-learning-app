@@ -22,7 +22,7 @@ class AppColors {
 
   static const AppColors defaultAppColors = AppColors(
     backgroundColor: FoundationColors.neutral50,
-    primaryColor: FoundationColors.accent500,
+    primaryColor: FoundationColors.primary100,
     secondaryColor: FoundationColors.accent200,
     primaryTextColor: FoundationColors.secondary500,
     secondaryTextColor: FoundationColors.neutral50,

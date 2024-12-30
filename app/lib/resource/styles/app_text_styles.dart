@@ -171,9 +171,34 @@ extension TextColorExtensions on TextStyle {
   TextStyle get error800 => copyWith(color: FoundationColors.error800);
 
   TextStyle get error900 => copyWith(color: FoundationColors.error900);
+
+  // Primary Text Colors
+  TextStyle get primary50 => copyWith(color: FoundationColors.primary50);
+
+  TextStyle get primary100 => copyWith(color: FoundationColors.primary100);
+
+  TextStyle get primary200 => copyWith(color: FoundationColors.primary200);
+
+  TextStyle get primary300 => copyWith(color: FoundationColors.primary300);
+
+  TextStyle get primary400 => copyWith(color: FoundationColors.primary400);
+
+  TextStyle get primary500 => copyWith(color: FoundationColors.primary500);
+
+  TextStyle get primary600 => copyWith(color: FoundationColors.primary600);
+
+  TextStyle get primary700 => copyWith(color: FoundationColors.primary700);
+
+  TextStyle get primary800 => copyWith(color: FoundationColors.primary800);
+
+  TextStyle get primary900 => copyWith(color: FoundationColors.primary900);
 }
 
 extension FontWeightExtensions on TextStyle {
+  TextStyle get ultraBold => copyWith(fontWeight: FontWeight.w900);
+
+  TextStyle get extraBold => copyWith(fontWeight: FontWeight.w800);
+
   TextStyle get bold => copyWith(fontWeight: FontWeight.w700);
 
   TextStyle get semiBold => copyWith(fontWeight: FontWeight.w600);

@@ -31,12 +31,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Lỗi hủy"),
+        "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Định dạng ngày giờ sai"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
+        "loginDescription": MessageLookupByLibrary.simpleMessage(
+            "Đăng nhập để truy cập tất cả các dịch vụ của chúng tôi"),
         "loginSubTitle": MessageLookupByLibrary.simpleMessage(
             "Kiến thức, tài nguyên và hỗ trợ giúp bạn mỗi bước trên hành trình thành công của mình."),
         "loginTitle": MessageLookupByLibrary.simpleMessage(
@@ -44,7 +49,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("Không có mạng"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "or": MessageLookupByLibrary.simpleMessage("Hoặc"),
         "parseException": MessageLookupByLibrary.simpleMessage("Lỗi định dạng"),
+        "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
+        "passwordHint":
+            MessageLookupByLibrary.simpleMessage("Nhập mật khẩu của bạn"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Bấm lại để thoát"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng ký"),

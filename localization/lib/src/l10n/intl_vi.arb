@@ -17,5 +17,11 @@
     "pressAgainToExit": "Bấm lại để thoát",
     "loginTitle": "Tất cả mọi thứ bạn cần đều có tại đây",
     "loginSubTitle": "Kiến thức, tài nguyên và hỗ trợ giúp bạn mỗi bước trên hành trình thành công của mình.",
-    "register": "Đăng ký"
+    "register": "Đăng ký",
+    "loginDescription": "Đăng nhập để truy cập tất cả các dịch vụ của chúng tôi",
+    "emailHint": "Nhập email của bạn",
+    "passwordHint": "Nhập mật khẩu của bạn",
+    "password": "Mật khẩu",
+    "forgotPassword": "Quên mật khẩu?",
+    "or": "Hoặc"
 }

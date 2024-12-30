@@ -17,5 +17,11 @@
     "pressAgainToExit": "Press again to exit",
     "loginTitle": "Everything you need is in one place",
     "loginSubTitle": "Learnings, resources, and support to help you every step of the way on your journey to success.",
-    "register": "Register"
+    "register": "Register",
+    "loginDescription": "Login to access all of our services",
+    "emailHint": "Enter your email",
+    "passwordHint": "Enter your password",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "or": "Or"
 }
