@@ -37,12 +37,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
+        "loginSubTitle": MessageLookupByLibrary.simpleMessage(
+            "Kiến thức, tài nguyên và hỗ trợ giúp bạn mỗi bước trên hành trình thành công của mình."),
+        "loginTitle": MessageLookupByLibrary.simpleMessage(
+            "Tất cả mọi thứ bạn cần đều có tại đây"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("Không có mạng"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "parseException": MessageLookupByLibrary.simpleMessage("Lỗi định dạng"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Bấm lại để thoát"),
+        "register": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "retry": MessageLookupByLibrary.simpleMessage("Thử lại"),
         "timeoutException":
             MessageLookupByLibrary.simpleMessage("Quá thời gian kết nối"),

@@ -3,6 +3,18 @@ import 'dart:ui';
 class FoundationColors {
   const FoundationColors._();
 
+  // Primary Colors
+  static const Color primary50 = Color(0xff203987);
+  static const Color primary100 = Color(0xff3a4b9f);
+  static const Color primary200 = Color(0xff4f5db0);
+  static const Color primary300 = Color(0xff6a74c4);
+  static const Color primary400 = Color(0xff7f85d3);
+  static const Color primary500 = Color(0xff9a9dcf);
+  static const Color primary600 = Color(0xffa3a4d1);
+  static const Color primary700 = Color(0xffb0b1d4);
+  static const Color primary800 = Color(0xffbcbdd6);
+  static const Color primary900 = Color(0xffd0d1dc);
+
   // Accent Colors
   static const Color accent50 = Color(0xffe7f4f4);
   static const Color accent100 = Color(0xffb5dcdc);

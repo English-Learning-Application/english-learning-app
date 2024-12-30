@@ -37,6 +37,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Wrong username format"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginSubTitle": MessageLookupByLibrary.simpleMessage(
+            "Learnings, resources, and support to help you every step of the way on your journey to success."),
+        "loginTitle": MessageLookupByLibrary.simpleMessage(
+            "Everything you need is in one place"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("No Internet"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
@@ -44,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Parse Exception"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Press again to exit"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token expired"),

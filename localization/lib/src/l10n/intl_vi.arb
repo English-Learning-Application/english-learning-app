@@ -14,5 +14,8 @@
     "invalidDateTime": "Định dạng ngày giờ sai",
     "cancel": "Huỷ",
     "retry": "Thử lại",
-    "pressAgainToExit": "Bấm lại để thoát"
+    "pressAgainToExit": "Bấm lại để thoát",
+    "loginTitle": "Tất cả mọi thứ bạn cần đều có tại đây",
+    "loginSubTitle": "Kiến thức, tài nguyên và hỗ trợ giúp bạn mỗi bước trên hành trình thành công của mình.",
+    "register": "Đăng ký"
 }

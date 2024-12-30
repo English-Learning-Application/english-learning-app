@@ -11,7 +11,7 @@ abstract class BaseViewModel<D extends BaseViewModelData>
 }
 
 abstract class BaseViewModelDelegate<D extends BaseViewModelData>
-    extends ChangeNotifier with LogMixin {
+    with LogMixin, ChangeNotifier {
   BaseViewModelDelegate(
     D data,
   ) : viewModelData = data;

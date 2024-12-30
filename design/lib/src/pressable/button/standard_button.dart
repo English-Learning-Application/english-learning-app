@@ -410,7 +410,7 @@ class StandardButton extends StatelessWidget {
   Color _backgroundColor() {
     switch (buttonType) {
       case ButtonType.primary:
-        return FoundationColors.accent500;
+        return FoundationColors.primary50;
       case ButtonType.secondary:
         return FoundationColors.secondary500;
       case ButtonType.tertiary:

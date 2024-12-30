@@ -27,6 +27,9 @@ class _AppState extends BasePageState<App, AppViewModel> {
   bool get isAppWidget => true;
 
   @override
+  void initViewModels() {}
+
+  @override
   Widget buildPage(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(

@@ -13,6 +13,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
   @override
+  void initViewModels() {}
+
+  @override
   Widget buildPage(BuildContext context) {
     return CommonScaffold(body: Container());
   }

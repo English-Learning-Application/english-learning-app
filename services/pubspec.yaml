@@ -29,6 +29,8 @@ dependencies:
   logic:
     path: ../logic
   flutter_local_notifications: ^17.2.3
+  design:
+    path: ../design
 
 dev_dependencies:
   flutter_test:

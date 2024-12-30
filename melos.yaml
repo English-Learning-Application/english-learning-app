@@ -18,3 +18,12 @@ scripts:
   force_build_all:
     run: dart pub global run melos exec --depends-on="build_runner" "flutter packages pub run build_runner build --delete-conflicting-outputs"
     description: build_runner build all modules.
+  force_build_app:
+    run: dart pub global run melos exec --fail-fast --scope="*app*" --depends-on="build_runner" "flutter packages pub run build_runner build --delete-conflicting-outputs"
+    description: build_runner build app module.
+  force_watch_logic:
+    run: dart pub global run melos exec --fail-fast --scope="*logic*" --depends-on="build_runner" "flutter packages pub run build_runner watch --delete-conflicting-outputs"
+    description: build_runner watch logic module.
+  force_watch_data:
+    run: dart pub global run melos exec --fail-fast --scope="*data*" --depends-on="build_runner" "flutter packages pub run build_runner watch --delete-conflicting-outputs"
+    description: build_runner watch data module.

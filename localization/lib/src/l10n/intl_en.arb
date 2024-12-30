@@ -14,5 +14,8 @@
     "invalidDateTime": "Wrong date time format",
     "cancel": "Cancel",
     "retry": "Retry",
-    "pressAgainToExit": "Press again to exit"
+    "pressAgainToExit": "Press again to exit",
+    "loginTitle": "Everything you need is in one place",
+    "loginSubTitle": "Learnings, resources, and support to help you every step of the way on your journey to success.",
+    "register": "Register"
 }

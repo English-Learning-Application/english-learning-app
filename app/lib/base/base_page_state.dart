@@ -51,7 +51,10 @@ abstract class BasePageStateDelegate<T extends StatefulWidget,
   @mustCallSuper
   void initState() {
     super.initState();
+    initViewModels();
   }
+
+  void initViewModels();
 
   @override
   Widget build(BuildContext context) {

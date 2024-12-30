@@ -209,6 +209,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Everything you need is in one place`
+  String get loginTitle {
+    return Intl.message(
+      'Everything you need is in one place',
+      name: 'loginTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learnings, resources, and support to help you every step of the way on your journey to success.`
+  String get loginSubTitle {
+    return Intl.message(
+      'Learnings, resources, and support to help you every step of the way on your journey to success.',
+      name: 'loginSubTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register`
+  String get register {
+    return Intl.message(
+      'Register',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

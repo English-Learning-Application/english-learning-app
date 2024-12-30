@@ -12,7 +12,8 @@ class SplashViewModel extends BaseViewModel<SplashViewModelData> {
     this._getCurrentPrefUserUseCase,
   ) : super(const SplashViewModelData());
 
-  onSplashInitial() async {
+  Future<void> onSplashInitial() async {
+    await Future.delayed(const Duration(seconds: 2));
     await runViewModelCatching(
       action: () async {
         final getInitialAppDataOutput = _getInitialAppDataUseCase.execute(
@@ -25,7 +26,7 @@ class SplashViewModel extends BaseViewModel<SplashViewModelData> {
           const GetCurrentPrefUserInput(),
         );
 
-        appViewModel.appInitiated(
+        await appViewModel.appInitiated(
           isLoggedIn: getInitialAppDataOutput.isLoggedIn,
           languageCode: getInitialAppDataOutput.languageCode,
           appTheme: getInitialAppDataOutput.appTheme,

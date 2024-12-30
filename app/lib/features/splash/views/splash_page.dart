@@ -13,8 +13,24 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends BasePageState<SplashPage, SplashViewModel> {
   @override
+  void initViewModels() {
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) async {
+        await viewModel.onSplashInitial();
+      },
+    );
+  }
+
+  @override
   Widget buildPage(BuildContext context) {
-    return CommonScaffold(body: Container());
+    return CommonScaffold(
+      body: Center(
+        child: Assets.images.appIcon.image(
+          width: Dimens.d100.responsive(),
+          height: Dimens.d100.responsive(),
+        ),
+      ),
+    );
   }
 
   @override

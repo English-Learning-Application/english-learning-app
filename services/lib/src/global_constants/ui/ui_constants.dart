@@ -1,11 +1,12 @@
 import 'package:flutter/services.dart';
+import 'package:design/design.dart';
 
 class UIConstants {
   const UIConstants._();
 
   static const shimmerItemCount = 20;
 
-  static const materialAppTitle = 'MochiMalls';
+  static const materialAppTitle = 'Fluentify';
 
   static const taskMenuMaterialAppColor = Color(0xff50B498);
 
@@ -23,7 +24,7 @@ class UIConstants {
 
   static const systemUIOverlay = SystemUiOverlayStyle(
     statusBarBrightness: Brightness.light,
-    statusBarColor: Color(0xff50B498),
+    statusBarColor: FoundationColors.primary100,
   );
 
   static const textFieldTextStyleHeight = 1.3;
