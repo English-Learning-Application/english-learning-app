@@ -299,6 +299,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Register to access all of our services`
+  String get registerDescription {
+    return Intl.message(
+      'Register to access all of our services',
+      name: 'registerDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
+  String get username {
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your username`
+  String get usernameHint {
+    return Intl.message(
+      'Enter your username',
+      name: 'usernameHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

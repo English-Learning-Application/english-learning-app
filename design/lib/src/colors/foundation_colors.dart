@@ -4,16 +4,16 @@ class FoundationColors {
   const FoundationColors._();
 
   // Primary Colors
-  static const Color primary50 = Color(0xff203987);
-  static const Color primary100 = Color(0xff3a4b9f);
-  static const Color primary200 = Color(0xff4f5db0);
-  static const Color primary300 = Color(0xff6a74c4);
-  static const Color primary400 = Color(0xff7f85d3);
-  static const Color primary500 = Color(0xff9a9dcf);
-  static const Color primary600 = Color(0xffa3a4d1);
-  static const Color primary700 = Color(0xffb0b1d4);
-  static const Color primary800 = Color(0xffbcbdd6);
-  static const Color primary900 = Color(0xffd0d1dc);
+  static const Color primary50 = Color(0xff003875);
+  static const Color primary100 = Color(0xff104e97);
+  static const Color primary200 = Color(0xff1f5fa7);
+  static const Color primary300 = Color(0xff2d6fb6);
+  static const Color primary400 = Color(0xff3c7fc6);
+  static const Color primary500 = Color(0xff4b8fd5);
+  static const Color primary600 = Color(0xff5a9fd5);
+  static const Color primary700 = Color(0xff6aaed5);
+  static const Color primary800 = Color(0xff7abed5);
+  static const Color primary900 = Color(0xff8acdd5);
 
   // Accent Colors
   static const Color accent50 = Color(0xffe7f4f4);

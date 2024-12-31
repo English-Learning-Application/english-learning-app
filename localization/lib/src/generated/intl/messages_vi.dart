@@ -31,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Lỗi hủy"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
         "forgotPassword":
@@ -57,10 +59,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Bấm lại để thoát"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng ký"),
+        "registerDescription": MessageLookupByLibrary.simpleMessage(
+            "Đăng ký để truy cập tất cả các dịch vụ của chúng tôi"),
         "retry": MessageLookupByLibrary.simpleMessage("Thử lại"),
         "timeoutException":
             MessageLookupByLibrary.simpleMessage("Quá thời gian kết nối"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token hết hạn"),
-        "unknownException": m0
+        "unknownException": m0,
+        "username": MessageLookupByLibrary.simpleMessage("Tên người dùng"),
+        "usernameHint":
+            MessageLookupByLibrary.simpleMessage("Nhập tên người dùng")
       };
 }

@@ -23,5 +23,9 @@
     "passwordHint": "Enter your password",
     "password": "Password",
     "forgotPassword": "Forgot password?",
-    "or": "Or"
+    "or": "Or",
+    "registerDescription": "Register to access all of our services",
+    "username": "Username",
+    "usernameHint": "Enter your username",
+    "confirmPassword": "Confirm password"
 }

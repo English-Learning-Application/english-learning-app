@@ -31,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Cancellation"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm password"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
         "forgotPassword":
@@ -58,9 +60,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Press again to exit"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "registerDescription": MessageLookupByLibrary.simpleMessage(
+            "Register to access all of our services"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token expired"),
-        "unknownException": m0
+        "unknownException": m0,
+        "username": MessageLookupByLibrary.simpleMessage("Username"),
+        "usernameHint":
+            MessageLookupByLibrary.simpleMessage("Enter your username")
       };
 }

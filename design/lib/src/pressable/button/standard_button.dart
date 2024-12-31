@@ -387,11 +387,11 @@ class StandardButton extends StatelessWidget {
   TextStyle _textStyle() {
     switch (buttonSize) {
       case ButtonSize.large:
-        return AppTextStyles.s14w400primary().font16().neutral50.medium;
+        return AppTextStyles.s14w400primary().font16().neutral50.bold;
       case ButtonSize.medium:
-        return AppTextStyles.s14w400primary().font13().neutral50.medium;
+        return AppTextStyles.s14w400primary().font13().neutral50.bold;
       case ButtonSize.small:
-        return AppTextStyles.s14w400primary().font11().neutral50.medium;
+        return AppTextStyles.s14w400primary().font11().neutral50.bold;
     }
   }
 
@@ -410,7 +410,7 @@ class StandardButton extends StatelessWidget {
   Color _backgroundColor() {
     switch (buttonType) {
       case ButtonType.primary:
-        return FoundationColors.primary50;
+        return FoundationColors.primary200;
       case ButtonType.secondary:
         return FoundationColors.secondary500;
       case ButtonType.tertiary:

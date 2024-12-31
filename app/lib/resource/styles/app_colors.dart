@@ -22,7 +22,7 @@ class AppColors {
 
   static const AppColors defaultAppColors = AppColors(
     backgroundColor: FoundationColors.neutral50,
-    primaryColor: FoundationColors.primary100,
+    primaryColor: FoundationColors.primary200,
     secondaryColor: FoundationColors.accent200,
     primaryTextColor: FoundationColors.secondary500,
     secondaryTextColor: FoundationColors.neutral50,
@@ -30,10 +30,10 @@ class AppColors {
 
   static const AppColors darkThemeColors = AppColors(
     backgroundColor: FoundationColors.success900,
-    primaryColor: Color(0xff1A3636),
-    secondaryColor: Color(0xff40534C),
-    primaryTextColor: Color(0xffffffff),
-    secondaryTextColor: Color(0xff50B498),
+    primaryColor: FoundationColors.primary200,
+    secondaryColor: FoundationColors.accent200,
+    primaryTextColor: FoundationColors.neutral400,
+    secondaryTextColor: FoundationColors.neutral50,
   );
 
   static AppColors of(BuildContext context) {
