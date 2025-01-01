@@ -104,13 +104,18 @@ abstract class BasePageStateDelegate<T extends StatefulWidget,
             shouldRebuild: (prev, next) {
               final prevAppExceptionWrapper = prev.appExceptionWrapper;
               final nextAppExceptionWrapper = next.appExceptionWrapper;
-              return prevAppExceptionWrapper != nextAppExceptionWrapper &&
-                  nextAppExceptionWrapper != null;
+
+              final shouldRebuild =
+                  prevAppExceptionWrapper != nextAppExceptionWrapper &&
+                      nextAppExceptionWrapper != null;
+
+              if (shouldRebuild) {
+                handleException(next.appExceptionWrapper!);
+              }
+
+              return shouldRebuild;
             },
             builder: (_, vm, __) {
-              if (vm.appExceptionWrapper != null) {
-                handleException(vm.appExceptionWrapper!);
-              }
               return buildPageListeners(
                 child: isAppWidget
                     ? buildPage(context)
@@ -177,17 +182,19 @@ abstract class BasePageStateDelegate<T extends StatefulWidget,
     return exceptionMessageMapper.map(appException);
   }
 
-  void handleException(AppExceptionWrapper appExceptionWrapper) {
-    exceptionHandler
-        .handleException(
-          appExceptionWrapper,
-          handleExceptionMessage(
-            appExceptionWrapper.appException,
-          ),
-        )
-        .then(
-          (value) => appExceptionWrapper.exceptionCompleter?.complete(),
-        );
+  void handleException(AppExceptionWrapper appExceptionWrapper) async {
+    await Future.delayed(Duration.zero, () async {
+      await exceptionHandler
+          .handleException(
+            appExceptionWrapper,
+            handleExceptionMessage(
+              appExceptionWrapper.appException,
+            ),
+          )
+          .then(
+            (value) => appExceptionWrapper.exceptionCompleter?.complete(),
+          );
+    });
   }
 
   @override

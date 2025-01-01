@@ -1,7 +1,12 @@
 import 'package:auto_route/annotations.dart';
+import 'package:design/design.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+import 'package:localization/localization.dart';
+import 'package:logic/logic.dart';
 
 import '../../../app.dart';
+import '../../../di/di.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
@@ -17,7 +22,18 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
 
   @override
   Widget buildPage(BuildContext context) {
-    return CommonScaffold(body: Container());
+    return CommonScaffold(
+      body: Center(
+        child: StandardButton(
+          onPressed: () async {
+            await GetIt.instance<LogoutUseCase>().execute(
+              const LogoutInput(),
+            );
+          },
+          text: "Logout",
+        ),
+      ),
+    );
   }
 
   @override

@@ -1,11 +1,15 @@
 library logic;
 
+export 'src/features/authentication/usecase/username_registration_use_case.dart';
 export 'src/app_repository/app_repository.dart';
 export 'src/config/logic_config.dart';
 export 'src/di/di.dart';
 export 'src/entity/app_notification.dart';
 export 'src/entity/base/paged_list.dart';
 export 'src/entity/country.dart';
+export 'src/features/authentication/usecase/login_user_use_case.dart';
+export 'src/features/authentication/usecase/google_login_use_case.dart';
+export 'src/features/authentication/usecase/facebook_login_use_case.dart';
 export 'src/entity/domain_enum/domain_enum.dart';
 export 'src/entity/media.dart';
 export 'src/entity/random_user.dart';

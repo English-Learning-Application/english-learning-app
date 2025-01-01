@@ -27,5 +27,6 @@
     "registerDescription": "Register to access all of our services",
     "username": "Username",
     "usernameHint": "Enter your username",
-    "confirmPassword": "Confirm password"
+    "confirmPassword": "Confirm password",
+    "invalidConfirmationPassword": "Password confirmation does not match"
 }

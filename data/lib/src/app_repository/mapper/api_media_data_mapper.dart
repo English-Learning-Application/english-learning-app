@@ -14,11 +14,8 @@ class ApiMediaDataMapper extends BaseDataMapper<ApiMediaData, Media>
             (element) => element.serverValue == data?.mediaType,
           ) ??
           Media.defaultMediaType,
-      mediaNumber: data?.mediaNumber ?? Media.defaultMediaNumber,
+      mediaId: data?.mediaId ?? Media.defaultMediaId,
       mediaUrl: data?.mediaUrl ?? Media.defaultMediaUrl,
-      mediaUrlLg: data?.mediaUrlLg ?? Media.defaultMediaUrlLg,
-      mediaUrlMd: data?.mediaUrlMd ?? Media.defaultMediaUrlMd,
-      mediaUrlSm: data?.mediaUrlSm ?? Media.defaultMediaUrlSm,
     );
   }
 
@@ -26,11 +23,8 @@ class ApiMediaDataMapper extends BaseDataMapper<ApiMediaData, Media>
   ApiMediaData mapToData(Media entity) {
     return ApiMediaData(
       mediaType: entity.mediaType.serverValue,
-      mediaNumber: entity.mediaNumber,
+      mediaId: entity.mediaId,
       mediaUrl: entity.mediaUrl,
-      mediaUrlLg: entity.mediaUrlLg,
-      mediaUrlMd: entity.mediaUrlMd,
-      mediaUrlSm: entity.mediaUrlSm,
     );
   }
 }

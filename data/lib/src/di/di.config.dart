@@ -25,8 +25,6 @@ import 'package:data/src/app_repository/mapper/api_token_data_mapper.dart'
     as _i639;
 import 'package:data/src/app_repository/mapper/api_user_data_mapper.dart'
     as _i1028;
-import 'package:data/src/app_repository/mapper/api_user_info_data_mapper.dart'
-    as _i68;
 import 'package:data/src/app_repository/mapper/app_theme_data_mapper.dart'
     as _i646;
 import 'package:data/src/app_repository/source/api/app_api_service.dart'
@@ -99,7 +97,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i348.ApiRandomUserNameDataMapper>(
         () => _i348.ApiRandomUserNameDataMapper());
     gh.factory<_i639.ApiTokenDataMapper>(() => _i639.ApiTokenDataMapper());
-    gh.factory<_i68.ApiUserInfoDataMapper>(() => _i68.ApiUserInfoDataMapper());
     gh.factory<_i646.AppThemeDataMapper>(() => _i646.AppThemeDataMapper());
     gh.factory<_i551.CommonErrorResponseMapper>(
         () => _i551.CommonErrorResponseMapper());
@@ -128,11 +125,8 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i77.HeaderInterceptor>(
         () => _i77.HeaderInterceptor(gh<_i473.AppInfo>()));
-    gh.factory<_i1028.ApiUserDataMapper>(() => _i1028.ApiUserDataMapper(
-          gh<_i437.ApiCountryDataMapper>(),
-          gh<_i437.ApiMediaDataMapper>(),
-          gh<_i437.ApiUserInfoDataMapper>(),
-        ));
+    gh.factory<_i1028.ApiUserDataMapper>(
+        () => _i1028.ApiUserDataMapper(gh<_i437.ApiMediaDataMapper>()));
     gh.lazySingleton<_i881.AppPreferences>(
         () => _i881.AppPreferences(gh<_i460.SharedPreferences>()));
     gh.factory<_i416.ApiRandomUserDataMapper>(() =>
@@ -153,9 +147,12 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.AccessTokenInterceptor>(),
               gh<_i437.HeaderInterceptor>(),
             ));
-    gh.lazySingleton<_i182.AuthenticationRepository>(() =>
-        _i322.AuthenticationRepositoryImpl(
-            gh<_i920.AuthenticationApiDataSource>()));
+    gh.lazySingleton<_i182.AuthenticationRepository>(
+        () => _i322.AuthenticationRepositoryImpl(
+              gh<_i920.AuthenticationApiDataSource>(),
+              gh<_i437.AppPreferences>(),
+              gh<_i437.ApiUserDataMapper>(),
+            ));
     gh.lazySingleton<_i600.RefreshTokenApiService>(
         () => _i600.RefreshTokenApiService(gh<_i437.RefreshTokenApiClient>()));
     gh.lazySingleton<_i261.AppApiService>(

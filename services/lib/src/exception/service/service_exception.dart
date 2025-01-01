@@ -18,4 +18,10 @@ class ServiceException extends AppException {
 enum ServiceExceptionKind {
   /// In-app purchase error
   inAppPurchase,
+
+  /// Google sign in error
+  googleSignIn,
+
+  /// Facebook sign in error
+  facebookSignIn,
 }

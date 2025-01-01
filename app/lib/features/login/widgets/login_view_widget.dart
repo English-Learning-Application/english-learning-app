@@ -126,7 +126,12 @@ class _LoginViewWidgetState extends State<LoginViewWidget> {
           StandardButton(
             buttonSize: ButtonSize.medium,
             text: S.current.login,
-            onPressed: () {},
+            onPressed: () async {
+              await context.read<LoginViewModel>().loginUser(
+                    email: _emailController.text,
+                    password: _passwordController.text,
+                  );
+            },
           ),
           SizedBox(
             height: Dimens.d16.responsive(),
@@ -168,7 +173,9 @@ class _LoginViewWidgetState extends State<LoginViewWidget> {
                   width: Dimens.d24.responsive(),
                   height: Dimens.d24.responsive(),
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  await context.read<LoginViewModel>().googleSignIn();
+                },
               ),
               SizedBox(
                 width: Dimens.d16.responsive(),
@@ -178,7 +185,9 @@ class _LoginViewWidgetState extends State<LoginViewWidget> {
                   width: Dimens.d24.responsive(),
                   height: Dimens.d24.responsive(),
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  await context.read<LoginViewModel>().facebookSignIn();
+                },
               ),
             ],
           ),
@@ -214,6 +223,7 @@ class _LoginViewWidgetState extends State<LoginViewWidget> {
   @override
   void dispose() {
     _emailController.dispose();
+    _passwordController.dispose();
     super.dispose();
   }
 }

@@ -37,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
+            "Password confirmation does not match"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Wrong date time format"),
         "invalidUserName":

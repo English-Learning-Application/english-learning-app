@@ -11,8 +11,16 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:logic/logic.dart' as _i182;
+import 'package:logic/src/features/authentication/usecase/facebook_login_use_case.dart'
+    as _i1006;
 import 'package:logic/src/features/authentication/usecase/get_logged_in_user_use_case.dart'
     as _i106;
+import 'package:logic/src/features/authentication/usecase/google_login_use_case.dart'
+    as _i919;
+import 'package:logic/src/features/authentication/usecase/login_user_use_case.dart'
+    as _i945;
+import 'package:logic/src/features/authentication/usecase/username_registration_use_case.dart'
+    as _i323;
 import 'package:logic/src/features/notification/usecase/register_fcm_token_use_case.dart'
     as _i119;
 import 'package:logic/src/usecase/clear_current_user_data_use_case.dart'
@@ -39,6 +47,21 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i106.GetLoggedInUserUseCase>(() =>
         _i106.GetLoggedInUserUseCase(gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i323.UsernameRegistrationUseCase>(() =>
+        _i323.UsernameRegistrationUseCase(
+            gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i1006.FacebookLoginUseCase>(() => _i1006.FacebookLoginUseCase(
+          gh<_i182.AuthenticationRepository>(),
+          gh<_i182.AppNavigator>(),
+        ));
+    gh.factory<_i919.GoogleLoginUseCase>(() => _i919.GoogleLoginUseCase(
+          gh<_i182.AuthenticationRepository>(),
+          gh<_i182.AppNavigator>(),
+        ));
+    gh.factory<_i945.LoginUserUseCase>(() => _i945.LoginUserUseCase(
+          gh<_i182.AuthenticationRepository>(),
+          gh<_i182.AppNavigator>(),
+        ));
     gh.factory<_i878.LogoutUseCase>(() => _i878.LogoutUseCase(
           gh<_i182.AuthenticationRepository>(),
           gh<_i182.AppRepository>(),

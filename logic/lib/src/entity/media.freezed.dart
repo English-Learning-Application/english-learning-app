@@ -16,11 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$Media {
-  String get mediaNumber => throw _privateConstructorUsedError;
+  String get mediaId => throw _privateConstructorUsedError;
   String get mediaUrl => throw _privateConstructorUsedError;
-  String get mediaUrlLg => throw _privateConstructorUsedError;
-  String get mediaUrlMd => throw _privateConstructorUsedError;
-  String get mediaUrlSm => throw _privateConstructorUsedError;
   MediaType get mediaType => throw _privateConstructorUsedError;
 
   /// Create a copy of Media
@@ -34,13 +31,7 @@ abstract class $MediaCopyWith<$Res> {
   factory $MediaCopyWith(Media value, $Res Function(Media) then) =
       _$MediaCopyWithImpl<$Res, Media>;
   @useResult
-  $Res call(
-      {String mediaNumber,
-      String mediaUrl,
-      String mediaUrlLg,
-      String mediaUrlMd,
-      String mediaUrlSm,
-      MediaType mediaType});
+  $Res call({String mediaId, String mediaUrl, MediaType mediaType});
 }
 
 /// @nodoc
@@ -58,33 +49,18 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? mediaNumber = null,
+    Object? mediaId = null,
     Object? mediaUrl = null,
-    Object? mediaUrlLg = null,
-    Object? mediaUrlMd = null,
-    Object? mediaUrlSm = null,
     Object? mediaType = null,
   }) {
     return _then(_value.copyWith(
-      mediaNumber: null == mediaNumber
-          ? _value.mediaNumber
-          : mediaNumber // ignore: cast_nullable_to_non_nullable
+      mediaId: null == mediaId
+          ? _value.mediaId
+          : mediaId // ignore: cast_nullable_to_non_nullable
               as String,
       mediaUrl: null == mediaUrl
           ? _value.mediaUrl
           : mediaUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediaUrlLg: null == mediaUrlLg
-          ? _value.mediaUrlLg
-          : mediaUrlLg // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediaUrlMd: null == mediaUrlMd
-          ? _value.mediaUrlMd
-          : mediaUrlMd // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediaUrlSm: null == mediaUrlSm
-          ? _value.mediaUrlSm
-          : mediaUrlSm // ignore: cast_nullable_to_non_nullable
               as String,
       mediaType: null == mediaType
           ? _value.mediaType
@@ -101,13 +77,7 @@ abstract class _$$MediaImplCopyWith<$Res> implements $MediaCopyWith<$Res> {
       __$$MediaImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String mediaNumber,
-      String mediaUrl,
-      String mediaUrlLg,
-      String mediaUrlMd,
-      String mediaUrlSm,
-      MediaType mediaType});
+  $Res call({String mediaId, String mediaUrl, MediaType mediaType});
 }
 
 /// @nodoc
@@ -123,33 +93,18 @@ class __$$MediaImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? mediaNumber = null,
+    Object? mediaId = null,
     Object? mediaUrl = null,
-    Object? mediaUrlLg = null,
-    Object? mediaUrlMd = null,
-    Object? mediaUrlSm = null,
     Object? mediaType = null,
   }) {
     return _then(_$MediaImpl(
-      mediaNumber: null == mediaNumber
-          ? _value.mediaNumber
-          : mediaNumber // ignore: cast_nullable_to_non_nullable
+      mediaId: null == mediaId
+          ? _value.mediaId
+          : mediaId // ignore: cast_nullable_to_non_nullable
               as String,
       mediaUrl: null == mediaUrl
           ? _value.mediaUrl
           : mediaUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediaUrlLg: null == mediaUrlLg
-          ? _value.mediaUrlLg
-          : mediaUrlLg // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediaUrlMd: null == mediaUrlMd
-          ? _value.mediaUrlMd
-          : mediaUrlMd // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediaUrlSm: null == mediaUrlSm
-          ? _value.mediaUrlSm
-          : mediaUrlSm // ignore: cast_nullable_to_non_nullable
               as String,
       mediaType: null == mediaType
           ? _value.mediaType
@@ -163,36 +118,24 @@ class __$$MediaImplCopyWithImpl<$Res>
 
 class _$MediaImpl extends _Media {
   const _$MediaImpl(
-      {this.mediaNumber = Media.defaultMediaNumber,
+      {this.mediaId = Media.defaultMediaId,
       this.mediaUrl = Media.defaultMediaUrl,
-      this.mediaUrlLg = Media.defaultMediaUrlLg,
-      this.mediaUrlMd = Media.defaultMediaUrlMd,
-      this.mediaUrlSm = Media.defaultMediaUrlSm,
       this.mediaType = Media.defaultMediaType})
       : super._();
 
   @override
   @JsonKey()
-  final String mediaNumber;
+  final String mediaId;
   @override
   @JsonKey()
   final String mediaUrl;
-  @override
-  @JsonKey()
-  final String mediaUrlLg;
-  @override
-  @JsonKey()
-  final String mediaUrlMd;
-  @override
-  @JsonKey()
-  final String mediaUrlSm;
   @override
   @JsonKey()
   final MediaType mediaType;
 
   @override
   String toString() {
-    return 'Media(mediaNumber: $mediaNumber, mediaUrl: $mediaUrl, mediaUrlLg: $mediaUrlLg, mediaUrlMd: $mediaUrlMd, mediaUrlSm: $mediaUrlSm, mediaType: $mediaType)';
+    return 'Media(mediaId: $mediaId, mediaUrl: $mediaUrl, mediaType: $mediaType)';
   }
 
   @override
@@ -200,23 +143,15 @@ class _$MediaImpl extends _Media {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MediaImpl &&
-            (identical(other.mediaNumber, mediaNumber) ||
-                other.mediaNumber == mediaNumber) &&
+            (identical(other.mediaId, mediaId) || other.mediaId == mediaId) &&
             (identical(other.mediaUrl, mediaUrl) ||
                 other.mediaUrl == mediaUrl) &&
-            (identical(other.mediaUrlLg, mediaUrlLg) ||
-                other.mediaUrlLg == mediaUrlLg) &&
-            (identical(other.mediaUrlMd, mediaUrlMd) ||
-                other.mediaUrlMd == mediaUrlMd) &&
-            (identical(other.mediaUrlSm, mediaUrlSm) ||
-                other.mediaUrlSm == mediaUrlSm) &&
             (identical(other.mediaType, mediaType) ||
                 other.mediaType == mediaType));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, mediaNumber, mediaUrl,
-      mediaUrlLg, mediaUrlMd, mediaUrlSm, mediaType);
+  int get hashCode => Object.hash(runtimeType, mediaId, mediaUrl, mediaType);
 
   /// Create a copy of Media
   /// with the given fields replaced by the non-null parameter values.
@@ -229,24 +164,15 @@ class _$MediaImpl extends _Media {
 
 abstract class _Media extends Media {
   const factory _Media(
-      {final String mediaNumber,
+      {final String mediaId,
       final String mediaUrl,
-      final String mediaUrlLg,
-      final String mediaUrlMd,
-      final String mediaUrlSm,
       final MediaType mediaType}) = _$MediaImpl;
   const _Media._() : super._();
 
   @override
-  String get mediaNumber;
+  String get mediaId;
   @override
   String get mediaUrl;
-  @override
-  String get mediaUrlLg;
-  @override
-  String get mediaUrlMd;
-  @override
-  String get mediaUrlSm;
   @override
   MediaType get mediaType;
 

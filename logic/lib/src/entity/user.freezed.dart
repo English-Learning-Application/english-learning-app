@@ -16,16 +16,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$User {
-  String get customerNumber => throw _privateConstructorUsedError;
-  String get phoneNumber => throw _privateConstructorUsedError;
-  Country get countryCallingCode => throw _privateConstructorUsedError;
-  String get emailAddress => throw _privateConstructorUsedError;
+  String get userId => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
-  Media get profileImg => throw _privateConstructorUsedError;
-  String get facebookId => throw _privateConstructorUsedError;
   String get googleId => throw _privateConstructorUsedError;
-  String get zaloId => throw _privateConstructorUsedError;
-  UserInfo get userInfo => throw _privateConstructorUsedError;
+  String get facebookId => throw _privateConstructorUsedError;
+  String get phoneNumber => throw _privateConstructorUsedError;
+  Media get media => throw _privateConstructorUsedError;
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
@@ -39,20 +36,15 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res, User>;
   @useResult
   $Res call(
-      {String customerNumber,
-      String phoneNumber,
-      Country countryCallingCode,
-      String emailAddress,
+      {String userId,
+      String email,
       String username,
-      Media profileImg,
-      String facebookId,
       String googleId,
-      String zaloId,
-      UserInfo userInfo});
+      String facebookId,
+      String phoneNumber,
+      Media media});
 
-  $CountryCopyWith<$Res> get countryCallingCode;
-  $MediaCopyWith<$Res> get profileImg;
-  $UserInfoCopyWith<$Res> get userInfo;
+  $MediaCopyWith<$Res> get media;
 }
 
 /// @nodoc
@@ -70,58 +62,43 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? customerNumber = null,
-    Object? phoneNumber = null,
-    Object? countryCallingCode = null,
-    Object? emailAddress = null,
+    Object? userId = null,
+    Object? email = null,
     Object? username = null,
-    Object? profileImg = null,
-    Object? facebookId = null,
     Object? googleId = null,
-    Object? zaloId = null,
-    Object? userInfo = null,
+    Object? facebookId = null,
+    Object? phoneNumber = null,
+    Object? media = null,
   }) {
     return _then(_value.copyWith(
-      customerNumber: null == customerNumber
-          ? _value.customerNumber
-          : customerNumber // ignore: cast_nullable_to_non_nullable
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
               as String,
-      phoneNumber: null == phoneNumber
-          ? _value.phoneNumber
-          : phoneNumber // ignore: cast_nullable_to_non_nullable
-              as String,
-      countryCallingCode: null == countryCallingCode
-          ? _value.countryCallingCode
-          : countryCallingCode // ignore: cast_nullable_to_non_nullable
-              as Country,
-      emailAddress: null == emailAddress
-          ? _value.emailAddress
-          : emailAddress // ignore: cast_nullable_to_non_nullable
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
               as String,
       username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      profileImg: null == profileImg
-          ? _value.profileImg
-          : profileImg // ignore: cast_nullable_to_non_nullable
-              as Media,
-      facebookId: null == facebookId
-          ? _value.facebookId
-          : facebookId // ignore: cast_nullable_to_non_nullable
-              as String,
       googleId: null == googleId
           ? _value.googleId
           : googleId // ignore: cast_nullable_to_non_nullable
               as String,
-      zaloId: null == zaloId
-          ? _value.zaloId
-          : zaloId // ignore: cast_nullable_to_non_nullable
+      facebookId: null == facebookId
+          ? _value.facebookId
+          : facebookId // ignore: cast_nullable_to_non_nullable
               as String,
-      userInfo: null == userInfo
-          ? _value.userInfo
-          : userInfo // ignore: cast_nullable_to_non_nullable
-              as UserInfo,
+      phoneNumber: null == phoneNumber
+          ? _value.phoneNumber
+          : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      media: null == media
+          ? _value.media
+          : media // ignore: cast_nullable_to_non_nullable
+              as Media,
     ) as $Val);
   }
 
@@ -129,29 +106,9 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $CountryCopyWith<$Res> get countryCallingCode {
-    return $CountryCopyWith<$Res>(_value.countryCallingCode, (value) {
-      return _then(_value.copyWith(countryCallingCode: value) as $Val);
-    });
-  }
-
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $MediaCopyWith<$Res> get profileImg {
-    return $MediaCopyWith<$Res>(_value.profileImg, (value) {
-      return _then(_value.copyWith(profileImg: value) as $Val);
-    });
-  }
-
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $UserInfoCopyWith<$Res> get userInfo {
-    return $UserInfoCopyWith<$Res>(_value.userInfo, (value) {
-      return _then(_value.copyWith(userInfo: value) as $Val);
+  $MediaCopyWith<$Res> get media {
+    return $MediaCopyWith<$Res>(_value.media, (value) {
+      return _then(_value.copyWith(media: value) as $Val);
     });
   }
 }
@@ -164,23 +121,16 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String customerNumber,
-      String phoneNumber,
-      Country countryCallingCode,
-      String emailAddress,
+      {String userId,
+      String email,
       String username,
-      Media profileImg,
-      String facebookId,
       String googleId,
-      String zaloId,
-      UserInfo userInfo});
+      String facebookId,
+      String phoneNumber,
+      Media media});
 
   @override
-  $CountryCopyWith<$Res> get countryCallingCode;
-  @override
-  $MediaCopyWith<$Res> get profileImg;
-  @override
-  $UserInfoCopyWith<$Res> get userInfo;
+  $MediaCopyWith<$Res> get media;
 }
 
 /// @nodoc
@@ -195,58 +145,43 @@ class __$$UserImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? customerNumber = null,
-    Object? phoneNumber = null,
-    Object? countryCallingCode = null,
-    Object? emailAddress = null,
+    Object? userId = null,
+    Object? email = null,
     Object? username = null,
-    Object? profileImg = null,
-    Object? facebookId = null,
     Object? googleId = null,
-    Object? zaloId = null,
-    Object? userInfo = null,
+    Object? facebookId = null,
+    Object? phoneNumber = null,
+    Object? media = null,
   }) {
     return _then(_$UserImpl(
-      customerNumber: null == customerNumber
-          ? _value.customerNumber
-          : customerNumber // ignore: cast_nullable_to_non_nullable
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
               as String,
-      phoneNumber: null == phoneNumber
-          ? _value.phoneNumber
-          : phoneNumber // ignore: cast_nullable_to_non_nullable
-              as String,
-      countryCallingCode: null == countryCallingCode
-          ? _value.countryCallingCode
-          : countryCallingCode // ignore: cast_nullable_to_non_nullable
-              as Country,
-      emailAddress: null == emailAddress
-          ? _value.emailAddress
-          : emailAddress // ignore: cast_nullable_to_non_nullable
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
               as String,
       username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      profileImg: null == profileImg
-          ? _value.profileImg
-          : profileImg // ignore: cast_nullable_to_non_nullable
-              as Media,
-      facebookId: null == facebookId
-          ? _value.facebookId
-          : facebookId // ignore: cast_nullable_to_non_nullable
-              as String,
       googleId: null == googleId
           ? _value.googleId
           : googleId // ignore: cast_nullable_to_non_nullable
               as String,
-      zaloId: null == zaloId
-          ? _value.zaloId
-          : zaloId // ignore: cast_nullable_to_non_nullable
+      facebookId: null == facebookId
+          ? _value.facebookId
+          : facebookId // ignore: cast_nullable_to_non_nullable
               as String,
-      userInfo: null == userInfo
-          ? _value.userInfo
-          : userInfo // ignore: cast_nullable_to_non_nullable
-              as UserInfo,
+      phoneNumber: null == phoneNumber
+          ? _value.phoneNumber
+          : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      media: null == media
+          ? _value.media
+          : media // ignore: cast_nullable_to_non_nullable
+              as Media,
     ));
   }
 }
@@ -255,52 +190,40 @@ class __$$UserImplCopyWithImpl<$Res>
 
 class _$UserImpl extends _User {
   const _$UserImpl(
-      {this.customerNumber = User.defaultCustomerNumber,
-      this.phoneNumber = User.defaultPhoneNumber,
-      this.countryCallingCode = User.defaultCountryCallingCode,
-      this.emailAddress = User.defaultEmailAddress,
+      {this.userId = User.defaultUserId,
+      this.email = User.defaultEmail,
       this.username = User.defaultUsername,
-      this.profileImg = User.defaultProfileImg,
-      this.facebookId = User.defaultFacebookId,
       this.googleId = User.defaultGoogleId,
-      this.zaloId = User.defaultZaloId,
-      this.userInfo = User.defaultUserInfo})
+      this.facebookId = User.defaultFacebookId,
+      this.phoneNumber = User.defaultPhoneNumber,
+      this.media = User.defaultMedia})
       : super._();
 
   @override
   @JsonKey()
-  final String customerNumber;
+  final String userId;
   @override
   @JsonKey()
-  final String phoneNumber;
-  @override
-  @JsonKey()
-  final Country countryCallingCode;
-  @override
-  @JsonKey()
-  final String emailAddress;
+  final String email;
   @override
   @JsonKey()
   final String username;
   @override
   @JsonKey()
-  final Media profileImg;
+  final String googleId;
   @override
   @JsonKey()
   final String facebookId;
   @override
   @JsonKey()
-  final String googleId;
+  final String phoneNumber;
   @override
   @JsonKey()
-  final String zaloId;
-  @override
-  @JsonKey()
-  final UserInfo userInfo;
+  final Media media;
 
   @override
   String toString() {
-    return 'User(customerNumber: $customerNumber, phoneNumber: $phoneNumber, countryCallingCode: $countryCallingCode, emailAddress: $emailAddress, username: $username, profileImg: $profileImg, facebookId: $facebookId, googleId: $googleId, zaloId: $zaloId, userInfo: $userInfo)';
+    return 'User(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phoneNumber: $phoneNumber, media: $media)';
   }
 
   @override
@@ -308,40 +231,22 @@ class _$UserImpl extends _User {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UserImpl &&
-            (identical(other.customerNumber, customerNumber) ||
-                other.customerNumber == customerNumber) &&
-            (identical(other.phoneNumber, phoneNumber) ||
-                other.phoneNumber == phoneNumber) &&
-            (identical(other.countryCallingCode, countryCallingCode) ||
-                other.countryCallingCode == countryCallingCode) &&
-            (identical(other.emailAddress, emailAddress) ||
-                other.emailAddress == emailAddress) &&
+            (identical(other.userId, userId) || other.userId == userId) &&
+            (identical(other.email, email) || other.email == email) &&
             (identical(other.username, username) ||
                 other.username == username) &&
-            (identical(other.profileImg, profileImg) ||
-                other.profileImg == profileImg) &&
-            (identical(other.facebookId, facebookId) ||
-                other.facebookId == facebookId) &&
             (identical(other.googleId, googleId) ||
                 other.googleId == googleId) &&
-            (identical(other.zaloId, zaloId) || other.zaloId == zaloId) &&
-            (identical(other.userInfo, userInfo) ||
-                other.userInfo == userInfo));
+            (identical(other.facebookId, facebookId) ||
+                other.facebookId == facebookId) &&
+            (identical(other.phoneNumber, phoneNumber) ||
+                other.phoneNumber == phoneNumber) &&
+            (identical(other.media, media) || other.media == media));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      customerNumber,
-      phoneNumber,
-      countryCallingCode,
-      emailAddress,
-      username,
-      profileImg,
-      facebookId,
-      googleId,
-      zaloId,
-      userInfo);
+  int get hashCode => Object.hash(runtimeType, userId, email, username,
+      googleId, facebookId, phoneNumber, media);
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
@@ -354,266 +259,34 @@ class _$UserImpl extends _User {
 
 abstract class _User extends User {
   const factory _User(
-      {final String customerNumber,
-      final String phoneNumber,
-      final Country countryCallingCode,
-      final String emailAddress,
+      {final String userId,
+      final String email,
       final String username,
-      final Media profileImg,
-      final String facebookId,
       final String googleId,
-      final String zaloId,
-      final UserInfo userInfo}) = _$UserImpl;
+      final String facebookId,
+      final String phoneNumber,
+      final Media media}) = _$UserImpl;
   const _User._() : super._();
 
   @override
-  String get customerNumber;
+  String get userId;
   @override
-  String get phoneNumber;
-  @override
-  Country get countryCallingCode;
-  @override
-  String get emailAddress;
+  String get email;
   @override
   String get username;
   @override
-  Media get profileImg;
+  String get googleId;
   @override
   String get facebookId;
   @override
-  String get googleId;
+  String get phoneNumber;
   @override
-  String get zaloId;
-  @override
-  UserInfo get userInfo;
+  Media get media;
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserImplCopyWith<_$UserImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$UserInfo {
-  String get firstName => throw _privateConstructorUsedError;
-  String get lastName => throw _privateConstructorUsedError;
-  Gender get gender => throw _privateConstructorUsedError;
-  Nationality get nationality => throw _privateConstructorUsedError;
-  DateTime? get birthday => throw _privateConstructorUsedError;
-
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UserInfoCopyWith<UserInfo> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $UserInfoCopyWith<$Res> {
-  factory $UserInfoCopyWith(UserInfo value, $Res Function(UserInfo) then) =
-      _$UserInfoCopyWithImpl<$Res, UserInfo>;
-  @useResult
-  $Res call(
-      {String firstName,
-      String lastName,
-      Gender gender,
-      Nationality nationality,
-      DateTime? birthday});
-}
-
-/// @nodoc
-class _$UserInfoCopyWithImpl<$Res, $Val extends UserInfo>
-    implements $UserInfoCopyWith<$Res> {
-  _$UserInfoCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? firstName = null,
-    Object? lastName = null,
-    Object? gender = null,
-    Object? nationality = null,
-    Object? birthday = freezed,
-  }) {
-    return _then(_value.copyWith(
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastName: null == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
-              as String,
-      gender: null == gender
-          ? _value.gender
-          : gender // ignore: cast_nullable_to_non_nullable
-              as Gender,
-      nationality: null == nationality
-          ? _value.nationality
-          : nationality // ignore: cast_nullable_to_non_nullable
-              as Nationality,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$UserInfoImplCopyWith<$Res>
-    implements $UserInfoCopyWith<$Res> {
-  factory _$$UserInfoImplCopyWith(
-          _$UserInfoImpl value, $Res Function(_$UserInfoImpl) then) =
-      __$$UserInfoImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String firstName,
-      String lastName,
-      Gender gender,
-      Nationality nationality,
-      DateTime? birthday});
-}
-
-/// @nodoc
-class __$$UserInfoImplCopyWithImpl<$Res>
-    extends _$UserInfoCopyWithImpl<$Res, _$UserInfoImpl>
-    implements _$$UserInfoImplCopyWith<$Res> {
-  __$$UserInfoImplCopyWithImpl(
-      _$UserInfoImpl _value, $Res Function(_$UserInfoImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? firstName = null,
-    Object? lastName = null,
-    Object? gender = null,
-    Object? nationality = null,
-    Object? birthday = freezed,
-  }) {
-    return _then(_$UserInfoImpl(
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastName: null == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
-              as String,
-      gender: null == gender
-          ? _value.gender
-          : gender // ignore: cast_nullable_to_non_nullable
-              as Gender,
-      nationality: null == nationality
-          ? _value.nationality
-          : nationality // ignore: cast_nullable_to_non_nullable
-              as Nationality,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UserInfoImpl extends _UserInfo {
-  const _$UserInfoImpl(
-      {this.firstName = UserInfo.defaultFirstName,
-      this.lastName = UserInfo.defaultLastName,
-      this.gender = UserInfo.defaultGender,
-      this.nationality = UserInfo.defaultNationality,
-      this.birthday = UserInfo.defaultBirthday})
-      : super._();
-
-  @override
-  @JsonKey()
-  final String firstName;
-  @override
-  @JsonKey()
-  final String lastName;
-  @override
-  @JsonKey()
-  final Gender gender;
-  @override
-  @JsonKey()
-  final Nationality nationality;
-  @override
-  @JsonKey()
-  final DateTime? birthday;
-
-  @override
-  String toString() {
-    return 'UserInfo(firstName: $firstName, lastName: $lastName, gender: $gender, nationality: $nationality, birthday: $birthday)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UserInfoImpl &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName) &&
-            (identical(other.lastName, lastName) ||
-                other.lastName == lastName) &&
-            (identical(other.gender, gender) || other.gender == gender) &&
-            (identical(other.nationality, nationality) ||
-                other.nationality == nationality) &&
-            (identical(other.birthday, birthday) ||
-                other.birthday == birthday));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, firstName, lastName, gender, nationality, birthday);
-
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UserInfoImplCopyWith<_$UserInfoImpl> get copyWith =>
-      __$$UserInfoImplCopyWithImpl<_$UserInfoImpl>(this, _$identity);
-}
-
-abstract class _UserInfo extends UserInfo {
-  const factory _UserInfo(
-      {final String firstName,
-      final String lastName,
-      final Gender gender,
-      final Nationality nationality,
-      final DateTime? birthday}) = _$UserInfoImpl;
-  const _UserInfo._() : super._();
-
-  @override
-  String get firstName;
-  @override
-  String get lastName;
-  @override
-  Gender get gender;
-  @override
-  Nationality get nationality;
-  @override
-  DateTime? get birthday;
-
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UserInfoImplCopyWith<_$UserInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

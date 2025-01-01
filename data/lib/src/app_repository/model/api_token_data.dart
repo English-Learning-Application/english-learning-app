@@ -8,8 +8,8 @@ class ApiTokenData with _$ApiTokenData {
   const ApiTokenData._();
 
   const factory ApiTokenData({
-    @JsonKey(name: 'access_token') String? accessToken,
-    @JsonKey(name: 'refresh_token') String? refreshToken,
+    @JsonKey(name: 'accessToken') String? accessToken,
+    @JsonKey(name: 'refreshToken') String? refreshToken,
   }) = _ApiTokenData;
 
   factory ApiTokenData.fromJson(Map<String, dynamic> json) =>

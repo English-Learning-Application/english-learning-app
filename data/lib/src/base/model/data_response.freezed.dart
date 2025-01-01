@@ -23,7 +23,7 @@ DataResponse<T> _$DataResponseFromJson<T>(
 mixin _$DataResponse<T> {
   @JsonKey(name: 'data')
   T? get data => throw _privateConstructorUsedError;
-  @JsonKey(name: 'status_code')
+  @JsonKey(name: 'statusCode')
   int? get statusCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'message')
   String? get message => throw _privateConstructorUsedError;
@@ -47,7 +47,7 @@ abstract class $DataResponseCopyWith<T, $Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'data') T? data,
-      @JsonKey(name: 'status_code') int? statusCode,
+      @JsonKey(name: 'statusCode') int? statusCode,
       @JsonKey(name: 'message') String? message});
 }
 
@@ -97,7 +97,7 @@ abstract class _$$DataResponseImplCopyWith<T, $Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'data') T? data,
-      @JsonKey(name: 'status_code') int? statusCode,
+      @JsonKey(name: 'statusCode') int? statusCode,
       @JsonKey(name: 'message') String? message});
 }
 
@@ -140,7 +140,7 @@ class __$$DataResponseImplCopyWithImpl<T, $Res>
 class _$DataResponseImpl<T> implements _DataResponse<T> {
   const _$DataResponseImpl(
       {@JsonKey(name: 'data') this.data,
-      @JsonKey(name: 'status_code') this.statusCode,
+      @JsonKey(name: 'statusCode') this.statusCode,
       @JsonKey(name: 'message') this.message});
 
   factory _$DataResponseImpl.fromJson(
@@ -151,7 +151,7 @@ class _$DataResponseImpl<T> implements _DataResponse<T> {
   @JsonKey(name: 'data')
   final T? data;
   @override
-  @JsonKey(name: 'status_code')
+  @JsonKey(name: 'statusCode')
   final int? statusCode;
   @override
   @JsonKey(name: 'message')
@@ -196,7 +196,7 @@ class _$DataResponseImpl<T> implements _DataResponse<T> {
 abstract class _DataResponse<T> implements DataResponse<T> {
   const factory _DataResponse(
       {@JsonKey(name: 'data') final T? data,
-      @JsonKey(name: 'status_code') final int? statusCode,
+      @JsonKey(name: 'statusCode') final int? statusCode,
       @JsonKey(name: 'message') final String? message}) = _$DataResponseImpl<T>;
 
   factory _DataResponse.fromJson(
@@ -207,7 +207,7 @@ abstract class _DataResponse<T> implements DataResponse<T> {
   @JsonKey(name: 'data')
   T? get data;
   @override
-  @JsonKey(name: 'status_code')
+  @JsonKey(name: 'statusCode')
   int? get statusCode;
   @override
   @JsonKey(name: 'message')

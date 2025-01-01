@@ -37,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
+        "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
+            "Mật khẩu xác nhận không khớp"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Định dạng ngày giờ sai"),
         "invalidUserName":

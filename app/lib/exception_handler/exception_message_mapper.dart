@@ -33,11 +33,16 @@ class ExceptionMessageMapper {
             (appException as ValidationException).kind) {
           ValidationExceptionKind.invalidUsername => S.current.invalidUserName,
           ValidationExceptionKind.invalidDateTime => S.current.invalidDateTime,
+          ValidationExceptionKind.invalidConfirmationPassword =>
+            S.current.invalidConfirmationPassword,
         },
       AppExceptionType.cancel => S.current.cancellationException,
       AppExceptionType.service => switch (
             (appException as ServiceException).kind) {
           ServiceExceptionKind.inAppPurchase => S.current.cancellationException,
+          ServiceExceptionKind.googleSignIn => S.current.cancellationException,
+          ServiceExceptionKind.facebookSignIn =>
+            S.current.cancellationException,
         },
     };
   }

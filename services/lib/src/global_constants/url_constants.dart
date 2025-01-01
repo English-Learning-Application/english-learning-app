@@ -6,8 +6,8 @@ class UrlConstants {
 
   static String get appApiBaseUrl {
     return switch (EnvConstants.flavor) {
-      Flavor.develop => 'http://192.168.68.98:3000/api',
-      Flavor.production => 'http://192.168.68.98:3000/api',
+      Flavor.develop => 'http://192.168.1.7:8080/api/v1',
+      Flavor.production => 'http://192.168.1.7:8080/api/v1',
     };
   }
 }

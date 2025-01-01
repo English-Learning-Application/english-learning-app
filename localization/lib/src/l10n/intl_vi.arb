@@ -27,5 +27,6 @@
     "registerDescription": "Đăng ký để truy cập tất cả các dịch vụ của chúng tôi",
     "username": "Tên người dùng",
     "usernameHint": "Nhập tên người dùng",
-    "confirmPassword": "Xác nhận mật khẩu"
+    "confirmPassword": "Xác nhận mật khẩu",
+    "invalidConfirmationPassword": "Mật khẩu xác nhận không khớp"
 }

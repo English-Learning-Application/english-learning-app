@@ -339,6 +339,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Password confirmation does not match`
+  String get invalidConfirmationPassword {
+    return Intl.message(
+      'Password confirmation does not match',
+      name: 'invalidConfirmationPassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

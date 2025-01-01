@@ -17,7 +17,8 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
 
   @override
   void dispose() {
@@ -50,9 +51,7 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
           ),
           SizedBox(
             height: Dimens.d8.responsive(),
-      
           ),
-      
           Text(
             S.current.registerDescription,
             style: AppTextStyles.s14w400primary().font16().medium.grey,
@@ -66,7 +65,8 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
           ),
           SizedBox(
             height: Dimens.d8.responsive(),
-          ),          StandardTextField(
+          ),
+          StandardTextField(
             controller: _usernameController,
             hint: S.current.usernameHint,
             borderRadius: BorderRadius.circular(
@@ -117,8 +117,8 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
                 suffixIcon: GestureDetector(
                   onTap: () {
                     context.read<LoginViewModel>().setIsShowPassword(
-                      !vmData.isShowPassword,
-                    );
+                          !vmData.isShowPassword,
+                        );
                   },
                   child: Container(
                     margin: EdgeInsets.only(
@@ -129,13 +129,13 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
                     child: Center(
                       child: vmData.isShowPassword
                           ? Assets.icons.icEyeClose.svg(
-                        width: Dimens.d24.responsive(),
-                        height: Dimens.d24.responsive(),
-                      )
+                              width: Dimens.d24.responsive(),
+                              height: Dimens.d24.responsive(),
+                            )
                           : Assets.icons.icEyeOpen.svg(
-                        width: Dimens.d24.responsive(),
-                        height: Dimens.d24.responsive(),
-                      ),
+                              width: Dimens.d24.responsive(),
+                              height: Dimens.d24.responsive(),
+                            ),
                     ),
                   ),
                 ),
@@ -157,7 +157,7 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
               return vm.viewModelData;
             },
             shouldRebuild: (previous, next) =>
-            previous.isShowPassword != next.isShowPassword,
+                previous.isShowPassword != next.isShowPassword,
             builder: (_, vmData, __) {
               return StandardTextField(
                 controller: _confirmPasswordController,
@@ -169,8 +169,8 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
                 suffixIcon: GestureDetector(
                   onTap: () {
                     context.read<LoginViewModel>().setIsShowPassword(
-                      !vmData.isShowPassword,
-                    );
+                          !vmData.isShowPassword,
+                        );
                   },
                   child: Container(
                     margin: EdgeInsets.only(
@@ -181,13 +181,13 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
                     child: Center(
                       child: vmData.isShowPassword
                           ? Assets.icons.icEyeClose.svg(
-                        width: Dimens.d24.responsive(),
-                        height: Dimens.d24.responsive(),
-                      )
+                              width: Dimens.d24.responsive(),
+                              height: Dimens.d24.responsive(),
+                            )
                           : Assets.icons.icEyeOpen.svg(
-                        width: Dimens.d24.responsive(),
-                        height: Dimens.d24.responsive(),
-                      ),
+                              width: Dimens.d24.responsive(),
+                              height: Dimens.d24.responsive(),
+                            ),
                     ),
                   ),
                 ),
@@ -212,7 +212,7 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
                 child: Text(
                   S.current.or.toUpperCase(),
                   style:
-                  AppTextStyles.s14w400primary().font12().bold.neutral900,
+                      AppTextStyles.s14w400primary().font12().bold.neutral900,
                 ),
               ),
               Expanded(
@@ -234,7 +234,9 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
                   width: Dimens.d24.responsive(),
                   height: Dimens.d24.responsive(),
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  await context.read<LoginViewModel>().googleSignIn();
+                },
               ),
               SizedBox(
                 width: Dimens.d16.responsive(),
@@ -244,7 +246,9 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
                   width: Dimens.d24.responsive(),
                   height: Dimens.d24.responsive(),
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  await context.read<LoginViewModel>().facebookSignIn();
+                },
               ),
             ],
           ),
@@ -254,6 +258,14 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
           StandardButton(
             buttonSize: ButtonSize.medium,
             text: S.current.register,
+            onPressed: () async {
+              await context.read<LoginViewModel>().registerUser(
+                    username: _usernameController.text,
+                    email: _emailController.text,
+                    password: _passwordController.text,
+                    confirmPassword: _confirmPasswordController.text,
+                  );
+            },
           ),
         ],
       ),
@@ -280,5 +292,4 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
       ),
     );
   }
-
 }

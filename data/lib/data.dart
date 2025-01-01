@@ -44,7 +44,6 @@ export 'src/app_repository/mapper/api_media_data_mapper.dart';
 export 'src/app_repository/mapper/api_notification_data_mapper.dart';
 export 'src/app_repository/mapper/api_random_user_data_mapper.dart';
 export 'src/app_repository/mapper/api_random_user_name_data_mapper.dart';
-export 'src/app_repository/mapper/api_user_info_data_mapper.dart';
 export 'src/app_repository/mapper/app_theme_data_mapper.dart';
 export 'src/endpoint_constants/authentication_endpoints.dart';
 export 'src/app_repository/source/api/app_api_service.dart';

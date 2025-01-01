@@ -36,7 +36,6 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel());
-    gh.factory<_i1056.LoginViewModel>(() => _i1056.LoginViewModel());
     gh.lazySingleton<_i137.BaseRouteInfoMapper>(
         () => _i48.AppRouteInfoMapper());
     gh.factory<_i635.SplashViewModel>(() => _i635.SplashViewModel(
@@ -46,6 +45,12 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.lazySingleton<_i137.BasePopupInfoMapper>(
         () => _i203.AppPopupInfoMapper());
+    gh.factory<_i1056.LoginViewModel>(() => _i1056.LoginViewModel(
+          gh<_i182.UsernameRegistrationUseCase>(),
+          gh<_i182.LoginUserUseCase>(),
+          gh<_i182.GoogleLoginUseCase>(),
+          gh<_i182.FacebookLoginUseCase>(),
+        ));
     gh.factory<_i513.RouteGuard>(
         () => _i513.RouteGuard(gh<_i182.IsLoggedInUseCase>()));
     gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(

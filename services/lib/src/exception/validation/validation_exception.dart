@@ -14,4 +14,5 @@ class ValidationException extends AppException {
 enum ValidationExceptionKind {
   invalidUsername,
   invalidDateTime,
+  invalidConfirmationPassword,
 }

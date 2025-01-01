@@ -1,7 +1,11 @@
 class AuthenticationEndpoints {
   const AuthenticationEndpoints._();
 
-  static const String auth = '/v1/auth';
-  static const String authRegistration = '/v1/auth/registration';
-  static const String authRefreshToken = '/v1/auth/refresh-token';
+  static const String auth = '/auth';
+  static const String authLogin = '/auth/login';
+  static const String authGoogleLogin = '/auth/google';
+  static const String authFacebookLogin = '/auth/facebook';
+  static const String authRegistration = '/auth/register';
+  static const String authRefreshToken = '/auth/refresh-token';
+  static const String authCurrentUser = '/me';
 }

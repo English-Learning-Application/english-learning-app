@@ -20,18 +20,12 @@ ApiMediaData _$ApiMediaDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ApiMediaData {
-  @JsonKey(name: 'media_number')
-  String? get mediaNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'media_type')
+  @JsonKey(name: 'mediaId')
+  String? get mediaId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mediaType')
   String? get mediaType => throw _privateConstructorUsedError;
-  @JsonKey(name: 'media_url')
+  @JsonKey(name: 'mediaUrl')
   String? get mediaUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'media_url_lg')
-  String? get mediaUrlLg => throw _privateConstructorUsedError;
-  @JsonKey(name: 'media_url_md')
-  String? get mediaUrlMd => throw _privateConstructorUsedError;
-  @JsonKey(name: 'media_url_sm')
-  String? get mediaUrlSm => throw _privateConstructorUsedError;
 
   /// Serializes this ApiMediaData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -50,12 +44,9 @@ abstract class $ApiMediaDataCopyWith<$Res> {
       _$ApiMediaDataCopyWithImpl<$Res, ApiMediaData>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'media_number') String? mediaNumber,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'media_url') String? mediaUrl,
-      @JsonKey(name: 'media_url_lg') String? mediaUrlLg,
-      @JsonKey(name: 'media_url_md') String? mediaUrlMd,
-      @JsonKey(name: 'media_url_sm') String? mediaUrlSm});
+      {@JsonKey(name: 'mediaId') String? mediaId,
+      @JsonKey(name: 'mediaType') String? mediaType,
+      @JsonKey(name: 'mediaUrl') String? mediaUrl});
 }
 
 /// @nodoc
@@ -73,17 +64,14 @@ class _$ApiMediaDataCopyWithImpl<$Res, $Val extends ApiMediaData>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? mediaNumber = freezed,
+    Object? mediaId = freezed,
     Object? mediaType = freezed,
     Object? mediaUrl = freezed,
-    Object? mediaUrlLg = freezed,
-    Object? mediaUrlMd = freezed,
-    Object? mediaUrlSm = freezed,
   }) {
     return _then(_value.copyWith(
-      mediaNumber: freezed == mediaNumber
-          ? _value.mediaNumber
-          : mediaNumber // ignore: cast_nullable_to_non_nullable
+      mediaId: freezed == mediaId
+          ? _value.mediaId
+          : mediaId // ignore: cast_nullable_to_non_nullable
               as String?,
       mediaType: freezed == mediaType
           ? _value.mediaType
@@ -92,18 +80,6 @@ class _$ApiMediaDataCopyWithImpl<$Res, $Val extends ApiMediaData>
       mediaUrl: freezed == mediaUrl
           ? _value.mediaUrl
           : mediaUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaUrlLg: freezed == mediaUrlLg
-          ? _value.mediaUrlLg
-          : mediaUrlLg // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaUrlMd: freezed == mediaUrlMd
-          ? _value.mediaUrlMd
-          : mediaUrlMd // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaUrlSm: freezed == mediaUrlSm
-          ? _value.mediaUrlSm
-          : mediaUrlSm // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -118,12 +94,9 @@ abstract class _$$ApiMediaDataImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'media_number') String? mediaNumber,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'media_url') String? mediaUrl,
-      @JsonKey(name: 'media_url_lg') String? mediaUrlLg,
-      @JsonKey(name: 'media_url_md') String? mediaUrlMd,
-      @JsonKey(name: 'media_url_sm') String? mediaUrlSm});
+      {@JsonKey(name: 'mediaId') String? mediaId,
+      @JsonKey(name: 'mediaType') String? mediaType,
+      @JsonKey(name: 'mediaUrl') String? mediaUrl});
 }
 
 /// @nodoc
@@ -139,17 +112,14 @@ class __$$ApiMediaDataImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? mediaNumber = freezed,
+    Object? mediaId = freezed,
     Object? mediaType = freezed,
     Object? mediaUrl = freezed,
-    Object? mediaUrlLg = freezed,
-    Object? mediaUrlMd = freezed,
-    Object? mediaUrlSm = freezed,
   }) {
     return _then(_$ApiMediaDataImpl(
-      mediaNumber: freezed == mediaNumber
-          ? _value.mediaNumber
-          : mediaNumber // ignore: cast_nullable_to_non_nullable
+      mediaId: freezed == mediaId
+          ? _value.mediaId
+          : mediaId // ignore: cast_nullable_to_non_nullable
               as String?,
       mediaType: freezed == mediaType
           ? _value.mediaType
@@ -159,18 +129,6 @@ class __$$ApiMediaDataImplCopyWithImpl<$Res>
           ? _value.mediaUrl
           : mediaUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      mediaUrlLg: freezed == mediaUrlLg
-          ? _value.mediaUrlLg
-          : mediaUrlLg // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaUrlMd: freezed == mediaUrlMd
-          ? _value.mediaUrlMd
-          : mediaUrlMd // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaUrlSm: freezed == mediaUrlSm
-          ? _value.mediaUrlSm
-          : mediaUrlSm // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -179,38 +137,26 @@ class __$$ApiMediaDataImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ApiMediaDataImpl implements _ApiMediaData {
   const _$ApiMediaDataImpl(
-      {@JsonKey(name: 'media_number') this.mediaNumber,
-      @JsonKey(name: 'media_type') this.mediaType,
-      @JsonKey(name: 'media_url') this.mediaUrl,
-      @JsonKey(name: 'media_url_lg') this.mediaUrlLg,
-      @JsonKey(name: 'media_url_md') this.mediaUrlMd,
-      @JsonKey(name: 'media_url_sm') this.mediaUrlSm});
+      {@JsonKey(name: 'mediaId') this.mediaId,
+      @JsonKey(name: 'mediaType') this.mediaType,
+      @JsonKey(name: 'mediaUrl') this.mediaUrl});
 
   factory _$ApiMediaDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$ApiMediaDataImplFromJson(json);
 
   @override
-  @JsonKey(name: 'media_number')
-  final String? mediaNumber;
+  @JsonKey(name: 'mediaId')
+  final String? mediaId;
   @override
-  @JsonKey(name: 'media_type')
+  @JsonKey(name: 'mediaType')
   final String? mediaType;
   @override
-  @JsonKey(name: 'media_url')
+  @JsonKey(name: 'mediaUrl')
   final String? mediaUrl;
-  @override
-  @JsonKey(name: 'media_url_lg')
-  final String? mediaUrlLg;
-  @override
-  @JsonKey(name: 'media_url_md')
-  final String? mediaUrlMd;
-  @override
-  @JsonKey(name: 'media_url_sm')
-  final String? mediaUrlSm;
 
   @override
   String toString() {
-    return 'ApiMediaData(mediaNumber: $mediaNumber, mediaType: $mediaType, mediaUrl: $mediaUrl, mediaUrlLg: $mediaUrlLg, mediaUrlMd: $mediaUrlMd, mediaUrlSm: $mediaUrlSm)';
+    return 'ApiMediaData(mediaId: $mediaId, mediaType: $mediaType, mediaUrl: $mediaUrl)';
   }
 
   @override
@@ -218,24 +164,16 @@ class _$ApiMediaDataImpl implements _ApiMediaData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ApiMediaDataImpl &&
-            (identical(other.mediaNumber, mediaNumber) ||
-                other.mediaNumber == mediaNumber) &&
+            (identical(other.mediaId, mediaId) || other.mediaId == mediaId) &&
             (identical(other.mediaType, mediaType) ||
                 other.mediaType == mediaType) &&
             (identical(other.mediaUrl, mediaUrl) ||
-                other.mediaUrl == mediaUrl) &&
-            (identical(other.mediaUrlLg, mediaUrlLg) ||
-                other.mediaUrlLg == mediaUrlLg) &&
-            (identical(other.mediaUrlMd, mediaUrlMd) ||
-                other.mediaUrlMd == mediaUrlMd) &&
-            (identical(other.mediaUrlSm, mediaUrlSm) ||
-                other.mediaUrlSm == mediaUrlSm));
+                other.mediaUrl == mediaUrl));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, mediaNumber, mediaType, mediaUrl,
-      mediaUrlLg, mediaUrlMd, mediaUrlSm);
+  int get hashCode => Object.hash(runtimeType, mediaId, mediaType, mediaUrl);
 
   /// Create a copy of ApiMediaData
   /// with the given fields replaced by the non-null parameter values.
@@ -255,35 +193,22 @@ class _$ApiMediaDataImpl implements _ApiMediaData {
 
 abstract class _ApiMediaData implements ApiMediaData {
   const factory _ApiMediaData(
-          {@JsonKey(name: 'media_number') final String? mediaNumber,
-          @JsonKey(name: 'media_type') final String? mediaType,
-          @JsonKey(name: 'media_url') final String? mediaUrl,
-          @JsonKey(name: 'media_url_lg') final String? mediaUrlLg,
-          @JsonKey(name: 'media_url_md') final String? mediaUrlMd,
-          @JsonKey(name: 'media_url_sm') final String? mediaUrlSm}) =
-      _$ApiMediaDataImpl;
+      {@JsonKey(name: 'mediaId') final String? mediaId,
+      @JsonKey(name: 'mediaType') final String? mediaType,
+      @JsonKey(name: 'mediaUrl') final String? mediaUrl}) = _$ApiMediaDataImpl;
 
   factory _ApiMediaData.fromJson(Map<String, dynamic> json) =
       _$ApiMediaDataImpl.fromJson;
 
   @override
-  @JsonKey(name: 'media_number')
-  String? get mediaNumber;
+  @JsonKey(name: 'mediaId')
+  String? get mediaId;
   @override
-  @JsonKey(name: 'media_type')
+  @JsonKey(name: 'mediaType')
   String? get mediaType;
   @override
-  @JsonKey(name: 'media_url')
+  @JsonKey(name: 'mediaUrl')
   String? get mediaUrl;
-  @override
-  @JsonKey(name: 'media_url_lg')
-  String? get mediaUrlLg;
-  @override
-  @JsonKey(name: 'media_url_md')
-  String? get mediaUrlMd;
-  @override
-  @JsonKey(name: 'media_url_sm')
-  String? get mediaUrlSm;
 
   /// Create a copy of ApiMediaData
   /// with the given fields replaced by the non-null parameter values.

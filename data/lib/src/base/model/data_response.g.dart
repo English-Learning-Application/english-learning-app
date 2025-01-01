@@ -12,7 +12,7 @@ _$DataResponseImpl<T> _$$DataResponseImplFromJson<T>(
 ) =>
     _$DataResponseImpl<T>(
       data: _$nullableGenericFromJson(json['data'], fromJsonT),
-      statusCode: (json['status_code'] as num?)?.toInt(),
+      statusCode: (json['statusCode'] as num?)?.toInt(),
       message: json['message'] as String?,
     );
 
@@ -22,7 +22,7 @@ Map<String, dynamic> _$$DataResponseImplToJson<T>(
 ) =>
     <String, dynamic>{
       'data': _$nullableGenericToJson(instance.data, toJsonT),
-      'status_code': instance.statusCode,
+      'statusCode': instance.statusCode,
       'message': instance.message,
     };
 

@@ -7,7 +7,7 @@ part 'data_response.g.dart';
 class DataResponse<T> with _$DataResponse<T> {
   const factory DataResponse({
     @JsonKey(name: 'data') T? data,
-    @JsonKey(name: 'status_code') int? statusCode,
+    @JsonKey(name: 'statusCode') int? statusCode,
     @JsonKey(name: 'message') String? message,
   }) = _DataResponse<T>;
 

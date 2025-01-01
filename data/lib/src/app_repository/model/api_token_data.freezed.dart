@@ -20,9 +20,9 @@ ApiTokenData _$ApiTokenDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ApiTokenData {
-  @JsonKey(name: 'access_token')
+  @JsonKey(name: 'accessToken')
   String? get accessToken => throw _privateConstructorUsedError;
-  @JsonKey(name: 'refresh_token')
+  @JsonKey(name: 'refreshToken')
   String? get refreshToken => throw _privateConstructorUsedError;
 
   /// Serializes this ApiTokenData to a JSON map.
@@ -42,8 +42,8 @@ abstract class $ApiTokenDataCopyWith<$Res> {
       _$ApiTokenDataCopyWithImpl<$Res, ApiTokenData>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'access_token') String? accessToken,
-      @JsonKey(name: 'refresh_token') String? refreshToken});
+      {@JsonKey(name: 'accessToken') String? accessToken,
+      @JsonKey(name: 'refreshToken') String? refreshToken});
 }
 
 /// @nodoc
@@ -86,8 +86,8 @@ abstract class _$$ApiTokenDataImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'access_token') String? accessToken,
-      @JsonKey(name: 'refresh_token') String? refreshToken});
+      {@JsonKey(name: 'accessToken') String? accessToken,
+      @JsonKey(name: 'refreshToken') String? refreshToken});
 }
 
 /// @nodoc
@@ -123,18 +123,18 @@ class __$$ApiTokenDataImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ApiTokenDataImpl extends _ApiTokenData {
   const _$ApiTokenDataImpl(
-      {@JsonKey(name: 'access_token') this.accessToken,
-      @JsonKey(name: 'refresh_token') this.refreshToken})
+      {@JsonKey(name: 'accessToken') this.accessToken,
+      @JsonKey(name: 'refreshToken') this.refreshToken})
       : super._();
 
   factory _$ApiTokenDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$ApiTokenDataImplFromJson(json);
 
   @override
-  @JsonKey(name: 'access_token')
+  @JsonKey(name: 'accessToken')
   final String? accessToken;
   @override
-  @JsonKey(name: 'refresh_token')
+  @JsonKey(name: 'refreshToken')
   final String? refreshToken;
 
   @override
@@ -175,8 +175,8 @@ class _$ApiTokenDataImpl extends _ApiTokenData {
 
 abstract class _ApiTokenData extends ApiTokenData {
   const factory _ApiTokenData(
-          {@JsonKey(name: 'access_token') final String? accessToken,
-          @JsonKey(name: 'refresh_token') final String? refreshToken}) =
+          {@JsonKey(name: 'accessToken') final String? accessToken,
+          @JsonKey(name: 'refreshToken') final String? refreshToken}) =
       _$ApiTokenDataImpl;
   const _ApiTokenData._() : super._();
 
@@ -184,10 +184,10 @@ abstract class _ApiTokenData extends ApiTokenData {
       _$ApiTokenDataImpl.fromJson;
 
   @override
-  @JsonKey(name: 'access_token')
+  @JsonKey(name: 'accessToken')
   String? get accessToken;
   @override
-  @JsonKey(name: 'refresh_token')
+  @JsonKey(name: 'refreshToken')
   String? get refreshToken;
 
   /// Create a copy of ApiTokenData
