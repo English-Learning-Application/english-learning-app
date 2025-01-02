@@ -13,6 +13,8 @@ import 'package:app/app/view_model/app.dart' as _i215;
 import 'package:app/base/view_model/common/common.dart' as _i915;
 import 'package:app/features/home/view_models/home.dart' as _i885;
 import 'package:app/features/login/view_model/login.dart' as _i1056;
+import 'package:app/features/main/viewmodels/main_view_model.dart' as _i93;
+import 'package:app/features/on_boarding/viewmodel/on_boarding.dart' as _i646;
 import 'package:app/features/splash/view_models/splash.dart' as _i635;
 import 'package:app/navigation/app_navigator_impl.dart' as _i101;
 import 'package:app/navigation/mapper/app_popup_info_mapper.dart' as _i203;
@@ -36,6 +38,8 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel());
+    gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
+    gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
     gh.lazySingleton<_i137.BaseRouteInfoMapper>(
         () => _i48.AppRouteInfoMapper());
     gh.factory<_i635.SplashViewModel>(() => _i635.SplashViewModel(

@@ -16,7 +16,7 @@ class SplashViewModel extends BaseViewModel<SplashViewModelData> {
     await Future.delayed(const Duration(seconds: 2));
     await runViewModelCatching(
       action: () async {
-        final getInitialAppDataOutput = _getInitialAppDataUseCase.execute(
+        final getInitialAppDataOutput = await _getInitialAppDataUseCase.execute(
           const GetInitialAppDataInput(),
         );
         if (getInitialAppDataOutput.isLoggedIn) {
@@ -33,6 +33,15 @@ class SplashViewModel extends BaseViewModel<SplashViewModelData> {
           currentUser: currentUserResp.user,
         );
 
+        if (getInitialAppDataOutput.isFirstLaunch) {
+          navigator.replaceAll(
+            [
+              const AppRouteInfo.onBoarding(),
+            ],
+          );
+          return;
+        }
+
         switch (getInitialAppDataOutput.initialAppRoute) {
           case InitialAppRoute.login:
             navigator.replaceAll(
@@ -44,7 +53,7 @@ class SplashViewModel extends BaseViewModel<SplashViewModelData> {
           case InitialAppRoute.home:
             navigator.replaceAll(
               [
-                const AppRouteInfo.home(),
+                const AppRouteInfo.main(),
               ],
             );
             break;

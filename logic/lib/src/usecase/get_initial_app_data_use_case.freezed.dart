@@ -92,6 +92,7 @@ mixin _$GetInitialAppDataOutput {
   bool get isLoggedIn => throw _privateConstructorUsedError;
   LanguageCode get languageCode => throw _privateConstructorUsedError;
   InitialAppRoute get initialAppRoute => throw _privateConstructorUsedError;
+  bool get isFirstLaunch => throw _privateConstructorUsedError;
 
   /// Create a copy of GetInitialAppDataOutput
   /// with the given fields replaced by the non-null parameter values.
@@ -110,7 +111,8 @@ abstract class $GetInitialAppDataOutputCopyWith<$Res> {
       {AppThemeType appTheme,
       bool isLoggedIn,
       LanguageCode languageCode,
-      InitialAppRoute initialAppRoute});
+      InitialAppRoute initialAppRoute,
+      bool isFirstLaunch});
 }
 
 /// @nodoc
@@ -133,6 +135,7 @@ class _$GetInitialAppDataOutputCopyWithImpl<$Res,
     Object? isLoggedIn = null,
     Object? languageCode = null,
     Object? initialAppRoute = null,
+    Object? isFirstLaunch = null,
   }) {
     return _then(_value.copyWith(
       appTheme: null == appTheme
@@ -151,6 +154,10 @@ class _$GetInitialAppDataOutputCopyWithImpl<$Res,
           ? _value.initialAppRoute
           : initialAppRoute // ignore: cast_nullable_to_non_nullable
               as InitialAppRoute,
+      isFirstLaunch: null == isFirstLaunch
+          ? _value.isFirstLaunch
+          : isFirstLaunch // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -168,7 +175,8 @@ abstract class _$$GetInitialAppDataOutputImplCopyWith<$Res>
       {AppThemeType appTheme,
       bool isLoggedIn,
       LanguageCode languageCode,
-      InitialAppRoute initialAppRoute});
+      InitialAppRoute initialAppRoute,
+      bool isFirstLaunch});
 }
 
 /// @nodoc
@@ -190,6 +198,7 @@ class __$$GetInitialAppDataOutputImplCopyWithImpl<$Res>
     Object? isLoggedIn = null,
     Object? languageCode = null,
     Object? initialAppRoute = null,
+    Object? isFirstLaunch = null,
   }) {
     return _then(_$GetInitialAppDataOutputImpl(
       appTheme: null == appTheme
@@ -208,6 +217,10 @@ class __$$GetInitialAppDataOutputImplCopyWithImpl<$Res>
           ? _value.initialAppRoute
           : initialAppRoute // ignore: cast_nullable_to_non_nullable
               as InitialAppRoute,
+      isFirstLaunch: null == isFirstLaunch
+          ? _value.isFirstLaunch
+          : isFirstLaunch // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -219,7 +232,8 @@ class _$GetInitialAppDataOutputImpl extends _GetInitialAppDataOutput {
       {this.appTheme = AppThemeType.system,
       this.isLoggedIn = false,
       this.languageCode = LanguageCode.defaultValue,
-      this.initialAppRoute = InitialAppRoute.login})
+      this.initialAppRoute = InitialAppRoute.login,
+      this.isFirstLaunch = false})
       : super._();
 
   @override
@@ -234,10 +248,13 @@ class _$GetInitialAppDataOutputImpl extends _GetInitialAppDataOutput {
   @override
   @JsonKey()
   final InitialAppRoute initialAppRoute;
+  @override
+  @JsonKey()
+  final bool isFirstLaunch;
 
   @override
   String toString() {
-    return 'GetInitialAppDataOutput(appTheme: $appTheme, isLoggedIn: $isLoggedIn, languageCode: $languageCode, initialAppRoute: $initialAppRoute)';
+    return 'GetInitialAppDataOutput(appTheme: $appTheme, isLoggedIn: $isLoggedIn, languageCode: $languageCode, initialAppRoute: $initialAppRoute, isFirstLaunch: $isFirstLaunch)';
   }
 
   @override
@@ -252,12 +269,14 @@ class _$GetInitialAppDataOutputImpl extends _GetInitialAppDataOutput {
             (identical(other.languageCode, languageCode) ||
                 other.languageCode == languageCode) &&
             (identical(other.initialAppRoute, initialAppRoute) ||
-                other.initialAppRoute == initialAppRoute));
+                other.initialAppRoute == initialAppRoute) &&
+            (identical(other.isFirstLaunch, isFirstLaunch) ||
+                other.isFirstLaunch == isFirstLaunch));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, appTheme, isLoggedIn, languageCode, initialAppRoute);
+  int get hashCode => Object.hash(runtimeType, appTheme, isLoggedIn,
+      languageCode, initialAppRoute, isFirstLaunch);
 
   /// Create a copy of GetInitialAppDataOutput
   /// with the given fields replaced by the non-null parameter values.
@@ -274,7 +293,8 @@ abstract class _GetInitialAppDataOutput extends GetInitialAppDataOutput {
       {final AppThemeType appTheme,
       final bool isLoggedIn,
       final LanguageCode languageCode,
-      final InitialAppRoute initialAppRoute}) = _$GetInitialAppDataOutputImpl;
+      final InitialAppRoute initialAppRoute,
+      final bool isFirstLaunch}) = _$GetInitialAppDataOutputImpl;
   const _GetInitialAppDataOutput._() : super._();
 
   @override
@@ -285,6 +305,8 @@ abstract class _GetInitialAppDataOutput extends GetInitialAppDataOutput {
   LanguageCode get languageCode;
   @override
   InitialAppRoute get initialAppRoute;
+  @override
+  bool get isFirstLaunch;
 
   /// Create a copy of GetInitialAppDataOutput
   /// with the given fields replaced by the non-null parameter values.

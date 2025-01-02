@@ -23,16 +23,7 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
   @override
   Widget buildPage(BuildContext context) {
     return CommonScaffold(
-      body: Center(
-        child: StandardButton(
-          onPressed: () async {
-            await GetIt.instance<LogoutUseCase>().execute(
-              const LogoutInput(),
-            );
-          },
-          text: "Logout",
-        ),
-      ),
+      body: Container(),
     );
   }
 

@@ -34,6 +34,16 @@ class AppRepositoryImpl implements AppRepository {
   }
 
   @override
+  Future<bool> isFirstLaunchApp() async {
+    final resp = _appPreferences.isFirstLaunchApp;
+
+    if (resp) {
+      await _appPreferences.saveIsFirstLaunchApp(false);
+    }
+    return resp;
+  }
+
+  @override
   AppThemeType get appTheme =>
       _appThemeDataMapper.mapToEntity(_appPreferences.appTheme);
 

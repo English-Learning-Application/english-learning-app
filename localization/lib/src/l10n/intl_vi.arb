@@ -28,5 +28,12 @@
     "username": "Tên người dùng",
     "usernameHint": "Nhập tên người dùng",
     "confirmPassword": "Xác nhận mật khẩu",
-    "invalidConfirmationPassword": "Mật khẩu xác nhận không khớp"
+    "invalidConfirmationPassword": "Mật khẩu xác nhận không khớp",
+    "learnAnywhere": "Học bất cứ nơi đâu, bất cứ lúc nào",
+    "learnAnywhereDescription": "Truy cập hàng ngàn khóa học, tài nguyên và tài liệu học tập mọi lúc mọi nơi.",
+    "getStarted": "Bắt đầu",
+    "multiLanguage": "Hỗ trợ nhiều ngôn ngữ",
+    "multiLanguageDescription": "Ứng dụng của chúng tôi hỗ trợ nhiều ngôn ngữ để giúp bạn học bằng ngôn ngữ ưa thích của mình.",
+        "trackYourProgress": "Theo dõi tiến trình của bạn",
+        "trackYourProgressDescription": "Theo dõi tiến trình của bạn và xem bạn đã đi được bao xa trên hành trình học tập của mình."
 }

@@ -16,6 +16,8 @@ abstract class AppRepository {
 
   Future<bool> saveAppTheme(AppThemeType isDarkMode);
 
+  Future<bool> isFirstLaunchApp();
+
   Future<bool> saveLanguageCode(LanguageCode languageCode);
 
   User getUserPreference();

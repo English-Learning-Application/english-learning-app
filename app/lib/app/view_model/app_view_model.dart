@@ -110,7 +110,7 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
         if (goToHome) {
           await navigator.replaceAll(
             [
-              const AppRouteInfo.home(),
+              const AppRouteInfo.main(),
             ],
           );
         }

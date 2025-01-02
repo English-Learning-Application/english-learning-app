@@ -25,12 +25,53 @@ class AppRouter extends $AppRouter {
           path: '/login',
           page: LoginRoute.page,
         ),
+        AutoRoute(page: OnBoardingRoute.page, path: '/onboarding'),
         AutoRoute(
-          path: '/home',
           guards: [
             _routeGuard,
           ],
-          page: HomeRoute.page,
+          page: MainRoute.page,
+          path: '/main',
+          children: [
+            AutoRoute(
+              page: HomeTabRoute.page,
+              path: 'home',
+              children: [
+                AutoRoute(
+                  page: HomeRoute.page,
+                ),
+              ],
+            ),
+            AutoRoute(
+              page: PhoneticTabRoute.page,
+            ),
+            AutoRoute(
+              page: AiChatTabRoute.page,
+            ),
+            AutoRoute(
+              page: ProfileTabRoute.page,
+            ),
+          ],
         ),
       ];
+}
+
+@RoutePage()
+class HomeTabPage extends AutoRouter {
+  const HomeTabPage({super.key});
+}
+
+@RoutePage()
+class PhoneticTabPage extends AutoRouter {
+  const PhoneticTabPage({super.key});
+}
+
+@RoutePage()
+class AiChatTabPage extends AutoRouter {
+  const AiChatTabPage({super.key});
+}
+
+@RoutePage()
+class ProfileTabPage extends AutoRouter {
+  const ProfileTabPage({super.key});
 }

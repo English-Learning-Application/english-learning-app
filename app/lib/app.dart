@@ -49,3 +49,5 @@ export 'resource/images_provider/images_provider.dart';
 export 'resource/styles/app_colors.dart';
 export 'resource/styles/app_text_styles.dart';
 export 'resource/styles/app_themes.dart';
+export 'features/on_boarding/viewmodel/on_boarding.dart';
+export 'features/on_boarding/views/on_boarding_page.dart';

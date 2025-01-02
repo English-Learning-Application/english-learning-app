@@ -19,44 +19,50 @@ mixin _$AppRouteInfo {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() login,
-    required TResult Function() home,
+    required TResult Function() main,
     required TResult Function() splash,
+    required TResult Function() onBoarding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? login,
-    TResult? Function()? home,
+    TResult? Function()? main,
     TResult? Function()? splash,
+    TResult? Function()? onBoarding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? login,
-    TResult Function()? home,
+    TResult Function()? main,
     TResult Function()? splash,
+    TResult Function()? onBoarding,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Login value) login,
-    required TResult Function(_Home value) home,
+    required TResult Function(_Main value) main,
     required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Login value)? login,
-    TResult? Function(_Home value)? home,
+    TResult? Function(_Main value)? main,
     TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Login value)? login,
-    TResult Function(_Home value)? home,
+    TResult Function(_Main value)? main,
     TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -125,8 +131,9 @@ class _$LoginImpl implements _Login {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() login,
-    required TResult Function() home,
+    required TResult Function() main,
     required TResult Function() splash,
+    required TResult Function() onBoarding,
   }) {
     return login();
   }
@@ -135,8 +142,9 @@ class _$LoginImpl implements _Login {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? login,
-    TResult? Function()? home,
+    TResult? Function()? main,
     TResult? Function()? splash,
+    TResult? Function()? onBoarding,
   }) {
     return login?.call();
   }
@@ -145,8 +153,9 @@ class _$LoginImpl implements _Login {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? login,
-    TResult Function()? home,
+    TResult Function()? main,
     TResult Function()? splash,
+    TResult Function()? onBoarding,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -159,8 +168,9 @@ class _$LoginImpl implements _Login {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Login value) login,
-    required TResult Function(_Home value) home,
+    required TResult Function(_Main value) main,
     required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
   }) {
     return login(this);
   }
@@ -169,8 +179,9 @@ class _$LoginImpl implements _Login {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Login value)? login,
-    TResult? Function(_Home value)? home,
+    TResult? Function(_Main value)? main,
     TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
   }) {
     return login?.call(this);
   }
@@ -179,8 +190,9 @@ class _$LoginImpl implements _Login {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Login value)? login,
-    TResult Function(_Home value)? home,
+    TResult Function(_Main value)? main,
     TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -195,17 +207,17 @@ abstract class _Login implements AppRouteInfo {
 }
 
 /// @nodoc
-abstract class _$$HomeImplCopyWith<$Res> {
-  factory _$$HomeImplCopyWith(
-          _$HomeImpl value, $Res Function(_$HomeImpl) then) =
-      __$$HomeImplCopyWithImpl<$Res>;
+abstract class _$$MainImplCopyWith<$Res> {
+  factory _$$MainImplCopyWith(
+          _$MainImpl value, $Res Function(_$MainImpl) then) =
+      __$$MainImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$HomeImplCopyWithImpl<$Res>
-    extends _$AppRouteInfoCopyWithImpl<$Res, _$HomeImpl>
-    implements _$$HomeImplCopyWith<$Res> {
-  __$$HomeImplCopyWithImpl(_$HomeImpl _value, $Res Function(_$HomeImpl) _then)
+class __$$MainImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$MainImpl>
+    implements _$$MainImplCopyWith<$Res> {
+  __$$MainImplCopyWithImpl(_$MainImpl _value, $Res Function(_$MainImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AppRouteInfo
@@ -214,18 +226,18 @@ class __$$HomeImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$HomeImpl implements _Home {
-  const _$HomeImpl();
+class _$MainImpl implements _Main {
+  const _$MainImpl();
 
   @override
   String toString() {
-    return 'AppRouteInfo.home()';
+    return 'AppRouteInfo.main()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$HomeImpl);
+        (other.runtimeType == runtimeType && other is _$MainImpl);
   }
 
   @override
@@ -235,32 +247,35 @@ class _$HomeImpl implements _Home {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() login,
-    required TResult Function() home,
+    required TResult Function() main,
     required TResult Function() splash,
+    required TResult Function() onBoarding,
   }) {
-    return home();
+    return main();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? login,
-    TResult? Function()? home,
+    TResult? Function()? main,
     TResult? Function()? splash,
+    TResult? Function()? onBoarding,
   }) {
-    return home?.call();
+    return main?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? login,
-    TResult Function()? home,
+    TResult Function()? main,
     TResult Function()? splash,
+    TResult Function()? onBoarding,
     required TResult orElse(),
   }) {
-    if (home != null) {
-      return home();
+    if (main != null) {
+      return main();
     }
     return orElse();
   }
@@ -269,39 +284,42 @@ class _$HomeImpl implements _Home {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Login value) login,
-    required TResult Function(_Home value) home,
+    required TResult Function(_Main value) main,
     required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
   }) {
-    return home(this);
+    return main(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Login value)? login,
-    TResult? Function(_Home value)? home,
+    TResult? Function(_Main value)? main,
     TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
   }) {
-    return home?.call(this);
+    return main?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Login value)? login,
-    TResult Function(_Home value)? home,
+    TResult Function(_Main value)? main,
     TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
     required TResult orElse(),
   }) {
-    if (home != null) {
-      return home(this);
+    if (main != null) {
+      return main(this);
     }
     return orElse();
   }
 }
 
-abstract class _Home implements AppRouteInfo {
-  const factory _Home() = _$HomeImpl;
+abstract class _Main implements AppRouteInfo {
+  const factory _Main() = _$MainImpl;
 }
 
 /// @nodoc
@@ -346,8 +364,9 @@ class _$SplashImpl implements _Splash {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() login,
-    required TResult Function() home,
+    required TResult Function() main,
     required TResult Function() splash,
+    required TResult Function() onBoarding,
   }) {
     return splash();
   }
@@ -356,8 +375,9 @@ class _$SplashImpl implements _Splash {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? login,
-    TResult? Function()? home,
+    TResult? Function()? main,
     TResult? Function()? splash,
+    TResult? Function()? onBoarding,
   }) {
     return splash?.call();
   }
@@ -366,8 +386,9 @@ class _$SplashImpl implements _Splash {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? login,
-    TResult Function()? home,
+    TResult Function()? main,
     TResult Function()? splash,
+    TResult Function()? onBoarding,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -380,8 +401,9 @@ class _$SplashImpl implements _Splash {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Login value) login,
-    required TResult Function(_Home value) home,
+    required TResult Function(_Main value) main,
     required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
   }) {
     return splash(this);
   }
@@ -390,8 +412,9 @@ class _$SplashImpl implements _Splash {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Login value)? login,
-    TResult? Function(_Home value)? home,
+    TResult? Function(_Main value)? main,
     TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
   }) {
     return splash?.call(this);
   }
@@ -400,8 +423,9 @@ class _$SplashImpl implements _Splash {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Login value)? login,
-    TResult Function(_Home value)? home,
+    TResult Function(_Main value)? main,
     TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -413,4 +437,121 @@ class _$SplashImpl implements _Splash {
 
 abstract class _Splash implements AppRouteInfo {
   const factory _Splash() = _$SplashImpl;
+}
+
+/// @nodoc
+abstract class _$$OnBoardingImplCopyWith<$Res> {
+  factory _$$OnBoardingImplCopyWith(
+          _$OnBoardingImpl value, $Res Function(_$OnBoardingImpl) then) =
+      __$$OnBoardingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnBoardingImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$OnBoardingImpl>
+    implements _$$OnBoardingImplCopyWith<$Res> {
+  __$$OnBoardingImplCopyWithImpl(
+      _$OnBoardingImpl _value, $Res Function(_$OnBoardingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OnBoardingImpl implements _OnBoarding {
+  const _$OnBoardingImpl();
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.onBoarding()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OnBoardingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+  }) {
+    return onBoarding();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+  }) {
+    return onBoarding?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    required TResult orElse(),
+  }) {
+    if (onBoarding != null) {
+      return onBoarding();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+  }) {
+    return onBoarding(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+  }) {
+    return onBoarding?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    required TResult orElse(),
+  }) {
+    if (onBoarding != null) {
+      return onBoarding(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnBoarding implements AppRouteInfo {
+  const factory _OnBoarding() = _$OnBoardingImpl;
 }

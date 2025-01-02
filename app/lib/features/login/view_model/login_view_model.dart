@@ -65,7 +65,7 @@ class LoginViewModel extends BaseViewModel<LoginViewModelData> {
         await _usernameRegistrationUseCase.execute(input);
         navigator.replaceAll(
           [
-            const AppRouteInfo.home(),
+            const AppRouteInfo.main(),
           ],
         );
       },

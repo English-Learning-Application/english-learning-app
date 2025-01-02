@@ -37,12 +37,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
+        "getStarted": MessageLookupByLibrary.simpleMessage("Bắt đầu"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Mật khẩu xác nhận không khớp"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Định dạng ngày giờ sai"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
+        "learnAnywhere": MessageLookupByLibrary.simpleMessage(
+            "Học bất cứ nơi đâu, bất cứ lúc nào"),
+        "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
+            "Truy cập hàng ngàn khóa học, tài nguyên và tài liệu học tập mọi lúc mọi nơi."),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "loginDescription": MessageLookupByLibrary.simpleMessage(
             "Đăng nhập để truy cập tất cả các dịch vụ của chúng tôi"),
@@ -50,6 +55,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kiến thức, tài nguyên và hỗ trợ giúp bạn mỗi bước trên hành trình thành công của mình."),
         "loginTitle": MessageLookupByLibrary.simpleMessage(
             "Tất cả mọi thứ bạn cần đều có tại đây"),
+        "multiLanguage":
+            MessageLookupByLibrary.simpleMessage("Hỗ trợ nhiều ngôn ngữ"),
+        "multiLanguageDescription": MessageLookupByLibrary.simpleMessage(
+            "Ứng dụng của chúng tôi hỗ trợ nhiều ngôn ngữ để giúp bạn học bằng ngôn ngữ ưa thích của mình."),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("Không có mạng"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
@@ -67,6 +76,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "timeoutException":
             MessageLookupByLibrary.simpleMessage("Quá thời gian kết nối"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token hết hạn"),
+        "trackYourProgress":
+            MessageLookupByLibrary.simpleMessage("Theo dõi tiến trình của bạn"),
+        "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
+            "Theo dõi tiến trình của bạn và xem bạn đã đi được bao xa trên hành trình học tập của mình."),
         "unknownException": m0,
         "username": MessageLookupByLibrary.simpleMessage("Tên người dùng"),
         "usernameHint":

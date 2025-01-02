@@ -349,6 +349,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Learn anywhere, anytime`
+  String get learnAnywhere {
+    return Intl.message(
+      'Learn anywhere, anytime',
+      name: 'learnAnywhere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Access thousands of courses, resources, and learning materials on the go.`
+  String get learnAnywhereDescription {
+    return Intl.message(
+      'Access thousands of courses, resources, and learning materials on the go.',
+      name: 'learnAnywhereDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get started`
+  String get getStarted {
+    return Intl.message(
+      'Get started',
+      name: 'getStarted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Multi-language support`
+  String get multiLanguage {
+    return Intl.message(
+      'Multi-language support',
+      name: 'multiLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our app supports multiple languages to help you learn in your preferred language.`
+  String get multiLanguageDescription {
+    return Intl.message(
+      'Our app supports multiple languages to help you learn in your preferred language.',
+      name: 'multiLanguageDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Track your progress`
+  String get trackYourProgress {
+    return Intl.message(
+      'Track your progress',
+      name: 'trackYourProgress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Track your progress and see how far you've come on your learning journey.`
+  String get trackYourProgressDescription {
+    return Intl.message(
+      'Track your progress and see how far you\'ve come on your learning journey.',
+      name: 'trackYourProgressDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

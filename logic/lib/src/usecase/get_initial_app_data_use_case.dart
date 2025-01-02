@@ -7,22 +7,24 @@ part 'get_initial_app_data_use_case.freezed.dart';
 
 @Injectable()
 class GetInitialAppDataUseCase
-    extends BaseSyncUseCase<GetInitialAppDataInput, GetInitialAppDataOutput> {
+    extends BaseFutureUseCase<GetInitialAppDataInput, GetInitialAppDataOutput> {
   final AppRepository _appRepository;
 
   const GetInitialAppDataUseCase(this._appRepository);
 
   @override
-  GetInitialAppDataOutput buildUseCase(GetInitialAppDataInput input) {
+  Future<GetInitialAppDataOutput> buildUseCase(GetInitialAppDataInput input)  async {
     final appTheme = _appRepository.appTheme;
     final isLoggedIn = _appRepository.isLoggedIn;
     final languageCode = _appRepository.languageCode;
+    final isFirstLaunch = await _appRepository.isFirstLaunchApp();
     return GetInitialAppDataOutput(
       appTheme: appTheme,
       isLoggedIn: isLoggedIn,
       languageCode: languageCode,
       initialAppRoute:
           isLoggedIn ? InitialAppRoute.home : InitialAppRoute.login,
+      isFirstLaunch: isFirstLaunch,
     );
   }
 }
@@ -41,5 +43,6 @@ class GetInitialAppDataOutput extends BaseOutput
     @Default(false) bool isLoggedIn,
     @Default(LanguageCode.defaultValue) LanguageCode languageCode,
     @Default(InitialAppRoute.login) InitialAppRoute initialAppRoute,
+    @Default(false) bool isFirstLaunch,
   }) = _GetInitialAppDataOutput;
 }

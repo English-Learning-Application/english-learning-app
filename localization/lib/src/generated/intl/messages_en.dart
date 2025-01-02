@@ -37,12 +37,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "getStarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Password confirmation does not match"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Wrong date time format"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Wrong username format"),
+        "learnAnywhere":
+            MessageLookupByLibrary.simpleMessage("Learn anywhere, anytime"),
+        "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
+            "Access thousands of courses, resources, and learning materials on the go."),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginDescription": MessageLookupByLibrary.simpleMessage(
             "Login to access all of our services"),
@@ -50,6 +55,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Learnings, resources, and support to help you every step of the way on your journey to success."),
         "loginTitle": MessageLookupByLibrary.simpleMessage(
             "Everything you need is in one place"),
+        "multiLanguage":
+            MessageLookupByLibrary.simpleMessage("Multi-language support"),
+        "multiLanguageDescription": MessageLookupByLibrary.simpleMessage(
+            "Our app supports multiple languages to help you learn in your preferred language."),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("No Internet"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
@@ -67,6 +76,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token expired"),
+        "trackYourProgress":
+            MessageLookupByLibrary.simpleMessage("Track your progress"),
+        "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
+            "Track your progress and see how far you\'ve come on your learning journey."),
         "unknownException": m0,
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "usernameHint":

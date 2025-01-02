@@ -23,7 +23,7 @@ class FacebookLoginUseCase
 
     await _appNavigator.replaceAll(
       [
-        const AppRouteInfo.home(),
+        const AppRouteInfo.main(),
       ],
     );
 

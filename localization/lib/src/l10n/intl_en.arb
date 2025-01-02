@@ -28,5 +28,12 @@
     "username": "Username",
     "usernameHint": "Enter your username",
     "confirmPassword": "Confirm password",
-    "invalidConfirmationPassword": "Password confirmation does not match"
+    "invalidConfirmationPassword": "Password confirmation does not match",
+    "learnAnywhere": "Learn anywhere, anytime",
+    "learnAnywhereDescription": "Access thousands of courses, resources, and learning materials on the go.",
+    "getStarted": "Get started",
+    "multiLanguage": "Multi-language support",
+    "multiLanguageDescription": "Our app supports multiple languages to help you learn in your preferred language.",
+    "trackYourProgress": "Track your progress",
+    "trackYourProgressDescription": "Track your progress and see how far you've come on your learning journey."
 }
