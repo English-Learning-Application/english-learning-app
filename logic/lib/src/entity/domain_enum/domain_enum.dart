@@ -1,10 +1,128 @@
-import 'package:app/resource/styles/app_themes.dart';
+import 'package:app/app.dart';
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 import 'package:services/services.dart';
 
 enum InitialAppRoute {
   login,
   home,
+}
+
+enum LearningLanguage {
+  english(ServerRequestResponseConstants.english),
+  vietnamese(ServerRequestResponseConstants.vietnamese),
+  french(ServerRequestResponseConstants.french);
+
+  const LearningLanguage(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.english:
+        return LearningLanguage.english;
+      case ServerRequestResponseConstants.vietnamese:
+        return LearningLanguage.vietnamese;
+      case ServerRequestResponseConstants.french:
+        return LearningLanguage.french;
+      default:
+        return LearningLanguage.english;
+    }
+  }
+
+  String get languageName {
+    switch (this) {
+      case LearningLanguage.english:
+        return S.current.english;
+      case LearningLanguage.vietnamese:
+        return S.current.vietnamese;
+      case LearningLanguage.french:
+        return S.current.french;
+    }
+  }
+}
+
+enum LearningType {
+  speaking(ServerRequestResponseConstants.speaking),
+  listening(ServerRequestResponseConstants.listening),
+  reading(ServerRequestResponseConstants.reading),
+  writing(ServerRequestResponseConstants.writing),
+  vocabulary(ServerRequestResponseConstants.vocabulary),
+  grammar(ServerRequestResponseConstants.grammar);
+
+  const LearningType(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.speaking:
+        return LearningType.speaking;
+      case ServerRequestResponseConstants.listening:
+        return LearningType.listening;
+      case ServerRequestResponseConstants.reading:
+        return LearningType.reading;
+      case ServerRequestResponseConstants.writing:
+        return LearningType.writing;
+      case ServerRequestResponseConstants.vocabulary:
+        return LearningType.vocabulary;
+      case ServerRequestResponseConstants.grammar:
+        return LearningType.grammar;
+      default:
+        return LearningType.speaking;
+    }
+  }
+
+  SvgGenImage get icon {
+    switch (this) {
+      case LearningType.speaking:
+        return Assets.icons.icSpeaking;
+      case LearningType.listening:
+        return Assets.icons.icListening;
+      case LearningType.reading:
+        return Assets.icons.icReading;
+      case LearningType.writing:
+        return Assets.icons.icWriting;
+      case LearningType.vocabulary:
+        return Assets.icons.icVocabulary;
+      case LearningType.grammar:
+        return Assets.icons.icGrammar;
+    }
+  }
+
+  String get learningTypeName {
+    switch (this) {
+      case LearningType.speaking:
+        return S.current.speaking;
+      case LearningType.listening:
+        return S.current.listening;
+      case LearningType.reading:
+        return S.current.reading;
+      case LearningType.writing:
+        return S.current.writing;
+      case LearningType.vocabulary:
+        return S.current.vocabulary;
+      case LearningType.grammar:
+        return S.current.grammar;
+    }
+  }
+}
+
+enum RegistrationStatus {
+  confirmed(ServerRequestResponseConstants.confirmed),
+  notConfirmed(ServerRequestResponseConstants.notConfirmed);
+
+  const RegistrationStatus(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.confirmed:
+        return RegistrationStatus.confirmed;
+      case ServerRequestResponseConstants.notConfirmed:
+        return RegistrationStatus.notConfirmed;
+      default:
+        return RegistrationStatus.notConfirmed;
+    }
+  }
 }
 
 enum ProductPlatform {

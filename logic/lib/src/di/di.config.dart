@@ -19,6 +19,8 @@ import 'package:logic/src/features/authentication/usecase/google_login_use_case.
     as _i919;
 import 'package:logic/src/features/authentication/usecase/login_user_use_case.dart'
     as _i945;
+import 'package:logic/src/features/authentication/usecase/registration_completion_use_case.dart'
+    as _i119;
 import 'package:logic/src/features/authentication/usecase/username_registration_use_case.dart'
     as _i323;
 import 'package:logic/src/features/notification/usecase/register_fcm_token_use_case.dart'
@@ -47,10 +49,13 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i106.GetLoggedInUserUseCase>(() =>
         _i106.GetLoggedInUserUseCase(gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i119.RegistrationCompletionUseCase>(() =>
+        _i119.RegistrationCompletionUseCase(
+            gh<_i182.AuthenticationRepository>()));
     gh.factory<_i323.UsernameRegistrationUseCase>(() =>
         _i323.UsernameRegistrationUseCase(
             gh<_i182.AuthenticationRepository>()));
-    gh.factory<_i945.LoginUserUseCase>(() => _i945.LoginUserUseCase(
+    gh.factory<_i1006.FacebookLoginUseCase>(() => _i1006.FacebookLoginUseCase(
           gh<_i182.AuthenticationRepository>(),
           gh<_i182.AppNavigator>(),
         ));
@@ -58,7 +63,7 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.AuthenticationRepository>(),
           gh<_i182.AppNavigator>(),
         ));
-    gh.factory<_i1006.FacebookLoginUseCase>(() => _i1006.FacebookLoginUseCase(
+    gh.factory<_i945.LoginUserUseCase>(() => _i945.LoginUserUseCase(
           gh<_i182.AuthenticationRepository>(),
           gh<_i182.AppNavigator>(),
         ));
@@ -67,22 +72,22 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.AppRepository>(),
           gh<_i182.AppNavigator>(),
         ));
-    gh.factory<_i732.TrackConnectivityUseCase>(
-        () => _i732.TrackConnectivityUseCase(gh<_i182.AppRepository>()));
-    gh.factory<_i162.GetInitialAppDataUseCase>(
-        () => _i162.GetInitialAppDataUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i900.ClearCurrentUserDataUseCase>(
+        () => _i900.ClearCurrentUserDataUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i75.GetCurrentPrefUserUseCase>(
         () => _i75.GetCurrentPrefUserUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i162.GetInitialAppDataUseCase>(
+        () => _i162.GetInitialAppDataUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i281.GetUsersUseCase>(
+        () => _i281.GetUsersUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i688.IsLoggedInUseCase>(
+        () => _i688.IsLoggedInUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i616.SaveLanguageCodeUseCase>(
         () => _i616.SaveLanguageCodeUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i783.SaveThemeModeUseCase>(
         () => _i783.SaveThemeModeUseCase(gh<_i182.AppRepository>()));
-    gh.factory<_i900.ClearCurrentUserDataUseCase>(
-        () => _i900.ClearCurrentUserDataUseCase(gh<_i182.AppRepository>()));
-    gh.factory<_i688.IsLoggedInUseCase>(
-        () => _i688.IsLoggedInUseCase(gh<_i182.AppRepository>()));
-    gh.factory<_i281.GetUsersUseCase>(
-        () => _i281.GetUsersUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i732.TrackConnectivityUseCase>(
+        () => _i732.TrackConnectivityUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i119.RegisterFcmTokenUseCase>(
         () => _i119.RegisterFcmTokenUseCase(
               gh<_i182.NotificationRepository>(),

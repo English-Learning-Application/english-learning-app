@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:auto_route/auto_route.dart';
-import 'package:logic/logic.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:injectable/injectable.dart';
+import 'package:logic/logic.dart';
 import 'package:services/services.dart';
 
 import '../app.dart';
@@ -16,7 +16,12 @@ class AppNavigatorImpl extends AppNavigator with LogMixin {
     this._appRouteInfoMapper,
   );
 
-  final tabRoutes = const [];
+  final tabRoutes = const [
+    HomeTabRoute(),
+    CourseTabRoute(),
+    AiChatTabRoute(),
+    ProfileTabRoute(),
+  ];
 
   TabsRouter? tabsRouter;
 

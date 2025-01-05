@@ -34,6 +34,10 @@ mixin _$ApiUserData {
   String? get phone => throw _privateConstructorUsedError;
   @JsonKey(name: 'media')
   ApiMediaData? get media => throw _privateConstructorUsedError;
+  @JsonKey(name: 'userProfile')
+  ApiUserProfileData? get userProfile => throw _privateConstructorUsedError;
+  @JsonKey(name: 'registrationStatus')
+  String? get registrationStatus => throw _privateConstructorUsedError;
 
   /// Serializes this ApiUserData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -58,9 +62,12 @@ abstract class $ApiUserDataCopyWith<$Res> {
       @JsonKey(name: 'googleId') String? googleId,
       @JsonKey(name: 'facebookId') String? facebookId,
       @JsonKey(name: 'phoneNumber') String? phone,
-      @JsonKey(name: 'media') ApiMediaData? media});
+      @JsonKey(name: 'media') ApiMediaData? media,
+      @JsonKey(name: 'userProfile') ApiUserProfileData? userProfile,
+      @JsonKey(name: 'registrationStatus') String? registrationStatus});
 
   $ApiMediaDataCopyWith<$Res>? get media;
+  $ApiUserProfileDataCopyWith<$Res>? get userProfile;
 }
 
 /// @nodoc
@@ -85,6 +92,8 @@ class _$ApiUserDataCopyWithImpl<$Res, $Val extends ApiUserData>
     Object? facebookId = freezed,
     Object? phone = freezed,
     Object? media = freezed,
+    Object? userProfile = freezed,
+    Object? registrationStatus = freezed,
   }) {
     return _then(_value.copyWith(
       userId: freezed == userId
@@ -115,6 +124,14 @@ class _$ApiUserDataCopyWithImpl<$Res, $Val extends ApiUserData>
           ? _value.media
           : media // ignore: cast_nullable_to_non_nullable
               as ApiMediaData?,
+      userProfile: freezed == userProfile
+          ? _value.userProfile
+          : userProfile // ignore: cast_nullable_to_non_nullable
+              as ApiUserProfileData?,
+      registrationStatus: freezed == registrationStatus
+          ? _value.registrationStatus
+          : registrationStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 
@@ -129,6 +146,20 @@ class _$ApiUserDataCopyWithImpl<$Res, $Val extends ApiUserData>
 
     return $ApiMediaDataCopyWith<$Res>(_value.media!, (value) {
       return _then(_value.copyWith(media: value) as $Val);
+    });
+  }
+
+  /// Create a copy of ApiUserData
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ApiUserProfileDataCopyWith<$Res>? get userProfile {
+    if (_value.userProfile == null) {
+      return null;
+    }
+
+    return $ApiUserProfileDataCopyWith<$Res>(_value.userProfile!, (value) {
+      return _then(_value.copyWith(userProfile: value) as $Val);
     });
   }
 }
@@ -148,10 +179,14 @@ abstract class _$$ApiUserDataImplCopyWith<$Res>
       @JsonKey(name: 'googleId') String? googleId,
       @JsonKey(name: 'facebookId') String? facebookId,
       @JsonKey(name: 'phoneNumber') String? phone,
-      @JsonKey(name: 'media') ApiMediaData? media});
+      @JsonKey(name: 'media') ApiMediaData? media,
+      @JsonKey(name: 'userProfile') ApiUserProfileData? userProfile,
+      @JsonKey(name: 'registrationStatus') String? registrationStatus});
 
   @override
   $ApiMediaDataCopyWith<$Res>? get media;
+  @override
+  $ApiUserProfileDataCopyWith<$Res>? get userProfile;
 }
 
 /// @nodoc
@@ -174,6 +209,8 @@ class __$$ApiUserDataImplCopyWithImpl<$Res>
     Object? facebookId = freezed,
     Object? phone = freezed,
     Object? media = freezed,
+    Object? userProfile = freezed,
+    Object? registrationStatus = freezed,
   }) {
     return _then(_$ApiUserDataImpl(
       userId: freezed == userId
@@ -204,6 +241,14 @@ class __$$ApiUserDataImplCopyWithImpl<$Res>
           ? _value.media
           : media // ignore: cast_nullable_to_non_nullable
               as ApiMediaData?,
+      userProfile: freezed == userProfile
+          ? _value.userProfile
+          : userProfile // ignore: cast_nullable_to_non_nullable
+              as ApiUserProfileData?,
+      registrationStatus: freezed == registrationStatus
+          ? _value.registrationStatus
+          : registrationStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -219,7 +264,9 @@ class _$ApiUserDataImpl implements _ApiUserData {
       @JsonKey(name: 'googleId') this.googleId,
       @JsonKey(name: 'facebookId') this.facebookId,
       @JsonKey(name: 'phoneNumber') this.phone,
-      @JsonKey(name: 'media') this.media});
+      @JsonKey(name: 'media') this.media,
+      @JsonKey(name: 'userProfile') this.userProfile,
+      @JsonKey(name: 'registrationStatus') this.registrationStatus});
 
   factory _$ApiUserDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$ApiUserDataImplFromJson(json);
@@ -245,10 +292,16 @@ class _$ApiUserDataImpl implements _ApiUserData {
   @override
   @JsonKey(name: 'media')
   final ApiMediaData? media;
+  @override
+  @JsonKey(name: 'userProfile')
+  final ApiUserProfileData? userProfile;
+  @override
+  @JsonKey(name: 'registrationStatus')
+  final String? registrationStatus;
 
   @override
   String toString() {
-    return 'ApiUserData(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phone: $phone, media: $media)';
+    return 'ApiUserData(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phone: $phone, media: $media, userProfile: $userProfile, registrationStatus: $registrationStatus)';
   }
 
   @override
@@ -265,13 +318,17 @@ class _$ApiUserDataImpl implements _ApiUserData {
             (identical(other.facebookId, facebookId) ||
                 other.facebookId == facebookId) &&
             (identical(other.phone, phone) || other.phone == phone) &&
-            (identical(other.media, media) || other.media == media));
+            (identical(other.media, media) || other.media == media) &&
+            (identical(other.userProfile, userProfile) ||
+                other.userProfile == userProfile) &&
+            (identical(other.registrationStatus, registrationStatus) ||
+                other.registrationStatus == registrationStatus));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, userId, email, username, googleId, facebookId, phone, media);
+  int get hashCode => Object.hash(runtimeType, userId, email, username,
+      googleId, facebookId, phone, media, userProfile, registrationStatus);
 
   /// Create a copy of ApiUserData
   /// with the given fields replaced by the non-null parameter values.
@@ -297,7 +354,10 @@ abstract class _ApiUserData implements ApiUserData {
       @JsonKey(name: 'googleId') final String? googleId,
       @JsonKey(name: 'facebookId') final String? facebookId,
       @JsonKey(name: 'phoneNumber') final String? phone,
-      @JsonKey(name: 'media') final ApiMediaData? media}) = _$ApiUserDataImpl;
+      @JsonKey(name: 'media') final ApiMediaData? media,
+      @JsonKey(name: 'userProfile') final ApiUserProfileData? userProfile,
+      @JsonKey(name: 'registrationStatus')
+      final String? registrationStatus}) = _$ApiUserDataImpl;
 
   factory _ApiUserData.fromJson(Map<String, dynamic> json) =
       _$ApiUserDataImpl.fromJson;
@@ -323,11 +383,298 @@ abstract class _ApiUserData implements ApiUserData {
   @override
   @JsonKey(name: 'media')
   ApiMediaData? get media;
+  @override
+  @JsonKey(name: 'userProfile')
+  ApiUserProfileData? get userProfile;
+  @override
+  @JsonKey(name: 'registrationStatus')
+  String? get registrationStatus;
 
   /// Create a copy of ApiUserData
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApiUserDataImplCopyWith<_$ApiUserDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ApiUserProfileData _$ApiUserProfileDataFromJson(Map<String, dynamic> json) {
+  return _ApiUserProfileData.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ApiUserProfileData {
+  @JsonKey(name: 'userProfileId')
+  String? get userProfileId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'nativeLanguage')
+  String? get nativeLanguage => throw _privateConstructorUsedError;
+  @JsonKey(name: 'learningLanguage')
+  String? get learningLanguage => throw _privateConstructorUsedError;
+  @JsonKey(name: 'learningTypeOne')
+  String? get learningTypeOne => throw _privateConstructorUsedError;
+  @JsonKey(name: 'learningTypeTwo')
+  String? get learningTypeTwo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'learningTypeThree')
+  String? get learningTypeThree => throw _privateConstructorUsedError;
+
+  /// Serializes this ApiUserProfileData to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of ApiUserProfileData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ApiUserProfileDataCopyWith<ApiUserProfileData> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ApiUserProfileDataCopyWith<$Res> {
+  factory $ApiUserProfileDataCopyWith(
+          ApiUserProfileData value, $Res Function(ApiUserProfileData) then) =
+      _$ApiUserProfileDataCopyWithImpl<$Res, ApiUserProfileData>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'userProfileId') String? userProfileId,
+      @JsonKey(name: 'nativeLanguage') String? nativeLanguage,
+      @JsonKey(name: 'learningLanguage') String? learningLanguage,
+      @JsonKey(name: 'learningTypeOne') String? learningTypeOne,
+      @JsonKey(name: 'learningTypeTwo') String? learningTypeTwo,
+      @JsonKey(name: 'learningTypeThree') String? learningTypeThree});
+}
+
+/// @nodoc
+class _$ApiUserProfileDataCopyWithImpl<$Res, $Val extends ApiUserProfileData>
+    implements $ApiUserProfileDataCopyWith<$Res> {
+  _$ApiUserProfileDataCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of ApiUserProfileData
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userProfileId = freezed,
+    Object? nativeLanguage = freezed,
+    Object? learningLanguage = freezed,
+    Object? learningTypeOne = freezed,
+    Object? learningTypeTwo = freezed,
+    Object? learningTypeThree = freezed,
+  }) {
+    return _then(_value.copyWith(
+      userProfileId: freezed == userProfileId
+          ? _value.userProfileId
+          : userProfileId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nativeLanguage: freezed == nativeLanguage
+          ? _value.nativeLanguage
+          : nativeLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      learningLanguage: freezed == learningLanguage
+          ? _value.learningLanguage
+          : learningLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      learningTypeOne: freezed == learningTypeOne
+          ? _value.learningTypeOne
+          : learningTypeOne // ignore: cast_nullable_to_non_nullable
+              as String?,
+      learningTypeTwo: freezed == learningTypeTwo
+          ? _value.learningTypeTwo
+          : learningTypeTwo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      learningTypeThree: freezed == learningTypeThree
+          ? _value.learningTypeThree
+          : learningTypeThree // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ApiUserProfileDataImplCopyWith<$Res>
+    implements $ApiUserProfileDataCopyWith<$Res> {
+  factory _$$ApiUserProfileDataImplCopyWith(_$ApiUserProfileDataImpl value,
+          $Res Function(_$ApiUserProfileDataImpl) then) =
+      __$$ApiUserProfileDataImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'userProfileId') String? userProfileId,
+      @JsonKey(name: 'nativeLanguage') String? nativeLanguage,
+      @JsonKey(name: 'learningLanguage') String? learningLanguage,
+      @JsonKey(name: 'learningTypeOne') String? learningTypeOne,
+      @JsonKey(name: 'learningTypeTwo') String? learningTypeTwo,
+      @JsonKey(name: 'learningTypeThree') String? learningTypeThree});
+}
+
+/// @nodoc
+class __$$ApiUserProfileDataImplCopyWithImpl<$Res>
+    extends _$ApiUserProfileDataCopyWithImpl<$Res, _$ApiUserProfileDataImpl>
+    implements _$$ApiUserProfileDataImplCopyWith<$Res> {
+  __$$ApiUserProfileDataImplCopyWithImpl(_$ApiUserProfileDataImpl _value,
+      $Res Function(_$ApiUserProfileDataImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ApiUserProfileData
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userProfileId = freezed,
+    Object? nativeLanguage = freezed,
+    Object? learningLanguage = freezed,
+    Object? learningTypeOne = freezed,
+    Object? learningTypeTwo = freezed,
+    Object? learningTypeThree = freezed,
+  }) {
+    return _then(_$ApiUserProfileDataImpl(
+      userProfileId: freezed == userProfileId
+          ? _value.userProfileId
+          : userProfileId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nativeLanguage: freezed == nativeLanguage
+          ? _value.nativeLanguage
+          : nativeLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      learningLanguage: freezed == learningLanguage
+          ? _value.learningLanguage
+          : learningLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      learningTypeOne: freezed == learningTypeOne
+          ? _value.learningTypeOne
+          : learningTypeOne // ignore: cast_nullable_to_non_nullable
+              as String?,
+      learningTypeTwo: freezed == learningTypeTwo
+          ? _value.learningTypeTwo
+          : learningTypeTwo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      learningTypeThree: freezed == learningTypeThree
+          ? _value.learningTypeThree
+          : learningTypeThree // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$ApiUserProfileDataImpl implements _ApiUserProfileData {
+  const _$ApiUserProfileDataImpl(
+      {@JsonKey(name: 'userProfileId') this.userProfileId,
+      @JsonKey(name: 'nativeLanguage') this.nativeLanguage,
+      @JsonKey(name: 'learningLanguage') this.learningLanguage,
+      @JsonKey(name: 'learningTypeOne') this.learningTypeOne,
+      @JsonKey(name: 'learningTypeTwo') this.learningTypeTwo,
+      @JsonKey(name: 'learningTypeThree') this.learningTypeThree});
+
+  factory _$ApiUserProfileDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ApiUserProfileDataImplFromJson(json);
+
+  @override
+  @JsonKey(name: 'userProfileId')
+  final String? userProfileId;
+  @override
+  @JsonKey(name: 'nativeLanguage')
+  final String? nativeLanguage;
+  @override
+  @JsonKey(name: 'learningLanguage')
+  final String? learningLanguage;
+  @override
+  @JsonKey(name: 'learningTypeOne')
+  final String? learningTypeOne;
+  @override
+  @JsonKey(name: 'learningTypeTwo')
+  final String? learningTypeTwo;
+  @override
+  @JsonKey(name: 'learningTypeThree')
+  final String? learningTypeThree;
+
+  @override
+  String toString() {
+    return 'ApiUserProfileData(userProfileId: $userProfileId, nativeLanguage: $nativeLanguage, learningLanguage: $learningLanguage, learningTypeOne: $learningTypeOne, learningTypeTwo: $learningTypeTwo, learningTypeThree: $learningTypeThree)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ApiUserProfileDataImpl &&
+            (identical(other.userProfileId, userProfileId) ||
+                other.userProfileId == userProfileId) &&
+            (identical(other.nativeLanguage, nativeLanguage) ||
+                other.nativeLanguage == nativeLanguage) &&
+            (identical(other.learningLanguage, learningLanguage) ||
+                other.learningLanguage == learningLanguage) &&
+            (identical(other.learningTypeOne, learningTypeOne) ||
+                other.learningTypeOne == learningTypeOne) &&
+            (identical(other.learningTypeTwo, learningTypeTwo) ||
+                other.learningTypeTwo == learningTypeTwo) &&
+            (identical(other.learningTypeThree, learningTypeThree) ||
+                other.learningTypeThree == learningTypeThree));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, userProfileId, nativeLanguage,
+      learningLanguage, learningTypeOne, learningTypeTwo, learningTypeThree);
+
+  /// Create a copy of ApiUserProfileData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ApiUserProfileDataImplCopyWith<_$ApiUserProfileDataImpl> get copyWith =>
+      __$$ApiUserProfileDataImplCopyWithImpl<_$ApiUserProfileDataImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ApiUserProfileDataImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ApiUserProfileData implements ApiUserProfileData {
+  const factory _ApiUserProfileData(
+      {@JsonKey(name: 'userProfileId') final String? userProfileId,
+      @JsonKey(name: 'nativeLanguage') final String? nativeLanguage,
+      @JsonKey(name: 'learningLanguage') final String? learningLanguage,
+      @JsonKey(name: 'learningTypeOne') final String? learningTypeOne,
+      @JsonKey(name: 'learningTypeTwo') final String? learningTypeTwo,
+      @JsonKey(name: 'learningTypeThree')
+      final String? learningTypeThree}) = _$ApiUserProfileDataImpl;
+
+  factory _ApiUserProfileData.fromJson(Map<String, dynamic> json) =
+      _$ApiUserProfileDataImpl.fromJson;
+
+  @override
+  @JsonKey(name: 'userProfileId')
+  String? get userProfileId;
+  @override
+  @JsonKey(name: 'nativeLanguage')
+  String? get nativeLanguage;
+  @override
+  @JsonKey(name: 'learningLanguage')
+  String? get learningLanguage;
+  @override
+  @JsonKey(name: 'learningTypeOne')
+  String? get learningTypeOne;
+  @override
+  @JsonKey(name: 'learningTypeTwo')
+  String? get learningTypeTwo;
+  @override
+  @JsonKey(name: 'learningTypeThree')
+  String? get learningTypeThree;
+
+  /// Create a copy of ApiUserProfileData
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ApiUserProfileDataImplCopyWith<_$ApiUserProfileDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

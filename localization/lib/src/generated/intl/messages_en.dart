@@ -24,20 +24,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aiChatbot": MessageLookupByLibrary.simpleMessage("AI Chatbot"),
         "badCertificateException":
             MessageLookupByLibrary.simpleMessage("Bad Certificate"),
+        "canChooseUpTo3LearningModes": MessageLookupByLibrary.simpleMessage(
+            "You can choose up to 3 learning modes"),
         "canNotConnectToHost":
             MessageLookupByLibrary.simpleMessage("Can not connect to host"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Cancellation"),
+        "chooseLearningModes":
+            MessageLookupByLibrary.simpleMessage("Choose your learning modes"),
+        "completeYourProfile":
+            MessageLookupByLibrary.simpleMessage("Complete your profile"),
+        "completeYourProfileDescription": MessageLookupByLibrary.simpleMessage(
+            "Complete your profile to access all of our services and get personalized recommendations."),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
+        "courses": MessageLookupByLibrary.simpleMessage("Courses"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "french": MessageLookupByLibrary.simpleMessage("French"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get started"),
+        "grammar": MessageLookupByLibrary.simpleMessage("Grammar"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Password confirmation does not match"),
         "invalidDateTime":
@@ -48,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Learn anywhere, anytime"),
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
             "Access thousands of courses, resources, and learning materials on the go."),
+        "listening": MessageLookupByLibrary.simpleMessage("Listening"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginDescription": MessageLookupByLibrary.simpleMessage(
             "Login to access all of our services"),
@@ -68,12 +84,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
+        "pleaseChooseAtLeast1LearningMode":
+            MessageLookupByLibrary.simpleMessage(
+                "Please choose at least 1 learning mode"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Press again to exit"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "reading": MessageLookupByLibrary.simpleMessage("Reading"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registerDescription": MessageLookupByLibrary.simpleMessage(
             "Register to access all of our services"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
+        "selectLearningLanguage": MessageLookupByLibrary.simpleMessage(
+            "Select the language you want to learn"),
+        "selectLearningModes":
+            MessageLookupByLibrary.simpleMessage("Select your learning modes"),
+        "selectNativeLanguage":
+            MessageLookupByLibrary.simpleMessage("Select your native language"),
+        "speaking": MessageLookupByLibrary.simpleMessage("Speaking"),
         "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token expired"),
         "trackYourProgress":
@@ -83,6 +111,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "unknownException": m0,
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "usernameHint":
-            MessageLookupByLibrary.simpleMessage("Enter your username")
+            MessageLookupByLibrary.simpleMessage("Enter your username"),
+        "vietnamese": MessageLookupByLibrary.simpleMessage("Vietnamese"),
+        "vocabulary": MessageLookupByLibrary.simpleMessage("Vocabulary"),
+        "writing": MessageLookupByLibrary.simpleMessage("Writing")
       };
 }

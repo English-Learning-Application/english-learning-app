@@ -37,3 +37,4 @@ export 'src/usecase/save_theme_mode_use_case.dart';
 export 'src/usecase/track_connectivity_use_case.dart';
 export 'src/usecase/get_current_pref_user_use_case.dart';
 export 'src/features/authentication/usecase/get_logged_in_user_use_case.dart';
+export 'src/features/authentication/usecase/registration_completion_use_case.dart';

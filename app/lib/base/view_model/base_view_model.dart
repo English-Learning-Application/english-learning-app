@@ -1,7 +1,8 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:services/services.dart';
 import 'package:logic/logic.dart';
+import 'package:services/services.dart';
 
 import '../../app.dart';
 
@@ -35,6 +36,11 @@ abstract class BaseViewModelDelegate<D extends BaseViewModelData>
     commonViewModel.onExceptionEmitted(appExceptionWrapper);
 
     return appExceptionWrapper.exceptionCompleter?.future;
+  }
+
+  void updateData(D data) {
+    viewModelData = data;
+    notifyListeners();
   }
 
   void showLoading() {

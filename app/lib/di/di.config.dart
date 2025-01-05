@@ -11,14 +11,21 @@
 import 'package:app/app.dart' as _i137;
 import 'package:app/app/view_model/app.dart' as _i215;
 import 'package:app/base/view_model/common/common.dart' as _i915;
+import 'package:app/features/ai_chat_bot/view_models/ai_chat_bot.dart' as _i709;
+import 'package:app/features/complete_registration/view_models/complete_registration.dart'
+    as _i752;
+import 'package:app/features/course/view_models/course.dart' as _i366;
 import 'package:app/features/home/view_models/home.dart' as _i885;
 import 'package:app/features/login/view_model/login.dart' as _i1056;
 import 'package:app/features/main/viewmodels/main_view_model.dart' as _i93;
 import 'package:app/features/on_boarding/viewmodel/on_boarding.dart' as _i646;
+import 'package:app/features/profile/view_models/profile.dart' as _i238;
 import 'package:app/features/splash/view_models/splash.dart' as _i635;
 import 'package:app/navigation/app_navigator_impl.dart' as _i101;
 import 'package:app/navigation/mapper/app_popup_info_mapper.dart' as _i203;
 import 'package:app/navigation/mapper/app_route_info_mapper.dart' as _i48;
+import 'package:app/navigation/middleware/is_logged_in_route_guard.dart'
+    as _i21;
 import 'package:app/navigation/middleware/route_guard.dart' as _i513;
 import 'package:app/navigation/routes/app_router.dart' as _i931;
 import 'package:get_it/get_it.dart' as _i174;
@@ -37,9 +44,16 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
+    gh.factory<_i709.AiChatBotViewModel>(() => _i709.AiChatBotViewModel());
+    gh.factory<_i366.CourseViewModel>(() => _i366.CourseViewModel());
     gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel());
-    gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
+    gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
+    gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
+    gh.factory<_i513.RouteGuard>(() => _i513.RouteGuard(
+          gh<_i182.IsLoggedInUseCase>(),
+          gh<_i182.GetCurrentPrefUserUseCase>(),
+        ));
     gh.lazySingleton<_i137.BaseRouteInfoMapper>(
         () => _i48.AppRouteInfoMapper());
     gh.factory<_i635.SplashViewModel>(() => _i635.SplashViewModel(
@@ -55,8 +69,8 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.GoogleLoginUseCase>(),
           gh<_i182.FacebookLoginUseCase>(),
         ));
-    gh.factory<_i513.RouteGuard>(
-        () => _i513.RouteGuard(gh<_i182.IsLoggedInUseCase>()));
+    gh.factory<_i21.IsLoggedInRouteGuard>(
+        () => _i21.IsLoggedInRouteGuard(gh<_i182.IsLoggedInUseCase>()));
     gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(
           gh<_i182.LogoutUseCase>(),
           gh<_i182.TrackConnectivityUseCase>(),
@@ -68,8 +82,13 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.GetCurrentPrefUserUseCase>(),
           gh<_i473.RemotePushNotificationService>(),
         ));
-    gh.lazySingleton<_i931.AppRouter>(
-        () => _i931.AppRouter(gh<_i137.RouteGuard>()));
+    gh.factory<_i752.CompleteRegistrationViewModel>(() =>
+        _i752.CompleteRegistrationViewModel(
+            gh<_i182.RegistrationCompletionUseCase>()));
+    gh.lazySingleton<_i931.AppRouter>(() => _i931.AppRouter(
+          gh<_i137.RouteGuard>(),
+          gh<_i21.IsLoggedInRouteGuard>(),
+        ));
     gh.lazySingleton<_i182.AppNavigator>(() => _i101.AppNavigatorImpl(
           gh<_i137.AppRouter>(),
           gh<_i137.BasePopupInfoMapper>(),

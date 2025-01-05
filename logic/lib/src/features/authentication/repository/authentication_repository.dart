@@ -7,18 +7,24 @@ abstract class AuthenticationRepository {
     required String password,
   });
 
+  Future<void> completeRegistration({
+    required LearningLanguage learningLanguage,
+    required LearningLanguage nativeLanguage,
+    required List<LearningType> learningModes,
+  });
+
   Future<void> loginUser({
     required String email,
     required String password,
   });
 
   Future<void> googleLogin(
-      String idToken,
-      );
+    String idToken,
+  );
 
   Future<void> facebookLogin(
-      String accessToken,
-      );
+    String accessToken,
+  );
 
   Future<void> getLoggedInUser();
 

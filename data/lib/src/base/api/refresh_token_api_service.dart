@@ -18,7 +18,7 @@ class RefreshTokenApiService {
         method: RestApiMethod.post,
         path: AuthenticationEndpoints.authRefreshToken,
         body: {
-          'refresh_token': refreshToken,
+          'refreshToken': refreshToken,
         },
         decoder: (json) => ApiTokenData.fromJson(
           json as Map<String, dynamic>,

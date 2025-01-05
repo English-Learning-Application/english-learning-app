@@ -7,5 +7,7 @@ class AuthenticationEndpoints {
   static const String authFacebookLogin = '/auth/facebook';
   static const String authRegistration = '/auth/register';
   static const String authRefreshToken = '/auth/refresh-token';
-  static const String authCurrentUser = '/me';
+  static const String authRegistrationCompletion =
+      '/profile/registration/completion';
+  static const String authCurrentUser = '/profile/me';
 }

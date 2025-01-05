@@ -1,3 +1,4 @@
+import 'package:app/navigation/middleware/is_logged_in_route_guard.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:injectable/injectable.dart';
 
@@ -9,8 +10,12 @@ import '../../app.dart';
 @LazySingleton()
 class AppRouter extends $AppRouter {
   final RouteGuard _routeGuard;
+  final IsLoggedInRouteGuard _isLoggedInRouteGuard;
 
-  AppRouter(this._routeGuard);
+  AppRouter(
+    this._routeGuard,
+    this._isLoggedInRouteGuard,
+  );
 
   @override
   RouteType get defaultRouteType => const RouteType.adaptive();
@@ -25,7 +30,17 @@ class AppRouter extends $AppRouter {
           path: '/login',
           page: LoginRoute.page,
         ),
-        AutoRoute(page: OnBoardingRoute.page, path: '/onboarding'),
+        AutoRoute(
+          page: OnBoardingRoute.page,
+          path: '/onboarding',
+        ),
+        AutoRoute(
+          page: CompleteRegistrationRoute.page,
+          guards: [
+            _isLoggedInRouteGuard,
+          ],
+          path: '/complete-registration',
+        ),
         AutoRoute(
           guards: [
             _routeGuard,
@@ -35,21 +50,43 @@ class AppRouter extends $AppRouter {
           children: [
             AutoRoute(
               page: HomeTabRoute.page,
-              path: 'home',
+              maintainState: true,
               children: [
                 AutoRoute(
                   page: HomeRoute.page,
+                  initial: true,
                 ),
               ],
             ),
             AutoRoute(
-              page: PhoneticTabRoute.page,
+              page: CourseTabRoute.page,
+              maintainState: true,
+              children: [
+                AutoRoute(
+                  initial: true,
+                  page: CourseRoute.page,
+                ),
+              ],
             ),
             AutoRoute(
               page: AiChatTabRoute.page,
+              maintainState: true,
+              children: [
+                AutoRoute(
+                  page: AiChatBotRoute.page,
+                  initial: true,
+                ),
+              ],
             ),
             AutoRoute(
               page: ProfileTabRoute.page,
+              maintainState: true,
+              children: [
+                AutoRoute(
+                  page: ProfileRoute.page,
+                  initial: true,
+                ),
+              ],
             ),
           ],
         ),
@@ -62,8 +99,8 @@ class HomeTabPage extends AutoRouter {
 }
 
 @RoutePage()
-class PhoneticTabPage extends AutoRouter {
-  const PhoneticTabPage({super.key});
+class CourseTabPage extends AutoRouter {
+  const CourseTabPage({super.key});
 }
 
 @RoutePage()

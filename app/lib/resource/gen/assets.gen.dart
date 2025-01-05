@@ -46,6 +46,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_arrow_left.svg
   SvgGenImage get icArrowLeft => const SvgGenImage('assets/icons/ic_arrow_left.svg');
 
+  /// File path: assets/icons/ic_england.svg
+  SvgGenImage get icEngland => const SvgGenImage('assets/icons/ic_england.svg');
+
   /// File path: assets/icons/ic_eye_close.svg
   SvgGenImage get icEyeClose => const SvgGenImage('assets/icons/ic_eye_close.svg');
 
@@ -55,14 +58,54 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_facebook.svg
   SvgGenImage get icFacebook => const SvgGenImage('assets/icons/ic_facebook.svg');
 
+  /// File path: assets/icons/ic_france.svg
+  SvgGenImage get icFrance => const SvgGenImage('assets/icons/ic_france.svg');
+
   /// File path: assets/icons/ic_google.svg
   SvgGenImage get icGoogle => const SvgGenImage('assets/icons/ic_google.svg');
+
+  /// File path: assets/icons/ic_grammar.svg
+  SvgGenImage get icGrammar => const SvgGenImage('assets/icons/ic_grammar.svg');
+
+  /// File path: assets/icons/ic_listening.svg
+  SvgGenImage get icListening => const SvgGenImage('assets/icons/ic_listening.svg');
 
   /// File path: assets/icons/ic_quit.svg
   SvgGenImage get icQuit => const SvgGenImage('assets/icons/ic_quit.svg');
 
+  /// File path: assets/icons/ic_reading.svg
+  SvgGenImage get icReading => const SvgGenImage('assets/icons/ic_reading.svg');
+
+  /// File path: assets/icons/ic_speaking.svg
+  SvgGenImage get icSpeaking => const SvgGenImage('assets/icons/ic_speaking.svg');
+
+  /// File path: assets/icons/ic_vietnam.svg
+  SvgGenImage get icVietnam => const SvgGenImage('assets/icons/ic_vietnam.svg');
+
+  /// File path: assets/icons/ic_vocabulary.svg
+  SvgGenImage get icVocabulary => const SvgGenImage('assets/icons/ic_vocabulary.svg');
+
+  /// File path: assets/icons/ic_writing.svg
+  SvgGenImage get icWriting => const SvgGenImage('assets/icons/ic_writing.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [icArrowLeft, icEyeClose, icEyeOpen, icFacebook, icGoogle, icQuit];
+  List<SvgGenImage> get values => [
+        icArrowLeft,
+        icEngland,
+        icEyeClose,
+        icEyeOpen,
+        icFacebook,
+        icFrance,
+        icGoogle,
+        icGrammar,
+        icListening,
+        icQuit,
+        icReading,
+        icSpeaking,
+        icVietnam,
+        icVocabulary,
+        icWriting
+      ];
 }
 
 class $AssetsImagesGen {

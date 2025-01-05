@@ -22,6 +22,7 @@ mixin _$AppRouteInfo {
     required TResult Function() main,
     required TResult Function() splash,
     required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$AppRouteInfo {
     TResult? Function()? main,
     TResult? Function()? splash,
     TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$AppRouteInfo {
     TResult Function()? main,
     TResult Function()? splash,
     TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$AppRouteInfo {
     required TResult Function(_Main value) main,
     required TResult Function(_Splash value) splash,
     required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$AppRouteInfo {
     TResult? Function(_Main value)? main,
     TResult? Function(_Splash value)? splash,
     TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$AppRouteInfo {
     TResult Function(_Main value)? main,
     TResult Function(_Splash value)? splash,
     TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +140,7 @@ class _$LoginImpl implements _Login {
     required TResult Function() main,
     required TResult Function() splash,
     required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
   }) {
     return login();
   }
@@ -145,6 +152,7 @@ class _$LoginImpl implements _Login {
     TResult? Function()? main,
     TResult? Function()? splash,
     TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
   }) {
     return login?.call();
   }
@@ -156,6 +164,7 @@ class _$LoginImpl implements _Login {
     TResult Function()? main,
     TResult Function()? splash,
     TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -171,6 +180,7 @@ class _$LoginImpl implements _Login {
     required TResult Function(_Main value) main,
     required TResult Function(_Splash value) splash,
     required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
   }) {
     return login(this);
   }
@@ -182,6 +192,7 @@ class _$LoginImpl implements _Login {
     TResult? Function(_Main value)? main,
     TResult? Function(_Splash value)? splash,
     TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
   }) {
     return login?.call(this);
   }
@@ -193,6 +204,7 @@ class _$LoginImpl implements _Login {
     TResult Function(_Main value)? main,
     TResult Function(_Splash value)? splash,
     TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -250,6 +262,7 @@ class _$MainImpl implements _Main {
     required TResult Function() main,
     required TResult Function() splash,
     required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
   }) {
     return main();
   }
@@ -261,6 +274,7 @@ class _$MainImpl implements _Main {
     TResult? Function()? main,
     TResult? Function()? splash,
     TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
   }) {
     return main?.call();
   }
@@ -272,6 +286,7 @@ class _$MainImpl implements _Main {
     TResult Function()? main,
     TResult Function()? splash,
     TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -287,6 +302,7 @@ class _$MainImpl implements _Main {
     required TResult Function(_Main value) main,
     required TResult Function(_Splash value) splash,
     required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
   }) {
     return main(this);
   }
@@ -298,6 +314,7 @@ class _$MainImpl implements _Main {
     TResult? Function(_Main value)? main,
     TResult? Function(_Splash value)? splash,
     TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
   }) {
     return main?.call(this);
   }
@@ -309,6 +326,7 @@ class _$MainImpl implements _Main {
     TResult Function(_Main value)? main,
     TResult Function(_Splash value)? splash,
     TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -367,6 +385,7 @@ class _$SplashImpl implements _Splash {
     required TResult Function() main,
     required TResult Function() splash,
     required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
   }) {
     return splash();
   }
@@ -378,6 +397,7 @@ class _$SplashImpl implements _Splash {
     TResult? Function()? main,
     TResult? Function()? splash,
     TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
   }) {
     return splash?.call();
   }
@@ -389,6 +409,7 @@ class _$SplashImpl implements _Splash {
     TResult Function()? main,
     TResult Function()? splash,
     TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -404,6 +425,7 @@ class _$SplashImpl implements _Splash {
     required TResult Function(_Main value) main,
     required TResult Function(_Splash value) splash,
     required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
   }) {
     return splash(this);
   }
@@ -415,6 +437,7 @@ class _$SplashImpl implements _Splash {
     TResult? Function(_Main value)? main,
     TResult? Function(_Splash value)? splash,
     TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
   }) {
     return splash?.call(this);
   }
@@ -426,6 +449,7 @@ class _$SplashImpl implements _Splash {
     TResult Function(_Main value)? main,
     TResult Function(_Splash value)? splash,
     TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -484,6 +508,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function() main,
     required TResult Function() splash,
     required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
   }) {
     return onBoarding();
   }
@@ -495,6 +520,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function()? main,
     TResult? Function()? splash,
     TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
   }) {
     return onBoarding?.call();
   }
@@ -506,6 +532,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function()? main,
     TResult Function()? splash,
     TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -521,6 +548,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(_Main value) main,
     required TResult Function(_Splash value) splash,
     required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
   }) {
     return onBoarding(this);
   }
@@ -532,6 +560,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(_Main value)? main,
     TResult? Function(_Splash value)? splash,
     TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
   }) {
     return onBoarding?.call(this);
   }
@@ -543,6 +572,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(_Main value)? main,
     TResult Function(_Splash value)? splash,
     TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -554,4 +584,128 @@ class _$OnBoardingImpl implements _OnBoarding {
 
 abstract class _OnBoarding implements AppRouteInfo {
   const factory _OnBoarding() = _$OnBoardingImpl;
+}
+
+/// @nodoc
+abstract class _$$CompleteRegistrationImplCopyWith<$Res> {
+  factory _$$CompleteRegistrationImplCopyWith(_$CompleteRegistrationImpl value,
+          $Res Function(_$CompleteRegistrationImpl) then) =
+      __$$CompleteRegistrationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CompleteRegistrationImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$CompleteRegistrationImpl>
+    implements _$$CompleteRegistrationImplCopyWith<$Res> {
+  __$$CompleteRegistrationImplCopyWithImpl(_$CompleteRegistrationImpl _value,
+      $Res Function(_$CompleteRegistrationImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$CompleteRegistrationImpl implements _CompleteRegistration {
+  const _$CompleteRegistrationImpl();
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.completeRegistration()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CompleteRegistrationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+  }) {
+    return completeRegistration();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+  }) {
+    return completeRegistration?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    required TResult orElse(),
+  }) {
+    if (completeRegistration != null) {
+      return completeRegistration();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+  }) {
+    return completeRegistration(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+  }) {
+    return completeRegistration?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    required TResult orElse(),
+  }) {
+    if (completeRegistration != null) {
+      return completeRegistration(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CompleteRegistration implements AppRouteInfo {
+  const factory _CompleteRegistration() = _$CompleteRegistrationImpl;
 }

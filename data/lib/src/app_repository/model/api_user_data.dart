@@ -16,8 +16,26 @@ class ApiUserData with _$ApiUserData {
     @JsonKey(name: 'facebookId') String? facebookId,
     @JsonKey(name: 'phoneNumber') String? phone,
     @JsonKey(name: 'media') ApiMediaData? media,
+    @JsonKey(name: 'userProfile') ApiUserProfileData? userProfile,
+    @JsonKey(name: 'registrationStatus') String? registrationStatus,
   }) = _ApiUserData;
 
   factory ApiUserData.fromJson(Map<String, dynamic> json) =>
       _$ApiUserDataFromJson(json);
+}
+
+@freezed
+class ApiUserProfileData with _$ApiUserProfileData {
+  @JsonSerializable(explicitToJson: true)
+  const factory ApiUserProfileData({
+    @JsonKey(name: 'userProfileId') String? userProfileId,
+    @JsonKey(name: 'nativeLanguage') String? nativeLanguage,
+    @JsonKey(name: 'learningLanguage') String? learningLanguage,
+    @JsonKey(name: 'learningTypeOne') String? learningTypeOne,
+    @JsonKey(name: 'learningTypeTwo') String? learningTypeTwo,
+    @JsonKey(name: 'learningTypeThree') String? learningTypeThree,
+  }) = _ApiUserProfileData;
+
+  factory ApiUserProfileData.fromJson(Map<String, dynamic> json) =>
+      _$ApiUserProfileDataFromJson(json);
 }

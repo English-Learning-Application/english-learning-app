@@ -3,11 +3,10 @@ import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 import 'package:logic/logic.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../app.dart';
 import '../widgets/first_on_boarding_view.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import '../widgets/second_on_boarding_view.dart';
 import '../widgets/third_on_boarding_view.dart';
 
@@ -19,7 +18,8 @@ class OnBoardingPage extends StatefulWidget {
   State<OnBoardingPage> createState() => _OnBoardingPageState();
 }
 
-class _OnBoardingPageState extends BasePageState<OnBoardingPage, OnboardingViewModel> {
+class _OnBoardingPageState
+    extends BasePageState<OnBoardingPage, OnboardingViewModel> {
   final _pageViewController = PageController();
   final List<Widget> _onBoardingPages = const [
     FirstOnBoardingView(),
@@ -35,8 +35,9 @@ class _OnBoardingPageState extends BasePageState<OnBoardingPage, OnboardingViewM
 
   @override
   Widget buildPage(BuildContext context) {
-    return CommonScaffold(body: SafeArea(
-      child: Column(
+    return CommonScaffold(
+      padding: EdgeInsets.zero,
+      body: Column(
         children: [
           Expanded(
             child: PageView(
@@ -44,7 +45,7 @@ class _OnBoardingPageState extends BasePageState<OnBoardingPage, OnboardingViewM
                 viewModel.updateCurrentIndex(index);
               },
               controller: _pageViewController,
-              children:_onBoardingPages,
+              children: _onBoardingPages,
             ),
           ),
           Padding(
@@ -63,7 +64,7 @@ class _OnBoardingPageState extends BasePageState<OnBoardingPage, OnboardingViewM
                   curve: Curves.ease,
                 );
               },
-              effect:  ExpandingDotsEffect(
+              effect: ExpandingDotsEffect(
                 expansionFactor: Dimens.d3.responsive(),
                 spacing: Dimens.d8.responsive(),
                 radius: Dimens.d16.responsive(),
@@ -81,21 +82,21 @@ class _OnBoardingPageState extends BasePageState<OnBoardingPage, OnboardingViewM
               text: S.current.getStarted,
               buttonSize: ButtonSize.medium,
               onPressed: () async {
-                await navigator.replaceAll([
-                   const AppRouteInfo.login(),
-                ],
+                await navigator.replaceAll(
+                  [
+                    const AppRouteInfo.login(),
+                  ],
                 );
               },
             ),
           ),
         ],
       ),
-    ),);
+    );
   }
 
   @override
-  void initViewModels() {
-  }
+  void initViewModels() {}
 
   @override
   String get screenName => 'OnBoardingView';

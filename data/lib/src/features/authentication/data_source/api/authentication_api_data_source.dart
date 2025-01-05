@@ -5,8 +5,29 @@ import '../../../../../data.dart';
 @lazySingleton
 class AuthenticationApiDataSource {
   final NonAuthAppServerApiClient _nonAuthAppServerApiClient;
+  final AuthAppServerApiClient _authAppServerApiClient;
 
-  const AuthenticationApiDataSource(this._nonAuthAppServerApiClient);
+  const AuthenticationApiDataSource(
+    this._nonAuthAppServerApiClient,
+    this._authAppServerApiClient,
+  );
+
+  Future<DataResponse<ApiUserData>?> registrationCompletion({
+    required String learningLanguage,
+    required String nativeLanguage,
+    required List<String> learningModes,
+  }) async {
+    return await _authAppServerApiClient.request(
+      path: AuthenticationEndpoints.authRegistrationCompletion,
+      method: RestApiMethod.post,
+      body: {
+        'learningLanguage': learningLanguage,
+        'nativeLanguage': nativeLanguage,
+        'learningTypes': learningModes,
+      },
+      decoder: (json) => ApiUserData.fromJson(json as Map<String, dynamic>),
+    );
+  }
 
   Future<DataResponse<ApiTokenData>?> registerUser({
     required String email,
@@ -26,7 +47,7 @@ class AuthenticationApiDataSource {
   }
 
   Future<DataResponse<ApiUserData>?> getCurrentUser() async {
-    return await _nonAuthAppServerApiClient.request(
+    return await _authAppServerApiClient.request(
       path: AuthenticationEndpoints.authCurrentUser,
       method: RestApiMethod.get,
       decoder: (json) => ApiUserData.fromJson(json as Map<String, dynamic>),

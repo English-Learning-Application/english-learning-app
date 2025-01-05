@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:services/services.dart';
 
 import '../../logic.dart';
 
@@ -18,4 +19,6 @@ class Media with _$Media {
   static const MediaType defaultMediaType = MediaType.image;
 
   static const Media empty = Media();
+
+  String get mediaItem => "${UrlConstants.appMediaBaseUrl}$mediaUrl";
 }

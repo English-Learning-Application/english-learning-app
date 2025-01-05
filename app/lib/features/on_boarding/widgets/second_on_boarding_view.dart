@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 
 import '../../../app.dart';
+
 class SecondOnBoardingView extends StatelessWidget {
   const SecondOnBoardingView({super.key});
 
@@ -22,14 +23,23 @@ class SecondOnBoardingView extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          SizedBox(height: Dimens.d10.responsive(),),
-          Text(
-            S.current.multiLanguage,
-            style: AppTextStyles.s14w400primary().font30().bold.primary50,
+          SizedBox(
+            height: Dimens.d10.responsive(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: Dimens.d16.responsive(),
+            ),
+            child: Text(
+              S.current.multiLanguage,
+              style: AppTextStyles.s14w400primary().font30().bold.primary50,
+            ),
           ),
           const Spacer(),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
+            padding: EdgeInsets.symmetric(
+              horizontal: Dimens.d16.responsive(),
+            ),
             child: Text(
               S.current.multiLanguageDescription,
               textAlign: TextAlign.center,

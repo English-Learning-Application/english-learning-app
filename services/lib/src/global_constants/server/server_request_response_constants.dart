@@ -6,11 +6,28 @@ class ServerRequestResponseConstants {
   static const jwtAuthorization = 'JWT Authorization';
   static const userAgentKey = 'User-Agent';
   static const bearer = 'Bearer';
-  static const deviceId = 'Device-Id';
+  static const deviceId = 'X-Device-Id';
 
   // Language Code
   static const vi = 'VI';
   static const en = 'EN';
+
+  // Learning Language
+  static const english = 'ENGLISH';
+  static const vietnamese = 'VIETNAMESE';
+  static const french = 'FRENCH';
+
+  // Learning Types
+  static const vocabulary = 'VOCABULARY';
+  static const grammar = 'GRAMMAR';
+  static const speaking = 'SPEAKING';
+  static const listening = 'LISTENING';
+  static const reading = 'READING';
+  static const writing = 'WRITING';
+
+  // Registration Status
+  static const confirmed = 'CONFIRMED';
+  static const notConfirmed = 'NOT_CONFIRMED';
 
   // Gender
   static const male = "MALE";

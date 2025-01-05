@@ -13,6 +13,7 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       main: () => const MainRoute(),
       splash: () => const SplashRoute(),
       onBoarding: () => const OnBoardingRoute(),
+      completeRegistration: () => const CompleteRegistrationRoute(),
     );
   }
 }

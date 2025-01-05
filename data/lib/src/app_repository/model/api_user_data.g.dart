@@ -17,6 +17,11 @@ _$ApiUserDataImpl _$$ApiUserDataImplFromJson(Map<String, dynamic> json) =>
       media: json['media'] == null
           ? null
           : ApiMediaData.fromJson(json['media'] as Map<String, dynamic>),
+      userProfile: json['userProfile'] == null
+          ? null
+          : ApiUserProfileData.fromJson(
+              json['userProfile'] as Map<String, dynamic>),
+      registrationStatus: json['registrationStatus'] as String?,
     );
 
 Map<String, dynamic> _$$ApiUserDataImplToJson(_$ApiUserDataImpl instance) =>
@@ -28,4 +33,28 @@ Map<String, dynamic> _$$ApiUserDataImplToJson(_$ApiUserDataImpl instance) =>
       'facebookId': instance.facebookId,
       'phoneNumber': instance.phone,
       'media': instance.media?.toJson(),
+      'userProfile': instance.userProfile?.toJson(),
+      'registrationStatus': instance.registrationStatus,
+    };
+
+_$ApiUserProfileDataImpl _$$ApiUserProfileDataImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ApiUserProfileDataImpl(
+      userProfileId: json['userProfileId'] as String?,
+      nativeLanguage: json['nativeLanguage'] as String?,
+      learningLanguage: json['learningLanguage'] as String?,
+      learningTypeOne: json['learningTypeOne'] as String?,
+      learningTypeTwo: json['learningTypeTwo'] as String?,
+      learningTypeThree: json['learningTypeThree'] as String?,
+    );
+
+Map<String, dynamic> _$$ApiUserProfileDataImplToJson(
+        _$ApiUserProfileDataImpl instance) =>
+    <String, dynamic>{
+      'userProfileId': instance.userProfileId,
+      'nativeLanguage': instance.nativeLanguage,
+      'learningLanguage': instance.learningLanguage,
+      'learningTypeOne': instance.learningTypeOne,
+      'learningTypeTwo': instance.learningTypeTwo,
+      'learningTypeThree': instance.learningTypeThree,
     };

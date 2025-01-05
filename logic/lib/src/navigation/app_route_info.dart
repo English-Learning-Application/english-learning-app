@@ -8,4 +8,5 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.main() = _Main;
   const factory AppRouteInfo.splash() = _Splash;
   const factory AppRouteInfo.onBoarding() = _OnBoarding;
+  const factory AppRouteInfo.completeRegistration() = _CompleteRegistration;
 }

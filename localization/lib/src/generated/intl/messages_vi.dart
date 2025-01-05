@@ -24,20 +24,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aiChatbot": MessageLookupByLibrary.simpleMessage("Trợ lý ảo"),
         "badCertificateException":
             MessageLookupByLibrary.simpleMessage("Lỗi bảo mật chứng chỉ"),
+        "canChooseUpTo3LearningModes": MessageLookupByLibrary.simpleMessage(
+            "Bạn có thể chọn tối đa 3 chế độ học tập"),
         "canNotConnectToHost": MessageLookupByLibrary.simpleMessage(
             "Không thể kết nối đến máy chủ"),
         "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Lỗi hủy"),
+        "chooseLearningModes":
+            MessageLookupByLibrary.simpleMessage("Chọn chế độ học tập của bạn"),
+        "completeYourProfile":
+            MessageLookupByLibrary.simpleMessage("Hoàn thiện hồ sơ của bạn"),
+        "completeYourProfileDescription": MessageLookupByLibrary.simpleMessage(
+            "Hoàn thiện hồ sơ của bạn để truy cập tất cả các dịch vụ của chúng tôi và nhận được các gợi ý cá nhân."),
+        "confirm": MessageLookupByLibrary.simpleMessage("Xác nhận"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
+        "courses": MessageLookupByLibrary.simpleMessage("Khóa học"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
+        "english": MessageLookupByLibrary.simpleMessage("Tiếng Anh"),
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
+        "french": MessageLookupByLibrary.simpleMessage("Tiếng Pháp"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Bắt đầu"),
+        "grammar": MessageLookupByLibrary.simpleMessage("Ngữ pháp"),
+        "home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Mật khẩu xác nhận không khớp"),
         "invalidDateTime":
@@ -48,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Học bất cứ nơi đâu, bất cứ lúc nào"),
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
             "Truy cập hàng ngàn khóa học, tài nguyên và tài liệu học tập mọi lúc mọi nơi."),
+        "listening": MessageLookupByLibrary.simpleMessage("Nghe"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "loginDescription": MessageLookupByLibrary.simpleMessage(
             "Đăng nhập để truy cập tất cả các dịch vụ của chúng tôi"),
@@ -67,12 +83,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Nhập mật khẩu của bạn"),
+        "pleaseChooseAtLeast1LearningMode":
+            MessageLookupByLibrary.simpleMessage(
+                "Vui lòng chọn ít nhất 1 chế độ học tập"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Bấm lại để thoát"),
+        "profile": MessageLookupByLibrary.simpleMessage("Hồ sơ"),
+        "reading": MessageLookupByLibrary.simpleMessage("Đọc"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "registerDescription": MessageLookupByLibrary.simpleMessage(
             "Đăng ký để truy cập tất cả các dịch vụ của chúng tôi"),
         "retry": MessageLookupByLibrary.simpleMessage("Thử lại"),
+        "selectLearningLanguage":
+            MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ bạn muốn học"),
+        "selectLearningModes": MessageLookupByLibrary.simpleMessage(
+            "Chọn các chế độ học tập của bạn"),
+        "selectNativeLanguage":
+            MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ mẹ đẻ của bạn"),
+        "speaking": MessageLookupByLibrary.simpleMessage("Nói"),
         "timeoutException":
             MessageLookupByLibrary.simpleMessage("Quá thời gian kết nối"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token hết hạn"),
@@ -83,6 +111,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "unknownException": m0,
         "username": MessageLookupByLibrary.simpleMessage("Tên người dùng"),
         "usernameHint":
-            MessageLookupByLibrary.simpleMessage("Nhập tên người dùng")
+            MessageLookupByLibrary.simpleMessage("Nhập tên người dùng"),
+        "vietnamese": MessageLookupByLibrary.simpleMessage("Tiếng Việt"),
+        "vocabulary": MessageLookupByLibrary.simpleMessage("Từ vựng"),
+        "writing": MessageLookupByLibrary.simpleMessage("Viết")
       };
 }

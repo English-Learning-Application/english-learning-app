@@ -419,6 +419,226 @@ class S {
       args: [],
     );
   }
+
+  /// `Complete your profile`
+  String get completeYourProfile {
+    return Intl.message(
+      'Complete your profile',
+      name: 'completeYourProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete your profile to access all of our services and get personalized recommendations.`
+  String get completeYourProfileDescription {
+    return Intl.message(
+      'Complete your profile to access all of our services and get personalized recommendations.',
+      name: 'completeYourProfileDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select your native language`
+  String get selectNativeLanguage {
+    return Intl.message(
+      'Select your native language',
+      name: 'selectNativeLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select the language you want to learn`
+  String get selectLearningLanguage {
+    return Intl.message(
+      'Select the language you want to learn',
+      name: 'selectLearningLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select your learning modes`
+  String get selectLearningModes {
+    return Intl.message(
+      'Select your learning modes',
+      name: 'selectLearningModes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Vietnamese`
+  String get vietnamese {
+    return Intl.message(
+      'Vietnamese',
+      name: 'vietnamese',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `French`
+  String get french {
+    return Intl.message(
+      'French',
+      name: 'french',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can choose up to 3 learning modes`
+  String get canChooseUpTo3LearningModes {
+    return Intl.message(
+      'You can choose up to 3 learning modes',
+      name: 'canChooseUpTo3LearningModes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Listening`
+  String get listening {
+    return Intl.message(
+      'Listening',
+      name: 'listening',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Speaking`
+  String get speaking {
+    return Intl.message(
+      'Speaking',
+      name: 'speaking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reading`
+  String get reading {
+    return Intl.message(
+      'Reading',
+      name: 'reading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Writing`
+  String get writing {
+    return Intl.message(
+      'Writing',
+      name: 'writing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Vocabulary`
+  String get vocabulary {
+    return Intl.message(
+      'Vocabulary',
+      name: 'vocabulary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Grammar`
+  String get grammar {
+    return Intl.message(
+      'Grammar',
+      name: 'grammar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your learning modes`
+  String get chooseLearningModes {
+    return Intl.message(
+      'Choose your learning modes',
+      name: 'chooseLearningModes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please choose at least 1 learning mode`
+  String get pleaseChooseAtLeast1LearningMode {
+    return Intl.message(
+      'Please choose at least 1 learning mode',
+      name: 'pleaseChooseAtLeast1LearningMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Courses`
+  String get courses {
+    return Intl.message(
+      'Courses',
+      name: 'courses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `AI Chatbot`
+  String get aiChatbot {
+    return Intl.message(
+      'AI Chatbot',
+      name: 'aiChatbot',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

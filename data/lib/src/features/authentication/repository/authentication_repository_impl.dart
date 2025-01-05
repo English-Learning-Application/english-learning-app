@@ -101,4 +101,19 @@ class AuthenticationRepositoryImpl implements AuthenticationRepository {
       saveRefreshToken(tokenData?.data?.refreshToken ?? ''),
     ]);
   }
+
+  @override
+  Future<void> completeRegistration({
+    required LearningLanguage learningLanguage,
+    required LearningLanguage nativeLanguage,
+    required List<LearningType> learningModes,
+  }) async {
+    final resp = await _authenticationApiDataSource.registrationCompletion(
+      learningLanguage: learningLanguage.serverValue,
+      nativeLanguage: nativeLanguage.serverValue,
+      learningModes: learningModes.map((e) => e.serverValue).toList(),
+    );
+
+    await saveUserPreference(_apiUserDataMapper.mapToEntity(resp?.data));
+  }
 }

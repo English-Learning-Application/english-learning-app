@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 
 import '../../../app.dart';
+
 class ThirdOnBoardingView extends StatelessWidget {
   const ThirdOnBoardingView({super.key});
 
@@ -23,13 +24,20 @@ class ThirdOnBoardingView extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          Text(
-            S.current.trackYourProgress,
-            style: AppTextStyles.s14w400primary().font30().bold.primary50,
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: Dimens.d16.responsive(),
+            ),
+            child: Text(
+              S.current.trackYourProgress,
+              style: AppTextStyles.s14w400primary().font30().bold.primary50,
+            ),
           ),
           const Spacer(),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
+            padding: EdgeInsets.symmetric(
+              horizontal: Dimens.d16.responsive(),
+            ),
             child: Text(
               S.current.trackYourProgressDescription,
               textAlign: TextAlign.center,
