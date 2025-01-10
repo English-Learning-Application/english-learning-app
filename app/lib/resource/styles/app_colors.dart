@@ -29,7 +29,7 @@ class AppColors {
   );
 
   static const AppColors darkThemeColors = AppColors(
-    backgroundColor: FoundationColors.success900,
+    backgroundColor: FoundationColors.secondary900,
     primaryColor: FoundationColors.primary200,
     secondaryColor: FoundationColors.accent200,
     primaryTextColor: FoundationColors.neutral400,

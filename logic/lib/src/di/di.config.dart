@@ -49,6 +49,10 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i106.GetLoggedInUserUseCase>(() =>
         _i106.GetLoggedInUserUseCase(gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i919.GoogleLoginUseCase>(
+        () => _i919.GoogleLoginUseCase(gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i945.LoginUserUseCase>(
+        () => _i945.LoginUserUseCase(gh<_i182.AuthenticationRepository>()));
     gh.factory<_i119.RegistrationCompletionUseCase>(() =>
         _i119.RegistrationCompletionUseCase(
             gh<_i182.AuthenticationRepository>()));
@@ -56,14 +60,6 @@ extension GetItInjectableX on _i174.GetIt {
         _i323.UsernameRegistrationUseCase(
             gh<_i182.AuthenticationRepository>()));
     gh.factory<_i1006.FacebookLoginUseCase>(() => _i1006.FacebookLoginUseCase(
-          gh<_i182.AuthenticationRepository>(),
-          gh<_i182.AppNavigator>(),
-        ));
-    gh.factory<_i919.GoogleLoginUseCase>(() => _i919.GoogleLoginUseCase(
-          gh<_i182.AuthenticationRepository>(),
-          gh<_i182.AppNavigator>(),
-        ));
-    gh.factory<_i945.LoginUserUseCase>(() => _i945.LoginUserUseCase(
           gh<_i182.AuthenticationRepository>(),
           gh<_i182.AppNavigator>(),
         ));

@@ -39,6 +39,31 @@ enum LearningLanguage {
         return S.current.french;
     }
   }
+
+  SvgGenImage get icon {
+    switch (this) {
+      case LearningLanguage.english:
+        return Assets.icons.icEngland;
+      case LearningLanguage.vietnamese:
+        return Assets.icons.icVietnam;
+      case LearningLanguage.french:
+        return Assets.icons.icFrance;
+    }
+  }
+
+  SvgGenImage get landmarkIcon {
+    switch (this) {
+      case LearningLanguage.english:
+        return Assets.icons.icEnglandLandmark;
+      case LearningLanguage.vietnamese:
+        return Assets.icons.icVietnamLandmark;
+      case LearningLanguage.french:
+        return Assets.icons.icFranceLandmark;
+    }
+  }
+
+  @override
+  String toString() => languageName;
 }
 
 enum LearningType {
@@ -179,6 +204,15 @@ enum LanguageCode {
   final String localeCode;
   final String serverValue;
   static const defaultValue = en;
+
+  String get languageName {
+    switch (this) {
+      case LanguageCode.en:
+        return S.current.english;
+      case LanguageCode.vi:
+        return S.current.vietnamese;
+    }
+  }
 }
 
 enum CurrencyCode {

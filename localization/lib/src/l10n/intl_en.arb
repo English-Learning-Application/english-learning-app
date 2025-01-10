@@ -57,5 +57,21 @@
     "home": "Home",
     "courses": "Courses",
     "aiChatbot": "AI Chatbot",
-    "profile": "Profile"
+    "profile": "Profile",
+    "noUsername": "No username",
+    "logout": "Logout",
+    "phoneNo": "Phone number",
+    "none": "None",
+    "nativeLanguage": "Native language",
+    "learningLanguage": "Learning language",
+    "language": "Language",
+    "theme": "Theme",
+    "chooseWhat": "Choose what",
+    "toLearnToday": "to learn today",
+    "welcome": "Welcome",
+    "editProfile": "Edit profile",
+    "chooseTheLanguage": "Choose the language",
+    "myInProgressCourses": "My in-progress courses",
+    "level": "Level",
+    "mode": "Mode"
 }

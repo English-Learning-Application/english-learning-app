@@ -8,23 +8,15 @@ part 'google_login_use_case.freezed.dart';
 class GoogleLoginUseCase
     extends BaseFutureUseCase<GoogleLoginInput, GoogleLoginOutput> {
   final AuthenticationRepository _authenticationRepository;
-  final AppNavigator _appNavigator;
 
   const GoogleLoginUseCase(
     this._authenticationRepository,
-    this._appNavigator,
   );
 
   @override
   Future<GoogleLoginOutput> buildUseCase(GoogleLoginInput input) async {
     await _authenticationRepository.googleLogin(
       input.idToken,
-    );
-
-    await _appNavigator.replaceAll(
-      [
-        const AppRouteInfo.main(),
-      ],
     );
 
     return const GoogleLoginOutput();

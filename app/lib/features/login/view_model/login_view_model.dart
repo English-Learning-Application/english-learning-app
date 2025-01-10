@@ -40,6 +40,7 @@ class LoginViewModel extends BaseViewModel<LoginViewModelData> {
           password: password,
         );
         await _loginUserUseCase.execute(input);
+        await appViewModel.appRefreshUser(true);
       },
     );
   }
@@ -63,11 +64,7 @@ class LoginViewModel extends BaseViewModel<LoginViewModelData> {
           password: password,
         );
         await _usernameRegistrationUseCase.execute(input);
-        navigator.replaceAll(
-          [
-            const AppRouteInfo.main(),
-          ],
-        );
+        await appViewModel.appRefreshUser(true);
       },
     );
   }
@@ -86,6 +83,7 @@ class LoginViewModel extends BaseViewModel<LoginViewModelData> {
 
           await _googleSignIn.signOut();
           await _googleLoginUseCase.execute(input);
+          await appViewModel.appRefreshUser(true);
         }
       },
     );
@@ -101,6 +99,7 @@ class LoginViewModel extends BaseViewModel<LoginViewModelData> {
           );
           await _facebookAuth.logOut();
           await _facebookLoginUseCase.execute(input);
+          await appViewModel.appRefreshUser(true);
         } else {
           throw const ServiceException(
               kind: ServiceExceptionKind.facebookSignIn);

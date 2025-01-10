@@ -57,5 +57,21 @@
     "home": "Trang chủ",
     "courses": "Khóa học",
     "aiChatbot": "Trợ lý ảo",
-    "profile": "Hồ sơ"
+    "profile": "Hồ sơ",
+    "noUsername": "Chưa có tên người dùng",
+    "logout": "Đăng xuất",
+    "phoneNo": "Số điện thoại",
+    "none": "Không có",
+    "nativeLanguage": "Ngôn ngữ mẹ đẻ",
+    "learningLanguage": "Ngôn ngữ học",
+    "language": "Ngôn ngữ",
+    "theme": "Chủ đề",
+    "chooseWhat": "Chọn nội dung",
+    "toLearnToday": "để học hôm nay",
+    "welcome": "Chào mừng",
+    "editProfile": "Chỉnh sửa hồ sơ",
+    "chooseTheLanguage": "Chọn ngôn ngữ",
+    "myInProgressCourses": "Các khóa học đang học",
+    "level": "Cấp độ",
+    "mode": "Chế độ"
 }

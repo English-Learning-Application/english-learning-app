@@ -9,11 +9,9 @@ part 'login_user_use_case.freezed.dart';
 class LoginUserUseCase
     extends BaseFutureUseCase<LoginUserInput, LoginUserOutput> {
   final AuthenticationRepository _authenticationRepository;
-  final AppNavigator _appNavigator;
 
   const LoginUserUseCase(
     this._authenticationRepository,
-    this._appNavigator,
   );
 
   @override
@@ -22,13 +20,6 @@ class LoginUserUseCase
       email: input.email,
       password: input.password,
     );
-
-    _appNavigator.replaceAll(
-      [
-        const AppRouteInfo.main(),
-      ],
-    );
-
     return const LoginUserOutput();
   }
 }

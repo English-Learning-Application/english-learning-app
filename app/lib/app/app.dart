@@ -39,7 +39,7 @@ class _AppState extends BasePageState<App, AppViewModel> {
       builder: (context, _) => Selector<AppViewModel, AppViewModelData>(
         selector: (_, vm) => vm.viewModelData,
         shouldRebuild: (previous, next) =>
-            previous.languageCode != next.languageCode &&
+            previous.languageCode != next.languageCode ||
             previous.appTheme != next.appTheme,
         builder: (_, vmData, __) {
           return MaterialApp.router(

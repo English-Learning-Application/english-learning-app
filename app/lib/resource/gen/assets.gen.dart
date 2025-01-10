@@ -49,6 +49,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_england.svg
   SvgGenImage get icEngland => const SvgGenImage('assets/icons/ic_england.svg');
 
+  /// File path: assets/icons/ic_england_landmark.svg
+  SvgGenImage get icEnglandLandmark => const SvgGenImage('assets/icons/ic_england_landmark.svg');
+
   /// File path: assets/icons/ic_eye_close.svg
   SvgGenImage get icEyeClose => const SvgGenImage('assets/icons/ic_eye_close.svg');
 
@@ -60,6 +63,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_france.svg
   SvgGenImage get icFrance => const SvgGenImage('assets/icons/ic_france.svg');
+
+  /// File path: assets/icons/ic_france_landmark.svg
+  SvgGenImage get icFranceLandmark => const SvgGenImage('assets/icons/ic_france_landmark.svg');
 
   /// File path: assets/icons/ic_google.svg
   SvgGenImage get icGoogle => const SvgGenImage('assets/icons/ic_google.svg');
@@ -82,6 +88,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_vietnam.svg
   SvgGenImage get icVietnam => const SvgGenImage('assets/icons/ic_vietnam.svg');
 
+  /// File path: assets/icons/ic_vietnam_landmark.svg
+  SvgGenImage get icVietnamLandmark => const SvgGenImage('assets/icons/ic_vietnam_landmark.svg');
+
   /// File path: assets/icons/ic_vocabulary.svg
   SvgGenImage get icVocabulary => const SvgGenImage('assets/icons/ic_vocabulary.svg');
 
@@ -92,10 +101,12 @@ class $AssetsIconsGen {
   List<SvgGenImage> get values => [
         icArrowLeft,
         icEngland,
+        icEnglandLandmark,
         icEyeClose,
         icEyeOpen,
         icFacebook,
         icFrance,
+        icFranceLandmark,
         icGoogle,
         icGrammar,
         icListening,
@@ -103,6 +114,7 @@ class $AssetsIconsGen {
         icReading,
         icSpeaking,
         icVietnam,
+        icVietnamLandmark,
         icVocabulary,
         icWriting
       ];

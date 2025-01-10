@@ -7,6 +7,7 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
   final GetLoggedInUserUseCase _getLoggedInUserUseCase;
   final GetCurrentPrefUserUseCase _getCurrentPrefUserUseCase;
   final RemotePushNotificationService _remotePushNotificationService;
+  final LogoutUseCase _logoutUseCase;
 
   AppViewModel(
     this._saveLanguageCodeUseCase,
@@ -14,6 +15,7 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
     this._getLoggedInUserUseCase,
     this._getCurrentPrefUserUseCase,
     this._remotePushNotificationService,
+    this._logoutUseCase,
   ) : super(const AppViewModelData());
 
   FutureOr<void> appLanguageChanged(
@@ -118,13 +120,14 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
     );
   }
 
-  FutureOr<void> appLoggedOut() async {
+  Future<void> logoutUser() async {
     await runViewModelCatching(
       action: () async {
-        viewModelData = viewModelData.copyWith(
+        await _logoutUseCase.execute(const LogoutInput());
+        updateData(viewModelData.copyWith(
           isLoggedIn: false,
           currentUser: User.empty,
-        );
+        ));
       },
     );
   }

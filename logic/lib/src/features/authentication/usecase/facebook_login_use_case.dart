@@ -21,12 +21,6 @@ class FacebookLoginUseCase
       input.accessToken,
     );
 
-    await _appNavigator.replaceAll(
-      [
-        const AppRouteInfo.main(),
-      ],
-    );
-
     return const FacebookLoginOutput();
   }
 }

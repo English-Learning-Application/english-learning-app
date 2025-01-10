@@ -71,16 +71,17 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i21.IsLoggedInRouteGuard>(
         () => _i21.IsLoggedInRouteGuard(gh<_i182.IsLoggedInUseCase>()));
-    gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(
-          gh<_i182.LogoutUseCase>(),
-          gh<_i182.TrackConnectivityUseCase>(),
-        ));
     gh.lazySingleton<_i215.AppViewModel>(() => _i215.AppViewModel(
           gh<_i182.SaveLanguageCodeUseCase>(),
           gh<_i182.SaveThemeModeUseCase>(),
           gh<_i182.GetLoggedInUserUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),
           gh<_i473.RemotePushNotificationService>(),
+          gh<_i182.LogoutUseCase>(),
+        ));
+    gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(
+          gh<_i182.LogoutUseCase>(),
+          gh<_i182.TrackConnectivityUseCase>(),
         ));
     gh.factory<_i752.CompleteRegistrationViewModel>(() =>
         _i752.CompleteRegistrationViewModel(

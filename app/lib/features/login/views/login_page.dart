@@ -38,6 +38,7 @@ class _LoginPageState extends BasePageState<LoginPage, LoginViewModel> {
       shouldRebuild: (previous, next) => previous.loginMode != next.loginMode,
       builder: (_, viewModelData, __) => CommonScaffold(
         appBar: CommonAppBar(
+          backgroundColor: AppColors.current.backgroundColor,
           leadingIcon: viewModelData.loginMode != LoginMode.none
               ? LeadingIcon.back
               : LeadingIcon.none,

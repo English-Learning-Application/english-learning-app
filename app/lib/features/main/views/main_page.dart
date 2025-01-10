@@ -20,6 +20,7 @@ class _MainPageState extends BasePageState<MainPage, MainViewModel> {
   @override
   Widget buildPage(BuildContext context) {
     return AutoTabsScaffold(
+      key: _bottomBarKey,
       routes: (navigator as AppNavigatorImpl).tabRoutes,
       bottomNavigationBuilder: (_, tabsRouter) {
         (navigator as AppNavigatorImpl).tabsRouter = tabsRouter;

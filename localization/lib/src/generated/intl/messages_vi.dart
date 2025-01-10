@@ -36,6 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lỗi hủy"),
         "chooseLearningModes":
             MessageLookupByLibrary.simpleMessage("Chọn chế độ học tập của bạn"),
+        "chooseTheLanguage":
+            MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ"),
+        "chooseWhat": MessageLookupByLibrary.simpleMessage("Chọn nội dung"),
         "completeYourProfile":
             MessageLookupByLibrary.simpleMessage("Hoàn thiện hồ sơ của bạn"),
         "completeYourProfileDescription": MessageLookupByLibrary.simpleMessage(
@@ -44,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
         "courses": MessageLookupByLibrary.simpleMessage("Khóa học"),
+        "editProfile": MessageLookupByLibrary.simpleMessage("Chỉnh sửa hồ sơ"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
         "english": MessageLookupByLibrary.simpleMessage("Tiếng Anh"),
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
@@ -59,10 +63,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Định dạng ngày giờ sai"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
+        "language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "learnAnywhere": MessageLookupByLibrary.simpleMessage(
             "Học bất cứ nơi đâu, bất cứ lúc nào"),
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
             "Truy cập hàng ngàn khóa học, tài nguyên và tài liệu học tập mọi lúc mọi nơi."),
+        "learningLanguage":
+            MessageLookupByLibrary.simpleMessage("Ngôn ngữ học"),
+        "level": MessageLookupByLibrary.simpleMessage("Cấp độ"),
         "listening": MessageLookupByLibrary.simpleMessage("Nghe"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "loginDescription": MessageLookupByLibrary.simpleMessage(
@@ -71,18 +79,28 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kiến thức, tài nguyên và hỗ trợ giúp bạn mỗi bước trên hành trình thành công của mình."),
         "loginTitle": MessageLookupByLibrary.simpleMessage(
             "Tất cả mọi thứ bạn cần đều có tại đây"),
+        "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
+        "mode": MessageLookupByLibrary.simpleMessage("Chế độ"),
         "multiLanguage":
             MessageLookupByLibrary.simpleMessage("Hỗ trợ nhiều ngôn ngữ"),
         "multiLanguageDescription": MessageLookupByLibrary.simpleMessage(
             "Ứng dụng của chúng tôi hỗ trợ nhiều ngôn ngữ để giúp bạn học bằng ngôn ngữ ưa thích của mình."),
+        "myInProgressCourses":
+            MessageLookupByLibrary.simpleMessage("Các khóa học đang học"),
+        "nativeLanguage":
+            MessageLookupByLibrary.simpleMessage("Ngôn ngữ mẹ đẻ"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("Không có mạng"),
+        "noUsername":
+            MessageLookupByLibrary.simpleMessage("Chưa có tên người dùng"),
+        "none": MessageLookupByLibrary.simpleMessage("Không có"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "or": MessageLookupByLibrary.simpleMessage("Hoặc"),
         "parseException": MessageLookupByLibrary.simpleMessage("Lỗi định dạng"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Nhập mật khẩu của bạn"),
+        "phoneNo": MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "pleaseChooseAtLeast1LearningMode":
             MessageLookupByLibrary.simpleMessage(
                 "Vui lòng chọn ít nhất 1 chế độ học tập"),
@@ -101,8 +119,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectNativeLanguage":
             MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ mẹ đẻ của bạn"),
         "speaking": MessageLookupByLibrary.simpleMessage("Nói"),
+        "theme": MessageLookupByLibrary.simpleMessage("Chủ đề"),
         "timeoutException":
             MessageLookupByLibrary.simpleMessage("Quá thời gian kết nối"),
+        "toLearnToday": MessageLookupByLibrary.simpleMessage("để học hôm nay"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token hết hạn"),
         "trackYourProgress":
             MessageLookupByLibrary.simpleMessage("Theo dõi tiến trình của bạn"),
@@ -114,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nhập tên người dùng"),
         "vietnamese": MessageLookupByLibrary.simpleMessage("Tiếng Việt"),
         "vocabulary": MessageLookupByLibrary.simpleMessage("Từ vựng"),
+        "welcome": MessageLookupByLibrary.simpleMessage("Chào mừng"),
         "writing": MessageLookupByLibrary.simpleMessage("Viết")
       };
 }

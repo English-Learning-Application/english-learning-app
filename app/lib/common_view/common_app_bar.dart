@@ -1,8 +1,8 @@
 import 'package:design/design.dart';
-import 'package:logic/logic.dart';
 import 'package:flutter/material.dart';
-import 'package:services/services.dart';
+import 'package:logic/logic.dart';
 import 'package:provider/provider.dart';
+import 'package:services/services.dart';
 
 import '../app.dart';
 
@@ -94,7 +94,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
     return svg.svg(
       colorFilter: leadingIconColor
               ?.let((it) => ColorFilter.mode(it, BlendMode.srcIn)) ??
-          FoundationColors.secondary500
+          AppColors.current.primaryTextColor
               .let((it) => ColorFilter.mode(it, BlendMode.srcIn)),
       width: Dimens.d24.responsive(),
       height: Dimens.d24.responsive(),

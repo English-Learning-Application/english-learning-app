@@ -639,6 +639,166 @@ class S {
       args: [],
     );
   }
+
+  /// `No username`
+  String get noUsername {
+    return Intl.message(
+      'No username',
+      name: 'noUsername',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number`
+  String get phoneNo {
+    return Intl.message(
+      'Phone number',
+      name: 'phoneNo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `None`
+  String get none {
+    return Intl.message(
+      'None',
+      name: 'none',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Native language`
+  String get nativeLanguage {
+    return Intl.message(
+      'Native language',
+      name: 'nativeLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learning language`
+  String get learningLanguage {
+    return Intl.message(
+      'Learning language',
+      name: 'learningLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Theme`
+  String get theme {
+    return Intl.message(
+      'Theme',
+      name: 'theme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose what`
+  String get chooseWhat {
+    return Intl.message(
+      'Choose what',
+      name: 'chooseWhat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `to learn today`
+  String get toLearnToday {
+    return Intl.message(
+      'to learn today',
+      name: 'toLearnToday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome`
+  String get welcome {
+    return Intl.message(
+      'Welcome',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit profile`
+  String get editProfile {
+    return Intl.message(
+      'Edit profile',
+      name: 'editProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose the language`
+  String get chooseTheLanguage {
+    return Intl.message(
+      'Choose the language',
+      name: 'chooseTheLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My in-progress courses`
+  String get myInProgressCourses {
+    return Intl.message(
+      'My in-progress courses',
+      name: 'myInProgressCourses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Level`
+  String get level {
+    return Intl.message(
+      'Level',
+      name: 'level',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mode`
+  String get mode {
+    return Intl.message(
+      'Mode',
+      name: 'mode',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

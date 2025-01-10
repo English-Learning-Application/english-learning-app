@@ -1,6 +1,6 @@
+import 'package:app/app.dart';
 import 'package:design/design.dart';
 import 'package:flutter/material.dart';
-import 'package:app/app.dart';
 import 'package:services/services.dart';
 
 class StandardButton extends StatelessWidget {
