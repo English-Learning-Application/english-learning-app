@@ -94,5 +94,9 @@ extension ResponsiveDoubleExtension on double {
 enum ScreenType {
   mobile,
   tablet,
-  ultraTablet,
+  ultraTablet;
+
+  bool get isMobile => this == ScreenType.mobile;
+  bool get isTablet => this == ScreenType.tablet;
+  bool get isUltraTablet => this == ScreenType.ultraTablet;
 }

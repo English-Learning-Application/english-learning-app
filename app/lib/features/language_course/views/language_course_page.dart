@@ -89,10 +89,16 @@ class _LanguageCoursePageState
   String get screenName => 'LanguageCoursePage';
 
   Widget _buildCoursesList() {
+    final isMobile = AppDimens.current.screenType.isMobile;
+    final isTablet = AppDimens.current.screenType.isTablet;
     return GridView.builder(
       itemCount: 10,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+        crossAxisCount: isMobile
+            ? 2
+            : isTablet
+                ? 3
+                : 4,
         crossAxisSpacing: Dimens.d10.responsive(),
         mainAxisSpacing: Dimens.d10.responsive(),
         childAspectRatio: 0.9.responsive(),

@@ -46,6 +46,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_arrow_left.svg
   SvgGenImage get icArrowLeft => const SvgGenImage('assets/icons/ic_arrow_left.svg');
 
+  /// File path: assets/icons/ic_community.svg
+  SvgGenImage get icCommunity => const SvgGenImage('assets/icons/ic_community.svg');
+
   /// File path: assets/icons/ic_england.svg
   SvgGenImage get icEngland => const SvgGenImage('assets/icons/ic_england.svg');
 
@@ -103,6 +106,7 @@ class $AssetsIconsGen {
   /// List of all assets
   List<SvgGenImage> get values => [
         icArrowLeft,
+        icCommunity,
         icEngland,
         icEnglandLandmark,
         icEyeClose,

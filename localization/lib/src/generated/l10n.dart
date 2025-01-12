@@ -869,6 +869,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Community Hub`
+  String get communityHub {
+    return Intl.message(
+      'Community Hub',
+      name: 'communityHub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have not joined any community yet! Join a community to connect with other learners.`
+  String get communityNotJoined {
+    return Intl.message(
+      'You have not joined any community yet! Join a community to connect with other learners.',
+      name: 'communityNotJoined',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Join community`
+  String get joinCommunity {
+    return Intl.message(
+      'Join community',
+      name: 'joinCommunity',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

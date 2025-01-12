@@ -80,6 +80,9 @@
     "learn": "Learn",
     "chatbotIntro": "I'm your personal AI chatbot. I can help you with your learning journey. How can I help you today?",
     "chatbotHint": "Type your message here",
-    "all": "All"
+    "all": "All",
+    "communityHub": "Community Hub",
+    "communityNotJoined": "You have not joined any community yet! Join a community to connect with other learners.",
+    "joinCommunity": "Join community"
 }
 

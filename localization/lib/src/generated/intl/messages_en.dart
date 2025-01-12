@@ -45,6 +45,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseTheLanguage":
             MessageLookupByLibrary.simpleMessage("Choose the language"),
         "chooseWhat": MessageLookupByLibrary.simpleMessage("Choose what"),
+        "communityHub": MessageLookupByLibrary.simpleMessage("Community Hub"),
+        "communityNotJoined": MessageLookupByLibrary.simpleMessage(
+            "You have not joined any community yet! Join a community to connect with other learners."),
         "completeYourProfile":
             MessageLookupByLibrary.simpleMessage("Complete your profile"),
         "completeYourProfileDescription": MessageLookupByLibrary.simpleMessage(
@@ -69,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Wrong date time format"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Wrong username format"),
+        "joinCommunity": MessageLookupByLibrary.simpleMessage("Join community"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "learn": MessageLookupByLibrary.simpleMessage("Learn"),
         "learnAnywhere":

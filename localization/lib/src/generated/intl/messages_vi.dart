@@ -45,6 +45,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseTheLanguage":
             MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ"),
         "chooseWhat": MessageLookupByLibrary.simpleMessage("Chọn nội dung"),
+        "communityHub":
+            MessageLookupByLibrary.simpleMessage("Trung tâm cộng đồng"),
+        "communityNotJoined": MessageLookupByLibrary.simpleMessage(
+            "Bạn chưa tham gia bất kỳ cộng đồng nào! Hãy tham gia cộng đồng để kết nối với những người học khác."),
         "completeYourProfile":
             MessageLookupByLibrary.simpleMessage("Hoàn thiện hồ sơ của bạn"),
         "completeYourProfileDescription": MessageLookupByLibrary.simpleMessage(
@@ -69,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Định dạng ngày giờ sai"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
+        "joinCommunity":
+            MessageLookupByLibrary.simpleMessage("Tham gia cộng đồng"),
         "language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "learn": MessageLookupByLibrary.simpleMessage("Học"),
         "learnAnywhere": MessageLookupByLibrary.simpleMessage(

@@ -35,6 +35,10 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
             SizedBox(
               height: Dimens.d16.responsive(),
             ),
+            _buildCommunityHub(),
+            SizedBox(
+              height: Dimens.d16.responsive(),
+            ),
             _buildMyInProgressCourses(),
           ],
         ),
@@ -133,6 +137,9 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
   }
 
   Widget _buildMyInProgressCourses() {
+    final isMobile = AppDimens.current.screenType.isMobile;
+    final isTablet = AppDimens.current.screenType.isTablet;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -149,7 +156,11 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
           physics: const NeverScrollableScrollPhysics(),
           scrollDirection: Axis.vertical,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
+            crossAxisCount: isMobile
+                ? 2
+                : isTablet
+                    ? 3
+                    : 4,
             crossAxisSpacing: Dimens.d10.responsive(),
             mainAxisSpacing: Dimens.d10.responsive(),
             childAspectRatio: 0.9.responsive(),
@@ -220,6 +231,69 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
               ),
             );
           },
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCommunityHub() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          S.current.communityHub,
+          style: AppTextStyles.s14w400primary().font16().bold,
+        ),
+        SizedBox(
+          height: Dimens.d8.responsive(),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            color: AppColors.current.primaryColor.withValues(alpha: 0.7),
+            borderRadius: BorderRadius.circular(
+              Dimens.d8.responsive(),
+            ),
+          ),
+          padding: EdgeInsets.symmetric(
+            horizontal: Dimens.d16.responsive(),
+            vertical: Dimens.d8.responsive(),
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Column(
+                  children: [
+                    Text(
+                      S.current.communityNotJoined,
+                      style: AppTextStyles.s14w400primary()
+                          .font12()
+                          .bold
+                          .secondary,
+                    ),
+                    SizedBox(
+                      height: Dimens.d4.responsive(),
+                    ),
+                    StandardButton(
+                      buttonSize: ButtonSize.small,
+                      innerGap: 0,
+                      leadingIconSize: 0,
+                      trailingIconSize: 0,
+                      text: S.current.joinCommunity,
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: Dimens.d16.responsive(),
+              ),
+              Assets.icons.icCommunity.svg(
+                width: Dimens.d40.responsive(),
+                height: Dimens.d40.responsive(),
+              ),
+            ],
+          ),
         ),
       ],
     );
