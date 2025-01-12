@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aiChatbot": MessageLookupByLibrary.simpleMessage("AI Chatbot"),
+        "all": MessageLookupByLibrary.simpleMessage("All"),
         "badCertificateException":
             MessageLookupByLibrary.simpleMessage("Bad Certificate"),
         "canChooseUpTo3LearningModes": MessageLookupByLibrary.simpleMessage(
@@ -34,6 +35,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Cancellation"),
+        "chatbotHint":
+            MessageLookupByLibrary.simpleMessage("Type your message here"),
+        "chatbotIntro": MessageLookupByLibrary.simpleMessage(
+            "I\'m your personal AI chatbot. I can help you with your learning journey. How can I help you today?"),
+        "choose": MessageLookupByLibrary.simpleMessage("Choose"),
         "chooseLearningModes":
             MessageLookupByLibrary.simpleMessage("Choose your learning modes"),
         "chooseTheLanguage":
@@ -64,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Wrong username format"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "learn": MessageLookupByLibrary.simpleMessage("Learn"),
         "learnAnywhere":
             MessageLookupByLibrary.simpleMessage("Learn anywhere, anytime"),
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
@@ -127,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Track your progress"),
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Track your progress and see how far you\'ve come on your learning journey."),
+        "travel": MessageLookupByLibrary.simpleMessage("Travel"),
         "unknownException": m0,
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "usernameHint":
@@ -134,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "vietnamese": MessageLookupByLibrary.simpleMessage("Vietnamese"),
         "vocabulary": MessageLookupByLibrary.simpleMessage("Vocabulary"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
-        "writing": MessageLookupByLibrary.simpleMessage("Writing")
+        "writing": MessageLookupByLibrary.simpleMessage("Writing"),
+        "yourCategory": MessageLookupByLibrary.simpleMessage("Your category")
       };
 }

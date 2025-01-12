@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:logic/logic.dart';
 import 'package:injectable/injectable.dart';
+import 'package:logic/logic.dart';
 
 import '../../app.dart';
 
@@ -14,6 +14,8 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       splash: () => const SplashRoute(),
       onBoarding: () => const OnBoardingRoute(),
       completeRegistration: () => const CompleteRegistrationRoute(),
+      languageCourse: (learningLanguage) =>
+          LanguageCourseRoute(language: learningLanguage),
     );
   }
 }

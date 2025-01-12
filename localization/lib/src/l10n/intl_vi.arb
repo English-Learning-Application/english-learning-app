@@ -73,5 +73,12 @@
     "chooseTheLanguage": "Chọn ngôn ngữ",
     "myInProgressCourses": "Các khóa học đang học",
     "level": "Cấp độ",
-    "mode": "Chế độ"
+    "mode": "Chế độ",
+    "choose": "Chọn",
+    "yourCategory": "Danh mục của bạn",
+    "travel": "Du lịch",
+    "learn": "Học",
+    "chatbotIntro": "Tôi là trợ lý ảo cá nhân của bạn. Tôi có thể giúp bạn trong hành trình học tập của mình. Tôi có thể giúp gì cho bạn hôm nay?",
+    "chatbotHint": "Nhập tin nhắn của bạn ở đây",
+    "all": "Tất cả"
 }

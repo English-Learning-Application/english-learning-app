@@ -14,6 +14,6 @@ class UrlConstants {
   }
 
   static String get appMediaBaseUrl {
-    return 'https://english-learning-bucket.s3.ap-southeast-2.amazonaws.com/';
+    return 'https://english-learning-bucket.s3.ap-southeast-2.amazonaws.com';
   }
 }

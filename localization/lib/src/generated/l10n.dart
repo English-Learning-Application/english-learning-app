@@ -799,6 +799,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Choose`
+  String get choose {
+    return Intl.message(
+      'Choose',
+      name: 'choose',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your category`
+  String get yourCategory {
+    return Intl.message(
+      'Your category',
+      name: 'yourCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Travel`
+  String get travel {
+    return Intl.message(
+      'Travel',
+      name: 'travel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn`
+  String get learn {
+    return Intl.message(
+      'Learn',
+      name: 'learn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I'm your personal AI chatbot. I can help you with your learning journey. How can I help you today?`
+  String get chatbotIntro {
+    return Intl.message(
+      'I\'m your personal AI chatbot. I can help you with your learning journey. How can I help you today?',
+      name: 'chatbotIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type your message here`
+  String get chatbotHint {
+    return Intl.message(
+      'Type your message here',
+      name: 'chatbotHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All`
+  String get all {
+    return Intl.message(
+      'All',
+      name: 'all',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

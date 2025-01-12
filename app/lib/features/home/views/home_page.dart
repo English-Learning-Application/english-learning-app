@@ -118,7 +118,11 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
                   height: Dimens.d40.responsive(),
                 ),
                 languageName: language.languageName,
-                onTap: () {},
+                onTap: () async {
+                  await navigator.push(
+                    AppRouteInfo.languageCourse(learningLanguage: language),
+                  );
+                },
               );
             },
             itemCount: LearningLanguage.values.length,

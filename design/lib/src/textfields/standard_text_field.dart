@@ -17,6 +17,8 @@ class StandardTextField extends StatelessWidget {
     this.style,
     this.hintStyle,
     this.onChanged,
+    this.textInputAction = TextInputAction.next,
+    this.border,
   });
   final String? label;
   final String? hint;
@@ -30,9 +32,13 @@ class StandardTextField extends StatelessWidget {
   final TextStyle? style;
   final TextStyle? hintStyle;
   final Function(String?)? onChanged;
+  final TextInputAction textInputAction;
+  final InputBorder? border;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      textInputAction: textInputAction,
       onChanged: onChanged,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(
@@ -45,30 +51,32 @@ class StandardTextField extends StatelessWidget {
         fillColor: color ?? FoundationColors.neutral200.withValues(alpha: 0.5),
         hintStyle:
             hintStyle ?? AppTextStyles.s14w400primary().font12().bold.grey,
-        border: OutlineInputBorder(
-          borderRadius: borderRadius ??
-              BorderRadius.circular(
-                Dimens.d16.responsive(),
+        border: border ??
+            OutlineInputBorder(
+              borderRadius: borderRadius ??
+                  BorderRadius.circular(
+                    Dimens.d16.responsive(),
+                  ),
+              borderSide: BorderSide(
+                color: FoundationColors.secondary400.withValues(
+                  alpha: 0.5,
+                ),
+                width: Dimens.d1.responsive(),
               ),
-          borderSide: BorderSide(
-            color: FoundationColors.secondary400.withValues(
-              alpha: 0.5,
             ),
-            width: Dimens.d1.responsive(),
-          ),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: borderRadius ??
-              BorderRadius.circular(
-                Dimens.d16.responsive(),
+        enabledBorder: border ??
+            OutlineInputBorder(
+              borderRadius: borderRadius ??
+                  BorderRadius.circular(
+                    Dimens.d16.responsive(),
+                  ),
+              borderSide: BorderSide(
+                color: FoundationColors.secondary400.withValues(
+                  alpha: 0.5,
+                ),
+                width: Dimens.d1.responsive(),
               ),
-          borderSide: BorderSide(
-            color: FoundationColors.secondary400.withValues(
-              alpha: 0.5,
             ),
-            width: Dimens.d1.responsive(),
-          ),
-        ),
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
       ),

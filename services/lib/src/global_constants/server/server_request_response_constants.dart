@@ -8,6 +8,15 @@ class ServerRequestResponseConstants {
   static const bearer = 'Bearer';
   static const deviceId = 'X-Device-Id';
 
+  // Language Level
+  static const all = 'ALL';
+  static const a1 = 'A1';
+  static const a2 = 'A2';
+  static const b1 = 'B1';
+  static const b2 = 'B2';
+  static const c1 = 'C1';
+  static const c2 = 'C2';
+
   // Language Code
   static const vi = 'VI';
   static const en = 'EN';

@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aiChatbot": MessageLookupByLibrary.simpleMessage("Trợ lý ảo"),
+        "all": MessageLookupByLibrary.simpleMessage("Tất cả"),
         "badCertificateException":
             MessageLookupByLibrary.simpleMessage("Lỗi bảo mật chứng chỉ"),
         "canChooseUpTo3LearningModes": MessageLookupByLibrary.simpleMessage(
@@ -34,6 +35,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Lỗi hủy"),
+        "chatbotHint":
+            MessageLookupByLibrary.simpleMessage("Nhập tin nhắn của bạn ở đây"),
+        "chatbotIntro": MessageLookupByLibrary.simpleMessage(
+            "Tôi là trợ lý ảo cá nhân của bạn. Tôi có thể giúp bạn trong hành trình học tập của mình. Tôi có thể giúp gì cho bạn hôm nay?"),
+        "choose": MessageLookupByLibrary.simpleMessage("Chọn"),
         "chooseLearningModes":
             MessageLookupByLibrary.simpleMessage("Chọn chế độ học tập của bạn"),
         "chooseTheLanguage":
@@ -64,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
         "language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
+        "learn": MessageLookupByLibrary.simpleMessage("Học"),
         "learnAnywhere": MessageLookupByLibrary.simpleMessage(
             "Học bất cứ nơi đâu, bất cứ lúc nào"),
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
@@ -128,6 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Theo dõi tiến trình của bạn"),
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Theo dõi tiến trình của bạn và xem bạn đã đi được bao xa trên hành trình học tập của mình."),
+        "travel": MessageLookupByLibrary.simpleMessage("Du lịch"),
         "unknownException": m0,
         "username": MessageLookupByLibrary.simpleMessage("Tên người dùng"),
         "usernameHint":
@@ -135,6 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "vietnamese": MessageLookupByLibrary.simpleMessage("Tiếng Việt"),
         "vocabulary": MessageLookupByLibrary.simpleMessage("Từ vựng"),
         "welcome": MessageLookupByLibrary.simpleMessage("Chào mừng"),
-        "writing": MessageLookupByLibrary.simpleMessage("Viết")
+        "writing": MessageLookupByLibrary.simpleMessage("Viết"),
+        "yourCategory": MessageLookupByLibrary.simpleMessage("Danh mục của bạn")
       };
 }

@@ -56,6 +56,9 @@ class AppRouter extends $AppRouter {
                   page: HomeRoute.page,
                   initial: true,
                 ),
+                AutoRoute(
+                  page: LanguageCourseRoute.page,
+                ),
               ],
             ),
             AutoRoute(

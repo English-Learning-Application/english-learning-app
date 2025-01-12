@@ -564,11 +564,60 @@ enum AppThemeType {
         return ThemeMode.dark;
       case AppThemeType.system:
         return ThemeMode.system;
-      default:
-        return ThemeMode.system;
     }
   }
 
   const AppThemeType(this.serverValue);
   final String serverValue;
+}
+
+enum LanguageLevel {
+  all(ServerRequestResponseConstants.all),
+  a1(ServerRequestResponseConstants.a1),
+  a2(ServerRequestResponseConstants.a2),
+  b1(ServerRequestResponseConstants.b1),
+  b2(ServerRequestResponseConstants.b2),
+  c1(ServerRequestResponseConstants.c1),
+  c2(ServerRequestResponseConstants.c2);
+
+  const LanguageLevel(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.a1:
+        return LanguageLevel.a1;
+      case ServerRequestResponseConstants.a2:
+        return LanguageLevel.a2;
+      case ServerRequestResponseConstants.b1:
+        return LanguageLevel.b1;
+      case ServerRequestResponseConstants.b2:
+        return LanguageLevel.b2;
+      case ServerRequestResponseConstants.c1:
+        return LanguageLevel.c1;
+      case ServerRequestResponseConstants.c2:
+        return LanguageLevel.c2;
+      default:
+        return LanguageLevel.a1;
+    }
+  }
+
+  String get levelName {
+    switch (this) {
+      case LanguageLevel.all:
+        return S.current.all;
+      case LanguageLevel.a1:
+        return ServerRequestResponseConstants.a1;
+      case LanguageLevel.a2:
+        return ServerRequestResponseConstants.a2;
+      case LanguageLevel.b1:
+        return ServerRequestResponseConstants.b1;
+      case LanguageLevel.b2:
+        return ServerRequestResponseConstants.b2;
+      case LanguageLevel.c1:
+        return ServerRequestResponseConstants.c1;
+      case LanguageLevel.c2:
+        return ServerRequestResponseConstants.c2;
+    }
+  }
 }

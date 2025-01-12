@@ -82,6 +82,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_reading.svg
   SvgGenImage get icReading => const SvgGenImage('assets/icons/ic_reading.svg');
 
+  /// File path: assets/icons/ic_send.svg
+  SvgGenImage get icSend => const SvgGenImage('assets/icons/ic_send.svg');
+
   /// File path: assets/icons/ic_speaking.svg
   SvgGenImage get icSpeaking => const SvgGenImage('assets/icons/ic_speaking.svg');
 
@@ -112,6 +115,7 @@ class $AssetsIconsGen {
         icListening,
         icQuit,
         icReading,
+        icSend,
         icSpeaking,
         icVietnam,
         icVietnamLandmark,
@@ -138,8 +142,11 @@ class $AssetsImagesGen {
   /// File path: assets/images/onboard-04.png
   AssetGenImage get onboard04 => const AssetGenImage('assets/images/onboard-04.png');
 
+  /// File path: assets/images/robot-assistant.png
+  AssetGenImage get robotAssistant => const AssetGenImage('assets/images/robot-assistant.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [appIcon, onboard01, onboard02, onboard03, onboard04];
+  List<AssetGenImage> get values => [appIcon, onboard01, onboard02, onboard03, onboard04, robotAssistant];
 }
 
 class Assets {

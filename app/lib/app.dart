@@ -31,6 +31,8 @@ export 'features/complete_registration/view_models/complete_registration.dart';
 export 'features/complete_registration/views/complete_registration_page.dart';
 export 'features/home/view_models/home.dart';
 export 'features/home/views/home_page.dart';
+export 'features/language_course/view_model/language_course.dart';
+export 'features/language_course/views/language_course_page.dart';
 export 'features/login/view_model/login.dart';
 export 'features/login/views/login_page.dart';
 export 'features/on_boarding/viewmodel/on_boarding.dart';

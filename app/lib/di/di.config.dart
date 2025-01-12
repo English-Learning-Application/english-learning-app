@@ -16,6 +16,8 @@ import 'package:app/features/complete_registration/view_models/complete_registra
     as _i752;
 import 'package:app/features/course/view_models/course.dart' as _i366;
 import 'package:app/features/home/view_models/home.dart' as _i885;
+import 'package:app/features/language_course/view_model/language_course.dart'
+    as _i359;
 import 'package:app/features/login/view_model/login.dart' as _i1056;
 import 'package:app/features/main/viewmodels/main_view_model.dart' as _i93;
 import 'package:app/features/on_boarding/viewmodel/on_boarding.dart' as _i646;
@@ -50,6 +52,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
     gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
+    gh.factory<_i359.LanguageCourseViewModel>(
+        () => _i359.LanguageCourseViewModel());
     gh.factory<_i513.RouteGuard>(() => _i513.RouteGuard(
           gh<_i182.IsLoggedInUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),
