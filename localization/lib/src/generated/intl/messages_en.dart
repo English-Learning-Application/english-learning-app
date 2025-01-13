@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "adjective": MessageLookupByLibrary.simpleMessage("Adjective"),
+        "adverb": MessageLookupByLibrary.simpleMessage("Adverb"),
         "aiChatbot": MessageLookupByLibrary.simpleMessage("AI Chatbot"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
         "badCertificateException":
@@ -55,17 +57,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
+        "conjunction": MessageLookupByLibrary.simpleMessage("Conjunction"),
         "courses": MessageLookupByLibrary.simpleMessage("Courses"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
+        "expression": MessageLookupByLibrary.simpleMessage("Expression"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "french": MessageLookupByLibrary.simpleMessage("French"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "grammar": MessageLookupByLibrary.simpleMessage("Grammar"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "idiom": MessageLookupByLibrary.simpleMessage("Idiom"),
+        "interjection": MessageLookupByLibrary.simpleMessage("Interjection"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Password confirmation does not match"),
         "invalidDateTime":
@@ -104,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No Internet"),
         "noUsername": MessageLookupByLibrary.simpleMessage("No username"),
         "none": MessageLookupByLibrary.simpleMessage("None"),
+        "noun": MessageLookupByLibrary.simpleMessage("Noun"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "parseException":
@@ -112,12 +119,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "phoneNo": MessageLookupByLibrary.simpleMessage("Phone number"),
+        "phonetic": MessageLookupByLibrary.simpleMessage("Phonetic"),
+        "phrasalVerb": MessageLookupByLibrary.simpleMessage("Phrasal verb"),
         "pleaseChooseAtLeast1LearningMode":
             MessageLookupByLibrary.simpleMessage(
                 "Please choose at least 1 learning mode"),
+        "preposition": MessageLookupByLibrary.simpleMessage("Preposition"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Press again to exit"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "pronoun": MessageLookupByLibrary.simpleMessage("Pronoun"),
         "reading": MessageLookupByLibrary.simpleMessage("Reading"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registerDescription": MessageLookupByLibrary.simpleMessage(
@@ -129,7 +140,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Select your learning modes"),
         "selectNativeLanguage":
             MessageLookupByLibrary.simpleMessage("Select your native language"),
+        "sentence": MessageLookupByLibrary.simpleMessage("Sentence"),
         "speaking": MessageLookupByLibrary.simpleMessage("Speaking"),
+        "tense": MessageLookupByLibrary.simpleMessage("Tense"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),
         "toLearnToday": MessageLookupByLibrary.simpleMessage("to learn today"),
@@ -143,9 +156,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "usernameHint":
             MessageLookupByLibrary.simpleMessage("Enter your username"),
+        "verb": MessageLookupByLibrary.simpleMessage("Verb"),
         "vietnamese": MessageLookupByLibrary.simpleMessage("Vietnamese"),
         "vocabulary": MessageLookupByLibrary.simpleMessage("Vocabulary"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+        "word": MessageLookupByLibrary.simpleMessage("Word"),
         "writing": MessageLookupByLibrary.simpleMessage("Writing"),
         "yourCategory": MessageLookupByLibrary.simpleMessage("Your category")
       };

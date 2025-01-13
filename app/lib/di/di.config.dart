@@ -52,8 +52,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
     gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
-    gh.factory<_i359.LanguageCourseViewModel>(
-        () => _i359.LanguageCourseViewModel());
     gh.factory<_i513.RouteGuard>(() => _i513.RouteGuard(
           gh<_i182.IsLoggedInUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),
@@ -73,6 +71,11 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.GoogleLoginUseCase>(),
           gh<_i182.FacebookLoginUseCase>(),
         ));
+    gh.factory<_i359.LanguageCourseViewModel>(
+        () => _i359.LanguageCourseViewModel(
+              gh<_i182.GetLanguageCoursesByLanguageUseCase>(),
+              gh<_i182.GetLanguageCoursesByLanguageAndLevelUseCase>(),
+            ));
     gh.factory<_i21.IsLoggedInRouteGuard>(
         () => _i21.IsLoggedInRouteGuard(gh<_i182.IsLoggedInUseCase>()));
     gh.lazySingleton<_i215.AppViewModel>(() => _i215.AppViewModel(

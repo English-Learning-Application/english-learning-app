@@ -68,6 +68,28 @@ import 'package:data/src/features/authentication/data_source/api/authentication_
     as _i920;
 import 'package:data/src/features/authentication/repository/authentication_repository_impl.dart'
     as _i322;
+import 'package:data/src/features/language_course/data_source/api/language_course_api_data_source.dart'
+    as _i543;
+import 'package:data/src/features/language_course/mapper/api_expression_data_mapper.dart'
+    as _i110;
+import 'package:data/src/features/language_course/mapper/api_idiom_data_mapper.dart'
+    as _i414;
+import 'package:data/src/features/language_course/mapper/api_language_course_data_mapper.dart'
+    as _i616;
+import 'package:data/src/features/language_course/mapper/api_phonetic_data_mapper.dart'
+    as _i40;
+import 'package:data/src/features/language_course/mapper/api_phrasal_verb_data_mapper.dart'
+    as _i302;
+import 'package:data/src/features/language_course/mapper/api_sentence_data_mapper.dart'
+    as _i599;
+import 'package:data/src/features/language_course/mapper/api_tense_data_mapper.dart'
+    as _i1022;
+import 'package:data/src/features/language_course/mapper/api_tense_form_data_mapper.dart'
+    as _i985;
+import 'package:data/src/features/language_course/mapper/api_word_data_mapper.dart'
+    as _i443;
+import 'package:data/src/features/language_course/repository/language_course_repository_impl.dart'
+    as _i725;
 import 'package:data/src/features/notification/data_source/api/notification_api_service.dart'
     as _i82;
 import 'package:data/src/features/notification/repository/notification_repository_impl.dart'
@@ -99,6 +121,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i348.ApiRandomUserNameDataMapper>(
         () => _i348.ApiRandomUserNameDataMapper());
     gh.factory<_i639.ApiTokenDataMapper>(() => _i639.ApiTokenDataMapper());
+    gh.factory<_i818.ApiUserProfileDataMapper>(
+        () => _i818.ApiUserProfileDataMapper());
     gh.factory<_i646.AppThemeDataMapper>(() => _i646.AppThemeDataMapper());
     gh.factory<_i551.CommonErrorResponseMapper>(
         () => _i551.CommonErrorResponseMapper());
@@ -125,10 +149,21 @@ extension GetItInjectableX on _i174.GetIt {
       () => dataModule.getStore(),
       preResolve: true,
     );
-    gh.factory<_i818.ApiUserProfileDataMapper>(
-        () => _i818.ApiUserProfileDataMapper());
+    gh.factory<_i110.ApiExpressionDataMapper>(
+        () => _i110.ApiExpressionDataMapper());
+    gh.factory<_i414.ApiIdiomDataMapper>(() => _i414.ApiIdiomDataMapper());
+    gh.factory<_i40.ApiPhoneticDataMapper>(() => _i40.ApiPhoneticDataMapper());
+    gh.factory<_i302.ApiPhrasalVerbDataMapper>(
+        () => _i302.ApiPhrasalVerbDataMapper());
+    gh.factory<_i599.ApiSentenceDataMapper>(
+        () => _i599.ApiSentenceDataMapper());
+    gh.factory<_i985.ApiTenseFormDataMapper>(
+        () => _i985.ApiTenseFormDataMapper());
+    gh.factory<_i443.ApiWordDataMapper>(() => _i443.ApiWordDataMapper());
     gh.factory<_i77.HeaderInterceptor>(
         () => _i77.HeaderInterceptor(gh<_i473.AppInfo>()));
+    gh.factory<_i1022.ApiTenseDataMapper>(
+        () => _i1022.ApiTenseDataMapper(gh<_i437.ApiTenseFormDataMapper>()));
     gh.factory<_i1028.ApiUserDataMapper>(() => _i1028.ApiUserDataMapper(
           gh<_i437.ApiMediaDataMapper>(),
           gh<_i437.ApiUserProfileDataMapper>(),
@@ -137,6 +172,16 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i881.AppPreferences(gh<_i460.SharedPreferences>()));
     gh.factory<_i416.ApiRandomUserDataMapper>(() =>
         _i416.ApiRandomUserDataMapper(gh<_i437.ApiRandomUserNameDataMapper>()));
+    gh.factory<_i616.ApiLanguageCourseLearningContentDataMapper>(
+        () => _i616.ApiLanguageCourseLearningContentDataMapper(
+              gh<_i437.ApiWordDataMapper>(),
+              gh<_i437.ApiExpressionDataMapper>(),
+              gh<_i437.ApiIdiomDataMapper>(),
+              gh<_i437.ApiSentenceDataMapper>(),
+              gh<_i437.ApiPhrasalVerbDataMapper>(),
+              gh<_i437.ApiTenseDataMapper>(),
+              gh<_i437.ApiPhoneticDataMapper>(),
+            ));
     gh.lazySingleton<_i936.NonAuthAppServerApiClient>(
         () => _i936.NonAuthAppServerApiClient(gh<_i437.HeaderInterceptor>()));
     gh.lazySingleton<_i906.RandomUserApiClient>(
@@ -145,6 +190,9 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i6.AppDatabase(gh<_i1034.Store>()));
     gh.factory<_i30.AccessTokenInterceptor>(
         () => _i30.AccessTokenInterceptor(gh<_i437.AppPreferences>()));
+    gh.factory<_i616.ApiLanguageCourseDataMapper>(() =>
+        _i616.ApiLanguageCourseDataMapper(
+            gh<_i616.ApiLanguageCourseLearningContentDataMapper>()));
     gh.lazySingleton<_i423.RefreshTokenApiClient>(
         () => _i423.RefreshTokenApiClient(
               gh<_i437.AccessTokenInterceptor>(),
@@ -181,6 +229,8 @@ extension GetItInjectableX on _i174.GetIt {
             ));
     gh.lazySingleton<_i82.NotificationApiDataSource>(() =>
         _i82.NotificationApiDataSource(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i543.LanguageCourseApiDataSource>(() =>
+        _i543.LanguageCourseApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i182.NotificationRepository>(() =>
         _i946.NotificationRepositoryImpl(gh<_i82.NotificationApiDataSource>()));
     gh.lazySingleton<_i182.AuthenticationRepository>(
@@ -188,6 +238,11 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i920.AuthenticationApiDataSource>(),
               gh<_i437.AppPreferences>(),
               gh<_i437.ApiUserDataMapper>(),
+            ));
+    gh.lazySingleton<_i182.LanguageCourseRepository>(
+        () => _i725.LanguageCourseRepositoryImpl(
+              gh<_i437.LanguageCourseApiDataSource>(),
+              gh<_i437.ApiLanguageCourseDataMapper>(),
             ));
     return this;
   }

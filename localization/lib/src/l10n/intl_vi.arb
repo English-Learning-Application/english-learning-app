@@ -83,5 +83,20 @@
     "all": "Tất cả",
     "communityHub": "Trung tâm cộng đồng",
     "communityNotJoined": "Bạn chưa tham gia bất kỳ cộng đồng nào! Hãy tham gia cộng đồng để kết nối với những người học khác.",
-    "joinCommunity": "Tham gia cộng đồng"
+    "joinCommunity": "Tham gia cộng đồng",
+    "word": "Từ vựng",
+    "sentence": "Câu văn",
+    "expression": "Biểu cảm",
+    "idiom": "Thành ngữ",
+    "phrasalVerb": "Cụm động từ",
+    "tense": "Thì",
+    "phonetic": "Phiên âm",
+    "noun": "Danh từ",
+    "verb": "Động từ",
+    "adjective": "Tính từ",
+    "adverb": "Trạng từ",
+    "preposition": "Giới từ",
+    "conjunction": "Liên từ",
+    "interjection": "Thán từ",
+    "pronoun": "Đại từ"
 }

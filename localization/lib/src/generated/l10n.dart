@@ -899,6 +899,156 @@ class S {
       args: [],
     );
   }
+
+  /// `Word`
+  String get word {
+    return Intl.message(
+      'Word',
+      name: 'word',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sentence`
+  String get sentence {
+    return Intl.message(
+      'Sentence',
+      name: 'sentence',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expression`
+  String get expression {
+    return Intl.message(
+      'Expression',
+      name: 'expression',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Idiom`
+  String get idiom {
+    return Intl.message(
+      'Idiom',
+      name: 'idiom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phrasal verb`
+  String get phrasalVerb {
+    return Intl.message(
+      'Phrasal verb',
+      name: 'phrasalVerb',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tense`
+  String get tense {
+    return Intl.message(
+      'Tense',
+      name: 'tense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phonetic`
+  String get phonetic {
+    return Intl.message(
+      'Phonetic',
+      name: 'phonetic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Noun`
+  String get noun {
+    return Intl.message(
+      'Noun',
+      name: 'noun',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verb`
+  String get verb {
+    return Intl.message(
+      'Verb',
+      name: 'verb',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adjective`
+  String get adjective {
+    return Intl.message(
+      'Adjective',
+      name: 'adjective',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adverb`
+  String get adverb {
+    return Intl.message(
+      'Adverb',
+      name: 'adverb',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Preposition`
+  String get preposition {
+    return Intl.message(
+      'Preposition',
+      name: 'preposition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Conjunction`
+  String get conjunction {
+    return Intl.message(
+      'Conjunction',
+      name: 'conjunction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Interjection`
+  String get interjection {
+    return Intl.message(
+      'Interjection',
+      name: 'interjection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pronoun`
+  String get pronoun {
+    return Intl.message(
+      'Pronoun',
+      name: 'pronoun',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -34,6 +34,25 @@ class ServerRequestResponseConstants {
   static const reading = 'READING';
   static const writing = 'WRITING';
 
+  // Learning Content Type
+  static const word = 'WORD';
+  static const expression = 'EXPRESSION';
+  static const idiom = 'IDIOM';
+  static const sentence = 'SENTENCE';
+  static const phrasalVerb = 'PHRASAL_VERB';
+  static const tense = 'TENSE';
+  static const phonetics = 'PHONETICS';
+
+  // Word Type
+  static const noun = 'NOUN';
+  static const verb = 'VERB';
+  static const adjective = 'ADJECTIVE';
+  static const adverb = 'ADVERB';
+  static const pronoun = "PRONOUN";
+  static const preposition = 'PREPOSITION';
+  static const conjunction = 'CONJUNCTION';
+  static const interjection = 'INTERJECTION';
+
   // Registration Status
   static const confirmed = 'CONFIRMED';
   static const notConfirmed = 'NOT_CONFIRMED';

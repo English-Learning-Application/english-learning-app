@@ -3,6 +3,7 @@ import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 import 'package:logic/logic.dart';
+import 'package:provider/provider.dart';
 
 import '../../../app.dart';
 import '../widgets/language_level_card.dart';
@@ -60,29 +61,39 @@ class _LanguageCoursePageState
   }
 
   Widget _buildLevelSelection() {
-    return SizedBox(
-      height: Dimens.d40.responsive(),
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        itemCount: LanguageLevel.values.length,
-        separatorBuilder: (_, index) => SizedBox(
-          width: Dimens.d8.responsive(),
-        ),
-        itemBuilder: (_, index) {
-          final level = LanguageLevel.values[index];
-          return LanguageLevelCard(
-            level: level,
-            isSelected: false,
-            onTap: (level) {},
-          );
-        },
-      ),
+    return Selector<LanguageCourseViewModel, LanguageCourseViewModelData>(
+      selector: (_, viewModel) => viewModel.viewModelData,
+      shouldRebuild: (prev, next) => prev.languageLevel != next.languageLevel,
+      builder: (_, vmData, __) {
+        return SizedBox(
+          height: Dimens.d40.responsive(),
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemCount: LanguageLevel.values.length,
+            separatorBuilder: (_, index) => SizedBox(
+              width: Dimens.d8.responsive(),
+            ),
+            itemBuilder: (_, index) {
+              final level = LanguageLevel.values[index];
+              return LanguageLevelCard(
+                level: level,
+                isSelected: vmData.languageLevel == level,
+                onTap: (level) async {
+                  await viewModel.chooseLearningLevel(level);
+                },
+              );
+            },
+          ),
+        );
+      },
     );
   }
 
   @override
   void initViewModels() async {
-    await viewModel.init();
+    await viewModel.init(
+      widget.language,
+    );
   }
 
   @override
@@ -91,81 +102,90 @@ class _LanguageCoursePageState
   Widget _buildCoursesList() {
     final isMobile = AppDimens.current.screenType.isMobile;
     final isTablet = AppDimens.current.screenType.isTablet;
-    return GridView.builder(
-      itemCount: 10,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: isMobile
-            ? 2
-            : isTablet
-                ? 3
-                : 4,
-        crossAxisSpacing: Dimens.d10.responsive(),
-        mainAxisSpacing: Dimens.d10.responsive(),
-        childAspectRatio: 0.9.responsive(),
-      ),
-      itemBuilder: (_, index) {
-        return CourseCard(
-          borderRadius: Dimens.d8.responsive(),
-          color: FoundationColors.primary500,
-          padding: EdgeInsets.symmetric(
-            horizontal: Dimens.d16.responsive(),
-            vertical: Dimens.d8.responsive(),
-          ),
-          onPressed: () {},
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      widget.language.languageName,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTextStyles.s14w400primary()
-                          .font16()
-                          .secondary
-                          .bold,
-                    ),
-                  ),
-                  SizedBox(
-                    width: Dimens.d8.responsive(),
-                  ),
-                  widget.language.icon.svg(
-                    width: Dimens.d24.responsive(),
-                    height: Dimens.d24.responsive(),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: Dimens.d8.responsive(),
-              ),
-              Text(
-                "${S.current.level}: A${index + 1}",
-                style: AppTextStyles.s14w400primary().font14().secondary,
-              ),
-              SizedBox(
-                height: Dimens.d8.responsive(),
-              ),
-              LearningType.values[index % LearningType.values.length].icon.svg(
-                width: Dimens.d24.responsive(),
-                height: Dimens.d24.responsive(),
-              ),
-              SizedBox(
-                height: Dimens.d16.responsive(),
-              ),
-              LinearProgressIndicator(
-                value: (index + 1) / 10,
-                color: FoundationColors.accent200,
-                borderRadius: BorderRadius.circular(
-                  Dimens.d8.responsive(),
+    return Selector<LanguageCourseViewModel, LanguageCourseViewModelData>(
+        selector: (_, viewModel) => viewModel.viewModelData,
+        shouldRebuild: (prev, next) =>
+            prev.languageCourses != next.languageCourses,
+        builder: (_, vmData, __) {
+          final courses = vmData.languageCourses;
+          print(courses.length);
+          return GridView.builder(
+            itemCount: courses.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: isMobile
+                  ? 2
+                  : isTablet
+                      ? 3
+                      : 4,
+              crossAxisSpacing: Dimens.d10.responsive(),
+              mainAxisSpacing: Dimens.d10.responsive(),
+              childAspectRatio: 0.9.responsive(),
+            ),
+            itemBuilder: (_, index) {
+              final course = courses[index];
+              return CourseCard(
+                borderRadius: Dimens.d8.responsive(),
+                color: FoundationColors.primary500,
+                padding: EdgeInsets.symmetric(
+                  horizontal: Dimens.d16.responsive(),
+                  vertical: Dimens.d8.responsive(),
                 ),
-                minHeight: Dimens.d4.responsive(),
-                backgroundColor: FoundationColors.neutral50,
-              )
-            ],
-          ),
-        );
-      },
-    );
+                onPressed: () {},
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            course.language.languageName,
+                            overflow: TextOverflow.ellipsis,
+                            style: AppTextStyles.s14w400primary()
+                                .font16()
+                                .secondary
+                                .bold,
+                          ),
+                        ),
+                        SizedBox(
+                          width: Dimens.d8.responsive(),
+                        ),
+                        course.language.icon.svg(
+                          width: Dimens.d24.responsive(),
+                          height: Dimens.d24.responsive(),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: Dimens.d8.responsive(),
+                    ),
+                    Text(
+                      "${S.current.level}: ${course.level.serverValue}",
+                      style: AppTextStyles.s14w400primary().font14().secondary,
+                    ),
+                    SizedBox(
+                      height: Dimens.d8.responsive(),
+                    ),
+                    course.learningType.icon.svg(
+                      width: Dimens.d24.responsive(),
+                      height: Dimens.d24.responsive(),
+                    ),
+                    SizedBox(
+                      height: Dimens.d16.responsive(),
+                    ),
+                    LinearProgressIndicator(
+                      value: 0,
+                      color: FoundationColors.accent200,
+                      borderRadius: BorderRadius.circular(
+                        Dimens.d8.responsive(),
+                      ),
+                      minHeight: Dimens.d4.responsive(),
+                      backgroundColor: FoundationColors.neutral50,
+                    )
+                  ],
+                ),
+              );
+            },
+          );
+        });
   }
 }

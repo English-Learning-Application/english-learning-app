@@ -23,6 +23,10 @@ import 'package:logic/src/features/authentication/usecase/registration_completio
     as _i119;
 import 'package:logic/src/features/authentication/usecase/username_registration_use_case.dart'
     as _i323;
+import 'package:logic/src/features/language_course/use_case/get_language_courses_by_language_and_level_use_case.dart'
+    as _i408;
+import 'package:logic/src/features/language_course/use_case/get_language_courses_by_language_use_case.dart'
+    as _i244;
 import 'package:logic/src/features/notification/usecase/register_fcm_token_use_case.dart'
     as _i119;
 import 'package:logic/src/usecase/clear_current_user_data_use_case.dart'
@@ -47,6 +51,12 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
+    gh.factory<_i408.GetLanguageCoursesByLanguageAndLevelUseCase>(() =>
+        _i408.GetLanguageCoursesByLanguageAndLevelUseCase(
+            gh<_i182.LanguageCourseRepository>()));
+    gh.factory<_i244.GetLanguageCoursesByLanguageUseCase>(() =>
+        _i244.GetLanguageCoursesByLanguageUseCase(
+            gh<_i182.LanguageCourseRepository>()));
     gh.factory<_i106.GetLoggedInUserUseCase>(() =>
         _i106.GetLoggedInUserUseCase(gh<_i182.AuthenticationRepository>()));
     gh.factory<_i919.GoogleLoginUseCase>(

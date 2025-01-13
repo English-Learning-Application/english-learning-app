@@ -66,6 +66,117 @@ enum LearningLanguage {
   String toString() => languageName;
 }
 
+enum LearningContentType {
+  word(ServerRequestResponseConstants.word),
+  expression(ServerRequestResponseConstants.expression),
+  idiom(ServerRequestResponseConstants.idiom),
+  sentence(ServerRequestResponseConstants.sentence),
+  phrasalVerb(ServerRequestResponseConstants.phrasalVerb),
+  tense(ServerRequestResponseConstants.tense),
+  phonetics(ServerRequestResponseConstants.phonetics);
+
+  const LearningContentType(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.word:
+        return LearningContentType.word;
+      case ServerRequestResponseConstants.expression:
+        return LearningContentType.expression;
+      case ServerRequestResponseConstants.idiom:
+        return LearningContentType.idiom;
+      case ServerRequestResponseConstants.sentence:
+        return LearningContentType.sentence;
+      case ServerRequestResponseConstants.phrasalVerb:
+        return LearningContentType.phrasalVerb;
+      case ServerRequestResponseConstants.tense:
+        return LearningContentType.tense;
+      case ServerRequestResponseConstants.phonetics:
+        return LearningContentType.phonetics;
+      default:
+        return LearningContentType.word;
+    }
+  }
+
+  String get contentTypeName {
+    switch (this) {
+      case LearningContentType.word:
+        return S.current.word;
+      case LearningContentType.expression:
+        return S.current.expression;
+      case LearningContentType.idiom:
+        return S.current.idiom;
+      case LearningContentType.sentence:
+        return S.current.sentence;
+      case LearningContentType.phrasalVerb:
+        return S.current.phrasalVerb;
+      case LearningContentType.tense:
+        return S.current.tense;
+      case LearningContentType.phonetics:
+        return S.current.phonetic;
+    }
+  }
+}
+
+enum WordType {
+  noun(ServerRequestResponseConstants.noun),
+  verb(ServerRequestResponseConstants.verb),
+  adjective(ServerRequestResponseConstants.adjective),
+  adverb(ServerRequestResponseConstants.adverb),
+  preposition(ServerRequestResponseConstants.preposition),
+  conjunction(ServerRequestResponseConstants.conjunction),
+  pronoun(ServerRequestResponseConstants.pronoun),
+  interjection(ServerRequestResponseConstants.interjection);
+
+  const WordType(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.noun:
+        return WordType.noun;
+      case ServerRequestResponseConstants.verb:
+        return WordType.verb;
+      case ServerRequestResponseConstants.adjective:
+        return WordType.adjective;
+      case ServerRequestResponseConstants.adverb:
+        return WordType.adverb;
+      case ServerRequestResponseConstants.preposition:
+        return WordType.preposition;
+      case ServerRequestResponseConstants.conjunction:
+        return WordType.conjunction;
+      case ServerRequestResponseConstants.pronoun:
+        return WordType.pronoun;
+      case ServerRequestResponseConstants.interjection:
+        return WordType.interjection;
+      default:
+        return WordType.noun;
+    }
+  }
+
+  String get wordTypeName {
+    switch (this) {
+      case WordType.noun:
+        return S.current.noun;
+      case WordType.verb:
+        return S.current.verb;
+      case WordType.adjective:
+        return S.current.adjective;
+      case WordType.adverb:
+        return S.current.adverb;
+      case WordType.preposition:
+        return S.current.preposition;
+      case WordType.conjunction:
+        return S.current.conjunction;
+      case WordType.pronoun:
+        return S.current.pronoun;
+      case WordType.interjection:
+        return S.current.interjection;
+    }
+  }
+}
+
 enum LearningType {
   speaking(ServerRequestResponseConstants.speaking),
   listening(ServerRequestResponseConstants.listening),
