@@ -28,6 +28,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "adverb": MessageLookupByLibrary.simpleMessage("Trạng từ"),
         "aiChatbot": MessageLookupByLibrary.simpleMessage("Trợ lý ảo"),
         "all": MessageLookupByLibrary.simpleMessage("Tất cả"),
+        "backToCourses":
+            MessageLookupByLibrary.simpleMessage("Quay lại khóa học"),
         "badCertificateException":
             MessageLookupByLibrary.simpleMessage("Lỗi bảo mật chứng chỉ"),
         "canChooseUpTo3LearningModes": MessageLookupByLibrary.simpleMessage(
@@ -58,7 +60,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirm": MessageLookupByLibrary.simpleMessage("Xác nhận"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
+        "congratulations": MessageLookupByLibrary.simpleMessage("Chúc mừng"),
         "conjunction": MessageLookupByLibrary.simpleMessage("Liên từ"),
+        "correct": MessageLookupByLibrary.simpleMessage("Chính xác"),
         "courses": MessageLookupByLibrary.simpleMessage("Khóa học"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Chỉnh sửa hồ sơ"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
@@ -73,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "grammar": MessageLookupByLibrary.simpleMessage("Ngữ pháp"),
         "home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "idiom": MessageLookupByLibrary.simpleMessage("Thành ngữ"),
+        "incorrect": MessageLookupByLibrary.simpleMessage("Sai"),
         "interjection": MessageLookupByLibrary.simpleMessage("Thán từ"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Mật khẩu xác nhận không khớp"),
@@ -172,6 +177,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "welcome": MessageLookupByLibrary.simpleMessage("Chào mừng"),
         "word": MessageLookupByLibrary.simpleMessage("Từ vựng"),
         "writing": MessageLookupByLibrary.simpleMessage("Viết"),
+        "youHaveChosenTheCorrectAnswer":
+            MessageLookupByLibrary.simpleMessage("Bạn đã chọn đáp án đúng"),
+        "youHaveChosenTheWrongAnswer":
+            MessageLookupByLibrary.simpleMessage("Bạn đã chọn đáp án sai"),
+        "youHaveCompletedTheCourse":
+            MessageLookupByLibrary.simpleMessage("Bạn đã hoàn thành khóa học"),
         "yourCategory": MessageLookupByLibrary.simpleMessage("Danh mục của bạn")
       };
 }

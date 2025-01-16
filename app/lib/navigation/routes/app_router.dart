@@ -102,6 +102,12 @@ class AppRouter extends $AppRouter {
           ],
           page: FlashCardLearningRoute.page,
         ),
+        AutoRoute(
+          guards: [
+            _routeGuard,
+          ],
+          page: QuizLearningRoute.page,
+        ),
       ];
 }
 

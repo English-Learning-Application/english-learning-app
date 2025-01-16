@@ -21,7 +21,12 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       flashCardLearning: (languageCourseLearningContent, learningLanguage) =>
           FlashCardLearningRoute(
         languageCourseLearningContent: languageCourseLearningContent,
-            learningLanguage: learningLanguage,
+        learningLanguage: learningLanguage,
+      ),
+      quizLearning: (learningLanguage, languageCourseLearningContent) =>
+          QuizLearningRoute(
+        learningLanguage: learningLanguage,
+        languageCourseLearningContent: languageCourseLearningContent,
       ),
     );
   }

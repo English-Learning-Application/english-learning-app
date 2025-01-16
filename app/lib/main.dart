@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 import 'package:initializer/initializer.dart';
 import 'package:services/services.dart';
 
-import 'app/app.dart';
+import 'app.dart';
 import 'config/app_config.dart';
 
 void main() {

@@ -7,6 +7,7 @@ class FlashCardLearningViewModelData extends BaseViewModelData
 
   const factory FlashCardLearningViewModelData({
     @Default(LearningContentType.word) LearningContentType learningContentType,
+    @Default([]) List<FlashCardLearningEntity> flashCardLearningEntities,
     @Default(LearningLanguage.english) LearningLanguage learningLanguage,
     @Default(LanguageCourseLearningContent())
     LanguageCourseLearningContent languageCourseLearningContent,

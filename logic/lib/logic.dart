@@ -20,10 +20,12 @@ export 'src/features/authentication/usecase/registration_completion_use_case.dar
 export 'src/features/authentication/usecase/username_registration_use_case.dart';
 export 'src/features/chat_bot/entity/chat_message.dart';
 export 'src/features/language_course/entity/expression.dart';
+export 'src/features/language_course/entity/flash_card_learning_entity.dart';
 export 'src/features/language_course/entity/idiom.dart';
 export 'src/features/language_course/entity/language_course.dart';
 export 'src/features/language_course/entity/phonetic.dart';
 export 'src/features/language_course/entity/phrasal_verb.dart';
+export 'src/features/language_course/entity/quiz_learning_entity.dart';
 export 'src/features/language_course/entity/sentence.dart';
 export 'src/features/language_course/entity/tense.dart';
 export 'src/features/language_course/entity/word.dart';

@@ -39,7 +39,25 @@ class _FlashCardLearningPageState
       appBar: CommonAppBar(
         titleText: S.current.flashcard,
       ),
-      body: _buildBody(),
+      body:
+          Selector<FlashCardLearningViewModel, FlashCardLearningViewModelData>(
+        selector: (context, viewModel) => viewModel.viewModelData,
+        shouldRebuild: (previous, next) =>
+            next.learnedContentIds.length + next.skippedContentIds.length ==
+            next.totalLearningContentCount,
+        builder: (_, vmData, __) {
+          final isFinished = vmData.learnedContentIds.length +
+                  vmData.skippedContentIds.length ==
+              vmData.totalLearningContentCount;
+          if (isFinished) {
+            return _finishFlashCardLearning(
+              learnedContentIds: vmData.learnedContentIds.length,
+              totalLearningContentCount: vmData.totalLearningContentCount,
+            );
+          }
+          return _buildBody();
+        },
+      ),
     );
   }
 
@@ -84,7 +102,6 @@ class _FlashCardLearningPageState
               builder: (_, vmData, __) {
                 return Expanded(
                   child: AppinioSwiper(
-                    onEnd: () {},
                     controller: _swiperController,
                     cardCount: vmData.totalLearningContentCount,
                     swipeOptions: const SwipeOptions.symmetric(
@@ -101,15 +118,9 @@ class _FlashCardLearningPageState
                     },
                     cardBuilder: (_, index) {
                       final learningContent =
-                          vmData.languageCourseLearningContent.words[index];
-                      final learningWord = switch (vmData.learningLanguage) {
-                        LearningLanguage.english => learningContent.englishWord,
-                        LearningLanguage.french => learningContent.frenchWord,
-                        LearningLanguage.vietnamese =>
-                          learningContent.vietnameseWord,
-                      };
+                          vmData.flashCardLearningEntities[index];
                       return FlipCard(
-                        key: ValueKey(learningContent.wordId),
+                        key: ValueKey(learningContent.id),
                         direction: FlipDirection.HORIZONTAL,
                         side: CardSide.FRONT,
                         front: Container(
@@ -131,40 +142,47 @@ class _FlashCardLearningPageState
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
-                                learningWord,
-                                style: AppTextStyles.s14w400primary()
-                                    .font20()
-                                    .bold,
-                              ),
-                              SizedBox(
-                                height: Dimens.d16.responsive(),
-                              ),
-                              Text(
-                                learningContent.pronunciation,
-                                style: AppTextStyles.s14w400primary()
-                                    .font15()
-                                    .medium,
-                              ),
-                              SizedBox(
-                                height: Dimens.d16.responsive(),
-                              ),
-                              ImagesProvider.networkImage(
-                                imageUrl: learningContent.imageUrlItem,
-                                height: Dimens.d200.responsive(),
-                                width: double.infinity,
-                                fit: BoxFit.cover,
-                              ),
-                              SizedBox(
-                                height: Dimens.d16.responsive(),
-                              ),
+                              if (learningContent.frontCardText.isNotEmpty) ...[
+                                Text(
+                                  learningContent.frontCardText,
+                                  style: AppTextStyles.s14w400primary()
+                                      .font20()
+                                      .bold,
+                                ),
+                                SizedBox(
+                                  height: Dimens.d16.responsive(),
+                                ),
+                              ],
+                              if (learningContent
+                                  .frontCardSubText.isNotEmpty) ...[
+                                Text(
+                                  learningContent.frontCardSubText,
+                                  style: AppTextStyles.s14w400primary()
+                                      .font15()
+                                      .medium,
+                                ),
+                                SizedBox(
+                                  height: Dimens.d16.responsive(),
+                                ),
+                              ],
+                              if (learningContent.image.isNotEmpty) ...[
+                                ImagesProvider.networkImage(
+                                  imageUrl: learningContent.image,
+                                  height: Dimens.d200.responsive(),
+                                  width: double.infinity,
+                                  fit: BoxFit.cover,
+                                ),
+                                SizedBox(
+                                  height: Dimens.d16.responsive(),
+                                ),
+                              ],
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   GestureDetector(
                                     onTap: () async {
                                       await viewModel.speakFromText(
-                                        learningWord,
+                                        learningContent.frontCardText,
                                         vmData.learningLanguage,
                                       );
                                     },
@@ -234,120 +252,94 @@ class _FlashCardLearningPageState
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Selector<AppViewModel, AppViewModelData>(
-                                selector: (context, viewModel) =>
-                                    viewModel.viewModelData,
-                                shouldRebuild: (previous, next) =>
-                                    previous.languageCode != next.languageCode,
-                                builder: (_, appVmData, __) {
-                                  final localizedText =
-                                      switch (appVmData.languageCode) {
-                                    LanguageCode.en =>
-                                      learningContent.englishWord,
-                                    LanguageCode.vi =>
-                                      learningContent.vietnameseWord,
-                                  };
-                                  return Text(
-                                    localizedText,
-                                    style: AppTextStyles.s14w400primary()
-                                        .font20()
-                                        .bold,
-                                  );
-                                },
-                              ),
+                              if (learningContent.backCardText.isNotEmpty) ...[
+                                Text(
+                                  learningContent.backCardText,
+                                  style: AppTextStyles.s14w400primary()
+                                      .font20()
+                                      .bold,
+                                ),
+                              ],
                               SizedBox(
                                 height: Dimens.d16.responsive(),
                               ),
-                              ImagesProvider.networkImage(
-                                imageUrl: learningContent.imageUrlItem,
-                                height: Dimens.d200.responsive(),
-                                width: double.infinity,
-                                fit: BoxFit.cover,
-                              ),
-                              SizedBox(
-                                height: Dimens.d16.responsive(),
-                              ),
-                              Selector<AppViewModel, AppViewModelData>(
-                                  selector: (context, viewModel) =>
-                                      viewModel.viewModelData,
-                                  shouldRebuild: (previous, next) =>
-                                      previous.languageCode !=
-                                      next.languageCode,
-                                  builder: (_, appVmData, __) {
-                                    final localizedText =
-                                        switch (appVmData.languageCode) {
-                                      LanguageCode.en =>
-                                        learningContent.englishWord,
-                                      LanguageCode.vi =>
-                                        learningContent.vietnameseWord,
-                                    };
-                                    final localizedPronunciationLanguage =
-                                        switch (appVmData.languageCode) {
-                                      LanguageCode.en =>
-                                        LearningLanguage.english,
-                                      LanguageCode.vi =>
-                                        LearningLanguage.vietnamese,
-                                    };
-                                    return Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        GestureDetector(
-                                          onTap: () async {
-                                            await viewModel.speakFromText(
-                                              localizedText,
-                                              localizedPronunciationLanguage,
-                                            );
-                                          },
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              border: Border.all(
-                                                color: AppColors
-                                                    .current.primaryColor,
-                                                width: Dimens.d1.responsive(),
-                                              ),
-                                            ),
-                                            width: Dimens.d32.responsive(),
-                                            height: Dimens.d32.responsive(),
-                                            child: Center(
-                                              child: Icon(
-                                                Icons.volume_up,
-                                                color: AppColors
-                                                    .current.primaryColor,
-                                                size: Dimens.d24.responsive(),
-                                              ),
-                                            ),
-                                          ),
+                              if (learningContent
+                                  .backCardSubText.isNotEmpty) ...[
+                                Text(
+                                  learningContent.backCardSubText,
+                                  style: AppTextStyles.s14w400primary()
+                                      .font15()
+                                      .medium,
+                                ),
+                                SizedBox(
+                                  height: Dimens.d16.responsive(),
+                                ),
+                              ],
+                              if (learningContent.image.isNotEmpty) ...[
+                                ImagesProvider.networkImage(
+                                  imageUrl: learningContent.image,
+                                  height: Dimens.d200.responsive(),
+                                  width: double.infinity,
+                                  fit: BoxFit.cover,
+                                ),
+                                SizedBox(
+                                  height: Dimens.d16.responsive(),
+                                ),
+                              ],
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  GestureDetector(
+                                    onTap: () async {
+                                      await viewModel.speakFromText(
+                                        learningContent.backCardText,
+                                        widget.learningLanguage,
+                                      );
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: AppColors.current.primaryColor,
+                                          width: Dimens.d1.responsive(),
                                         ),
-                                        SizedBox(
-                                          width: Dimens.d16.responsive(),
+                                      ),
+                                      width: Dimens.d32.responsive(),
+                                      height: Dimens.d32.responsive(),
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.volume_up,
+                                          color: AppColors.current.primaryColor,
+                                          size: Dimens.d24.responsive(),
                                         ),
-                                        GestureDetector(
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              border: Border.all(
-                                                color: AppColors
-                                                    .current.primaryColor,
-                                                width: Dimens.d1.responsive(),
-                                              ),
-                                            ),
-                                            width: Dimens.d32.responsive(),
-                                            height: Dimens.d32.responsive(),
-                                            child: Center(
-                                              child: Icon(
-                                                Icons.spellcheck,
-                                                color: AppColors
-                                                    .current.primaryColor,
-                                                size: Dimens.d24.responsive(),
-                                              ),
-                                            ),
-                                          ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: Dimens.d16.responsive(),
+                                  ),
+                                  GestureDetector(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: AppColors.current.primaryColor,
+                                          width: Dimens.d1.responsive(),
                                         ),
-                                      ],
-                                    );
-                                  }),
+                                      ),
+                                      width: Dimens.d32.responsive(),
+                                      height: Dimens.d32.responsive(),
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.spellcheck,
+                                          color: AppColors.current.primaryColor,
+                                          size: Dimens.d24.responsive(),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )
                             ],
                           ),
                         ),
@@ -400,4 +392,176 @@ class _FlashCardLearningPageState
 
   @override
   String get screenName => 'FlashCardLearningPage';
+
+  Widget _finishFlashCardLearning({
+    required int totalLearningContentCount,
+    required int learnedContentIds,
+  }) {
+    return SizedBox(
+      width: double.infinity,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Assets.lottie.lottieSuccess.lottie(
+            animate: true,
+            repeat: true,
+            fit: BoxFit.cover,
+          ),
+          Positioned.fill(
+            child: Column(
+              children: [
+                Text(
+                  "${S.current.congratulations}!",
+                  style: AppTextStyles.s14w400primary().font20().bold,
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                Text(
+                  S.current.youHaveCompletedTheCourse,
+                  style: AppTextStyles.s14w400primary().font15().medium,
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                SizedBox(
+                  width: Dimens.d200.responsive(),
+                  height: Dimens.d200.responsive(),
+                  child: Stack(
+                    fit: StackFit.expand,
+                    alignment: Alignment.center,
+                    children: [
+                      Center(
+                        child: Text(
+                          "$learnedContentIds/$totalLearningContentCount",
+                          style: AppTextStyles.s14w400primary().font40().bold,
+                        ),
+                      ),
+                      CircularProgressIndicator(
+                        value: learnedContentIds / totalLearningContentCount,
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          AppColors.current.primaryColor,
+                        ),
+                        backgroundColor: AppColors.current.primaryTextColor
+                            .withValues(alpha: 0.2),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                Selector<FlashCardLearningViewModel,
+                    FlashCardLearningViewModelData>(
+                  selector: (context, viewModel) => viewModel.viewModelData,
+                  shouldRebuild: (previous, next) =>
+                      previous.flashCardLearningEntities !=
+                      next.flashCardLearningEntities,
+                  builder: (_, vmData, __) {
+                    return Expanded(
+                      child: ListView.separated(
+                        separatorBuilder: (_, __) {
+                          return SizedBox(
+                            height: Dimens.d16.responsive(),
+                          );
+                        },
+                        itemCount: vmData.flashCardLearningEntities.length,
+                        itemBuilder: (_, index) {
+                          final learningContent = viewModel
+                              .viewModelData.flashCardLearningEntities[index];
+                          final isLearned = vmData.learnedContentIds
+                              .contains(learningContent.id);
+                          final isSkipped = vmData.skippedContentIds.contains(
+                            learningContent.id,
+                          );
+                          return Container(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: Dimens.d16.responsive(),
+                              vertical: Dimens.d12.responsive(),
+                            ),
+                            decoration: BoxDecoration(
+                              color: AppColors.current.backgroundColor,
+                              borderRadius:
+                                  BorderRadius.circular(Dimens.d8.responsive()),
+                              border: Border.all(
+                                color: isSkipped
+                                    ? FoundationColors.error500
+                                    : AppColors.current.primaryColor,
+                                width: Dimens.d1.responsive(),
+                              ),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        learningContent.frontCardText,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: AppTextStyles.s14w400primary()
+                                            .font16()
+                                            .bold,
+                                      ),
+                                      SizedBox(
+                                        height: Dimens.d8.responsive(),
+                                      ),
+                                      Text(
+                                        learningContent.backCardText,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: AppTextStyles.s14w400primary()
+                                            .font12()
+                                            .light,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: Dimens.d8.responsive(),
+                                ),
+                                if (isLearned) ...[
+                                  Text(
+                                    S.current.learned,
+                                    style: AppTextStyles.s14w400primary()
+                                        .font12()
+                                        .bold,
+                                  ),
+                                ],
+                                if (isSkipped) ...[
+                                  Text(
+                                    S.current.skip,
+                                    style: AppTextStyles.s14w400primary()
+                                        .font12()
+                                        .bold,
+                                  ),
+                                ],
+                                SizedBox(
+                                  height: Dimens.d8.responsive(),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                StandardButton(
+                  onPressed: () {
+                    navigator.pop();
+                  },
+                  buttonSize: ButtonSize.small,
+                  text: S.current.backToCourses,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }

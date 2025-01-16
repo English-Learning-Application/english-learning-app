@@ -105,6 +105,13 @@
     "pronunciation": "Pronunciation",
     "matching": "Matching",
     "skip": "Skip",
-    "learned": "Learned"
+    "learned": "Learned",
+    "congratulations": "Congratulations",
+    "youHaveCompletedTheCourse": "You have completed the course",
+    "backToCourses" : "Back to courses",
+    "correct": "Correct",
+    "incorrect": "Incorrect",
+    "youHaveChosenTheCorrectAnswer": "You have chosen the correct answer",
+    "youHaveChosenTheWrongAnswer": "You have chosen the wrong answer"
 }
 

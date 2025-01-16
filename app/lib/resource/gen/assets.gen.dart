@@ -13,6 +13,22 @@ import 'package:flutter_svg/flutter_svg.dart' as _svg;
 import 'package:lottie/lottie.dart' as _lottie;
 import 'package:vector_graphics/vector_graphics.dart' as _vg;
 
+class $AssetsAudiosGen {
+  const $AssetsAudiosGen();
+
+  /// File path: assets/audios/congrats.mp3
+  String get congrats => 'assets/audios/congrats.mp3';
+
+  /// File path: assets/audios/correct.mp3
+  String get correct => 'assets/audios/correct.mp3';
+
+  /// File path: assets/audios/incorrect.mp3
+  String get incorrect => 'assets/audios/incorrect.mp3';
+
+  /// List of all assets
+  List<String> get values => [congrats, correct, incorrect];
+}
+
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
@@ -175,6 +191,7 @@ class $AssetsLottieGen {
 class Assets {
   Assets._();
 
+  static const $AssetsAudiosGen audios = $AssetsAudiosGen();
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();

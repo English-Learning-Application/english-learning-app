@@ -11,6 +11,19 @@ class AppPopupInfoMapper extends BasePopupInfoMapper {
   @override
   Widget map(AppPopupInfo appPopupInfo, AppNavigator appNavigator) {
     return appPopupInfo.when(
+      commonDialog: (msg, title, onPressed) {
+        return CommonDialog(
+          message: msg,
+          title: title,
+          actions: [
+            PopupButton(
+              text: S.current.ok,
+              isDefault: true,
+              onPressed: onPressed ?? Func0(() => appNavigator.pop()),
+            ),
+          ],
+        );
+      },
       bottomSheet: (child, title) {
         return CommonBottomSheet(
           title: title,

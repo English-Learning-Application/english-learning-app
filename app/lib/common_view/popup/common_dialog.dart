@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
+import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 
@@ -70,58 +70,127 @@ class CommonDialog extends StatelessWidget {
   }
 
   Widget _buildAndroidDialog() {
-    return AlertDialog(
-      title: title != null
-          ? Text(
-              title ?? '',
-              style: AppTextStyles.s14w400primary(),
-            )
-          : null,
-      content: message != null
-          ? Text(
-              message ?? '',
-              style: AppTextStyles.s14w400primary(),
-            )
-          : null,
-      actions: actions.map((PopupButton button) {
-        return TextButton(
-          onPressed: () => button.onPressed?.call(),
-          child: Text(
-            button.text ?? S.current.ok,
-            style: button.isDefault
-                ? AppTextStyles.s14w400primary()
-                : AppTextStyles.s14w400primary(),
-          ),
-        );
-      }).toList(),
+    return Dialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(Dimens.d16.responsive()),
+        side: BorderSide(
+          color: AppColors.current.primaryColor,
+          width: Dimens.d1.responsive(),
+        ),
+      ),
+      backgroundColor: AppColors.current.backgroundColor,
+      child: Container(
+        height: Dimens.d160.responsive(),
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(Dimens.d16.responsive()),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (title != null) ...[
+              Text(
+                title ?? '',
+                textAlign: TextAlign.center,
+                style: AppTextStyles.s14w400primary().font16().medium,
+              ),
+              SizedBox(
+                height: Dimens.d8.responsive(),
+              ),
+            ],
+            if (message != null) ...[
+              Text(
+                message ?? '',
+                textAlign: TextAlign.center,
+                style: AppTextStyles.s14w400primary().light,
+              ),
+              SizedBox(
+                height: Dimens.d8.responsive(),
+              ),
+            ],
+            if (actions.isNotEmpty) ...[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: actions.map(
+                  (PopupButton button) {
+                    return Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: Dimens.d8.responsive(),
+                        ),
+                        child: StandardButton(
+                          onPressed: () => button.onPressed?.call(),
+                          innerGap: 0,
+                          leadingIconSize: 0,
+                          trailingIconSize: 0,
+                          buttonSize: ButtonSize.small,
+                          text: button.text ?? S.current.ok,
+                        ),
+                      ),
+                    );
+                  },
+                ).toList(),
+              ),
+            ],
+          ],
+        ),
+      ),
     );
   }
 
   Widget _buildIosDialog() {
-    return CupertinoAlertDialog(
-      title: title != null
-          ? Text(
-              title ?? '',
-              style: AppTextStyles.s14w400primary(),
-            )
-          : null,
-      content: message != null
-          ? Text(
-              message ?? '',
-              style: AppTextStyles.s14w400primary(),
-            )
-          : null,
-      actions: actions.map((PopupButton button) {
-        return CupertinoDialogAction(
-          onPressed: () => button.onPressed?.call(),
-          child: Text(
-            button.text ?? S.current.ok,
-            style: button.isDefault
-                ? AppTextStyles.s14w400primary()
-                : AppTextStyles.s14w400primary(),
-          ),
-        );
-      }).toList(),
+    return Dialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(Dimens.d16.responsive()),
+        side: BorderSide(
+          color: AppColors.current.primaryColor,
+          width: Dimens.d1.responsive(),
+        ),
+      ),
+      backgroundColor: AppColors.current.backgroundColor,
+      child: Container(
+        height: Dimens.d160.responsive(),
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(Dimens.d16.responsive()),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (title != null) ...[
+              Text(
+                title ?? '',
+                style: AppTextStyles.s14w400primary().font16().medium,
+              ),
+              SizedBox(
+                height: Dimens.d8.responsive(),
+              ),
+            ],
+            if (message != null) ...[
+              Text(
+                message ?? '',
+                style: AppTextStyles.s14w400primary(),
+              ),
+              SizedBox(
+                height: Dimens.d8.responsive(),
+              ),
+            ],
+            if (actions.isNotEmpty) ...[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: actions.map((PopupButton button) {
+                  return Expanded(
+                    child: StandardButton(
+                      onPressed: () => button.onPressed?.call(),
+                      innerGap: 0,
+                      leadingIconSize: 0,
+                      trailingIconSize: 0,
+                      buttonSize: ButtonSize.small,
+                      text: button.text ?? S.current.ok,
+                    ),
+                  );
+                }).toList(),
+              ),
+            ],
+          ],
+        ),
+      ),
     );
   }
 }

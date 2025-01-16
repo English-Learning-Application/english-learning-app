@@ -1119,6 +1119,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Congratulations`
+  String get congratulations {
+    return Intl.message(
+      'Congratulations',
+      name: 'congratulations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have completed the course`
+  String get youHaveCompletedTheCourse {
+    return Intl.message(
+      'You have completed the course',
+      name: 'youHaveCompletedTheCourse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to courses`
+  String get backToCourses {
+    return Intl.message(
+      'Back to courses',
+      name: 'backToCourses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Correct`
+  String get correct {
+    return Intl.message(
+      'Correct',
+      name: 'correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Incorrect`
+  String get incorrect {
+    return Intl.message(
+      'Incorrect',
+      name: 'incorrect',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have chosen the correct answer`
+  String get youHaveChosenTheCorrectAnswer {
+    return Intl.message(
+      'You have chosen the correct answer',
+      name: 'youHaveChosenTheCorrectAnswer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have chosen the wrong answer`
+  String get youHaveChosenTheWrongAnswer {
+    return Intl.message(
+      'You have chosen the wrong answer',
+      name: 'youHaveChosenTheWrongAnswer',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

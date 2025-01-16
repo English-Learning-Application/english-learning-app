@@ -27,6 +27,8 @@ import 'package:app/features/login/view_model/login.dart' as _i1056;
 import 'package:app/features/main/viewmodels/main_view_model.dart' as _i93;
 import 'package:app/features/on_boarding/viewmodel/on_boarding.dart' as _i646;
 import 'package:app/features/profile/view_models/profile.dart' as _i238;
+import 'package:app/features/quiz_learning/view_model/quiz_learning.dart'
+    as _i96;
 import 'package:app/features/splash/view_models/splash.dart' as _i635;
 import 'package:app/navigation/app_navigator_impl.dart' as _i101;
 import 'package:app/navigation/mapper/app_popup_info_mapper.dart' as _i203;
@@ -35,6 +37,7 @@ import 'package:app/navigation/middleware/is_logged_in_route_guard.dart'
     as _i21;
 import 'package:app/navigation/middleware/route_guard.dart' as _i513;
 import 'package:app/navigation/routes/app_router.dart' as _i931;
+import 'package:audioplayers/audioplayers.dart' as _i656;
 import 'package:firebase_analytics/firebase_analytics.dart' as _i398;
 import 'package:flutter_tts/flutter_tts.dart' as _i50;
 import 'package:get_it/get_it.dart' as _i174;
@@ -62,9 +65,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
     gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
+    gh.factory<_i96.QuizLearningViewModel>(() => _i96.QuizLearningViewModel());
     gh.lazySingleton<_i50.FlutterTts>(() => appModules.flutterTts);
     gh.lazySingleton<_i398.FirebaseAnalytics>(
         () => appModules.firebaseAnalytics);
+    gh.lazySingleton<_i656.AudioPlayer>(() => appModules.audioPlayer);
     gh.factory<_i513.RouteGuard>(() => _i513.RouteGuard(
           gh<_i182.IsLoggedInUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),

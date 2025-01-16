@@ -23,6 +23,12 @@ class AppPopupInfo with _$AppPopupInfo {
     Func0<void>? onPressed,
   }) = _MessageDialog;
 
+  const factory AppPopupInfo.commonDialog({
+    @Default('') String message,
+    @Default('') String title,
+    Func0<void>? onPressed,
+  }) = _SuccessDialog;
+
   const factory AppPopupInfo.bottomSheet({
     required Widget child,
     required String title,

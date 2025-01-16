@@ -21,4 +21,8 @@ class AppRouteInfo with _$AppRouteInfo {
     required LanguageCourseLearningContent languageCourseLearningContent,
     required LearningLanguage learningLanguage,
   }) = _FlashCardLearning;
+  const factory AppRouteInfo.quizLearning({
+    required LearningLanguage learningLanguage,
+    required LanguageCourseLearningContent languageCourseLearningContent,
+  }) = _QuizLearning;
 }

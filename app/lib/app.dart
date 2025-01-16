@@ -43,6 +43,8 @@ export 'features/on_boarding/viewmodel/on_boarding.dart';
 export 'features/on_boarding/views/on_boarding_page.dart';
 export 'features/profile/view_models/profile.dart';
 export 'features/profile/views/profile_page.dart';
+export 'features/quiz_learning/view/quiz_learning_page.dart';
+export 'features/quiz_learning/view_model/quiz_learning.dart';
 export 'features/splash/view_models/splash.dart';
 export 'features/splash/views/splash_page.dart';
 export 'navigation/app_navigator_impl.dart';

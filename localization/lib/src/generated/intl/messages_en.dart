@@ -28,6 +28,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "adverb": MessageLookupByLibrary.simpleMessage("Adverb"),
         "aiChatbot": MessageLookupByLibrary.simpleMessage("AI Chatbot"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
+        "backToCourses":
+            MessageLookupByLibrary.simpleMessage("Back to courses"),
         "badCertificateException":
             MessageLookupByLibrary.simpleMessage("Bad Certificate"),
         "canChooseUpTo3LearningModes": MessageLookupByLibrary.simpleMessage(
@@ -57,7 +59,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
+        "congratulations":
+            MessageLookupByLibrary.simpleMessage("Congratulations"),
         "conjunction": MessageLookupByLibrary.simpleMessage("Conjunction"),
+        "correct": MessageLookupByLibrary.simpleMessage("Correct"),
         "courses": MessageLookupByLibrary.simpleMessage("Courses"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
@@ -72,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "grammar": MessageLookupByLibrary.simpleMessage("Grammar"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "idiom": MessageLookupByLibrary.simpleMessage("Idiom"),
+        "incorrect": MessageLookupByLibrary.simpleMessage("Incorrect"),
         "interjection": MessageLookupByLibrary.simpleMessage("Interjection"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Password confirmation does not match"),
@@ -169,6 +175,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "word": MessageLookupByLibrary.simpleMessage("Word"),
         "writing": MessageLookupByLibrary.simpleMessage("Writing"),
+        "youHaveChosenTheCorrectAnswer": MessageLookupByLibrary.simpleMessage(
+            "You have chosen the correct answer"),
+        "youHaveChosenTheWrongAnswer": MessageLookupByLibrary.simpleMessage(
+            "You have chosen the wrong answer"),
+        "youHaveCompletedTheCourse": MessageLookupByLibrary.simpleMessage(
+            "You have completed the course"),
         "yourCategory": MessageLookupByLibrary.simpleMessage("Your category")
       };
 }

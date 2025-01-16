@@ -105,5 +105,12 @@
     "pronunciation": "Phát âm",
     "matching": "Kết hợp",
     "skip": "Bỏ qua",
-    "learned": "Đã học"
+    "learned": "Đã học",
+    "congratulations": "Chúc mừng",
+    "youHaveCompletedTheCourse": "Bạn đã hoàn thành khóa học",
+    "backToCourses" : "Quay lại khóa học",
+    "correct": "Chính xác",
+    "incorrect": "Sai",
+    "youHaveChosenTheCorrectAnswer": "Bạn đã chọn đáp án đúng",
+    "youHaveChosenTheWrongAnswer": "Bạn đã chọn đáp án sai"
 }
