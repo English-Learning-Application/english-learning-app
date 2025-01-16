@@ -34,6 +34,12 @@ class ServerRequestResponseConstants {
   static const reading = 'READING';
   static const writing = 'WRITING';
 
+  // Learning Mode
+  static const flashCard = 'FLASH_CARD';
+  static const quiz = 'QUIZ';
+  static const matching = 'MATCHING';
+  static const pronunciation = 'PRONUNCIATION';
+
   // Learning Content Type
   static const word = 'WORD';
   static const expression = 'EXPRESSION';

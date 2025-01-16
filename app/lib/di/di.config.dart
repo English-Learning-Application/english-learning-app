@@ -11,13 +11,18 @@
 import 'package:app/app.dart' as _i137;
 import 'package:app/app/view_model/app.dart' as _i215;
 import 'package:app/base/view_model/common/common.dart' as _i915;
+import 'package:app/di/di.dart' as _i120;
 import 'package:app/features/ai_chat_bot/view_models/ai_chat_bot.dart' as _i709;
 import 'package:app/features/complete_registration/view_models/complete_registration.dart'
     as _i752;
 import 'package:app/features/course/view_models/course.dart' as _i366;
+import 'package:app/features/flash_card_learning/view_model/flash_card_learning.dart'
+    as _i5;
 import 'package:app/features/home/view_models/home.dart' as _i885;
-import 'package:app/features/language_course/view_model/language_course.dart'
-    as _i359;
+import 'package:app/features/language_course/view_model/language_course/language_course.dart'
+    as _i117;
+import 'package:app/features/language_course/view_model/language_course_details/language_course_details.dart'
+    as _i725;
 import 'package:app/features/login/view_model/login.dart' as _i1056;
 import 'package:app/features/main/viewmodels/main_view_model.dart' as _i93;
 import 'package:app/features/on_boarding/viewmodel/on_boarding.dart' as _i646;
@@ -30,6 +35,8 @@ import 'package:app/navigation/middleware/is_logged_in_route_guard.dart'
     as _i21;
 import 'package:app/navigation/middleware/route_guard.dart' as _i513;
 import 'package:app/navigation/routes/app_router.dart' as _i931;
+import 'package:firebase_analytics/firebase_analytics.dart' as _i398;
+import 'package:flutter_tts/flutter_tts.dart' as _i50;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:logic/logic.dart' as _i182;
@@ -46,12 +53,18 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
+    final appModules = _$AppModules();
     gh.factory<_i709.AiChatBotViewModel>(() => _i709.AiChatBotViewModel());
     gh.factory<_i366.CourseViewModel>(() => _i366.CourseViewModel());
+    gh.factory<_i5.FlashCardLearningViewModel>(
+        () => _i5.FlashCardLearningViewModel());
     gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel());
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
     gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
+    gh.lazySingleton<_i50.FlutterTts>(() => appModules.flutterTts);
+    gh.lazySingleton<_i398.FirebaseAnalytics>(
+        () => appModules.firebaseAnalytics);
     gh.factory<_i513.RouteGuard>(() => _i513.RouteGuard(
           gh<_i182.IsLoggedInUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),
@@ -71,8 +84,8 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.GoogleLoginUseCase>(),
           gh<_i182.FacebookLoginUseCase>(),
         ));
-    gh.factory<_i359.LanguageCourseViewModel>(
-        () => _i359.LanguageCourseViewModel(
+    gh.factory<_i117.LanguageCourseViewModel>(
+        () => _i117.LanguageCourseViewModel(
               gh<_i182.GetLanguageCoursesByLanguageUseCase>(),
               gh<_i182.GetLanguageCoursesByLanguageAndLevelUseCase>(),
             ));
@@ -93,6 +106,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i752.CompleteRegistrationViewModel>(() =>
         _i752.CompleteRegistrationViewModel(
             gh<_i182.RegistrationCompletionUseCase>()));
+    gh.factory<_i725.LanguageCourseDetailsViewModel>(
+        () => _i725.LanguageCourseDetailsViewModel(gh<_i50.FlutterTts>()));
     gh.lazySingleton<_i931.AppRouter>(() => _i931.AppRouter(
           gh<_i137.RouteGuard>(),
           gh<_i21.IsLoggedInRouteGuard>(),
@@ -105,3 +120,5 @@ extension GetItInjectableX on _i174.GetIt {
     return this;
   }
 }
+
+class _$AppModules extends _i120.AppModules {}

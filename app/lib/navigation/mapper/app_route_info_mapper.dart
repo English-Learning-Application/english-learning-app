@@ -16,6 +16,13 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       completeRegistration: () => const CompleteRegistrationRoute(),
       languageCourse: (learningLanguage) =>
           LanguageCourseRoute(language: learningLanguage),
+      languageCourseDetails: (languageCourse) =>
+          LanguageCourseDetailsRoute(languageCourse: languageCourse),
+      flashCardLearning: (languageCourseLearningContent, learningLanguage) =>
+          FlashCardLearningRoute(
+        languageCourseLearningContent: languageCourseLearningContent,
+            learningLanguage: learningLanguage,
+      ),
     );
   }
 }

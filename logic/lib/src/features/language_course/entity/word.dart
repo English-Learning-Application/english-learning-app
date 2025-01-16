@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:services/services.dart';
 
 import '../../../../logic.dart';
 
@@ -6,6 +7,7 @@ part 'word.freezed.dart';
 
 @freezed
 class Word with _$Word {
+  const Word._();
   const factory Word({
     @Default(Word.defaultWordId) String wordId,
     @Default(Word.defaultEnglishWord) String englishWord,
@@ -27,4 +29,8 @@ class Word with _$Word {
   static const defaultPronunciation = '';
   static const DateTime? defaultCreatedAt = null;
   static const DateTime? defaultUpdatedAt = null;
+
+  String get imageUrlItem => imageUrl.isNotEmpty
+      ? "${UrlConstants.appMediaBaseUrl}$imageUrl"
+      : 'https://via.placeholder.com/150';
 }

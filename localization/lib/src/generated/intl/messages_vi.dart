@@ -65,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "english": MessageLookupByLibrary.simpleMessage("Tiếng Anh"),
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
         "expression": MessageLookupByLibrary.simpleMessage("Biểu cảm"),
+        "flashcard": MessageLookupByLibrary.simpleMessage("Thẻ ghi nhớ"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
         "french": MessageLookupByLibrary.simpleMessage("Tiếng Pháp"),
@@ -87,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Học bất cứ nơi đâu, bất cứ lúc nào"),
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
             "Truy cập hàng ngàn khóa học, tài nguyên và tài liệu học tập mọi lúc mọi nơi."),
+        "learned": MessageLookupByLibrary.simpleMessage("Đã học"),
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Ngôn ngữ học"),
         "level": MessageLookupByLibrary.simpleMessage("Cấp độ"),
@@ -99,6 +101,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginTitle": MessageLookupByLibrary.simpleMessage(
             "Tất cả mọi thứ bạn cần đều có tại đây"),
         "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
+        "matching": MessageLookupByLibrary.simpleMessage("Kết hợp"),
         "mode": MessageLookupByLibrary.simpleMessage("Chế độ"),
         "multiLanguage":
             MessageLookupByLibrary.simpleMessage("Hỗ trợ nhiều ngôn ngữ"),
@@ -131,6 +134,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Bấm lại để thoát"),
         "profile": MessageLookupByLibrary.simpleMessage("Hồ sơ"),
         "pronoun": MessageLookupByLibrary.simpleMessage("Đại từ"),
+        "pronunciation": MessageLookupByLibrary.simpleMessage("Phát âm"),
+        "quiz": MessageLookupByLibrary.simpleMessage("Kiểm tra"),
         "reading": MessageLookupByLibrary.simpleMessage("Đọc"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "registerDescription": MessageLookupByLibrary.simpleMessage(
@@ -143,7 +148,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectNativeLanguage":
             MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ mẹ đẻ của bạn"),
         "sentence": MessageLookupByLibrary.simpleMessage("Câu văn"),
+        "skip": MessageLookupByLibrary.simpleMessage("Bỏ qua"),
         "speaking": MessageLookupByLibrary.simpleMessage("Nói"),
+        "startLearning": MessageLookupByLibrary.simpleMessage("Bắt đầu học"),
         "tense": MessageLookupByLibrary.simpleMessage("Thì"),
         "theme": MessageLookupByLibrary.simpleMessage("Chủ đề"),
         "timeoutException":

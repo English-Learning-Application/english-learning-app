@@ -98,6 +98,13 @@
     "preposition": "Preposition",
     "conjunction": "Conjunction",
     "interjection": "Interjection",
-    "pronoun": "Pronoun"
+    "pronoun": "Pronoun",
+    "startLearning": "Start learning",
+    "flashcard": "Flashcard",
+    "quiz": "Quiz",
+    "pronunciation": "Pronunciation",
+    "matching": "Matching",
+    "skip": "Skip",
+    "learned": "Learned"
 }
 

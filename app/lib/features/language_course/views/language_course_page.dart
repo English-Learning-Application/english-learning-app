@@ -108,7 +108,6 @@ class _LanguageCoursePageState
             prev.languageCourses != next.languageCourses,
         builder: (_, vmData, __) {
           final courses = vmData.languageCourses;
-          print(courses.length);
           return GridView.builder(
             itemCount: courses.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -130,7 +129,11 @@ class _LanguageCoursePageState
                   horizontal: Dimens.d16.responsive(),
                   vertical: Dimens.d8.responsive(),
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  await navigator.push(
+                    AppRouteInfo.languageCourseDetails(languageCourse: course),
+                  );
+                },
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

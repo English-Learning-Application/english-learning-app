@@ -57,6 +57,7 @@ class ChatBotInput extends StatelessWidget {
             onTap: () {
               if (controller.text.isNotEmpty) {
                 // Send message to chat bot
+                controller.clear();
                 FocusScope.of(context).unfocus();
               }
             },

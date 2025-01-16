@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:design/design.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:localization/localization.dart';
@@ -19,6 +20,8 @@ abstract class BasePageStateDelegate<T extends StatefulWidget,
     implements ExceptionHandlerListener {
   late final AppNavigator navigator = GetIt.instance.get<AppNavigator>();
   late final AppViewModel appViewModel = GetIt.instance.get<AppViewModel>();
+  late final FirebaseAnalytics _firebaseAnalyticsService =
+      GetIt.instance.get<FirebaseAnalytics>();
   late final ExceptionMessageMapper exceptionMessageMapper =
       const ExceptionMessageMapper();
   late final ExceptionHandler exceptionHandler = ExceptionHandler(
@@ -51,7 +54,22 @@ abstract class BasePageStateDelegate<T extends StatefulWidget,
   @mustCallSuper
   void initState() {
     super.initState();
+    _setAnalytics();
     initViewModels();
+  }
+
+  void _setAnalytics() async {
+    if (screenName.isNotEmpty) {
+      if (screenName.equalsIgnoreCase('App')) {
+        await _firebaseAnalyticsService.setAnalyticsCollectionEnabled(
+          true,
+        );
+      }
+      await _firebaseAnalyticsService.logScreenView(
+        screenName: screenName,
+        screenClass: runtimeType.toString(),
+      );
+    }
   }
 
   void initViewModels();

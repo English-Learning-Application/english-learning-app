@@ -24,6 +24,7 @@ class StandardButton extends StatelessWidget {
     this.textAlign,
     this.shape = BoxShape.rectangle,
     this.isExpanded = true,
+    this.borderColor,
   });
 
   final ButtonType buttonType;
@@ -43,6 +44,7 @@ class StandardButton extends StatelessWidget {
   final TextAlign? textAlign;
   final bool isExpanded;
   final BoxShape shape;
+  final Color? borderColor;
 
   /// Gap between text/child and leading/trailing icon
   final double? innerGap;
@@ -66,6 +68,7 @@ class StandardButton extends StatelessWidget {
     TextAlign? textAlign,
     BoxShape shape = BoxShape.rectangle,
     bool isExpanded = true,
+    Color? borderColor,
   }) =>
       StandardButton(
         key: key,
@@ -86,6 +89,7 @@ class StandardButton extends StatelessWidget {
         textAlign: textAlign,
         isExpanded: isExpanded,
         shape: shape,
+        borderColor: borderColor,
         child: child,
       );
 
@@ -108,6 +112,7 @@ class StandardButton extends StatelessWidget {
     TextAlign? textAlign,
     BoxShape shape = BoxShape.rectangle,
     bool isExpanded = true,
+    Color? borderColor,
   }) =>
       StandardButton(
         key: key,
@@ -128,6 +133,7 @@ class StandardButton extends StatelessWidget {
         textAlign: textAlign,
         isExpanded: isExpanded,
         shape: shape,
+        borderColor: borderColor,
         child: child,
       );
 
@@ -150,6 +156,7 @@ class StandardButton extends StatelessWidget {
     bool isExpanded = true,
     BoxShape shape = BoxShape.rectangle,
     TextAlign? textAlign,
+    Color? borderColor,
   }) =>
       StandardButton(
         key: key,
@@ -170,6 +177,7 @@ class StandardButton extends StatelessWidget {
         textAlign: textAlign,
         isExpanded: isExpanded,
         shape: shape,
+        borderColor: borderColor,
         child: child,
       );
 
@@ -192,6 +200,7 @@ class StandardButton extends StatelessWidget {
     bool isExpanded = true,
     BoxShape shape = BoxShape.rectangle,
     TextAlign? textAlign,
+    Color? borderColor,
   }) =>
       StandardButton(
         key: key,
@@ -212,6 +221,7 @@ class StandardButton extends StatelessWidget {
         textAlign: textAlign,
         isExpanded: isExpanded,
         shape: shape,
+        borderColor: borderColor,
         child: child,
       );
 
@@ -234,6 +244,7 @@ class StandardButton extends StatelessWidget {
     bool isExpanded = true,
     BoxShape shape = BoxShape.rectangle,
     TextAlign? textAlign,
+    Color? borderColor,
   }) =>
       StandardButton(
         key: key,
@@ -254,6 +265,7 @@ class StandardButton extends StatelessWidget {
         textAlign: textAlign,
         isExpanded: isExpanded,
         shape: shape,
+        borderColor: borderColor,
         child: child,
       );
 
@@ -276,6 +288,7 @@ class StandardButton extends StatelessWidget {
     TextAlign? textAlign,
     BoxShape shape = BoxShape.rectangle,
     bool isExpanded = true,
+    Color? borderColor,
   }) =>
       StandardButton(
         key: key,
@@ -296,6 +309,7 @@ class StandardButton extends StatelessWidget {
         textAlign: textAlign,
         isExpanded: isExpanded,
         shape: shape,
+        borderColor: borderColor,
         child: child,
       );
 
@@ -311,9 +325,7 @@ class StandardButton extends StatelessWidget {
                   borderRadius ?? Dimens.d32.responsive(),
                 ),
           border: Border.all(
-            color: buttonType == ButtonType.tertiary
-                ? FoundationColors.secondary500
-                : _backgroundColor(),
+            color: borderColor ?? _borderColor(),
             width: Dimens.d1.responsive(),
           ),
           color: backgroundColor ?? _backgroundColor(),
@@ -404,6 +416,22 @@ class StandardButton extends StatelessWidget {
         return FoundationColors.neutral50;
       default:
         return FoundationColors.secondary500;
+    }
+  }
+
+  Color _borderColor() {
+    switch (buttonType) {
+      case ButtonType.primary:
+        return FoundationColors.primary200;
+      case ButtonType.secondary:
+        return FoundationColors.secondary500;
+      case ButtonType.tertiary:
+      case ButtonType.ghost:
+        return Colors.transparent;
+      case ButtonType.quaternary:
+        return FoundationColors.neutral50;
+      case ButtonType.disabled:
+        return FoundationColors.neutral500;
     }
   }
 

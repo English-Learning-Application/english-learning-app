@@ -25,6 +25,7 @@ mixin _$AppPopupInfo {
     required TResult Function() requireLoginDialog,
     required TResult Function(String message, Func0<void>? onPressed)
         messageDialog,
+    required TResult Function(Widget child, String title) bottomSheet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +35,7 @@ mixin _$AppPopupInfo {
         errorWithRetryDialog,
     TResult? Function()? requireLoginDialog,
     TResult? Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult? Function(Widget child, String title)? bottomSheet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,6 +45,7 @@ mixin _$AppPopupInfo {
         errorWithRetryDialog,
     TResult Function()? requireLoginDialog,
     TResult Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult Function(Widget child, String title)? bottomSheet,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -52,6 +55,7 @@ mixin _$AppPopupInfo {
     required TResult Function(_ErrorWithRetryDialog value) errorWithRetryDialog,
     required TResult Function(_RequireLoginDialog value) requireLoginDialog,
     required TResult Function(_MessageDialog value) messageDialog,
+    required TResult Function(_BottomSheet value) bottomSheet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +64,7 @@ mixin _$AppPopupInfo {
     TResult? Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult? Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult? Function(_MessageDialog value)? messageDialog,
+    TResult? Function(_BottomSheet value)? bottomSheet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,6 +73,7 @@ mixin _$AppPopupInfo {
     TResult Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult Function(_MessageDialog value)? messageDialog,
+    TResult Function(_BottomSheet value)? bottomSheet,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -179,6 +185,7 @@ class _$ConfirmDialogImpl implements _ConfirmDialog {
     required TResult Function() requireLoginDialog,
     required TResult Function(String message, Func0<void>? onPressed)
         messageDialog,
+    required TResult Function(Widget child, String title) bottomSheet,
   }) {
     return confirmDialog(message, onPressed);
   }
@@ -191,6 +198,7 @@ class _$ConfirmDialogImpl implements _ConfirmDialog {
         errorWithRetryDialog,
     TResult? Function()? requireLoginDialog,
     TResult? Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult? Function(Widget child, String title)? bottomSheet,
   }) {
     return confirmDialog?.call(message, onPressed);
   }
@@ -203,6 +211,7 @@ class _$ConfirmDialogImpl implements _ConfirmDialog {
         errorWithRetryDialog,
     TResult Function()? requireLoginDialog,
     TResult Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult Function(Widget child, String title)? bottomSheet,
     required TResult orElse(),
   }) {
     if (confirmDialog != null) {
@@ -218,6 +227,7 @@ class _$ConfirmDialogImpl implements _ConfirmDialog {
     required TResult Function(_ErrorWithRetryDialog value) errorWithRetryDialog,
     required TResult Function(_RequireLoginDialog value) requireLoginDialog,
     required TResult Function(_MessageDialog value) messageDialog,
+    required TResult Function(_BottomSheet value) bottomSheet,
   }) {
     return confirmDialog(this);
   }
@@ -229,6 +239,7 @@ class _$ConfirmDialogImpl implements _ConfirmDialog {
     TResult? Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult? Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult? Function(_MessageDialog value)? messageDialog,
+    TResult? Function(_BottomSheet value)? bottomSheet,
   }) {
     return confirmDialog?.call(this);
   }
@@ -240,6 +251,7 @@ class _$ConfirmDialogImpl implements _ConfirmDialog {
     TResult Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult Function(_MessageDialog value)? messageDialog,
+    TResult Function(_BottomSheet value)? bottomSheet,
     required TResult orElse(),
   }) {
     if (confirmDialog != null) {
@@ -351,6 +363,7 @@ class _$ErrorWithRetryDialogImpl implements _ErrorWithRetryDialog {
     required TResult Function() requireLoginDialog,
     required TResult Function(String message, Func0<void>? onPressed)
         messageDialog,
+    required TResult Function(Widget child, String title) bottomSheet,
   }) {
     return errorWithRetryDialog(message, onPressed);
   }
@@ -363,6 +376,7 @@ class _$ErrorWithRetryDialogImpl implements _ErrorWithRetryDialog {
         errorWithRetryDialog,
     TResult? Function()? requireLoginDialog,
     TResult? Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult? Function(Widget child, String title)? bottomSheet,
   }) {
     return errorWithRetryDialog?.call(message, onPressed);
   }
@@ -375,6 +389,7 @@ class _$ErrorWithRetryDialogImpl implements _ErrorWithRetryDialog {
         errorWithRetryDialog,
     TResult Function()? requireLoginDialog,
     TResult Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult Function(Widget child, String title)? bottomSheet,
     required TResult orElse(),
   }) {
     if (errorWithRetryDialog != null) {
@@ -390,6 +405,7 @@ class _$ErrorWithRetryDialogImpl implements _ErrorWithRetryDialog {
     required TResult Function(_ErrorWithRetryDialog value) errorWithRetryDialog,
     required TResult Function(_RequireLoginDialog value) requireLoginDialog,
     required TResult Function(_MessageDialog value) messageDialog,
+    required TResult Function(_BottomSheet value) bottomSheet,
   }) {
     return errorWithRetryDialog(this);
   }
@@ -401,6 +417,7 @@ class _$ErrorWithRetryDialogImpl implements _ErrorWithRetryDialog {
     TResult? Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult? Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult? Function(_MessageDialog value)? messageDialog,
+    TResult? Function(_BottomSheet value)? bottomSheet,
   }) {
     return errorWithRetryDialog?.call(this);
   }
@@ -412,6 +429,7 @@ class _$ErrorWithRetryDialogImpl implements _ErrorWithRetryDialog {
     TResult Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult Function(_MessageDialog value)? messageDialog,
+    TResult Function(_BottomSheet value)? bottomSheet,
     required TResult orElse(),
   }) {
     if (errorWithRetryDialog != null) {
@@ -484,6 +502,7 @@ class _$RequireLoginDialogImpl implements _RequireLoginDialog {
     required TResult Function() requireLoginDialog,
     required TResult Function(String message, Func0<void>? onPressed)
         messageDialog,
+    required TResult Function(Widget child, String title) bottomSheet,
   }) {
     return requireLoginDialog();
   }
@@ -496,6 +515,7 @@ class _$RequireLoginDialogImpl implements _RequireLoginDialog {
         errorWithRetryDialog,
     TResult? Function()? requireLoginDialog,
     TResult? Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult? Function(Widget child, String title)? bottomSheet,
   }) {
     return requireLoginDialog?.call();
   }
@@ -508,6 +528,7 @@ class _$RequireLoginDialogImpl implements _RequireLoginDialog {
         errorWithRetryDialog,
     TResult Function()? requireLoginDialog,
     TResult Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult Function(Widget child, String title)? bottomSheet,
     required TResult orElse(),
   }) {
     if (requireLoginDialog != null) {
@@ -523,6 +544,7 @@ class _$RequireLoginDialogImpl implements _RequireLoginDialog {
     required TResult Function(_ErrorWithRetryDialog value) errorWithRetryDialog,
     required TResult Function(_RequireLoginDialog value) requireLoginDialog,
     required TResult Function(_MessageDialog value) messageDialog,
+    required TResult Function(_BottomSheet value) bottomSheet,
   }) {
     return requireLoginDialog(this);
   }
@@ -534,6 +556,7 @@ class _$RequireLoginDialogImpl implements _RequireLoginDialog {
     TResult? Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult? Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult? Function(_MessageDialog value)? messageDialog,
+    TResult? Function(_BottomSheet value)? bottomSheet,
   }) {
     return requireLoginDialog?.call(this);
   }
@@ -545,6 +568,7 @@ class _$RequireLoginDialogImpl implements _RequireLoginDialog {
     TResult Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult Function(_MessageDialog value)? messageDialog,
+    TResult Function(_BottomSheet value)? bottomSheet,
     required TResult orElse(),
   }) {
     if (requireLoginDialog != null) {
@@ -643,6 +667,7 @@ class _$MessageDialogImpl implements _MessageDialog {
     required TResult Function() requireLoginDialog,
     required TResult Function(String message, Func0<void>? onPressed)
         messageDialog,
+    required TResult Function(Widget child, String title) bottomSheet,
   }) {
     return messageDialog(message, onPressed);
   }
@@ -655,6 +680,7 @@ class _$MessageDialogImpl implements _MessageDialog {
         errorWithRetryDialog,
     TResult? Function()? requireLoginDialog,
     TResult? Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult? Function(Widget child, String title)? bottomSheet,
   }) {
     return messageDialog?.call(message, onPressed);
   }
@@ -667,6 +693,7 @@ class _$MessageDialogImpl implements _MessageDialog {
         errorWithRetryDialog,
     TResult Function()? requireLoginDialog,
     TResult Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult Function(Widget child, String title)? bottomSheet,
     required TResult orElse(),
   }) {
     if (messageDialog != null) {
@@ -682,6 +709,7 @@ class _$MessageDialogImpl implements _MessageDialog {
     required TResult Function(_ErrorWithRetryDialog value) errorWithRetryDialog,
     required TResult Function(_RequireLoginDialog value) requireLoginDialog,
     required TResult Function(_MessageDialog value) messageDialog,
+    required TResult Function(_BottomSheet value) bottomSheet,
   }) {
     return messageDialog(this);
   }
@@ -693,6 +721,7 @@ class _$MessageDialogImpl implements _MessageDialog {
     TResult? Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult? Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult? Function(_MessageDialog value)? messageDialog,
+    TResult? Function(_BottomSheet value)? bottomSheet,
   }) {
     return messageDialog?.call(this);
   }
@@ -704,6 +733,7 @@ class _$MessageDialogImpl implements _MessageDialog {
     TResult Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
     TResult Function(_RequireLoginDialog value)? requireLoginDialog,
     TResult Function(_MessageDialog value)? messageDialog,
+    TResult Function(_BottomSheet value)? bottomSheet,
     required TResult orElse(),
   }) {
     if (messageDialog != null) {
@@ -725,5 +755,179 @@ abstract class _MessageDialog implements AppPopupInfo {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MessageDialogImplCopyWith<_$MessageDialogImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$BottomSheetImplCopyWith<$Res> {
+  factory _$$BottomSheetImplCopyWith(
+          _$BottomSheetImpl value, $Res Function(_$BottomSheetImpl) then) =
+      __$$BottomSheetImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Widget child, String title});
+}
+
+/// @nodoc
+class __$$BottomSheetImplCopyWithImpl<$Res>
+    extends _$AppPopupInfoCopyWithImpl<$Res, _$BottomSheetImpl>
+    implements _$$BottomSheetImplCopyWith<$Res> {
+  __$$BottomSheetImplCopyWithImpl(
+      _$BottomSheetImpl _value, $Res Function(_$BottomSheetImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppPopupInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? child = null,
+    Object? title = null,
+  }) {
+    return _then(_$BottomSheetImpl(
+      child: null == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$BottomSheetImpl implements _BottomSheet {
+  const _$BottomSheetImpl({required this.child, required this.title});
+
+  @override
+  final Widget child;
+  @override
+  final String title;
+
+  @override
+  String toString() {
+    return 'AppPopupInfo.bottomSheet(child: $child, title: $title)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BottomSheetImpl &&
+            (identical(other.child, child) || other.child == child) &&
+            (identical(other.title, title) || other.title == title));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, child, title);
+
+  /// Create a copy of AppPopupInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BottomSheetImplCopyWith<_$BottomSheetImpl> get copyWith =>
+      __$$BottomSheetImplCopyWithImpl<_$BottomSheetImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message, Func0<void>? onPressed)
+        confirmDialog,
+    required TResult Function(String message, Func0<void>? onPressed)
+        errorWithRetryDialog,
+    required TResult Function() requireLoginDialog,
+    required TResult Function(String message, Func0<void>? onPressed)
+        messageDialog,
+    required TResult Function(Widget child, String title) bottomSheet,
+  }) {
+    return bottomSheet(child, title);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String message, Func0<void>? onPressed)? confirmDialog,
+    TResult? Function(String message, Func0<void>? onPressed)?
+        errorWithRetryDialog,
+    TResult? Function()? requireLoginDialog,
+    TResult? Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult? Function(Widget child, String title)? bottomSheet,
+  }) {
+    return bottomSheet?.call(child, title);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message, Func0<void>? onPressed)? confirmDialog,
+    TResult Function(String message, Func0<void>? onPressed)?
+        errorWithRetryDialog,
+    TResult Function()? requireLoginDialog,
+    TResult Function(String message, Func0<void>? onPressed)? messageDialog,
+    TResult Function(Widget child, String title)? bottomSheet,
+    required TResult orElse(),
+  }) {
+    if (bottomSheet != null) {
+      return bottomSheet(child, title);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ConfirmDialog value) confirmDialog,
+    required TResult Function(_ErrorWithRetryDialog value) errorWithRetryDialog,
+    required TResult Function(_RequireLoginDialog value) requireLoginDialog,
+    required TResult Function(_MessageDialog value) messageDialog,
+    required TResult Function(_BottomSheet value) bottomSheet,
+  }) {
+    return bottomSheet(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ConfirmDialog value)? confirmDialog,
+    TResult? Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
+    TResult? Function(_RequireLoginDialog value)? requireLoginDialog,
+    TResult? Function(_MessageDialog value)? messageDialog,
+    TResult? Function(_BottomSheet value)? bottomSheet,
+  }) {
+    return bottomSheet?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ConfirmDialog value)? confirmDialog,
+    TResult Function(_ErrorWithRetryDialog value)? errorWithRetryDialog,
+    TResult Function(_RequireLoginDialog value)? requireLoginDialog,
+    TResult Function(_MessageDialog value)? messageDialog,
+    TResult Function(_BottomSheet value)? bottomSheet,
+    required TResult orElse(),
+  }) {
+    if (bottomSheet != null) {
+      return bottomSheet(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _BottomSheet implements AppPopupInfo {
+  const factory _BottomSheet(
+      {required final Widget child,
+      required final String title}) = _$BottomSheetImpl;
+
+  Widget get child;
+  String get title;
+
+  /// Create a copy of AppPopupInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$BottomSheetImplCopyWith<_$BottomSheetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

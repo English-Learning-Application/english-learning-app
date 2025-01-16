@@ -1,7 +1,7 @@
-import 'package:logic/logic.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:localization/localization.dart';
+import 'package:logic/logic.dart';
 import 'package:services/services.dart';
 
 import '../../app.dart';
@@ -11,6 +11,12 @@ class AppPopupInfoMapper extends BasePopupInfoMapper {
   @override
   Widget map(AppPopupInfo appPopupInfo, AppNavigator appNavigator) {
     return appPopupInfo.when(
+      bottomSheet: (child, title) {
+        return CommonBottomSheet(
+          title: title,
+          child: child,
+        );
+      },
       confirmDialog: (msg, onPressed) {
         return CommonDialog(
           message: msg,

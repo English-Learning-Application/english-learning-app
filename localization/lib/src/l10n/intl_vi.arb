@@ -98,5 +98,12 @@
     "preposition": "Giới từ",
     "conjunction": "Liên từ",
     "interjection": "Thán từ",
-    "pronoun": "Đại từ"
+    "pronoun": "Đại từ",
+    "startLearning": "Bắt đầu học",
+    "flashcard": "Thẻ ghi nhớ",
+    "quiz": "Kiểm tra",
+    "pronunciation": "Phát âm",
+    "matching": "Kết hợp",
+    "skip": "Bỏ qua",
+    "learned": "Đã học"
 }

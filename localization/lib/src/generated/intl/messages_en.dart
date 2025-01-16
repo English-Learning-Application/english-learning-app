@@ -64,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
         "expression": MessageLookupByLibrary.simpleMessage("Expression"),
+        "flashcard": MessageLookupByLibrary.simpleMessage("Flashcard"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "french": MessageLookupByLibrary.simpleMessage("French"),
@@ -85,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Learn anywhere, anytime"),
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
             "Access thousands of courses, resources, and learning materials on the go."),
+        "learned": MessageLookupByLibrary.simpleMessage("Learned"),
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Learning language"),
         "level": MessageLookupByLibrary.simpleMessage("Level"),
@@ -97,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginTitle": MessageLookupByLibrary.simpleMessage(
             "Everything you need is in one place"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "matching": MessageLookupByLibrary.simpleMessage("Matching"),
         "mode": MessageLookupByLibrary.simpleMessage("Mode"),
         "multiLanguage":
             MessageLookupByLibrary.simpleMessage("Multi-language support"),
@@ -129,6 +132,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Press again to exit"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "pronoun": MessageLookupByLibrary.simpleMessage("Pronoun"),
+        "pronunciation": MessageLookupByLibrary.simpleMessage("Pronunciation"),
+        "quiz": MessageLookupByLibrary.simpleMessage("Quiz"),
         "reading": MessageLookupByLibrary.simpleMessage("Reading"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registerDescription": MessageLookupByLibrary.simpleMessage(
@@ -141,7 +146,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectNativeLanguage":
             MessageLookupByLibrary.simpleMessage("Select your native language"),
         "sentence": MessageLookupByLibrary.simpleMessage("Sentence"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "speaking": MessageLookupByLibrary.simpleMessage("Speaking"),
+        "startLearning": MessageLookupByLibrary.simpleMessage("Start learning"),
         "tense": MessageLookupByLibrary.simpleMessage("Tense"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),

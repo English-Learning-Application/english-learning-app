@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:services/services.dart';
 
@@ -21,4 +22,9 @@ class AppPopupInfo with _$AppPopupInfo {
     @Default('') String message,
     Func0<void>? onPressed,
   }) = _MessageDialog;
+
+  const factory AppPopupInfo.bottomSheet({
+    required Widget child,
+    required String title,
+  }) = _BottomSheet;
 }

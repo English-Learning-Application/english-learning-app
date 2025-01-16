@@ -40,6 +40,17 @@ enum LearningLanguage {
     }
   }
 
+  String get textToSpeechLanguage {
+    switch (this) {
+      case LearningLanguage.english:
+        return 'en-US';
+      case LearningLanguage.vietnamese:
+        return 'vi-VN';
+      case LearningLanguage.french:
+        return 'fr-FR';
+    }
+  }
+
   SvgGenImage get icon {
     switch (this) {
       case LearningLanguage.english:
@@ -64,6 +75,16 @@ enum LearningLanguage {
 
   @override
   String toString() => languageName;
+}
+
+enum LearningMode {
+  flashCard(ServerRequestResponseConstants.flashCard),
+  matching(ServerRequestResponseConstants.matching),
+  quiz(ServerRequestResponseConstants.quiz),
+  pronunciation(ServerRequestResponseConstants.pronunciation);
+
+  const LearningMode(this.serverValue);
+  final String serverValue;
 }
 
 enum LearningContentType {

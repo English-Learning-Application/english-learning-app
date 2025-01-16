@@ -14,4 +14,11 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.languageCourse({
     required LearningLanguage learningLanguage,
   }) = _LanguageCourse;
+  const factory AppRouteInfo.languageCourseDetails({
+    required LanguageCourse languageCourse,
+  }) = _LanguageCourseDetails;
+  const factory AppRouteInfo.flashCardLearning({
+    required LanguageCourseLearningContent languageCourseLearningContent,
+    required LearningLanguage learningLanguage,
+  }) = _FlashCardLearning;
 }

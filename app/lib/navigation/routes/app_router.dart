@@ -59,6 +59,9 @@ class AppRouter extends $AppRouter {
                 AutoRoute(
                   page: LanguageCourseRoute.page,
                 ),
+                AutoRoute(
+                  page: LanguageCourseDetailsRoute.page,
+                ),
               ],
             ),
             AutoRoute(
@@ -92,6 +95,12 @@ class AppRouter extends $AppRouter {
               ],
             ),
           ],
+        ),
+        AutoRoute(
+          guards: [
+            _routeGuard,
+          ],
+          page: FlashCardLearningRoute.page,
         ),
       ];
 }
