@@ -25,6 +25,8 @@ import 'package:app/features/language_course/view_model/language_course_details/
     as _i725;
 import 'package:app/features/login/view_model/login.dart' as _i1056;
 import 'package:app/features/main/viewmodels/main_view_model.dart' as _i93;
+import 'package:app/features/matching_learning/view_model/matching_learning.dart'
+    as _i235;
 import 'package:app/features/on_boarding/viewmodel/on_boarding.dart' as _i646;
 import 'package:app/features/profile/view_models/profile.dart' as _i238;
 import 'package:app/features/quiz_learning/view_model/quiz_learning.dart'
@@ -66,6 +68,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
     gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
     gh.factory<_i96.QuizLearningViewModel>(() => _i96.QuizLearningViewModel());
+    gh.factory<_i235.MatchingLearningViewModel>(
+        () => _i235.MatchingLearningViewModel());
     gh.lazySingleton<_i50.FlutterTts>(() => appModules.flutterTts);
     gh.lazySingleton<_i398.FirebaseAnalytics>(
         () => appModules.firebaseAnalytics);

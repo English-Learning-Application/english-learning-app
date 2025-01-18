@@ -108,6 +108,12 @@ class AppRouter extends $AppRouter {
           ],
           page: QuizLearningRoute.page,
         ),
+        AutoRoute(
+          guards: [
+            _routeGuard,
+          ],
+          page: MatchingLearningRoute.page,
+        ),
       ];
 }
 

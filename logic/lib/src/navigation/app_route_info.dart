@@ -25,4 +25,8 @@ class AppRouteInfo with _$AppRouteInfo {
     required LearningLanguage learningLanguage,
     required LanguageCourseLearningContent languageCourseLearningContent,
   }) = _QuizLearning;
+  const factory AppRouteInfo.matchingLearning({
+    required LearningLanguage learningLanguage,
+    required LanguageCourseLearningContent languageCourseLearningContent,
+  }) = _MatchingLearning;
 }

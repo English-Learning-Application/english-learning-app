@@ -1189,6 +1189,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Drag and drop the words to match the correct order`
+  String get matchingLearningModeDescription {
+    return Intl.message(
+      'Drag and drop the words to match the correct order',
+      name: 'matchingLearningModeDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please drag and drop the words to match the correct order`
+  String get pleaseDragAndDropTheWordsToMatchTheCorrectOrder {
+    return Intl.message(
+      'Please drag and drop the words to match the correct order',
+      name: 'pleaseDragAndDropTheWordsToMatchTheCorrectOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have not matched the words correctly`
+  String get youHaveNotMatchedTheWordsCorrectly {
+    return Intl.message(
+      'You have not matched the words correctly',
+      name: 'youHaveNotMatchedTheWordsCorrectly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have matched the words correctly`
+  String get youHaveMatchedTheWordsCorrectly {
+    return Intl.message(
+      'You have matched the words correctly',
+      name: 'youHaveMatchedTheWordsCorrectly',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

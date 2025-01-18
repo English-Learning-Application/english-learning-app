@@ -112,6 +112,11 @@
     "correct": "Correct",
     "incorrect": "Incorrect",
     "youHaveChosenTheCorrectAnswer": "You have chosen the correct answer",
-    "youHaveChosenTheWrongAnswer": "You have chosen the wrong answer"
+    "youHaveChosenTheWrongAnswer": "You have chosen the wrong answer",
+    "matchingLearningModeDescription": "Drag and drop the words to match the correct order",
+    "next": "Next",
+    "pleaseDragAndDropTheWordsToMatchTheCorrectOrder": "Please drag and drop the words to match the correct order",
+    "youHaveNotMatchedTheWordsCorrectly" : "You have not matched the words correctly",
+    "youHaveMatchedTheWordsCorrectly" : "You have matched the words correctly"
 }
 

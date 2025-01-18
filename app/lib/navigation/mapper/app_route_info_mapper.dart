@@ -28,6 +28,11 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
         learningLanguage: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContent,
       ),
+      matchingLearning: (learningLanguage, languageCourseLearningContent) =>
+          MatchingLearningRoute(
+        learningLanguage: learningLanguage,
+        languageCourseLearningContent: languageCourseLearningContent,
+      ),
     );
   }
 }

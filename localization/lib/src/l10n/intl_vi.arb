@@ -112,5 +112,10 @@
     "correct": "Chính xác",
     "incorrect": "Sai",
     "youHaveChosenTheCorrectAnswer": "Bạn đã chọn đáp án đúng",
-    "youHaveChosenTheWrongAnswer": "Bạn đã chọn đáp án sai"
+    "youHaveChosenTheWrongAnswer": "Bạn đã chọn đáp án sai",
+    "matchingLearningModeDescription": "Kéo và thả từ để kết hợp theo thứ tự đúng",
+    "next": "Tiếp theo",
+    "pleaseDragAndDropTheWordsToMatchTheCorrectOrder": "Vui lòng kéo và thả từ để kết hợp theo thứ tự đúng",
+    "youHaveNotMatchedTheWordsCorrectly" : "Bạn đã không kết hợp từ đúng",
+    "youHaveMatchedTheWordsCorrectly" : "Bạn đã kết hợp từ đúng"
 }

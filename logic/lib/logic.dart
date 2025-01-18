@@ -52,3 +52,4 @@ export 'src/usecase/logout_use_case.dart';
 export 'src/usecase/save_language_code_use_case.dart';
 export 'src/usecase/save_theme_mode_use_case.dart';
 export 'src/usecase/track_connectivity_use_case.dart';
+export 'src/features/language_course/entity/matching_learning_entity.dart';

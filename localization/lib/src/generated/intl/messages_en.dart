@@ -106,6 +106,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Everything you need is in one place"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "matching": MessageLookupByLibrary.simpleMessage("Matching"),
+        "matchingLearningModeDescription": MessageLookupByLibrary.simpleMessage(
+            "Drag and drop the words to match the correct order"),
         "mode": MessageLookupByLibrary.simpleMessage("Mode"),
         "multiLanguage":
             MessageLookupByLibrary.simpleMessage("Multi-language support"),
@@ -115,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("My in-progress courses"),
         "nativeLanguage":
             MessageLookupByLibrary.simpleMessage("Native language"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("No Internet"),
         "noUsername": MessageLookupByLibrary.simpleMessage("No username"),
@@ -133,6 +136,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseChooseAtLeast1LearningMode":
             MessageLookupByLibrary.simpleMessage(
                 "Please choose at least 1 learning mode"),
+        "pleaseDragAndDropTheWordsToMatchTheCorrectOrder":
+            MessageLookupByLibrary.simpleMessage(
+                "Please drag and drop the words to match the correct order"),
         "preposition": MessageLookupByLibrary.simpleMessage("Preposition"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Press again to exit"),
@@ -181,6 +187,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "You have chosen the wrong answer"),
         "youHaveCompletedTheCourse": MessageLookupByLibrary.simpleMessage(
             "You have completed the course"),
+        "youHaveMatchedTheWordsCorrectly": MessageLookupByLibrary.simpleMessage(
+            "You have matched the words correctly"),
+        "youHaveNotMatchedTheWordsCorrectly":
+            MessageLookupByLibrary.simpleMessage(
+                "You have not matched the words correctly"),
         "yourCategory": MessageLookupByLibrary.simpleMessage("Your category")
       };
 }

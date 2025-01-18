@@ -33,6 +33,9 @@ mixin _$AppRouteInfo {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +54,9 @@ mixin _$AppRouteInfo {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +75,9 @@ mixin _$AppRouteInfo {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -84,6 +93,7 @@ mixin _$AppRouteInfo {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -97,6 +107,7 @@ mixin _$AppRouteInfo {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -110,6 +121,7 @@ mixin _$AppRouteInfo {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -192,6 +204,9 @@ class _$LoginImpl implements _Login {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) {
     return login();
   }
@@ -213,6 +228,9 @@ class _$LoginImpl implements _Login {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) {
     return login?.call();
   }
@@ -234,6 +252,9 @@ class _$LoginImpl implements _Login {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -255,6 +276,7 @@ class _$LoginImpl implements _Login {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) {
     return login(this);
   }
@@ -271,6 +293,7 @@ class _$LoginImpl implements _Login {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) {
     return login?.call(this);
   }
@@ -287,6 +310,7 @@ class _$LoginImpl implements _Login {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -355,6 +379,9 @@ class _$MainImpl implements _Main {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) {
     return main();
   }
@@ -376,6 +403,9 @@ class _$MainImpl implements _Main {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) {
     return main?.call();
   }
@@ -397,6 +427,9 @@ class _$MainImpl implements _Main {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -418,6 +451,7 @@ class _$MainImpl implements _Main {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) {
     return main(this);
   }
@@ -434,6 +468,7 @@ class _$MainImpl implements _Main {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) {
     return main?.call(this);
   }
@@ -450,6 +485,7 @@ class _$MainImpl implements _Main {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -519,6 +555,9 @@ class _$SplashImpl implements _Splash {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) {
     return splash();
   }
@@ -540,6 +579,9 @@ class _$SplashImpl implements _Splash {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) {
     return splash?.call();
   }
@@ -561,6 +603,9 @@ class _$SplashImpl implements _Splash {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -582,6 +627,7 @@ class _$SplashImpl implements _Splash {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) {
     return splash(this);
   }
@@ -598,6 +644,7 @@ class _$SplashImpl implements _Splash {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) {
     return splash?.call(this);
   }
@@ -614,6 +661,7 @@ class _$SplashImpl implements _Splash {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -683,6 +731,9 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) {
     return onBoarding();
   }
@@ -704,6 +755,9 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) {
     return onBoarding?.call();
   }
@@ -725,6 +779,9 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -746,6 +803,7 @@ class _$OnBoardingImpl implements _OnBoarding {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) {
     return onBoarding(this);
   }
@@ -762,6 +820,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) {
     return onBoarding?.call(this);
   }
@@ -778,6 +837,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -848,6 +908,9 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) {
     return completeRegistration();
   }
@@ -869,6 +932,9 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) {
     return completeRegistration?.call();
   }
@@ -890,6 +956,9 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -911,6 +980,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) {
     return completeRegistration(this);
   }
@@ -927,6 +997,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) {
     return completeRegistration?.call(this);
   }
@@ -943,6 +1014,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -1041,6 +1113,9 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) {
     return languageCourse(learningLanguage);
   }
@@ -1062,6 +1137,9 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) {
     return languageCourse?.call(learningLanguage);
   }
@@ -1083,6 +1161,9 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -1104,6 +1185,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) {
     return languageCourse(this);
   }
@@ -1120,6 +1202,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) {
     return languageCourse?.call(this);
   }
@@ -1136,6 +1219,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -1257,6 +1341,9 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) {
     return languageCourseDetails(this.languageCourse);
   }
@@ -1278,6 +1365,9 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) {
     return languageCourseDetails?.call(this.languageCourse);
   }
@@ -1299,6 +1389,9 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -1320,6 +1413,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) {
     return languageCourseDetails(this);
   }
@@ -1336,6 +1430,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) {
     return languageCourseDetails?.call(this);
   }
@@ -1352,6 +1447,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -1491,6 +1587,9 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) {
     return flashCardLearning(languageCourseLearningContent, learningLanguage);
   }
@@ -1512,6 +1611,9 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) {
     return flashCardLearning?.call(
         languageCourseLearningContent, learningLanguage);
@@ -1534,6 +1636,9 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -1555,6 +1660,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) {
     return flashCardLearning(this);
   }
@@ -1571,6 +1677,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) {
     return flashCardLearning?.call(this);
   }
@@ -1587,6 +1694,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -1728,6 +1836,9 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)
         quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
   }) {
     return quizLearning(learningLanguage, languageCourseLearningContent);
   }
@@ -1749,6 +1860,9 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
   }) {
     return quizLearning?.call(learningLanguage, languageCourseLearningContent);
   }
@@ -1770,6 +1884,9 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(LearningLanguage learningLanguage,
             LanguageCourseLearningContent languageCourseLearningContent)?
         quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -1791,6 +1908,7 @@ class _$QuizLearningImpl implements _QuizLearning {
         languageCourseDetails,
     required TResult Function(_FlashCardLearning value) flashCardLearning,
     required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
   }) {
     return quizLearning(this);
   }
@@ -1807,6 +1925,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult? Function(_FlashCardLearning value)? flashCardLearning,
     TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
   }) {
     return quizLearning?.call(this);
   }
@@ -1823,6 +1942,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
     TResult Function(_FlashCardLearning value)? flashCardLearning,
     TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -1845,5 +1965,254 @@ abstract class _QuizLearning implements AppRouteInfo {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$QuizLearningImplCopyWith<_$QuizLearningImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$MatchingLearningImplCopyWith<$Res> {
+  factory _$$MatchingLearningImplCopyWith(_$MatchingLearningImpl value,
+          $Res Function(_$MatchingLearningImpl) then) =
+      __$$MatchingLearningImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {LearningLanguage learningLanguage,
+      LanguageCourseLearningContent languageCourseLearningContent});
+
+  $LanguageCourseLearningContentCopyWith<$Res>
+      get languageCourseLearningContent;
+}
+
+/// @nodoc
+class __$$MatchingLearningImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$MatchingLearningImpl>
+    implements _$$MatchingLearningImplCopyWith<$Res> {
+  __$$MatchingLearningImplCopyWithImpl(_$MatchingLearningImpl _value,
+      $Res Function(_$MatchingLearningImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? learningLanguage = null,
+    Object? languageCourseLearningContent = null,
+  }) {
+    return _then(_$MatchingLearningImpl(
+      learningLanguage: null == learningLanguage
+          ? _value.learningLanguage
+          : learningLanguage // ignore: cast_nullable_to_non_nullable
+              as LearningLanguage,
+      languageCourseLearningContent: null == languageCourseLearningContent
+          ? _value.languageCourseLearningContent
+          : languageCourseLearningContent // ignore: cast_nullable_to_non_nullable
+              as LanguageCourseLearningContent,
+    ));
+  }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LanguageCourseLearningContentCopyWith<$Res>
+      get languageCourseLearningContent {
+    return $LanguageCourseLearningContentCopyWith<$Res>(
+        _value.languageCourseLearningContent, (value) {
+      return _then(_value.copyWith(languageCourseLearningContent: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$MatchingLearningImpl implements _MatchingLearning {
+  const _$MatchingLearningImpl(
+      {required this.learningLanguage,
+      required this.languageCourseLearningContent});
+
+  @override
+  final LearningLanguage learningLanguage;
+  @override
+  final LanguageCourseLearningContent languageCourseLearningContent;
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.matchingLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MatchingLearningImpl &&
+            (identical(other.learningLanguage, learningLanguage) ||
+                other.learningLanguage == learningLanguage) &&
+            (identical(other.languageCourseLearningContent,
+                    languageCourseLearningContent) ||
+                other.languageCourseLearningContent ==
+                    languageCourseLearningContent));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, learningLanguage, languageCourseLearningContent);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MatchingLearningImplCopyWith<_$MatchingLearningImpl> get copyWith =>
+      __$$MatchingLearningImplCopyWithImpl<_$MatchingLearningImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+    required TResult Function(LearningLanguage learningLanguage) languageCourse,
+    required TResult Function(LanguageCourse languageCourse)
+        languageCourseDetails,
+    required TResult Function(
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LearningLanguage learningLanguage)
+        flashCardLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        quizLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        matchingLearning,
+  }) {
+    return matchingLearning(learningLanguage, languageCourseLearningContent);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+    TResult? Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult? Function(
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LearningLanguage learningLanguage)?
+        flashCardLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        quizLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
+  }) {
+    return matchingLearning?.call(
+        learningLanguage, languageCourseLearningContent);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    TResult Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult Function(
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LearningLanguage learningLanguage)?
+        flashCardLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        quizLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        matchingLearning,
+    required TResult orElse(),
+  }) {
+    if (matchingLearning != null) {
+      return matchingLearning(learningLanguage, languageCourseLearningContent);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+    required TResult Function(_LanguageCourse value) languageCourse,
+    required TResult Function(_LanguageCourseDetails value)
+        languageCourseDetails,
+    required TResult Function(_FlashCardLearning value) flashCardLearning,
+    required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
+  }) {
+    return matchingLearning(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+    TResult? Function(_LanguageCourse value)? languageCourse,
+    TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult? Function(_FlashCardLearning value)? flashCardLearning,
+    TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
+  }) {
+    return matchingLearning?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    TResult Function(_LanguageCourse value)? languageCourse,
+    TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult Function(_FlashCardLearning value)? flashCardLearning,
+    TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
+    required TResult orElse(),
+  }) {
+    if (matchingLearning != null) {
+      return matchingLearning(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _MatchingLearning implements AppRouteInfo {
+  const factory _MatchingLearning(
+      {required final LearningLanguage learningLanguage,
+      required final LanguageCourseLearningContent
+          languageCourseLearningContent}) = _$MatchingLearningImpl;
+
+  LearningLanguage get learningLanguage;
+  LanguageCourseLearningContent get languageCourseLearningContent;
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MatchingLearningImplCopyWith<_$MatchingLearningImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

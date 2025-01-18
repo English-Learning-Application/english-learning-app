@@ -175,8 +175,10 @@ abstract class BasePageStateDelegate<T extends StatefulWidget,
   ) {
     return Container(
       color: FoundationColors.secondary900.withOpacity(0.5),
-      child: const Center(
-        child: CircularProgressIndicator.adaptive(),
+      child: Center(
+        child: Assets.lottie.lottieLoading.lottie(
+
+        ),
       ),
     );
   }

@@ -39,6 +39,8 @@ export 'features/language_course/view_model/language_course_details/language_cou
 export 'features/language_course/views/language_course_page.dart';
 export 'features/login/view_model/login.dart';
 export 'features/login/views/login_page.dart';
+export 'features/matching_learning/view/matching_learning_page.dart';
+export 'features/matching_learning/view_model/matching_learning.dart';
 export 'features/on_boarding/viewmodel/on_boarding.dart';
 export 'features/on_boarding/views/on_boarding_page.dart';
 export 'features/profile/view_models/profile.dart';

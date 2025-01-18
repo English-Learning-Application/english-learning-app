@@ -129,8 +129,16 @@ class _LanguageCourseDetailsPageState extends BasePageState<
                 height: Dimens.d8.responsive(),
               ),
               _buildStartLearningButton(
-                onPressed: () {
-                  navigator.pop();
+                onPressed: () async {
+                  await navigator.pop();
+                  final languageCourse = viewModel.viewModelData.languageCourse;
+                  await navigator.push(
+                    AppRouteInfo.matchingLearning(
+                      languageCourseLearningContent:
+                          languageCourse.languageCourseLearningContents.first,
+                      learningLanguage: languageCourse.language,
+                    ),
+                  );
                 },
                 child: Row(
                   mainAxisSize: MainAxisSize.max,

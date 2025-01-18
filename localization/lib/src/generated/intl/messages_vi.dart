@@ -107,6 +107,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Tất cả mọi thứ bạn cần đều có tại đây"),
         "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
         "matching": MessageLookupByLibrary.simpleMessage("Kết hợp"),
+        "matchingLearningModeDescription": MessageLookupByLibrary.simpleMessage(
+            "Kéo và thả từ để kết hợp theo thứ tự đúng"),
         "mode": MessageLookupByLibrary.simpleMessage("Chế độ"),
         "multiLanguage":
             MessageLookupByLibrary.simpleMessage("Hỗ trợ nhiều ngôn ngữ"),
@@ -116,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Các khóa học đang học"),
         "nativeLanguage":
             MessageLookupByLibrary.simpleMessage("Ngôn ngữ mẹ đẻ"),
+        "next": MessageLookupByLibrary.simpleMessage("Tiếp theo"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("Không có mạng"),
         "noUsername":
@@ -134,6 +137,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseChooseAtLeast1LearningMode":
             MessageLookupByLibrary.simpleMessage(
                 "Vui lòng chọn ít nhất 1 chế độ học tập"),
+        "pleaseDragAndDropTheWordsToMatchTheCorrectOrder":
+            MessageLookupByLibrary.simpleMessage(
+                "Vui lòng kéo và thả từ để kết hợp theo thứ tự đúng"),
         "preposition": MessageLookupByLibrary.simpleMessage("Giới từ"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Bấm lại để thoát"),
@@ -183,6 +189,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Bạn đã chọn đáp án sai"),
         "youHaveCompletedTheCourse":
             MessageLookupByLibrary.simpleMessage("Bạn đã hoàn thành khóa học"),
+        "youHaveMatchedTheWordsCorrectly":
+            MessageLookupByLibrary.simpleMessage("Bạn đã kết hợp từ đúng"),
+        "youHaveNotMatchedTheWordsCorrectly":
+            MessageLookupByLibrary.simpleMessage(
+                "Bạn đã không kết hợp từ đúng"),
         "yourCategory": MessageLookupByLibrary.simpleMessage("Danh mục của bạn")
       };
 }
