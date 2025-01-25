@@ -114,6 +114,18 @@ class AppRouter extends $AppRouter {
           ],
           page: MatchingLearningRoute.page,
         ),
+        AutoRoute(
+          guards: [
+            _routeGuard,
+          ],
+          page: PronunciationLearningRoute.page,
+        ),
+        AutoRoute(
+          guards: [
+            _routeGuard,
+          ],
+          page: ListeningLearningRoute.page,
+        )
       ];
 }
 

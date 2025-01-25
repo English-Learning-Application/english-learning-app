@@ -15,7 +15,7 @@ class QuizLearningPage extends StatefulWidget {
     required this.languageCourseLearningContent,
   });
   final LearningLanguage learningLanguage;
-  final LanguageCourseLearningContent languageCourseLearningContent;
+  final List<LanguageCourseLearningContent> languageCourseLearningContent;
 
   @override
   State<QuizLearningPage> createState() => _QuizLearningPageState();
@@ -172,8 +172,6 @@ class _QuizLearningPageState
   @override
   void initViewModels() {
     viewModel.onInit(
-      learningContentType:
-          widget.languageCourseLearningContent.learningContentType,
       learningLanguage: widget.learningLanguage,
       languageCourseLearningContent: widget.languageCourseLearningContent,
     );

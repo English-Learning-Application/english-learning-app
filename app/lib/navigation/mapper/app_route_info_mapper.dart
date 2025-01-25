@@ -18,19 +18,30 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
           LanguageCourseRoute(language: learningLanguage),
       languageCourseDetails: (languageCourse) =>
           LanguageCourseDetailsRoute(languageCourse: languageCourse),
-      flashCardLearning: (languageCourseLearningContent, learningLanguage) =>
+      flashCardLearning: (languageCourseLearningContents, learningLanguage) =>
           FlashCardLearningRoute(
-        languageCourseLearningContent: languageCourseLearningContent,
+        languageCourseLearningContent: languageCourseLearningContents,
         learningLanguage: learningLanguage,
       ),
-      quizLearning: (learningLanguage, languageCourseLearningContent) =>
+      quizLearning: (learningLanguage, languageCourseLearningContents) =>
           QuizLearningRoute(
         learningLanguage: learningLanguage,
-        languageCourseLearningContent: languageCourseLearningContent,
+        languageCourseLearningContent: languageCourseLearningContents,
       ),
-      matchingLearning: (learningLanguage, languageCourseLearningContent) =>
+      matchingLearning: (learningLanguage, languageCourseLearningContents) =>
           MatchingLearningRoute(
         learningLanguage: learningLanguage,
+        languageCourseLearningContents: languageCourseLearningContents,
+      ),
+      pronunciationLearning:
+          (learningLanguage, languageCourseLearningContent) =>
+              PronunciationLearningRoute(
+        learningLanguage: learningLanguage,
+        languageCourseLearningContent: languageCourseLearningContent,
+      ),
+      listeningLearning: (learningLanguage, languageCourseLearningContent) =>
+          ListeningLearningRoute(
+        language: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContent,
       ),
     );

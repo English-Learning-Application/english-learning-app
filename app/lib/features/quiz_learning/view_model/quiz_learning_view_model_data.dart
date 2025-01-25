@@ -6,11 +6,10 @@ class QuizLearningViewModelData extends BaseViewModelData
   const QuizLearningViewModelData._();
 
   const factory QuizLearningViewModelData({
-    @Default(LearningContentType.word) LearningContentType learningContentType,
     @Default([]) List<QuizLearningEntity> quizLearningEntities,
     @Default(LearningLanguage.english) LearningLanguage learningLanguage,
-    @Default(LanguageCourseLearningContent())
-    LanguageCourseLearningContent languageCourseLearningContent,
+    @Default([])
+    List<LanguageCourseLearningContent> languageCourseLearningContent,
     @Default(0) int currentLearningContentIndex,
     @Default(0) int totalLearningContentCount,
     @Default([]) List<String> correctContentIds,

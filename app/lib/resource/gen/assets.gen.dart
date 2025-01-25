@@ -108,6 +108,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_reading.svg
   SvgGenImage get icReading => const SvgGenImage('assets/icons/ic_reading.svg');
 
+  /// File path: assets/icons/ic_sad_face.svg
+  SvgGenImage get icSadFace => const SvgGenImage('assets/icons/ic_sad_face.svg');
+
   /// File path: assets/icons/ic_send.svg
   SvgGenImage get icSend => const SvgGenImage('assets/icons/ic_send.svg');
 
@@ -144,6 +147,7 @@ class $AssetsIconsGen {
         icPlay,
         icQuit,
         icReading,
+        icSadFace,
         icSend,
         icSpeaking,
         icVietnam,

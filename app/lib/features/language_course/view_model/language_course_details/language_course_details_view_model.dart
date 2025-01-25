@@ -24,8 +24,8 @@ class LanguageCourseDetailsViewModel
       speechRate = 0.4;
       pitch = 1.2;
     } else {
-      speechRate = 0.3;
-      pitch = 1.0;
+      speechRate = 0.5;
+      pitch = 1.3;
     }
     await _flutterTts.setLanguage(language.textToSpeechLanguage);
     await _flutterTts.setPitch(pitch);

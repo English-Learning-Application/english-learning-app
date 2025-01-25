@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "adverb": MessageLookupByLibrary.simpleMessage("Trạng từ"),
         "aiChatbot": MessageLookupByLibrary.simpleMessage("Trợ lý ảo"),
         "all": MessageLookupByLibrary.simpleMessage("Tất cả"),
+        "assessment": MessageLookupByLibrary.simpleMessage("Đánh giá"),
         "backToCourses":
             MessageLookupByLibrary.simpleMessage("Quay lại khóa học"),
         "badCertificateException":
@@ -63,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "congratulations": MessageLookupByLibrary.simpleMessage("Chúc mừng"),
         "conjunction": MessageLookupByLibrary.simpleMessage("Liên từ"),
         "correct": MessageLookupByLibrary.simpleMessage("Chính xác"),
+        "courseWillBeAvailableSoon": MessageLookupByLibrary.simpleMessage(
+            "Khóa học sẽ sớm được cập nhật"),
         "courses": MessageLookupByLibrary.simpleMessage("Khóa học"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Chỉnh sửa hồ sơ"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
@@ -79,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "idiom": MessageLookupByLibrary.simpleMessage("Thành ngữ"),
         "incorrect": MessageLookupByLibrary.simpleMessage("Sai"),
         "interjection": MessageLookupByLibrary.simpleMessage("Thán từ"),
+        "interrogativeTense": MessageLookupByLibrary.simpleMessage("Nghi vấn"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Mật khẩu xác nhận không khớp"),
         "invalidDateTime":
@@ -109,6 +113,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "matching": MessageLookupByLibrary.simpleMessage("Kết hợp"),
         "matchingLearningModeDescription": MessageLookupByLibrary.simpleMessage(
             "Kéo và thả từ để kết hợp theo thứ tự đúng"),
+        "microphonePermissionDenied": MessageLookupByLibrary.simpleMessage(
+            "Ứng dụng không được cấp quyền sử dụng microphone"),
         "mode": MessageLookupByLibrary.simpleMessage("Chế độ"),
         "multiLanguage":
             MessageLookupByLibrary.simpleMessage("Hỗ trợ nhiều ngôn ngữ"),
@@ -118,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Các khóa học đang học"),
         "nativeLanguage":
             MessageLookupByLibrary.simpleMessage("Ngôn ngữ mẹ đẻ"),
+        "negativeTense": MessageLookupByLibrary.simpleMessage("Phủ định"),
         "next": MessageLookupByLibrary.simpleMessage("Tiếp theo"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("Không có mạng"),
@@ -131,6 +138,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Nhập mật khẩu của bạn"),
+        "permissionDenied":
+            MessageLookupByLibrary.simpleMessage("Quyền bị từ chối"),
         "phoneNo": MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "phonetic": MessageLookupByLibrary.simpleMessage("Phiên âm"),
         "phrasalVerb": MessageLookupByLibrary.simpleMessage("Cụm động từ"),
@@ -140,9 +149,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseDragAndDropTheWordsToMatchTheCorrectOrder":
             MessageLookupByLibrary.simpleMessage(
                 "Vui lòng kéo và thả từ để kết hợp theo thứ tự đúng"),
+        "positiveTense": MessageLookupByLibrary.simpleMessage("Khẳng định"),
         "preposition": MessageLookupByLibrary.simpleMessage("Giới từ"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Bấm lại để thoát"),
+        "previewSentence":
+            MessageLookupByLibrary.simpleMessage("Xem trước câu văn"),
+        "previous": MessageLookupByLibrary.simpleMessage("Trước"),
         "profile": MessageLookupByLibrary.simpleMessage("Hồ sơ"),
         "pronoun": MessageLookupByLibrary.simpleMessage("Đại từ"),
         "pronunciation": MessageLookupByLibrary.simpleMessage("Phát âm"),
@@ -162,6 +175,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("Bỏ qua"),
         "speaking": MessageLookupByLibrary.simpleMessage("Nói"),
         "startLearning": MessageLookupByLibrary.simpleMessage("Bắt đầu học"),
+        "subject": MessageLookupByLibrary.simpleMessage("Chủ ngữ"),
         "tense": MessageLookupByLibrary.simpleMessage("Thì"),
         "theme": MessageLookupByLibrary.simpleMessage("Chủ đề"),
         "timeoutException":

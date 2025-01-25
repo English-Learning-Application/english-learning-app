@@ -345,6 +345,15 @@ enum LanguageCode {
         return S.current.vietnamese;
     }
   }
+
+  String get textToSpeechLanguage {
+    switch (this) {
+      case LanguageCode.en:
+        return 'en-US';
+      case LanguageCode.vi:
+        return 'vi-VN';
+    }
+  }
 }
 
 enum CurrencyCode {

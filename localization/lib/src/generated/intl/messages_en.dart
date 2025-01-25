@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "adverb": MessageLookupByLibrary.simpleMessage("Adverb"),
         "aiChatbot": MessageLookupByLibrary.simpleMessage("AI Chatbot"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
+        "assessment": MessageLookupByLibrary.simpleMessage("Assessment"),
         "backToCourses":
             MessageLookupByLibrary.simpleMessage("Back to courses"),
         "badCertificateException":
@@ -63,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Congratulations"),
         "conjunction": MessageLookupByLibrary.simpleMessage("Conjunction"),
         "correct": MessageLookupByLibrary.simpleMessage("Correct"),
+        "courseWillBeAvailableSoon": MessageLookupByLibrary.simpleMessage(
+            "Course will be available soon"),
         "courses": MessageLookupByLibrary.simpleMessage("Courses"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
@@ -79,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "idiom": MessageLookupByLibrary.simpleMessage("Idiom"),
         "incorrect": MessageLookupByLibrary.simpleMessage("Incorrect"),
         "interjection": MessageLookupByLibrary.simpleMessage("Interjection"),
+        "interrogativeTense":
+            MessageLookupByLibrary.simpleMessage("Interrogative"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Password confirmation does not match"),
         "invalidDateTime":
@@ -108,6 +113,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "matching": MessageLookupByLibrary.simpleMessage("Matching"),
         "matchingLearningModeDescription": MessageLookupByLibrary.simpleMessage(
             "Drag and drop the words to match the correct order"),
+        "microphonePermissionDenied": MessageLookupByLibrary.simpleMessage(
+            "Microphone permission denied by user, please enable it in your settings"),
         "mode": MessageLookupByLibrary.simpleMessage("Mode"),
         "multiLanguage":
             MessageLookupByLibrary.simpleMessage("Multi-language support"),
@@ -117,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("My in-progress courses"),
         "nativeLanguage":
             MessageLookupByLibrary.simpleMessage("Native language"),
+        "negativeTense": MessageLookupByLibrary.simpleMessage("Negative"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("No Internet"),
@@ -130,6 +138,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
+        "permissionDenied":
+            MessageLookupByLibrary.simpleMessage("Permission denied"),
         "phoneNo": MessageLookupByLibrary.simpleMessage("Phone number"),
         "phonetic": MessageLookupByLibrary.simpleMessage("Phonetic"),
         "phrasalVerb": MessageLookupByLibrary.simpleMessage("Phrasal verb"),
@@ -139,9 +149,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseDragAndDropTheWordsToMatchTheCorrectOrder":
             MessageLookupByLibrary.simpleMessage(
                 "Please drag and drop the words to match the correct order"),
+        "positiveTense": MessageLookupByLibrary.simpleMessage("Positive"),
         "preposition": MessageLookupByLibrary.simpleMessage("Preposition"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Press again to exit"),
+        "previewSentence":
+            MessageLookupByLibrary.simpleMessage("Preview sentence"),
+        "previous": MessageLookupByLibrary.simpleMessage("Previous"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "pronoun": MessageLookupByLibrary.simpleMessage("Pronoun"),
         "pronunciation": MessageLookupByLibrary.simpleMessage("Pronunciation"),
@@ -161,6 +175,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "speaking": MessageLookupByLibrary.simpleMessage("Speaking"),
         "startLearning": MessageLookupByLibrary.simpleMessage("Start learning"),
+        "subject": MessageLookupByLibrary.simpleMessage("Subject"),
         "tense": MessageLookupByLibrary.simpleMessage("Tense"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),

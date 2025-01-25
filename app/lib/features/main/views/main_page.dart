@@ -28,7 +28,7 @@ class _MainPageState extends BasePageState<MainPage, MainViewModel> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                FoundationColors.success400,
+                FoundationColors.primary50,
                 AppColors.current.primaryColor,
               ],
               stops: const [0.0, 0.7],

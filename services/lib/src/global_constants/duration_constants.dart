@@ -9,4 +9,5 @@ class DurationConstants {
   static const defaultSnackBarDuration = Duration(seconds: 3);
   static const defaultErrorVisibleDuration = Duration(seconds: 3);
   static const defaultCacheDuration = Duration(days: 3);
+  static const defaultAnimationDuration = Duration(milliseconds: 500);
 }

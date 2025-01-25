@@ -48,6 +48,18 @@ class LanguageCourseLearningContent with _$LanguageCourseLearningContent {
     @Default(LanguageCourseLearningContent.defaultTenses) List<Tense> tenses,
     @Default(LanguageCourseLearningContent.defaultPhonetics)
     List<Phonetic> phonetics,
+    @Default(LanguageCourseLearningContent.defaultEnglishTitle)
+    String englishTitle,
+    @Default(LanguageCourseLearningContent.defaultVietnameseTitle)
+    String vietnameseTitle,
+    @Default(LanguageCourseLearningContent.defaultFrenchTitle)
+    String frenchTitle,
+    @Default(LanguageCourseLearningContent.defaultEnglishDescription)
+    String englishDescription,
+    @Default(LanguageCourseLearningContent.defaultVietnameseDescription)
+    String vietnameseDescription,
+    @Default(LanguageCourseLearningContent.defaultFrenchDescription)
+    String frenchDescription,
     @Default(LanguageCourseLearningContent.defaultCreatedAt)
     DateTime? createdAt,
     @Default(LanguageCourseLearningContent.defaultUpdatedAt)
@@ -63,6 +75,12 @@ class LanguageCourseLearningContent with _$LanguageCourseLearningContent {
   static const defaultPhrasalVerbs = <PhrasalVerb>[];
   static const defaultTenses = <Tense>[];
   static const defaultPhonetics = <Phonetic>[];
+  static const defaultEnglishTitle = '';
+  static const defaultVietnameseTitle = '';
+  static const defaultFrenchTitle = '';
+  static const defaultEnglishDescription = '';
+  static const defaultVietnameseDescription = '';
+  static const defaultFrenchDescription = '';
   static const DateTime? defaultCreatedAt = null;
   static const DateTime? defaultUpdatedAt = null;
 }

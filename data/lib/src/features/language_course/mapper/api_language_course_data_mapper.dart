@@ -88,6 +88,12 @@ class ApiLanguageCourseLearningContentDataMapper extends BaseDataMapper<
           _apiPhrasalVerbDataMapper.mapToListData(entity.phrasalVerbs),
       tenses: _apiTenseDataMapper.mapToListData(entity.tenses),
       phonetics: _apiPhoneticDataMapper.mapToListData(entity.phonetics),
+      englishDescription: entity.englishDescription,
+      vietnameseDescription: entity.vietnameseDescription,
+      frenchDescription: entity.frenchDescription,
+      englishTitle: entity.englishTitle,
+      vietnameseTitle: entity.vietnameseTitle,
+      frenchTitle: entity.frenchTitle,
       createdAt: entity.createdAt?.toIso8601String(),
       updatedAt: entity.updatedAt?.toIso8601String(),
     );
@@ -111,6 +117,18 @@ class ApiLanguageCourseLearningContentDataMapper extends BaseDataMapper<
           _apiPhrasalVerbDataMapper.mapToListEntities(data?.phrasalVerbs),
       tenses: _apiTenseDataMapper.mapToListEntities(data?.tenses),
       phonetics: _apiPhoneticDataMapper.mapToListEntities(data?.phonetics),
+      englishDescription: data?.englishDescription ??
+          LanguageCourseLearningContent.defaultEnglishDescription,
+      vietnameseDescription: data?.vietnameseDescription ??
+          LanguageCourseLearningContent.defaultVietnameseDescription,
+      frenchDescription: data?.frenchDescription ??
+          LanguageCourseLearningContent.defaultFrenchDescription,
+      englishTitle: data?.englishTitle ??
+          LanguageCourseLearningContent.defaultEnglishTitle,
+      vietnameseTitle: data?.vietnameseTitle ??
+          LanguageCourseLearningContent.defaultVietnameseTitle,
+      frenchTitle: data?.frenchTitle ??
+          LanguageCourseLearningContent.defaultFrenchTitle,
       createdAt: DateTimeUtils.tryParse(date: data?.createdAt),
       updatedAt: DateTimeUtils.tryParse(date: data?.updatedAt),
     );

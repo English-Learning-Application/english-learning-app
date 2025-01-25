@@ -1239,6 +1239,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Permission denied`
+  String get permissionDenied {
+    return Intl.message(
+      'Permission denied',
+      name: 'permissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Microphone permission denied by user, please enable it in your settings`
+  String get microphonePermissionDenied {
+    return Intl.message(
+      'Microphone permission denied by user, please enable it in your settings',
+      name: 'microphonePermissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Course will be available soon`
+  String get courseWillBeAvailableSoon {
+    return Intl.message(
+      'Course will be available soon',
+      name: 'courseWillBeAvailableSoon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subject`
+  String get subject {
+    return Intl.message(
+      'Subject',
+      name: 'subject',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Positive`
+  String get positiveTense {
+    return Intl.message(
+      'Positive',
+      name: 'positiveTense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Negative`
+  String get negativeTense {
+    return Intl.message(
+      'Negative',
+      name: 'negativeTense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Interrogative`
+  String get interrogativeTense {
+    return Intl.message(
+      'Interrogative',
+      name: 'interrogativeTense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Previous`
+  String get previous {
+    return Intl.message(
+      'Previous',
+      name: 'previous',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Assessment`
+  String get assessment {
+    return Intl.message(
+      'Assessment',
+      name: 'assessment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Preview sentence`
+  String get previewSentence {
+    return Intl.message(
+      'Preview sentence',
+      name: 'previewSentence',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

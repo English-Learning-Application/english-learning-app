@@ -17,7 +17,7 @@ class FlashCardLearningPage extends StatefulWidget {
     this.learningLanguage = LearningLanguage.english,
   });
   final LearningLanguage learningLanguage;
-  final LanguageCourseLearningContent languageCourseLearningContent;
+  final List<LanguageCourseLearningContent> languageCourseLearningContent;
 
   @override
   State<FlashCardLearningPage> createState() => _FlashCardLearningPageState();
@@ -64,9 +64,7 @@ class _FlashCardLearningPageState
   @override
   void initViewModels() {
     viewModel.onInit(
-      learningContentType:
-          widget.languageCourseLearningContent.learningContentType,
-      languageCourseLearningContent: widget.languageCourseLearningContent,
+      languageCourseLearningContents: widget.languageCourseLearningContent,
       learningLanguage: widget.learningLanguage,
     );
   }
@@ -148,6 +146,7 @@ class _FlashCardLearningPageState
                                   style: AppTextStyles.s14w400primary()
                                       .font20()
                                       .bold,
+                                  textAlign: TextAlign.center,
                                 ),
                                 SizedBox(
                                   height: Dimens.d16.responsive(),
@@ -160,6 +159,7 @@ class _FlashCardLearningPageState
                                   style: AppTextStyles.s14w400primary()
                                       .font15()
                                       .medium,
+                                  textAlign: TextAlign.center,
                                 ),
                                 SizedBox(
                                   height: Dimens.d16.responsive(),
@@ -183,7 +183,8 @@ class _FlashCardLearningPageState
                                     onTap: () async {
                                       await viewModel.speakFromText(
                                         learningContent.frontCardText,
-                                        vmData.learningLanguage,
+                                        vmData.learningLanguage
+                                            .textToSpeechLanguage,
                                       );
                                     },
                                     child: Container(
@@ -205,29 +206,36 @@ class _FlashCardLearningPageState
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: Dimens.d16.responsive(),
-                                  ),
-                                  GestureDetector(
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                          color: AppColors.current.primaryColor,
-                                          width: Dimens.d1.responsive(),
+                                  if (learningContent.learningContentType ==
+                                          LearningContentType.word ||
+                                      learningContent.learningContentType ==
+                                          LearningContentType.phonetics) ...[
+                                    SizedBox(
+                                      width: Dimens.d16.responsive(),
+                                    ),
+                                    GestureDetector(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                            color:
+                                                AppColors.current.primaryColor,
+                                            width: Dimens.d1.responsive(),
+                                          ),
                                         ),
-                                      ),
-                                      width: Dimens.d32.responsive(),
-                                      height: Dimens.d32.responsive(),
-                                      child: Center(
-                                        child: Icon(
-                                          Icons.spellcheck,
-                                          color: AppColors.current.primaryColor,
-                                          size: Dimens.d24.responsive(),
+                                        width: Dimens.d32.responsive(),
+                                        height: Dimens.d32.responsive(),
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.spellcheck,
+                                            color:
+                                                AppColors.current.primaryColor,
+                                            size: Dimens.d24.responsive(),
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
+                                  ],
                                 ],
                               ),
                             ],
@@ -258,6 +266,7 @@ class _FlashCardLearningPageState
                                   style: AppTextStyles.s14w400primary()
                                       .font20()
                                       .bold,
+                                  textAlign: TextAlign.center,
                                 ),
                               ],
                               SizedBox(
@@ -270,6 +279,7 @@ class _FlashCardLearningPageState
                                   style: AppTextStyles.s14w400primary()
                                       .font15()
                                       .medium,
+                                  textAlign: TextAlign.center,
                                 ),
                                 SizedBox(
                                   height: Dimens.d16.responsive(),
@@ -291,9 +301,11 @@ class _FlashCardLearningPageState
                                 children: [
                                   GestureDetector(
                                     onTap: () async {
+                                      final appLanguage = appViewModel
+                                          .viewModelData.languageCode;
                                       await viewModel.speakFromText(
                                         learningContent.backCardText,
-                                        widget.learningLanguage,
+                                        appLanguage.textToSpeechLanguage,
                                       );
                                     },
                                     child: Container(
@@ -315,29 +327,36 @@ class _FlashCardLearningPageState
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: Dimens.d16.responsive(),
-                                  ),
-                                  GestureDetector(
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                          color: AppColors.current.primaryColor,
-                                          width: Dimens.d1.responsive(),
+                                  if (learningContent.learningContentType ==
+                                          LearningContentType.word ||
+                                      learningContent.learningContentType ==
+                                          LearningContentType.phonetics) ...[
+                                    SizedBox(
+                                      width: Dimens.d16.responsive(),
+                                    ),
+                                    GestureDetector(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                            color:
+                                                AppColors.current.primaryColor,
+                                            width: Dimens.d1.responsive(),
+                                          ),
                                         ),
-                                      ),
-                                      width: Dimens.d32.responsive(),
-                                      height: Dimens.d32.responsive(),
-                                      child: Center(
-                                        child: Icon(
-                                          Icons.spellcheck,
-                                          color: AppColors.current.primaryColor,
-                                          size: Dimens.d24.responsive(),
+                                        width: Dimens.d32.responsive(),
+                                        height: Dimens.d32.responsive(),
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.spellcheck,
+                                            color:
+                                                AppColors.current.primaryColor,
+                                            size: Dimens.d24.responsive(),
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
+                                  ],
                                 ],
                               )
                             ],

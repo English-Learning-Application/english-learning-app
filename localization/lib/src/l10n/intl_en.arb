@@ -117,6 +117,16 @@
     "next": "Next",
     "pleaseDragAndDropTheWordsToMatchTheCorrectOrder": "Please drag and drop the words to match the correct order",
     "youHaveNotMatchedTheWordsCorrectly" : "You have not matched the words correctly",
-    "youHaveMatchedTheWordsCorrectly" : "You have matched the words correctly"
+    "youHaveMatchedTheWordsCorrectly" : "You have matched the words correctly",
+    "permissionDenied": "Permission denied",
+    "microphonePermissionDenied": "Microphone permission denied by user, please enable it in your settings",
+    "courseWillBeAvailableSoon": "Course will be available soon",
+    "subject": "Subject",
+    "positiveTense": "Positive",
+    "negativeTense": "Negative",
+    "interrogativeTense": "Interrogative",
+    "previous": "Previous",
+    "assessment": "Assessment",
+    "previewSentence": "Preview sentence"
 }
 

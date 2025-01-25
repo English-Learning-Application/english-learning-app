@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../logic.dart';
+
 part 'matching_learning_entity.freezed.dart';
 
 @freezed
@@ -15,6 +17,10 @@ class MatchingLearningEntity with _$MatchingLearningEntity {
     @Default(MatchingLearningEntity.defaultChosenTexts) String chosenTexts,
     @Default(MatchingLearningEntity.defaultImage) String image,
     @Default(MatchingLearningEntity.defaultHint) String hint,
+    @Default(MatchingLearningEntity.defaultLearningContentId)
+    String learningContentId,
+    @Default(MatchingLearningEntity.defaultLearningContentType)
+    LearningContentType learningContentType,
   }) = _MatchingLearningEntity;
 
   static const defaultId = '';
@@ -23,4 +29,7 @@ class MatchingLearningEntity with _$MatchingLearningEntity {
   static const defaultChosenTexts = '';
   static const defaultHint = '';
   static const defaultImage = '';
+  static const defaultLearningContentId = '';
+  static const LearningContentType defaultLearningContentType =
+      LearningContentType.word;
 }

@@ -19,6 +19,7 @@ dependencies:
     path: ../services
   app:
     path: ../app
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:

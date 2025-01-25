@@ -68,6 +68,8 @@ import 'package:data/src/features/authentication/data_source/api/authentication_
     as _i920;
 import 'package:data/src/features/authentication/repository/authentication_repository_impl.dart'
     as _i322;
+import 'package:data/src/features/exercise/repository/exercise_repository_impl.dart'
+    as _i91;
 import 'package:data/src/features/language_course/data_source/api/language_course_api_data_source.dart'
     as _i543;
 import 'package:data/src/features/language_course/mapper/api_expression_data_mapper.dart'
@@ -160,6 +162,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i985.ApiTenseFormDataMapper>(
         () => _i985.ApiTenseFormDataMapper());
     gh.factory<_i443.ApiWordDataMapper>(() => _i443.ApiWordDataMapper());
+    gh.lazySingleton<_i182.ExerciseRepository>(
+        () => _i91.ExerciseRepositoryImpl());
     gh.factory<_i77.HeaderInterceptor>(
         () => _i77.HeaderInterceptor(gh<_i473.AppInfo>()));
     gh.factory<_i1022.ApiTenseDataMapper>(
@@ -227,10 +231,10 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.NonAuthAppServerApiClient>(),
               gh<_i437.AuthAppServerApiClient>(),
             ));
-    gh.lazySingleton<_i82.NotificationApiDataSource>(() =>
-        _i82.NotificationApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i543.LanguageCourseApiDataSource>(() =>
         _i543.LanguageCourseApiDataSource(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i82.NotificationApiDataSource>(() =>
+        _i82.NotificationApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i182.NotificationRepository>(() =>
         _i946.NotificationRepositoryImpl(gh<_i82.NotificationApiDataSource>()));
     gh.lazySingleton<_i182.AuthenticationRepository>(

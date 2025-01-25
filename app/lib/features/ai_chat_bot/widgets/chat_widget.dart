@@ -11,16 +11,25 @@ class ChatWidget extends StatelessWidget {
     required this.message,
     required this.isMe,
     this.senderAvatar,
+    this.isMeColor,
+    this.isNotMeColor,
+    this.isNotMeTextColor,
+    this.isMeTextColor,
   });
 
   final String message;
   final bool isMe;
   final String? senderAvatar;
+  final Color? isMeColor;
+  final Color? isNotMeColor;
+  final Color? isNotMeTextColor;
+  final Color? isMeTextColor;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: isMe ? MainAxisAlignment.end : MainAxisAlignment.start,
       children: [
         isMe
             ? const SizedBox.shrink()
@@ -43,10 +52,14 @@ class ChatWidget extends StatelessWidget {
             horizontal: Dimens.d16.responsive(),
             vertical: Dimens.d8.responsive(),
           ),
+          constraints: BoxConstraints(
+            maxWidth: AppDimens.of(context).screenWidth * 0.45,
+          ),
           decoration: BoxDecoration(
             color: isMe
-                ? AppColors.current.primaryColor
-                : FoundationColors.neutral200.withValues(alpha: 0.5),
+                ? isMeColor ?? AppColors.current.primaryColor
+                : isNotMeColor ??
+                    FoundationColors.neutral200.withValues(alpha: 0.5),
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(Dimens.d16.responsive()),
               topRight: Radius.circular(Dimens.d16.responsive()),
@@ -61,8 +74,9 @@ class ChatWidget extends StatelessWidget {
             style: AppTextStyles.s14w400primary().font14().medium.let(
                   (it) => it.copyWith(
                     color: isMe
-                        ? AppColors.current.secondaryTextColor
-                        : AppColors.current.primaryTextColor,
+                        ? isMeTextColor ?? AppColors.current.secondaryTextColor
+                        : isNotMeTextColor ??
+                            AppColors.current.primaryTextColor,
                   ),
                 ),
           ),

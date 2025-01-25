@@ -5,6 +5,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:localization/localization.dart';
 import 'package:logic/logic.dart';
 
 part 'flash_card_learning.freezed.dart';

@@ -14,11 +14,11 @@ class MatchingLearningPage extends StatefulWidget {
   const MatchingLearningPage({
     super.key,
     required this.learningLanguage,
-    required this.languageCourseLearningContent,
+    required this.languageCourseLearningContents,
   });
 
   final LearningLanguage learningLanguage;
-  final LanguageCourseLearningContent languageCourseLearningContent;
+  final List<LanguageCourseLearningContent> languageCourseLearningContents;
 
   @override
   State<MatchingLearningPage> createState() => _MatchingLearningPageState();
@@ -59,9 +59,7 @@ class _MatchingLearningPageState
   @override
   void initViewModels() {
     viewModel.onInit(
-      learningContentType:
-          widget.languageCourseLearningContent.learningContentType,
-      languageCourseLearningContent: widget.languageCourseLearningContent,
+      languageCourseLearningContent: widget.languageCourseLearningContents,
       learningLanguage: widget.learningLanguage,
     );
   }
@@ -93,6 +91,7 @@ class _MatchingLearningPageState
                     Text(
                       currentEntity.hint,
                       style: AppTextStyles.s14w400primary().font18().bold,
+                      textAlign: TextAlign.center,
                     ),
                     if (currentEntity.image.isNotEmpty) ...[
                       SizedBox(

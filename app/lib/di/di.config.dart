@@ -23,12 +23,16 @@ import 'package:app/features/language_course/view_model/language_course/language
     as _i117;
 import 'package:app/features/language_course/view_model/language_course_details/language_course_details.dart'
     as _i725;
+import 'package:app/features/listening_learning/view_model/listening_learning.dart'
+    as _i901;
 import 'package:app/features/login/view_model/login.dart' as _i1056;
 import 'package:app/features/main/viewmodels/main_view_model.dart' as _i93;
 import 'package:app/features/matching_learning/view_model/matching_learning.dart'
     as _i235;
 import 'package:app/features/on_boarding/viewmodel/on_boarding.dart' as _i646;
 import 'package:app/features/profile/view_models/profile.dart' as _i238;
+import 'package:app/features/pronunciation_learning/view_model/pronunciation_learning.dart'
+    as _i143;
 import 'package:app/features/quiz_learning/view_model/quiz_learning.dart'
     as _i96;
 import 'package:app/features/splash/view_models/splash.dart' as _i635;
@@ -65,11 +69,13 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i5.FlashCardLearningViewModel());
     gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel());
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
+    gh.factory<_i235.MatchingLearningViewModel>(
+        () => _i235.MatchingLearningViewModel());
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
     gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
     gh.factory<_i96.QuizLearningViewModel>(() => _i96.QuizLearningViewModel());
-    gh.factory<_i235.MatchingLearningViewModel>(
-        () => _i235.MatchingLearningViewModel());
+    gh.factory<_i901.ListeningLearningViewModel>(
+        () => _i901.ListeningLearningViewModel());
     gh.lazySingleton<_i50.FlutterTts>(() => appModules.flutterTts);
     gh.lazySingleton<_i398.FirebaseAnalytics>(
         () => appModules.firebaseAnalytics);
@@ -121,6 +127,11 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i137.RouteGuard>(),
           gh<_i21.IsLoggedInRouteGuard>(),
         ));
+    gh.factory<_i143.PronunciationLearningViewModel>(
+        () => _i143.PronunciationLearningViewModel(
+              gh<_i182.CheckPermissionUseCase>(),
+              gh<_i182.PronunciationAssessmentUseCase>(),
+            ));
     gh.lazySingleton<_i182.AppNavigator>(() => _i101.AppNavigatorImpl(
           gh<_i137.AppRouter>(),
           gh<_i137.BasePopupInfoMapper>(),

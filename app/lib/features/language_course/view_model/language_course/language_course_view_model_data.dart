@@ -7,5 +7,6 @@ class LanguageCourseViewModelData extends BaseViewModelData
     @Default(LearningLanguage.english) LearningLanguage learningLanguage,
     @Default(LanguageLevel.all) LanguageLevel languageLevel,
     @Default([]) List<LanguageCourse> languageCourses,
+    @Default(true) bool isNoLanguageCourse,
   }) = _LanguageCourseViewModelData;
 }

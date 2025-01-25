@@ -23,12 +23,15 @@ import 'package:logic/src/features/authentication/usecase/registration_completio
     as _i119;
 import 'package:logic/src/features/authentication/usecase/username_registration_use_case.dart'
     as _i323;
+import 'package:logic/src/features/exercise/use_case/pronunciation_assessment_use_case.dart'
+    as _i700;
 import 'package:logic/src/features/language_course/use_case/get_language_courses_by_language_and_level_use_case.dart'
     as _i408;
 import 'package:logic/src/features/language_course/use_case/get_language_courses_by_language_use_case.dart'
     as _i244;
 import 'package:logic/src/features/notification/usecase/register_fcm_token_use_case.dart'
     as _i119;
+import 'package:logic/src/usecase/check_permission_use_case.dart' as _i673;
 import 'package:logic/src/usecase/clear_current_user_data_use_case.dart'
     as _i900;
 import 'package:logic/src/usecase/get_current_pref_user_use_case.dart' as _i75;
@@ -51,6 +54,8 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
+    gh.factory<_i673.CheckPermissionUseCase>(
+        () => const _i673.CheckPermissionUseCase());
     gh.factory<_i408.GetLanguageCoursesByLanguageAndLevelUseCase>(() =>
         _i408.GetLanguageCoursesByLanguageAndLevelUseCase(
             gh<_i182.LanguageCourseRepository>()));
@@ -99,6 +104,8 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i182.NotificationRepository>(),
               gh<_i182.AppRepository>(),
             ));
+    gh.factory<_i700.PronunciationAssessmentUseCase>(() =>
+        _i700.PronunciationAssessmentUseCase(gh<_i182.ExerciseRepository>()));
     return this;
   }
 }

@@ -63,8 +63,13 @@ class _LanguageCoursePageState
   Widget _buildLevelSelection() {
     return Selector<LanguageCourseViewModel, LanguageCourseViewModelData>(
       selector: (_, viewModel) => viewModel.viewModelData,
-      shouldRebuild: (prev, next) => prev.languageLevel != next.languageLevel,
+      shouldRebuild: (prev, next) =>
+          prev.languageLevel != next.languageLevel ||
+          prev.isNoLanguageCourse != next.isNoLanguageCourse,
       builder: (_, vmData, __) {
+        if (vmData.isNoLanguageCourse) {
+          return const SizedBox();
+        }
         return SizedBox(
           height: Dimens.d40.responsive(),
           child: ListView.separated(
@@ -105,9 +110,32 @@ class _LanguageCoursePageState
     return Selector<LanguageCourseViewModel, LanguageCourseViewModelData>(
         selector: (_, viewModel) => viewModel.viewModelData,
         shouldRebuild: (prev, next) =>
-            prev.languageCourses != next.languageCourses,
+            prev.languageCourses != next.languageCourses ||
+            prev.isNoLanguageCourse != next.isNoLanguageCourse,
         builder: (_, vmData, __) {
           final courses = vmData.languageCourses;
+          if (vmData.isNoLanguageCourse) {
+            return SizedBox(
+              width: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Assets.icons.icSadFace.svg(
+                    width: Dimens.d64.responsive(),
+                    height: Dimens.d64.responsive(),
+                  ),
+                  SizedBox(
+                    height: Dimens.d16.responsive(),
+                  ),
+                  Text(
+                    S.current.courseWillBeAvailableSoon,
+                    style: AppTextStyles.s14w400primary().font20().bold,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            );
+          }
           return GridView.builder(
             itemCount: courses.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -168,9 +196,19 @@ class _LanguageCoursePageState
                     SizedBox(
                       height: Dimens.d8.responsive(),
                     ),
-                    course.learningType.icon.svg(
-                      width: Dimens.d24.responsive(),
-                      height: Dimens.d24.responsive(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          course.learningType.learningTypeName,
+                          style:
+                              AppTextStyles.s14w400primary().font14().secondary,
+                        ),
+                        course.learningType.icon.svg(
+                          width: Dimens.d24.responsive(),
+                          height: Dimens.d24.responsive(),
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: Dimens.d16.responsive(),

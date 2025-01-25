@@ -39,6 +39,12 @@ class ApiLanguageCourseLearningContentData
     @JsonKey(name: 'phrasalVerbs') List<ApiPhrasalVerbData>? phrasalVerbs,
     @JsonKey(name: 'tenses') List<ApiTenseData>? tenses,
     @JsonKey(name: 'phonetics') List<ApiPhoneticData>? phonetics,
+    @JsonKey(name: 'englishTitle') String? englishTitle,
+    @JsonKey(name: 'vietnameseTitle') String? vietnameseTitle,
+    @JsonKey(name: 'frenchTitle') String? frenchTitle,
+    @JsonKey(name: 'englishDescription') String? englishDescription,
+    @JsonKey(name: 'vietnameseDescription') String? vietnameseDescription,
+    @JsonKey(name: 'frenchDescription') String? frenchDescription,
     @JsonKey(name: 'createdAt') String? createdAt,
     @JsonKey(name: 'updatedAt') String? updatedAt,
   }) = _ApiLanguageCourseLearningContentData;

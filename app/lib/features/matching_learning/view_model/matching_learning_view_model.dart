@@ -7,95 +7,216 @@ class MatchingLearningViewModel
   MatchingLearningViewModel() : super(const MatchingLearningViewModelData());
 
   void onInit({
-    required LearningContentType learningContentType,
     required LearningLanguage learningLanguage,
-    required LanguageCourseLearningContent languageCourseLearningContent,
+    required List<LanguageCourseLearningContent> languageCourseLearningContent,
   }) {
-    final numberOfLearningContent = switch (learningContentType) {
-      LearningContentType.word => languageCourseLearningContent.words.length,
-      LearningContentType.expression =>
-        languageCourseLearningContent.expressions.length,
-      LearningContentType.idiom => languageCourseLearningContent.idioms.length,
-      LearningContentType.sentence =>
-        languageCourseLearningContent.sentences.length,
-      LearningContentType.phrasalVerb =>
-        languageCourseLearningContent.phrasalVerbs.length,
-      LearningContentType.tense => languageCourseLearningContent.tenses.length,
-      LearningContentType.phonetics =>
-        languageCourseLearningContent.phonetics.length,
-    };
+    final matchingLearningEntities = <MatchingLearningEntity>[];
+    int totalLearningContentCount = 0;
 
-    final List<MatchingLearningEntity> matchingLearningEntities = [];
-    switch (learningContentType) {
-      case LearningContentType.word:
-        final List<Word> words = [...languageCourseLearningContent.words];
-        words.shuffle();
-        for (final word in words) {
-          var hint = switch (learningLanguage) {
-            LearningLanguage.english => word.vietnameseWord,
-            LearningLanguage.vietnamese => word.englishWord,
-            LearningLanguage.french => word.englishWord,
-          };
+    for (final content in languageCourseLearningContent) {
+      final learningContentType = content.learningContentType;
+      final numberOfLearningContent = switch (learningContentType) {
+        LearningContentType.word => content.words.length,
+        LearningContentType.expression => content.expressions.length,
+        LearningContentType.idiom => content.idioms.length,
+        LearningContentType.sentence => content.sentences.length,
+        LearningContentType.phrasalVerb => content.phrasalVerbs.length,
+        LearningContentType.tense => content.tenses.length,
+        LearningContentType.phonetics => content.phonetics.length,
+      };
+      totalLearningContentCount += numberOfLearningContent;
 
-          hint = "$hint - ${word.wordType.wordTypeName}";
+      switch (learningContentType) {
+        case LearningContentType.word:
+          final List<Word> words = [...content.words];
+          words.shuffle();
+          for (final word in words) {
+            var hint = switch (learningLanguage) {
+              LearningLanguage.english => word.vietnameseWord,
+              LearningLanguage.vietnamese => word.englishWord,
+              LearningLanguage.french => word.englishWord,
+            };
 
-          final tokenizedWord = switch (learningLanguage) {
-            LearningLanguage.english => word.englishWord,
-            LearningLanguage.vietnamese => word.vietnameseWord,
-            LearningLanguage.french => word.frenchWord,
+            hint = "$hint - ${word.wordType.wordTypeName}";
+
+            final tokenizedWord = switch (learningLanguage) {
+              LearningLanguage.english => word.englishWord,
+              LearningLanguage.vietnamese => word.vietnameseWord,
+              LearningLanguage.french => word.frenchWord,
+            }
+
+                /// Split the word into characters
+
+                .split('');
+            final originalWord = List<String>.from(tokenizedWord);
+
+            final matchingLearningEntity = MatchingLearningEntity(
+              id: word.wordId,
+              image: word.imageUrlItem,
+              hint: hint,
+              targetTexts: originalWord,
+              sourceTexts: tokenizedWord..shuffle(),
+              learningContentId: content.languageCourseLearningContentId,
+              learningContentType: content.learningContentType,
+            );
+            matchingLearningEntities.add(matchingLearningEntity);
+          }
+          break;
+        case LearningContentType.expression:
+          final List<Expression> expressions = [...content.expressions];
+          expressions.shuffle();
+          for (final expression in expressions) {
+            final appLanguage = appViewModel.viewModelData.languageCode;
+            final expressionName = switch (appLanguage) {
+              LanguageCode.en => expression.englishExpression,
+              LanguageCode.vi => expression.vietnameseExpression,
+            };
+            final description = switch (appLanguage) {
+              LanguageCode.en => expression.exampleUsage[
+                  LearningLanguage.english.serverValue.toLowerCase()],
+              LanguageCode.vi => expression.exampleUsage[
+                  LearningLanguage.vietnamese.serverValue.toLowerCase()],
+            };
+            final tokenizedExpression = expression.englishExpression.split(' ');
+            final originalExpression = List<String>.from(tokenizedExpression);
+
+            final matchingLearningEntity = MatchingLearningEntity(
+              id: expression.expressionId,
+              hint: "$expressionName\n$description",
+              targetTexts: originalExpression,
+              sourceTexts: tokenizedExpression..shuffle(),
+              learningContentType: content.learningContentType,
+              learningContentId: content.languageCourseLearningContentId,
+            );
+            matchingLearningEntities.add(matchingLearningEntity);
           }
 
-              /// Split the word into characters
+          break;
+        case LearningContentType.idiom:
+          final List<Idiom> idioms = [...content.idioms];
+          idioms.shuffle();
+          for (final idiom in idioms) {
+            final appLanguage = appViewModel.viewModelData.languageCode;
+            final idiomName = switch (appLanguage) {
+              LanguageCode.en => idiom.englishIdiom,
+              LanguageCode.vi => idiom.vietnameseIdiom,
+            };
+            final description = switch (appLanguage) {
+              LanguageCode.en => idiom.englishIdiomMeaning,
+              LanguageCode.vi => idiom.vietnameseIdiomMeaning,
+            };
+            final tokenizedIdiom = idiom.englishIdiom.split(' ');
+            final originalIdiom = List<String>.from(tokenizedIdiom);
 
-              .split('');
-          final originalWord = List<String>.from(tokenizedWord);
+            final matchingLearningEntity = MatchingLearningEntity(
+              id: idiom.idiomId,
+              hint: "$idiomName\n$description",
+              targetTexts: originalIdiom,
+              sourceTexts: tokenizedIdiom..shuffle(),
+              learningContentType: content.learningContentType,
+              learningContentId: content.languageCourseLearningContentId,
+            );
+            matchingLearningEntities.add(matchingLearningEntity);
+          }
 
-          final matchingLearningEntity = MatchingLearningEntity(
-            id: word.wordId,
-            image: word.imageUrlItem,
-            hint: hint,
-            targetTexts: originalWord,
-            sourceTexts: tokenizedWord..shuffle(),
-          );
-          matchingLearningEntities.add(matchingLearningEntity);
-        }
+          break;
+        case LearningContentType.sentence:
+          final List<Sentence> sentences = [...content.sentences];
+          sentences.shuffle();
+          for (final sentence in sentences) {
+            final appLanguage = appViewModel.viewModelData.languageCode;
+            final sentenceName = switch (appLanguage) {
+              LanguageCode.en => sentence.englishSentence,
+              LanguageCode.vi => sentence.vietnameseSentence,
+            };
+            final tokenizedSentence = sentence.englishSentence.split(' ');
+            final originalSentence = List<String>.from(tokenizedSentence);
 
-        updateData(
-          viewModelData.copyWith(
-            currentDraggedTexts: List.generate(
-              matchingLearningEntities.first.sourceTexts.length,
-              (index) => null,
-            ),
-          ),
-        );
+            final matchingLearningEntity = MatchingLearningEntity(
+              id: sentence.sentenceId,
+              hint: sentenceName,
+              targetTexts: originalSentence,
+              sourceTexts: tokenizedSentence..shuffle(),
+              learningContentType: content.learningContentType,
+              learningContentId: content.languageCourseLearningContentId,
+            );
+            matchingLearningEntities.add(matchingLearningEntity);
+          }
+          break;
+        case LearningContentType.phrasalVerb:
+          final List<PhrasalVerb> phrasalVerbs = [...content.phrasalVerbs];
+          phrasalVerbs.shuffle();
+          for (final phrasalVerb in phrasalVerbs) {
+            final appLanguage = appViewModel.viewModelData.languageCode;
+            final phrasalVerbName = switch (appLanguage) {
+              LanguageCode.en => phrasalVerb.englishPhrasalVerb,
+              LanguageCode.vi => phrasalVerb.vietnamesePhrasalVerb,
+            };
+            final description = switch (appLanguage) {
+              LanguageCode.en => phrasalVerb.englishDescription,
+              LanguageCode.vi => phrasalVerb.vietnameseDescription,
+            };
+            final tokenizedPhrasalVerb =
+                phrasalVerb.englishPhrasalVerb.split(' ');
+            final originalPhrasalVerb = List<String>.from(tokenizedPhrasalVerb);
 
-        break;
-      case LearningContentType.expression:
-        // TODO: Handle this case.
-        throw UnimplementedError();
-      case LearningContentType.idiom:
-        // TODO: Handle this case.
-        throw UnimplementedError();
-      case LearningContentType.sentence:
-        // TODO: Handle this case.
-        throw UnimplementedError();
-      case LearningContentType.phrasalVerb:
-        // TODO: Handle this case.
-        throw UnimplementedError();
-      case LearningContentType.tense:
-        // TODO: Handle this case.
-        throw UnimplementedError();
-      case LearningContentType.phonetics:
-        // TODO: Handle this case.
-        throw UnimplementedError();
+            final matchingLearningEntity = MatchingLearningEntity(
+              id: phrasalVerb.phrasalVerbId,
+              hint: "$phrasalVerbName\n$description",
+              targetTexts: originalPhrasalVerb,
+              sourceTexts: tokenizedPhrasalVerb..shuffle(),
+              learningContentType: content.learningContentType,
+              learningContentId: content.languageCourseLearningContentId,
+            );
+            matchingLearningEntities.add(matchingLearningEntity);
+          }
+
+          break;
+        case LearningContentType.tense:
+          final List<Tense> tenses = [...content.tenses];
+          tenses.shuffle();
+          for (final tense in tenses) {
+            final tenseName = switch (learningLanguage) {
+              LearningLanguage.english => tense.englishTenseName,
+              LearningLanguage.vietnamese => tense.vietnameseTenseName,
+              LearningLanguage.french => tense.frenchTenseName,
+            };
+            final description = switch (learningLanguage) {
+              LearningLanguage.english => tense.englishDescription,
+              LearningLanguage.vietnamese => tense.vietnameseDescription,
+              LearningLanguage.french => tense.frenchDescription,
+            };
+            final tokenizedTense = tense.tenseRule.split(' ');
+            final originalTense = List<String>.from(tokenizedTense);
+
+            final matchingLearningEntity = MatchingLearningEntity(
+              id: tense.tenseId,
+              hint: "$tenseName\n$description",
+              targetTexts: originalTense,
+              sourceTexts: tokenizedTense..shuffle(),
+              learningContentType: content.learningContentType,
+              learningContentId: content.languageCourseLearningContentId,
+            );
+            matchingLearningEntities.add(matchingLearningEntity);
+          }
+        case LearningContentType.phonetics:
+          navigator.pop();
+          break;
+      }
     }
+
+    matchingLearningEntities.shuffle();
 
     updateData(
       viewModelData.copyWith(
         learningLanguage: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContent,
-        totalLearningContentCount: numberOfLearningContent,
+        totalLearningContentCount: totalLearningContentCount,
         matchingLearningEntities: matchingLearningEntities,
+        currentDraggedTexts: List.generate(
+          matchingLearningEntities.first.sourceTexts.length,
+          (index) => null,
+        ),
       ),
     );
   }

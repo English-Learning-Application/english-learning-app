@@ -29,6 +29,7 @@ class LanguageCourseViewModel
         updateData(
           viewModelData.copyWith(
             languageCourses: resp.languageCourses,
+            isNoLanguageCourse: resp.languageCourses.isEmpty,
           ),
         );
       },
