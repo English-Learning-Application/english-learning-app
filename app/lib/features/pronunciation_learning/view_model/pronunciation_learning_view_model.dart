@@ -268,34 +268,56 @@ class PronunciationLearningViewModel
     );
   }
 
-  Future<void> onAssessment() async {
-    final currentEntity = viewModelData.pronunciationLearningEntities[
-        viewModelData.currentLearningContentIndex];
-
-    final pronunciationAssessmentUseCaseInput =
-        PronunciationAssessmentUseCaseInput(
-      id: currentEntity.id,
-      text: currentEntity.pronunciation,
-      filePath: viewModelData.recordedFilePath,
-      learningContentType: currentEntity.learningContentType,
-    );
-
-    final pronunciationAssessmentOutput =
-        await _pronunciationAssessmentUseCase.execute(
-      pronunciationAssessmentUseCaseInput,
-    );
-
-    final pronunciationAssessment =
-        pronunciationAssessmentOutput.pronunciationAssessment;
-
-    final entities = [...viewModelData.pronunciationLearningEntities];
-    entities[viewModelData.currentLearningContentIndex] = currentEntity
-        .copyWith(pronunciationAssessment: pronunciationAssessment);
+  void onNext() {
+    if (viewModelData.currentLearningContentIndex ==
+        viewModelData.totalLearningContentCount - 1) {
+      return;
+    }
 
     updateData(
       viewModelData.copyWith(
-        pronunciationLearningEntities: entities,
+        currentLearningContentIndex:
+            viewModelData.currentLearningContentIndex + 1,
       ),
+    );
+  }
+
+  Future<void> onAssessment() async {
+    await runViewModelCatching(
+      action: () async {
+        final currentEntity = viewModelData.pronunciationLearningEntities[
+            viewModelData.currentLearningContentIndex];
+
+        final pronunciationAssessmentUseCaseInput =
+            PronunciationAssessmentUseCaseInput(
+          text: currentEntity.pronunciation,
+          filePath: viewModelData.recordedFilePath,
+        );
+
+        final pronunciationAssessmentOutput =
+            await _pronunciationAssessmentUseCase.execute(
+          pronunciationAssessmentUseCaseInput,
+        );
+
+        final pronunciationAssessment =
+            pronunciationAssessmentOutput.pronunciationAssessment;
+
+        final entities = [...viewModelData.pronunciationLearningEntities];
+        final pronunciationAssessments = [
+          ...currentEntity.pronunciationAssessment,
+          pronunciationAssessment
+        ];
+        entities[viewModelData.currentLearningContentIndex] =
+            currentEntity.copyWith(
+          pronunciationAssessment: pronunciationAssessments,
+        );
+
+        updateData(
+          viewModelData.copyWith(
+            pronunciationLearningEntities: entities,
+          ),
+        );
+      },
     );
   }
 }

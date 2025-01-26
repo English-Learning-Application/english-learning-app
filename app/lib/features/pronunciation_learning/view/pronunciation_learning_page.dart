@@ -5,6 +5,7 @@ import 'package:audio_waveforms/audio_waveforms.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:design/design.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:localization/localization.dart';
 import 'package:logic/logic.dart';
 import 'package:provider/provider.dart';
@@ -87,6 +88,66 @@ class _PronunciationLearningPageState extends BasePageState<
         ),
         SizedBox(height: Dimens.d16.responsive()),
         _buildPronunciationLearningFooter(),
+        SizedBox(height: Dimens.d16.responsive()),
+        Selector<PronunciationLearningViewModel,
+            PronunciationLearningViewModelData>(
+          selector: (_, viewModel) => viewModel.viewModelData,
+          shouldRebuild: (previous, next) {
+            final differentIndex = previous.currentLearningContentIndex !=
+                next.currentLearningContentIndex;
+            if (differentIndex) return differentIndex;
+
+            final prevLearningEntity = previous.pronunciationLearningEntities[
+                previous.currentLearningContentIndex];
+            final currentLearningEntity = next.pronunciationLearningEntities[
+                next.currentLearningContentIndex];
+            return prevLearningEntity != currentLearningEntity;
+          },
+          builder: (_, vmData, __) {
+            final pronunciationLearningEntity =
+                vmData.pronunciationLearningEntities[
+                    vmData.currentLearningContentIndex];
+            if (pronunciationLearningEntity.pronunciationAssessment.isEmpty) {
+              return const SizedBox.shrink();
+            }
+            final latestAssessment =
+                pronunciationLearningEntity.pronunciationAssessment.last;
+            return Column(
+              children: [
+                Text(
+                  "${S.current.score}: ${latestAssessment.score}",
+                  textAlign: TextAlign.center,
+                  style: AppTextStyles.s14w400primary().font16().medium,
+                ),
+                SizedBox(height: Dimens.d8.responsive()),
+                Text(
+                  "IELTS: ${latestAssessment.scoreEstimates.ielts}",
+                  textAlign: TextAlign.center,
+                  style: AppTextStyles.s14w400primary().font16().medium,
+                ),
+                SizedBox(height: Dimens.d8.responsive()),
+                Wrap(
+                  direction: Axis.horizontal,
+                  spacing: Dimens.d8.responsive(),
+                  runSpacing: Dimens.d8.responsive(),
+                  children: [
+                    for (final word in latestAssessment.words)
+                      Chip(
+                        label: Text(
+                          "${word.label}: ${word.score}",
+                          style: AppTextStyles.s14w400primary()
+                              .font14()
+                              .regular
+                              .secondary,
+                        ),
+                        backgroundColor: AppColors.current.primaryColor,
+                      ),
+                  ],
+                ),
+              ],
+            );
+          },
+        ),
         SizedBox(height: Dimens.d16.responsive()),
         _buildControlButtons(),
       ],
@@ -222,7 +283,10 @@ class _PronunciationLearningPageState extends BasePageState<
                 } else {
                   _widthAnimationController.forward();
                   viewModel.onSpeaking();
+                  final applicationPath =
+                      await GetIt.instance<AppInfo>().appDirectoryPath;
                   await _recorderController.record(
+                    path: "$applicationPath/recorder.m4a",
                     androidEncoder: AndroidEncoder.aac,
                     androidOutputFormat: AndroidOutputFormat.mpeg4,
                     iosEncoder: IosEncoder.kAudioFormatMPEG4AAC,
@@ -330,6 +394,44 @@ class _PronunciationLearningPageState extends BasePageState<
                 leadingIconSize: 0,
                 trailingIconSize: 0,
                 text: S.current.assessment,
+                buttonSize: ButtonSize.small,
+              ),
+            );
+          },
+        ),
+        SizedBox(width: Dimens.d8.responsive()),
+        Selector<PronunciationLearningViewModel,
+            PronunciationLearningViewModelData>(
+          selector: (context, viewModel) => viewModel.viewModelData,
+          shouldRebuild: (previous, next) {
+            final differentIndex = previous.currentLearningContentIndex !=
+                next.currentLearningContentIndex;
+            if (differentIndex) return differentIndex;
+
+            final prevLearningEntity = previous.pronunciationLearningEntities[
+                previous.currentLearningContentIndex];
+            final currentLearningEntity = next.pronunciationLearningEntities[
+                next.currentLearningContentIndex];
+            return prevLearningEntity != currentLearningEntity;
+          },
+          builder: (_, vmData, __) {
+            final hasAssessment = vmData
+                .pronunciationLearningEntities[
+                    vmData.currentLearningContentIndex]
+                .pronunciationAssessment
+                .isNotEmpty;
+            return Expanded(
+              child: StandardButton(
+                onPressed: () {
+                  if (!hasAssessment) return;
+                  viewModel.onNext();
+                },
+                buttonType:
+                    hasAssessment ? ButtonType.primary : ButtonType.disabled,
+                innerGap: 0,
+                leadingIconSize: 0,
+                trailingIconSize: 0,
+                text: S.current.next,
                 buttonSize: ButtonSize.small,
               ),
             );

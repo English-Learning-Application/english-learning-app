@@ -65,15 +65,10 @@ extension GetItInjectableX on _i174.GetIt {
     final appModules = _$AppModules();
     gh.factory<_i709.AiChatBotViewModel>(() => _i709.AiChatBotViewModel());
     gh.factory<_i366.CourseViewModel>(() => _i366.CourseViewModel());
-    gh.factory<_i5.FlashCardLearningViewModel>(
-        () => _i5.FlashCardLearningViewModel());
     gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel());
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
-    gh.factory<_i235.MatchingLearningViewModel>(
-        () => _i235.MatchingLearningViewModel());
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
     gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
-    gh.factory<_i96.QuizLearningViewModel>(() => _i96.QuizLearningViewModel());
     gh.factory<_i901.ListeningLearningViewModel>(
         () => _i901.ListeningLearningViewModel());
     gh.lazySingleton<_i50.FlutterTts>(() => appModules.flutterTts);
@@ -84,6 +79,8 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.IsLoggedInUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),
         ));
+    gh.factory<_i96.QuizLearningViewModel>(() =>
+        _i96.QuizLearningViewModel(gh<_i182.QuizLearningUpdateUseCase>()));
     gh.lazySingleton<_i137.BaseRouteInfoMapper>(
         () => _i48.AppRouteInfoMapper());
     gh.factory<_i635.SplashViewModel>(() => _i635.SplashViewModel(
@@ -123,6 +120,9 @@ extension GetItInjectableX on _i174.GetIt {
             gh<_i182.RegistrationCompletionUseCase>()));
     gh.factory<_i725.LanguageCourseDetailsViewModel>(
         () => _i725.LanguageCourseDetailsViewModel(gh<_i50.FlutterTts>()));
+    gh.factory<_i235.MatchingLearningViewModel>(() =>
+        _i235.MatchingLearningViewModel(
+            gh<_i182.MatchingLearningUpdateUseCase>()));
     gh.lazySingleton<_i931.AppRouter>(() => _i931.AppRouter(
           gh<_i137.RouteGuard>(),
           gh<_i21.IsLoggedInRouteGuard>(),
@@ -132,6 +132,9 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i182.CheckPermissionUseCase>(),
               gh<_i182.PronunciationAssessmentUseCase>(),
             ));
+    gh.factory<_i5.FlashCardLearningViewModel>(() =>
+        _i5.FlashCardLearningViewModel(
+            gh<_i182.FlashCardLearningUpdateUseCase>()));
     gh.lazySingleton<_i182.AppNavigator>(() => _i101.AppNavigatorImpl(
           gh<_i137.AppRouter>(),
           gh<_i137.BasePopupInfoMapper>(),

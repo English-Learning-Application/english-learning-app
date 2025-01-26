@@ -20,7 +20,7 @@ class PronunciationLearningEntity with _$PronunciationLearningEntity {
     @Default(PronunciationLearningEntity.defaultLearningContentType)
     LearningContentType learningContentType,
     @Default(PronunciationLearningEntity.defaultPronunciationAssessment)
-    PronunciationAssessment pronunciationAssessment,
+    List<PronunciationAssessment> pronunciationAssessment,
   }) = _PronunciationLearningEntity;
 
   static const defaultId = '';
@@ -30,5 +30,6 @@ class PronunciationLearningEntity with _$PronunciationLearningEntity {
   static const defaultLearningContentId = '';
   static const LearningContentType defaultLearningContentType =
       LearningContentType.word;
-  static const defaultPronunciationAssessment = PronunciationAssessment();
+  static const List<PronunciationAssessment> defaultPronunciationAssessment =
+      [];
 }

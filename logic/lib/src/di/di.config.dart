@@ -23,8 +23,14 @@ import 'package:logic/src/features/authentication/usecase/registration_completio
     as _i119;
 import 'package:logic/src/features/authentication/usecase/username_registration_use_case.dart'
     as _i323;
+import 'package:logic/src/features/exercise/use_case/flash_card_learning_update_use_case.dart'
+    as _i700;
+import 'package:logic/src/features/exercise/use_case/matching_learning_update_use_case.dart'
+    as _i37;
 import 'package:logic/src/features/exercise/use_case/pronunciation_assessment_use_case.dart'
     as _i700;
+import 'package:logic/src/features/exercise/use_case/quiz_learning_update_use_case.dart'
+    as _i918;
 import 'package:logic/src/features/language_course/use_case/get_language_courses_by_language_and_level_use_case.dart'
     as _i408;
 import 'package:logic/src/features/language_course/use_case/get_language_courses_by_language_use_case.dart'
@@ -106,6 +112,12 @@ extension GetItInjectableX on _i174.GetIt {
             ));
     gh.factory<_i700.PronunciationAssessmentUseCase>(() =>
         _i700.PronunciationAssessmentUseCase(gh<_i182.ExerciseRepository>()));
+    gh.factory<_i700.FlashCardLearningUpdateUseCase>(() =>
+        _i700.FlashCardLearningUpdateUseCase(gh<_i182.ExerciseRepository>()));
+    gh.factory<_i918.QuizLearningUpdateUseCase>(
+        () => _i918.QuizLearningUpdateUseCase(gh<_i182.ExerciseRepository>()));
+    gh.factory<_i37.MatchingLearningUpdateUseCase>(() =>
+        _i37.MatchingLearningUpdateUseCase(gh<_i182.ExerciseRepository>()));
     return this;
   }
 }

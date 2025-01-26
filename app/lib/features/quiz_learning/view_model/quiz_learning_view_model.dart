@@ -4,7 +4,11 @@ part of 'quiz_learning.dart';
 class QuizLearningViewModel extends BaseViewModel<QuizLearningViewModelData> {
   final AudioPlayer _audioPlayer = GetIt.instance.get<AudioPlayer>();
   final FlutterTts _flutterTts = GetIt.instance.get<FlutterTts>();
-  QuizLearningViewModel() : super(const QuizLearningViewModelData());
+  final QuizLearningUpdateUseCase _quizLearningUpdateUseCase;
+
+  QuizLearningViewModel(
+    this._quizLearningUpdateUseCase,
+  ) : super(const QuizLearningViewModelData());
 
   void onInit({
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
@@ -438,14 +442,6 @@ class QuizLearningViewModel extends BaseViewModel<QuizLearningViewModelData> {
         .map((e) => e.id == currentEntity.id ? currentEntity : e)
         .toList();
 
-    if (currentIndex == viewModelData.totalLearningContentCount - 1) {
-      await _audioPlayer.play(
-        AssetSource(
-          Assets.audios.congrats.replaceFirst('assets/', ''),
-        ),
-      );
-    }
-
     updateData(
       viewModelData.copyWith(
         quizLearningEntities: replacedList,
@@ -457,5 +453,27 @@ class QuizLearningViewModel extends BaseViewModel<QuizLearningViewModelData> {
                 : currentIndex,
       ),
     );
+
+    if (currentIndex == viewModelData.totalLearningContentCount - 1) {
+      await runViewModelCatching(
+        action: () async {
+          final correctAnswers = viewModelData.correctContentIds;
+          final incorrectAnswers = viewModelData.incorrectContentIds;
+          final quizLearningEntities = viewModelData.quizLearningEntities;
+          await _quizLearningUpdateUseCase.execute(
+            QuizLearningUpdateInput(
+              quizLearnings: quizLearningEntities,
+              correctItemIds: correctAnswers,
+              incorrectItemIds: incorrectAnswers,
+            ),
+          );
+          await _audioPlayer.play(
+            AssetSource(
+              Assets.audios.congrats.replaceFirst('assets/', ''),
+            ),
+          );
+        },
+      );
+    }
   }
 }

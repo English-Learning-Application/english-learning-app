@@ -33,3 +33,27 @@ class MatchingLearningEntity with _$MatchingLearningEntity {
   static const LearningContentType defaultLearningContentType =
       LearningContentType.word;
 }
+
+@freezed
+class MatchingLearning with _$MatchingLearning {
+  const MatchingLearning._();
+
+  const factory MatchingLearning({
+    @Default(MatchingLearning.defaultMatchingLearningId) String id,
+    @Default(MatchingLearning.defaultLearningContentId)
+    String learningContentId,
+    @Default(MatchingLearning.defaultItemId) String itemId,
+    @Default(MatchingLearning.defaultLearningContentType)
+    LearningContentType learningContentType,
+    @Default(MatchingLearning.defaultNumberOfCorrect) int numberOfCorrect,
+    @Default(MatchingLearning.defaultNumberOfIncorrect) int numberOfIncorrect,
+  }) = _MatchingLearning;
+
+  static const defaultMatchingLearningId = '';
+  static const defaultLearningContentId = '';
+  static const defaultItemId = '';
+  static const LearningContentType defaultLearningContentType =
+      LearningContentType.word;
+  static const defaultNumberOfCorrect = 0;
+  static const defaultNumberOfIncorrect = 0;
+}

@@ -165,6 +165,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerDescription": MessageLookupByLibrary.simpleMessage(
             "Register to access all of our services"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
+        "score": MessageLookupByLibrary.simpleMessage("Score"),
         "selectLearningLanguage": MessageLookupByLibrary.simpleMessage(
             "Select the language you want to learn"),
         "selectLearningModes":

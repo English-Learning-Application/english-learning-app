@@ -7,6 +7,7 @@ class PronunciationAssessment with _$PronunciationAssessment {
   const PronunciationAssessment._();
 
   const factory PronunciationAssessment({
+    @Default(PronunciationAssessment.defaultId) String id,
     @Default(
       PronunciationAssessment.defaultPronunciationWords,
     )
@@ -23,6 +24,7 @@ class PronunciationAssessment with _$PronunciationAssessment {
   static const defaultPronunciationAccentPrediction =
       PronunciationAccentPrediction();
   static const defaultScoreEstimates = ScoreEstimates();
+  static const defaultId = '';
 }
 
 @freezed

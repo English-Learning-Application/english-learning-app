@@ -4,7 +4,10 @@ part of 'matching_learning.dart';
 class MatchingLearningViewModel
     extends BaseViewModel<MatchingLearningViewModelData> {
   final AudioPlayer _audioPlayer = getIt.get<AudioPlayer>();
-  MatchingLearningViewModel() : super(const MatchingLearningViewModelData());
+  final MatchingLearningUpdateUseCase _matchingLearningUpdateUseCase;
+  MatchingLearningViewModel(
+    this._matchingLearningUpdateUseCase,
+  ) : super(const MatchingLearningViewModelData());
 
   void onInit({
     required LearningLanguage learningLanguage,
@@ -359,5 +362,31 @@ class MatchingLearningViewModel
         skippedContentIds: skippedContentIds,
       ),
     );
+
+    /// If the user has finished all the exercises
+    /// then update the matching learning entities
+    if (currentLearningContentIndex >=
+        viewModelData.totalLearningContentCount - 1) {
+      await runViewModelCatching(
+        action: () async {
+          final matchingLearningEntities =
+              viewModelData.matchingLearningEntities;
+          final correctItemIds = learnedContentIds;
+          final incorrectItemIds = skippedContentIds;
+          await _matchingLearningUpdateUseCase.execute(
+            MatchingLearningUpdateInput(
+              matchingLearnings: matchingLearningEntities,
+              correctItemIds: correctItemIds,
+              incorrectItemIds: incorrectItemIds,
+            ),
+          );
+          await _audioPlayer.play(
+            AssetSource(
+              Assets.audios.congrats.replaceFirst('assets/', ''),
+            ),
+          );
+        },
+      );
+    }
   }
 }

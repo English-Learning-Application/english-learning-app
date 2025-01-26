@@ -5,7 +5,10 @@ class FlashCardLearningViewModel
     extends BaseViewModel<FlashCardLearningViewModelData> {
   final FlutterTts _flutterTts = getIt.get<FlutterTts>();
   final AudioPlayer _audioPlayer = getIt.get<AudioPlayer>();
-  FlashCardLearningViewModel() : super(const FlashCardLearningViewModelData());
+  final FlashCardLearningUpdateUseCase _flashCardLearningUpdateUseCase;
+  FlashCardLearningViewModel(
+    this._flashCardLearningUpdateUseCase,
+  ) : super(const FlashCardLearningViewModelData());
 
   void onInit({
     required List<LanguageCourseLearningContent> languageCourseLearningContents,
@@ -311,17 +314,6 @@ class FlashCardLearningViewModel
     final learnedIds = [...viewModelData.learnedContentIds];
     learnedIds.add(currentContentId);
 
-    if (currentIndex == viewModelData.totalLearningContentCount - 1) {
-      await _audioPlayer.play(
-        AssetSource(
-          Assets.audios.correct.replaceFirst(
-            'assets/',
-            '',
-          ),
-        ),
-      );
-    }
-
     updateData(
       viewModelData.copyWith(
         currentLearningContentIndex:
@@ -331,5 +323,33 @@ class FlashCardLearningViewModel
         learnedContentIds: learnedIds,
       ),
     );
+
+    if (currentIndex == viewModelData.totalLearningContentCount - 1) {
+      runViewModelCatching(
+        action: () async {
+          final flashCardLearningEntities =
+              viewModelData.flashCardLearningEntities;
+          final learnedItemIds = viewModelData.learnedContentIds;
+          final skippedItemIds = viewModelData.skippedContentIds;
+
+          final flashCardLearningUpdateInput = FlashCardLearningUpdateInput(
+            flashCardLearnings: flashCardLearningEntities,
+            learnedItemIds: learnedItemIds,
+            skippedItemIds: skippedItemIds,
+          );
+          await _flashCardLearningUpdateUseCase.execute(
+            flashCardLearningUpdateInput,
+          );
+        },
+      );
+      await _audioPlayer.play(
+        AssetSource(
+          Assets.audios.correct.replaceFirst(
+            'assets/',
+            '',
+          ),
+        ),
+      );
+    }
   }
 }

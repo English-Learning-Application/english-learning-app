@@ -31,3 +31,27 @@ class FlashCardLearningEntity with _$FlashCardLearningEntity {
   static const LearningContentType defaultLearningContentType =
       LearningContentType.word;
 }
+
+@freezed
+class FlashCardLearning with _$FlashCardLearning {
+  const FlashCardLearning._();
+
+  const factory FlashCardLearning({
+    @Default(FlashCardLearning.defaultFlashCardLearningId) String id,
+    @Default(FlashCardLearning.defaultLearningContentId)
+    String learningContentId,
+    @Default(FlashCardLearning.defaultItemId) String itemId,
+    @Default(FlashCardLearning.defaultLearningContentType)
+    LearningContentType learningContentType,
+    @Default(FlashCardLearning.defaultNumberOfLearned) int numberOfLearned,
+    @Default(FlashCardLearning.defaultNumberOfSkipped) int numberOfSkipped,
+  }) = _FlashCardLearning;
+
+  static const defaultFlashCardLearningId = '';
+  static const defaultLearningContentId = '';
+  static const defaultItemId = '';
+  static const LearningContentType defaultLearningContentType =
+      LearningContentType.word;
+  static const defaultNumberOfLearned = 0;
+  static const defaultNumberOfSkipped = 0;
+}

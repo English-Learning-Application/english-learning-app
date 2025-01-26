@@ -165,6 +165,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerDescription": MessageLookupByLibrary.simpleMessage(
             "Đăng ký để truy cập tất cả các dịch vụ của chúng tôi"),
         "retry": MessageLookupByLibrary.simpleMessage("Thử lại"),
+        "score": MessageLookupByLibrary.simpleMessage("Điểm"),
         "selectLearningLanguage":
             MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ bạn muốn học"),
         "selectLearningModes": MessageLookupByLibrary.simpleMessage(

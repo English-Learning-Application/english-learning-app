@@ -1,5 +1,6 @@
 import 'package:injectable/injectable.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:path_provider/path_provider.dart';
 
 import '../../services.dart';
 
@@ -16,6 +17,8 @@ class AppInfo {
   String get versionName => _packageInfo?.version ?? '';
 
   Future<String> get deviceId async => DeviceUtils.getDeviceId();
+
+  Future<String> get appDirectoryPath async => getApplicationDocumentsDirectory().then((value) => value.path);
 
   Future<void> init() async {
     _packageInfo = await PackageInfo.fromPlatform();
