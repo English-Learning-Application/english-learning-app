@@ -72,4 +72,37 @@ class LanguageCourseViewModel
       },
     );
   }
+
+  Future<void> refresh() async {
+    await runViewModelCatching(
+      action: () async {
+        final currentLevel = viewModelData.languageLevel;
+        if (currentLevel == LanguageLevel.all) {
+          final resp = await _getLanguageCoursesByLanguageUseCase.execute(
+            GetLanguageCoursesByLanguageInput(
+              language: viewModelData.learningLanguage,
+            ),
+          );
+          updateData(
+            viewModelData.copyWith(
+              languageCourses: resp.languageCourses,
+            ),
+          );
+        } else {
+          final resp =
+              await _getLanguageCoursesByLanguageAndLevelUseCase.execute(
+            GetLanguageCoursesByLanguageAndLevelInput(
+              level: currentLevel,
+              language: viewModelData.learningLanguage,
+            ),
+          );
+          updateData(
+            viewModelData.copyWith(
+              languageCourses: resp.languageCourses,
+            ),
+          );
+        }
+      },
+    );
+  }
 }

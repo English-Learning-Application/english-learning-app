@@ -29,6 +29,7 @@ dependencies:
   connectivity_plus: ^6.0.5
   dio_cache_interceptor: ^3.5.0
   dartx: ^1.2.0
+  photo_manager: ^3.6.4
 
 dev_dependencies:
   flutter_test:

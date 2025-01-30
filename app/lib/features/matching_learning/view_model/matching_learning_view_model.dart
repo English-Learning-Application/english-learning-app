@@ -5,6 +5,7 @@ class MatchingLearningViewModel
     extends BaseViewModel<MatchingLearningViewModelData> {
   final AudioPlayer _audioPlayer = getIt.get<AudioPlayer>();
   final MatchingLearningUpdateUseCase _matchingLearningUpdateUseCase;
+  final FlutterTts _flutterTts = getIt.get<FlutterTts>();
   MatchingLearningViewModel(
     this._matchingLearningUpdateUseCase,
   ) : super(const MatchingLearningViewModelData());
@@ -269,6 +270,22 @@ class MatchingLearningViewModel
         currentDraggedTexts: currentDraggedTexts,
       ),
     );
+  }
+
+  Future<void> speakFromText(String text, LearningLanguage language) async {
+    double speechRate;
+    double pitch;
+    if (Platform.isIOS) {
+      speechRate = 0.4;
+      pitch = 1.2;
+    } else {
+      speechRate = 0.5;
+      pitch = 1.3;
+    }
+    await _flutterTts.setLanguage(language.textToSpeechLanguage);
+    await _flutterTts.setPitch(pitch);
+    await _flutterTts.setSpeechRate(speechRate);
+    await _flutterTts.speak(text);
   }
 
   void onNextButtonTap() async {

@@ -12,6 +12,8 @@ class PronunciationAssessment with _$PronunciationAssessment {
       PronunciationAssessment.defaultPronunciationWords,
     )
     List<PronunciationWord> words,
+    @Default(PronunciationAssessment.defaultPronunciationLearningId)
+        String pronunciationLearningId,
     @Default(PronunciationAssessment.defaultScore) int score,
     @Default(PronunciationAssessment.defaultPronunciationAccentPrediction)
     PronunciationAccentPrediction pronunciationAccentPrediction,
@@ -20,6 +22,7 @@ class PronunciationAssessment with _$PronunciationAssessment {
   }) = _PronunciationAssessment;
 
   static const defaultPronunciationWords = <PronunciationWord>[];
+  static const defaultPronunciationLearningId = '';
   static const defaultScore = 0;
   static const defaultPronunciationAccentPrediction =
       PronunciationAccentPrediction();

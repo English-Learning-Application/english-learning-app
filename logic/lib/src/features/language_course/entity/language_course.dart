@@ -5,6 +5,7 @@ part 'language_course.freezed.dart';
 
 @freezed
 class LanguageCourse with _$LanguageCourse {
+  const LanguageCourse._();
   const factory LanguageCourse({
     @Default(LanguageCourse.defaultLanguageCourseId) String languageCourseId,
     @Default(LanguageCourse.defaultLanguage) LearningLanguage language,
@@ -27,6 +28,17 @@ class LanguageCourse with _$LanguageCourse {
       <LanguageCourseLearningContent>[];
   static const DateTime? defaultCreatedAt = null;
   static const DateTime? defaultUpdatedAt = null;
+
+  double completionProgress() {
+    if (languageCourseLearningContents.isEmpty) {
+      return 0.0;
+    }
+    double progress = 0.0;
+    for (var content in languageCourseLearningContents) {
+      progress += content.progress;
+    }
+    return progress / languageCourseLearningContents.length;
+  }
 }
 
 @freezed
@@ -64,6 +76,7 @@ class LanguageCourseLearningContent with _$LanguageCourseLearningContent {
     DateTime? createdAt,
     @Default(LanguageCourseLearningContent.defaultUpdatedAt)
     DateTime? updatedAt,
+    @Default(LanguageCourseLearningContent.defaultProgress) double progress,
   }) = _LanguageCourseLearningContent;
 
   static const defaultLanguageCourseLearningContentId = '';
@@ -83,4 +96,5 @@ class LanguageCourseLearningContent with _$LanguageCourseLearningContent {
   static const defaultFrenchDescription = '';
   static const DateTime? defaultCreatedAt = null;
   static const DateTime? defaultUpdatedAt = null;
+  static const defaultProgress = 0.0;
 }

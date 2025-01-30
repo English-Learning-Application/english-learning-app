@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'vi';
 
-  static String m0(errorCode) => "Lỗi không xác định (${errorCode})";
+  static String m0(time) => "Gửi lại mã OTP lúc ${time}";
+
+  static String m1(errorCode) => "Lỗi không xác định (${errorCode})";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -81,12 +83,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "idiom": MessageLookupByLibrary.simpleMessage("Thành ngữ"),
         "incorrect": MessageLookupByLibrary.simpleMessage("Sai"),
+        "inputYourPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Nhập số điện thoại của bạn"),
         "interjection": MessageLookupByLibrary.simpleMessage("Thán từ"),
         "interrogativeTense": MessageLookupByLibrary.simpleMessage("Nghi vấn"),
         "invalidConfirmationPassword": MessageLookupByLibrary.simpleMessage(
             "Mật khẩu xác nhận không khớp"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Định dạng ngày giờ sai"),
+        "invalidPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Số điện thoại không hợp lệ"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
         "joinCommunity":
@@ -101,6 +107,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Ngôn ngữ học"),
         "level": MessageLookupByLibrary.simpleMessage("Cấp độ"),
+        "listenAndMatch":
+            MessageLookupByLibrary.simpleMessage("Nghe và kết hợp"),
         "listening": MessageLookupByLibrary.simpleMessage("Nghe"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "loginDescription": MessageLookupByLibrary.simpleMessage(
@@ -164,6 +172,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "registerDescription": MessageLookupByLibrary.simpleMessage(
             "Đăng ký để truy cập tất cả các dịch vụ của chúng tôi"),
+        "resendOtp": MessageLookupByLibrary.simpleMessage("Gửi lại mã OTP"),
+        "resendOtpAt": m0,
         "retry": MessageLookupByLibrary.simpleMessage("Thử lại"),
         "score": MessageLookupByLibrary.simpleMessage("Điểm"),
         "selectLearningLanguage":
@@ -172,6 +182,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Chọn các chế độ học tập của bạn"),
         "selectNativeLanguage":
             MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ mẹ đẻ của bạn"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("Gửi email"),
+        "sendOtp": MessageLookupByLibrary.simpleMessage("Gửi mã OTP"),
         "sentence": MessageLookupByLibrary.simpleMessage("Câu văn"),
         "skip": MessageLookupByLibrary.simpleMessage("Bỏ qua"),
         "speaking": MessageLookupByLibrary.simpleMessage("Nói"),
@@ -188,11 +200,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Theo dõi tiến trình của bạn và xem bạn đã đi được bao xa trên hành trình học tập của mình."),
         "travel": MessageLookupByLibrary.simpleMessage("Du lịch"),
-        "unknownException": m0,
+        "unknownException": m1,
+        "updateProfilePicture":
+            MessageLookupByLibrary.simpleMessage("Cập nhật ảnh đại diện"),
         "username": MessageLookupByLibrary.simpleMessage("Tên người dùng"),
         "usernameHint":
             MessageLookupByLibrary.simpleMessage("Nhập tên người dùng"),
         "verb": MessageLookupByLibrary.simpleMessage("Động từ"),
+        "verifyEmail": MessageLookupByLibrary.simpleMessage("Xác nhận email"),
+        "verifyEmailDescription": MessageLookupByLibrary.simpleMessage(
+            "Chúng tôi đã gửi một email xác nhận đến địa chỉ email của bạn. Vui lòng xác nhận email của bạn để truy cập tất cả các dịch vụ của chúng tôi."),
+        "verifyEmailSuggestion": MessageLookupByLibrary.simpleMessage(
+            "Vui lòng xác nhận email của bạn để truy cập tất cả các dịch vụ của chúng tôi"),
+        "verifyPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Xác nhận số điện thoại"),
+        "verifyPhoneNumberDescription": MessageLookupByLibrary.simpleMessage(
+            "Chúng tôi đã gửi mã OTP đến số điện thoại của bạn. Vui lòng xác nhận số điện thoại của bạn để nhận thông tin mới nhất từ chúng tôi."),
+        "verifyPhoneNumberSuccess": MessageLookupByLibrary.simpleMessage(
+            "Số điện thoại của bạn đã được xác nhận thành công"),
+        "verifyPhoneNumberSuggestion": MessageLookupByLibrary.simpleMessage(
+            "Vui lòng xác nhận số điện thoại của bạn để nhận thông tin mới nhất từ chúng tôi"),
         "vietnamese": MessageLookupByLibrary.simpleMessage("Tiếng Việt"),
         "vocabulary": MessageLookupByLibrary.simpleMessage("Từ vựng"),
         "welcome": MessageLookupByLibrary.simpleMessage("Chào mừng"),

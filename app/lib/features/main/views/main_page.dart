@@ -1,9 +1,7 @@
 import 'package:app/app.dart';
 import 'package:app/features/main/viewmodels/main_view_model.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:design/design.dart';
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:localization/localization.dart';
 
 @RoutePage()
@@ -24,95 +22,51 @@ class _MainPageState extends BasePageState<MainPage, MainViewModel> {
       routes: (navigator as AppNavigatorImpl).tabRoutes,
       bottomNavigationBuilder: (_, tabsRouter) {
         (navigator as AppNavigatorImpl).tabsRouter = tabsRouter;
-        return Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                FoundationColors.primary50,
-                AppColors.current.primaryColor,
-              ],
-              stops: const [0.0, 0.7],
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight,
-            ),
-            border: Border(
-              top: BorderSide(
-                color: AppColors.current.primaryColor,
-                width: 0.5,
+        return NavigationBar(
+          indicatorColor: AppColors.current.primaryColor.withValues(
+            alpha: 0.2,
+          ),
+          backgroundColor: AppColors.current.backgroundColor,
+          selectedIndex: tabsRouter.activeIndex,
+          onDestinationSelected: (index) {
+            if (index == navigator.currentBottomTab) {
+              navigator.popUntilRootOfCurrentBottomTab();
+              return;
+            }
+            tabsRouter.setActiveIndex(index);
+          },
+          destinations: [
+            NavigationDestination(
+              icon: Assets.icons.icHome.svg(
+                width: Dimens.d24.responsive(),
+                height: Dimens.d24.responsive(),
               ),
+              label: S.current.home,
             ),
-          ),
-          padding: EdgeInsets.symmetric(
-            horizontal: Dimens.d16.responsive(),
-            vertical: Dimens.d8.responsive(),
-          ),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                GNav(
-                  onTabChange: (index) {
-                    if (index == tabsRouter.activeIndex) {
-                      (navigator as AppNavigatorImpl)
-                          .popUntilRootOfCurrentBottomTab();
-                    }
-                    tabsRouter.setActiveIndex(index);
-                  },
-                  tabs: [
-                    _buildNavButton(
-                      icon: Icons.home_rounded,
-                      text: S.current.home,
-                    ),
-                    _buildNavButton(
-                      icon: Icons.book_rounded,
-                      text: S.current.courses,
-                    ),
-                    _buildNavButton(
-                      icon: Icons.chat_rounded,
-                      text: S.current.aiChatbot,
-                    ),
-                    _buildNavButton(
-                      icon: Icons.person_rounded,
-                      text: S.current.profile,
-                    ),
-                  ],
-                ),
-              ],
+            NavigationDestination(
+              icon: Assets.icons.icBookSquare.svg(
+                width: Dimens.d24.responsive(),
+                height: Dimens.d24.responsive(),
+              ),
+              label: S.current.courses,
             ),
-          ),
+            NavigationDestination(
+              icon: Assets.icons.icMessageQuestion.svg(
+                width: Dimens.d24.responsive(),
+                height: Dimens.d24.responsive(),
+              ),
+              label: S.current.aiChatbot,
+            ),
+            NavigationDestination(
+              icon: Assets.icons.icProfileCircle.svg(
+                width: Dimens.d24.responsive(),
+                height: Dimens.d24.responsive(),
+              ),
+              label: S.current.profile,
+            ),
+          ],
         );
       },
-    );
-  }
-
-  GButton _buildNavButton({
-    required IconData icon,
-    required String text,
-  }) {
-    return GButton(
-      backgroundGradient: LinearGradient(
-        colors: [
-          AppColors.current.primaryColor,
-          FoundationColors.neutral900,
-        ],
-        stops: const [0.0, 0.7],
-        begin: Alignment.bottomLeft,
-        end: Alignment.topRight,
-      ),
-      padding: EdgeInsets.symmetric(
-        horizontal: Dimens.d16.responsive(),
-        vertical: Dimens.d8.responsive(),
-      ),
-      textStyle: AppTextStyles.s14w400primary().font12().regular.accent100,
-      icon: icon,
-      iconSize: Dimens.d24.responsive(),
-      iconActiveColor: FoundationColors.accent100,
-      iconColor: FoundationColors.accent100,
-      gap: Dimens.d8.responsive(),
-      duration: const Duration(milliseconds: 500),
-      style: GnavStyle.google,
-      text: text,
     );
   }
 

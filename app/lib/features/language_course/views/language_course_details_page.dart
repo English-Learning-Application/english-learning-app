@@ -88,6 +88,27 @@ class _LanguageCourseDetailsPageState extends BasePageState<
       shouldRebuild: (previous, next) =>
           previous.languageCourse != next.languageCourse,
       builder: (_, vmData, __) {
+        if (vmData.languageCourse.languageCourseLearningContents.isEmpty) {
+          return Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Assets.icons.icSadFace.svg(
+                  width: Dimens.d64.responsive(),
+                  height: Dimens.d64.responsive(),
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                Text(
+                  S.current.courseWillBeAvailableSoon,
+                  style: AppTextStyles.s14w400primary().font20().bold,
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          );
+        }
         switch (vmData.learningType) {
           case LearningType.vocabulary:
             final wordList = vmData

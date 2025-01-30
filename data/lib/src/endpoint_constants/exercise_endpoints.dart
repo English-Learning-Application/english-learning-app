@@ -6,4 +6,6 @@ class ExerciseEndpoints {
   static const String exerciseMatching = '/exercises/matching';
   static const String pronunciationAssessment =
       '/exercises/pronunciation/assessment';
+  static const String exercisePronunciation = '/exercises/pronunciation';
+  static const String exerciseProgress = '/exercises/progress';
 }

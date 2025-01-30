@@ -28,10 +28,12 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
         learningLanguage: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContents,
       ),
-      matchingLearning: (learningLanguage, languageCourseLearningContents) =>
-          MatchingLearningRoute(
+      matchingLearning:
+          (learningLanguage, languageCourseLearningContents, learningType) =>
+              MatchingLearningRoute(
         learningLanguage: learningLanguage,
         languageCourseLearningContents: languageCourseLearningContents,
+        learningType: learningType,
       ),
       pronunciationLearning:
           (learningLanguage, languageCourseLearningContent) =>
@@ -44,6 +46,9 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
         language: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContent,
       ),
+      validateEmail: () => const ValidateEmailRoute(),
+      validatePhoneNumber: () => const ValidatePhoneNumberRoute(),
+      editProfile: () => EditProfileRoute(),
     );
   }
 }

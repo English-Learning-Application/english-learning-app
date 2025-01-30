@@ -28,6 +28,7 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.matchingLearning({
     required LearningLanguage learningLanguage,
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
+    LearningType? learningType,
   }) = _MatchingLearning;
   const factory AppRouteInfo.pronunciationLearning({
     required LearningLanguage learningLanguage,
@@ -37,4 +38,7 @@ class AppRouteInfo with _$AppRouteInfo {
     required LearningLanguage learningLanguage,
     required LanguageCourseLearningContent languageCourseLearningContent,
   }) = _ListeningLearning;
+  const factory AppRouteInfo.validateEmail() = _ValidateEmail;
+  const factory AppRouteInfo.validatePhoneNumber() = _ValidatePhoneNumber;
+  const factory AppRouteInfo.editProfile() = _EditProfile;
 }

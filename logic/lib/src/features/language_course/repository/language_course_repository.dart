@@ -9,4 +9,11 @@ abstract class LanguageCourseRepository {
     required LearningLanguage language,
     required LanguageLevel level,
   });
+
+  Future<List<CategoryCourse>> getCategoryCoursesByLanguage({
+    required LearningLanguage language,
+    List<String> categoryKeys = const [],
+  });
+
+  Future<List<Category>> getCategories();
 }

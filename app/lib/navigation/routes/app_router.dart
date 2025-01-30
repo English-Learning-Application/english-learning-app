@@ -42,6 +42,13 @@ class AppRouter extends $AppRouter {
           path: '/complete-registration',
         ),
         AutoRoute(
+          page: ValidateEmailRoute.page,
+          guards: [
+            _isLoggedInRouteGuard,
+          ],
+          path: '/validate-email',
+        ),
+        AutoRoute(
           guards: [
             _routeGuard,
           ],
@@ -87,10 +94,25 @@ class AppRouter extends $AppRouter {
             AutoRoute(
               page: ProfileTabRoute.page,
               maintainState: true,
+              guards: [
+                _isLoggedInRouteGuard,
+              ],
               children: [
                 AutoRoute(
                   page: ProfileRoute.page,
                   initial: true,
+                ),
+                AutoRoute(
+                  page: ValidatePhoneNumberRoute.page,
+                  guards: [
+                    _isLoggedInRouteGuard,
+                  ],
+                ),
+                AutoRoute(
+                  page: EditProfileRoute.page,
+                  guards: [
+                    _isLoggedInRouteGuard,
+                  ],
                 ),
               ],
             ),

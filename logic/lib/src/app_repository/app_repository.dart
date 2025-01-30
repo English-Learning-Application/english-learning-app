@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import '../../logic.dart';
 
 abstract class AppRepository {
@@ -21,6 +23,8 @@ abstract class AppRepository {
   Future<bool> saveLanguageCode(LanguageCode languageCode);
 
   User getUserPreference();
+
+  Future<PagedList<File>> getImagesPaged(int page);
 
   void clearCurrentUserData();
 }

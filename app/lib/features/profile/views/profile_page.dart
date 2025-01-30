@@ -26,14 +26,49 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
             SizedBox(
               height: Dimens.d16.responsive(),
             ),
-            ProfilePicture(
-              border: Border.all(
-                color: AppColors.current.primaryColor,
-                width: Dimens.d1.responsive(),
-              ),
-              width: Dimens.d100.responsive(),
-              height: Dimens.d100.responsive(),
-              onPressed: () {},
+            Selector<AppViewModel, AppViewModelData>(
+              shouldRebuild: (prev, curr) {
+                final prevMedia = prev.currentUser.media;
+                final currMedia = curr.currentUser.media;
+
+                return prevMedia != currMedia;
+              },
+              selector: (_, vm) => vm.viewModelData,
+              builder: (_, vmData, __) {
+                return ProfilePicture(
+                  border: Border.all(
+                    color: AppColors.current.primaryColor,
+                    width: Dimens.d1.responsive(),
+                  ),
+                  imageUrl: vmData.currentUser.media.mediaItem,
+                  width: Dimens.d100.responsive(),
+                  height: Dimens.d100.responsive(),
+                  onPressed: () async {
+                    await navigator.showModalBottomSheet(
+                      AppPopupInfo.bottomSheet(
+                        child: SizedBox(
+                          width: double.infinity,
+                          height: Dimens.d300.responsive(),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: Dimens.d16.responsive(),
+                              ),
+                              const Expanded(
+                                child: PhotoBottomSheetView(),
+                              ),
+                            ],
+                          ),
+                        ),
+                        title: S.current.updateProfilePicture,
+                      ),
+                      enableDrag: true,
+                      useRootNavigator: true,
+                      isScrollControlled: false,
+                    );
+                  },
+                );
+              },
             ),
             SizedBox(
               height: Dimens.d16.responsive(),
@@ -59,6 +94,11 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
             StandardButton(
                   text: S.current.editProfile,
                   buttonSize: ButtonSize.small,
+                  onPressed: () async {
+                    await navigator.push(
+                      const AppRouteInfo.editProfile(),
+                    );
+                  },
                 ).let(
                   (it) {
                     return Padding(
@@ -100,17 +140,33 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
                     return prev.currentUser != curr.currentUser;
                   },
                   builder: (_, vmData, __) {
+                    final isPhoneNumberEmpty =
+                        vmData.currentUser.phoneNumber.isEmpty;
+                    final isPhoneNumberVerified =
+                        vmData.currentUser.isPhoneNumberVerified;
                     return _buildProfileItem(
                       title: S.current.phoneNo,
-                      value: Text(
-                        vmData.currentUser.phoneNumber.isEmpty
-                            ? S.current.none
-                            : vmData.currentUser.phoneNumber,
-                        textAlign: TextAlign.end,
-                        overflow: TextOverflow.ellipsis,
-                        style:
-                            AppTextStyles.s14w400primary().secondary.font12(),
-                      ),
+                      value: isPhoneNumberEmpty || !isPhoneNumberVerified
+                          ? GestureDetector(
+                              child: Icon(
+                                Icons.arrow_forward_ios,
+                                size: Dimens.d16.responsive(),
+                                color: FoundationColors.neutral50,
+                              ),
+                              onTap: () async {
+                                await navigator.push(
+                                  const AppRouteInfo.validatePhoneNumber(),
+                                );
+                              },
+                            )
+                          : Text(
+                              vmData.currentUser.phoneNumber,
+                              textAlign: TextAlign.end,
+                              overflow: TextOverflow.ellipsis,
+                              style: AppTextStyles.s14w400primary()
+                                  .secondary
+                                  .font12(),
+                            ),
                     );
                   },
                   selector: (_, vm) => vm.viewModelData,

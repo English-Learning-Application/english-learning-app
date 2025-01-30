@@ -33,3 +33,27 @@ class PronunciationLearningEntity with _$PronunciationLearningEntity {
   static const List<PronunciationAssessment> defaultPronunciationAssessment =
       [];
 }
+
+@freezed
+class PronunciationLearning with _$PronunciationLearning {
+  const PronunciationLearning._();
+
+  const factory PronunciationLearning({
+    @Default(PronunciationLearning.defaultPronunciationLearningId) String id,
+    @Default(PronunciationLearning.defaultLearningContentId)
+    String learningContentId,
+    @Default(PronunciationLearning.defaultItemId) String itemId,
+    @Default(PronunciationLearning.defaultLearningContentType)
+    LearningContentType learningContentType,
+    @Default(PronunciationLearning.defaultPronunciationLearningContents)
+    List<PronunciationAssessment> pronunciationLearningContents,
+  }) = _PronunciationLearning;
+
+  static const defaultPronunciationLearningId = '';
+  static const defaultLearningContentId = '';
+  static const defaultItemId = '';
+  static const LearningContentType defaultLearningContentType =
+      LearningContentType.word;
+  static const List<PronunciationAssessment>
+      defaultPronunciationLearningContents = [];
+}

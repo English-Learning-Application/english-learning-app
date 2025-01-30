@@ -15,10 +15,12 @@ class MatchingLearningPage extends StatefulWidget {
     super.key,
     required this.learningLanguage,
     required this.languageCourseLearningContents,
+    this.learningType,
   });
 
   final LearningLanguage learningLanguage;
   final List<LanguageCourseLearningContent> languageCourseLearningContents;
+  final LearningType? learningType;
 
   @override
   State<MatchingLearningPage> createState() => _MatchingLearningPageState();
@@ -88,11 +90,38 @@ class _MatchingLearningPageState
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(
-                      currentEntity.hint,
-                      style: AppTextStyles.s14w400primary().font18().bold,
-                      textAlign: TextAlign.center,
-                    ),
+                    if (widget.learningType == LearningType.listening) ...[
+                      Text(
+                        S.current.listenAndMatch,
+                        style: AppTextStyles.s14w400primary().font18().bold,
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: Dimens.d16.responsive(),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          viewModel.speakFromText(
+                            currentEntity.learningContentType ==
+                                    LearningContentType.word
+                                ? currentEntity.targetTexts.join('')
+                                : currentEntity.targetTexts.join(' '),
+                            widget.learningLanguage,
+                          );
+                        },
+                        child: Icon(
+                          Icons.volume_up,
+                          size: Dimens.d32.responsive(),
+                          color: AppColors.current.primaryColor,
+                        ),
+                      ),
+                    ] else ...[
+                      Text(
+                        currentEntity.hint,
+                        style: AppTextStyles.s14w400primary().font18().bold,
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
                     if (currentEntity.image.isNotEmpty) ...[
                       SizedBox(
                         height: Dimens.d16.responsive(),
@@ -321,7 +350,7 @@ class _MatchingLearningPageState
       ),
       child: Text(
         letter,
-        style: AppTextStyles.s14w400primary().font22().bold.primaryAppColor.let(
+        style: AppTextStyles.s14w400primary().font15().bold.primaryAppColor.let(
               (it) => it.copyWith(
                 color: isFeedback
                     ? FoundationColors.neutral100

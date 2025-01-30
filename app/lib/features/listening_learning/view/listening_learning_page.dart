@@ -235,6 +235,7 @@ class _ListeningLearningPageState
                       languageCourseLearningContent: [
                         viewModelData.languageCourseLearningContent
                       ],
+                      learningType: LearningType.listening,
                     ),
                   );
                 },

@@ -70,4 +70,30 @@ class ExerciseApiDataSource {
       },
     );
   }
+
+  Future<ListResponse<ApiPronunciationLearning>?> updatePronunciationLearning({
+    required ApiPronunciationLearningUpdateModel
+        pronunciationLearningUpdateModel,
+  }) async {
+    return await _authAppServerApiClient.request(
+      method: RestApiMethod.post,
+      path: ExerciseEndpoints.exercisePronunciation,
+      successResponseMapperType: SuccessResponseMapperType.listResponse,
+      body: pronunciationLearningUpdateModel.toJson(),
+      decoder: (dynamic json) {
+        return ApiPronunciationLearning.fromJson(json as Map<String, dynamic>);
+      },
+    );
+  }
+
+  Future<DataResponse<ApiLearningProgress>?> getLearningProgress() {
+    return _authAppServerApiClient.request(
+      method: RestApiMethod.get,
+      path: ExerciseEndpoints.exerciseProgress,
+      successResponseMapperType: SuccessResponseMapperType.dataResponse,
+      decoder: (dynamic json) {
+        return ApiLearningProgress.fromJson(json as Map<String, dynamic>);
+      },
+    );
+  }
 }

@@ -136,96 +136,104 @@ class _LanguageCoursePageState
               ),
             );
           }
-          return GridView.builder(
-            itemCount: courses.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: isMobile
-                  ? 2
-                  : isTablet
-                      ? 3
-                      : 4,
-              crossAxisSpacing: Dimens.d10.responsive(),
-              mainAxisSpacing: Dimens.d10.responsive(),
-              childAspectRatio: 0.9.responsive(),
-            ),
-            itemBuilder: (_, index) {
-              final course = courses[index];
-              return CourseCard(
-                borderRadius: Dimens.d8.responsive(),
-                color: FoundationColors.primary500,
-                padding: EdgeInsets.symmetric(
-                  horizontal: Dimens.d16.responsive(),
-                  vertical: Dimens.d8.responsive(),
-                ),
-                onPressed: () async {
-                  await navigator.push(
-                    AppRouteInfo.languageCourseDetails(languageCourse: course),
-                  );
-                },
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            course.language.languageName,
-                            overflow: TextOverflow.ellipsis,
-                            style: AppTextStyles.s14w400primary()
-                                .font16()
-                                .secondary
-                                .bold,
-                          ),
-                        ),
-                        SizedBox(
-                          width: Dimens.d8.responsive(),
-                        ),
-                        course.language.icon.svg(
-                          width: Dimens.d24.responsive(),
-                          height: Dimens.d24.responsive(),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: Dimens.d8.responsive(),
-                    ),
-                    Text(
-                      "${S.current.level}: ${course.level.serverValue}",
-                      style: AppTextStyles.s14w400primary().font14().secondary,
-                    ),
-                    SizedBox(
-                      height: Dimens.d8.responsive(),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          course.learningType.learningTypeName,
-                          style:
-                              AppTextStyles.s14w400primary().font14().secondary,
-                        ),
-                        course.learningType.icon.svg(
-                          width: Dimens.d24.responsive(),
-                          height: Dimens.d24.responsive(),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: Dimens.d16.responsive(),
-                    ),
-                    LinearProgressIndicator(
-                      value: 0,
-                      color: FoundationColors.accent200,
-                      borderRadius: BorderRadius.circular(
-                        Dimens.d8.responsive(),
-                      ),
-                      minHeight: Dimens.d4.responsive(),
-                      backgroundColor: FoundationColors.neutral50,
-                    )
-                  ],
-                ),
-              );
+          return RefreshIndicator(
+            onRefresh: () async {
+              await viewModel.refresh();
             },
+            child: GridView.builder(
+              itemCount: courses.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: isMobile
+                    ? 2
+                    : isTablet
+                        ? 3
+                        : 4,
+                crossAxisSpacing: Dimens.d10.responsive(),
+                mainAxisSpacing: Dimens.d10.responsive(),
+                childAspectRatio: 0.9.responsive(),
+              ),
+              itemBuilder: (_, index) {
+                final course = courses[index];
+                return CourseCard(
+                  borderRadius: Dimens.d8.responsive(),
+                  color: FoundationColors.primary500,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: Dimens.d16.responsive(),
+                    vertical: Dimens.d8.responsive(),
+                  ),
+                  onPressed: () async {
+                    await navigator.push(
+                      AppRouteInfo.languageCourseDetails(
+                          languageCourse: course),
+                    );
+                  },
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              course.language.languageName,
+                              overflow: TextOverflow.ellipsis,
+                              style: AppTextStyles.s14w400primary()
+                                  .font16()
+                                  .secondary
+                                  .bold,
+                            ),
+                          ),
+                          SizedBox(
+                            width: Dimens.d8.responsive(),
+                          ),
+                          course.language.icon.svg(
+                            width: Dimens.d24.responsive(),
+                            height: Dimens.d24.responsive(),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: Dimens.d8.responsive(),
+                      ),
+                      Text(
+                        "${S.current.level}: ${course.level.serverValue}",
+                        style:
+                            AppTextStyles.s14w400primary().font14().secondary,
+                      ),
+                      SizedBox(
+                        height: Dimens.d8.responsive(),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            course.learningType.learningTypeName,
+                            style: AppTextStyles.s14w400primary()
+                                .font14()
+                                .secondary,
+                          ),
+                          course.learningType.icon.svg(
+                            width: Dimens.d24.responsive(),
+                            height: Dimens.d24.responsive(),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: Dimens.d16.responsive(),
+                      ),
+                      LinearProgressIndicator(
+                        value: course.completionProgress(),
+                        color: FoundationColors.accent200,
+                        borderRadius: BorderRadius.circular(
+                          Dimens.d8.responsive(),
+                        ),
+                        minHeight: Dimens.d4.responsive(),
+                        backgroundColor: FoundationColors.neutral50,
+                      )
+                    ],
+                  ),
+                );
+              },
+            ),
           );
         });
   }

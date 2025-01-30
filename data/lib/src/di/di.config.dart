@@ -31,6 +31,8 @@ import 'package:data/src/app_repository/mapper/app_theme_data_mapper.dart'
     as _i646;
 import 'package:data/src/app_repository/source/api/app_api_service.dart'
     as _i261;
+import 'package:data/src/app_repository/source/assets/app_assets_service.dart'
+    as _i665;
 import 'package:data/src/app_repository/source/database/app_database.dart'
     as _i6;
 import 'package:data/src/app_repository/source/database/objectbox/objectbox.g.dart'
@@ -74,12 +76,18 @@ import 'package:data/src/features/exercise/mapper/api_flash_card_learning_info_m
     as _i24;
 import 'package:data/src/features/exercise/mapper/api_flash_card_learning_mapper.dart'
     as _i168;
+import 'package:data/src/features/exercise/mapper/api_learning_progress_mapper.dart'
+    as _i198;
 import 'package:data/src/features/exercise/mapper/api_matching_learning_info_mapper.dart'
     as _i775;
 import 'package:data/src/features/exercise/mapper/api_matching_learning_mapper.dart'
     as _i100;
 import 'package:data/src/features/exercise/mapper/api_pronunciation_assessment_model_mapper.dart'
     as _i176;
+import 'package:data/src/features/exercise/mapper/api_pronunciation_learning_info_model_mapper.dart'
+    as _i231;
+import 'package:data/src/features/exercise/mapper/api_pronunciation_learning_mapper.dart'
+    as _i619;
 import 'package:data/src/features/exercise/mapper/api_quiz_learning_info_mapper.dart'
     as _i419;
 import 'package:data/src/features/exercise/mapper/api_quiz_learning_mapper.dart'
@@ -88,6 +96,12 @@ import 'package:data/src/features/exercise/repository/exercise_repository_impl.d
     as _i91;
 import 'package:data/src/features/language_course/data_source/api/language_course_api_data_source.dart'
     as _i543;
+import 'package:data/src/features/language_course/data_source/local/language_course_database_local.dart'
+    as _i806;
+import 'package:data/src/features/language_course/mapper/api_category_course_mapper.dart'
+    as _i643;
+import 'package:data/src/features/language_course/mapper/api_category_mapper.dart'
+    as _i423;
 import 'package:data/src/features/language_course/mapper/api_expression_data_mapper.dart'
     as _i110;
 import 'package:data/src/features/language_course/mapper/api_idiom_data_mapper.dart'
@@ -112,6 +126,10 @@ import 'package:data/src/features/notification/data_source/api/notification_api_
     as _i82;
 import 'package:data/src/features/notification/repository/notification_repository_impl.dart'
     as _i946;
+import 'package:data/src/features/profile/data_source/profile_api_data_source.dart'
+    as _i891;
+import 'package:data/src/features/profile/repository/profile_repository_impl.dart'
+    as _i410;
 import 'package:dio_cache_interceptor/dio_cache_interceptor.dart' as _i695;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
@@ -167,6 +185,31 @@ extension GetItInjectableX on _i174.GetIt {
       () => dataModule.getStore(),
       preResolve: true,
     );
+    gh.factory<_i24.ApiFlashCardLearningInfoMapper>(
+        () => _i24.ApiFlashCardLearningInfoMapper());
+    gh.factory<_i168.ApiFlashCardLearningMapper>(
+        () => _i168.ApiFlashCardLearningMapper());
+    gh.factory<_i775.ApiMatchingLearningInfoMapper>(
+        () => _i775.ApiMatchingLearningInfoMapper());
+    gh.factory<_i100.ApiMatchingLearningMapper>(
+        () => _i100.ApiMatchingLearningMapper());
+    gh.factory<_i176.ApiPronunciationWordMapper>(
+        () => _i176.ApiPronunciationWordMapper());
+    gh.factory<_i176.ApiPronunciationAccentPredictionMapper>(
+        () => _i176.ApiPronunciationAccentPredictionMapper());
+    gh.factory<_i176.ApiScoreEstimatesMapper>(
+        () => _i176.ApiScoreEstimatesMapper());
+    gh.factory<_i231.ApiPronunciationLearningInfoModelMapper>(
+        () => _i231.ApiPronunciationLearningInfoModelMapper());
+    gh.factory<_i231.ApiPronunciationAssessmentLearningInfoModelMapper>(
+        () => _i231.ApiPronunciationAssessmentLearningInfoModelMapper());
+    gh.factory<_i619.ApiPronunciationAssessmentMapper>(
+        () => _i619.ApiPronunciationAssessmentMapper());
+    gh.factory<_i419.ApiQuizLearningInfoMapper>(
+        () => _i419.ApiQuizLearningInfoMapper());
+    gh.factory<_i273.ApiQuizLearningMapper>(
+        () => _i273.ApiQuizLearningMapper());
+    gh.factory<_i423.ApiCategoryMapper>(() => _i423.ApiCategoryMapper());
     gh.factory<_i110.ApiExpressionDataMapper>(
         () => _i110.ApiExpressionDataMapper());
     gh.factory<_i414.ApiIdiomDataMapper>(() => _i414.ApiIdiomDataMapper());
@@ -178,24 +221,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i985.ApiTenseFormDataMapper>(
         () => _i985.ApiTenseFormDataMapper());
     gh.factory<_i443.ApiWordDataMapper>(() => _i443.ApiWordDataMapper());
-    gh.factory<_i24.ApiFlashCardLearningInfoMapper>(
-        () => _i24.ApiFlashCardLearningInfoMapper());
-    gh.factory<_i168.ApiFlashCardLearningMapper>(
-        () => _i168.ApiFlashCardLearningMapper());
-    gh.factory<_i419.ApiQuizLearningInfoMapper>(
-        () => _i419.ApiQuizLearningInfoMapper());
-    gh.factory<_i273.ApiQuizLearningMapper>(
-        () => _i273.ApiQuizLearningMapper());
-    gh.factory<_i775.ApiMatchingLearningInfoMapper>(
-        () => _i775.ApiMatchingLearningInfoMapper());
-    gh.factory<_i100.ApiMatchingLearningMapper>(
-        () => _i100.ApiMatchingLearningMapper());
-    gh.factory<_i176.ApiPronunciationWordMapper>(
-        () => _i176.ApiPronunciationWordMapper());
-    gh.factory<_i176.ApiPronunciationAccentPredictionMapper>(
-        () => _i176.ApiPronunciationAccentPredictionMapper());
-    gh.factory<_i176.ApiScoreEstimatesMapper>(
-        () => _i176.ApiScoreEstimatesMapper());
+    gh.lazySingleton<_i665.AppAssetsService>(
+        () => const _i665.AppAssetsService());
     gh.factory<_i77.HeaderInterceptor>(
         () => _i77.HeaderInterceptor(gh<_i473.AppInfo>()));
     gh.factory<_i1022.ApiTenseDataMapper>(
@@ -224,12 +251,29 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.ApiTenseDataMapper>(),
               gh<_i437.ApiPhoneticDataMapper>(),
             ));
+    gh.factory<_i619.ApiPronunciationLearningMapper>(() =>
+        _i619.ApiPronunciationLearningMapper(
+            gh<_i619.ApiPronunciationAssessmentMapper>()));
+    gh.factory<_i198.ApiLearningProgressMapper>(
+        () => _i198.ApiLearningProgressMapper(
+              gh<_i437.ApiFlashCardLearningMapper>(),
+              gh<_i437.ApiQuizLearningMapper>(),
+              gh<_i437.ApiMatchingLearningMapper>(),
+              gh<_i437.ApiPronunciationLearningMapper>(),
+            ));
     gh.lazySingleton<_i936.NonAuthAppServerApiClient>(
         () => _i936.NonAuthAppServerApiClient(gh<_i437.HeaderInterceptor>()));
     gh.lazySingleton<_i906.RandomUserApiClient>(
         () => _i906.RandomUserApiClient(gh<_i695.DioCacheInterceptor>()));
     gh.lazySingleton<_i6.AppDatabase>(
         () => _i6.AppDatabase(gh<_i1034.Store>()));
+    gh.lazySingleton<_i806.LanguageCourseDatabaseLocal>(
+        () => _i806.LanguageCourseDatabaseLocal(gh<_i465.Store>()));
+    gh.factory<_i643.ApiCategoryCourseMapper>(
+        () => _i643.ApiCategoryCourseMapper(
+              gh<_i437.ApiLanguageCourseLearningContentDataMapper>(),
+              gh<_i437.ApiCategoryMapper>(),
+            ));
     gh.factory<_i30.AccessTokenInterceptor>(
         () => _i30.AccessTokenInterceptor(gh<_i437.AppPreferences>()));
     gh.factory<_i616.ApiLanguageCourseDataMapper>(() =>
@@ -245,6 +289,7 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i261.AppApiService>(
         () => _i261.AppApiService(gh<_i437.RandomUserApiClient>()));
     gh.lazySingleton<_i182.AppRepository>(() => _i27.AppRepositoryImpl(
+          gh<_i437.AppAssetsService>(),
           gh<_i437.AppApiService>(),
           gh<_i437.AppPreferences>(),
           gh<_i437.ApiRandomUserDataMapper>(),
@@ -269,12 +314,21 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.NonAuthAppServerApiClient>(),
               gh<_i437.AuthAppServerApiClient>(),
             ));
+    gh.lazySingleton<_i928.ExerciseApiDataSource>(
+        () => _i928.ExerciseApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i543.LanguageCourseApiDataSource>(() =>
         _i543.LanguageCourseApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i82.NotificationApiDataSource>(() =>
         _i82.NotificationApiDataSource(gh<_i437.AuthAppServerApiClient>()));
-    gh.lazySingleton<_i928.ExerciseApiDataSource>(
-        () => _i928.ExerciseApiDataSource(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i891.ProfileApiDataSource>(
+        () => _i891.ProfileApiDataSource(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i182.LanguageCourseRepository>(
+        () => _i725.LanguageCourseRepositoryImpl(
+              gh<_i437.LanguageCourseApiDataSource>(),
+              gh<_i437.ApiCategoryCourseMapper>(),
+              gh<_i437.ApiLanguageCourseDataMapper>(),
+              gh<_i437.ApiCategoryMapper>(),
+            ));
     gh.lazySingleton<_i182.ExerciseRepository>(
         () => _i91.ExerciseRepositoryImpl(
               gh<_i437.ApiFlashCardLearningInfoMapper>(),
@@ -284,6 +338,9 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.ApiMatchingLearningInfoMapper>(),
               gh<_i437.ApiMatchingLearningMapper>(),
               gh<_i437.ApiPronunciationAssessmentModelMapper>(),
+              gh<_i437.ApiPronunciationLearningMapper>(),
+              gh<_i437.ApiPronunciationLearningInfoModelMapper>(),
+              gh<_i437.ApiLearningProgressMapper>(),
               gh<_i437.ExerciseApiDataSource>(),
             ));
     gh.lazySingleton<_i182.NotificationRepository>(() =>
@@ -294,11 +351,11 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.AppPreferences>(),
               gh<_i437.ApiUserDataMapper>(),
             ));
-    gh.lazySingleton<_i182.LanguageCourseRepository>(
-        () => _i725.LanguageCourseRepositoryImpl(
-              gh<_i437.LanguageCourseApiDataSource>(),
-              gh<_i437.ApiLanguageCourseDataMapper>(),
-            ));
+    gh.lazySingleton<_i182.ProfileRepository>(() => _i410.ProfileRepositoryImpl(
+          gh<_i437.ProfileApiDataSource>(),
+          gh<_i437.AppPreferences>(),
+          gh<_i437.ApiUserDataMapper>(),
+        ));
     return this;
   }
 }

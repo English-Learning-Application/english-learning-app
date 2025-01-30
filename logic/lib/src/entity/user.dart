@@ -15,6 +15,8 @@ class User with _$User {
     @Default(User.defaultFacebookId) String facebookId,
     @Default(User.defaultPhoneNumber) String phoneNumber,
     @Default(User.defaultMedia) Media media,
+    @Default(User.defaultIsEmailVerified) bool isEmailVerified,
+    @Default(User.defaultIsPhoneNumberVerified) bool isPhoneNumberVerified,
     @Default(User.defaultUserProfile) UserProfile userProfile,
     @Default(User.defaultRegistrationStatus)
     RegistrationStatus registrationStatus,
@@ -29,6 +31,8 @@ class User with _$User {
   static const defaultMedia = Media.empty;
   static const defaultUserProfile = UserProfile.empty;
   static const defaultRegistrationStatus = RegistrationStatus.notConfirmed;
+  static const defaultIsEmailVerified = false;
+  static const defaultIsPhoneNumberVerified = false;
 
   static const User empty = User();
 

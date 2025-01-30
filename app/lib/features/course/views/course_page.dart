@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:app/app.dart';
 import 'package:app/features/course/view_models/course.dart';
 import 'package:auto_route/annotations.dart';
@@ -20,28 +22,50 @@ class _CoursePageState extends BasePageState<CoursePage, CourseViewModel> {
   @override
   Widget buildPage(BuildContext context) {
     return CommonScaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            _buildHeader(),
-            _buildCategoryCourses(
-              title: "Food",
-              courses: [
-                "Fine Dining",
-                "Fast Food",
-                "Street Food",
-              ],
+      body: Column(
+        children: [
+          _buildHeader(),
+          Expanded(
+            child: Selector<CourseViewModel, CourseViewModelData>(
+              selector: (_, viewModel) => viewModel.viewModelData,
+              shouldRebuild: (prev, curr) {
+                return prev.categoryCourses != curr.categoryCourses ||
+                    prev.categories != curr.categories;
+              },
+              builder: (_, vmData, __) {
+                final learningLanguage = vmData.learningLanguage;
+                return ListView.separated(
+                  itemBuilder: (_, index) {
+                    final category = vmData.categories[index];
+                    final courses = vmData.categoryCourses
+                        .where(
+                          (element) =>
+                              element.category.categoryKey ==
+                              category.categoryKey,
+                        )
+                        .toList();
+                    final categoryName = switch (learningLanguage) {
+                      LearningLanguage.english => category.englishName,
+                      LearningLanguage.french => category.frenchName,
+                      LearningLanguage.vietnamese => category.vietnameseName,
+                    };
+                    return _buildCategoryCourses(
+                      title: categoryName,
+                      courses: courses,
+                      learningLanguage: learningLanguage,
+                    );
+                  },
+                  separatorBuilder: (_, __) {
+                    return SizedBox(
+                      height: Dimens.d16.responsive(),
+                    );
+                  },
+                  itemCount: vmData.categories.length,
+                );
+              },
             ),
-            _buildCategoryCourses(
-              title: S.current.travel,
-              courses: [
-                "Air Travel",
-                "Train Travel",
-                "Bus Travel",
-              ],
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -112,7 +136,8 @@ class _CoursePageState extends BasePageState<CoursePage, CourseViewModel> {
 
   Widget _buildCategoryCourses({
     required String title,
-    required List<String> courses,
+    required List<CategoryCourse> courses,
+    required LearningLanguage learningLanguage,
   }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,6 +164,12 @@ class _CoursePageState extends BasePageState<CoursePage, CourseViewModel> {
             },
             itemBuilder: (_, index) {
               final course = courses[index];
+              final courseName = switch (learningLanguage) {
+                LearningLanguage.english => course.englishName,
+                LearningLanguage.french => course.frenchName,
+                LearningLanguage.vietnamese => course.vietnameseName,
+              };
+              final percentage = math.Random().nextInt(100);
               return Container(
                 width: Dimens.d120.responsive(),
                 padding: EdgeInsets.symmetric(
@@ -155,7 +186,7 @@ class _CoursePageState extends BasePageState<CoursePage, CourseViewModel> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      course,
+                      courseName,
                       style: AppTextStyles.s14w400primary().font14().bold,
                     ),
                     SizedBox(
@@ -170,14 +201,14 @@ class _CoursePageState extends BasePageState<CoursePage, CourseViewModel> {
                         children: [
                           Positioned.fill(
                             child: CircularProgressIndicator(
-                              value: 0.75,
+                              value: percentage / 100,
                               strokeWidth: Dimens.d2.responsive(),
                               backgroundColor: FoundationColors.neutral50,
                             ),
                           ),
                           Center(
                             child: Text(
-                              "75%",
+                              "$percentage%",
                               style:
                                   AppTextStyles.s14w400primary().font16().bold,
                             ),
@@ -211,7 +242,9 @@ class _CoursePageState extends BasePageState<CoursePage, CourseViewModel> {
   }
 
   @override
-  void initViewModels() {}
+  void initViewModels() {
+    viewModel.onInit();
+  }
 
   @override
   String get screenName => 'CoursePage';

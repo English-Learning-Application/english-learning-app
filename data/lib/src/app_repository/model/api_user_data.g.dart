@@ -14,6 +14,8 @@ _$ApiUserDataImpl _$$ApiUserDataImplFromJson(Map<String, dynamic> json) =>
       googleId: json['googleId'] as String?,
       facebookId: json['facebookId'] as String?,
       phone: json['phoneNumber'] as String?,
+      isEmailVerified: json['isEmailVerified'] as bool?,
+      isPhoneNumberVerified: json['isPhoneNumberVerified'] as bool?,
       media: json['media'] == null
           ? null
           : ApiMediaData.fromJson(json['media'] as Map<String, dynamic>),
@@ -32,6 +34,8 @@ Map<String, dynamic> _$$ApiUserDataImplToJson(_$ApiUserDataImpl instance) =>
       'googleId': instance.googleId,
       'facebookId': instance.facebookId,
       'phoneNumber': instance.phone,
+      'isEmailVerified': instance.isEmailVerified,
+      'isPhoneNumberVerified': instance.isPhoneNumberVerified,
       'media': instance.media?.toJson(),
       'userProfile': instance.userProfile?.toJson(),
       'registrationStatus': instance.registrationStatus,

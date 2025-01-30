@@ -23,4 +23,10 @@ abstract class ExerciseRepository {
     required List<String> correctItemIds,
     required List<String> incorrectItemIds,
   });
+
+  Future<List<PronunciationLearning>> updatePronunciationLearning({
+    required List<PronunciationLearningEntity> pronunciationLearnings,
+  });
+
+  Future<LearningProgress> getLearningProgress();
 }

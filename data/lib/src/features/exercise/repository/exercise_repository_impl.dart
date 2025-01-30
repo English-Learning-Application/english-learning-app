@@ -16,6 +16,10 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
   final ApiMatchingLearningMapper _apiMatchingLearningMapper;
   final ApiPronunciationAssessmentModelMapper
       _apiPronunciationAssessmentModelMapper;
+  final ApiPronunciationLearningMapper _apiPronunciationLearningMapper;
+  final ApiPronunciationLearningInfoModelMapper
+      _apiPronunciationLearningInfoModelMapper;
+  final ApiLearningProgressMapper _apiLearningProgressMapper;
   final ExerciseApiDataSource _exerciseApiDataSource;
 
   const ExerciseRepositoryImpl(
@@ -26,6 +30,9 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
     this._apiMatchingLearningInfoMapper,
     this._apiMatchingLearningMapper,
     this._apiPronunciationAssessmentModelMapper,
+    this._apiPronunciationLearningMapper,
+    this._apiPronunciationLearningInfoModelMapper,
+    this._apiLearningProgressMapper,
     this._exerciseApiDataSource,
   );
 
@@ -135,5 +142,28 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
         matchingLearningUpdateModel: matchingLearningUpdateModel);
 
     return _apiMatchingLearningMapper.mapToListEntities(resp?.results ?? []);
+  }
+
+  @override
+  Future<List<PronunciationLearning>> updatePronunciationLearning({
+    required List<PronunciationLearningEntity> pronunciationLearnings,
+  }) async {
+    final items = _apiPronunciationLearningInfoModelMapper.mapToListData(
+      pronunciationLearnings,
+    );
+    final resp = await _exerciseApiDataSource.updatePronunciationLearning(
+      pronunciationLearningUpdateModel: ApiPronunciationLearningUpdateModel(
+        pronunciationLearningInfo: items,
+      ),
+    );
+    return _apiPronunciationLearningMapper
+        .mapToListEntities(resp?.results ?? []);
+  }
+
+  @override
+  Future<LearningProgress> getLearningProgress() async {
+    final resp = await _exerciseApiDataSource.getLearningProgress();
+
+    return _apiLearningProgressMapper.mapToEntity(resp?.data);
   }
 }

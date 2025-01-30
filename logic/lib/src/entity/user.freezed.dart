@@ -23,6 +23,8 @@ mixin _$User {
   String get facebookId => throw _privateConstructorUsedError;
   String get phoneNumber => throw _privateConstructorUsedError;
   Media get media => throw _privateConstructorUsedError;
+  bool get isEmailVerified => throw _privateConstructorUsedError;
+  bool get isPhoneNumberVerified => throw _privateConstructorUsedError;
   UserProfile get userProfile => throw _privateConstructorUsedError;
   RegistrationStatus get registrationStatus =>
       throw _privateConstructorUsedError;
@@ -46,6 +48,8 @@ abstract class $UserCopyWith<$Res> {
       String facebookId,
       String phoneNumber,
       Media media,
+      bool isEmailVerified,
+      bool isPhoneNumberVerified,
       UserProfile userProfile,
       RegistrationStatus registrationStatus});
 
@@ -75,6 +79,8 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? facebookId = null,
     Object? phoneNumber = null,
     Object? media = null,
+    Object? isEmailVerified = null,
+    Object? isPhoneNumberVerified = null,
     Object? userProfile = null,
     Object? registrationStatus = null,
   }) {
@@ -107,6 +113,14 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
           ? _value.media
           : media // ignore: cast_nullable_to_non_nullable
               as Media,
+      isEmailVerified: null == isEmailVerified
+          ? _value.isEmailVerified
+          : isEmailVerified // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPhoneNumberVerified: null == isPhoneNumberVerified
+          ? _value.isPhoneNumberVerified
+          : isPhoneNumberVerified // ignore: cast_nullable_to_non_nullable
+              as bool,
       userProfile: null == userProfile
           ? _value.userProfile
           : userProfile // ignore: cast_nullable_to_non_nullable
@@ -154,6 +168,8 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       String facebookId,
       String phoneNumber,
       Media media,
+      bool isEmailVerified,
+      bool isPhoneNumberVerified,
       UserProfile userProfile,
       RegistrationStatus registrationStatus});
 
@@ -182,6 +198,8 @@ class __$$UserImplCopyWithImpl<$Res>
     Object? facebookId = null,
     Object? phoneNumber = null,
     Object? media = null,
+    Object? isEmailVerified = null,
+    Object? isPhoneNumberVerified = null,
     Object? userProfile = null,
     Object? registrationStatus = null,
   }) {
@@ -214,6 +232,14 @@ class __$$UserImplCopyWithImpl<$Res>
           ? _value.media
           : media // ignore: cast_nullable_to_non_nullable
               as Media,
+      isEmailVerified: null == isEmailVerified
+          ? _value.isEmailVerified
+          : isEmailVerified // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPhoneNumberVerified: null == isPhoneNumberVerified
+          ? _value.isPhoneNumberVerified
+          : isPhoneNumberVerified // ignore: cast_nullable_to_non_nullable
+              as bool,
       userProfile: null == userProfile
           ? _value.userProfile
           : userProfile // ignore: cast_nullable_to_non_nullable
@@ -237,6 +263,8 @@ class _$UserImpl extends _User {
       this.facebookId = User.defaultFacebookId,
       this.phoneNumber = User.defaultPhoneNumber,
       this.media = User.defaultMedia,
+      this.isEmailVerified = User.defaultIsEmailVerified,
+      this.isPhoneNumberVerified = User.defaultIsPhoneNumberVerified,
       this.userProfile = User.defaultUserProfile,
       this.registrationStatus = User.defaultRegistrationStatus})
       : super._();
@@ -264,6 +292,12 @@ class _$UserImpl extends _User {
   final Media media;
   @override
   @JsonKey()
+  final bool isEmailVerified;
+  @override
+  @JsonKey()
+  final bool isPhoneNumberVerified;
+  @override
+  @JsonKey()
   final UserProfile userProfile;
   @override
   @JsonKey()
@@ -271,7 +305,7 @@ class _$UserImpl extends _User {
 
   @override
   String toString() {
-    return 'User(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phoneNumber: $phoneNumber, media: $media, userProfile: $userProfile, registrationStatus: $registrationStatus)';
+    return 'User(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phoneNumber: $phoneNumber, media: $media, isEmailVerified: $isEmailVerified, isPhoneNumberVerified: $isPhoneNumberVerified, userProfile: $userProfile, registrationStatus: $registrationStatus)';
   }
 
   @override
@@ -290,6 +324,10 @@ class _$UserImpl extends _User {
             (identical(other.phoneNumber, phoneNumber) ||
                 other.phoneNumber == phoneNumber) &&
             (identical(other.media, media) || other.media == media) &&
+            (identical(other.isEmailVerified, isEmailVerified) ||
+                other.isEmailVerified == isEmailVerified) &&
+            (identical(other.isPhoneNumberVerified, isPhoneNumberVerified) ||
+                other.isPhoneNumberVerified == isPhoneNumberVerified) &&
             (identical(other.userProfile, userProfile) ||
                 other.userProfile == userProfile) &&
             (identical(other.registrationStatus, registrationStatus) ||
@@ -306,6 +344,8 @@ class _$UserImpl extends _User {
       facebookId,
       phoneNumber,
       media,
+      isEmailVerified,
+      isPhoneNumberVerified,
       userProfile,
       registrationStatus);
 
@@ -327,6 +367,8 @@ abstract class _User extends User {
       final String facebookId,
       final String phoneNumber,
       final Media media,
+      final bool isEmailVerified,
+      final bool isPhoneNumberVerified,
       final UserProfile userProfile,
       final RegistrationStatus registrationStatus}) = _$UserImpl;
   const _User._() : super._();
@@ -345,6 +387,10 @@ abstract class _User extends User {
   String get phoneNumber;
   @override
   Media get media;
+  @override
+  bool get isEmailVerified;
+  @override
+  bool get isPhoneNumberVerified;
   @override
   UserProfile get userProfile;
   @override

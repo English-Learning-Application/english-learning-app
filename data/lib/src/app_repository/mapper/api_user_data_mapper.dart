@@ -29,6 +29,9 @@ class ApiUserDataMapper extends BaseDataMapper<ApiUserData, User>
             data?.registrationStatus,
           ) ??
           User.defaultRegistrationStatus,
+      isEmailVerified: data?.isEmailVerified ?? User.defaultIsEmailVerified,
+      isPhoneNumberVerified:
+          data?.isPhoneNumberVerified ?? User.defaultIsPhoneNumberVerified,
     );
   }
 
@@ -40,6 +43,8 @@ class ApiUserDataMapper extends BaseDataMapper<ApiUserData, User>
       username: entity.username,
       googleId: entity.googleId,
       facebookId: entity.facebookId,
+      isEmailVerified: entity.isEmailVerified,
+      isPhoneNumberVerified: entity.isPhoneNumberVerified,
       phone: entity.phoneNumber,
       media: _apiMediaDataMapper.mapToData(entity.media),
       userProfile: _apiUserProfileDataMapper.mapToData(entity.userProfile),

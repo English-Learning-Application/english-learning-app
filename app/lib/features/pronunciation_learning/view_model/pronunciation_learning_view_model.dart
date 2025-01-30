@@ -5,10 +5,12 @@ class PronunciationLearningViewModel
     extends BaseViewModel<PronunciationLearningViewModelData> {
   final CheckPermissionUseCase _checkPermissionUseCase;
   final PronunciationAssessmentUseCase _pronunciationAssessmentUseCase;
+  final PronunciationLearningUpdateUseCase _pronunciationLearningUpdateUseCase;
 
   PronunciationLearningViewModel(
     this._checkPermissionUseCase,
     this._pronunciationAssessmentUseCase,
+    this._pronunciationLearningUpdateUseCase,
   ) : super(const PronunciationLearningViewModelData());
 
   void onInit({
@@ -268,18 +270,29 @@ class PronunciationLearningViewModel
     );
   }
 
-  void onNext() {
-    if (viewModelData.currentLearningContentIndex ==
-        viewModelData.totalLearningContentCount - 1) {
-      return;
-    }
-
+  void onNext() async {
     updateData(
       viewModelData.copyWith(
         currentLearningContentIndex:
             viewModelData.currentLearningContentIndex + 1,
+        recordedFilePath: '',
       ),
     );
+
+    if (viewModelData.currentLearningContentIndex >=
+        viewModelData.totalLearningContentCount) {
+      await runViewModelCatching(
+        action: () async {
+          final learningEntities = viewModelData.pronunciationLearningEntities;
+
+          await _pronunciationLearningUpdateUseCase.execute(
+            PronunciationLearningUpdateInput(
+              pronunciationLearningEntities: learningEntities,
+            ),
+          );
+        },
+      );
+    }
   }
 
   Future<void> onAssessment() async {

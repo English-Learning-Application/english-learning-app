@@ -15,6 +15,8 @@ class ApiUserData with _$ApiUserData {
     @JsonKey(name: 'googleId') String? googleId,
     @JsonKey(name: 'facebookId') String? facebookId,
     @JsonKey(name: 'phoneNumber') String? phone,
+    @JsonKey(name: 'isEmailVerified') bool? isEmailVerified,
+    @JsonKey(name: 'isPhoneNumberVerified') bool? isPhoneNumberVerified,
     @JsonKey(name: 'media') ApiMediaData? media,
     @JsonKey(name: 'userProfile') ApiUserProfileData? userProfile,
     @JsonKey(name: 'registrationStatus') String? registrationStatus,

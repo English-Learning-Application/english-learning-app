@@ -1,12 +1,15 @@
+import 'dart:io';
+
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:logic/logic.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
+import 'package:logic/logic.dart';
 
 import '../../data.dart';
 
 @LazySingleton(as: AppRepository)
 class AppRepositoryImpl implements AppRepository {
+  final AppAssetsService _appAssetsService;
   final AppApiService _appAPiService;
   final AppPreferences _appPreferences;
   final ApiRandomUserDataMapper _apiRandomUserDataMapper;
@@ -15,6 +18,7 @@ class AppRepositoryImpl implements AppRepository {
   final ApiUserDataMapper _apiUserDataMapper;
 
   AppRepositoryImpl(
+    this._appAssetsService,
     this._appAPiService,
     this._appPreferences,
     this._apiRandomUserDataMapper,
@@ -84,5 +88,14 @@ class AppRepositoryImpl implements AppRepository {
   @override
   User getUserPreference() {
     return _apiUserDataMapper.mapToEntity(_appPreferences.currentUser);
+  }
+
+  @override
+  Future<PagedList<File>> getImagesPaged(int page) async {
+    final images = await _appAssetsService.getImagesPaged(page);
+
+    return PagedList<File>(
+      data: images,
+    );
   }
 }

@@ -32,6 +32,10 @@ mixin _$ApiUserData {
   String? get facebookId => throw _privateConstructorUsedError;
   @JsonKey(name: 'phoneNumber')
   String? get phone => throw _privateConstructorUsedError;
+  @JsonKey(name: 'isEmailVerified')
+  bool? get isEmailVerified => throw _privateConstructorUsedError;
+  @JsonKey(name: 'isPhoneNumberVerified')
+  bool? get isPhoneNumberVerified => throw _privateConstructorUsedError;
   @JsonKey(name: 'media')
   ApiMediaData? get media => throw _privateConstructorUsedError;
   @JsonKey(name: 'userProfile')
@@ -62,6 +66,8 @@ abstract class $ApiUserDataCopyWith<$Res> {
       @JsonKey(name: 'googleId') String? googleId,
       @JsonKey(name: 'facebookId') String? facebookId,
       @JsonKey(name: 'phoneNumber') String? phone,
+      @JsonKey(name: 'isEmailVerified') bool? isEmailVerified,
+      @JsonKey(name: 'isPhoneNumberVerified') bool? isPhoneNumberVerified,
       @JsonKey(name: 'media') ApiMediaData? media,
       @JsonKey(name: 'userProfile') ApiUserProfileData? userProfile,
       @JsonKey(name: 'registrationStatus') String? registrationStatus});
@@ -91,6 +97,8 @@ class _$ApiUserDataCopyWithImpl<$Res, $Val extends ApiUserData>
     Object? googleId = freezed,
     Object? facebookId = freezed,
     Object? phone = freezed,
+    Object? isEmailVerified = freezed,
+    Object? isPhoneNumberVerified = freezed,
     Object? media = freezed,
     Object? userProfile = freezed,
     Object? registrationStatus = freezed,
@@ -120,6 +128,14 @@ class _$ApiUserDataCopyWithImpl<$Res, $Val extends ApiUserData>
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String?,
+      isEmailVerified: freezed == isEmailVerified
+          ? _value.isEmailVerified
+          : isEmailVerified // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isPhoneNumberVerified: freezed == isPhoneNumberVerified
+          ? _value.isPhoneNumberVerified
+          : isPhoneNumberVerified // ignore: cast_nullable_to_non_nullable
+              as bool?,
       media: freezed == media
           ? _value.media
           : media // ignore: cast_nullable_to_non_nullable
@@ -179,6 +195,8 @@ abstract class _$$ApiUserDataImplCopyWith<$Res>
       @JsonKey(name: 'googleId') String? googleId,
       @JsonKey(name: 'facebookId') String? facebookId,
       @JsonKey(name: 'phoneNumber') String? phone,
+      @JsonKey(name: 'isEmailVerified') bool? isEmailVerified,
+      @JsonKey(name: 'isPhoneNumberVerified') bool? isPhoneNumberVerified,
       @JsonKey(name: 'media') ApiMediaData? media,
       @JsonKey(name: 'userProfile') ApiUserProfileData? userProfile,
       @JsonKey(name: 'registrationStatus') String? registrationStatus});
@@ -208,6 +226,8 @@ class __$$ApiUserDataImplCopyWithImpl<$Res>
     Object? googleId = freezed,
     Object? facebookId = freezed,
     Object? phone = freezed,
+    Object? isEmailVerified = freezed,
+    Object? isPhoneNumberVerified = freezed,
     Object? media = freezed,
     Object? userProfile = freezed,
     Object? registrationStatus = freezed,
@@ -237,6 +257,14 @@ class __$$ApiUserDataImplCopyWithImpl<$Res>
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String?,
+      isEmailVerified: freezed == isEmailVerified
+          ? _value.isEmailVerified
+          : isEmailVerified // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isPhoneNumberVerified: freezed == isPhoneNumberVerified
+          ? _value.isPhoneNumberVerified
+          : isPhoneNumberVerified // ignore: cast_nullable_to_non_nullable
+              as bool?,
       media: freezed == media
           ? _value.media
           : media // ignore: cast_nullable_to_non_nullable
@@ -264,6 +292,8 @@ class _$ApiUserDataImpl implements _ApiUserData {
       @JsonKey(name: 'googleId') this.googleId,
       @JsonKey(name: 'facebookId') this.facebookId,
       @JsonKey(name: 'phoneNumber') this.phone,
+      @JsonKey(name: 'isEmailVerified') this.isEmailVerified,
+      @JsonKey(name: 'isPhoneNumberVerified') this.isPhoneNumberVerified,
       @JsonKey(name: 'media') this.media,
       @JsonKey(name: 'userProfile') this.userProfile,
       @JsonKey(name: 'registrationStatus') this.registrationStatus});
@@ -290,6 +320,12 @@ class _$ApiUserDataImpl implements _ApiUserData {
   @JsonKey(name: 'phoneNumber')
   final String? phone;
   @override
+  @JsonKey(name: 'isEmailVerified')
+  final bool? isEmailVerified;
+  @override
+  @JsonKey(name: 'isPhoneNumberVerified')
+  final bool? isPhoneNumberVerified;
+  @override
   @JsonKey(name: 'media')
   final ApiMediaData? media;
   @override
@@ -301,7 +337,7 @@ class _$ApiUserDataImpl implements _ApiUserData {
 
   @override
   String toString() {
-    return 'ApiUserData(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phone: $phone, media: $media, userProfile: $userProfile, registrationStatus: $registrationStatus)';
+    return 'ApiUserData(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phone: $phone, isEmailVerified: $isEmailVerified, isPhoneNumberVerified: $isPhoneNumberVerified, media: $media, userProfile: $userProfile, registrationStatus: $registrationStatus)';
   }
 
   @override
@@ -318,6 +354,10 @@ class _$ApiUserDataImpl implements _ApiUserData {
             (identical(other.facebookId, facebookId) ||
                 other.facebookId == facebookId) &&
             (identical(other.phone, phone) || other.phone == phone) &&
+            (identical(other.isEmailVerified, isEmailVerified) ||
+                other.isEmailVerified == isEmailVerified) &&
+            (identical(other.isPhoneNumberVerified, isPhoneNumberVerified) ||
+                other.isPhoneNumberVerified == isPhoneNumberVerified) &&
             (identical(other.media, media) || other.media == media) &&
             (identical(other.userProfile, userProfile) ||
                 other.userProfile == userProfile) &&
@@ -327,8 +367,19 @@ class _$ApiUserDataImpl implements _ApiUserData {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, userId, email, username,
-      googleId, facebookId, phone, media, userProfile, registrationStatus);
+  int get hashCode => Object.hash(
+      runtimeType,
+      userId,
+      email,
+      username,
+      googleId,
+      facebookId,
+      phone,
+      isEmailVerified,
+      isPhoneNumberVerified,
+      media,
+      userProfile,
+      registrationStatus);
 
   /// Create a copy of ApiUserData
   /// with the given fields replaced by the non-null parameter values.
@@ -354,6 +405,8 @@ abstract class _ApiUserData implements ApiUserData {
       @JsonKey(name: 'googleId') final String? googleId,
       @JsonKey(name: 'facebookId') final String? facebookId,
       @JsonKey(name: 'phoneNumber') final String? phone,
+      @JsonKey(name: 'isEmailVerified') final bool? isEmailVerified,
+      @JsonKey(name: 'isPhoneNumberVerified') final bool? isPhoneNumberVerified,
       @JsonKey(name: 'media') final ApiMediaData? media,
       @JsonKey(name: 'userProfile') final ApiUserProfileData? userProfile,
       @JsonKey(name: 'registrationStatus')
@@ -380,6 +433,12 @@ abstract class _ApiUserData implements ApiUserData {
   @override
   @JsonKey(name: 'phoneNumber')
   String? get phone;
+  @override
+  @JsonKey(name: 'isEmailVerified')
+  bool? get isEmailVerified;
+  @override
+  @JsonKey(name: 'isPhoneNumberVerified')
+  bool? get isPhoneNumberVerified;
   @override
   @JsonKey(name: 'media')
   ApiMediaData? get media;

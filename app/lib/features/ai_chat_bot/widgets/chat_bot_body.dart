@@ -32,6 +32,19 @@ class ChatBotBody extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: ChatWidget(message: 'Hi', isMe: false),
               ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: ChatWidget(
+                    message: 'What are the basic to learn English?',
+                    isMe: true),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: ChatWidget(
+                    message:
+                        'The basic to learn English is to learn the alphabet, grammar, and vocabulary first.',
+                    isMe: false),
+              ),
             ],
           ),
         ),

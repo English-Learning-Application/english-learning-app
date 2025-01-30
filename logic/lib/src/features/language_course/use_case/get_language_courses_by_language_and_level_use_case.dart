@@ -10,9 +10,11 @@ class GetLanguageCoursesByLanguageAndLevelUseCase extends BaseFutureUseCase<
     GetLanguageCoursesByLanguageAndLevelInput,
     GetLanguageCoursesByLanguageAndLevelOutput> {
   final LanguageCourseRepository _languageCourseRepository;
+  final ExerciseRepository _exerciseRepository;
 
   const GetLanguageCoursesByLanguageAndLevelUseCase(
     this._languageCourseRepository,
+    this._exerciseRepository,
   );
 
   @override
@@ -23,9 +25,59 @@ class GetLanguageCoursesByLanguageAndLevelUseCase extends BaseFutureUseCase<
       language: input.language,
       level: input.level,
     );
+    var resultLanguageCourses = resp;
+    if (resp.isNotEmpty) {
+      final progress = await _exerciseRepository.getLearningProgress();
+      final updatedLanguageCourses = resp.map((languageCourse) {
+        final updatedContents =
+            languageCourse.languageCourseLearningContents.map((content) {
+          final contentSize = content.words.length +
+              content.expressions.length +
+              content.idioms.length +
+              content.sentences.length +
+              content.phrasalVerbs.length +
+              content.tenses.length +
+              content.phonetics.length;
 
+          int completedCount = 0;
+
+          progress.flashCardProgress.map((e) {
+            if (e.learningContentId ==
+                content.languageCourseLearningContentId) {
+              completedCount++;
+            }
+          }).toList();
+          progress.quizProgress.map((e) {
+            if (e.learningContentId ==
+                content.languageCourseLearningContentId) {
+              completedCount++;
+            }
+          }).toList();
+          progress.matchingProgress.map((e) {
+            if (e.learningContentId ==
+                content.languageCourseLearningContentId) {
+              completedCount++;
+            }
+          }).toList();
+          progress.pronunciationProgress.map((e) {
+            if (e.learningContentId ==
+                content.languageCourseLearningContentId) {
+              completedCount++;
+            }
+          }).toList();
+
+          final progressPercentage = (completedCount / contentSize) * 100;
+
+          return content.copyWith(progress: progressPercentage);
+        }).toList();
+
+        return languageCourse.copyWith(
+            languageCourseLearningContents: updatedContents);
+      }).toList();
+      resultLanguageCourses = updatedLanguageCourses;
+    }
     return GetLanguageCoursesByLanguageAndLevelOutput(
-      languageCourses: resp,
+      languageCourses: resultLanguageCourses,
     );
   }
 }

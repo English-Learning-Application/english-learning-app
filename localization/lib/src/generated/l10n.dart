@@ -1349,6 +1349,156 @@ class S {
       args: [],
     );
   }
+
+  /// `Listen and match`
+  String get listenAndMatch {
+    return Intl.message(
+      'Listen and match',
+      name: 'listenAndMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify your email`
+  String get verifyEmail {
+    return Intl.message(
+      'Verify your email',
+      name: 'verifyEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please verify your email to access all of our services`
+  String get verifyEmailSuggestion {
+    return Intl.message(
+      'Please verify your email to access all of our services',
+      name: 'verifyEmailSuggestion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have sent a verification email to your email address. Please verify your email to access all of our services.`
+  String get verifyEmailDescription {
+    return Intl.message(
+      'We have sent a verification email to your email address. Please verify your email to access all of our services.',
+      name: 'verifyEmailDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send email`
+  String get sendEmail {
+    return Intl.message(
+      'Send email',
+      name: 'sendEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend OTP at {time}`
+  String resendOtpAt(Object time) {
+    return Intl.message(
+      'Resend OTP at $time',
+      name: 'resendOtpAt',
+      desc: '',
+      args: [time],
+    );
+  }
+
+  /// `Resend OTP`
+  String get resendOtp {
+    return Intl.message(
+      'Resend OTP',
+      name: 'resendOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Input your phone number`
+  String get inputYourPhoneNumber {
+    return Intl.message(
+      'Input your phone number',
+      name: 'inputYourPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify your phone number`
+  String get verifyPhoneNumber {
+    return Intl.message(
+      'Verify your phone number',
+      name: 'verifyPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify your phone number to receive our latest updates`
+  String get verifyPhoneNumberSuggestion {
+    return Intl.message(
+      'Verify your phone number to receive our latest updates',
+      name: 'verifyPhoneNumberSuggestion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have sent an OTP to your phone number. Please verify your phone number to receive our latest updates.`
+  String get verifyPhoneNumberDescription {
+    return Intl.message(
+      'We have sent an OTP to your phone number. Please verify your phone number to receive our latest updates.',
+      name: 'verifyPhoneNumberDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid phone number`
+  String get invalidPhoneNumber {
+    return Intl.message(
+      'Invalid phone number',
+      name: 'invalidPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send OTP`
+  String get sendOtp {
+    return Intl.message(
+      'Send OTP',
+      name: 'sendOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your phone number has been verified successfully`
+  String get verifyPhoneNumberSuccess {
+    return Intl.message(
+      'Your phone number has been verified successfully',
+      name: 'verifyPhoneNumberSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update profile picture`
+  String get updateProfilePicture {
+    return Intl.message(
+      'Update profile picture',
+      name: 'updateProfilePicture',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

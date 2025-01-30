@@ -39,6 +39,19 @@ class RouteGuard extends AutoRouteGuard {
         failure: (_) => false,
       );
 
+  bool get isCurrentUserEmailVerified => runCatching(
+        action: () {
+          final getCurrentUserOutput = _getCurrentPrefUserUseCase.execute(
+            const GetCurrentPrefUserInput(),
+          );
+
+          return getCurrentUserOutput.user;
+        },
+      ).when(
+        success: (output) => output.isEmailVerified,
+        failure: (_) => false,
+      );
+
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) {
     if (isLoggedIn) {
@@ -46,6 +59,14 @@ class RouteGuard extends AutoRouteGuard {
         router.replaceAll(
           [
             const CompleteRegistrationRoute(),
+          ],
+        );
+        resolver.next(false);
+        return;
+      } else if (!isCurrentUserEmailVerified) {
+        router.replaceAll(
+          [
+            const ValidateEmailRoute(),
           ],
         );
         resolver.next(false);

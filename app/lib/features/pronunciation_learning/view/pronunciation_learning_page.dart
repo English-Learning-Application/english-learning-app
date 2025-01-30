@@ -78,79 +78,100 @@ class _PronunciationLearningPageState extends BasePageState<
   }
 
   Widget _buildBody() {
-    return Column(
-      children: [
-        SizedBox(height: Dimens.d16.responsive()),
-        _buildPronunciationLearningHeader(),
-        SizedBox(height: Dimens.d16.responsive()),
-        Expanded(
-          child: _buildPronunciationLearningContent(),
-        ),
-        SizedBox(height: Dimens.d16.responsive()),
-        _buildPronunciationLearningFooter(),
-        SizedBox(height: Dimens.d16.responsive()),
-        Selector<PronunciationLearningViewModel,
-            PronunciationLearningViewModelData>(
-          selector: (_, viewModel) => viewModel.viewModelData,
-          shouldRebuild: (previous, next) {
-            final differentIndex = previous.currentLearningContentIndex !=
-                next.currentLearningContentIndex;
-            if (differentIndex) return differentIndex;
+    return Selector<PronunciationLearningViewModel,
+        PronunciationLearningViewModelData>(
+      selector: (context, viewModel) => viewModel.viewModelData,
+      shouldRebuild: (previous, next) =>
+          previous.currentLearningContentIndex !=
+              next.currentLearningContentIndex ||
+          previous.pronunciationLearningEntities !=
+              next.pronunciationLearningEntities,
+      builder: (_, vmData, __) {
+        final isFinished = vmData.currentLearningContentIndex >=
+            vmData.totalLearningContentCount;
+        if (isFinished) {
+          return _finishPronunciationLearning(
+            totalLearningContentCount: vmData.totalLearningContentCount,
+          );
+        }
+        return Column(
+          children: [
+            SizedBox(height: Dimens.d16.responsive()),
+            _buildPronunciationLearningHeader(),
+            SizedBox(height: Dimens.d16.responsive()),
+            Expanded(
+              child: _buildPronunciationLearningContent(),
+            ),
+            SizedBox(height: Dimens.d16.responsive()),
+            _buildPronunciationLearningFooter(),
+            SizedBox(height: Dimens.d16.responsive()),
+            Selector<PronunciationLearningViewModel,
+                PronunciationLearningViewModelData>(
+              selector: (_, viewModel) => viewModel.viewModelData,
+              shouldRebuild: (previous, next) {
+                final differentIndex = previous.currentLearningContentIndex !=
+                    next.currentLearningContentIndex;
+                if (differentIndex) return differentIndex;
 
-            final prevLearningEntity = previous.pronunciationLearningEntities[
-                previous.currentLearningContentIndex];
-            final currentLearningEntity = next.pronunciationLearningEntities[
-                next.currentLearningContentIndex];
-            return prevLearningEntity != currentLearningEntity;
-          },
-          builder: (_, vmData, __) {
-            final pronunciationLearningEntity =
-                vmData.pronunciationLearningEntities[
-                    vmData.currentLearningContentIndex];
-            if (pronunciationLearningEntity.pronunciationAssessment.isEmpty) {
-              return const SizedBox.shrink();
-            }
-            final latestAssessment =
-                pronunciationLearningEntity.pronunciationAssessment.last;
-            return Column(
-              children: [
-                Text(
-                  "${S.current.score}: ${latestAssessment.score}",
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.s14w400primary().font16().medium,
-                ),
-                SizedBox(height: Dimens.d8.responsive()),
-                Text(
-                  "IELTS: ${latestAssessment.scoreEstimates.ielts}",
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.s14w400primary().font16().medium,
-                ),
-                SizedBox(height: Dimens.d8.responsive()),
-                Wrap(
-                  direction: Axis.horizontal,
-                  spacing: Dimens.d8.responsive(),
-                  runSpacing: Dimens.d8.responsive(),
+                final prevLearningEntity =
+                    previous.pronunciationLearningEntities[
+                        previous.currentLearningContentIndex];
+                final currentLearningEntity =
+                    next.pronunciationLearningEntities[
+                        next.currentLearningContentIndex];
+                return prevLearningEntity != currentLearningEntity;
+              },
+              builder: (_, vmData, __) {
+                final pronunciationLearningEntity =
+                    vmData.pronunciationLearningEntities[
+                        vmData.currentLearningContentIndex];
+                if (pronunciationLearningEntity
+                    .pronunciationAssessment.isEmpty) {
+                  return const SizedBox.shrink();
+                }
+                final latestAssessment =
+                    pronunciationLearningEntity.pronunciationAssessment.last;
+                return Column(
                   children: [
-                    for (final word in latestAssessment.words)
-                      Chip(
-                        label: Text(
-                          "${word.label}: ${word.score}",
-                          style: AppTextStyles.s14w400primary()
-                              .font14()
-                              .regular
-                              .secondary,
-                        ),
-                        backgroundColor: AppColors.current.primaryColor,
-                      ),
+                    Text(
+                      "${S.current.score}: ${latestAssessment.score}",
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.s14w400primary().font16().medium,
+                    ),
+                    SizedBox(height: Dimens.d8.responsive()),
+                    Text(
+                      "IELTS: ${latestAssessment.scoreEstimates.ielts}",
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.s14w400primary().font16().medium,
+                    ),
+                    SizedBox(height: Dimens.d8.responsive()),
+                    Wrap(
+                      direction: Axis.horizontal,
+                      spacing: Dimens.d8.responsive(),
+                      runSpacing: Dimens.d8.responsive(),
+                      children: [
+                        for (final word in latestAssessment.words)
+                          Chip(
+                            label: Text(
+                              "${word.label}: ${word.score}",
+                              style: AppTextStyles.s14w400primary()
+                                  .font14()
+                                  .regular
+                                  .secondary,
+                            ),
+                            backgroundColor: AppColors.current.primaryColor,
+                          ),
+                      ],
+                    ),
                   ],
-                ),
-              ],
-            );
-          },
-        ),
-        SizedBox(height: Dimens.d16.responsive()),
-        _buildControlButtons(),
-      ],
+                );
+              },
+            ),
+            SizedBox(height: Dimens.d16.responsive()),
+            _buildControlButtons(),
+          ],
+        );
+      },
     );
   }
 
@@ -438,6 +459,160 @@ class _PronunciationLearningPageState extends BasePageState<
           },
         ),
       ],
+    );
+  }
+
+  Widget _finishPronunciationLearning({
+    required int totalLearningContentCount,
+  }) {
+    return SizedBox(
+      width: double.infinity,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Assets.lottie.lottieSuccess.lottie(
+            animate: true,
+            repeat: true,
+            fit: BoxFit.cover,
+          ),
+          Positioned.fill(
+            child: Column(
+              children: [
+                Text(
+                  "${S.current.congratulations}!",
+                  style: AppTextStyles.s14w400primary().font20().bold,
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                Text(
+                  S.current.youHaveCompletedTheCourse,
+                  style: AppTextStyles.s14w400primary().font15().medium,
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                SizedBox(
+                  width: Dimens.d200.responsive(),
+                  height: Dimens.d200.responsive(),
+                  child: Stack(
+                    fit: StackFit.expand,
+                    alignment: Alignment.center,
+                    children: [
+                      Center(
+                        child: Text(
+                          "$totalLearningContentCount/$totalLearningContentCount",
+                          style: AppTextStyles.s14w400primary().font40().bold,
+                        ),
+                      ),
+                      CircularProgressIndicator(
+                        value: 1,
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          AppColors.current.primaryColor,
+                        ),
+                        backgroundColor: AppColors.current.primaryTextColor
+                            .withValues(alpha: 0.2),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                Selector<PronunciationLearningViewModel,
+                    PronunciationLearningViewModelData>(
+                  selector: (context, viewModel) => viewModel.viewModelData,
+                  shouldRebuild: (previous, next) =>
+                      previous.pronunciationLearningEntities !=
+                      next.pronunciationLearningEntities,
+                  builder: (_, vmData, __) {
+                    return Expanded(
+                      child: ListView.separated(
+                        separatorBuilder: (_, __) {
+                          return SizedBox(
+                            height: Dimens.d16.responsive(),
+                          );
+                        },
+                        itemCount: vmData.pronunciationLearningEntities.length,
+                        itemBuilder: (_, index) {
+                          final learningContent = viewModel.viewModelData
+                              .pronunciationLearningEntities[index];
+                          return Container(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: Dimens.d16.responsive(),
+                              vertical: Dimens.d12.responsive(),
+                            ),
+                            decoration: BoxDecoration(
+                              color: AppColors.current.backgroundColor,
+                              borderRadius:
+                                  BorderRadius.circular(Dimens.d8.responsive()),
+                              border: Border.all(
+                                color: AppColors.current.primaryColor,
+                                width: Dimens.d1.responsive(),
+                              ),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        learningContent.pronunciation,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: AppTextStyles.s14w400primary()
+                                            .font16()
+                                            .bold,
+                                      ),
+                                      SizedBox(
+                                        height: Dimens.d8.responsive(),
+                                      ),
+                                      Text(
+                                        "${S.current.score}: ${learningContent.pronunciationAssessment.last.score}",
+                                        overflow: TextOverflow.ellipsis,
+                                        style: AppTextStyles.s14w400primary()
+                                            .font12()
+                                            .light,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: Dimens.d8.responsive(),
+                                ),
+                                Text(
+                                  S.current.learned,
+                                  style: AppTextStyles.s14w400primary()
+                                      .font12()
+                                      .bold,
+                                ),
+                                SizedBox(
+                                  height: Dimens.d8.responsive(),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                StandardButton(
+                  onPressed: () {
+                    navigator.pop();
+                  },
+                  buttonSize: ButtonSize.small,
+                  text: S.current.backToCourses,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

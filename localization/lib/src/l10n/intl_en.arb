@@ -128,6 +128,21 @@
     "previous": "Previous",
     "assessment": "Assessment",
     "previewSentence": "Preview sentence",
-    "score": "Score"
+    "score": "Score",
+    "listenAndMatch": "Listen and match",
+    "verifyEmail": "Verify your email",
+    "verifyEmailSuggestion": "Please verify your email to access all of our services",
+    "verifyEmailDescription": "We have sent a verification email to your email address. Please verify your email to access all of our services.",
+    "sendEmail": "Send email",
+    "resendOtpAt": "Resend OTP at {time}",
+    "resendOtp": "Resend OTP",
+    "inputYourPhoneNumber": "Input your phone number",
+    "verifyPhoneNumber": "Verify your phone number",
+    "verifyPhoneNumberSuggestion": "Verify your phone number to receive our latest updates",
+    "verifyPhoneNumberDescription": "We have sent an OTP to your phone number. Please verify your phone number to receive our latest updates.",
+    "invalidPhoneNumber": "Invalid phone number",
+    "sendOtp": "Send OTP",
+    "verifyPhoneNumberSuccess": "Your phone number has been verified successfully",
+    "updateProfilePicture": "Update profile picture"
 }
 

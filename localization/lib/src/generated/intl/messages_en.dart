@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(errorCode) => "Unidentified error (${errorCode})";
+  static String m0(time) => "Resend OTP at ${time}";
+
+  static String m1(errorCode) => "Unidentified error (${errorCode})";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -81,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "idiom": MessageLookupByLibrary.simpleMessage("Idiom"),
         "incorrect": MessageLookupByLibrary.simpleMessage("Incorrect"),
+        "inputYourPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Input your phone number"),
         "interjection": MessageLookupByLibrary.simpleMessage("Interjection"),
         "interrogativeTense":
             MessageLookupByLibrary.simpleMessage("Interrogative"),
@@ -88,6 +92,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Password confirmation does not match"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Wrong date time format"),
+        "invalidPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Invalid phone number"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Wrong username format"),
         "joinCommunity": MessageLookupByLibrary.simpleMessage("Join community"),
@@ -101,6 +107,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Learning language"),
         "level": MessageLookupByLibrary.simpleMessage("Level"),
+        "listenAndMatch":
+            MessageLookupByLibrary.simpleMessage("Listen and match"),
         "listening": MessageLookupByLibrary.simpleMessage("Listening"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginDescription": MessageLookupByLibrary.simpleMessage(
@@ -164,6 +172,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registerDescription": MessageLookupByLibrary.simpleMessage(
             "Register to access all of our services"),
+        "resendOtp": MessageLookupByLibrary.simpleMessage("Resend OTP"),
+        "resendOtpAt": m0,
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "score": MessageLookupByLibrary.simpleMessage("Score"),
         "selectLearningLanguage": MessageLookupByLibrary.simpleMessage(
@@ -172,6 +182,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Select your learning modes"),
         "selectNativeLanguage":
             MessageLookupByLibrary.simpleMessage("Select your native language"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("Send email"),
+        "sendOtp": MessageLookupByLibrary.simpleMessage("Send OTP"),
         "sentence": MessageLookupByLibrary.simpleMessage("Sentence"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "speaking": MessageLookupByLibrary.simpleMessage("Speaking"),
@@ -187,11 +199,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Track your progress and see how far you\'ve come on your learning journey."),
         "travel": MessageLookupByLibrary.simpleMessage("Travel"),
-        "unknownException": m0,
+        "unknownException": m1,
+        "updateProfilePicture":
+            MessageLookupByLibrary.simpleMessage("Update profile picture"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "usernameHint":
             MessageLookupByLibrary.simpleMessage("Enter your username"),
         "verb": MessageLookupByLibrary.simpleMessage("Verb"),
+        "verifyEmail":
+            MessageLookupByLibrary.simpleMessage("Verify your email"),
+        "verifyEmailDescription": MessageLookupByLibrary.simpleMessage(
+            "We have sent a verification email to your email address. Please verify your email to access all of our services."),
+        "verifyEmailSuggestion": MessageLookupByLibrary.simpleMessage(
+            "Please verify your email to access all of our services"),
+        "verifyPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Verify your phone number"),
+        "verifyPhoneNumberDescription": MessageLookupByLibrary.simpleMessage(
+            "We have sent an OTP to your phone number. Please verify your phone number to receive our latest updates."),
+        "verifyPhoneNumberSuccess": MessageLookupByLibrary.simpleMessage(
+            "Your phone number has been verified successfully"),
+        "verifyPhoneNumberSuggestion": MessageLookupByLibrary.simpleMessage(
+            "Verify your phone number to receive our latest updates"),
         "vietnamese": MessageLookupByLibrary.simpleMessage("Vietnamese"),
         "vocabulary": MessageLookupByLibrary.simpleMessage("Vocabulary"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),

@@ -128,5 +128,20 @@
     "previous": "Trước",
     "assessment": "Đánh giá",
     "previewSentence": "Xem trước câu văn",
-    "score": "Điểm"
+    "score": "Điểm",
+    "listenAndMatch": "Nghe và kết hợp",
+    "verifyEmail": "Xác nhận email",
+    "verifyEmailSuggestion": "Vui lòng xác nhận email của bạn để truy cập tất cả các dịch vụ của chúng tôi",
+    "verifyEmailDescription": "Chúng tôi đã gửi một email xác nhận đến địa chỉ email của bạn. Vui lòng xác nhận email của bạn để truy cập tất cả các dịch vụ của chúng tôi.",
+    "sendEmail": "Gửi email",
+    "resendOtpAt": "Gửi lại mã OTP lúc {time}",
+    "resendOtp": "Gửi lại mã OTP",
+    "inputYourPhoneNumber": "Nhập số điện thoại của bạn",
+    "verifyPhoneNumber": "Xác nhận số điện thoại",
+    "verifyPhoneNumberSuggestion": "Vui lòng xác nhận số điện thoại của bạn để nhận thông tin mới nhất từ chúng tôi",
+    "verifyPhoneNumberDescription": "Chúng tôi đã gửi mã OTP đến số điện thoại của bạn. Vui lòng xác nhận số điện thoại của bạn để nhận thông tin mới nhất từ chúng tôi.",
+    "invalidPhoneNumber": "Số điện thoại không hợp lệ",
+    "sendOtp": "Gửi mã OTP",
+    "verifyPhoneNumberSuccess": "Số điện thoại của bạn đã được xác nhận thành công",
+    "updateProfilePicture": "Cập nhật ảnh đại diện"
 }

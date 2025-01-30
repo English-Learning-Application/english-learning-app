@@ -63,6 +63,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_arrow_left.svg
   SvgGenImage get icArrowLeft => const SvgGenImage('assets/icons/ic_arrow_left.svg');
 
+  /// File path: assets/icons/ic_book_square.svg
+  SvgGenImage get icBookSquare => const SvgGenImage('assets/icons/ic_book_square.svg');
+
   /// File path: assets/icons/ic_close.svg
   SvgGenImage get icClose => const SvgGenImage('assets/icons/ic_close.svg');
 
@@ -96,11 +99,23 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_grammar.svg
   SvgGenImage get icGrammar => const SvgGenImage('assets/icons/ic_grammar.svg');
 
+  /// File path: assets/icons/ic_home.svg
+  SvgGenImage get icHome => const SvgGenImage('assets/icons/ic_home.svg');
+
   /// File path: assets/icons/ic_listening.svg
   SvgGenImage get icListening => const SvgGenImage('assets/icons/ic_listening.svg');
 
+  /// File path: assets/icons/ic_mail.svg
+  SvgGenImage get icMail => const SvgGenImage('assets/icons/ic_mail.svg');
+
+  /// File path: assets/icons/ic_message_question.svg
+  SvgGenImage get icMessageQuestion => const SvgGenImage('assets/icons/ic_message_question.svg');
+
   /// File path: assets/icons/ic_play.svg
   SvgGenImage get icPlay => const SvgGenImage('assets/icons/ic_play.svg');
+
+  /// File path: assets/icons/ic_profile_circle.svg
+  SvgGenImage get icProfileCircle => const SvgGenImage('assets/icons/ic_profile_circle.svg');
 
   /// File path: assets/icons/ic_quit.svg
   SvgGenImage get icQuit => const SvgGenImage('assets/icons/ic_quit.svg');
@@ -132,6 +147,7 @@ class $AssetsIconsGen {
   /// List of all assets
   List<SvgGenImage> get values => [
         icArrowLeft,
+        icBookSquare,
         icClose,
         icCommunity,
         icEngland,
@@ -143,8 +159,12 @@ class $AssetsIconsGen {
         icFranceLandmark,
         icGoogle,
         icGrammar,
+        icHome,
         icListening,
+        icMail,
+        icMessageQuestion,
         icPlay,
+        icProfileCircle,
         icQuit,
         icReading,
         icSadFace,
@@ -175,11 +195,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/onboard-04.png
   AssetGenImage get onboard04 => const AssetGenImage('assets/images/onboard-04.png');
 
+  /// File path: assets/images/phone_verification.png
+  AssetGenImage get phoneVerification => const AssetGenImage('assets/images/phone_verification.png');
+
   /// File path: assets/images/robot-assistant.png
   AssetGenImage get robotAssistant => const AssetGenImage('assets/images/robot-assistant.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [appIcon, onboard01, onboard02, onboard03, onboard04, robotAssistant];
+  List<AssetGenImage> get values => [appIcon, onboard01, onboard02, onboard03, onboard04, phoneVerification, robotAssistant];
 }
 
 class $AssetsLottieGen {

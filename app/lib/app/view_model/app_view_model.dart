@@ -89,9 +89,12 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
         final currentUserResp = _getCurrentPrefUserUseCase.execute(
           const GetCurrentPrefUserInput(),
         );
-        viewModelData = viewModelData.copyWith(
-          isLoggedIn: true,
-          currentUser: currentUserResp.user,
+
+        updateData(
+          viewModelData.copyWith(
+            isLoggedIn: true,
+            currentUser: currentUserResp.user,
+          ),
         );
       },
     );
@@ -106,8 +109,10 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
         final currentUserResp = _getCurrentPrefUserUseCase.execute(
           const GetCurrentPrefUserInput(),
         );
-        viewModelData = viewModelData.copyWith(
-          currentUser: currentUserResp.user,
+        updateData(
+          viewModelData.copyWith(
+            currentUser: currentUserResp.user,
+          ),
         );
         if (goToHome) {
           await navigator.replaceAll(
