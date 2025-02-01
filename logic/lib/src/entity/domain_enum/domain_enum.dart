@@ -292,11 +292,25 @@ enum ProductPlatform {
 
 enum DateLengthUnit {
   day(ServerRequestResponseConstants.day),
+  week(ServerRequestResponseConstants.week),
   month(ServerRequestResponseConstants.month),
   year(ServerRequestResponseConstants.year);
 
   const DateLengthUnit(this.serverValue);
   final String serverValue;
+
+  String get unitName {
+    switch (this) {
+      case DateLengthUnit.day:
+        return S.current.day;
+      case DateLengthUnit.week:
+        return S.current.week;
+      case DateLengthUnit.month:
+        return S.current.month;
+      case DateLengthUnit.year:
+        return S.current.year;
+    }
+  }
 }
 
 enum AccessType {

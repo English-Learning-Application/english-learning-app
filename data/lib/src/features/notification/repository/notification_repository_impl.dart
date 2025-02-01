@@ -10,14 +10,7 @@ class NotificationRepositoryImpl extends NotificationRepository {
   const NotificationRepositoryImpl(this._notificationApiDataSource);
 
   @override
-  Future<void> registerFcmToken({required String token}) {
-    // TODO: implement registerFcmToken
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<void> removeFcmToken() {
-    // TODO: implement removeFcmToken
-    throw UnimplementedError();
+  Future<void> registerFcmToken({required String token}) async {
+    await _notificationApiDataSource.registerFcmToken(token: token);
   }
 }

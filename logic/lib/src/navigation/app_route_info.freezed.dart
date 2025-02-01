@@ -47,6 +47,8 @@ mixin _$AppRouteInfo {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -79,6 +81,8 @@ mixin _$AppRouteInfo {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +115,8 @@ mixin _$AppRouteInfo {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -133,6 +139,9 @@ mixin _$AppRouteInfo {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -152,6 +161,9 @@ mixin _$AppRouteInfo {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -171,6 +183,9 @@ mixin _$AppRouteInfo {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -267,6 +282,8 @@ class _$LoginImpl implements _Login {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return login();
   }
@@ -302,6 +319,8 @@ class _$LoginImpl implements _Login {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return login?.call();
   }
@@ -337,6 +356,8 @@ class _$LoginImpl implements _Login {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -365,6 +386,9 @@ class _$LoginImpl implements _Login {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return login(this);
   }
@@ -387,6 +411,9 @@ class _$LoginImpl implements _Login {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return login?.call(this);
   }
@@ -409,6 +436,9 @@ class _$LoginImpl implements _Login {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -491,6 +521,8 @@ class _$MainImpl implements _Main {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return main();
   }
@@ -526,6 +558,8 @@ class _$MainImpl implements _Main {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return main?.call();
   }
@@ -561,6 +595,8 @@ class _$MainImpl implements _Main {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -589,6 +625,9 @@ class _$MainImpl implements _Main {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return main(this);
   }
@@ -611,6 +650,9 @@ class _$MainImpl implements _Main {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return main?.call(this);
   }
@@ -633,6 +675,9 @@ class _$MainImpl implements _Main {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -716,6 +761,8 @@ class _$SplashImpl implements _Splash {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return splash();
   }
@@ -751,6 +798,8 @@ class _$SplashImpl implements _Splash {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return splash?.call();
   }
@@ -786,6 +835,8 @@ class _$SplashImpl implements _Splash {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -814,6 +865,9 @@ class _$SplashImpl implements _Splash {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return splash(this);
   }
@@ -836,6 +890,9 @@ class _$SplashImpl implements _Splash {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return splash?.call(this);
   }
@@ -858,6 +915,9 @@ class _$SplashImpl implements _Splash {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -941,6 +1001,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return onBoarding();
   }
@@ -976,6 +1038,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return onBoarding?.call();
   }
@@ -1011,6 +1075,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1039,6 +1105,9 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return onBoarding(this);
   }
@@ -1061,6 +1130,9 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return onBoarding?.call(this);
   }
@@ -1083,6 +1155,9 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1167,6 +1242,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return completeRegistration();
   }
@@ -1202,6 +1279,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return completeRegistration?.call();
   }
@@ -1237,6 +1316,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -1265,6 +1346,9 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return completeRegistration(this);
   }
@@ -1287,6 +1371,9 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return completeRegistration?.call(this);
   }
@@ -1309,6 +1396,9 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -1421,6 +1511,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return languageCourse(learningLanguage);
   }
@@ -1456,6 +1548,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return languageCourse?.call(learningLanguage);
   }
@@ -1491,6 +1585,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -1519,6 +1615,9 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return languageCourse(this);
   }
@@ -1541,6 +1640,9 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return languageCourse?.call(this);
   }
@@ -1563,6 +1665,9 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -1698,6 +1803,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return languageCourseDetails(this.languageCourse);
   }
@@ -1733,6 +1840,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return languageCourseDetails?.call(this.languageCourse);
   }
@@ -1768,6 +1877,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -1796,6 +1907,9 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return languageCourseDetails(this);
   }
@@ -1818,6 +1932,9 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return languageCourseDetails?.call(this);
   }
@@ -1840,6 +1957,9 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -1988,6 +2108,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return flashCardLearning(languageCourseLearningContent, learningLanguage);
   }
@@ -2023,6 +2145,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return flashCardLearning?.call(
         languageCourseLearningContent, learningLanguage);
@@ -2059,6 +2183,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -2087,6 +2213,9 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return flashCardLearning(this);
   }
@@ -2109,6 +2238,9 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return flashCardLearning?.call(this);
   }
@@ -2131,6 +2263,9 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -2278,6 +2413,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return quizLearning(learningLanguage, languageCourseLearningContents);
   }
@@ -2313,6 +2450,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return quizLearning?.call(learningLanguage, languageCourseLearningContents);
   }
@@ -2348,6 +2487,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -2376,6 +2517,9 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return quizLearning(this);
   }
@@ -2398,6 +2542,9 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return quizLearning?.call(this);
   }
@@ -2420,6 +2567,9 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -2582,6 +2732,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return matchingLearning(
         learningLanguage, languageCourseLearningContent, learningType);
@@ -2618,6 +2770,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return matchingLearning?.call(
         learningLanguage, languageCourseLearningContent, learningType);
@@ -2654,6 +2808,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
@@ -2683,6 +2839,9 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return matchingLearning(this);
   }
@@ -2705,6 +2864,9 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return matchingLearning?.call(this);
   }
@@ -2727,6 +2889,9 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
@@ -2877,6 +3042,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return pronunciationLearning(
         learningLanguage, languageCourseLearningContent);
@@ -2913,6 +3080,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return pronunciationLearning?.call(
         learningLanguage, languageCourseLearningContent);
@@ -2949,6 +3118,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
@@ -2978,6 +3149,9 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return pronunciationLearning(this);
   }
@@ -3000,6 +3174,9 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return pronunciationLearning?.call(this);
   }
@@ -3022,6 +3199,9 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
@@ -3177,6 +3357,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return listeningLearning(learningLanguage, languageCourseLearningContent);
   }
@@ -3212,6 +3394,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return listeningLearning?.call(
         learningLanguage, languageCourseLearningContent);
@@ -3248,6 +3432,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -3276,6 +3462,9 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return listeningLearning(this);
   }
@@ -3298,6 +3487,9 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return listeningLearning?.call(this);
   }
@@ -3320,6 +3512,9 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -3415,6 +3610,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return validateEmail();
   }
@@ -3450,6 +3647,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return validateEmail?.call();
   }
@@ -3485,6 +3684,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -3513,6 +3714,9 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return validateEmail(this);
   }
@@ -3535,6 +3739,9 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return validateEmail?.call(this);
   }
@@ -3557,6 +3764,9 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -3641,6 +3851,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return validatePhoneNumber();
   }
@@ -3676,6 +3888,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return validatePhoneNumber?.call();
   }
@@ -3711,6 +3925,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -3739,6 +3955,9 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return validatePhoneNumber(this);
   }
@@ -3761,6 +3980,9 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return validatePhoneNumber?.call(this);
   }
@@ -3783,6 +4005,9 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -3866,6 +4091,8 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
     required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
   }) {
     return editProfile();
   }
@@ -3901,6 +4128,8 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
     TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
   }) {
     return editProfile?.call();
   }
@@ -3936,6 +4165,8 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
     TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -3964,6 +4195,9 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function(_ValidateEmail value) validateEmail,
     required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
     required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
   }) {
     return editProfile(this);
   }
@@ -3986,6 +4220,9 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function(_ValidateEmail value)? validateEmail,
     TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
   }) {
     return editProfile?.call(this);
   }
@@ -4008,6 +4245,9 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function(_ValidateEmail value)? validateEmail,
     TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
     TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -4019,4 +4259,490 @@ class _$EditProfileImpl implements _EditProfile {
 
 abstract class _EditProfile implements AppRouteInfo {
   const factory _EditProfile() = _$EditProfileImpl;
+}
+
+/// @nodoc
+abstract class _$$SubscriptionImplCopyWith<$Res> {
+  factory _$$SubscriptionImplCopyWith(
+          _$SubscriptionImpl value, $Res Function(_$SubscriptionImpl) then) =
+      __$$SubscriptionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SubscriptionImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$SubscriptionImpl>
+    implements _$$SubscriptionImplCopyWith<$Res> {
+  __$$SubscriptionImplCopyWithImpl(
+      _$SubscriptionImpl _value, $Res Function(_$SubscriptionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SubscriptionImpl implements _Subscription {
+  const _$SubscriptionImpl();
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.subscription()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SubscriptionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+    required TResult Function(LearningLanguage learningLanguage) languageCourse,
+    required TResult Function(LanguageCourse languageCourse)
+        languageCourseDetails,
+    required TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage)
+        flashCardLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        quizLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningType? learningType)
+        matchingLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent)
+        pronunciationLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        listeningLearning,
+    required TResult Function() validateEmail,
+    required TResult Function() validatePhoneNumber,
+    required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
+  }) {
+    return subscription();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+    TResult? Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult? Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage)?
+        flashCardLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        quizLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+        pronunciationLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        listeningLearning,
+    TResult? Function()? validateEmail,
+    TResult? Function()? validatePhoneNumber,
+    TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
+  }) {
+    return subscription?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    TResult Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage)?
+        flashCardLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        quizLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+        pronunciationLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        listeningLearning,
+    TResult Function()? validateEmail,
+    TResult Function()? validatePhoneNumber,
+    TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
+    required TResult orElse(),
+  }) {
+    if (subscription != null) {
+      return subscription();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+    required TResult Function(_LanguageCourse value) languageCourse,
+    required TResult Function(_LanguageCourseDetails value)
+        languageCourseDetails,
+    required TResult Function(_FlashCardLearning value) flashCardLearning,
+    required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
+    required TResult Function(_PronunciationLearning value)
+        pronunciationLearning,
+    required TResult Function(_ListeningLearning value) listeningLearning,
+    required TResult Function(_ValidateEmail value) validateEmail,
+    required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
+    required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
+  }) {
+    return subscription(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+    TResult? Function(_LanguageCourse value)? languageCourse,
+    TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult? Function(_FlashCardLearning value)? flashCardLearning,
+    TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
+    TResult? Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult? Function(_ListeningLearning value)? listeningLearning,
+    TResult? Function(_ValidateEmail value)? validateEmail,
+    TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+  }) {
+    return subscription?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    TResult Function(_LanguageCourse value)? languageCourse,
+    TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult Function(_FlashCardLearning value)? flashCardLearning,
+    TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
+    TResult Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult Function(_ListeningLearning value)? listeningLearning,
+    TResult Function(_ValidateEmail value)? validateEmail,
+    TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    required TResult orElse(),
+  }) {
+    if (subscription != null) {
+      return subscription(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Subscription implements AppRouteInfo {
+  const factory _Subscription() = _$SubscriptionImpl;
+}
+
+/// @nodoc
+abstract class _$$CommonFeatureRequiredSubscriptionImplCopyWith<$Res> {
+  factory _$$CommonFeatureRequiredSubscriptionImplCopyWith(
+          _$CommonFeatureRequiredSubscriptionImpl value,
+          $Res Function(_$CommonFeatureRequiredSubscriptionImpl) then) =
+      __$$CommonFeatureRequiredSubscriptionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CommonFeatureRequiredSubscriptionImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res,
+        _$CommonFeatureRequiredSubscriptionImpl>
+    implements _$$CommonFeatureRequiredSubscriptionImplCopyWith<$Res> {
+  __$$CommonFeatureRequiredSubscriptionImplCopyWithImpl(
+      _$CommonFeatureRequiredSubscriptionImpl _value,
+      $Res Function(_$CommonFeatureRequiredSubscriptionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$CommonFeatureRequiredSubscriptionImpl
+    implements _CommonFeatureRequiredSubscription {
+  const _$CommonFeatureRequiredSubscriptionImpl();
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.commonFeatureRequiredSubscription()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CommonFeatureRequiredSubscriptionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+    required TResult Function(LearningLanguage learningLanguage) languageCourse,
+    required TResult Function(LanguageCourse languageCourse)
+        languageCourseDetails,
+    required TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage)
+        flashCardLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        quizLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningType? learningType)
+        matchingLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent)
+        pronunciationLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        listeningLearning,
+    required TResult Function() validateEmail,
+    required TResult Function() validatePhoneNumber,
+    required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
+  }) {
+    return commonFeatureRequiredSubscription();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+    TResult? Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult? Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage)?
+        flashCardLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        quizLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+        pronunciationLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        listeningLearning,
+    TResult? Function()? validateEmail,
+    TResult? Function()? validatePhoneNumber,
+    TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
+  }) {
+    return commonFeatureRequiredSubscription?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    TResult Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage)?
+        flashCardLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        quizLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+        pronunciationLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        listeningLearning,
+    TResult Function()? validateEmail,
+    TResult Function()? validatePhoneNumber,
+    TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
+    required TResult orElse(),
+  }) {
+    if (commonFeatureRequiredSubscription != null) {
+      return commonFeatureRequiredSubscription();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+    required TResult Function(_LanguageCourse value) languageCourse,
+    required TResult Function(_LanguageCourseDetails value)
+        languageCourseDetails,
+    required TResult Function(_FlashCardLearning value) flashCardLearning,
+    required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
+    required TResult Function(_PronunciationLearning value)
+        pronunciationLearning,
+    required TResult Function(_ListeningLearning value) listeningLearning,
+    required TResult Function(_ValidateEmail value) validateEmail,
+    required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
+    required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
+  }) {
+    return commonFeatureRequiredSubscription(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+    TResult? Function(_LanguageCourse value)? languageCourse,
+    TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult? Function(_FlashCardLearning value)? flashCardLearning,
+    TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
+    TResult? Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult? Function(_ListeningLearning value)? listeningLearning,
+    TResult? Function(_ValidateEmail value)? validateEmail,
+    TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+  }) {
+    return commonFeatureRequiredSubscription?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    TResult Function(_LanguageCourse value)? languageCourse,
+    TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult Function(_FlashCardLearning value)? flashCardLearning,
+    TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
+    TResult Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult Function(_ListeningLearning value)? listeningLearning,
+    TResult Function(_ValidateEmail value)? validateEmail,
+    TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    required TResult orElse(),
+  }) {
+    if (commonFeatureRequiredSubscription != null) {
+      return commonFeatureRequiredSubscription(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CommonFeatureRequiredSubscription implements AppRouteInfo {
+  const factory _CommonFeatureRequiredSubscription() =
+      _$CommonFeatureRequiredSubscriptionImpl;
 }

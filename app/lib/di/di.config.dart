@@ -40,6 +40,8 @@ import 'package:app/features/pronunciation_learning/view_model/pronunciation_lea
 import 'package:app/features/quiz_learning/view_model/quiz_learning.dart'
     as _i96;
 import 'package:app/features/splash/view_models/splash.dart' as _i635;
+import 'package:app/features/subscription/view_model/subscription.dart'
+    as _i407;
 import 'package:app/features/validate_email/view_model/validate_email.dart'
     as _i837;
 import 'package:app/features/validate_phone_number/view_model/validate_phone_number.dart'
@@ -47,6 +49,8 @@ import 'package:app/features/validate_phone_number/view_model/validate_phone_num
 import 'package:app/navigation/app_navigator_impl.dart' as _i101;
 import 'package:app/navigation/mapper/app_popup_info_mapper.dart' as _i203;
 import 'package:app/navigation/mapper/app_route_info_mapper.dart' as _i48;
+import 'package:app/navigation/middleware/chat_bot_subscription_route_guard.dart'
+    as _i129;
 import 'package:app/navigation/middleware/is_logged_in_route_guard.dart'
     as _i21;
 import 'package:app/navigation/middleware/route_guard.dart' as _i513;
@@ -117,14 +121,6 @@ extension GetItInjectableX on _i174.GetIt {
             ));
     gh.factory<_i21.IsLoggedInRouteGuard>(
         () => _i21.IsLoggedInRouteGuard(gh<_i182.IsLoggedInUseCase>()));
-    gh.lazySingleton<_i215.AppViewModel>(() => _i215.AppViewModel(
-          gh<_i182.SaveLanguageCodeUseCase>(),
-          gh<_i182.SaveThemeModeUseCase>(),
-          gh<_i182.GetLoggedInUserUseCase>(),
-          gh<_i182.GetCurrentPrefUserUseCase>(),
-          gh<_i473.RemotePushNotificationService>(),
-          gh<_i182.LogoutUseCase>(),
-        ));
     gh.factory<_i1006.ValidatePhoneNumberViewModel>(
         () => _i1006.ValidatePhoneNumberViewModel(
               gh<_i182.SendPhoneVerificationUseCase>(),
@@ -133,6 +129,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(
           gh<_i182.LogoutUseCase>(),
           gh<_i182.TrackConnectivityUseCase>(),
+        ));
+    gh.factory<_i407.SubscriptionViewModel>(() => _i407.SubscriptionViewModel(
+          gh<_i182.GetAllSubscriptionUseCase>(),
+          gh<_i182.CreateSubscriptionPaymentUseCase>(),
+          gh<_i182.SwapSubscriptionPlanUseCase>(),
         ));
     gh.factory<_i752.CompleteRegistrationViewModel>(() =>
         _i752.CompleteRegistrationViewModel(
@@ -148,10 +149,18 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i235.MatchingLearningViewModel>(() =>
         _i235.MatchingLearningViewModel(
             gh<_i182.MatchingLearningUpdateUseCase>()));
-    gh.lazySingleton<_i931.AppRouter>(() => _i931.AppRouter(
-          gh<_i137.RouteGuard>(),
-          gh<_i21.IsLoggedInRouteGuard>(),
+    gh.lazySingleton<_i215.AppViewModel>(() => _i215.AppViewModel(
+          gh<_i182.SaveLanguageCodeUseCase>(),
+          gh<_i182.SaveThemeModeUseCase>(),
+          gh<_i182.GetLoggedInUserUseCase>(),
+          gh<_i182.GetCurrentPrefUserUseCase>(),
+          gh<_i473.RemotePushNotificationService>(),
+          gh<_i182.LogoutUseCase>(),
+          gh<_i182.GetAllSubscriptionUseCase>(),
         ));
+    gh.factory<_i129.ChatBotSubscriptionRouteGuard>(() =>
+        _i129.ChatBotSubscriptionRouteGuard(
+            gh<_i182.HasSubscriptionUseCase>()));
     gh.factory<_i366.CourseViewModel>(() => _i366.CourseViewModel(
           gh<_i182.GetCategoriesUseCase>(),
           gh<_i182.GetCategoryCoursesByLanguageUseCase>(),
@@ -163,6 +172,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i5.FlashCardLearningViewModel>(() =>
         _i5.FlashCardLearningViewModel(
             gh<_i182.FlashCardLearningUpdateUseCase>()));
+    gh.lazySingleton<_i931.AppRouter>(() => _i931.AppRouter(
+          gh<_i137.RouteGuard>(),
+          gh<_i21.IsLoggedInRouteGuard>(),
+          gh<_i129.ChatBotSubscriptionRouteGuard>(),
+        ));
     gh.lazySingleton<_i182.AppNavigator>(() => _i101.AppNavigatorImpl(
           gh<_i137.AppRouter>(),
           gh<_i137.BasePopupInfoMapper>(),

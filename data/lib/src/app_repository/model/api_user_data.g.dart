@@ -24,6 +24,10 @@ _$ApiUserDataImpl _$$ApiUserDataImplFromJson(Map<String, dynamic> json) =>
           : ApiUserProfileData.fromJson(
               json['userProfile'] as Map<String, dynamic>),
       registrationStatus: json['registrationStatus'] as String?,
+      userSubscriptions: (json['userSubscriptions'] as List<dynamic>?)
+          ?.map((e) =>
+              ApiUserSubscriptionData.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$ApiUserDataImplToJson(_$ApiUserDataImpl instance) =>
@@ -39,6 +43,8 @@ Map<String, dynamic> _$$ApiUserDataImplToJson(_$ApiUserDataImpl instance) =>
       'media': instance.media?.toJson(),
       'userProfile': instance.userProfile?.toJson(),
       'registrationStatus': instance.registrationStatus,
+      'userSubscriptions':
+          instance.userSubscriptions?.map((e) => e.toJson()).toList(),
     };
 
 _$ApiUserProfileDataImpl _$$ApiUserProfileDataImplFromJson(

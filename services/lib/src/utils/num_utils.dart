@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 extension NumExtensions on num {
   num plus(num other) => this + other;
   num minus(num other) => this - other;
@@ -25,4 +27,10 @@ extension DoubleExtensions on double {
   double div(double other) => this / other;
   bool isEquals(double other) => this == other;
   bool isNotEquals(double other) => this != other;
+}
+
+class NumUtils {
+  static String formatVietnameseCurrency(num value) {
+    return NumberFormat('#,##0', 'vi_VN').format(value);
+  }
 }

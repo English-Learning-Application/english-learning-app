@@ -41,4 +41,7 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.validateEmail() = _ValidateEmail;
   const factory AppRouteInfo.validatePhoneNumber() = _ValidatePhoneNumber;
   const factory AppRouteInfo.editProfile() = _EditProfile;
+  const factory AppRouteInfo.subscription() = _Subscription;
+  const factory AppRouteInfo.commonFeatureRequiredSubscription() =
+      _CommonFeatureRequiredSubscription;
 }

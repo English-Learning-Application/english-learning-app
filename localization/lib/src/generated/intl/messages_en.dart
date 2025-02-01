@@ -26,10 +26,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accessToAiChatbot":
+            MessageLookupByLibrary.simpleMessage("Access to AI chatbot"),
+        "accessToAiChatbotDesc": MessageLookupByLibrary.simpleMessage(
+            "Get personalized recommendations and support from our AI chatbot"),
+        "accessToCommunityHub":
+            MessageLookupByLibrary.simpleMessage("Access to community hub"),
+        "accessToCommunityHubDesc": MessageLookupByLibrary.simpleMessage(
+            "Connect with other learners and join communities to learn together"),
         "adjective": MessageLookupByLibrary.simpleMessage("Adjective"),
         "adverb": MessageLookupByLibrary.simpleMessage("Adverb"),
         "aiChatbot": MessageLookupByLibrary.simpleMessage("AI Chatbot"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
+        "alreadyPurchased":
+            MessageLookupByLibrary.simpleMessage("Already purchased"),
         "assessment": MessageLookupByLibrary.simpleMessage("Assessment"),
         "backToCourses":
             MessageLookupByLibrary.simpleMessage("Back to courses"),
@@ -42,6 +52,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Cancellation"),
+        "chatBotRequired": MessageLookupByLibrary.simpleMessage(
+            "AI chatbot subscription is required"),
+        "chatBotRequiredDescription": MessageLookupByLibrary.simpleMessage(
+            "AI chatbot subscription is required to access this feature"),
         "chatbotHint":
             MessageLookupByLibrary.simpleMessage("Type your message here"),
         "chatbotIntro": MessageLookupByLibrary.simpleMessage(
@@ -53,6 +67,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Choose the language"),
         "chooseWhat": MessageLookupByLibrary.simpleMessage("Choose what"),
         "communityHub": MessageLookupByLibrary.simpleMessage("Community Hub"),
+        "communityHubRequired": MessageLookupByLibrary.simpleMessage(
+            "Community hub subscription is required"),
+        "communityHubRequiredDescription": MessageLookupByLibrary.simpleMessage(
+            "Community hub subscription is required to access this feature"),
         "communityNotJoined": MessageLookupByLibrary.simpleMessage(
             "You have not joined any community yet! Join a community to connect with other learners."),
         "completeYourProfile":
@@ -69,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "courseWillBeAvailableSoon": MessageLookupByLibrary.simpleMessage(
             "Course will be available soon"),
         "courses": MessageLookupByLibrary.simpleMessage("Courses"),
+        "day": MessageLookupByLibrary.simpleMessage("Day"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
@@ -77,8 +96,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "flashcard": MessageLookupByLibrary.simpleMessage("Flashcard"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "freePlan": MessageLookupByLibrary.simpleMessage("Free Plan"),
+        "freePlanDescription": MessageLookupByLibrary.simpleMessage(
+            "Basic access to courses and resources"),
         "french": MessageLookupByLibrary.simpleMessage("French"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get started"),
+        "goldPlan": MessageLookupByLibrary.simpleMessage("Gold Plan"),
+        "goldPlanDescription": MessageLookupByLibrary.simpleMessage(
+            "Additional access to community hub, unlimited courses, and personalized recommendations"),
         "grammar": MessageLookupByLibrary.simpleMessage("Grammar"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "idiom": MessageLookupByLibrary.simpleMessage("Idiom"),
@@ -124,6 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "microphonePermissionDenied": MessageLookupByLibrary.simpleMessage(
             "Microphone permission denied by user, please enable it in your settings"),
         "mode": MessageLookupByLibrary.simpleMessage("Mode"),
+        "month": MessageLookupByLibrary.simpleMessage("Month"),
         "multiLanguage":
             MessageLookupByLibrary.simpleMessage("Multi-language support"),
         "multiLanguageDescription": MessageLookupByLibrary.simpleMessage(
@@ -158,6 +184,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Please drag and drop the words to match the correct order"),
         "positiveTense": MessageLookupByLibrary.simpleMessage("Positive"),
+        "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium Plan"),
+        "premiumPlanDescription": MessageLookupByLibrary.simpleMessage(
+            "Additional access to community hub, AI chatbot, unlimited courses, and personalized recommendations"),
         "preposition": MessageLookupByLibrary.simpleMessage("Preposition"),
         "pressAgainToExit":
             MessageLookupByLibrary.simpleMessage("Press again to exit"),
@@ -167,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "pronoun": MessageLookupByLibrary.simpleMessage("Pronoun"),
         "pronunciation": MessageLookupByLibrary.simpleMessage("Pronunciation"),
+        "purchase": MessageLookupByLibrary.simpleMessage("Purchase"),
         "quiz": MessageLookupByLibrary.simpleMessage("Quiz"),
         "reading": MessageLookupByLibrary.simpleMessage("Reading"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
@@ -189,8 +219,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "speaking": MessageLookupByLibrary.simpleMessage("Speaking"),
         "startLearning": MessageLookupByLibrary.simpleMessage("Start learning"),
         "subject": MessageLookupByLibrary.simpleMessage("Subject"),
+        "subscription": MessageLookupByLibrary.simpleMessage("Subscription"),
+        "switchText": MessageLookupByLibrary.simpleMessage("Switch"),
         "tense": MessageLookupByLibrary.simpleMessage("Tense"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
+        "thisFeatureIsOnlyAvailableForPremiumUsers":
+            MessageLookupByLibrary.simpleMessage(
+                "This feature is only available for premium users"),
         "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),
         "toLearnToday": MessageLookupByLibrary.simpleMessage("to learn today"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token expired"),
@@ -222,9 +257,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Verify your phone number to receive our latest updates"),
         "vietnamese": MessageLookupByLibrary.simpleMessage("Vietnamese"),
         "vocabulary": MessageLookupByLibrary.simpleMessage("Vocabulary"),
+        "week": MessageLookupByLibrary.simpleMessage("Week"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "word": MessageLookupByLibrary.simpleMessage("Word"),
         "writing": MessageLookupByLibrary.simpleMessage("Writing"),
+        "year": MessageLookupByLibrary.simpleMessage("Year"),
         "youHaveChosenTheCorrectAnswer": MessageLookupByLibrary.simpleMessage(
             "You have chosen the correct answer"),
         "youHaveChosenTheWrongAnswer": MessageLookupByLibrary.simpleMessage(

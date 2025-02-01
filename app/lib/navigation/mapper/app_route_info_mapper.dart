@@ -49,6 +49,9 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       validateEmail: () => const ValidateEmailRoute(),
       validatePhoneNumber: () => const ValidatePhoneNumberRoute(),
       editProfile: () => EditProfileRoute(),
+      subscription: () => const SubscriptionRoute(),
+      commonFeatureRequiredSubscription: () =>
+          const CommonFeatureRequiredSubscriptionRoute(),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:app/navigation/middleware/chat_bot_subscription_route_guard.dart';
 import 'package:app/navigation/middleware/is_logged_in_route_guard.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:injectable/injectable.dart';
@@ -11,10 +12,12 @@ import '../../app.dart';
 class AppRouter extends $AppRouter {
   final RouteGuard _routeGuard;
   final IsLoggedInRouteGuard _isLoggedInRouteGuard;
+  final ChatBotSubscriptionRouteGuard _chatBotSubscriptionRouteGuard;
 
   AppRouter(
     this._routeGuard,
     this._isLoggedInRouteGuard,
+    this._chatBotSubscriptionRouteGuard,
   );
 
   @override
@@ -83,11 +86,17 @@ class AppRouter extends $AppRouter {
             ),
             AutoRoute(
               page: AiChatTabRoute.page,
-              maintainState: true,
+              maintainState: false,
               children: [
                 AutoRoute(
                   page: AiChatBotRoute.page,
+                  guards: [
+                    _chatBotSubscriptionRouteGuard,
+                  ],
                   initial: true,
+                ),
+                AutoRoute(
+                  page: CommonFeatureRequiredSubscriptionRoute.page,
                 ),
               ],
             ),
@@ -104,6 +113,12 @@ class AppRouter extends $AppRouter {
                 ),
                 AutoRoute(
                   page: ValidatePhoneNumberRoute.page,
+                  guards: [
+                    _isLoggedInRouteGuard,
+                  ],
+                ),
+                AutoRoute(
+                  page: SubscriptionRoute.page,
                   guards: [
                     _isLoggedInRouteGuard,
                   ],

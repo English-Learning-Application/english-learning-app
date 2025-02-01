@@ -28,6 +28,8 @@ mixin _$User {
   UserProfile get userProfile => throw _privateConstructorUsedError;
   RegistrationStatus get registrationStatus =>
       throw _privateConstructorUsedError;
+  List<UserSubscription> get userSubscriptions =>
+      throw _privateConstructorUsedError;
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
@@ -51,7 +53,8 @@ abstract class $UserCopyWith<$Res> {
       bool isEmailVerified,
       bool isPhoneNumberVerified,
       UserProfile userProfile,
-      RegistrationStatus registrationStatus});
+      RegistrationStatus registrationStatus,
+      List<UserSubscription> userSubscriptions});
 
   $MediaCopyWith<$Res> get media;
   $UserProfileCopyWith<$Res> get userProfile;
@@ -83,6 +86,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? isPhoneNumberVerified = null,
     Object? userProfile = null,
     Object? registrationStatus = null,
+    Object? userSubscriptions = null,
   }) {
     return _then(_value.copyWith(
       userId: null == userId
@@ -129,6 +133,10 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
           ? _value.registrationStatus
           : registrationStatus // ignore: cast_nullable_to_non_nullable
               as RegistrationStatus,
+      userSubscriptions: null == userSubscriptions
+          ? _value.userSubscriptions
+          : userSubscriptions // ignore: cast_nullable_to_non_nullable
+              as List<UserSubscription>,
     ) as $Val);
   }
 
@@ -171,7 +179,8 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       bool isEmailVerified,
       bool isPhoneNumberVerified,
       UserProfile userProfile,
-      RegistrationStatus registrationStatus});
+      RegistrationStatus registrationStatus,
+      List<UserSubscription> userSubscriptions});
 
   @override
   $MediaCopyWith<$Res> get media;
@@ -202,6 +211,7 @@ class __$$UserImplCopyWithImpl<$Res>
     Object? isPhoneNumberVerified = null,
     Object? userProfile = null,
     Object? registrationStatus = null,
+    Object? userSubscriptions = null,
   }) {
     return _then(_$UserImpl(
       userId: null == userId
@@ -248,6 +258,10 @@ class __$$UserImplCopyWithImpl<$Res>
           ? _value.registrationStatus
           : registrationStatus // ignore: cast_nullable_to_non_nullable
               as RegistrationStatus,
+      userSubscriptions: null == userSubscriptions
+          ? _value._userSubscriptions
+          : userSubscriptions // ignore: cast_nullable_to_non_nullable
+              as List<UserSubscription>,
     ));
   }
 }
@@ -266,8 +280,11 @@ class _$UserImpl extends _User {
       this.isEmailVerified = User.defaultIsEmailVerified,
       this.isPhoneNumberVerified = User.defaultIsPhoneNumberVerified,
       this.userProfile = User.defaultUserProfile,
-      this.registrationStatus = User.defaultRegistrationStatus})
-      : super._();
+      this.registrationStatus = User.defaultRegistrationStatus,
+      final List<UserSubscription> userSubscriptions =
+          User.defaultUserSubscriptions})
+      : _userSubscriptions = userSubscriptions,
+        super._();
 
   @override
   @JsonKey()
@@ -302,10 +319,19 @@ class _$UserImpl extends _User {
   @override
   @JsonKey()
   final RegistrationStatus registrationStatus;
+  final List<UserSubscription> _userSubscriptions;
+  @override
+  @JsonKey()
+  List<UserSubscription> get userSubscriptions {
+    if (_userSubscriptions is EqualUnmodifiableListView)
+      return _userSubscriptions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_userSubscriptions);
+  }
 
   @override
   String toString() {
-    return 'User(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phoneNumber: $phoneNumber, media: $media, isEmailVerified: $isEmailVerified, isPhoneNumberVerified: $isPhoneNumberVerified, userProfile: $userProfile, registrationStatus: $registrationStatus)';
+    return 'User(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phoneNumber: $phoneNumber, media: $media, isEmailVerified: $isEmailVerified, isPhoneNumberVerified: $isPhoneNumberVerified, userProfile: $userProfile, registrationStatus: $registrationStatus, userSubscriptions: $userSubscriptions)';
   }
 
   @override
@@ -331,7 +357,9 @@ class _$UserImpl extends _User {
             (identical(other.userProfile, userProfile) ||
                 other.userProfile == userProfile) &&
             (identical(other.registrationStatus, registrationStatus) ||
-                other.registrationStatus == registrationStatus));
+                other.registrationStatus == registrationStatus) &&
+            const DeepCollectionEquality()
+                .equals(other._userSubscriptions, _userSubscriptions));
   }
 
   @override
@@ -347,7 +375,8 @@ class _$UserImpl extends _User {
       isEmailVerified,
       isPhoneNumberVerified,
       userProfile,
-      registrationStatus);
+      registrationStatus,
+      const DeepCollectionEquality().hash(_userSubscriptions));
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
@@ -370,7 +399,8 @@ abstract class _User extends User {
       final bool isEmailVerified,
       final bool isPhoneNumberVerified,
       final UserProfile userProfile,
-      final RegistrationStatus registrationStatus}) = _$UserImpl;
+      final RegistrationStatus registrationStatus,
+      final List<UserSubscription> userSubscriptions}) = _$UserImpl;
   const _User._() : super._();
 
   @override
@@ -395,6 +425,8 @@ abstract class _User extends User {
   UserProfile get userProfile;
   @override
   RegistrationStatus get registrationStatus;
+  @override
+  List<UserSubscription> get userSubscriptions;
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.

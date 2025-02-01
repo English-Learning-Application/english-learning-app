@@ -8,5 +8,6 @@ class AppViewModelData extends BaseViewModelData with _$AppViewModelData {
     @Default(LanguageCode.defaultValue) LanguageCode languageCode,
     @Default(false) bool isLoggedIn,
     @Default(AppThemeType.system) AppThemeType appTheme,
+    @Default(Subscription()) Subscription subscription,
   }) = _AppViewModelData;
 }

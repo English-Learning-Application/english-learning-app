@@ -88,6 +88,43 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
               },
               selector: (_, vm) => vm.viewModelData,
             ),
+            Selector<AppViewModel, AppViewModelData>(
+              shouldRebuild: (prev, curr) {
+                return prev.subscription != curr.subscription;
+              },
+              builder: (_, appVmData, __) {
+                if (appVmData.subscription.id.isEmpty) {
+                  return const SizedBox.shrink();
+                }
+                return Column(
+                  children: [
+                    SizedBox(
+                      height: Dimens.d8.responsive(),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: FoundationColors.warning700,
+                        borderRadius:
+                            BorderRadius.circular(Dimens.d16.responsive()),
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: Dimens.d16.responsive(),
+                        vertical: Dimens.d8.responsive(),
+                      ),
+                      child: Text(
+                        appVmData.subscription.name.localized,
+                        textAlign: TextAlign.center,
+                        style: AppTextStyles.s14w400primary()
+                            .secondary
+                            .font14()
+                            .bold,
+                      ),
+                    ),
+                  ],
+                );
+              },
+              selector: (_, vm) => vm.viewModelData,
+            ),
             SizedBox(
               height: Dimens.d8.responsive(),
             ),
@@ -214,6 +251,28 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
                       );
                     },
                     selector: (_, vm) => vm.viewModelData,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: Dimens.d16.responsive(),
+            ),
+            _buildProfileContainer(
+              items: [
+                _buildProfileItem(
+                  title: S.current.subscription,
+                  value: GestureDetector(
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      size: Dimens.d16.responsive(),
+                      color: FoundationColors.neutral50,
+                    ),
+                    onTap: () async {
+                      await navigator.push(
+                        const AppRouteInfo.subscription(),
+                      );
+                    },
                   ),
                 ),
               ],

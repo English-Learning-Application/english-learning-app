@@ -1499,6 +1499,236 @@ class S {
       args: [],
     );
   }
+
+  /// `Subscription`
+  String get subscription {
+    return Intl.message(
+      'Subscription',
+      name: 'subscription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gold Plan`
+  String get goldPlan {
+    return Intl.message(
+      'Gold Plan',
+      name: 'goldPlan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Premium Plan`
+  String get premiumPlan {
+    return Intl.message(
+      'Premium Plan',
+      name: 'premiumPlan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Free Plan`
+  String get freePlan {
+    return Intl.message(
+      'Free Plan',
+      name: 'freePlan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Additional access to community hub, unlimited courses, and personalized recommendations`
+  String get goldPlanDescription {
+    return Intl.message(
+      'Additional access to community hub, unlimited courses, and personalized recommendations',
+      name: 'goldPlanDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Additional access to community hub, AI chatbot, unlimited courses, and personalized recommendations`
+  String get premiumPlanDescription {
+    return Intl.message(
+      'Additional access to community hub, AI chatbot, unlimited courses, and personalized recommendations',
+      name: 'premiumPlanDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Basic access to courses and resources`
+  String get freePlanDescription {
+    return Intl.message(
+      'Basic access to courses and resources',
+      name: 'freePlanDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Access to AI chatbot`
+  String get accessToAiChatbot {
+    return Intl.message(
+      'Access to AI chatbot',
+      name: 'accessToAiChatbot',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get personalized recommendations and support from our AI chatbot`
+  String get accessToAiChatbotDesc {
+    return Intl.message(
+      'Get personalized recommendations and support from our AI chatbot',
+      name: 'accessToAiChatbotDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Access to community hub`
+  String get accessToCommunityHub {
+    return Intl.message(
+      'Access to community hub',
+      name: 'accessToCommunityHub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connect with other learners and join communities to learn together`
+  String get accessToCommunityHubDesc {
+    return Intl.message(
+      'Connect with other learners and join communities to learn together',
+      name: 'accessToCommunityHubDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Day`
+  String get day {
+    return Intl.message(
+      'Day',
+      name: 'day',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Week`
+  String get week {
+    return Intl.message(
+      'Week',
+      name: 'week',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Month`
+  String get month {
+    return Intl.message(
+      'Month',
+      name: 'month',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Year`
+  String get year {
+    return Intl.message(
+      'Year',
+      name: 'year',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Purchase`
+  String get purchase {
+    return Intl.message(
+      'Purchase',
+      name: 'purchase',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already purchased`
+  String get alreadyPurchased {
+    return Intl.message(
+      'Already purchased',
+      name: 'alreadyPurchased',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Switch`
+  String get switchText {
+    return Intl.message(
+      'Switch',
+      name: 'switchText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `AI chatbot subscription is required`
+  String get chatBotRequired {
+    return Intl.message(
+      'AI chatbot subscription is required',
+      name: 'chatBotRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `AI chatbot subscription is required to access this feature`
+  String get chatBotRequiredDescription {
+    return Intl.message(
+      'AI chatbot subscription is required to access this feature',
+      name: 'chatBotRequiredDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Community hub subscription is required`
+  String get communityHubRequired {
+    return Intl.message(
+      'Community hub subscription is required',
+      name: 'communityHubRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Community hub subscription is required to access this feature`
+  String get communityHubRequiredDescription {
+    return Intl.message(
+      'Community hub subscription is required to access this feature',
+      name: 'communityHubRequiredDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This feature is only available for premium users`
+  String get thisFeatureIsOnlyAvailableForPremiumUsers {
+    return Intl.message(
+      'This feature is only available for premium users',
+      name: 'thisFeatureIsOnlyAvailableForPremiumUsers',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

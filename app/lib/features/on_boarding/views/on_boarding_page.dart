@@ -49,9 +49,9 @@ class _OnBoardingPageState
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16,
-              vertical: 30,
+            padding: EdgeInsets.symmetric(
+              horizontal: Dimens.d16.responsive(),
+              vertical: Dimens.d30.responsive(),
             ),
             child: SmoothPageIndicator(
               controller: _pageViewController,

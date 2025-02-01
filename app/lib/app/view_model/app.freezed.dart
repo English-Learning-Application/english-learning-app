@@ -20,6 +20,7 @@ mixin _$AppViewModelData {
   LanguageCode get languageCode => throw _privateConstructorUsedError;
   bool get isLoggedIn => throw _privateConstructorUsedError;
   AppThemeType get appTheme => throw _privateConstructorUsedError;
+  Subscription get subscription => throw _privateConstructorUsedError;
 
   /// Create a copy of AppViewModelData
   /// with the given fields replaced by the non-null parameter values.
@@ -38,9 +39,11 @@ abstract class $AppViewModelDataCopyWith<$Res> {
       {User currentUser,
       LanguageCode languageCode,
       bool isLoggedIn,
-      AppThemeType appTheme});
+      AppThemeType appTheme,
+      Subscription subscription});
 
   $UserCopyWith<$Res> get currentUser;
+  $SubscriptionCopyWith<$Res> get subscription;
 }
 
 /// @nodoc
@@ -62,6 +65,7 @@ class _$AppViewModelDataCopyWithImpl<$Res, $Val extends AppViewModelData>
     Object? languageCode = null,
     Object? isLoggedIn = null,
     Object? appTheme = null,
+    Object? subscription = null,
   }) {
     return _then(_value.copyWith(
       currentUser: null == currentUser
@@ -80,6 +84,10 @@ class _$AppViewModelDataCopyWithImpl<$Res, $Val extends AppViewModelData>
           ? _value.appTheme
           : appTheme // ignore: cast_nullable_to_non_nullable
               as AppThemeType,
+      subscription: null == subscription
+          ? _value.subscription
+          : subscription // ignore: cast_nullable_to_non_nullable
+              as Subscription,
     ) as $Val);
   }
 
@@ -90,6 +98,16 @@ class _$AppViewModelDataCopyWithImpl<$Res, $Val extends AppViewModelData>
   $UserCopyWith<$Res> get currentUser {
     return $UserCopyWith<$Res>(_value.currentUser, (value) {
       return _then(_value.copyWith(currentUser: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AppViewModelData
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $SubscriptionCopyWith<$Res> get subscription {
+    return $SubscriptionCopyWith<$Res>(_value.subscription, (value) {
+      return _then(_value.copyWith(subscription: value) as $Val);
     });
   }
 }
@@ -106,10 +124,13 @@ abstract class _$$AppViewModelDataImplCopyWith<$Res>
       {User currentUser,
       LanguageCode languageCode,
       bool isLoggedIn,
-      AppThemeType appTheme});
+      AppThemeType appTheme,
+      Subscription subscription});
 
   @override
   $UserCopyWith<$Res> get currentUser;
+  @override
+  $SubscriptionCopyWith<$Res> get subscription;
 }
 
 /// @nodoc
@@ -129,6 +150,7 @@ class __$$AppViewModelDataImplCopyWithImpl<$Res>
     Object? languageCode = null,
     Object? isLoggedIn = null,
     Object? appTheme = null,
+    Object? subscription = null,
   }) {
     return _then(_$AppViewModelDataImpl(
       currentUser: null == currentUser
@@ -147,6 +169,10 @@ class __$$AppViewModelDataImplCopyWithImpl<$Res>
           ? _value.appTheme
           : appTheme // ignore: cast_nullable_to_non_nullable
               as AppThemeType,
+      subscription: null == subscription
+          ? _value.subscription
+          : subscription // ignore: cast_nullable_to_non_nullable
+              as Subscription,
     ));
   }
 }
@@ -158,7 +184,8 @@ class _$AppViewModelDataImpl extends _AppViewModelData {
       {this.currentUser = User.empty,
       this.languageCode = LanguageCode.defaultValue,
       this.isLoggedIn = false,
-      this.appTheme = AppThemeType.system})
+      this.appTheme = AppThemeType.system,
+      this.subscription = const Subscription()})
       : super._();
 
   @override
@@ -173,10 +200,13 @@ class _$AppViewModelDataImpl extends _AppViewModelData {
   @override
   @JsonKey()
   final AppThemeType appTheme;
+  @override
+  @JsonKey()
+  final Subscription subscription;
 
   @override
   String toString() {
-    return 'AppViewModelData(currentUser: $currentUser, languageCode: $languageCode, isLoggedIn: $isLoggedIn, appTheme: $appTheme)';
+    return 'AppViewModelData(currentUser: $currentUser, languageCode: $languageCode, isLoggedIn: $isLoggedIn, appTheme: $appTheme, subscription: $subscription)';
   }
 
   @override
@@ -191,12 +221,14 @@ class _$AppViewModelDataImpl extends _AppViewModelData {
             (identical(other.isLoggedIn, isLoggedIn) ||
                 other.isLoggedIn == isLoggedIn) &&
             (identical(other.appTheme, appTheme) ||
-                other.appTheme == appTheme));
+                other.appTheme == appTheme) &&
+            (identical(other.subscription, subscription) ||
+                other.subscription == subscription));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, currentUser, languageCode, isLoggedIn, appTheme);
+  int get hashCode => Object.hash(runtimeType, currentUser, languageCode,
+      isLoggedIn, appTheme, subscription);
 
   /// Create a copy of AppViewModelData
   /// with the given fields replaced by the non-null parameter values.
@@ -213,7 +245,8 @@ abstract class _AppViewModelData extends AppViewModelData {
       {final User currentUser,
       final LanguageCode languageCode,
       final bool isLoggedIn,
-      final AppThemeType appTheme}) = _$AppViewModelDataImpl;
+      final AppThemeType appTheme,
+      final Subscription subscription}) = _$AppViewModelDataImpl;
   const _AppViewModelData._() : super._();
 
   @override
@@ -224,6 +257,8 @@ abstract class _AppViewModelData extends AppViewModelData {
   bool get isLoggedIn;
   @override
   AppThemeType get appTheme;
+  @override
+  Subscription get subscription;
 
   /// Create a copy of AppViewModelData
   /// with the given fields replaced by the non-null parameter values.

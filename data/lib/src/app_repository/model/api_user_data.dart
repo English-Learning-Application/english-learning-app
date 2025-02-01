@@ -20,6 +20,7 @@ class ApiUserData with _$ApiUserData {
     @JsonKey(name: 'media') ApiMediaData? media,
     @JsonKey(name: 'userProfile') ApiUserProfileData? userProfile,
     @JsonKey(name: 'registrationStatus') String? registrationStatus,
+    @JsonKey(name: 'userSubscriptions') List<ApiUserSubscriptionData>? userSubscriptions,
   }) = _ApiUserData;
 
   factory ApiUserData.fromJson(Map<String, dynamic> json) =>

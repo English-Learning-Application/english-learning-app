@@ -8,6 +8,7 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
   final GetCurrentPrefUserUseCase _getCurrentPrefUserUseCase;
   final RemotePushNotificationService _remotePushNotificationService;
   final LogoutUseCase _logoutUseCase;
+  final GetAllSubscriptionUseCase _getAllSubscriptionUseCase;
 
   AppViewModel(
     this._saveLanguageCodeUseCase,
@@ -16,6 +17,7 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
     this._getCurrentPrefUserUseCase,
     this._remotePushNotificationService,
     this._logoutUseCase,
+    this._getAllSubscriptionUseCase,
   ) : super(const AppViewModelData());
 
   FutureOr<void> appLanguageChanged(
@@ -72,13 +74,39 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
     await runViewModelCatching(
       action: () async {
         _updateThemeSetting(appTheme);
-        viewModelData = viewModelData.copyWith(
-          isLoggedIn: isLoggedIn,
-          languageCode: languageCode,
-          appTheme: appTheme,
-          currentUser: currentUser,
+        updateData(
+          viewModelData.copyWith(
+            isLoggedIn: isLoggedIn,
+            languageCode: languageCode,
+            appTheme: appTheme,
+            currentUser: currentUser,
+          ),
         );
-        notifyListeners();
+        if (isLoggedIn) {
+          await Future.wait(
+            [
+              _remotePushNotificationService.registerFcmToken(),
+              _getAllSubscriptionUseCase
+                  .execute(const GetAllSubscriptionInput())
+                  .then(
+                (subscriptionOutput) {
+                  final validSubscription = currentUser.getValidSubscription();
+                  updateData(
+                    viewModelData.copyWith(
+                      subscription: validSubscription != null
+                          ? subscriptionOutput.subscriptions.firstWhere(
+                              (element) =>
+                                  element.id ==
+                                  validSubscription.subscriptionId,
+                            )
+                          : const Subscription(),
+                    ),
+                  );
+                },
+              ),
+            ],
+          );
+        }
       },
     );
   }
@@ -90,6 +118,7 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
           const GetCurrentPrefUserInput(),
         );
 
+        await _remotePushNotificationService.registerFcmToken();
         updateData(
           viewModelData.copyWith(
             isLoggedIn: true,
@@ -109,11 +138,21 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
         final currentUserResp = _getCurrentPrefUserUseCase.execute(
           const GetCurrentPrefUserInput(),
         );
+        final subscriptionOutput = await _getAllSubscriptionUseCase
+            .execute(const GetAllSubscriptionInput());
+
+        final validSubscription = currentUserResp.user.getValidSubscription();
         updateData(
           viewModelData.copyWith(
             currentUser: currentUserResp.user,
+            subscription: validSubscription != null
+                ? subscriptionOutput.subscriptions.firstWhere(
+                    (element) => element.id == validSubscription.subscriptionId,
+                  )
+                : const Subscription(),
           ),
         );
+        await _remotePushNotificationService.registerFcmToken();
         if (goToHome) {
           await navigator.replaceAll(
             [

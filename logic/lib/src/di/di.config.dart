@@ -55,6 +55,12 @@ import 'package:logic/src/features/profile/use_case/verify_email_otp_use_case.da
     as _i522;
 import 'package:logic/src/features/profile/use_case/verify_phone_otp_use_case.dart'
     as _i245;
+import 'package:logic/src/features/subscription/use_case/create_subscription_payment_use_case.dart'
+    as _i845;
+import 'package:logic/src/features/subscription/use_case/get_all_subscriptions_use_case.dart'
+    as _i1054;
+import 'package:logic/src/features/subscription/use_case/swap_subscription_plan_use_case.dart'
+    as _i1008;
 import 'package:logic/src/usecase/check_permission_use_case.dart' as _i673;
 import 'package:logic/src/usecase/clear_current_user_data_use_case.dart'
     as _i900;
@@ -62,6 +68,7 @@ import 'package:logic/src/usecase/get_current_pref_user_use_case.dart' as _i75;
 import 'package:logic/src/usecase/get_initial_app_data_use_case.dart' as _i162;
 import 'package:logic/src/usecase/get_phone_images_use_case.dart' as _i217;
 import 'package:logic/src/usecase/get_users_use_case.dart' as _i281;
+import 'package:logic/src/usecase/has_subscription_use_case.dart' as _i1051;
 import 'package:logic/src/usecase/is_logged_in_use_case.dart' as _i688;
 import 'package:logic/src/usecase/logout_use_case.dart' as _i878;
 import 'package:logic/src/usecase/save_language_code_use_case.dart' as _i616;
@@ -81,6 +88,11 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i673.CheckPermissionUseCase>(
         () => const _i673.CheckPermissionUseCase());
+    gh.factory<_i1051.HasSubscriptionUseCase>(
+        () => _i1051.HasSubscriptionUseCase(
+              gh<_i182.AppRepository>(),
+              gh<_i182.SubscriptionRepository>(),
+            ));
     gh.factory<_i738.GetCategoriesUseCase>(
         () => _i738.GetCategoriesUseCase(gh<_i182.LanguageCourseRepository>()));
     gh.factory<_i314.GetCategoryCoursesByLanguageUseCase>(() =>
@@ -109,6 +121,13 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i245.VerifyPhoneOtpUseCase>(
         () => _i245.VerifyPhoneOtpUseCase(gh<_i182.ProfileRepository>()));
+    gh.factory<_i845.CreateSubscriptionPaymentUseCase>(() =>
+        _i845.CreateSubscriptionPaymentUseCase(
+            gh<_i182.SubscriptionRepository>()));
+    gh.factory<_i1054.GetAllSubscriptionUseCase>(() =>
+        _i1054.GetAllSubscriptionUseCase(gh<_i182.SubscriptionRepository>()));
+    gh.factory<_i1008.SwapSubscriptionPlanUseCase>(() =>
+        _i1008.SwapSubscriptionPlanUseCase(gh<_i182.SubscriptionRepository>()));
     gh.factory<_i900.ClearCurrentUserDataUseCase>(
         () => _i900.ClearCurrentUserDataUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i75.GetCurrentPrefUserUseCase>(
@@ -157,12 +176,12 @@ extension GetItInjectableX on _i174.GetIt {
         _i924.SendEmailVerificationUseCase(gh<_i182.ProfileRepository>()));
     gh.factory<_i872.SendPhoneVerificationUseCase>(() =>
         _i872.SendPhoneVerificationUseCase(gh<_i182.ProfileRepository>()));
-    gh.factory<_i522.VerifyEmailOtpUseCase>(
-        () => _i522.VerifyEmailOtpUseCase(gh<_i182.ProfileRepository>()));
     gh.factory<_i1052.UpdateUserAvatarUseCase>(
         () => _i1052.UpdateUserAvatarUseCase(gh<_i182.ProfileRepository>()));
     gh.factory<_i1020.UpdateUserProfileUseCase>(
         () => _i1020.UpdateUserProfileUseCase(gh<_i182.ProfileRepository>()));
+    gh.factory<_i522.VerifyEmailOtpUseCase>(
+        () => _i522.VerifyEmailOtpUseCase(gh<_i182.ProfileRepository>()));
     return this;
   }
 }

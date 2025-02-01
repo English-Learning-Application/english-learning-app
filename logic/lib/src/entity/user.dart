@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../logic.dart';
@@ -20,6 +21,8 @@ class User with _$User {
     @Default(User.defaultUserProfile) UserProfile userProfile,
     @Default(User.defaultRegistrationStatus)
     RegistrationStatus registrationStatus,
+    @Default(User.defaultUserSubscriptions)
+    List<UserSubscription> userSubscriptions,
   }) = _User;
 
   static const defaultUserId = '';
@@ -33,10 +36,24 @@ class User with _$User {
   static const defaultRegistrationStatus = RegistrationStatus.notConfirmed;
   static const defaultIsEmailVerified = false;
   static const defaultIsPhoneNumberVerified = false;
+  static const List<UserSubscription> defaultUserSubscriptions = [];
 
   static const User empty = User();
 
   bool get isRegistered => registrationStatus == RegistrationStatus.confirmed;
+
+  UserSubscription? getValidSubscription() {
+    final now = DateTime.now();
+
+    final userSubscriptionsList = [...userSubscriptions];
+
+    userSubscriptionsList.sort(
+      (a, b) => a.expiryDate?.compareTo(b.expiryDate ?? DateTime.now()) ?? 0,
+    );
+    return userSubscriptionsList.firstWhereOrNull(
+      (element) => element.expiryDate?.isAfter(now) ?? false,
+    );
+  }
 }
 
 @freezed

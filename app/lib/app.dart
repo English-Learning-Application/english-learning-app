@@ -56,6 +56,7 @@ export 'features/quiz_learning/view/quiz_learning_page.dart';
 export 'features/quiz_learning/view_model/quiz_learning.dart';
 export 'features/splash/view_models/splash.dart';
 export 'features/splash/views/splash_page.dart';
+export 'features/subscription/view_model/subscription.dart';
 export 'features/validate_email/view_model/validate_email.dart';
 export 'features/validate_phone_number/view_model/validate_phone_number.dart';
 export 'navigation/app_navigator_impl.dart';

@@ -42,6 +42,9 @@ mixin _$ApiUserData {
   ApiUserProfileData? get userProfile => throw _privateConstructorUsedError;
   @JsonKey(name: 'registrationStatus')
   String? get registrationStatus => throw _privateConstructorUsedError;
+  @JsonKey(name: 'userSubscriptions')
+  List<ApiUserSubscriptionData>? get userSubscriptions =>
+      throw _privateConstructorUsedError;
 
   /// Serializes this ApiUserData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -70,7 +73,9 @@ abstract class $ApiUserDataCopyWith<$Res> {
       @JsonKey(name: 'isPhoneNumberVerified') bool? isPhoneNumberVerified,
       @JsonKey(name: 'media') ApiMediaData? media,
       @JsonKey(name: 'userProfile') ApiUserProfileData? userProfile,
-      @JsonKey(name: 'registrationStatus') String? registrationStatus});
+      @JsonKey(name: 'registrationStatus') String? registrationStatus,
+      @JsonKey(name: 'userSubscriptions')
+      List<ApiUserSubscriptionData>? userSubscriptions});
 
   $ApiMediaDataCopyWith<$Res>? get media;
   $ApiUserProfileDataCopyWith<$Res>? get userProfile;
@@ -102,6 +107,7 @@ class _$ApiUserDataCopyWithImpl<$Res, $Val extends ApiUserData>
     Object? media = freezed,
     Object? userProfile = freezed,
     Object? registrationStatus = freezed,
+    Object? userSubscriptions = freezed,
   }) {
     return _then(_value.copyWith(
       userId: freezed == userId
@@ -148,6 +154,10 @@ class _$ApiUserDataCopyWithImpl<$Res, $Val extends ApiUserData>
           ? _value.registrationStatus
           : registrationStatus // ignore: cast_nullable_to_non_nullable
               as String?,
+      userSubscriptions: freezed == userSubscriptions
+          ? _value.userSubscriptions
+          : userSubscriptions // ignore: cast_nullable_to_non_nullable
+              as List<ApiUserSubscriptionData>?,
     ) as $Val);
   }
 
@@ -199,7 +209,9 @@ abstract class _$$ApiUserDataImplCopyWith<$Res>
       @JsonKey(name: 'isPhoneNumberVerified') bool? isPhoneNumberVerified,
       @JsonKey(name: 'media') ApiMediaData? media,
       @JsonKey(name: 'userProfile') ApiUserProfileData? userProfile,
-      @JsonKey(name: 'registrationStatus') String? registrationStatus});
+      @JsonKey(name: 'registrationStatus') String? registrationStatus,
+      @JsonKey(name: 'userSubscriptions')
+      List<ApiUserSubscriptionData>? userSubscriptions});
 
   @override
   $ApiMediaDataCopyWith<$Res>? get media;
@@ -231,6 +243,7 @@ class __$$ApiUserDataImplCopyWithImpl<$Res>
     Object? media = freezed,
     Object? userProfile = freezed,
     Object? registrationStatus = freezed,
+    Object? userSubscriptions = freezed,
   }) {
     return _then(_$ApiUserDataImpl(
       userId: freezed == userId
@@ -277,6 +290,10 @@ class __$$ApiUserDataImplCopyWithImpl<$Res>
           ? _value.registrationStatus
           : registrationStatus // ignore: cast_nullable_to_non_nullable
               as String?,
+      userSubscriptions: freezed == userSubscriptions
+          ? _value._userSubscriptions
+          : userSubscriptions // ignore: cast_nullable_to_non_nullable
+              as List<ApiUserSubscriptionData>?,
     ));
   }
 }
@@ -296,7 +313,10 @@ class _$ApiUserDataImpl implements _ApiUserData {
       @JsonKey(name: 'isPhoneNumberVerified') this.isPhoneNumberVerified,
       @JsonKey(name: 'media') this.media,
       @JsonKey(name: 'userProfile') this.userProfile,
-      @JsonKey(name: 'registrationStatus') this.registrationStatus});
+      @JsonKey(name: 'registrationStatus') this.registrationStatus,
+      @JsonKey(name: 'userSubscriptions')
+      final List<ApiUserSubscriptionData>? userSubscriptions})
+      : _userSubscriptions = userSubscriptions;
 
   factory _$ApiUserDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$ApiUserDataImplFromJson(json);
@@ -334,10 +354,21 @@ class _$ApiUserDataImpl implements _ApiUserData {
   @override
   @JsonKey(name: 'registrationStatus')
   final String? registrationStatus;
+  final List<ApiUserSubscriptionData>? _userSubscriptions;
+  @override
+  @JsonKey(name: 'userSubscriptions')
+  List<ApiUserSubscriptionData>? get userSubscriptions {
+    final value = _userSubscriptions;
+    if (value == null) return null;
+    if (_userSubscriptions is EqualUnmodifiableListView)
+      return _userSubscriptions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'ApiUserData(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phone: $phone, isEmailVerified: $isEmailVerified, isPhoneNumberVerified: $isPhoneNumberVerified, media: $media, userProfile: $userProfile, registrationStatus: $registrationStatus)';
+    return 'ApiUserData(userId: $userId, email: $email, username: $username, googleId: $googleId, facebookId: $facebookId, phone: $phone, isEmailVerified: $isEmailVerified, isPhoneNumberVerified: $isPhoneNumberVerified, media: $media, userProfile: $userProfile, registrationStatus: $registrationStatus, userSubscriptions: $userSubscriptions)';
   }
 
   @override
@@ -362,7 +393,9 @@ class _$ApiUserDataImpl implements _ApiUserData {
             (identical(other.userProfile, userProfile) ||
                 other.userProfile == userProfile) &&
             (identical(other.registrationStatus, registrationStatus) ||
-                other.registrationStatus == registrationStatus));
+                other.registrationStatus == registrationStatus) &&
+            const DeepCollectionEquality()
+                .equals(other._userSubscriptions, _userSubscriptions));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -379,7 +412,8 @@ class _$ApiUserDataImpl implements _ApiUserData {
       isPhoneNumberVerified,
       media,
       userProfile,
-      registrationStatus);
+      registrationStatus,
+      const DeepCollectionEquality().hash(_userSubscriptions));
 
   /// Create a copy of ApiUserData
   /// with the given fields replaced by the non-null parameter values.
@@ -409,8 +443,10 @@ abstract class _ApiUserData implements ApiUserData {
       @JsonKey(name: 'isPhoneNumberVerified') final bool? isPhoneNumberVerified,
       @JsonKey(name: 'media') final ApiMediaData? media,
       @JsonKey(name: 'userProfile') final ApiUserProfileData? userProfile,
-      @JsonKey(name: 'registrationStatus')
-      final String? registrationStatus}) = _$ApiUserDataImpl;
+      @JsonKey(name: 'registrationStatus') final String? registrationStatus,
+      @JsonKey(name: 'userSubscriptions')
+      final List<ApiUserSubscriptionData>?
+          userSubscriptions}) = _$ApiUserDataImpl;
 
   factory _ApiUserData.fromJson(Map<String, dynamic> json) =
       _$ApiUserDataImpl.fromJson;
@@ -448,6 +484,9 @@ abstract class _ApiUserData implements ApiUserData {
   @override
   @JsonKey(name: 'registrationStatus')
   String? get registrationStatus;
+  @override
+  @JsonKey(name: 'userSubscriptions')
+  List<ApiUserSubscriptionData>? get userSubscriptions;
 
   /// Create a copy of ApiUserData
   /// with the given fields replaced by the non-null parameter values.

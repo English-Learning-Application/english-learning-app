@@ -130,6 +130,14 @@ import 'package:data/src/features/profile/data_source/profile_api_data_source.da
     as _i891;
 import 'package:data/src/features/profile/repository/profile_repository_impl.dart'
     as _i410;
+import 'package:data/src/features/subscriptions/data_source/subscription_api_data_source.dart'
+    as _i702;
+import 'package:data/src/features/subscriptions/mapper/api_subscription_data_mapper.dart'
+    as _i414;
+import 'package:data/src/features/subscriptions/mapper/api_user_subscription_data_mapper.dart'
+    as _i397;
+import 'package:data/src/features/subscriptions/repository/subscription_repository_impl.dart'
+    as _i809;
 import 'package:dio_cache_interceptor/dio_cache_interceptor.dart' as _i695;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
@@ -221,16 +229,15 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i985.ApiTenseFormDataMapper>(
         () => _i985.ApiTenseFormDataMapper());
     gh.factory<_i443.ApiWordDataMapper>(() => _i443.ApiWordDataMapper());
+    gh.factory<_i414.ApiBenefitDataMapper>(() => _i414.ApiBenefitDataMapper());
+    gh.factory<_i397.ApiUserSubscriptionDataMapper>(
+        () => _i397.ApiUserSubscriptionDataMapper());
     gh.lazySingleton<_i665.AppAssetsService>(
         () => const _i665.AppAssetsService());
     gh.factory<_i77.HeaderInterceptor>(
         () => _i77.HeaderInterceptor(gh<_i473.AppInfo>()));
     gh.factory<_i1022.ApiTenseDataMapper>(
         () => _i1022.ApiTenseDataMapper(gh<_i437.ApiTenseFormDataMapper>()));
-    gh.factory<_i1028.ApiUserDataMapper>(() => _i1028.ApiUserDataMapper(
-          gh<_i437.ApiMediaDataMapper>(),
-          gh<_i437.ApiUserProfileDataMapper>(),
-        ));
     gh.lazySingleton<_i881.AppPreferences>(
         () => _i881.AppPreferences(gh<_i460.SharedPreferences>()));
     gh.factory<_i176.ApiPronunciationAssessmentModelMapper>(
@@ -263,12 +270,19 @@ extension GetItInjectableX on _i174.GetIt {
             ));
     gh.lazySingleton<_i936.NonAuthAppServerApiClient>(
         () => _i936.NonAuthAppServerApiClient(gh<_i437.HeaderInterceptor>()));
+    gh.factory<_i1028.ApiUserDataMapper>(() => _i1028.ApiUserDataMapper(
+          gh<_i437.ApiMediaDataMapper>(),
+          gh<_i437.ApiUserProfileDataMapper>(),
+          gh<_i437.ApiUserSubscriptionDataMapper>(),
+        ));
     gh.lazySingleton<_i906.RandomUserApiClient>(
         () => _i906.RandomUserApiClient(gh<_i695.DioCacheInterceptor>()));
     gh.lazySingleton<_i6.AppDatabase>(
         () => _i6.AppDatabase(gh<_i1034.Store>()));
     gh.lazySingleton<_i806.LanguageCourseDatabaseLocal>(
         () => _i806.LanguageCourseDatabaseLocal(gh<_i465.Store>()));
+    gh.factory<_i414.ApiSubscriptionDataMapper>(() =>
+        _i414.ApiSubscriptionDataMapper(gh<_i414.ApiBenefitDataMapper>()));
     gh.factory<_i643.ApiCategoryCourseMapper>(
         () => _i643.ApiCategoryCourseMapper(
               gh<_i437.ApiLanguageCourseLearningContentDataMapper>(),
@@ -322,6 +336,8 @@ extension GetItInjectableX on _i174.GetIt {
         _i82.NotificationApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i891.ProfileApiDataSource>(
         () => _i891.ProfileApiDataSource(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i702.SubscriptionApiDataSource>(() =>
+        _i702.SubscriptionApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i182.LanguageCourseRepository>(
         () => _i725.LanguageCourseRepositoryImpl(
               gh<_i437.LanguageCourseApiDataSource>(),
@@ -356,6 +372,11 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i437.AppPreferences>(),
           gh<_i437.ApiUserDataMapper>(),
         ));
+    gh.lazySingleton<_i182.SubscriptionRepository>(
+        () => _i809.SubscriptionRepositoryImpl(
+              gh<_i437.SubscriptionApiDataSource>(),
+              gh<_i437.ApiSubscriptionDataMapper>(),
+            ));
     return this;
   }
 }

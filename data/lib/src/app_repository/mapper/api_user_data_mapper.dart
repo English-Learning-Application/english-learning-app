@@ -8,10 +8,12 @@ class ApiUserDataMapper extends BaseDataMapper<ApiUserData, User>
     with DataMapperMixin<ApiUserData, User> {
   final ApiMediaDataMapper _apiMediaDataMapper;
   final ApiUserProfileDataMapper _apiUserProfileDataMapper;
+  final ApiUserSubscriptionDataMapper _apiUserSubscriptionDataMapper;
 
   const ApiUserDataMapper(
     this._apiMediaDataMapper,
     this._apiUserProfileDataMapper,
+    this._apiUserSubscriptionDataMapper,
   );
 
   @override
@@ -32,6 +34,9 @@ class ApiUserDataMapper extends BaseDataMapper<ApiUserData, User>
       isEmailVerified: data?.isEmailVerified ?? User.defaultIsEmailVerified,
       isPhoneNumberVerified:
           data?.isPhoneNumberVerified ?? User.defaultIsPhoneNumberVerified,
+      userSubscriptions: _apiUserSubscriptionDataMapper.mapToListEntities(
+        data?.userSubscriptions,
+      ),
     );
   }
 
@@ -49,6 +54,9 @@ class ApiUserDataMapper extends BaseDataMapper<ApiUserData, User>
       media: _apiMediaDataMapper.mapToData(entity.media),
       userProfile: _apiUserProfileDataMapper.mapToData(entity.userProfile),
       registrationStatus: entity.registrationStatus.serverValue,
+      userSubscriptions: _apiUserSubscriptionDataMapper.mapToListData(
+        entity.userSubscriptions,
+      ),
     );
   }
 }
