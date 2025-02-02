@@ -13,11 +13,13 @@ class AppRouter extends $AppRouter {
   final RouteGuard _routeGuard;
   final IsLoggedInRouteGuard _isLoggedInRouteGuard;
   final ChatBotSubscriptionRouteGuard _chatBotSubscriptionRouteGuard;
+  final CommunitySubscriptionRouteGuard _communitySubscriptionRouteGuard;
 
   AppRouter(
     this._routeGuard,
     this._isLoggedInRouteGuard,
     this._chatBotSubscriptionRouteGuard,
+    this._communitySubscriptionRouteGuard,
   );
 
   @override
@@ -50,6 +52,28 @@ class AppRouter extends $AppRouter {
             _isLoggedInRouteGuard,
           ],
           path: '/validate-email',
+        ),
+        AutoRoute(
+          page: CommunityFlowRoute.page,
+          path: '/community',
+          children: [
+            AutoRoute(
+              page: CommunityRoute.page,
+              initial: true,
+              guards: [
+                _communitySubscriptionRouteGuard,
+              ],
+            ),
+            AutoRoute(
+              page: CommonFeatureRequiredSubscriptionRoute.page,
+            ),
+            AutoRoute(
+              page: CommunityTopicRoute.page,
+            ),
+            AutoRoute(
+              page: GroupChatRoute.page,
+            ),
+          ],
         ),
         AutoRoute(
           guards: [
@@ -167,6 +191,11 @@ class AppRouter extends $AppRouter {
           page: ListeningLearningRoute.page,
         )
       ];
+}
+
+@RoutePage()
+class CommunityFlowPage extends AutoRouter {
+  const CommunityFlowPage({super.key});
 }
 
 @RoutePage()

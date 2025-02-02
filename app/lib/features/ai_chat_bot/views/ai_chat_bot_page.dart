@@ -76,9 +76,23 @@ class _AiChatBotPageState
               decoration: BoxDecoration(
                 color: AppColors.current.backgroundColor,
                 borderRadius: BorderRadius.circular(Dimens.d8.responsive()),
-                border: Border.all(
-                  color: AppColors.current.primaryColor,
-                  width: Dimens.d1.responsive(),
+                border: Border(
+                  top: BorderSide(
+                    color: AppColors.current.primaryColor,
+                    width: Dimens.d1.responsive(),
+                  ),
+                  left: BorderSide(
+                    color: AppColors.current.primaryColor,
+                    width: Dimens.d1.responsive(),
+                  ),
+                  right: BorderSide(
+                    color: AppColors.current.primaryColor,
+                    width: Dimens.d1.responsive(),
+                  ),
+                  bottom: BorderSide(
+                    color: AppColors.current.primaryColor,
+                    width: Dimens.d4.responsive(),
+                  ),
                 ),
               ),
               padding: EdgeInsets.all(Dimens.d16.responsive()),
@@ -104,9 +118,23 @@ class _AiChatBotPageState
             decoration: BoxDecoration(
               color: AppColors.current.backgroundColor,
               borderRadius: BorderRadius.circular(Dimens.d8.responsive()),
-              border: Border.all(
-                color: AppColors.current.primaryColor,
-                width: Dimens.d1.responsive(),
+              border: Border(
+                top: BorderSide(
+                  color: AppColors.current.primaryColor,
+                  width: Dimens.d1.responsive(),
+                ),
+                left: BorderSide(
+                  color: AppColors.current.primaryColor,
+                  width: Dimens.d1.responsive(),
+                ),
+                right: BorderSide(
+                  color: AppColors.current.primaryColor,
+                  width: Dimens.d1.responsive(),
+                ),
+                bottom: BorderSide(
+                  color: AppColors.current.primaryColor,
+                  width: Dimens.d4.responsive(),
+                ),
               ),
             ),
             child: Row(

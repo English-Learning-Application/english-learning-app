@@ -1,4 +1,5 @@
 import 'package:app/app.dart';
+import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 import 'package:services/services.dart';
@@ -73,8 +74,41 @@ enum LearningLanguage {
     }
   }
 
+  Color get color {
+    switch (this) {
+      case LearningLanguage.english:
+        return FoundationColors.usaColor;
+      case LearningLanguage.vietnamese:
+        return FoundationColors.vietnameseColor;
+      case LearningLanguage.french:
+        return FoundationColors.frenchColor;
+    }
+  }
+
   @override
   String toString() => languageName;
+}
+
+enum ChatMessageType {
+  text(ServerRequestResponseConstants.textMessage),
+  join(ServerRequestResponseConstants.joinMessage),
+  leave(ServerRequestResponseConstants.leaveMessage);
+
+  const ChatMessageType(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.textMessage:
+        return ChatMessageType.text;
+      case ServerRequestResponseConstants.joinMessage:
+        return ChatMessageType.join;
+      case ServerRequestResponseConstants.leaveMessage:
+        return ChatMessageType.leave;
+      default:
+        return ChatMessageType.text;
+    }
+  }
 }
 
 enum LearningMode {

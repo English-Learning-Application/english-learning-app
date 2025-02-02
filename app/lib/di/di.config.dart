@@ -16,6 +16,9 @@ import 'package:app/di/di.dart' as _i120;
 import 'package:app/features/ai_chat_bot/view_models/ai_chat_bot.dart' as _i709;
 import 'package:app/features/ai_chat_bot_details/view_model/ai_chat_bot_details.dart'
     as _i825;
+import 'package:app/features/community/view_model/community.dart' as _i15;
+import 'package:app/features/community_topic/view_model/community_topic.dart'
+    as _i780;
 import 'package:app/features/complete_registration/view_models/complete_registration.dart'
     as _i752;
 import 'package:app/features/course/view_models/course.dart' as _i366;
@@ -23,6 +26,7 @@ import 'package:app/features/edit_profile/view_model/edit_profile.dart'
     as _i347;
 import 'package:app/features/flash_card_learning/view_model/flash_card_learning.dart'
     as _i5;
+import 'package:app/features/group_chat/view_model/group_chat.dart' as _i945;
 import 'package:app/features/home/view_models/home.dart' as _i885;
 import 'package:app/features/language_course/view_model/language_course/language_course.dart'
     as _i117;
@@ -54,6 +58,8 @@ import 'package:app/navigation/mapper/app_popup_info_mapper.dart' as _i203;
 import 'package:app/navigation/mapper/app_route_info_mapper.dart' as _i48;
 import 'package:app/navigation/middleware/chat_bot_subscription_route_guard.dart'
     as _i129;
+import 'package:app/navigation/middleware/community_subscription_route_guard.dart'
+    as _i965;
 import 'package:app/navigation/middleware/is_logged_in_route_guard.dart'
     as _i21;
 import 'package:app/navigation/middleware/route_guard.dart' as _i513;
@@ -130,11 +136,20 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i21.IsLoggedInRouteGuard>(
         () => _i21.IsLoggedInRouteGuard(gh<_i182.IsLoggedInUseCase>()));
+    gh.factory<_i15.CommunityViewModel>(() => _i15.CommunityViewModel(
+          gh<_i182.GetCommunityTopicsUseCase>(),
+          gh<_i182.GetPrivateSessionsUseCase>(),
+        ));
     gh.factory<_i1006.ValidatePhoneNumberViewModel>(
         () => _i1006.ValidatePhoneNumberViewModel(
               gh<_i182.SendPhoneVerificationUseCase>(),
               gh<_i182.VerifyPhoneOtpUseCase>(),
             ));
+    gh.factory<_i945.GroupChatViewModel>(() => _i945.GroupChatViewModel(
+          gh<_i182.GetSessionMessagesUseCase>(),
+          gh<_i137.StompDartService>(),
+          gh<_i437.ChatMessageDataMapper>(),
+        ));
     gh.factory<_i825.AiChatBotDetailsViewModel>(
         () => _i825.AiChatBotDetailsViewModel(
               gh<_i137.StompDartService>(),
@@ -177,6 +192,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i129.ChatBotSubscriptionRouteGuard>(() =>
         _i129.ChatBotSubscriptionRouteGuard(
             gh<_i182.HasSubscriptionUseCase>()));
+    gh.factory<_i965.CommunitySubscriptionRouteGuard>(() =>
+        _i965.CommunitySubscriptionRouteGuard(
+            gh<_i182.HasSubscriptionUseCase>()));
     gh.factory<_i366.CourseViewModel>(() => _i366.CourseViewModel(
           gh<_i182.GetCategoriesUseCase>(),
           gh<_i182.GetCategoryCoursesByLanguageUseCase>(),
@@ -185,6 +203,12 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.SendEmailVerificationUseCase>(),
           gh<_i182.VerifyEmailOtpUseCase>(),
         ));
+    gh.factory<_i780.CommunityTopicViewModel>(
+        () => _i780.CommunityTopicViewModel(
+              gh<_i182.GetSessionsByTopicUseCase>(),
+              gh<_i182.CreateCommunityChatSessionUseCase>(),
+              gh<_i182.JoinChatSessionUseCase>(),
+            ));
     gh.factory<_i5.FlashCardLearningViewModel>(() =>
         _i5.FlashCardLearningViewModel(
             gh<_i182.FlashCardLearningUpdateUseCase>()));
@@ -192,6 +216,7 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i137.RouteGuard>(),
           gh<_i21.IsLoggedInRouteGuard>(),
           gh<_i129.ChatBotSubscriptionRouteGuard>(),
+          gh<_i137.CommunitySubscriptionRouteGuard>(),
         ));
     gh.lazySingleton<_i182.AppNavigator>(() => _i101.AppNavigatorImpl(
           gh<_i137.AppRouter>(),

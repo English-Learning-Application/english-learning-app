@@ -3,6 +3,11 @@ import 'dart:ui';
 class FoundationColors {
   const FoundationColors._();
 
+  // Country Colors
+  static const Color frenchColor = Color(0xff2b5c97);
+  static const Color vietnameseColor = Color(0xfff6352e);
+  static const Color usaColor = Color(0xff54538a);
+
   // Primary Colors
   static const Color primary50 = Color(0xff003875);
   static const Color primary100 = Color(0xff104e97);

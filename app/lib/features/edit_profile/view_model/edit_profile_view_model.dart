@@ -85,7 +85,7 @@ class EditProfileViewModel extends BaseViewModel<EditProfileViewModelData> {
 
         await appViewModel.appRefreshUser(false);
 
-        navigator.pop();
+         navigator.popUntilRootOfCurrentBottomTab();
       },
     );
   }

@@ -82,6 +82,8 @@
     "chatbotHint": "Type your message here",
     "all": "All",
     "communityHub": "Community Hub",
+    "communityHubIntro": "Connect with other learners and join communities to learn together",
+    "community": "Community",
     "communityNotJoined": "You have not joined any community yet! Join a community to connect with other learners.",
     "joinCommunity": "Join community",
     "word": "Word",
@@ -168,6 +170,13 @@
     "communityHubRequiredDescription": "Community hub subscription is required to access this feature",
     "thisFeatureIsOnlyAvailableForPremiumUsers": "This feature is only available for premium users",
     "createNewSession": "Create new session",
-    "permissionToDeleteChatbotSession": "Do you want to delete this chatbot session?"
+    "permissionToDeleteChatbotSession": "Do you want to delete this chatbot session?",
+    "chattingSession": "Chatting session",
+    "chatWithYourFriends": "Chat with your friends",
+    "noFriendChatsFound": "No friend chats found",
+    "messageSessionName": "Message session name",
+    "createText": "Create",
+    "hasJoinedTheChat": "{name} has joined the chat",
+    "joinText": "Join"
 }
 

@@ -10,6 +10,7 @@ class ApiChatSessionData with _$ApiChatSessionData {
   @JsonSerializable(explicitToJson: true)
   const factory ApiChatSessionData({
     @JsonKey(name: 'sessionId') String? sessionId,
+    @JsonKey(name: 'sessionName') String? sessionName,
     @JsonKey(name: 'sessionType') String? sessionType,
     @JsonKey(name: 'users') List<ApiMessageUserData>? users,
     @JsonKey(name: 'messages') List<ApiChatMessageData>? messages,

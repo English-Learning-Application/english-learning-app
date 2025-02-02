@@ -55,6 +55,9 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       aiChatBotDetails: (chatSession) => AiChatBotDetailsRoute(
         chatSession: chatSession,
       ),
+      community: () => const CommunityFlowRoute(),
+      communityTopic: (chatTopic) => CommunityTopicRoute(chatTopic: chatTopic),
+      groupChat: (chatSession) => GroupChatRoute(chatSession: chatSession),
     );
   }
 }

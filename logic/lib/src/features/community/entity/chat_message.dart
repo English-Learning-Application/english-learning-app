@@ -10,6 +10,8 @@ class ChatMessage with _$ChatMessage {
   const factory ChatMessage({
     @Default(ChatMessage.defaultMessageId) String messageId,
     @Default(ChatMessage.defaultMessageText) String messageText,
+    @Default(ChatMessage.defaultChatMessageType)
+    ChatMessageType chatMessageType,
     @Default(ChatMessage.defaultSentAt) DateTime? sentAt,
     @Default(ChatMessage.defaultMessageSender) MessageUser sender,
   }) = _ChatMessage;
@@ -17,5 +19,6 @@ class ChatMessage with _$ChatMessage {
   static const defaultMessageId = '';
   static const defaultMessageText = '';
   static const DateTime? defaultSentAt = null;
+  static const ChatMessageType defaultChatMessageType = ChatMessageType.text;
   static const MessageUser defaultMessageSender = MessageUser();
 }

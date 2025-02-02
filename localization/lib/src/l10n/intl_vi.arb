@@ -82,6 +82,8 @@
     "chatbotHint": "Nhập tin nhắn của bạn ở đây",
     "all": "Tất cả",
     "communityHub": "Trung tâm cộng đồng",
+    "communityHubIntro": "Kết nối với những người học khác và tham gia cộng đồng để học cùng nhau",
+    "community": "Cộng đồng",
     "communityNotJoined": "Bạn chưa tham gia bất kỳ cộng đồng nào! Hãy tham gia cộng đồng để kết nối với những người học khác.",
     "joinCommunity": "Tham gia cộng đồng",
     "word": "Từ vựng",
@@ -168,5 +170,12 @@
     "communityHubRequiredDescription": "Yêu cầu đăng ký trung tâm cộng đồng để truy cập tính năng này",
     "thisFeatureIsOnlyAvailableForPremiumUsers": "Chức năng này chỉ dành cho người dùng Premium",
     "createNewSession": "Tạo phiên mới",
-    "permissionToDeleteChatbotSession": "Bạn có muốn xóa phiên trò chuyện này không?"
+    "permissionToDeleteChatbotSession": "Bạn có muốn xóa phiên trò chuyện này không?",
+    "chattingSession": "Phiên trò chuyện",
+    "chatWithYourFriends": "Trò chuyện với bạn bè",
+    "noFriendChatsFound": "Không tìm thấy trò chuyện với bạn bè",
+    "messageSessionName": "Tên phiên trò chuyện",
+    "createText": "Tạo",
+    "hasJoinedTheChat": "{name} đã tham gia trò chuyện",
+    "joinText": "Tham gia"
 }

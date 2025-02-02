@@ -318,8 +318,11 @@ class AppNavigatorImpl extends AppNavigator with LogMixin {
       context: useRootNavigator
           ? _rootRouterContext
           : _currentTabContextOrRootContext,
-      builder: (_) {
-        return _appPopupInfoMapper.map(appPopupInfo, this);
+      builder: (context) {
+        return material.Padding(
+          padding: material.MediaQuery.of(context).viewInsets,
+          child: _appPopupInfoMapper.map(appPopupInfo, this),
+        );
       },
       isDismissible: isDismissible,
       enableDrag: enableDrag,

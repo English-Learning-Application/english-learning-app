@@ -12,6 +12,7 @@ class ApiChatMessageData with _$ApiChatMessageData {
     @JsonKey(name: 'messageId') String? messageId,
     @JsonKey(name: 'message') String? message,
     @JsonKey(name: 'sender') ApiMessageUserData? sender,
+    @JsonKey(name: 'chatMessageType') String? chatMessageType,
     @JsonKey(name: 'sentAt') String? sentAt,
   }) = _ApiChatMessageData;
 

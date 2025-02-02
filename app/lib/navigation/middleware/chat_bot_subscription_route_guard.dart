@@ -24,19 +24,6 @@ class ChatBotSubscriptionRouteGuard extends AutoRouteGuard {
         ),
       );
 
-  Future<bool> getHasCommunitySubscription() => runCatchingAsync(
-        action: () async {
-          final output = await _hasSubscriptionUseCase
-              .execute(const HasSubscriptionInput());
-          return output;
-        },
-      ).then(
-        (result) => result.when(
-          success: (output) => output.hasCommunitySubscription,
-          failure: (_) => false,
-        ),
-      );
-
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) async {
     if (await hasChatBotSubscription) {

@@ -35,12 +35,15 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
               },
               selector: (_, vm) => vm.viewModelData,
               builder: (_, vmData, __) {
+                final userMedia = vmData.currentUser.media;
                 return ProfilePicture(
                   border: Border.all(
                     color: AppColors.current.primaryColor,
                     width: Dimens.d1.responsive(),
                   ),
-                  imageUrl: vmData.currentUser.media.mediaItem,
+                  imageUrl: userMedia.mediaUrl.isNotEmpty
+                      ? vmData.currentUser.media.mediaItem
+                      : null,
                   width: Dimens.d100.responsive(),
                   height: Dimens.d100.responsive(),
                   onPressed: () async {
@@ -304,7 +307,25 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
         vertical: Dimens.d16.responsive(),
       ),
       decoration: BoxDecoration(
-        color: FoundationColors.primary300,
+        border: Border(
+          top: BorderSide(
+            color: FoundationColors.primary400,
+            width: Dimens.d1.responsive(),
+          ),
+          left: BorderSide(
+            color: FoundationColors.primary400,
+            width: Dimens.d1.responsive(),
+          ),
+          right: BorderSide(
+            color: FoundationColors.primary400,
+            width: Dimens.d1.responsive(),
+          ),
+          bottom: BorderSide(
+            color: FoundationColors.primary400,
+            width: Dimens.d6.responsive(),
+          ),
+        ),
+        color: FoundationColors.primary300.withValues(alpha: 0.8),
         borderRadius: BorderRadius.circular(Dimens.d16.responsive()),
       ),
       child: ListView.separated(

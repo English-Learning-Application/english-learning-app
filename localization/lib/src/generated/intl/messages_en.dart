@@ -20,9 +20,11 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(time) => "Resend OTP at ${time}";
+  static String m0(name) => "${name} has joined the chat";
 
-  static String m1(errorCode) => "Unidentified error (${errorCode})";
+  static String m1(time) => "Resend OTP at ${time}";
+
+  static String m2(errorCode) => "Unidentified error (${errorCode})";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -56,17 +58,24 @@ class MessageLookup extends MessageLookupByLibrary {
             "AI chatbot subscription is required"),
         "chatBotRequiredDescription": MessageLookupByLibrary.simpleMessage(
             "AI chatbot subscription is required to access this feature"),
+        "chatWithYourFriends":
+            MessageLookupByLibrary.simpleMessage("Chat with your friends"),
         "chatbotHint":
             MessageLookupByLibrary.simpleMessage("Type your message here"),
         "chatbotIntro": MessageLookupByLibrary.simpleMessage(
             "I\'m your personal AI chatbot. I can help you with your learning journey. How can I help you today?"),
+        "chattingSession":
+            MessageLookupByLibrary.simpleMessage("Chatting session"),
         "choose": MessageLookupByLibrary.simpleMessage("Choose"),
         "chooseLearningModes":
             MessageLookupByLibrary.simpleMessage("Choose your learning modes"),
         "chooseTheLanguage":
             MessageLookupByLibrary.simpleMessage("Choose the language"),
         "chooseWhat": MessageLookupByLibrary.simpleMessage("Choose what"),
+        "community": MessageLookupByLibrary.simpleMessage("Community"),
         "communityHub": MessageLookupByLibrary.simpleMessage("Community Hub"),
+        "communityHubIntro": MessageLookupByLibrary.simpleMessage(
+            "Connect with other learners and join communities to learn together"),
         "communityHubRequired": MessageLookupByLibrary.simpleMessage(
             "Community hub subscription is required"),
         "communityHubRequiredDescription": MessageLookupByLibrary.simpleMessage(
@@ -89,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "courses": MessageLookupByLibrary.simpleMessage("Courses"),
         "createNewSession":
             MessageLookupByLibrary.simpleMessage("Create new session"),
+        "createText": MessageLookupByLibrary.simpleMessage("Create"),
         "day": MessageLookupByLibrary.simpleMessage("Day"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
@@ -107,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "goldPlanDescription": MessageLookupByLibrary.simpleMessage(
             "Additional access to community hub, unlimited courses, and personalized recommendations"),
         "grammar": MessageLookupByLibrary.simpleMessage("Grammar"),
+        "hasJoinedTheChat": m0,
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "idiom": MessageLookupByLibrary.simpleMessage("Idiom"),
         "incorrect": MessageLookupByLibrary.simpleMessage("Incorrect"),
@@ -124,6 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Wrong username format"),
         "joinCommunity": MessageLookupByLibrary.simpleMessage("Join community"),
+        "joinText": MessageLookupByLibrary.simpleMessage("Join"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "learn": MessageLookupByLibrary.simpleMessage("Learn"),
         "learnAnywhere":
@@ -148,6 +160,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "matching": MessageLookupByLibrary.simpleMessage("Matching"),
         "matchingLearningModeDescription": MessageLookupByLibrary.simpleMessage(
             "Drag and drop the words to match the correct order"),
+        "messageSessionName":
+            MessageLookupByLibrary.simpleMessage("Message session name"),
         "microphonePermissionDenied": MessageLookupByLibrary.simpleMessage(
             "Microphone permission denied by user, please enable it in your settings"),
         "mode": MessageLookupByLibrary.simpleMessage("Mode"),
@@ -162,6 +176,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Native language"),
         "negativeTense": MessageLookupByLibrary.simpleMessage("Negative"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "noFriendChatsFound":
+            MessageLookupByLibrary.simpleMessage("No friend chats found"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("No Internet"),
         "noUsername": MessageLookupByLibrary.simpleMessage("No username"),
@@ -208,7 +224,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerDescription": MessageLookupByLibrary.simpleMessage(
             "Register to access all of our services"),
         "resendOtp": MessageLookupByLibrary.simpleMessage("Resend OTP"),
-        "resendOtpAt": m0,
+        "resendOtpAt": m1,
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "score": MessageLookupByLibrary.simpleMessage("Score"),
         "selectLearningLanguage": MessageLookupByLibrary.simpleMessage(
@@ -239,7 +255,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Track your progress and see how far you\'ve come on your learning journey."),
         "travel": MessageLookupByLibrary.simpleMessage("Travel"),
-        "unknownException": m1,
+        "unknownException": m2,
         "updateProfilePicture":
             MessageLookupByLibrary.simpleMessage("Update profile picture"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),

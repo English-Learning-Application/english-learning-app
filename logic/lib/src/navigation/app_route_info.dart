@@ -47,4 +47,11 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.aiChatBotDetails({
     required ChatSession chatSession,
   }) = _AiChatBotDetails;
+  const factory AppRouteInfo.community() = _Community;
+  const factory AppRouteInfo.communityTopic({
+    required ChatTopic chatTopic,
+  }) = _CommunityTopic;
+  const factory AppRouteInfo.groupChat({
+    required ChatSession chatSession,
+  }) = _GroupChat;
 }

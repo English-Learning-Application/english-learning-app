@@ -8,6 +8,7 @@ class ChatSession with _$ChatSession {
   const ChatSession._();
   const factory ChatSession({
     @Default(ChatSession.defaultSessionId) String sessionId,
+    @Default(ChatSession.defaultSessionName) String sessionName,
     @Default(ChatSession.defaultSessionType) ChatType sessionType,
     @Default(ChatSession.defaultMessages) List<ChatMessage> messages,
     @Default(ChatSession.defaultParticipants) List<MessageUser> participants,
@@ -16,6 +17,7 @@ class ChatSession with _$ChatSession {
   }) = _ChatSession;
 
   static const defaultSessionId = '';
+  static const defaultSessionName = '';
   static const ChatType defaultSessionType = ChatType.privateChat;
   static const List<ChatMessage> defaultMessages = [];
   static const List<MessageUser> defaultParticipants = [];

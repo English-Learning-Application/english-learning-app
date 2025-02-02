@@ -19,6 +19,7 @@ class ApiChatSessionDataMapper
   ApiChatSessionData mapToData(ChatSession entity) {
     return ApiChatSessionData(
       sessionId: entity.sessionId,
+      sessionName: entity.sessionName,
       sessionType: entity.sessionType.serverValue,
       users: _apiMessageUserDataMapper.mapToListData(entity.participants),
       messages: _apiChatMessageDataMapper.mapToListData(entity.messages),
@@ -31,6 +32,7 @@ class ApiChatSessionDataMapper
   ChatSession mapToEntity(ApiChatSessionData? data) {
     return ChatSession(
       sessionId: data?.sessionId ?? ChatSession.defaultSessionId,
+      sessionName: data?.sessionName ?? ChatSession.defaultSessionName,
       sessionType: ChatType.fromServerValue(data?.sessionType),
       participants: _apiMessageUserDataMapper.mapToListEntities(data?.users),
       messages: _apiChatMessageDataMapper.mapToListEntities(data?.messages),

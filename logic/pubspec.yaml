@@ -20,6 +20,8 @@ dependencies:
   app:
     path: ../app
   permission_handler: ^11.3.1
+  design:
+    path: ../design
 
 dev_dependencies:
   flutter_test:

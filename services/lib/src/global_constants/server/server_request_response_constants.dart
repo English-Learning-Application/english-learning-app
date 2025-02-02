@@ -13,6 +13,11 @@ class ServerRequestResponseConstants {
   static const privateChat = 'PRIVATE';
   static const groupChat = 'GROUP';
 
+  // Chat Message Type
+  static const textMessage = 'TEXT';
+  static const joinMessage = 'JOIN';
+  static const leaveMessage = 'LEAVE';
+
   // Language Level
   static const all = 'ALL';
   static const a1 = 'A1';

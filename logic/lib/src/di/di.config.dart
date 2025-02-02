@@ -23,6 +23,8 @@ import 'package:logic/src/features/authentication/usecase/registration_completio
     as _i119;
 import 'package:logic/src/features/authentication/usecase/username_registration_use_case.dart'
     as _i323;
+import 'package:logic/src/features/community/use_case/create_community_chat_session_use_case.dart'
+    as _i239;
 import 'package:logic/src/features/community/use_case/create_new_chat_bot_session_use_case.dart'
     as _i855;
 import 'package:logic/src/features/community/use_case/delete_chat_session_use_case.dart'
@@ -31,6 +33,16 @@ import 'package:logic/src/features/community/use_case/get_chat_bot_messages_use_
     as _i956;
 import 'package:logic/src/features/community/use_case/get_chat_bot_sessions_use_case.dart'
     as _i813;
+import 'package:logic/src/features/community/use_case/get_community_topics_use_case.dart'
+    as _i767;
+import 'package:logic/src/features/community/use_case/get_private_sessions_use_case.dart'
+    as _i608;
+import 'package:logic/src/features/community/use_case/get_session_messages_use_case.dart'
+    as _i444;
+import 'package:logic/src/features/community/use_case/get_sessions_by_topic_use_case.dart'
+    as _i179;
+import 'package:logic/src/features/community/use_case/join_chat_session_use_case.dart'
+    as _i1022;
 import 'package:logic/src/features/exercise/use_case/flash_card_learning_update_use_case.dart'
     as _i700;
 import 'package:logic/src/features/exercise/use_case/matching_learning_update_use_case.dart'
@@ -137,6 +149,19 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i245.VerifyPhoneOtpUseCase>(
         () => _i245.VerifyPhoneOtpUseCase(gh<_i182.ProfileRepository>()));
+    gh.factory<_i767.GetCommunityTopicsUseCase>(
+        () => _i767.GetCommunityTopicsUseCase(gh<_i182.CommunityRepository>()));
+    gh.factory<_i179.GetSessionsByTopicUseCase>(
+        () => _i179.GetSessionsByTopicUseCase(gh<_i182.CommunityRepository>()));
+    gh.factory<_i608.GetPrivateSessionsUseCase>(
+        () => _i608.GetPrivateSessionsUseCase(gh<_i182.CommunityRepository>()));
+    gh.factory<_i239.CreateCommunityChatSessionUseCase>(() =>
+        _i239.CreateCommunityChatSessionUseCase(
+            gh<_i182.CommunityRepository>()));
+    gh.factory<_i444.GetSessionMessagesUseCase>(
+        () => _i444.GetSessionMessagesUseCase(gh<_i182.CommunityRepository>()));
+    gh.factory<_i1022.JoinChatSessionUseCase>(
+        () => _i1022.JoinChatSessionUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i845.CreateSubscriptionPaymentUseCase>(() =>
         _i845.CreateSubscriptionPaymentUseCase(
             gh<_i182.SubscriptionRepository>()));

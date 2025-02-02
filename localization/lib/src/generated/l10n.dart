@@ -880,6 +880,26 @@ class S {
     );
   }
 
+  /// `Connect with other learners and join communities to learn together`
+  String get communityHubIntro {
+    return Intl.message(
+      'Connect with other learners and join communities to learn together',
+      name: 'communityHubIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Community`
+  String get community {
+    return Intl.message(
+      'Community',
+      name: 'community',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `You have not joined any community yet! Join a community to connect with other learners.`
   String get communityNotJoined {
     return Intl.message(
@@ -1745,6 +1765,76 @@ class S {
     return Intl.message(
       'Do you want to delete this chatbot session?',
       name: 'permissionToDeleteChatbotSession',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chatting session`
+  String get chattingSession {
+    return Intl.message(
+      'Chatting session',
+      name: 'chattingSession',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chat with your friends`
+  String get chatWithYourFriends {
+    return Intl.message(
+      'Chat with your friends',
+      name: 'chatWithYourFriends',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No friend chats found`
+  String get noFriendChatsFound {
+    return Intl.message(
+      'No friend chats found',
+      name: 'noFriendChatsFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message session name`
+  String get messageSessionName {
+    return Intl.message(
+      'Message session name',
+      name: 'messageSessionName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create`
+  String get createText {
+    return Intl.message(
+      'Create',
+      name: 'createText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{name} has joined the chat`
+  String hasJoinedTheChat(Object name) {
+    return Intl.message(
+      '$name has joined the chat',
+      name: 'hasJoinedTheChat',
+      desc: '',
+      args: [name],
+    );
+  }
+
+  /// `Join`
+  String get joinText {
+    return Intl.message(
+      'Join',
+      name: 'joinText',
       desc: '',
       args: [],
     );

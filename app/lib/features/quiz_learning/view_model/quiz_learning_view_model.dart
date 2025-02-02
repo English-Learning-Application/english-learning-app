@@ -14,9 +14,13 @@ class QuizLearningViewModel extends BaseViewModel<QuizLearningViewModelData> {
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
     required LearningLanguage learningLanguage,
   }) {
+    /// Remove phonetics from the learning content
+    final newList = [...languageCourseLearningContent].where((element) {
+      return element.learningContentType != LearningContentType.phonetics;
+    }).toList();
     final List<QuizLearningEntity> quizLearningEntities = [];
     int totalLearningContentCount = 0;
-    for (final content in languageCourseLearningContent) {
+    for (final content in newList) {
       final learningContentType = content.learningContentType;
       final numberOfLearningContent = switch (learningContentType) {
         LearningContentType.word => content.words.length,
@@ -369,7 +373,9 @@ class QuizLearningViewModel extends BaseViewModel<QuizLearningViewModelData> {
           }
 
         case LearningContentType.phonetics:
-          navigator.pop();
+
+          /// Do nothing
+          break;
       }
     }
 
@@ -378,7 +384,7 @@ class QuizLearningViewModel extends BaseViewModel<QuizLearningViewModelData> {
     updateData(
       viewModelData.copyWith(
         totalLearningContentCount: totalLearningContentCount,
-        languageCourseLearningContent: languageCourseLearningContent,
+        languageCourseLearningContent: newList,
         learningLanguage: learningLanguage,
         quizLearningEntities: quizLearningEntities,
       ),

@@ -20,9 +20,11 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'vi';
 
-  static String m0(time) => "Gửi lại mã OTP lúc ${time}";
+  static String m0(name) => "${name} đã tham gia trò chuyện";
 
-  static String m1(errorCode) => "Lỗi không xác định (${errorCode})";
+  static String m1(time) => "Gửi lại mã OTP lúc ${time}";
+
+  static String m2(errorCode) => "Lỗi không xác định (${errorCode})";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -55,18 +57,25 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Yêu cầu đăng ký trợ lý ảo"),
         "chatBotRequiredDescription": MessageLookupByLibrary.simpleMessage(
             "Yêu cầu đăng ký trợ lý ảo để truy cập tính năng này"),
+        "chatWithYourFriends":
+            MessageLookupByLibrary.simpleMessage("Trò chuyện với bạn bè"),
         "chatbotHint":
             MessageLookupByLibrary.simpleMessage("Nhập tin nhắn của bạn ở đây"),
         "chatbotIntro": MessageLookupByLibrary.simpleMessage(
             "Tôi là trợ lý ảo cá nhân của bạn. Tôi có thể giúp bạn trong hành trình học tập của mình. Tôi có thể giúp gì cho bạn hôm nay?"),
+        "chattingSession":
+            MessageLookupByLibrary.simpleMessage("Phiên trò chuyện"),
         "choose": MessageLookupByLibrary.simpleMessage("Chọn"),
         "chooseLearningModes":
             MessageLookupByLibrary.simpleMessage("Chọn chế độ học tập của bạn"),
         "chooseTheLanguage":
             MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ"),
         "chooseWhat": MessageLookupByLibrary.simpleMessage("Chọn nội dung"),
+        "community": MessageLookupByLibrary.simpleMessage("Cộng đồng"),
         "communityHub":
             MessageLookupByLibrary.simpleMessage("Trung tâm cộng đồng"),
+        "communityHubIntro": MessageLookupByLibrary.simpleMessage(
+            "Kết nối với những người học khác và tham gia cộng đồng để học cùng nhau"),
         "communityHubRequired": MessageLookupByLibrary.simpleMessage(
             "Yêu cầu đăng ký trung tâm cộng đồng"),
         "communityHubRequiredDescription": MessageLookupByLibrary.simpleMessage(
@@ -88,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "courses": MessageLookupByLibrary.simpleMessage("Khóa học"),
         "createNewSession":
             MessageLookupByLibrary.simpleMessage("Tạo phiên mới"),
+        "createText": MessageLookupByLibrary.simpleMessage("Tạo"),
         "day": MessageLookupByLibrary.simpleMessage("Ngày"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Chỉnh sửa hồ sơ"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
@@ -106,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "goldPlanDescription": MessageLookupByLibrary.simpleMessage(
             "Truy cập thêm vào trung tâm cộng đồng, khóa học không giới hạn và gợi ý cá nhân"),
         "grammar": MessageLookupByLibrary.simpleMessage("Ngữ pháp"),
+        "hasJoinedTheChat": m0,
         "home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "idiom": MessageLookupByLibrary.simpleMessage("Thành ngữ"),
         "incorrect": MessageLookupByLibrary.simpleMessage("Sai"),
@@ -123,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
         "joinCommunity":
             MessageLookupByLibrary.simpleMessage("Tham gia cộng đồng"),
+        "joinText": MessageLookupByLibrary.simpleMessage("Tham gia"),
         "language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "learn": MessageLookupByLibrary.simpleMessage("Học"),
         "learnAnywhere": MessageLookupByLibrary.simpleMessage(
@@ -147,6 +159,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "matching": MessageLookupByLibrary.simpleMessage("Kết hợp"),
         "matchingLearningModeDescription": MessageLookupByLibrary.simpleMessage(
             "Kéo và thả từ để kết hợp theo thứ tự đúng"),
+        "messageSessionName":
+            MessageLookupByLibrary.simpleMessage("Tên phiên trò chuyện"),
         "microphonePermissionDenied": MessageLookupByLibrary.simpleMessage(
             "Ứng dụng không được cấp quyền sử dụng microphone"),
         "mode": MessageLookupByLibrary.simpleMessage("Chế độ"),
@@ -161,6 +175,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ngôn ngữ mẹ đẻ"),
         "negativeTense": MessageLookupByLibrary.simpleMessage("Phủ định"),
         "next": MessageLookupByLibrary.simpleMessage("Tiếp theo"),
+        "noFriendChatsFound": MessageLookupByLibrary.simpleMessage(
+            "Không tìm thấy trò chuyện với bạn bè"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("Không có mạng"),
         "noUsername":
@@ -207,7 +223,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerDescription": MessageLookupByLibrary.simpleMessage(
             "Đăng ký để truy cập tất cả các dịch vụ của chúng tôi"),
         "resendOtp": MessageLookupByLibrary.simpleMessage("Gửi lại mã OTP"),
-        "resendOtpAt": m0,
+        "resendOtpAt": m1,
         "retry": MessageLookupByLibrary.simpleMessage("Thử lại"),
         "score": MessageLookupByLibrary.simpleMessage("Điểm"),
         "selectLearningLanguage":
@@ -239,7 +255,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Theo dõi tiến trình của bạn và xem bạn đã đi được bao xa trên hành trình học tập của mình."),
         "travel": MessageLookupByLibrary.simpleMessage("Du lịch"),
-        "unknownException": m1,
+        "unknownException": m2,
         "updateProfilePicture":
             MessageLookupByLibrary.simpleMessage("Cập nhật ảnh đại diện"),
         "username": MessageLookupByLibrary.simpleMessage("Tên người dùng"),

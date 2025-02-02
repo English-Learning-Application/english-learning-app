@@ -67,6 +67,9 @@ class _AiChatBotDetailsPageState
                 ),
                 child: CommonPagedListView<ChatMessage>(
                   reverse: true,
+                  separatorBuilder: (_, __) => SizedBox(
+                    height: Dimens.d8.responsive(),
+                  ),
                   pagingController: _pagingController,
                   itemBuilder: (_, item, index) {
                     return Selector<AppViewModel, AppViewModelData>(
@@ -79,6 +82,8 @@ class _AiChatBotDetailsPageState
                             : null;
                         return ChatWidget(
                           message: item.messageText,
+                          senderName: item.sender.username,
+                          chatMessageType: item.chatMessageType,
                           isMe: isMe,
                           senderAvatar: senderAvatar,
                         );

@@ -28,11 +28,31 @@ class SelectLearningModeCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(
             Dimens.d16.responsive(),
           ),
-          border: Border.all(
-            color: isSelected
-                ? AppColors.current.primaryColor
-                : FoundationColors.neutral900,
-            width: Dimens.d1.responsive(),
+          border: Border(
+            top: BorderSide(
+              color: isSelected
+                  ? AppColors.current.primaryColor
+                  : FoundationColors.neutral900,
+              width: Dimens.d1.responsive(),
+            ),
+            right: BorderSide(
+              color: isSelected
+                  ? AppColors.current.primaryColor
+                  : FoundationColors.neutral900,
+              width: Dimens.d1.responsive(),
+            ),
+            left: BorderSide(
+              color: isSelected
+                  ? AppColors.current.primaryColor
+                  : FoundationColors.neutral900,
+              width: Dimens.d1.responsive(),
+            ),
+            bottom: BorderSide(
+              color: isSelected
+                  ? AppColors.current.primaryColor
+                  : FoundationColors.neutral900,
+              width: Dimens.d3.responsive(),
+            ),
           ),
         ),
         padding: EdgeInsets.symmetric(

@@ -280,7 +280,11 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
                       leadingIconSize: 0,
                       trailingIconSize: 0,
                       text: S.current.joinCommunity,
-                      onPressed: () {},
+                      onPressed: () async {
+                        await navigator.push(
+                          const AppRouteInfo.community(),
+                        );
+                      },
                     ),
                   ],
                 ),

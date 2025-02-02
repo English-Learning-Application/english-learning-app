@@ -14,10 +14,17 @@ class MatchingLearningViewModel
     required LearningLanguage learningLanguage,
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
   }) {
+    /// Remove phonetics from the learning content
+    final newList = [...languageCourseLearningContent]
+        .where(
+          (element) =>
+              element.learningContentType != LearningContentType.phonetics,
+        )
+        .toList();
     final matchingLearningEntities = <MatchingLearningEntity>[];
     int totalLearningContentCount = 0;
 
-    for (final content in languageCourseLearningContent) {
+    for (final content in newList) {
       final learningContentType = content.learningContentType;
       final numberOfLearningContent = switch (learningContentType) {
         LearningContentType.word => content.words.length,
@@ -204,7 +211,8 @@ class MatchingLearningViewModel
             matchingLearningEntities.add(matchingLearningEntity);
           }
         case LearningContentType.phonetics:
-          navigator.pop();
+
+          /// Do nothing
           break;
       }
     }
@@ -214,7 +222,7 @@ class MatchingLearningViewModel
     updateData(
       viewModelData.copyWith(
         learningLanguage: learningLanguage,
-        languageCourseLearningContent: languageCourseLearningContent,
+        languageCourseLearningContent: newList,
         totalLearningContentCount: totalLearningContentCount,
         matchingLearningEntities: matchingLearningEntities,
         currentDraggedTexts: List.generate(

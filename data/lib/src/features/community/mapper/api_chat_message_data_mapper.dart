@@ -18,6 +18,7 @@ class ChatMessageDataMapper
     return ApiChatMessageData(
       messageId: entity.messageId,
       message: entity.messageText,
+      chatMessageType: entity.chatMessageType.serverValue,
       sender: _apiMessageUserDataMapper.mapToData(entity.sender),
       sentAt: entity.sentAt?.toIso8601String(),
     );
@@ -28,6 +29,7 @@ class ChatMessageDataMapper
     return ChatMessage(
       messageId: data?.messageId ?? ChatMessage.defaultMessageId,
       messageText: data?.message ?? ChatMessage.defaultMessageText,
+      chatMessageType: ChatMessageType.fromServerValue(data?.chatMessageType),
       sentAt: DateTimeUtils.tryParse(date: data?.sentAt ?? ''),
       sender: _apiMessageUserDataMapper.mapToEntity(data?.sender),
     );
