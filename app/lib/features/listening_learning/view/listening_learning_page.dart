@@ -1,4 +1,3 @@
-import 'package:app/features/ai_chat_bot/widgets/chat_widget.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:design/design.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +6,7 @@ import 'package:logic/logic.dart';
 import 'package:provider/provider.dart';
 
 import '../../../app.dart';
+import '../../ai_chat_bot_details/widgets/chat_widget.dart';
 
 @RoutePage()
 class ListeningLearningPage extends StatefulWidget {

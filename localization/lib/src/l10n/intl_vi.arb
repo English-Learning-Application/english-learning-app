@@ -166,5 +166,7 @@
     "chatBotRequiredDescription": "Yêu cầu đăng ký trợ lý ảo để truy cập tính năng này",
     "communityHubRequired": "Yêu cầu đăng ký trung tâm cộng đồng",
     "communityHubRequiredDescription": "Yêu cầu đăng ký trung tâm cộng đồng để truy cập tính năng này",
-    "thisFeatureIsOnlyAvailableForPremiumUsers": "Chức năng này chỉ dành cho người dùng Premium"
+    "thisFeatureIsOnlyAvailableForPremiumUsers": "Chức năng này chỉ dành cho người dùng Premium",
+    "createNewSession": "Tạo phiên mới",
+    "permissionToDeleteChatbotSession": "Bạn có muốn xóa phiên trò chuyện này không?"
 }

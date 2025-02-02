@@ -86,6 +86,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "courseWillBeAvailableSoon": MessageLookupByLibrary.simpleMessage(
             "Khóa học sẽ sớm được cập nhật"),
         "courses": MessageLookupByLibrary.simpleMessage("Khóa học"),
+        "createNewSession":
+            MessageLookupByLibrary.simpleMessage("Tạo phiên mới"),
         "day": MessageLookupByLibrary.simpleMessage("Ngày"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Chỉnh sửa hồ sơ"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
@@ -173,6 +175,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nhập mật khẩu của bạn"),
         "permissionDenied":
             MessageLookupByLibrary.simpleMessage("Quyền bị từ chối"),
+        "permissionToDeleteChatbotSession":
+            MessageLookupByLibrary.simpleMessage(
+                "Bạn có muốn xóa phiên trò chuyện này không?"),
         "phoneNo": MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "phonetic": MessageLookupByLibrary.simpleMessage("Phiên âm"),
         "phrasalVerb": MessageLookupByLibrary.simpleMessage("Cụm động từ"),

@@ -87,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "courseWillBeAvailableSoon": MessageLookupByLibrary.simpleMessage(
             "Course will be available soon"),
         "courses": MessageLookupByLibrary.simpleMessage("Courses"),
+        "createNewSession":
+            MessageLookupByLibrary.simpleMessage("Create new session"),
         "day": MessageLookupByLibrary.simpleMessage("Day"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
@@ -174,6 +176,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "permissionDenied":
             MessageLookupByLibrary.simpleMessage("Permission denied"),
+        "permissionToDeleteChatbotSession":
+            MessageLookupByLibrary.simpleMessage(
+                "Do you want to delete this chatbot session?"),
         "phoneNo": MessageLookupByLibrary.simpleMessage("Phone number"),
         "phonetic": MessageLookupByLibrary.simpleMessage("Phonetic"),
         "phrasalVerb": MessageLookupByLibrary.simpleMessage("Phrasal verb"),

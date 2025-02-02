@@ -367,7 +367,7 @@ packages:
     source: hosted
     version: "1.2.0"
   data:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
       path: "../data"
       relative: true
@@ -1521,6 +1521,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.12.0"
+  stomp_dart_client:
+    dependency: "direct main"
+    description:
+      name: stomp_dart_client
+      sha256: "376d37a01fbe865eb213ef857f54e1d8adcba203e5cfa54e1463cfcb9ebac84c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
   stream_channel:
     dependency: transitive
     description:

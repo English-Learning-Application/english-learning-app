@@ -44,4 +44,7 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.subscription() = _Subscription;
   const factory AppRouteInfo.commonFeatureRequiredSubscription() =
       _CommonFeatureRequiredSubscription;
+  const factory AppRouteInfo.aiChatBotDetails({
+    required ChatSession chatSession,
+  }) = _AiChatBotDetails;
 }

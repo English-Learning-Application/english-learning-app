@@ -140,6 +140,28 @@ enum LearningContentType {
   }
 }
 
+enum ChatType {
+  aiChat(ServerRequestResponseConstants.aiBot),
+  privateChat(ServerRequestResponseConstants.privateChat),
+  groupChat(ServerRequestResponseConstants.groupChat);
+
+  const ChatType(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.aiBot:
+        return ChatType.aiChat;
+      case ServerRequestResponseConstants.privateChat:
+        return ChatType.privateChat;
+      case ServerRequestResponseConstants.groupChat:
+        return ChatType.groupChat;
+      default:
+        return ChatType.privateChat;
+    }
+  }
+}
+
 enum WordType {
   noun(ServerRequestResponseConstants.noun),
   verb(ServerRequestResponseConstants.verb),

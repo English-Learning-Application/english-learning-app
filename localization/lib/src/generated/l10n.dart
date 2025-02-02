@@ -1729,6 +1729,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Create new session`
+  String get createNewSession {
+    return Intl.message(
+      'Create new session',
+      name: 'createNewSession',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to delete this chatbot session?`
+  String get permissionToDeleteChatbotSession {
+    return Intl.message(
+      'Do you want to delete this chatbot session?',
+      name: 'permissionToDeleteChatbotSession',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

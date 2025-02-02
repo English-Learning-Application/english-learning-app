@@ -8,9 +8,10 @@ class ChatBotInput extends StatelessWidget {
   const ChatBotInput({
     super.key,
     required this.controller,
+    required this.onSend,
   });
   final TextEditingController controller;
-
+  final Function(String) onSend;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +31,7 @@ class ChatBotInput extends StatelessWidget {
               hint: S.current.chatbotHint,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(
-                  Dimens.d24.responsive(),
+                  Dimens.d16.responsive(),
                 ),
                 borderSide: BorderSide.none,
               ),
@@ -57,6 +58,7 @@ class ChatBotInput extends StatelessWidget {
             onTap: () {
               if (controller.text.isNotEmpty) {
                 // Send message to chat bot
+                onSend(controller.text);
                 controller.clear();
                 FocusScope.of(context).unfocus();
               }

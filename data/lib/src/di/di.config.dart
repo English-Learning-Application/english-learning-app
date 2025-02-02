@@ -70,6 +70,16 @@ import 'package:data/src/features/authentication/data_source/api/authentication_
     as _i920;
 import 'package:data/src/features/authentication/repository/authentication_repository_impl.dart'
     as _i322;
+import 'package:data/src/features/community/data_source/chat_bot_api_service.dart'
+    as _i787;
+import 'package:data/src/features/community/mapper/api_chat_message_data_mapper.dart'
+    as _i445;
+import 'package:data/src/features/community/mapper/api_chat_session_data_mapper.dart'
+    as _i758;
+import 'package:data/src/features/community/mapper/api_message_user_data_mapper.dart'
+    as _i897;
+import 'package:data/src/features/community/repository/chat_bot_repository_impl.dart'
+    as _i599;
 import 'package:data/src/features/exercise/data_source/exercise_api_data_source.dart'
     as _i928;
 import 'package:data/src/features/exercise/mapper/api_flash_card_learning_info_mapper.dart'
@@ -232,12 +242,16 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i414.ApiBenefitDataMapper>(() => _i414.ApiBenefitDataMapper());
     gh.factory<_i397.ApiUserSubscriptionDataMapper>(
         () => _i397.ApiUserSubscriptionDataMapper());
+    gh.factory<_i897.ApiMessageUserDataMapper>(
+        () => _i897.ApiMessageUserDataMapper());
     gh.lazySingleton<_i665.AppAssetsService>(
         () => const _i665.AppAssetsService());
     gh.factory<_i77.HeaderInterceptor>(
         () => _i77.HeaderInterceptor(gh<_i473.AppInfo>()));
     gh.factory<_i1022.ApiTenseDataMapper>(
         () => _i1022.ApiTenseDataMapper(gh<_i437.ApiTenseFormDataMapper>()));
+    gh.factory<_i445.ChatMessageDataMapper>(() =>
+        _i445.ChatMessageDataMapper(gh<_i437.ApiMessageUserDataMapper>()));
     gh.lazySingleton<_i881.AppPreferences>(
         () => _i881.AppPreferences(gh<_i460.SharedPreferences>()));
     gh.factory<_i176.ApiPronunciationAssessmentModelMapper>(
@@ -287,6 +301,11 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i643.ApiCategoryCourseMapper(
               gh<_i437.ApiLanguageCourseLearningContentDataMapper>(),
               gh<_i437.ApiCategoryMapper>(),
+            ));
+    gh.factory<_i758.ApiChatSessionDataMapper>(
+        () => _i758.ApiChatSessionDataMapper(
+              gh<_i437.ApiMessageUserDataMapper>(),
+              gh<_i437.ChatMessageDataMapper>(),
             ));
     gh.factory<_i30.AccessTokenInterceptor>(
         () => _i30.AccessTokenInterceptor(gh<_i437.AppPreferences>()));
@@ -338,12 +357,21 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i891.ProfileApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i702.SubscriptionApiDataSource>(() =>
         _i702.SubscriptionApiDataSource(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i787.ChatBotApiService>(
+        () => _i787.ChatBotApiService(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i182.LanguageCourseRepository>(
         () => _i725.LanguageCourseRepositoryImpl(
               gh<_i437.LanguageCourseApiDataSource>(),
               gh<_i437.ApiCategoryCourseMapper>(),
               gh<_i437.ApiLanguageCourseDataMapper>(),
               gh<_i437.ApiCategoryMapper>(),
+            ));
+    gh.lazySingleton<_i182.AiChatBotRepository>(
+        () => _i599.AiChatBotRepositoryImpl(
+              gh<_i437.ChatBotApiService>(),
+              gh<_i437.ApiChatSessionDataMapper>(),
+              gh<_i437.ChatMessageDataMapper>(),
+              gh<_i437.ApiMessageUserDataMapper>(),
             ));
     gh.lazySingleton<_i182.ExerciseRepository>(
         () => _i91.ExerciseRepositoryImpl(

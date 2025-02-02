@@ -52,6 +52,9 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       subscription: () => const SubscriptionRoute(),
       commonFeatureRequiredSubscription: () =>
           const CommonFeatureRequiredSubscriptionRoute(),
+      aiChatBotDetails: (chatSession) => AiChatBotDetailsRoute(
+        chatSession: chatSession,
+      ),
     );
   }
 }

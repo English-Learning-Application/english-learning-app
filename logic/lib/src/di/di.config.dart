@@ -23,6 +23,14 @@ import 'package:logic/src/features/authentication/usecase/registration_completio
     as _i119;
 import 'package:logic/src/features/authentication/usecase/username_registration_use_case.dart'
     as _i323;
+import 'package:logic/src/features/community/use_case/create_new_chat_bot_session_use_case.dart'
+    as _i855;
+import 'package:logic/src/features/community/use_case/delete_chat_session_use_case.dart'
+    as _i876;
+import 'package:logic/src/features/community/use_case/get_chat_bot_messages_use_case.dart'
+    as _i956;
+import 'package:logic/src/features/community/use_case/get_chat_bot_sessions_use_case.dart'
+    as _i813;
 import 'package:logic/src/features/exercise/use_case/flash_card_learning_update_use_case.dart'
     as _i700;
 import 'package:logic/src/features/exercise/use_case/matching_learning_update_use_case.dart'
@@ -110,6 +118,14 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i323.UsernameRegistrationUseCase>(() =>
         _i323.UsernameRegistrationUseCase(
             gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i813.GetChatBotSessionsUseCase>(
+        () => _i813.GetChatBotSessionsUseCase(gh<_i182.AiChatBotRepository>()));
+    gh.factory<_i855.CreateNewChatBotSessionUseCase>(() =>
+        _i855.CreateNewChatBotSessionUseCase(gh<_i182.AiChatBotRepository>()));
+    gh.factory<_i956.GetChatBotMessagesUseCase>(
+        () => _i956.GetChatBotMessagesUseCase(gh<_i182.AiChatBotRepository>()));
+    gh.factory<_i876.DeleteChatSessionUseCase>(
+        () => _i876.DeleteChatSessionUseCase(gh<_i182.AiChatBotRepository>()));
     gh.factory<_i1006.FacebookLoginUseCase>(() => _i1006.FacebookLoginUseCase(
           gh<_i182.AuthenticationRepository>(),
           gh<_i182.AppNavigator>(),

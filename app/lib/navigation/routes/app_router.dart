@@ -98,6 +98,9 @@ class AppRouter extends $AppRouter {
                 AutoRoute(
                   page: CommonFeatureRequiredSubscriptionRoute.page,
                 ),
+                AutoRoute(
+                  page: AiChatBotDetailsRoute.page,
+                ),
               ],
             ),
             AutoRoute(

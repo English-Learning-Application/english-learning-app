@@ -11,8 +11,11 @@
 import 'package:app/app.dart' as _i137;
 import 'package:app/app/view_model/app.dart' as _i215;
 import 'package:app/base/view_model/common/common.dart' as _i915;
+import 'package:app/base/web_socket/stomp_dart_service.dart' as _i591;
 import 'package:app/di/di.dart' as _i120;
 import 'package:app/features/ai_chat_bot/view_models/ai_chat_bot.dart' as _i709;
+import 'package:app/features/ai_chat_bot_details/view_model/ai_chat_bot_details.dart'
+    as _i825;
 import 'package:app/features/complete_registration/view_models/complete_registration.dart'
     as _i752;
 import 'package:app/features/course/view_models/course.dart' as _i366;
@@ -56,6 +59,7 @@ import 'package:app/navigation/middleware/is_logged_in_route_guard.dart'
 import 'package:app/navigation/middleware/route_guard.dart' as _i513;
 import 'package:app/navigation/routes/app_router.dart' as _i931;
 import 'package:audioplayers/audioplayers.dart' as _i656;
+import 'package:data/data.dart' as _i437;
 import 'package:firebase_analytics/firebase_analytics.dart' as _i398;
 import 'package:flutter_tts/flutter_tts.dart' as _i50;
 import 'package:get_it/get_it.dart' as _i174;
@@ -75,7 +79,6 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     final appModules = _$AppModules();
-    gh.factory<_i709.AiChatBotViewModel>(() => _i709.AiChatBotViewModel());
     gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel());
     gh.factory<_i901.ListeningLearningViewModel>(
         () => _i901.ListeningLearningViewModel());
@@ -92,6 +95,8 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i96.QuizLearningViewModel>(() =>
         _i96.QuizLearningViewModel(gh<_i182.QuizLearningUpdateUseCase>()));
+    gh.factory<_i591.StompDartService>(
+        () => _i591.StompDartService(gh<_i437.AppPreferences>()));
     gh.lazySingleton<_i137.BaseRouteInfoMapper>(
         () => _i48.AppRouteInfoMapper());
     gh.factory<_i635.SplashViewModel>(() => _i635.SplashViewModel(
@@ -119,12 +124,23 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i182.GetLanguageCoursesByLanguageUseCase>(),
               gh<_i182.GetLanguageCoursesByLanguageAndLevelUseCase>(),
             ));
+    gh.factory<_i709.AiChatBotViewModel>(() => _i709.AiChatBotViewModel(
+          gh<_i182.GetChatBotSessionsUseCase>(),
+          gh<_i182.CreateNewChatBotSessionUseCase>(),
+        ));
     gh.factory<_i21.IsLoggedInRouteGuard>(
         () => _i21.IsLoggedInRouteGuard(gh<_i182.IsLoggedInUseCase>()));
     gh.factory<_i1006.ValidatePhoneNumberViewModel>(
         () => _i1006.ValidatePhoneNumberViewModel(
               gh<_i182.SendPhoneVerificationUseCase>(),
               gh<_i182.VerifyPhoneOtpUseCase>(),
+            ));
+    gh.factory<_i825.AiChatBotDetailsViewModel>(
+        () => _i825.AiChatBotDetailsViewModel(
+              gh<_i137.StompDartService>(),
+              gh<_i182.GetChatBotMessagesUseCase>(),
+              gh<_i437.ChatMessageDataMapper>(),
+              gh<_i182.DeleteChatSessionUseCase>(),
             ));
     gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(
           gh<_i182.LogoutUseCase>(),

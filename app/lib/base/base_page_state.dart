@@ -43,7 +43,8 @@ abstract class BasePageStateDelegate<T extends StatefulWidget,
     ..appViewModel = appViewModel
     ..disposeBag = disposeBag
     ..exceptionMessageMapper = exceptionMessageMapper
-    ..commonViewModel = commonViewModel;
+    ..commonViewModel = commonViewModel
+    ..disposeBy(disposeBag);
 
   late final DisposeBag disposeBag = DisposeBag();
 
@@ -176,9 +177,7 @@ abstract class BasePageStateDelegate<T extends StatefulWidget,
     return Container(
       color: FoundationColors.secondary900.withOpacity(0.5),
       child: Center(
-        child: Assets.lottie.lottieLoading.lottie(
-
-        ),
+        child: Assets.lottie.lottieLoading.lottie(),
       ),
     );
   }

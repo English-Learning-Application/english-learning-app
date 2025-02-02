@@ -1,8 +1,8 @@
-import 'package:app/features/ai_chat_bot/widgets/chat_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:logic/logic.dart';
 
 import '../../../app.dart';
+import 'chat_widget.dart';
 
 class ChatBotBody extends StatelessWidget {
   const ChatBotBody({

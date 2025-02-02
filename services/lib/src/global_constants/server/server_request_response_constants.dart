@@ -8,6 +8,11 @@ class ServerRequestResponseConstants {
   static const bearer = 'Bearer';
   static const deviceId = 'X-Device-Id';
 
+  // Chat Type
+  static const aiBot = 'AI_BOT';
+  static const privateChat = 'PRIVATE';
+  static const groupChat = 'GROUP';
+
   // Language Level
   static const all = 'ALL';
   static const a1 = 'A1';
