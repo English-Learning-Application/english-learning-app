@@ -1,6 +1,6 @@
-import 'package:logic/logic.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:injectable/injectable.dart';
+import 'package:logic/logic.dart';
 
 import '../../../services.dart';
 

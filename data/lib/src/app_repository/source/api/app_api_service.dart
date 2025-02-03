@@ -36,7 +36,7 @@ class AppApiService {
       method: RestApiMethod.get,
       path: UserEndpoints.getUsersData,
       queryParameters: {
-        'userIds': ids.join(','),
+        'userIds': ids,
       },
       successResponseMapperType: SuccessResponseMapperType.listResponse,
       decoder: (json) => ApiUserData.fromJson(json as Map<String, dynamic>),

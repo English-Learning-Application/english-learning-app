@@ -154,7 +154,6 @@ class _ChatWidgetState extends State<ChatWidget> {
               ),
               child: Text(
                 widget.message,
-                textAlign: TextAlign.justify,
                 style: AppTextStyles.s14w400primary().font14().medium.let(
                       (it) => it.copyWith(
                         color: widget.isMe

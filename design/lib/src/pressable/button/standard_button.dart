@@ -324,11 +324,25 @@ class StandardButton extends StatelessWidget {
               : BorderRadius.circular(
                   borderRadius ?? Dimens.d32.responsive(),
                 ),
-          border: Border.all(
-            color: borderColor ?? _borderColor(),
-            width: Dimens.d1.responsive(),
+          border: Border(
+            top: BorderSide(
+              color: borderColor ?? _borderColor(),
+              width: Dimens.d2.responsive(),
+            ),
+            left: BorderSide(
+              color: borderColor ?? _borderColor(),
+              width: Dimens.d2.responsive(),
+            ),
+            right: BorderSide(
+              color: borderColor ?? _borderColor(),
+              width: Dimens.d2.responsive(),
+            ),
+            bottom: BorderSide(
+              color: borderColor ?? _borderColor(),
+              width: Dimens.d4.responsive(),
+            ),
           ),
-          color: backgroundColor ?? _backgroundColor(),
+          color: backgroundColor ?? _backgroundColor().withValues(alpha: 0.8),
           shape: shape,
         ),
         height: height ?? _buttonHeight(),
