@@ -81,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Community hub subscription is required"),
         "communityHubRequiredDescription": MessageLookupByLibrary.simpleMessage(
             "Community hub subscription is required to access this feature"),
+        "communityJoined": MessageLookupByLibrary.simpleMessage(
+            "You have joined a community! Start learning with other learners."),
         "communityNotJoined": MessageLookupByLibrary.simpleMessage(
             "You have not joined any community yet! Join a community to connect with other learners."),
         "completeYourProfile":

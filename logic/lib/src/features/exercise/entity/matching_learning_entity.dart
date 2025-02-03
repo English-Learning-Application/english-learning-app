@@ -45,6 +45,7 @@ class MatchingLearning with _$MatchingLearning {
     @Default(MatchingLearning.defaultItemId) String itemId,
     @Default(MatchingLearning.defaultLearningContentType)
     LearningContentType learningContentType,
+    @Default(MatchingLearning.defaultCourseId) String courseId,
     @Default(MatchingLearning.defaultNumberOfCorrect) int numberOfCorrect,
     @Default(MatchingLearning.defaultNumberOfIncorrect) int numberOfIncorrect,
   }) = _MatchingLearning;
@@ -54,6 +55,7 @@ class MatchingLearning with _$MatchingLearning {
   static const defaultItemId = '';
   static const LearningContentType defaultLearningContentType =
       LearningContentType.word;
+  static const defaultCourseId = '';
   static const defaultNumberOfCorrect = 0;
   static const defaultNumberOfIncorrect = 0;
 }

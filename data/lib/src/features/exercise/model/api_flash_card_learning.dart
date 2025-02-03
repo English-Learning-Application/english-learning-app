@@ -11,6 +11,7 @@ class ApiFlashCardLearning with _$ApiFlashCardLearning {
     @JsonKey(name: 'learningContentId') String? learningContentId,
     @JsonKey(name: 'itemId') String? itemId,
     @JsonKey(name: 'learningContentType') String? learningContentType,
+    @JsonKey(name: 'courseId') String? courseId,
     @JsonKey(name: 'numberOfLearned') int? numberOfLearned,
     @JsonKey(name: 'numberOfSkipped') int? numberOfSkipped,
   }) = _ApiFlashCardLearning;

@@ -19,6 +19,7 @@ class FlashCardLearningUpdateUseCase extends BaseFutureUseCase<
       flashCardLearnings: input.flashCardLearnings,
       learnedItemIds: input.learnedItemIds,
       skippedItemIds: input.skippedItemIds,
+      courseId: input.courseId,
     );
 
     return FlashCardLearningUpdateOutput(
@@ -33,6 +34,7 @@ class FlashCardLearningUpdateInput extends BaseInput
     required List<FlashCardLearningEntity> flashCardLearnings,
     required List<String> learnedItemIds,
     required List<String> skippedItemIds,
+    required String courseId,
   }) = _FlashCardLearningUpdateInput;
 }
 

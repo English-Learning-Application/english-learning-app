@@ -18,31 +18,49 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
           LanguageCourseRoute(language: learningLanguage),
       languageCourseDetails: (languageCourse) =>
           LanguageCourseDetailsRoute(languageCourse: languageCourse),
-      flashCardLearning: (languageCourseLearningContents, learningLanguage) =>
-          FlashCardLearningRoute(
+      flashCardLearning:
+          (languageCourseLearningContents, learningLanguage, languageCourse) =>
+              FlashCardLearningRoute(
+        languageCourse: languageCourse,
         languageCourseLearningContent: languageCourseLearningContents,
         learningLanguage: learningLanguage,
       ),
-      quizLearning: (learningLanguage, languageCourseLearningContents) =>
-          QuizLearningRoute(
+      quizLearning:
+          (learningLanguage, languageCourseLearningContents, languageCourse) =>
+              QuizLearningRoute(
+        languageCourse: languageCourse,
         learningLanguage: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContents,
       ),
-      matchingLearning:
-          (learningLanguage, languageCourseLearningContents, learningType) =>
-              MatchingLearningRoute(
+      matchingLearning: (
+        learningLanguage,
+        languageCourseLearningContents,
+        languageCourse,
+        learningType,
+      ) =>
+          MatchingLearningRoute(
         learningLanguage: learningLanguage,
         languageCourseLearningContents: languageCourseLearningContents,
         learningType: learningType,
+        languageCourse: languageCourse,
       ),
-      pronunciationLearning:
-          (learningLanguage, languageCourseLearningContent) =>
-              PronunciationLearningRoute(
+      pronunciationLearning: (
+        learningLanguage,
+        languageCourseLearningContent,
+        languageCourse,
+      ) =>
+          PronunciationLearningRoute(
+        languageCourse: languageCourse,
         learningLanguage: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContent,
       ),
-      listeningLearning: (learningLanguage, languageCourseLearningContent) =>
+      listeningLearning: (
+        learningLanguage,
+        languageCourseLearningContent,
+        languageCourse,
+      ) =>
           ListeningLearningRoute(
+        languageCourse: languageCourse,
         language: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContent,
       ),

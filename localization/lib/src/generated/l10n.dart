@@ -910,6 +910,16 @@ class S {
     );
   }
 
+  /// `You have joined a community! Start learning with other learners.`
+  String get communityJoined {
+    return Intl.message(
+      'You have joined a community! Start learning with other learners.',
+      name: 'communityJoined',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Join community`
   String get joinCommunity {
     return Intl.message(

@@ -5,6 +5,7 @@ class MatchingLearningViewModelData extends BaseViewModelData
     with _$MatchingLearningViewModelData {
   const MatchingLearningViewModelData._();
   const factory MatchingLearningViewModelData({
+    @Default('') String courseId,
     @Default([]) List<MatchingLearningEntity> matchingLearningEntities,
     @Default(LearningLanguage.english) LearningLanguage learningLanguage,
     @Default([])

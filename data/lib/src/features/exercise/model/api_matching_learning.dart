@@ -13,6 +13,7 @@ class ApiMatchingLearning with _$ApiMatchingLearning {
     @JsonKey(name: 'learningContentType') String? learningContentType,
     @JsonKey(name: 'numberOfCorrect') int? numberOfCorrect,
     @JsonKey(name: 'numberOfIncorrect') int? numberOfIncorrect,
+    @JsonKey(name: 'courseId') String? courseId,
   }) = _ApiMatchingLearning;
 
   factory ApiMatchingLearning.fromJson(Map<String, dynamic> json) =>

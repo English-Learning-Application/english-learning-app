@@ -25,7 +25,7 @@ class StompDartService with LogMixin {
     final accessToken = await _appPreferences.accessToken;
     _stompClient = StompClient(
       config: StompConfig.sockJS(
-        url: 'http://192.168.1.8:8089/ws',
+        url: UrlConstants.appBaseUrlSocket,
         onConnect: onConnect,
         onDisconnect: onDisconnect,
         onWebSocketError: onError,

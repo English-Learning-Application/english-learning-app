@@ -12,6 +12,7 @@ class ApiMatchingLearningMapper
       matchingLearningId: entity.id,
       learningContentId: entity.learningContentId,
       itemId: entity.itemId,
+      courseId: entity.courseId,
       learningContentType: entity.learningContentType.serverValue,
       numberOfCorrect: entity.numberOfCorrect,
       numberOfIncorrect: entity.numberOfIncorrect,
@@ -29,6 +30,7 @@ class ApiMatchingLearningMapper
       learningContentType:
           LearningContentType.fromServerValue(data?.learningContentType) ??
               MatchingLearning.defaultLearningContentType,
+      courseId: data?.courseId ?? MatchingLearning.defaultCourseId,
       numberOfCorrect:
           data?.numberOfCorrect ?? MatchingLearning.defaultNumberOfCorrect,
       numberOfIncorrect:

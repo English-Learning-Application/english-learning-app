@@ -6,6 +6,7 @@ class QuizLearningViewModelData extends BaseViewModelData
   const QuizLearningViewModelData._();
 
   const factory QuizLearningViewModelData({
+    @Default('') String courseId,
     @Default([]) List<QuizLearningEntity> quizLearningEntities,
     @Default(LearningLanguage.english) LearningLanguage learningLanguage,
     @Default([])

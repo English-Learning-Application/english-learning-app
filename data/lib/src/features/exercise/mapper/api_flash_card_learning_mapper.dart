@@ -12,6 +12,7 @@ class ApiFlashCardLearningMapper
       flashCardLearningId: entity.id,
       learningContentId: entity.learningContentId,
       itemId: entity.itemId,
+      courseId: entity.courseId,
       learningContentType: entity.learningContentType.serverValue,
       numberOfLearned: entity.numberOfLearned,
       numberOfSkipped: entity.numberOfSkipped,
@@ -29,6 +30,7 @@ class ApiFlashCardLearningMapper
       learningContentType:
           LearningContentType.fromServerValue(data?.learningContentType) ??
               FlashCardLearning.defaultLearningContentType,
+      courseId: data?.courseId ?? FlashCardLearning.defaultCourseId,
       numberOfLearned:
           data?.numberOfLearned ?? FlashCardLearning.defaultNumberOfLearned,
       numberOfSkipped:

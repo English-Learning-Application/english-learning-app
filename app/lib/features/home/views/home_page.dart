@@ -18,7 +18,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
   @override
-  void initViewModels() {}
+  void initViewModels() {
+    viewModel.onInit();
+  }
 
   @override
   Widget buildPage(BuildContext context) {
@@ -264,12 +266,28 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
               Expanded(
                 child: Column(
                   children: [
-                    Text(
-                      S.current.communityNotJoined,
-                      style: AppTextStyles.s14w400primary()
-                          .font12()
-                          .bold
-                          .secondary,
+                    Selector<HomeViewModel, HomeViewModelData>(
+                      selector: (_, viewModel) => viewModel.viewModelData,
+                      shouldRebuild: (previous, next) =>
+                          previous.chatSessions != next.chatSessions,
+                      builder: (_, viewModelData, __) {
+                        if (viewModelData.chatSessions.isNotEmpty) {
+                          return Text(
+                            S.current.communityJoined,
+                            style: AppTextStyles.s14w400primary()
+                                .font12()
+                                .bold
+                                .secondary,
+                          );
+                        }
+                        return Text(
+                          S.current.communityNotJoined,
+                          style: AppTextStyles.s14w400primary()
+                              .font12()
+                              .bold
+                              .secondary,
+                        );
+                      },
                     ),
                     SizedBox(
                       height: Dimens.d4.responsive(),
@@ -284,6 +302,7 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
                         await navigator.push(
                           const AppRouteInfo.community(),
                         );
+                        viewModel.onInit();
                       },
                     ),
                   ],

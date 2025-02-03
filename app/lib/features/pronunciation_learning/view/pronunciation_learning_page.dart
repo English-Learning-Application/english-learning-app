@@ -17,8 +17,9 @@ class PronunciationLearningPage extends StatefulWidget {
     super.key,
     required this.learningLanguage,
     required this.languageCourseLearningContent,
+    required this.languageCourse,
   });
-
+  final LanguageCourse languageCourse;
   final LearningLanguage learningLanguage;
   final List<LanguageCourseLearningContent> languageCourseLearningContent;
 
@@ -72,6 +73,7 @@ class _PronunciationLearningPageState extends BasePageState<
   @override
   void initViewModels() {
     viewModel.onInit(
+      courseId: widget.languageCourse.languageCourseId,
       learningLanguage: widget.learningLanguage,
       languageCourseLearningContent: widget.languageCourseLearningContent,
     );

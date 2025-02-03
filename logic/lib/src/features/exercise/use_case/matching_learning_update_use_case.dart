@@ -18,6 +18,7 @@ class MatchingLearningUpdateUseCase extends BaseFutureUseCase<
       matchingLearnings: input.matchingLearnings,
       correctItemIds: input.correctItemIds,
       incorrectItemIds: input.incorrectItemIds,
+      courseId: input.courseId,
     );
 
     return MatchingLearningUpdateOutput(
@@ -33,6 +34,7 @@ class MatchingLearningUpdateInput extends BaseInput
     required List<MatchingLearningEntity> matchingLearnings,
     required List<String> correctItemIds,
     required List<String> incorrectItemIds,
+    required String courseId,
   }) = _MatchingLearningUpdateInput;
 }
 

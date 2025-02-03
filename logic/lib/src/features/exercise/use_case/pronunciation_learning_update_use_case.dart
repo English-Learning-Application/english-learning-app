@@ -16,6 +16,7 @@ class PronunciationLearningUpdateUseCase extends BaseFutureUseCase<
       PronunciationLearningUpdateInput input) async {
     final resp = await _exerciseRepository.updatePronunciationLearning(
       pronunciationLearnings: input.pronunciationLearningEntities,
+      courseId: input.courseId,
     );
     return PronunciationLearningUpdateOutput(pronunciationLearnings: resp);
   }
@@ -26,6 +27,7 @@ class PronunciationLearningUpdateInput extends BaseInput
     with _$PronunciationLearningUpdateInput {
   const factory PronunciationLearningUpdateInput({
     required List<PronunciationLearningEntity> pronunciationLearningEntities,
+    required String courseId,
   }) = _PronunciationLearningUpdateInput;
 }
 

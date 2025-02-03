@@ -139,6 +139,7 @@ abstract class $AppRouter extends _i28.RootStackRouter {
         routeData: routeData,
         child: _i10.FlashCardLearningPage(
           key: args.key,
+          languageCourse: args.languageCourse,
           languageCourseLearningContent: args.languageCourseLearningContent,
           learningLanguage: args.learningLanguage,
         ),
@@ -194,6 +195,7 @@ abstract class $AppRouter extends _i28.RootStackRouter {
           key: args.key,
           language: args.language,
           languageCourseLearningContent: args.languageCourseLearningContent,
+          languageCourse: args.languageCourse,
         ),
       );
     },
@@ -218,6 +220,7 @@ abstract class $AppRouter extends _i28.RootStackRouter {
           learningLanguage: args.learningLanguage,
           languageCourseLearningContents: args.languageCourseLearningContents,
           learningType: args.learningType,
+          languageCourse: args.languageCourse,
         ),
       );
     },
@@ -258,6 +261,7 @@ abstract class $AppRouter extends _i28.RootStackRouter {
           key: args.key,
           learningLanguage: args.learningLanguage,
           languageCourseLearningContent: args.languageCourseLearningContent,
+          languageCourse: args.languageCourse,
         ),
       );
     },
@@ -269,6 +273,7 @@ abstract class $AppRouter extends _i28.RootStackRouter {
           key: args.key,
           learningLanguage: args.learningLanguage,
           languageCourseLearningContent: args.languageCourseLearningContent,
+          languageCourse: args.languageCourse,
         ),
       );
     },
@@ -524,6 +529,7 @@ class FlashCardLearningRoute
     extends _i28.PageRouteInfo<FlashCardLearningRouteArgs> {
   FlashCardLearningRoute({
     _i29.Key? key,
+    required _i30.LanguageCourse languageCourse,
     required List<_i30.LanguageCourseLearningContent>
         languageCourseLearningContent,
     _i30.LearningLanguage learningLanguage = _i30.LearningLanguage.english,
@@ -532,6 +538,7 @@ class FlashCardLearningRoute
           FlashCardLearningRoute.name,
           args: FlashCardLearningRouteArgs(
             key: key,
+            languageCourse: languageCourse,
             languageCourseLearningContent: languageCourseLearningContent,
             learningLanguage: learningLanguage,
           ),
@@ -547,11 +554,14 @@ class FlashCardLearningRoute
 class FlashCardLearningRouteArgs {
   const FlashCardLearningRouteArgs({
     this.key,
+    required this.languageCourse,
     required this.languageCourseLearningContent,
     this.learningLanguage = _i30.LearningLanguage.english,
   });
 
   final _i29.Key? key;
+
+  final _i30.LanguageCourse languageCourse;
 
   final List<_i30.LanguageCourseLearningContent> languageCourseLearningContent;
 
@@ -559,7 +569,7 @@ class FlashCardLearningRouteArgs {
 
   @override
   String toString() {
-    return 'FlashCardLearningRouteArgs{key: $key, languageCourseLearningContent: $languageCourseLearningContent, learningLanguage: $learningLanguage}';
+    return 'FlashCardLearningRouteArgs{key: $key, languageCourse: $languageCourse, languageCourseLearningContent: $languageCourseLearningContent, learningLanguage: $learningLanguage}';
   }
 }
 
@@ -714,6 +724,7 @@ class ListeningLearningRoute
     _i29.Key? key,
     required _i30.LearningLanguage language,
     required _i30.LanguageCourseLearningContent languageCourseLearningContent,
+    required _i30.LanguageCourse languageCourse,
     List<_i28.PageRouteInfo>? children,
   }) : super(
           ListeningLearningRoute.name,
@@ -721,6 +732,7 @@ class ListeningLearningRoute
             key: key,
             language: language,
             languageCourseLearningContent: languageCourseLearningContent,
+            languageCourse: languageCourse,
           ),
           initialChildren: children,
         );
@@ -736,6 +748,7 @@ class ListeningLearningRouteArgs {
     this.key,
     required this.language,
     required this.languageCourseLearningContent,
+    required this.languageCourse,
   });
 
   final _i29.Key? key;
@@ -744,9 +757,11 @@ class ListeningLearningRouteArgs {
 
   final _i30.LanguageCourseLearningContent languageCourseLearningContent;
 
+  final _i30.LanguageCourse languageCourse;
+
   @override
   String toString() {
-    return 'ListeningLearningRouteArgs{key: $key, language: $language, languageCourseLearningContent: $languageCourseLearningContent}';
+    return 'ListeningLearningRouteArgs{key: $key, language: $language, languageCourseLearningContent: $languageCourseLearningContent, languageCourse: $languageCourse}';
   }
 }
 
@@ -788,6 +803,7 @@ class MatchingLearningRoute
     required List<_i30.LanguageCourseLearningContent>
         languageCourseLearningContents,
     _i30.LearningType? learningType,
+    required _i30.LanguageCourse languageCourse,
     List<_i28.PageRouteInfo>? children,
   }) : super(
           MatchingLearningRoute.name,
@@ -796,6 +812,7 @@ class MatchingLearningRoute
             learningLanguage: learningLanguage,
             languageCourseLearningContents: languageCourseLearningContents,
             learningType: learningType,
+            languageCourse: languageCourse,
           ),
           initialChildren: children,
         );
@@ -812,6 +829,7 @@ class MatchingLearningRouteArgs {
     required this.learningLanguage,
     required this.languageCourseLearningContents,
     this.learningType,
+    required this.languageCourse,
   });
 
   final _i29.Key? key;
@@ -822,9 +840,11 @@ class MatchingLearningRouteArgs {
 
   final _i30.LearningType? learningType;
 
+  final _i30.LanguageCourse languageCourse;
+
   @override
   String toString() {
-    return 'MatchingLearningRouteArgs{key: $key, learningLanguage: $learningLanguage, languageCourseLearningContents: $languageCourseLearningContents, learningType: $learningType}';
+    return 'MatchingLearningRouteArgs{key: $key, learningLanguage: $learningLanguage, languageCourseLearningContents: $languageCourseLearningContents, learningType: $learningType, languageCourse: $languageCourse}';
   }
 }
 
@@ -922,6 +942,7 @@ class PronunciationLearningRoute
     required _i30.LearningLanguage learningLanguage,
     required List<_i30.LanguageCourseLearningContent>
         languageCourseLearningContent,
+    required _i30.LanguageCourse languageCourse,
     List<_i28.PageRouteInfo>? children,
   }) : super(
           PronunciationLearningRoute.name,
@@ -929,6 +950,7 @@ class PronunciationLearningRoute
             key: key,
             learningLanguage: learningLanguage,
             languageCourseLearningContent: languageCourseLearningContent,
+            languageCourse: languageCourse,
           ),
           initialChildren: children,
         );
@@ -944,6 +966,7 @@ class PronunciationLearningRouteArgs {
     this.key,
     required this.learningLanguage,
     required this.languageCourseLearningContent,
+    required this.languageCourse,
   });
 
   final _i29.Key? key;
@@ -952,9 +975,11 @@ class PronunciationLearningRouteArgs {
 
   final List<_i30.LanguageCourseLearningContent> languageCourseLearningContent;
 
+  final _i30.LanguageCourse languageCourse;
+
   @override
   String toString() {
-    return 'PronunciationLearningRouteArgs{key: $key, learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent}';
+    return 'PronunciationLearningRouteArgs{key: $key, learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, languageCourse: $languageCourse}';
   }
 }
 
@@ -966,6 +991,7 @@ class QuizLearningRoute extends _i28.PageRouteInfo<QuizLearningRouteArgs> {
     required _i30.LearningLanguage learningLanguage,
     required List<_i30.LanguageCourseLearningContent>
         languageCourseLearningContent,
+    required _i30.LanguageCourse languageCourse,
     List<_i28.PageRouteInfo>? children,
   }) : super(
           QuizLearningRoute.name,
@@ -973,6 +999,7 @@ class QuizLearningRoute extends _i28.PageRouteInfo<QuizLearningRouteArgs> {
             key: key,
             learningLanguage: learningLanguage,
             languageCourseLearningContent: languageCourseLearningContent,
+            languageCourse: languageCourse,
           ),
           initialChildren: children,
         );
@@ -988,6 +1015,7 @@ class QuizLearningRouteArgs {
     this.key,
     required this.learningLanguage,
     required this.languageCourseLearningContent,
+    required this.languageCourse,
   });
 
   final _i29.Key? key;
@@ -996,9 +1024,11 @@ class QuizLearningRouteArgs {
 
   final List<_i30.LanguageCourseLearningContent> languageCourseLearningContent;
 
+  final _i30.LanguageCourse languageCourse;
+
   @override
   String toString() {
-    return 'QuizLearningRouteArgs{key: $key, learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent}';
+    return 'QuizLearningRouteArgs{key: $key, learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, languageCourse: $languageCourse}';
   }
 }
 

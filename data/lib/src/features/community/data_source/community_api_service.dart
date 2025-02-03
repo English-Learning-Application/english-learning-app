@@ -10,7 +10,7 @@ class CommunityApiService {
   Future<ListResponse<ApiChatTopicData>?> getAvailableChatTopics() async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.get,
-      path: 'http://192.168.1.8:8089/api/v1/communities/topics',
+      path: '/communities/topics',
       successResponseMapperType: SuccessResponseMapperType.listResponse,
       decoder: (json) =>
           ApiChatTopicData.fromJson(json as Map<String, dynamic>),
@@ -22,8 +22,7 @@ class CommunityApiService {
   ) async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.get,
-      path:
-          'http://192.168.1.8:8089/api/v1/communities/topics/$chatTopicId/sessions',
+      path: '/communities/topics/$chatTopicId/sessions',
       successResponseMapperType: SuccessResponseMapperType.listResponse,
       decoder: (json) =>
           ApiChatSessionData.fromJson(json as Map<String, dynamic>),
@@ -33,7 +32,7 @@ class CommunityApiService {
   Future<ListResponse<ApiChatSessionData>?> getPrivateChatSessions() async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.get,
-      path: 'http://192.168.1.8:8089/api/v1/communities/sessions',
+      path: '/communities/sessions',
       successResponseMapperType: SuccessResponseMapperType.listResponse,
       decoder: (json) =>
           ApiChatSessionData.fromJson(json as Map<String, dynamic>),
@@ -46,8 +45,7 @@ class CommunityApiService {
   ) async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.post,
-      path:
-          'http://192.168.1.8:8089/api/v1/communities/topics/$chatTopicId/sessions',
+      path: '/communities/topics/$chatTopicId/sessions',
       successResponseMapperType: SuccessResponseMapperType.dataResponse,
       body: {
         'sessionName': chatSessionName,
@@ -64,8 +62,7 @@ class CommunityApiService {
   }) async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.get,
-      path:
-          'http://192.168.1.8:8089/api/v1/communities/sessions/$chatSessionId/messages',
+      path: '/communities/sessions/$chatSessionId/messages',
       queryParameters: {
         'offset': offset,
         'limit': limit,
@@ -81,8 +78,7 @@ class CommunityApiService {
   ) async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.post,
-      path:
-          'http://192.168.1.8:8089/api/v1/communities/sessions/$chatSessionId',
+      path: '/communities/sessions/$chatSessionId',
       successResponseMapperType: SuccessResponseMapperType.dataResponse,
       decoder: (json) =>
           ApiChatSessionData.fromJson(json as Map<String, dynamic>),
@@ -94,8 +90,7 @@ class CommunityApiService {
   ) async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.post,
-      path:
-          'http://192.168.1.8:8089/api/v1/communities/sessions/private/$receiverId',
+      path: '/communities/sessions/private/$receiverId',
       successResponseMapperType: SuccessResponseMapperType.dataResponse,
       decoder: (json) =>
           ApiChatSessionData.fromJson(json as Map<String, dynamic>),

@@ -13,6 +13,7 @@ class ApiQuizLearningMapper
       itemId: entity.itemId,
       learningContentType: entity.learningContentType.serverValue,
       numberOfCorrect: entity.numberOfCorrect,
+      courseId: entity.courseId,
       numberOfIncorrect: entity.numberOfIncorrect,
     );
   }
@@ -29,6 +30,7 @@ class ApiQuizLearningMapper
               QuizLearning.defaultLearningContentType,
       numberOfCorrect:
           data?.numberOfCorrect ?? QuizLearning.defaultNumberOfCorrect,
+      courseId: data?.courseId ?? QuizLearning.defaultCourseId,
       numberOfIncorrect:
           data?.numberOfIncorrect ?? QuizLearning.defaultNumberOfIncorrect,
     );

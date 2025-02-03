@@ -16,6 +16,7 @@ class PronunciationLearningViewModel
   void onInit({
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
     required LearningLanguage learningLanguage,
+    required String courseId,
   }) async {
     final checkMicrophoneOutput = await _checkPermissionUseCase.execute(
       const CheckPermissionInput(permission: Permission.microphone),
@@ -230,6 +231,7 @@ class PronunciationLearningViewModel
 
     updateData(
       viewModelData.copyWith(
+        courseId: courseId,
         totalLearningContentCount: totalLearningContentCount,
         languageCourseLearningContent: languageCourseLearningContent,
         learningLanguage: learningLanguage,
@@ -287,6 +289,7 @@ class PronunciationLearningViewModel
 
           await _pronunciationLearningUpdateUseCase.execute(
             PronunciationLearningUpdateInput(
+              courseId: viewModelData.courseId,
               pronunciationLearningEntities: learningEntities,
             ),
           );

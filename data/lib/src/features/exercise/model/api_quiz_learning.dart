@@ -10,6 +10,7 @@ class ApiQuizLearning with _$ApiQuizLearning {
     @JsonKey(name: 'learningContentId') String? learningContentId,
     @JsonKey(name: 'itemId') String? itemId,
     @JsonKey(name: 'learningContentType') String? learningContentType,
+    @JsonKey(name: 'courseId') String? courseId,
     @JsonKey(name: 'numberOfCorrect') int? numberOfCorrect,
     @JsonKey(name: 'numberOfIncorrect') int? numberOfIncorrect,
   }) = _ApiQuizLearning;

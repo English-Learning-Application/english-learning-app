@@ -18,6 +18,7 @@ class QuizLearningUpdateUseCase extends BaseFutureUseCase<
       quizLearnings: input.quizLearnings,
       correctItemIds: input.correctItemIds,
       incorrectItemIds: input.incorrectItemIds,
+      courseId: input.courseId,
     );
 
     return QuizLearningUpdateOutput(quizLearnings: resp);
@@ -30,6 +31,7 @@ class QuizLearningUpdateInput extends BaseInput with _$QuizLearningUpdateInput {
     required List<QuizLearningEntity> quizLearnings,
     required List<String> correctItemIds,
     required List<String> incorrectItemIds,
+    required String courseId,
   }) = _QuizLearningUpdateInput;
 }
 

@@ -12,7 +12,7 @@ class ChatBotApiService {
   Future<ListResponse<ApiChatSessionData>?> getChatSessions() async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.get,
-      path: 'http://192.168.1.8:8089/api/v1/chatbot/sessions',
+      path: '/chatbot/sessions',
       successResponseMapperType: SuccessResponseMapperType.listResponse,
       decoder: (json) =>
           ApiChatSessionData.fromJson(json as Map<String, dynamic>),
@@ -22,7 +22,7 @@ class ChatBotApiService {
   Future<DataResponse<ApiChatSessionData>?> createChatSession() async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.post,
-      path: 'http://192.168.1.8:8089/api/v1/chatbot/sessions',
+      path: '/chatbot/sessions',
       successResponseMapperType: SuccessResponseMapperType.dataResponse,
       decoder: (json) =>
           ApiChatSessionData.fromJson(json as Map<String, dynamic>),
@@ -36,8 +36,7 @@ class ChatBotApiService {
   }) async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.get,
-      path:
-          'http://192.168.1.8:8089/api/v1/chatbot/sessions/$chatSessionId/messages',
+      path: '/chatbot/sessions/$chatSessionId/messages',
       queryParameters: {
         'offset': offset,
         'limit': limit,
@@ -51,7 +50,7 @@ class ChatBotApiService {
   Future<void> deleteChatSession(String chatSessionId) async {
     await _authAppServerApiClient.request(
       method: RestApiMethod.delete,
-      path: 'http://192.168.1.8:8089/api/v1/chatbot/sessions/$chatSessionId',
+      path: '/chatbot/sessions/$chatSessionId',
       successResponseMapperType: SuccessResponseMapperType.dataResponse,
     );
   }

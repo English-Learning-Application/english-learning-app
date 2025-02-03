@@ -87,7 +87,6 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     final appModules = _$AppModules();
-    gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel());
     gh.factory<_i901.ListeningLearningViewModel>(
         () => _i901.ListeningLearningViewModel());
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
@@ -97,6 +96,10 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i398.FirebaseAnalytics>(
         () => appModules.firebaseAnalytics);
     gh.lazySingleton<_i656.AudioPlayer>(() => appModules.audioPlayer);
+    gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel(
+          gh<_i182.GetCommunityTopicsUseCase>(),
+          gh<_i182.GetSessionsByTopicUseCase>(),
+        ));
     gh.factory<_i513.RouteGuard>(() => _i513.RouteGuard(
           gh<_i182.IsLoggedInUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),

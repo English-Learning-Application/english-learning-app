@@ -11,6 +11,7 @@ class ApiPronunciationLearning with _$ApiPronunciationLearning {
     @JsonKey(name: 'learningContentId') String? learningContentId,
     @JsonKey(name: 'itemId') String? itemId,
     @JsonKey(name: 'learningContentType') String? learningContentType,
+    @JsonKey(name: 'courseId') String? courseId,
     @JsonKey(name: 'pronunciationLearningContents')
     List<ApiPronunciationAssessment>? pronunciationLearningContents,
   }) = _ApiPronunciationLearning;

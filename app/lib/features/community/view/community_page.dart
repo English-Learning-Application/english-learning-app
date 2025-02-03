@@ -187,7 +187,7 @@ class _CommunityPageState
                     ),
                     right: BorderSide(
                       color: chatTopic.topicLanguage.color,
-                      width: Dimens.d1.responsive(),
+                      width: Dimens.d3.responsive(),
                     ),
                   ),
                 ),

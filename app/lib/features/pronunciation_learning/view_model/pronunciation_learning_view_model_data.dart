@@ -6,6 +6,7 @@ class PronunciationLearningViewModelData extends BaseViewModelData
   const PronunciationLearningViewModelData._();
 
   const factory PronunciationLearningViewModelData({
+    @Default('') String courseId,
     @Default([])
     List<PronunciationLearningEntity> pronunciationLearningEntities,
     @Default(LearningLanguage.english) LearningLanguage learningLanguage,

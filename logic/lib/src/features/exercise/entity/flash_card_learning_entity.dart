@@ -43,6 +43,7 @@ class FlashCardLearning with _$FlashCardLearning {
     @Default(FlashCardLearning.defaultItemId) String itemId,
     @Default(FlashCardLearning.defaultLearningContentType)
     LearningContentType learningContentType,
+    @Default(FlashCardLearning.defaultCourseId) String courseId,
     @Default(FlashCardLearning.defaultNumberOfLearned) int numberOfLearned,
     @Default(FlashCardLearning.defaultNumberOfSkipped) int numberOfSkipped,
   }) = _FlashCardLearning;
@@ -52,6 +53,7 @@ class FlashCardLearning with _$FlashCardLearning {
   static const defaultItemId = '';
   static const LearningContentType defaultLearningContentType =
       LearningContentType.word;
+  static const defaultCourseId = '';
   static const defaultNumberOfLearned = 0;
   static const defaultNumberOfSkipped = 0;
 }

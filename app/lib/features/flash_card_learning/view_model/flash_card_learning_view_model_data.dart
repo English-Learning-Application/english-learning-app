@@ -6,6 +6,7 @@ class FlashCardLearningViewModelData extends BaseViewModelData
   const FlashCardLearningViewModelData._();
 
   const factory FlashCardLearningViewModelData({
+    @Default('') String courseId,
     @Default([]) List<FlashCardLearningEntity> flashCardLearningEntities,
     @Default(LearningLanguage.english) LearningLanguage learningLanguage,
     @Default([])

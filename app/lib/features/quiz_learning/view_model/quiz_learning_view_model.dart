@@ -13,6 +13,7 @@ class QuizLearningViewModel extends BaseViewModel<QuizLearningViewModelData> {
   void onInit({
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
     required LearningLanguage learningLanguage,
+    required String courseId,
   }) {
     /// Remove phonetics from the learning content
     final newList = [...languageCourseLearningContent].where((element) {
@@ -387,6 +388,7 @@ class QuizLearningViewModel extends BaseViewModel<QuizLearningViewModelData> {
         languageCourseLearningContent: newList,
         learningLanguage: learningLanguage,
         quizLearningEntities: quizLearningEntities,
+        courseId: courseId,
       ),
     );
   }
@@ -468,6 +470,7 @@ class QuizLearningViewModel extends BaseViewModel<QuizLearningViewModelData> {
           final quizLearningEntities = viewModelData.quizLearningEntities;
           await _quizLearningUpdateUseCase.execute(
             QuizLearningUpdateInput(
+              courseId: viewModelData.courseId,
               quizLearnings: quizLearningEntities,
               correctItemIds: correctAnswers,
               incorrectItemIds: incorrectAnswers,

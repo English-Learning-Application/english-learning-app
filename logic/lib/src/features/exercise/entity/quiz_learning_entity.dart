@@ -44,6 +44,7 @@ class QuizLearning with _$QuizLearning {
     @Default(QuizLearning.defaultItemId) String itemId,
     @Default(QuizLearning.defaultLearningContentType)
     LearningContentType learningContentType,
+    @Default(QuizLearning.defaultCourseId) String courseId,
     @Default(QuizLearning.defaultNumberOfCorrect) int numberOfCorrect,
     @Default(QuizLearning.defaultNumberOfIncorrect) int numberOfIncorrect,
   }) = _QuizLearning;
@@ -53,6 +54,7 @@ class QuizLearning with _$QuizLearning {
   static const defaultItemId = '';
   static const LearningContentType defaultLearningContentType =
       LearningContentType.word;
+  static const defaultCourseId = '';
   static const defaultNumberOfCorrect = 0;
   static const defaultNumberOfIncorrect = 0;
 }

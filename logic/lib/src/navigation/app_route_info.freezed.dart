@@ -28,21 +28,29 @@ mixin _$AppRouteInfo {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -68,21 +76,29 @@ mixin _$AppRouteInfo {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -107,21 +123,29 @@ mixin _$AppRouteInfo {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -294,21 +318,29 @@ class _$LoginImpl implements _Login {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -337,21 +369,29 @@ class _$LoginImpl implements _Login {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -379,21 +419,29 @@ class _$LoginImpl implements _Login {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -564,21 +612,29 @@ class _$MainImpl implements _Main {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -607,21 +663,29 @@ class _$MainImpl implements _Main {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -649,21 +713,29 @@ class _$MainImpl implements _Main {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -835,21 +907,29 @@ class _$SplashImpl implements _Splash {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -878,21 +958,29 @@ class _$SplashImpl implements _Splash {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -920,21 +1008,29 @@ class _$SplashImpl implements _Splash {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -1106,21 +1202,29 @@ class _$OnBoardingImpl implements _OnBoarding {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -1149,21 +1253,29 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -1191,21 +1303,29 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -1378,21 +1498,29 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -1421,21 +1549,29 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -1463,21 +1599,29 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -1678,21 +1822,29 @@ class _$LanguageCourseImpl implements _LanguageCourse {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -1721,21 +1873,29 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -1763,21 +1923,29 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -2001,21 +2169,29 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -2044,21 +2220,29 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -2086,21 +2270,29 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -2239,7 +2431,10 @@ abstract class _$$FlashCardLearningImplCopyWith<$Res> {
   @useResult
   $Res call(
       {List<LanguageCourseLearningContent> languageCourseLearningContent,
-      LearningLanguage learningLanguage});
+      LearningLanguage learningLanguage,
+      LanguageCourse languageCourse});
+
+  $LanguageCourseCopyWith<$Res> get languageCourse;
 }
 
 /// @nodoc
@@ -2257,6 +2452,7 @@ class __$$FlashCardLearningImplCopyWithImpl<$Res>
   $Res call({
     Object? languageCourseLearningContent = null,
     Object? learningLanguage = null,
+    Object? languageCourse = null,
   }) {
     return _then(_$FlashCardLearningImpl(
       languageCourseLearningContent: null == languageCourseLearningContent
@@ -2267,7 +2463,21 @@ class __$$FlashCardLearningImplCopyWithImpl<$Res>
           ? _value.learningLanguage
           : learningLanguage // ignore: cast_nullable_to_non_nullable
               as LearningLanguage,
+      languageCourse: null == languageCourse
+          ? _value.languageCourse
+          : languageCourse // ignore: cast_nullable_to_non_nullable
+              as LanguageCourse,
     ));
+  }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LanguageCourseCopyWith<$Res> get languageCourse {
+    return $LanguageCourseCopyWith<$Res>(_value.languageCourse, (value) {
+      return _then(_value.copyWith(languageCourse: value));
+    });
   }
 }
 
@@ -2277,7 +2487,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
   const _$FlashCardLearningImpl(
       {required final List<LanguageCourseLearningContent>
           languageCourseLearningContent,
-      required this.learningLanguage})
+      required this.learningLanguage,
+      required this.languageCourse})
       : _languageCourseLearningContent = languageCourseLearningContent;
 
   final List<LanguageCourseLearningContent> _languageCourseLearningContent;
@@ -2291,10 +2502,12 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
 
   @override
   final LearningLanguage learningLanguage;
+  @override
+  final LanguageCourse languageCourse;
 
   @override
   String toString() {
-    return 'AppRouteInfo.flashCardLearning(languageCourseLearningContent: $languageCourseLearningContent, learningLanguage: $learningLanguage)';
+    return 'AppRouteInfo.flashCardLearning(languageCourseLearningContent: $languageCourseLearningContent, learningLanguage: $learningLanguage, languageCourse: $languageCourse)';
   }
 
   @override
@@ -2306,14 +2519,17 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
                 other._languageCourseLearningContent,
                 _languageCourseLearningContent) &&
             (identical(other.learningLanguage, learningLanguage) ||
-                other.learningLanguage == learningLanguage));
+                other.learningLanguage == learningLanguage) &&
+            (identical(other.languageCourse, languageCourse) ||
+                other.languageCourse == languageCourse));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_languageCourseLearningContent),
-      learningLanguage);
+      learningLanguage,
+      languageCourse);
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -2337,21 +2553,29 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -2365,7 +2589,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(ChatSession chatSession, User receiver)
         privateChat,
   }) {
-    return flashCardLearning(languageCourseLearningContent, learningLanguage);
+    return flashCardLearning(
+        languageCourseLearningContent, learningLanguage, this.languageCourse);
   }
 
   @override
@@ -2380,21 +2605,29 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -2408,7 +2641,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return flashCardLearning?.call(
-        languageCourseLearningContent, learningLanguage);
+        languageCourseLearningContent, learningLanguage, this.languageCourse);
   }
 
   @override
@@ -2423,21 +2656,29 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -2452,7 +2693,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
-      return flashCardLearning(languageCourseLearningContent, learningLanguage);
+      return flashCardLearning(
+          languageCourseLearningContent, learningLanguage, this.languageCourse);
     }
     return orElse();
   }
@@ -2556,13 +2798,14 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
 
 abstract class _FlashCardLearning implements AppRouteInfo {
   const factory _FlashCardLearning(
-          {required final List<LanguageCourseLearningContent>
-              languageCourseLearningContent,
-          required final LearningLanguage learningLanguage}) =
-      _$FlashCardLearningImpl;
+      {required final List<LanguageCourseLearningContent>
+          languageCourseLearningContent,
+      required final LearningLanguage learningLanguage,
+      required final LanguageCourse languageCourse}) = _$FlashCardLearningImpl;
 
   List<LanguageCourseLearningContent> get languageCourseLearningContent;
   LearningLanguage get learningLanguage;
+  LanguageCourse get languageCourse;
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -2579,7 +2822,10 @@ abstract class _$$QuizLearningImplCopyWith<$Res> {
   @useResult
   $Res call(
       {LearningLanguage learningLanguage,
-      List<LanguageCourseLearningContent> languageCourseLearningContents});
+      List<LanguageCourseLearningContent> languageCourseLearningContents,
+      LanguageCourse languageCourse});
+
+  $LanguageCourseCopyWith<$Res> get languageCourse;
 }
 
 /// @nodoc
@@ -2597,6 +2843,7 @@ class __$$QuizLearningImplCopyWithImpl<$Res>
   $Res call({
     Object? learningLanguage = null,
     Object? languageCourseLearningContents = null,
+    Object? languageCourse = null,
   }) {
     return _then(_$QuizLearningImpl(
       learningLanguage: null == learningLanguage
@@ -2607,7 +2854,21 @@ class __$$QuizLearningImplCopyWithImpl<$Res>
           ? _value._languageCourseLearningContents
           : languageCourseLearningContents // ignore: cast_nullable_to_non_nullable
               as List<LanguageCourseLearningContent>,
+      languageCourse: null == languageCourse
+          ? _value.languageCourse
+          : languageCourse // ignore: cast_nullable_to_non_nullable
+              as LanguageCourse,
     ));
+  }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LanguageCourseCopyWith<$Res> get languageCourse {
+    return $LanguageCourseCopyWith<$Res>(_value.languageCourse, (value) {
+      return _then(_value.copyWith(languageCourse: value));
+    });
   }
 }
 
@@ -2617,7 +2878,8 @@ class _$QuizLearningImpl implements _QuizLearning {
   const _$QuizLearningImpl(
       {required this.learningLanguage,
       required final List<LanguageCourseLearningContent>
-          languageCourseLearningContents})
+          languageCourseLearningContents,
+      required this.languageCourse})
       : _languageCourseLearningContents = languageCourseLearningContents;
 
   @override
@@ -2632,8 +2894,11 @@ class _$QuizLearningImpl implements _QuizLearning {
   }
 
   @override
+  final LanguageCourse languageCourse;
+
+  @override
   String toString() {
-    return 'AppRouteInfo.quizLearning(learningLanguage: $learningLanguage, languageCourseLearningContents: $languageCourseLearningContents)';
+    return 'AppRouteInfo.quizLearning(learningLanguage: $learningLanguage, languageCourseLearningContents: $languageCourseLearningContents, languageCourse: $languageCourse)';
   }
 
   @override
@@ -2645,12 +2910,17 @@ class _$QuizLearningImpl implements _QuizLearning {
                 other.learningLanguage == learningLanguage) &&
             const DeepCollectionEquality().equals(
                 other._languageCourseLearningContents,
-                _languageCourseLearningContents));
+                _languageCourseLearningContents) &&
+            (identical(other.languageCourse, languageCourse) ||
+                other.languageCourse == languageCourse));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, learningLanguage,
-      const DeepCollectionEquality().hash(_languageCourseLearningContents));
+  int get hashCode => Object.hash(
+      runtimeType,
+      learningLanguage,
+      const DeepCollectionEquality().hash(_languageCourseLearningContents),
+      languageCourse);
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -2673,21 +2943,29 @@ class _$QuizLearningImpl implements _QuizLearning {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -2701,7 +2979,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(ChatSession chatSession, User receiver)
         privateChat,
   }) {
-    return quizLearning(learningLanguage, languageCourseLearningContents);
+    return quizLearning(
+        learningLanguage, languageCourseLearningContents, this.languageCourse);
   }
 
   @override
@@ -2716,21 +2995,29 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -2743,7 +3030,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(ChatSession chatSession)? groupChat,
     TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
-    return quizLearning?.call(learningLanguage, languageCourseLearningContents);
+    return quizLearning?.call(
+        learningLanguage, languageCourseLearningContents, this.languageCourse);
   }
 
   @override
@@ -2758,21 +3046,29 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -2787,7 +3083,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
-      return quizLearning(learningLanguage, languageCourseLearningContents);
+      return quizLearning(learningLanguage, languageCourseLearningContents,
+          this.languageCourse);
     }
     return orElse();
   }
@@ -2893,10 +3190,12 @@ abstract class _QuizLearning implements AppRouteInfo {
   const factory _QuizLearning(
       {required final LearningLanguage learningLanguage,
       required final List<LanguageCourseLearningContent>
-          languageCourseLearningContents}) = _$QuizLearningImpl;
+          languageCourseLearningContents,
+      required final LanguageCourse languageCourse}) = _$QuizLearningImpl;
 
   LearningLanguage get learningLanguage;
   List<LanguageCourseLearningContent> get languageCourseLearningContents;
+  LanguageCourse get languageCourse;
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -2914,7 +3213,10 @@ abstract class _$$MatchingLearningImplCopyWith<$Res> {
   $Res call(
       {LearningLanguage learningLanguage,
       List<LanguageCourseLearningContent> languageCourseLearningContent,
+      LanguageCourse languageCourse,
       LearningType? learningType});
+
+  $LanguageCourseCopyWith<$Res> get languageCourse;
 }
 
 /// @nodoc
@@ -2932,6 +3234,7 @@ class __$$MatchingLearningImplCopyWithImpl<$Res>
   $Res call({
     Object? learningLanguage = null,
     Object? languageCourseLearningContent = null,
+    Object? languageCourse = null,
     Object? learningType = freezed,
   }) {
     return _then(_$MatchingLearningImpl(
@@ -2943,11 +3246,25 @@ class __$$MatchingLearningImplCopyWithImpl<$Res>
           ? _value._languageCourseLearningContent
           : languageCourseLearningContent // ignore: cast_nullable_to_non_nullable
               as List<LanguageCourseLearningContent>,
+      languageCourse: null == languageCourse
+          ? _value.languageCourse
+          : languageCourse // ignore: cast_nullable_to_non_nullable
+              as LanguageCourse,
       learningType: freezed == learningType
           ? _value.learningType
           : learningType // ignore: cast_nullable_to_non_nullable
               as LearningType?,
     ));
+  }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LanguageCourseCopyWith<$Res> get languageCourse {
+    return $LanguageCourseCopyWith<$Res>(_value.languageCourse, (value) {
+      return _then(_value.copyWith(languageCourse: value));
+    });
   }
 }
 
@@ -2958,6 +3275,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
       {required this.learningLanguage,
       required final List<LanguageCourseLearningContent>
           languageCourseLearningContent,
+      required this.languageCourse,
       this.learningType})
       : _languageCourseLearningContent = languageCourseLearningContent;
 
@@ -2973,11 +3291,13 @@ class _$MatchingLearningImpl implements _MatchingLearning {
   }
 
   @override
+  final LanguageCourse languageCourse;
+  @override
   final LearningType? learningType;
 
   @override
   String toString() {
-    return 'AppRouteInfo.matchingLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, learningType: $learningType)';
+    return 'AppRouteInfo.matchingLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, languageCourse: $languageCourse, learningType: $learningType)';
   }
 
   @override
@@ -2990,6 +3310,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
             const DeepCollectionEquality().equals(
                 other._languageCourseLearningContent,
                 _languageCourseLearningContent) &&
+            (identical(other.languageCourse, languageCourse) ||
+                other.languageCourse == languageCourse) &&
             (identical(other.learningType, learningType) ||
                 other.learningType == learningType));
   }
@@ -2999,6 +3321,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
       runtimeType,
       learningLanguage,
       const DeepCollectionEquality().hash(_languageCourseLearningContent),
+      languageCourse,
       learningType);
 
   /// Create a copy of AppRouteInfo
@@ -3023,21 +3346,29 @@ class _$MatchingLearningImpl implements _MatchingLearning {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -3051,8 +3382,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function(ChatSession chatSession, User receiver)
         privateChat,
   }) {
-    return matchingLearning(
-        learningLanguage, languageCourseLearningContent, learningType);
+    return matchingLearning(learningLanguage, languageCourseLearningContent,
+        this.languageCourse, learningType);
   }
 
   @override
@@ -3067,21 +3398,29 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -3094,8 +3433,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(ChatSession chatSession)? groupChat,
     TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
-    return matchingLearning?.call(
-        learningLanguage, languageCourseLearningContent, learningType);
+    return matchingLearning?.call(learningLanguage,
+        languageCourseLearningContent, this.languageCourse, learningType);
   }
 
   @override
@@ -3110,21 +3449,29 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -3139,8 +3486,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
-      return matchingLearning(
-          learningLanguage, languageCourseLearningContent, learningType);
+      return matchingLearning(learningLanguage, languageCourseLearningContent,
+          this.languageCourse, learningType);
     }
     return orElse();
   }
@@ -3247,10 +3594,12 @@ abstract class _MatchingLearning implements AppRouteInfo {
       {required final LearningLanguage learningLanguage,
       required final List<LanguageCourseLearningContent>
           languageCourseLearningContent,
+      required final LanguageCourse languageCourse,
       final LearningType? learningType}) = _$MatchingLearningImpl;
 
   LearningLanguage get learningLanguage;
   List<LanguageCourseLearningContent> get languageCourseLearningContent;
+  LanguageCourse get languageCourse;
   LearningType? get learningType;
 
   /// Create a copy of AppRouteInfo
@@ -3269,7 +3618,10 @@ abstract class _$$PronunciationLearningImplCopyWith<$Res> {
   @useResult
   $Res call(
       {LearningLanguage learningLanguage,
-      List<LanguageCourseLearningContent> languageCourseLearningContent});
+      List<LanguageCourseLearningContent> languageCourseLearningContent,
+      LanguageCourse languageCourse});
+
+  $LanguageCourseCopyWith<$Res> get languageCourse;
 }
 
 /// @nodoc
@@ -3287,6 +3639,7 @@ class __$$PronunciationLearningImplCopyWithImpl<$Res>
   $Res call({
     Object? learningLanguage = null,
     Object? languageCourseLearningContent = null,
+    Object? languageCourse = null,
   }) {
     return _then(_$PronunciationLearningImpl(
       learningLanguage: null == learningLanguage
@@ -3297,7 +3650,21 @@ class __$$PronunciationLearningImplCopyWithImpl<$Res>
           ? _value._languageCourseLearningContent
           : languageCourseLearningContent // ignore: cast_nullable_to_non_nullable
               as List<LanguageCourseLearningContent>,
+      languageCourse: null == languageCourse
+          ? _value.languageCourse
+          : languageCourse // ignore: cast_nullable_to_non_nullable
+              as LanguageCourse,
     ));
+  }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LanguageCourseCopyWith<$Res> get languageCourse {
+    return $LanguageCourseCopyWith<$Res>(_value.languageCourse, (value) {
+      return _then(_value.copyWith(languageCourse: value));
+    });
   }
 }
 
@@ -3307,7 +3674,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
   const _$PronunciationLearningImpl(
       {required this.learningLanguage,
       required final List<LanguageCourseLearningContent>
-          languageCourseLearningContent})
+          languageCourseLearningContent,
+      required this.languageCourse})
       : _languageCourseLearningContent = languageCourseLearningContent;
 
   @override
@@ -3322,8 +3690,11 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
   }
 
   @override
+  final LanguageCourse languageCourse;
+
+  @override
   String toString() {
-    return 'AppRouteInfo.pronunciationLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent)';
+    return 'AppRouteInfo.pronunciationLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, languageCourse: $languageCourse)';
   }
 
   @override
@@ -3335,12 +3706,17 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
                 other.learningLanguage == learningLanguage) &&
             const DeepCollectionEquality().equals(
                 other._languageCourseLearningContent,
-                _languageCourseLearningContent));
+                _languageCourseLearningContent) &&
+            (identical(other.languageCourse, languageCourse) ||
+                other.languageCourse == languageCourse));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, learningLanguage,
-      const DeepCollectionEquality().hash(_languageCourseLearningContent));
+  int get hashCode => Object.hash(
+      runtimeType,
+      learningLanguage,
+      const DeepCollectionEquality().hash(_languageCourseLearningContent),
+      languageCourse);
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -3364,21 +3740,29 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -3393,7 +3777,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
         privateChat,
   }) {
     return pronunciationLearning(
-        learningLanguage, languageCourseLearningContent);
+        learningLanguage, languageCourseLearningContent, this.languageCourse);
   }
 
   @override
@@ -3408,21 +3792,29 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -3436,7 +3828,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return pronunciationLearning?.call(
-        learningLanguage, languageCourseLearningContent);
+        learningLanguage, languageCourseLearningContent, this.languageCourse);
   }
 
   @override
@@ -3451,21 +3843,29 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -3481,7 +3881,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
   }) {
     if (pronunciationLearning != null) {
       return pronunciationLearning(
-          learningLanguage, languageCourseLearningContent);
+          learningLanguage, languageCourseLearningContent, this.languageCourse);
     }
     return orElse();
   }
@@ -3585,12 +3985,15 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
 
 abstract class _PronunciationLearning implements AppRouteInfo {
   const factory _PronunciationLearning(
-      {required final LearningLanguage learningLanguage,
-      required final List<LanguageCourseLearningContent>
-          languageCourseLearningContent}) = _$PronunciationLearningImpl;
+          {required final LearningLanguage learningLanguage,
+          required final List<LanguageCourseLearningContent>
+              languageCourseLearningContent,
+          required final LanguageCourse languageCourse}) =
+      _$PronunciationLearningImpl;
 
   LearningLanguage get learningLanguage;
   List<LanguageCourseLearningContent> get languageCourseLearningContent;
+  LanguageCourse get languageCourse;
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -3607,10 +4010,12 @@ abstract class _$$ListeningLearningImplCopyWith<$Res> {
   @useResult
   $Res call(
       {LearningLanguage learningLanguage,
-      LanguageCourseLearningContent languageCourseLearningContent});
+      LanguageCourseLearningContent languageCourseLearningContent,
+      LanguageCourse languageCourse});
 
   $LanguageCourseLearningContentCopyWith<$Res>
       get languageCourseLearningContent;
+  $LanguageCourseCopyWith<$Res> get languageCourse;
 }
 
 /// @nodoc
@@ -3628,6 +4033,7 @@ class __$$ListeningLearningImplCopyWithImpl<$Res>
   $Res call({
     Object? learningLanguage = null,
     Object? languageCourseLearningContent = null,
+    Object? languageCourse = null,
   }) {
     return _then(_$ListeningLearningImpl(
       learningLanguage: null == learningLanguage
@@ -3638,6 +4044,10 @@ class __$$ListeningLearningImplCopyWithImpl<$Res>
           ? _value.languageCourseLearningContent
           : languageCourseLearningContent // ignore: cast_nullable_to_non_nullable
               as LanguageCourseLearningContent,
+      languageCourse: null == languageCourse
+          ? _value.languageCourse
+          : languageCourse // ignore: cast_nullable_to_non_nullable
+              as LanguageCourse,
     ));
   }
 
@@ -3652,6 +4062,16 @@ class __$$ListeningLearningImplCopyWithImpl<$Res>
       return _then(_value.copyWith(languageCourseLearningContent: value));
     });
   }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LanguageCourseCopyWith<$Res> get languageCourse {
+    return $LanguageCourseCopyWith<$Res>(_value.languageCourse, (value) {
+      return _then(_value.copyWith(languageCourse: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -3659,16 +4079,19 @@ class __$$ListeningLearningImplCopyWithImpl<$Res>
 class _$ListeningLearningImpl implements _ListeningLearning {
   const _$ListeningLearningImpl(
       {required this.learningLanguage,
-      required this.languageCourseLearningContent});
+      required this.languageCourseLearningContent,
+      required this.languageCourse});
 
   @override
   final LearningLanguage learningLanguage;
   @override
   final LanguageCourseLearningContent languageCourseLearningContent;
+  @override
+  final LanguageCourse languageCourse;
 
   @override
   String toString() {
-    return 'AppRouteInfo.listeningLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent)';
+    return 'AppRouteInfo.listeningLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, languageCourse: $languageCourse)';
   }
 
   @override
@@ -3681,12 +4104,14 @@ class _$ListeningLearningImpl implements _ListeningLearning {
             (identical(other.languageCourseLearningContent,
                     languageCourseLearningContent) ||
                 other.languageCourseLearningContent ==
-                    languageCourseLearningContent));
+                    languageCourseLearningContent) &&
+            (identical(other.languageCourse, languageCourse) ||
+                other.languageCourse == languageCourse));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, learningLanguage, languageCourseLearningContent);
+  int get hashCode => Object.hash(runtimeType, learningLanguage,
+      languageCourseLearningContent, languageCourse);
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -3710,21 +4135,29 @@ class _$ListeningLearningImpl implements _ListeningLearning {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -3738,7 +4171,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function(ChatSession chatSession, User receiver)
         privateChat,
   }) {
-    return listeningLearning(learningLanguage, languageCourseLearningContent);
+    return listeningLearning(
+        learningLanguage, languageCourseLearningContent, this.languageCourse);
   }
 
   @override
@@ -3753,21 +4187,29 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -3781,7 +4223,7 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return listeningLearning?.call(
-        learningLanguage, languageCourseLearningContent);
+        learningLanguage, languageCourseLearningContent, this.languageCourse);
   }
 
   @override
@@ -3796,21 +4238,29 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -3825,7 +4275,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
-      return listeningLearning(learningLanguage, languageCourseLearningContent);
+      return listeningLearning(
+          learningLanguage, languageCourseLearningContent, this.languageCourse);
     }
     return orElse();
   }
@@ -3931,10 +4382,12 @@ abstract class _ListeningLearning implements AppRouteInfo {
   const factory _ListeningLearning(
       {required final LearningLanguage learningLanguage,
       required final LanguageCourseLearningContent
-          languageCourseLearningContent}) = _$ListeningLearningImpl;
+          languageCourseLearningContent,
+      required final LanguageCourse languageCourse}) = _$ListeningLearningImpl;
 
   LearningLanguage get learningLanguage;
   LanguageCourseLearningContent get languageCourseLearningContent;
+  LanguageCourse get languageCourse;
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -3994,21 +4447,29 @@ class _$ValidateEmailImpl implements _ValidateEmail {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -4037,21 +4498,29 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -4079,21 +4548,29 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -4266,21 +4743,29 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -4309,21 +4794,29 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -4351,21 +4844,29 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -4537,21 +5038,29 @@ class _$EditProfileImpl implements _EditProfile {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -4580,21 +5089,29 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -4622,21 +5139,29 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -4808,21 +5333,29 @@ class _$SubscriptionImpl implements _Subscription {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -4851,21 +5384,29 @@ class _$SubscriptionImpl implements _Subscription {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -4893,21 +5434,29 @@ class _$SubscriptionImpl implements _Subscription {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -5084,21 +5633,29 @@ class _$CommonFeatureRequiredSubscriptionImpl
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -5127,21 +5684,29 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -5169,21 +5734,29 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -5397,21 +5970,29 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -5440,21 +6021,29 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -5482,21 +6071,29 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -5677,21 +6274,29 @@ class _$CommunityImpl implements _Community {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -5720,21 +6325,29 @@ class _$CommunityImpl implements _Community {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -5762,21 +6375,29 @@ class _$CommunityImpl implements _Community {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -5989,21 +6610,29 @@ class _$CommunityTopicImpl implements _CommunityTopic {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -6032,21 +6661,29 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -6074,21 +6711,29 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -6309,21 +6954,29 @@ class _$GroupChatImpl implements _GroupChat {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -6352,21 +7005,29 @@ class _$GroupChatImpl implements _GroupChat {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -6394,21 +7055,29 @@ class _$GroupChatImpl implements _GroupChat {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,
@@ -6649,21 +7318,29 @@ class _$PrivateChatImpl implements _PrivateChat {
         languageCourseDetails,
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)
         flashCardLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)
         matchingLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)
         pronunciationLearning,
-    required TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
         listeningLearning,
     required TResult Function() validateEmail,
     required TResult Function() validatePhoneNumber,
@@ -6692,21 +7369,29 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult? Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult? Function()? validateEmail,
     TResult? Function()? validatePhoneNumber,
@@ -6734,21 +7419,29 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LearningLanguage learningLanguage)?
+            LearningLanguage learningLanguage,
+            LanguageCourse languageCourse)?
         flashCardLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            LanguageCourse languageCourse)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse,
             LearningType? learningType)?
         matchingLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         pronunciationLearning,
-    TResult Function(LearningLanguage learningLanguage,
-            LanguageCourseLearningContent languageCourseLearningContent)?
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
         listeningLearning,
     TResult Function()? validateEmail,
     TResult Function()? validatePhoneNumber,

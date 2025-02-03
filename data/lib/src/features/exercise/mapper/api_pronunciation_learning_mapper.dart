@@ -23,6 +23,7 @@ class ApiPronunciationLearningMapper
           _apiPronunciationAssessmentMapper.mapToListData(
         entity.pronunciationLearningContents,
       ),
+      courseId: entity.courseId,
     );
   }
 
@@ -37,6 +38,7 @@ class ApiPronunciationLearningMapper
       learningContentType: LearningContentType.fromServerValue(
         data?.learningContentType,
       ),
+      courseId: data?.courseId ?? PronunciationLearning.defaultCourseId,
       pronunciationLearningContents:
           _apiPronunciationAssessmentMapper.mapToListEntities(
         data?.pronunciationLearningContents,

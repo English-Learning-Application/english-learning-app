@@ -25,8 +25,12 @@ class GetLanguageCoursesByLanguageUseCase extends BaseFutureUseCase<
       input.language,
     );
     var resultLanguageCourses = languageCourses;
+    final courseIdsList =
+        languageCourses.map((e) => e.languageCourseId).toList();
     if (languageCourses.isNotEmpty) {
-      final progress = await _exerciseRepository.getLearningProgress();
+      final progress = await _exerciseRepository.getLearningProgress(
+        courseIds: courseIdsList,
+      );
       final updatedLanguageCourses = languageCourses.map((languageCourse) {
         final updatedContents =
             languageCourse.languageCourseLearningContents.map((content) {
@@ -41,36 +45,42 @@ class GetLanguageCoursesByLanguageUseCase extends BaseFutureUseCase<
           int completedCount = 0;
 
           progress.flashCardProgress.map((e) {
+            print("E.COURSEId.print: ${e.courseId}");
             if (e.learningContentId ==
-                content.languageCourseLearningContentId) {
+                    content.languageCourseLearningContentId &&
+                e.courseId == languageCourse.languageCourseId) {
+              print("Hitted Tai");
               completedCount++;
             }
           }).toList();
           progress.quizProgress.map((e) {
             if (e.learningContentId ==
-                content.languageCourseLearningContentId) {
+                    content.languageCourseLearningContentId &&
+                e.courseId == languageCourse.languageCourseId) {
+              print("Hitted Tai");
               completedCount++;
             }
           }).toList();
 
           progress.matchingProgress.map((e) {
             if (e.learningContentId ==
-                content.languageCourseLearningContentId) {
+                    content.languageCourseLearningContentId &&
+                e.courseId == languageCourse.languageCourseId) {
+              print("Hitted Tai");
               completedCount++;
             }
           }).toList();
 
           progress.pronunciationProgress.map((e) {
             if (e.learningContentId ==
-                content.languageCourseLearningContentId) {
+                    content.languageCourseLearningContentId &&
+                e.courseId == languageCourse.languageCourseId) {
+              print("Hitted Tai");
               completedCount++;
             }
           }).toList();
 
           final progressPercentage = (completedCount / contentSize) * 100;
-
-          print(
-              "progressPercentage: $progressPercentage, contentSize: $contentSize, completedCount: $completedCount");
 
           return content.copyWith(progress: progressPercentage);
         }).toList();

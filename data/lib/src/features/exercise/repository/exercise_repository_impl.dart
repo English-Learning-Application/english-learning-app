@@ -57,6 +57,7 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
     required List<FlashCardLearningEntity> flashCardLearnings,
     required List<String> learnedItemIds,
     required List<String> skippedItemIds,
+    required String courseId,
   }) async {
     final correctFlashCardLearnings = flashCardLearnings
         .where((element) => learnedItemIds.contains(element.id))
@@ -82,6 +83,7 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
 
     final resp = await _exerciseApiDataSource.updateFlashCardLearning(
       flashCardLearningUpdateModel: flashCardLearningUpdateModel,
+      courseId: courseId,
     );
 
     return _apiFlashCardLearningMapper.mapToListEntities(resp?.results ?? []);
@@ -92,6 +94,7 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
     required List<QuizLearningEntity> quizLearnings,
     required List<String> correctItemIds,
     required List<String> incorrectItemIds,
+    required String courseId,
   }) async {
     final correctQuizLearnings = quizLearnings
         .where((element) => correctItemIds.contains(element.id))
@@ -111,7 +114,9 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
       correctQuestionLearningInfo: correctItems,
     );
     final resp = await _exerciseApiDataSource.updateQuizLearning(
-        quizLearningUpdateModel: quizLearningUpdateModel);
+      quizLearningUpdateModel: quizLearningUpdateModel,
+      courseId: courseId,
+    );
     return _apiQuizLearningMapper.mapToListEntities(resp?.results ?? []);
   }
 
@@ -120,6 +125,7 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
     required List<MatchingLearningEntity> matchingLearnings,
     required List<String> correctItemIds,
     required List<String> incorrectItemIds,
+    required String courseId,
   }) async {
     final correctMatchingLearnings = matchingLearnings
         .where((element) => correctItemIds.contains(element.id))
@@ -139,7 +145,9 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
       correctMatchingLearningInfo: correctItems,
     );
     final resp = await _exerciseApiDataSource.updateMatchingLearning(
-        matchingLearningUpdateModel: matchingLearningUpdateModel);
+      matchingLearningUpdateModel: matchingLearningUpdateModel,
+      courseId: courseId,
+    );
 
     return _apiMatchingLearningMapper.mapToListEntities(resp?.results ?? []);
   }
@@ -147,6 +155,7 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
   @override
   Future<List<PronunciationLearning>> updatePronunciationLearning({
     required List<PronunciationLearningEntity> pronunciationLearnings,
+    required String courseId,
   }) async {
     final items = _apiPronunciationLearningInfoModelMapper.mapToListData(
       pronunciationLearnings,
@@ -155,14 +164,19 @@ class ExerciseRepositoryImpl implements ExerciseRepository {
       pronunciationLearningUpdateModel: ApiPronunciationLearningUpdateModel(
         pronunciationLearningInfo: items,
       ),
+      courseId: courseId,
     );
     return _apiPronunciationLearningMapper
         .mapToListEntities(resp?.results ?? []);
   }
 
   @override
-  Future<LearningProgress> getLearningProgress() async {
-    final resp = await _exerciseApiDataSource.getLearningProgress();
+  Future<LearningProgress> getLearningProgress({
+    required List<String> courseIds,
+  }) async {
+    final resp = await _exerciseApiDataSource.getLearningProgress(
+      courseIds: courseIds,
+    );
 
     return _apiLearningProgressMapper.mapToEntity(resp?.data);
   }

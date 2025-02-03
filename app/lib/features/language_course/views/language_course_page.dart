@@ -164,8 +164,10 @@ class _LanguageCoursePageState
                   onPressed: () async {
                     await navigator.push(
                       AppRouteInfo.languageCourseDetails(
-                          languageCourse: course),
+                        languageCourse: course,
+                      ),
                     );
+                    await viewModel.refresh();
                   },
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

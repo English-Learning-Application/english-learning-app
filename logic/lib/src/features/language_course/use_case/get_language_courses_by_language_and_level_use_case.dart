@@ -26,8 +26,11 @@ class GetLanguageCoursesByLanguageAndLevelUseCase extends BaseFutureUseCase<
       level: input.level,
     );
     var resultLanguageCourses = resp;
+    final courseIdsList = resp.map((e) => e.languageCourseId).toList();
     if (resp.isNotEmpty) {
-      final progress = await _exerciseRepository.getLearningProgress();
+      final progress = await _exerciseRepository.getLearningProgress(
+        courseIds: courseIdsList,
+      );
       final updatedLanguageCourses = resp.map((languageCourse) {
         final updatedContents =
             languageCourse.languageCourseLearningContents.map((content) {
@@ -42,27 +45,36 @@ class GetLanguageCoursesByLanguageAndLevelUseCase extends BaseFutureUseCase<
           int completedCount = 0;
 
           progress.flashCardProgress.map((e) {
+            print("E.COURSEId.print: ${e.courseId}");
             if (e.learningContentId ==
-                content.languageCourseLearningContentId) {
+                    content.languageCourseLearningContentId &&
+                e.courseId == languageCourse.languageCourseId) {
+              print("Hitted Tai");
               completedCount++;
             }
           }).toList();
           progress.quizProgress.map((e) {
             if (e.learningContentId ==
-                content.languageCourseLearningContentId) {
+                    content.languageCourseLearningContentId &&
+                e.courseId == languageCourse.languageCourseId) {
               completedCount++;
+              print("Hitted Tai");
             }
           }).toList();
           progress.matchingProgress.map((e) {
             if (e.learningContentId ==
-                content.languageCourseLearningContentId) {
+                    content.languageCourseLearningContentId &&
+                e.courseId == languageCourse.languageCourseId) {
               completedCount++;
+              print("Hitted Tai");
             }
           }).toList();
           progress.pronunciationProgress.map((e) {
             if (e.learningContentId ==
-                content.languageCourseLearningContentId) {
+                    content.languageCourseLearningContentId &&
+                e.courseId == languageCourse.languageCourseId) {
               completedCount++;
+              print("Hitted Tai");
             }
           }).toList();
 

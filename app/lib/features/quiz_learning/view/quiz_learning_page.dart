@@ -13,7 +13,9 @@ class QuizLearningPage extends StatefulWidget {
     super.key,
     required this.learningLanguage,
     required this.languageCourseLearningContent,
+    required this.languageCourse,
   });
+  final LanguageCourse languageCourse;
   final LearningLanguage learningLanguage;
   final List<LanguageCourseLearningContent> languageCourseLearningContent;
 
@@ -174,6 +176,7 @@ class _QuizLearningPageState
     viewModel.onInit(
       learningLanguage: widget.learningLanguage,
       languageCourseLearningContent: widget.languageCourseLearningContent,
+      courseId: widget.languageCourse.languageCourseId,
     );
   }
 

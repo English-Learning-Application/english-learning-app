@@ -13,9 +13,11 @@ import '../../../app.dart';
 class FlashCardLearningPage extends StatefulWidget {
   const FlashCardLearningPage({
     super.key,
+    required this.languageCourse,
     required this.languageCourseLearningContent,
     this.learningLanguage = LearningLanguage.english,
   });
+  final LanguageCourse languageCourse;
   final LearningLanguage learningLanguage;
   final List<LanguageCourseLearningContent> languageCourseLearningContent;
 
@@ -64,6 +66,7 @@ class _FlashCardLearningPageState
   @override
   void initViewModels() {
     viewModel.onInit(
+      courseId: widget.languageCourse.languageCourseId,
       languageCourseLearningContents: widget.languageCourseLearningContent,
       learningLanguage: widget.learningLanguage,
     );

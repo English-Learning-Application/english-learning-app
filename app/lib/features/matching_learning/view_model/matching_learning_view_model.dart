@@ -13,6 +13,7 @@ class MatchingLearningViewModel
   void onInit({
     required LearningLanguage learningLanguage,
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
+    required String courseId,
   }) {
     /// Remove phonetics from the learning content
     final newList = [...languageCourseLearningContent]
@@ -221,6 +222,7 @@ class MatchingLearningViewModel
 
     updateData(
       viewModelData.copyWith(
+        courseId: courseId,
         learningLanguage: learningLanguage,
         languageCourseLearningContent: newList,
         totalLearningContentCount: totalLearningContentCount,
@@ -400,6 +402,7 @@ class MatchingLearningViewModel
           final incorrectItemIds = skippedContentIds;
           await _matchingLearningUpdateUseCase.execute(
             MatchingLearningUpdateInput(
+              courseId: viewModelData.courseId,
               matchingLearnings: matchingLearningEntities,
               correctItemIds: correctItemIds,
               incorrectItemIds: incorrectItemIds,

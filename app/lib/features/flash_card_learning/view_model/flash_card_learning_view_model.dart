@@ -13,6 +13,7 @@ class FlashCardLearningViewModel
   void onInit({
     required List<LanguageCourseLearningContent> languageCourseLearningContents,
     required LearningLanguage learningLanguage,
+    required String courseId,
   }) async {
     final flashCardLearningEntities = <FlashCardLearningEntity>[];
     int numberOfLearningContentOverall = 0;
@@ -252,6 +253,7 @@ class FlashCardLearningViewModel
     flashCardLearningEntities.shuffle();
     updateData(
       viewModelData.copyWith(
+        courseId: courseId,
         languageCourseLearningContents: languageCourseLearningContents,
         totalLearningContentCount: numberOfLearningContentOverall,
         learningLanguage: learningLanguage,
@@ -336,6 +338,7 @@ class FlashCardLearningViewModel
             flashCardLearnings: flashCardLearningEntities,
             learnedItemIds: learnedItemIds,
             skippedItemIds: skippedItemIds,
+            courseId: viewModelData.courseId,
           );
           await _flashCardLearningUpdateUseCase.execute(
             flashCardLearningUpdateInput,

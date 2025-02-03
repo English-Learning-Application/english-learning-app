@@ -45,6 +45,7 @@ class PronunciationLearning with _$PronunciationLearning {
     @Default(PronunciationLearning.defaultItemId) String itemId,
     @Default(PronunciationLearning.defaultLearningContentType)
     LearningContentType learningContentType,
+    @Default(PronunciationLearning.defaultCourseId) String courseId,
     @Default(PronunciationLearning.defaultPronunciationLearningContents)
     List<PronunciationAssessment> pronunciationLearningContents,
   }) = _PronunciationLearning;
@@ -54,6 +55,7 @@ class PronunciationLearning with _$PronunciationLearning {
   static const defaultItemId = '';
   static const LearningContentType defaultLearningContentType =
       LearningContentType.word;
+  static const defaultCourseId = '';
   static const List<PronunciationAssessment>
       defaultPronunciationLearningContents = [];
 }

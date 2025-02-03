@@ -14,8 +14,10 @@ class ListeningLearningPage extends StatefulWidget {
     super.key,
     required this.language,
     required this.languageCourseLearningContent,
+    required this.languageCourse,
   });
 
+  final LanguageCourse languageCourse;
   final LearningLanguage language;
   final LanguageCourseLearningContent languageCourseLearningContent;
 
@@ -211,6 +213,7 @@ class _ListeningLearningPageState
                 onPressed: () async {
                   await navigator.push(
                     AppRouteInfo.pronunciationLearning(
+                      languageCourse: widget.languageCourse,
                       learningLanguage: viewModelData.learningLanguage,
                       languageCourseLearningContent: [
                         viewModelData.languageCourseLearningContent
@@ -231,6 +234,7 @@ class _ListeningLearningPageState
                 onPressed: () async {
                   await navigator.push(
                     AppRouteInfo.matchingLearning(
+                      languageCourse: widget.languageCourse,
                       learningLanguage: viewModelData.learningLanguage,
                       languageCourseLearningContent: [
                         viewModelData.languageCourseLearningContent

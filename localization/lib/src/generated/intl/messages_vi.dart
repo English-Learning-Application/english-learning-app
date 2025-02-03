@@ -81,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Yêu cầu đăng ký trung tâm cộng đồng"),
         "communityHubRequiredDescription": MessageLookupByLibrary.simpleMessage(
             "Yêu cầu đăng ký trung tâm cộng đồng để truy cập tính năng này"),
+        "communityJoined": MessageLookupByLibrary.simpleMessage(
+            "Bạn đã tham gia cộng đồng! Bắt đầu học cùng những người học khác."),
         "communityNotJoined": MessageLookupByLibrary.simpleMessage(
             "Bạn chưa tham gia bất kỳ cộng đồng nào! Hãy tham gia cộng đồng để kết nối với những người học khác."),
         "completeYourProfile":
