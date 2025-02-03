@@ -98,4 +98,11 @@ class AppRepositoryImpl implements AppRepository {
       data: images,
     );
   }
+
+  @override
+  Future<List<User>> getUsersData({required List<String> ids}) async {
+    final resp = await _appAPiService.getUsersData(ids: ids);
+
+    return _apiUserDataMapper.mapToListEntities(resp?.results);
+  }
 }

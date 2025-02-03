@@ -1839,6 +1839,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Participants`
+  String get participants {
+    return Intl.message(
+      'Participants',
+      name: 'participants',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chat`
+  String get chat {
+    return Intl.message(
+      'Chat',
+      name: 'chat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `(You)`
+  String get isYouText {
+    return Intl.message(
+      '(You)',
+      name: 'isYouText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User info`
+  String get userInfo {
+    return Intl.message(
+      'User info',
+      name: 'userInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learning info`
+  String get learningInfo {
+    return Intl.message(
+      'Learning info',
+      name: 'learningInfo',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -73,6 +73,9 @@ class AppRouter extends $AppRouter {
             AutoRoute(
               page: GroupChatRoute.page,
             ),
+            AutoRoute(
+              page: PrivateChatRoute.page,
+            ),
           ],
         ),
         AutoRoute(

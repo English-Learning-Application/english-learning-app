@@ -6,7 +6,8 @@ class AiChatBotDetailsViewModel
   final StompDartService _stompDartService;
   final GetChatBotMessagesUseCase _getChatBotMessagesUseCase;
   final DeleteChatSessionUseCase _deleteChatBotSessionUseCase;
-  late final StreamController<ChatMessage> messageController;
+  final StreamController<ChatMessage> messageController =
+      StreamController.broadcast();
   final ChatMessageDataMapper _chatMessageDataMapper;
 
   AiChatBotDetailsViewModel(
@@ -47,16 +48,16 @@ class AiChatBotDetailsViewModel
   }
 
   onInit({required ChatSession chatSession}) async {
+    updateData(
+      viewModelData.copyWith(
+        currentChatSession: chatSession,
+      ),
+    );
     await runViewModelCatching(
       action: () async {
         _getChatMessages(
           isInitialLoad: true,
           sessionId: chatSession.sessionId,
-        );
-        updateData(
-          viewModelData.copyWith(
-            currentChatSession: chatSession,
-          ),
         );
 
         _stompDartService.connect(
@@ -74,8 +75,6 @@ class AiChatBotDetailsViewModel
             logE('Error: $error');
           },
         );
-
-        messageController = StreamController<ChatMessage>.broadcast();
 
         _stompDartService.messageController.stream.listen(
           (event) {

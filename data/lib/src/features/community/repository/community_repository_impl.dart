@@ -70,4 +70,12 @@ class CommunityRepositoryImpl implements CommunityRepository {
 
     return _apiChatSessionDataMapper.mapToEntity(resp?.data);
   }
+
+  @override
+  Future<ChatSession> createPrivateChatSession(String receiverId) async {
+    final resp =
+        await _communityApiService.createPrivateChatSession(receiverId);
+
+    return _apiChatSessionDataMapper.mapToEntity(resp?.data);
+  }
 }

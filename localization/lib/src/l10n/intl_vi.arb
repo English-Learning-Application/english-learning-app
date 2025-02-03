@@ -177,5 +177,10 @@
     "messageSessionName": "Tên phiên trò chuyện",
     "createText": "Tạo",
     "hasJoinedTheChat": "{name} đã tham gia trò chuyện",
-    "joinText": "Tham gia"
+    "joinText": "Tham gia",
+    "participants": "Người tham gia",
+    "chat": "Trò chuyện",
+    "isYouText": "(Bạn)",
+    "userInfo": "Thông tin người dùng",
+    "learningInfo": "Thông tin học tập"
 }

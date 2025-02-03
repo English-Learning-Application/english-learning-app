@@ -270,8 +270,68 @@ class _CommunityPageState
             ),
           );
         }
-        return const SizedBox.shrink();
+        return SizedBox(
+            height: Dimens.d100.responsive(),
+            child: _buildFriendChatList(vmData.friendChatSessions));
       },
+    );
+  }
+
+  Widget _buildFriendChatList(List<ChatSession> friendChatSessions) {
+    return ListView.separated(
+      itemBuilder: (_, index) {
+        final chatSession = friendChatSessions[index];
+        return Selector<AppViewModel, AppViewModelData>(
+          builder: (_, appVmData, __) {
+            final receiver = chatSession.participants.firstWhere(
+              (element) => element.externalId != appVmData.currentUser.userId,
+            );
+            return GestureDetector(
+              onTap: () {
+                viewModel.createPrivateChatSession(receiver.externalId);
+              },
+              child: SizedBox(
+                width: Dimens.d64.responsive(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    if (receiver.imageUrl.isEmpty) ...[
+                      Assets.images.appIcon.image(
+                        width: Dimens.d64.responsive(),
+                        height: Dimens.d64.responsive(),
+                      ),
+                    ] else ...[
+                      CircularAvatar(
+                        imageUrl: receiver.avatarUrl,
+                        width: Dimens.d64.responsive(),
+                        height: Dimens.d64.responsive(),
+                      ),
+                    ],
+                    SizedBox(
+                      height: Dimens.d8.responsive(),
+                    ),
+                    Text(
+                      receiver.username,
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTextStyles.s14w400primary().font10().medium,
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+          selector: (_, vm) => vm.viewModelData,
+          shouldRebuild: (prev, next) {
+            return next.currentUser.userId != prev.currentUser.userId;
+          },
+        );
+      },
+      scrollDirection: Axis.horizontal,
+      separatorBuilder: (_, __) => SizedBox(
+        width: Dimens.d16.responsive(),
+      ),
+      itemCount: friendChatSessions.length,
     );
   }
 

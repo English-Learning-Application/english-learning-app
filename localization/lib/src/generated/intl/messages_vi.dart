@@ -53,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Lỗi hủy"),
+        "chat": MessageLookupByLibrary.simpleMessage("Trò chuyện"),
         "chatBotRequired":
             MessageLookupByLibrary.simpleMessage("Yêu cầu đăng ký trợ lý ảo"),
         "chatBotRequiredDescription": MessageLookupByLibrary.simpleMessage(
@@ -132,6 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Số điện thoại không hợp lệ"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Định dạng username sai"),
+        "isYouText": MessageLookupByLibrary.simpleMessage("(Bạn)"),
         "joinCommunity":
             MessageLookupByLibrary.simpleMessage("Tham gia cộng đồng"),
         "joinText": MessageLookupByLibrary.simpleMessage("Tham gia"),
@@ -142,6 +144,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
             "Truy cập hàng ngàn khóa học, tài nguyên và tài liệu học tập mọi lúc mọi nơi."),
         "learned": MessageLookupByLibrary.simpleMessage("Đã học"),
+        "learningInfo":
+            MessageLookupByLibrary.simpleMessage("Thông tin học tập"),
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Ngôn ngữ học"),
         "level": MessageLookupByLibrary.simpleMessage("Cấp độ"),
@@ -186,6 +190,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "or": MessageLookupByLibrary.simpleMessage("Hoặc"),
         "parseException": MessageLookupByLibrary.simpleMessage("Lỗi định dạng"),
+        "participants": MessageLookupByLibrary.simpleMessage("Người tham gia"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Nhập mật khẩu của bạn"),
@@ -258,6 +263,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unknownException": m2,
         "updateProfilePicture":
             MessageLookupByLibrary.simpleMessage("Cập nhật ảnh đại diện"),
+        "userInfo":
+            MessageLookupByLibrary.simpleMessage("Thông tin người dùng"),
         "username": MessageLookupByLibrary.simpleMessage("Tên người dùng"),
         "usernameHint":
             MessageLookupByLibrary.simpleMessage("Nhập tên người dùng"),

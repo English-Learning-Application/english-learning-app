@@ -88,4 +88,17 @@ class CommunityApiService {
           ApiChatSessionData.fromJson(json as Map<String, dynamic>),
     );
   }
+
+  Future<DataResponse<ApiChatSessionData>?> createPrivateChatSession(
+    String receiverId,
+  ) async {
+    return await _authAppServerApiClient.request(
+      method: RestApiMethod.post,
+      path:
+          'http://192.168.1.8:8089/api/v1/communities/sessions/private/$receiverId',
+      successResponseMapperType: SuccessResponseMapperType.dataResponse,
+      decoder: (json) =>
+          ApiChatSessionData.fromJson(json as Map<String, dynamic>),
+    );
+  }
 }

@@ -41,6 +41,8 @@ import 'package:app/features/matching_learning/view_model/matching_learning.dart
 import 'package:app/features/on_boarding/viewmodel/on_boarding.dart' as _i646;
 import 'package:app/features/photo_bottom_sheet/view_model/photo_bottom_sheet.dart'
     as _i1032;
+import 'package:app/features/private_chat/view_model/private_chat.dart'
+    as _i173;
 import 'package:app/features/profile/view_models/profile.dart' as _i238;
 import 'package:app/features/pronunciation_learning/view_model/pronunciation_learning.dart'
     as _i143;
@@ -101,6 +103,12 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i96.QuizLearningViewModel>(() =>
         _i96.QuizLearningViewModel(gh<_i182.QuizLearningUpdateUseCase>()));
+    gh.factory<_i15.CommunityViewModel>(() => _i15.CommunityViewModel(
+          gh<_i182.GetCommunityTopicsUseCase>(),
+          gh<_i182.GetPrivateSessionsUseCase>(),
+          gh<_i182.InitiatePrivateChatSessionUseCase>(),
+          gh<_i182.GetUsersDataUseCase>(),
+        ));
     gh.factory<_i591.StompDartService>(
         () => _i591.StompDartService(gh<_i437.AppPreferences>()));
     gh.lazySingleton<_i137.BaseRouteInfoMapper>(
@@ -136,16 +144,12 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i21.IsLoggedInRouteGuard>(
         () => _i21.IsLoggedInRouteGuard(gh<_i182.IsLoggedInUseCase>()));
-    gh.factory<_i15.CommunityViewModel>(() => _i15.CommunityViewModel(
-          gh<_i182.GetCommunityTopicsUseCase>(),
-          gh<_i182.GetPrivateSessionsUseCase>(),
-        ));
     gh.factory<_i1006.ValidatePhoneNumberViewModel>(
         () => _i1006.ValidatePhoneNumberViewModel(
               gh<_i182.SendPhoneVerificationUseCase>(),
               gh<_i182.VerifyPhoneOtpUseCase>(),
             ));
-    gh.factory<_i945.GroupChatViewModel>(() => _i945.GroupChatViewModel(
+    gh.factory<_i173.PrivateChatViewModel>(() => _i173.PrivateChatViewModel(
           gh<_i182.GetSessionMessagesUseCase>(),
           gh<_i137.StompDartService>(),
           gh<_i437.ChatMessageDataMapper>(),
@@ -198,6 +202,13 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i366.CourseViewModel>(() => _i366.CourseViewModel(
           gh<_i182.GetCategoriesUseCase>(),
           gh<_i182.GetCategoryCoursesByLanguageUseCase>(),
+        ));
+    gh.factory<_i945.GroupChatViewModel>(() => _i945.GroupChatViewModel(
+          gh<_i182.GetSessionMessagesUseCase>(),
+          gh<_i137.StompDartService>(),
+          gh<_i437.ChatMessageDataMapper>(),
+          gh<_i182.GetUsersDataUseCase>(),
+          gh<_i182.InitiatePrivateChatSessionUseCase>(),
         ));
     gh.factory<_i837.ValidateEmailViewModel>(() => _i837.ValidateEmailViewModel(
           gh<_i182.SendEmailVerificationUseCase>(),

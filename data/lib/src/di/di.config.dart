@@ -327,16 +327,6 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i600.RefreshTokenApiService(gh<_i437.RefreshTokenApiClient>()));
     gh.factory<_i930.ApiChatTopicDataMapper>(() =>
         _i930.ApiChatTopicDataMapper(gh<_i437.ApiChatSessionDataMapper>()));
-    gh.lazySingleton<_i261.AppApiService>(
-        () => _i261.AppApiService(gh<_i437.RandomUserApiClient>()));
-    gh.lazySingleton<_i182.AppRepository>(() => _i27.AppRepositoryImpl(
-          gh<_i437.AppAssetsService>(),
-          gh<_i437.AppApiService>(),
-          gh<_i437.AppPreferences>(),
-          gh<_i437.ApiRandomUserDataMapper>(),
-          gh<_i437.AppThemeDataMapper>(),
-          gh<_i437.ApiUserDataMapper>(),
-        ));
     gh.factory<_i193.RefreshTokenInterceptor>(
         () => _i193.RefreshTokenInterceptor(
               gh<_i437.AppPreferences>(),
@@ -350,6 +340,10 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.RefreshTokenInterceptor>(),
               gh<_i695.DioCacheInterceptor>(),
             ));
+    gh.lazySingleton<_i261.AppApiService>(() => _i261.AppApiService(
+          gh<_i437.RandomUserApiClient>(),
+          gh<_i437.AuthAppServerApiClient>(),
+        ));
     gh.lazySingleton<_i920.AuthenticationApiDataSource>(
         () => _i920.AuthenticationApiDataSource(
               gh<_i437.NonAuthAppServerApiClient>(),
@@ -376,6 +370,14 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.ApiLanguageCourseDataMapper>(),
               gh<_i437.ApiCategoryMapper>(),
             ));
+    gh.lazySingleton<_i182.AppRepository>(() => _i27.AppRepositoryImpl(
+          gh<_i437.AppAssetsService>(),
+          gh<_i437.AppApiService>(),
+          gh<_i437.AppPreferences>(),
+          gh<_i437.ApiRandomUserDataMapper>(),
+          gh<_i437.AppThemeDataMapper>(),
+          gh<_i437.ApiUserDataMapper>(),
+        ));
     gh.lazySingleton<_i182.AiChatBotRepository>(
         () => _i599.AiChatBotRepositoryImpl(
               gh<_i437.ChatBotApiService>(),

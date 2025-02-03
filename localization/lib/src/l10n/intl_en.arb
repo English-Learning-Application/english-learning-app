@@ -177,6 +177,11 @@
     "messageSessionName": "Message session name",
     "createText": "Create",
     "hasJoinedTheChat": "{name} has joined the chat",
-    "joinText": "Join"
+    "joinText": "Join",
+    "participants": "Participants",
+    "chat": "Chat",
+    "isYouText": "(You)",
+    "userInfo": "User info",
+    "learningInfo": "Learning info"
 }
 

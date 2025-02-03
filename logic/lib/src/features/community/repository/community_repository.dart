@@ -19,4 +19,6 @@ abstract class CommunityRepository {
   });
 
   Future<ChatSession> joinChatSession(String chatSessionId);
+
+  Future<ChatSession> createPrivateChatSession(String receiverId);
 }

@@ -5,9 +5,11 @@ import '../../../../data.dart';
 @LazySingleton()
 class AppApiService {
   final RandomUserApiClient _randomUserApiClient;
+  final AuthAppServerApiClient _authAppServerApiClient;
 
   AppApiService(
     this._randomUserApiClient,
+    this._authAppServerApiClient,
   );
 
   Future<ListResponse<ApiRandomUserData>?> getUsers({
@@ -24,6 +26,20 @@ class AppApiService {
       successResponseMapperType: SuccessResponseMapperType.listResponse,
       decoder: (json) =>
           ApiRandomUserData.fromJson(json as Map<String, dynamic>),
+    );
+  }
+
+  Future<ListResponse<ApiUserData>?> getUsersData({
+    required List<String> ids,
+  }) async {
+    return await _authAppServerApiClient.request(
+      method: RestApiMethod.get,
+      path: UserEndpoints.getUsersData,
+      queryParameters: {
+        'userIds': ids.join(','),
+      },
+      successResponseMapperType: SuccessResponseMapperType.listResponse,
+      decoder: (json) => ApiUserData.fromJson(json as Map<String, dynamic>),
     );
   }
 }

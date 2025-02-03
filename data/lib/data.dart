@@ -61,6 +61,7 @@ export 'src/endpoint_constants/language_course_endpoints.dart';
 export 'src/endpoint_constants/notification_endpoints.dart';
 export 'src/endpoint_constants/profile_endpoints.dart';
 export 'src/endpoint_constants/subscription_endpoints.dart';
+export 'src/endpoint_constants/user_endpoints.dart';
 export 'src/features/community/data_source/chat_bot_api_service.dart';
 export 'src/features/community/data_source/community_api_service.dart';
 export 'src/features/community/mapper/api_chat_message_data_mapper.dart';

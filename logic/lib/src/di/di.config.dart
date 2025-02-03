@@ -41,6 +41,8 @@ import 'package:logic/src/features/community/use_case/get_session_messages_use_c
     as _i444;
 import 'package:logic/src/features/community/use_case/get_sessions_by_topic_use_case.dart'
     as _i179;
+import 'package:logic/src/features/community/use_case/initiate_private_chat_session_use_case.dart'
+    as _i144;
 import 'package:logic/src/features/community/use_case/join_chat_session_use_case.dart'
     as _i1022;
 import 'package:logic/src/features/exercise/use_case/flash_card_learning_update_use_case.dart'
@@ -87,6 +89,7 @@ import 'package:logic/src/usecase/clear_current_user_data_use_case.dart'
 import 'package:logic/src/usecase/get_current_pref_user_use_case.dart' as _i75;
 import 'package:logic/src/usecase/get_initial_app_data_use_case.dart' as _i162;
 import 'package:logic/src/usecase/get_phone_images_use_case.dart' as _i217;
+import 'package:logic/src/usecase/get_users_data_use_case.dart' as _i246;
 import 'package:logic/src/usecase/get_users_use_case.dart' as _i281;
 import 'package:logic/src/usecase/has_subscription_use_case.dart' as _i1051;
 import 'package:logic/src/usecase/is_logged_in_use_case.dart' as _i688;
@@ -162,6 +165,9 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i444.GetSessionMessagesUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i1022.JoinChatSessionUseCase>(
         () => _i1022.JoinChatSessionUseCase(gh<_i182.CommunityRepository>()));
+    gh.factory<_i144.InitiatePrivateChatSessionUseCase>(() =>
+        _i144.InitiatePrivateChatSessionUseCase(
+            gh<_i182.CommunityRepository>()));
     gh.factory<_i845.CreateSubscriptionPaymentUseCase>(() =>
         _i845.CreateSubscriptionPaymentUseCase(
             gh<_i182.SubscriptionRepository>()));
@@ -187,6 +193,8 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i783.SaveThemeModeUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i732.TrackConnectivityUseCase>(
         () => _i732.TrackConnectivityUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i246.GetUsersDataUseCase>(
+        () => _i246.GetUsersDataUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i119.RegisterFcmTokenUseCase>(
         () => _i119.RegisterFcmTokenUseCase(
               gh<_i182.NotificationRepository>(),

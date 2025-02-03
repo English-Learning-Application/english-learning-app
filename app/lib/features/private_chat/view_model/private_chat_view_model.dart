@@ -1,68 +1,47 @@
-part of 'group_chat.dart';
+part of 'private_chat.dart';
 
 @Injectable()
-class GroupChatViewModel extends BaseViewModel<GroupChatViewModelData> {
+class PrivateChatViewModel extends BaseViewModel<PrivateChatViewModelData> {
   final GetSessionMessagesUseCase _getSessionMessagesUseCase;
-  final GetUsersDataUseCase _getUsersDataUseCase;
   final StompDartService _stompDartService;
   final StreamController<ChatMessage> messageController =
       StreamController.broadcast();
   final ChatMessageDataMapper _chatMessageDataMapper;
-  final InitiatePrivateChatSessionUseCase _initiatePrivateChatSessionUseCase;
 
-  GroupChatViewModel(
+  PrivateChatViewModel(
     this._getSessionMessagesUseCase,
     this._stompDartService,
     this._chatMessageDataMapper,
-    this._getUsersDataUseCase,
-    this._initiatePrivateChatSessionUseCase,
-  ) : super(GroupChatViewModelData());
+  ) : super(PrivateChatViewModelData());
 
   void sendMessage(String message) {
     _stompDartService.sendMessage(
-      "/app/chat/group/${viewModelData.currentChatSession.sessionId}",
+      "/app/chat/private/${viewModelData.currentChatSession.sessionId}",
       message,
     );
   }
 
   onInit({
     required ChatSession chatSession,
+    required User receiver,
   }) async {
     updateData(
       viewModelData.copyWith(
         currentChatSession: chatSession,
+        receiver: receiver,
       ),
     );
     await runViewModelCatching(
       action: () async {
-        await Future.wait(
-          [
-            _getChatMessages(
-              isInitialLoad: true,
-              sessionId: chatSession.sessionId,
-            ),
-            _getUsersDataUseCase
-                .execute(
-              GetUsersDataInput(
-                ids: chatSession.participants.map((e) => e.externalId).toList(),
-              ),
-            )
-                .then(
-              (value) {
-                updateData(
-                  viewModelData.copyWith(
-                    users: value.users,
-                  ),
-                );
-              },
-            ),
-          ],
+        await _getChatMessages(
+          isInitialLoad: true,
+          sessionId: chatSession.sessionId,
         );
         _stompDartService.connect(
           onConnect: (frame) {
             logD('Connected to socket');
             _stompDartService.subscribeToTopic(
-              "/group/${chatSession.sessionId}",
+              "/user/${chatSession.sessionId}/private",
               (message) {
                 logD('Received message: $message');
               },
@@ -122,26 +101,6 @@ class GroupChatViewModel extends BaseViewModel<GroupChatViewModelData> {
     );
 
     messageController.add(chatMessage);
-  }
-
-  void openChatWithUser(User receiver) {
-    runViewModelCatching(
-      action: () async {
-        final chatSessionOutput =
-            await _initiatePrivateChatSessionUseCase.execute(
-          InitiatePrivateChatSessionInput(
-            receiverId: receiver.userId,
-          ),
-        );
-
-        await navigator.replace(
-          AppRouteInfo.privateChat(
-            chatSession: chatSessionOutput.chatSession,
-            receiver: receiver,
-          ),
-        );
-      },
-    );
   }
 
   @override

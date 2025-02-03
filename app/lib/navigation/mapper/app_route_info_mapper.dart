@@ -58,6 +58,10 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       community: () => const CommunityFlowRoute(),
       communityTopic: (chatTopic) => CommunityTopicRoute(chatTopic: chatTopic),
       groupChat: (chatSession) => GroupChatRoute(chatSession: chatSession),
+      privateChat: (chatSession, receiver) => PrivateChatRoute(
+        chatSession: chatSession,
+        receiver: receiver,
+      ),
     );
   }
 }

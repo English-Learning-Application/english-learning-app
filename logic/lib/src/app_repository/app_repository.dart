@@ -27,4 +27,8 @@ abstract class AppRepository {
   Future<PagedList<File>> getImagesPaged(int page);
 
   void clearCurrentUserData();
+
+  Future<List<User>> getUsersData({
+    required List<String> ids,
+  });
 }

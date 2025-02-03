@@ -53,6 +53,8 @@ mixin _$AppRouteInfo {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -91,6 +93,7 @@ mixin _$AppRouteInfo {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -129,6 +132,7 @@ mixin _$AppRouteInfo {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -158,6 +162,7 @@ mixin _$AppRouteInfo {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -184,6 +189,7 @@ mixin _$AppRouteInfo {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -210,6 +216,7 @@ mixin _$AppRouteInfo {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -312,6 +319,8 @@ class _$LoginImpl implements _Login {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return login();
   }
@@ -353,6 +362,7 @@ class _$LoginImpl implements _Login {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return login?.call();
   }
@@ -394,6 +404,7 @@ class _$LoginImpl implements _Login {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -429,6 +440,7 @@ class _$LoginImpl implements _Login {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return login(this);
   }
@@ -458,6 +470,7 @@ class _$LoginImpl implements _Login {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return login?.call(this);
   }
@@ -487,6 +500,7 @@ class _$LoginImpl implements _Login {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -575,6 +589,8 @@ class _$MainImpl implements _Main {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return main();
   }
@@ -616,6 +632,7 @@ class _$MainImpl implements _Main {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return main?.call();
   }
@@ -657,6 +674,7 @@ class _$MainImpl implements _Main {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -692,6 +710,7 @@ class _$MainImpl implements _Main {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return main(this);
   }
@@ -721,6 +740,7 @@ class _$MainImpl implements _Main {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return main?.call(this);
   }
@@ -750,6 +770,7 @@ class _$MainImpl implements _Main {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -839,6 +860,8 @@ class _$SplashImpl implements _Splash {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return splash();
   }
@@ -880,6 +903,7 @@ class _$SplashImpl implements _Splash {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return splash?.call();
   }
@@ -921,6 +945,7 @@ class _$SplashImpl implements _Splash {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -956,6 +981,7 @@ class _$SplashImpl implements _Splash {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return splash(this);
   }
@@ -985,6 +1011,7 @@ class _$SplashImpl implements _Splash {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return splash?.call(this);
   }
@@ -1014,6 +1041,7 @@ class _$SplashImpl implements _Splash {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -1103,6 +1131,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return onBoarding();
   }
@@ -1144,6 +1174,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return onBoarding?.call();
   }
@@ -1185,6 +1216,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1220,6 +1252,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return onBoarding(this);
   }
@@ -1249,6 +1282,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return onBoarding?.call(this);
   }
@@ -1278,6 +1312,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1368,6 +1403,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return completeRegistration();
   }
@@ -1409,6 +1446,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return completeRegistration?.call();
   }
@@ -1450,6 +1488,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -1485,6 +1524,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return completeRegistration(this);
   }
@@ -1514,6 +1554,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return completeRegistration?.call(this);
   }
@@ -1543,6 +1584,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -1661,6 +1703,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return languageCourse(learningLanguage);
   }
@@ -1702,6 +1746,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return languageCourse?.call(learningLanguage);
   }
@@ -1743,6 +1788,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -1778,6 +1824,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return languageCourse(this);
   }
@@ -1807,6 +1854,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return languageCourse?.call(this);
   }
@@ -1836,6 +1884,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -1977,6 +2026,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return languageCourseDetails(this.languageCourse);
   }
@@ -2018,6 +2069,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return languageCourseDetails?.call(this.languageCourse);
   }
@@ -2059,6 +2111,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -2094,6 +2147,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return languageCourseDetails(this);
   }
@@ -2123,6 +2177,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return languageCourseDetails?.call(this);
   }
@@ -2152,6 +2207,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -2306,6 +2362,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return flashCardLearning(languageCourseLearningContent, learningLanguage);
   }
@@ -2347,6 +2405,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return flashCardLearning?.call(
         languageCourseLearningContent, learningLanguage);
@@ -2389,6 +2448,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -2424,6 +2484,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return flashCardLearning(this);
   }
@@ -2453,6 +2514,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return flashCardLearning?.call(this);
   }
@@ -2482,6 +2544,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -2635,6 +2698,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return quizLearning(learningLanguage, languageCourseLearningContents);
   }
@@ -2676,6 +2741,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return quizLearning?.call(learningLanguage, languageCourseLearningContents);
   }
@@ -2717,6 +2783,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -2752,6 +2819,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return quizLearning(this);
   }
@@ -2781,6 +2849,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return quizLearning?.call(this);
   }
@@ -2810,6 +2879,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -2978,6 +3048,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return matchingLearning(
         learningLanguage, languageCourseLearningContent, learningType);
@@ -3020,6 +3092,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return matchingLearning?.call(
         learningLanguage, languageCourseLearningContent, learningType);
@@ -3062,6 +3135,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
@@ -3098,6 +3172,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return matchingLearning(this);
   }
@@ -3127,6 +3202,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return matchingLearning?.call(this);
   }
@@ -3156,6 +3232,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
@@ -3312,6 +3389,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return pronunciationLearning(
         learningLanguage, languageCourseLearningContent);
@@ -3354,6 +3433,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return pronunciationLearning?.call(
         learningLanguage, languageCourseLearningContent);
@@ -3396,6 +3476,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
@@ -3432,6 +3513,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return pronunciationLearning(this);
   }
@@ -3461,6 +3543,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return pronunciationLearning?.call(this);
   }
@@ -3490,6 +3573,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
@@ -3651,6 +3735,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return listeningLearning(learningLanguage, languageCourseLearningContent);
   }
@@ -3692,6 +3778,7 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return listeningLearning?.call(
         learningLanguage, languageCourseLearningContent);
@@ -3734,6 +3821,7 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -3769,6 +3857,7 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return listeningLearning(this);
   }
@@ -3798,6 +3887,7 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return listeningLearning?.call(this);
   }
@@ -3827,6 +3917,7 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -3928,6 +4019,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return validateEmail();
   }
@@ -3969,6 +4062,7 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return validateEmail?.call();
   }
@@ -4010,6 +4104,7 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -4045,6 +4140,7 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return validateEmail(this);
   }
@@ -4074,6 +4170,7 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return validateEmail?.call(this);
   }
@@ -4103,6 +4200,7 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -4193,6 +4291,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return validatePhoneNumber();
   }
@@ -4234,6 +4334,7 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return validatePhoneNumber?.call();
   }
@@ -4275,6 +4376,7 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -4310,6 +4412,7 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return validatePhoneNumber(this);
   }
@@ -4339,6 +4442,7 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return validatePhoneNumber?.call(this);
   }
@@ -4368,6 +4472,7 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -4457,6 +4562,8 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return editProfile();
   }
@@ -4498,6 +4605,7 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return editProfile?.call();
   }
@@ -4539,6 +4647,7 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -4574,6 +4683,7 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return editProfile(this);
   }
@@ -4603,6 +4713,7 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return editProfile?.call(this);
   }
@@ -4632,6 +4743,7 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -4721,6 +4833,8 @@ class _$SubscriptionImpl implements _Subscription {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return subscription();
   }
@@ -4762,6 +4876,7 @@ class _$SubscriptionImpl implements _Subscription {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return subscription?.call();
   }
@@ -4803,6 +4918,7 @@ class _$SubscriptionImpl implements _Subscription {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (subscription != null) {
@@ -4838,6 +4954,7 @@ class _$SubscriptionImpl implements _Subscription {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return subscription(this);
   }
@@ -4867,6 +4984,7 @@ class _$SubscriptionImpl implements _Subscription {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return subscription?.call(this);
   }
@@ -4896,6 +5014,7 @@ class _$SubscriptionImpl implements _Subscription {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (subscription != null) {
@@ -4990,6 +5109,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return commonFeatureRequiredSubscription();
   }
@@ -5031,6 +5152,7 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return commonFeatureRequiredSubscription?.call();
   }
@@ -5072,6 +5194,7 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (commonFeatureRequiredSubscription != null) {
@@ -5107,6 +5230,7 @@ class _$CommonFeatureRequiredSubscriptionImpl
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return commonFeatureRequiredSubscription(this);
   }
@@ -5136,6 +5260,7 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return commonFeatureRequiredSubscription?.call(this);
   }
@@ -5165,6 +5290,7 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (commonFeatureRequiredSubscription != null) {
@@ -5296,6 +5422,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return aiChatBotDetails(chatSession);
   }
@@ -5337,6 +5465,7 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return aiChatBotDetails?.call(chatSession);
   }
@@ -5378,6 +5507,7 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (aiChatBotDetails != null) {
@@ -5413,6 +5543,7 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return aiChatBotDetails(this);
   }
@@ -5442,6 +5573,7 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return aiChatBotDetails?.call(this);
   }
@@ -5471,6 +5603,7 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (aiChatBotDetails != null) {
@@ -5569,6 +5702,8 @@ class _$CommunityImpl implements _Community {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return community();
   }
@@ -5610,6 +5745,7 @@ class _$CommunityImpl implements _Community {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return community?.call();
   }
@@ -5651,6 +5787,7 @@ class _$CommunityImpl implements _Community {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (community != null) {
@@ -5686,6 +5823,7 @@ class _$CommunityImpl implements _Community {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return community(this);
   }
@@ -5715,6 +5853,7 @@ class _$CommunityImpl implements _Community {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return community?.call(this);
   }
@@ -5744,6 +5883,7 @@ class _$CommunityImpl implements _Community {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (community != null) {
@@ -5874,6 +6014,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return communityTopic(chatTopic);
   }
@@ -5915,6 +6057,7 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return communityTopic?.call(chatTopic);
   }
@@ -5956,6 +6099,7 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (communityTopic != null) {
@@ -5991,6 +6135,7 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return communityTopic(this);
   }
@@ -6020,6 +6165,7 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return communityTopic?.call(this);
   }
@@ -6049,6 +6195,7 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (communityTopic != null) {
@@ -6187,6 +6334,8 @@ class _$GroupChatImpl implements _GroupChat {
     required TResult Function() community,
     required TResult Function(ChatTopic chatTopic) communityTopic,
     required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
   }) {
     return groupChat(chatSession);
   }
@@ -6228,6 +6377,7 @@ class _$GroupChatImpl implements _GroupChat {
     TResult? Function()? community,
     TResult? Function(ChatTopic chatTopic)? communityTopic,
     TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
   }) {
     return groupChat?.call(chatSession);
   }
@@ -6269,6 +6419,7 @@ class _$GroupChatImpl implements _GroupChat {
     TResult Function()? community,
     TResult Function(ChatTopic chatTopic)? communityTopic,
     TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
     required TResult orElse(),
   }) {
     if (groupChat != null) {
@@ -6304,6 +6455,7 @@ class _$GroupChatImpl implements _GroupChat {
     required TResult Function(_Community value) community,
     required TResult Function(_CommunityTopic value) communityTopic,
     required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
   }) {
     return groupChat(this);
   }
@@ -6333,6 +6485,7 @@ class _$GroupChatImpl implements _GroupChat {
     TResult? Function(_Community value)? community,
     TResult? Function(_CommunityTopic value)? communityTopic,
     TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
   }) {
     return groupChat?.call(this);
   }
@@ -6362,6 +6515,7 @@ class _$GroupChatImpl implements _GroupChat {
     TResult Function(_Community value)? community,
     TResult Function(_CommunityTopic value)? communityTopic,
     TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
     required TResult orElse(),
   }) {
     if (groupChat != null) {
@@ -6381,5 +6535,347 @@ abstract class _GroupChat implements AppRouteInfo {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GroupChatImplCopyWith<_$GroupChatImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PrivateChatImplCopyWith<$Res> {
+  factory _$$PrivateChatImplCopyWith(
+          _$PrivateChatImpl value, $Res Function(_$PrivateChatImpl) then) =
+      __$$PrivateChatImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ChatSession chatSession, User receiver});
+
+  $ChatSessionCopyWith<$Res> get chatSession;
+  $UserCopyWith<$Res> get receiver;
+}
+
+/// @nodoc
+class __$$PrivateChatImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$PrivateChatImpl>
+    implements _$$PrivateChatImplCopyWith<$Res> {
+  __$$PrivateChatImplCopyWithImpl(
+      _$PrivateChatImpl _value, $Res Function(_$PrivateChatImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? chatSession = null,
+    Object? receiver = null,
+  }) {
+    return _then(_$PrivateChatImpl(
+      chatSession: null == chatSession
+          ? _value.chatSession
+          : chatSession // ignore: cast_nullable_to_non_nullable
+              as ChatSession,
+      receiver: null == receiver
+          ? _value.receiver
+          : receiver // ignore: cast_nullable_to_non_nullable
+              as User,
+    ));
+  }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ChatSessionCopyWith<$Res> get chatSession {
+    return $ChatSessionCopyWith<$Res>(_value.chatSession, (value) {
+      return _then(_value.copyWith(chatSession: value));
+    });
+  }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UserCopyWith<$Res> get receiver {
+    return $UserCopyWith<$Res>(_value.receiver, (value) {
+      return _then(_value.copyWith(receiver: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$PrivateChatImpl implements _PrivateChat {
+  const _$PrivateChatImpl({required this.chatSession, required this.receiver});
+
+  @override
+  final ChatSession chatSession;
+  @override
+  final User receiver;
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.privateChat(chatSession: $chatSession, receiver: $receiver)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PrivateChatImpl &&
+            (identical(other.chatSession, chatSession) ||
+                other.chatSession == chatSession) &&
+            (identical(other.receiver, receiver) ||
+                other.receiver == receiver));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, chatSession, receiver);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PrivateChatImplCopyWith<_$PrivateChatImpl> get copyWith =>
+      __$$PrivateChatImplCopyWithImpl<_$PrivateChatImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+    required TResult Function(LearningLanguage learningLanguage) languageCourse,
+    required TResult Function(LanguageCourse languageCourse)
+        languageCourseDetails,
+    required TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage)
+        flashCardLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        quizLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningType? learningType)
+        matchingLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent)
+        pronunciationLearning,
+    required TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)
+        listeningLearning,
+    required TResult Function() validateEmail,
+    required TResult Function() validatePhoneNumber,
+    required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
+    required TResult Function(ChatSession chatSession) aiChatBotDetails,
+    required TResult Function() community,
+    required TResult Function(ChatTopic chatTopic) communityTopic,
+    required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
+  }) {
+    return privateChat(chatSession, receiver);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+    TResult? Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult? Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage)?
+        flashCardLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        quizLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+        pronunciationLearning,
+    TResult? Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        listeningLearning,
+    TResult? Function()? validateEmail,
+    TResult? Function()? validatePhoneNumber,
+    TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
+    TResult? Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult? Function()? community,
+    TResult? Function(ChatTopic chatTopic)? communityTopic,
+    TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
+  }) {
+    return privateChat?.call(chatSession, receiver);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    TResult Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage)?
+        flashCardLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        quizLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent)?
+        pronunciationLearning,
+    TResult Function(LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent)?
+        listeningLearning,
+    TResult Function()? validateEmail,
+    TResult Function()? validatePhoneNumber,
+    TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
+    TResult Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult Function()? community,
+    TResult Function(ChatTopic chatTopic)? communityTopic,
+    TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
+    required TResult orElse(),
+  }) {
+    if (privateChat != null) {
+      return privateChat(chatSession, receiver);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+    required TResult Function(_LanguageCourse value) languageCourse,
+    required TResult Function(_LanguageCourseDetails value)
+        languageCourseDetails,
+    required TResult Function(_FlashCardLearning value) flashCardLearning,
+    required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
+    required TResult Function(_PronunciationLearning value)
+        pronunciationLearning,
+    required TResult Function(_ListeningLearning value) listeningLearning,
+    required TResult Function(_ValidateEmail value) validateEmail,
+    required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
+    required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
+    required TResult Function(_AiChatBotDetails value) aiChatBotDetails,
+    required TResult Function(_Community value) community,
+    required TResult Function(_CommunityTopic value) communityTopic,
+    required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
+  }) {
+    return privateChat(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+    TResult? Function(_LanguageCourse value)? languageCourse,
+    TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult? Function(_FlashCardLearning value)? flashCardLearning,
+    TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
+    TResult? Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult? Function(_ListeningLearning value)? listeningLearning,
+    TResult? Function(_ValidateEmail value)? validateEmail,
+    TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult? Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult? Function(_Community value)? community,
+    TResult? Function(_CommunityTopic value)? communityTopic,
+    TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
+  }) {
+    return privateChat?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    TResult Function(_LanguageCourse value)? languageCourse,
+    TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult Function(_FlashCardLearning value)? flashCardLearning,
+    TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
+    TResult Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult Function(_ListeningLearning value)? listeningLearning,
+    TResult Function(_ValidateEmail value)? validateEmail,
+    TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult Function(_Community value)? community,
+    TResult Function(_CommunityTopic value)? communityTopic,
+    TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
+    required TResult orElse(),
+  }) {
+    if (privateChat != null) {
+      return privateChat(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PrivateChat implements AppRouteInfo {
+  const factory _PrivateChat(
+      {required final ChatSession chatSession,
+      required final User receiver}) = _$PrivateChatImpl;
+
+  ChatSession get chatSession;
+  User get receiver;
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PrivateChatImplCopyWith<_$PrivateChatImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

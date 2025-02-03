@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Cancellation"),
+        "chat": MessageLookupByLibrary.simpleMessage("Chat"),
         "chatBotRequired": MessageLookupByLibrary.simpleMessage(
             "AI chatbot subscription is required"),
         "chatBotRequiredDescription": MessageLookupByLibrary.simpleMessage(
@@ -134,6 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invalid phone number"),
         "invalidUserName":
             MessageLookupByLibrary.simpleMessage("Wrong username format"),
+        "isYouText": MessageLookupByLibrary.simpleMessage("(You)"),
         "joinCommunity": MessageLookupByLibrary.simpleMessage("Join community"),
         "joinText": MessageLookupByLibrary.simpleMessage("Join"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
@@ -143,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
             "Access thousands of courses, resources, and learning materials on the go."),
         "learned": MessageLookupByLibrary.simpleMessage("Learned"),
+        "learningInfo": MessageLookupByLibrary.simpleMessage("Learning info"),
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Learning language"),
         "level": MessageLookupByLibrary.simpleMessage("Level"),
@@ -187,6 +190,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "parseException":
             MessageLookupByLibrary.simpleMessage("Parse Exception"),
+        "participants": MessageLookupByLibrary.simpleMessage("Participants"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
@@ -258,6 +262,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unknownException": m2,
         "updateProfilePicture":
             MessageLookupByLibrary.simpleMessage("Update profile picture"),
+        "userInfo": MessageLookupByLibrary.simpleMessage("User info"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "usernameHint":
             MessageLookupByLibrary.simpleMessage("Enter your username"),

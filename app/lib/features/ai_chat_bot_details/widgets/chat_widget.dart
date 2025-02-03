@@ -7,7 +7,7 @@ import 'package:services/services.dart';
 
 import '../../../app.dart';
 
-class ChatWidget extends StatelessWidget {
+class ChatWidget extends StatefulWidget {
   const ChatWidget({
     super.key,
     required this.message,
@@ -19,6 +19,8 @@ class ChatWidget extends StatelessWidget {
     this.isMeTextColor,
     this.chatMessageType = ChatMessageType.text,
     this.senderName,
+    this.chatWithBot = true,
+    this.timestamp,
   });
 
   final String message;
@@ -30,12 +32,32 @@ class ChatWidget extends StatelessWidget {
   final Color? isMeTextColor;
   final ChatMessageType chatMessageType;
   final String? senderName;
+  final bool chatWithBot;
+  final DateTime? timestamp;
+
+  @override
+  State<ChatWidget> createState() => _ChatWidgetState();
+}
+
+class _ChatWidgetState extends State<ChatWidget> {
+  bool _showTimestamp = false;
+
+  void _toggleTimestamp() {
+    setState(
+      () {
+        _showTimestamp = !_showTimestamp;
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    if (chatMessageType == ChatMessageType.text) {
-      return _buildTextMessage(context);
-    } else if (chatMessageType == ChatMessageType.join) {
+    if (widget.chatMessageType == ChatMessageType.text) {
+      return GestureDetector(
+        onTap: _toggleTimestamp,
+        child: _buildTextMessage(context),
+      );
+    } else if (widget.chatMessageType == ChatMessageType.join) {
       return _buildJoinMessage();
     }
     return const SizedBox.shrink();
@@ -47,7 +69,7 @@ class ChatWidget extends StatelessWidget {
       children: [
         Flexible(
           child: Text(
-            S.current.hasJoinedTheChat(senderName ?? ''),
+            S.current.hasJoinedTheChat(widget.senderName ?? ''),
             textAlign: TextAlign.center,
             style: AppTextStyles.s14w400primary().font14().medium,
           ),
@@ -59,20 +81,21 @@ class ChatWidget extends StatelessWidget {
   Widget _buildTextMessage(BuildContext context) {
     return Column(
       crossAxisAlignment:
-          isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+          widget.isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
       children: [
         Align(
-          alignment: isMe ? Alignment.centerRight : Alignment.centerLeft,
+          alignment: widget.isMe ? Alignment.centerRight : Alignment.centerLeft,
           child: Text(
-            senderName ?? '',
+            widget.senderName ?? '',
             style: AppTextStyles.s14w400primary().font12().medium.let(
               (it) {
                 return it.copyWith(
-                  color: isMe
-                      ? isMeTextColor ??
+                  color: widget.isMe
+                      ? widget.isMeTextColor ??
                           AppColors.current.primaryTextColor
                               .withValues(alpha: 0.8)
-                      : isNotMeTextColor ?? AppColors.current.primaryTextColor,
+                      : widget.isNotMeTextColor ??
+                          AppColors.current.primaryTextColor,
                 );
               },
             ),
@@ -82,19 +105,24 @@ class ChatWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment:
-              isMe ? MainAxisAlignment.end : MainAxisAlignment.start,
+              widget.isMe ? MainAxisAlignment.end : MainAxisAlignment.start,
           children: [
-            isMe
+            widget.isMe
                 ? const SizedBox.shrink()
-                : senderAvatar == null
-                    ? Assets.images.robotAssistant.image(
-                        width: Dimens.d32.responsive(),
-                        height: Dimens.d32.responsive(),
-                      )
+                : widget.senderAvatar == null
+                    ? widget.chatWithBot
+                        ? Assets.images.robotAssistant.image(
+                            width: Dimens.d32.responsive(),
+                            height: Dimens.d32.responsive(),
+                          )
+                        : Assets.images.appIcon.image(
+                            width: Dimens.d32.responsive(),
+                            height: Dimens.d32.responsive(),
+                          )
                     : CircularAvatar(
                         width: Dimens.d32.responsive(),
                         height: Dimens.d32.responsive(),
-                        imageUrl: senderAvatar,
+                        imageUrl: widget.senderAvatar,
                       ),
             Container(
               margin: EdgeInsets.symmetric(
@@ -109,36 +137,36 @@ class ChatWidget extends StatelessWidget {
                 maxWidth: AppDimens.of(context).screenWidth * 0.45,
               ),
               decoration: BoxDecoration(
-                color: isMe
-                    ? isMeColor ?? AppColors.current.primaryColor
-                    : isNotMeColor ??
+                color: widget.isMe
+                    ? widget.isMeColor ?? AppColors.current.primaryColor
+                    : widget.isNotMeColor ??
                         FoundationColors.neutral200.withValues(alpha: 0.5),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(Dimens.d16.responsive()),
                   topRight: Radius.circular(Dimens.d16.responsive()),
-                  bottomLeft: isMe
+                  bottomLeft: widget.isMe
                       ? Radius.circular(Dimens.d16.responsive())
                       : Radius.zero,
-                  bottomRight: isMe
+                  bottomRight: widget.isMe
                       ? Radius.zero
                       : Radius.circular(Dimens.d16.responsive()),
                 ),
               ),
               child: Text(
-                message,
+                widget.message,
                 textAlign: TextAlign.justify,
                 style: AppTextStyles.s14w400primary().font14().medium.let(
                       (it) => it.copyWith(
-                        color: isMe
-                            ? isMeTextColor ??
+                        color: widget.isMe
+                            ? widget.isMeTextColor ??
                                 AppColors.current.secondaryTextColor
-                            : isNotMeTextColor ??
+                            : widget.isNotMeTextColor ??
                                 AppColors.current.primaryTextColor,
                       ),
                     ),
               ),
             ),
-            isMe
+            widget.isMe
                 ? Selector<AppViewModel, AppViewModelData>(
                     selector: (_, viewModel) => viewModel.viewModelData,
                     shouldRebuild: (previous, next) =>
@@ -160,6 +188,24 @@ class ChatWidget extends StatelessWidget {
                 : const SizedBox.shrink(),
           ],
         ),
+        if (_showTimestamp) ...[
+          const SizedBox(height: Dimens.d4),
+          Text(
+            widget.timestamp
+                    ?.toStringWithFormat(DateTimeFormatConstants.uiDateTime) ??
+                '',
+            style: AppTextStyles.s14w400primary().font12().medium.let(
+                  (it) => it.copyWith(
+                    color: widget.isMe
+                        ? widget.isMeTextColor ??
+                            AppColors.current.primaryTextColor
+                                .withValues(alpha: 0.8)
+                        : widget.isNotMeTextColor ??
+                            AppColors.current.primaryTextColor,
+                  ),
+                ),
+          ),
+        ]
       ],
     );
   }

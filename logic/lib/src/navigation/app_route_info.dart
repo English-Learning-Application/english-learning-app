@@ -54,4 +54,8 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.groupChat({
     required ChatSession chatSession,
   }) = _GroupChat;
+  const factory AppRouteInfo.privateChat({
+    required ChatSession chatSession,
+    required User receiver,
+  }) = _PrivateChat;
 }
