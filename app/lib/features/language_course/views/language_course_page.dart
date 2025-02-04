@@ -156,7 +156,7 @@ class _LanguageCoursePageState
                 final course = courses[index];
                 return CourseCard(
                   borderRadius: Dimens.d8.responsive(),
-                  color: FoundationColors.primary500,
+                  color: AppColors.current.backgroundColor,
                   padding: EdgeInsets.symmetric(
                     horizontal: Dimens.d16.responsive(),
                     vertical: Dimens.d8.responsive(),
@@ -178,10 +178,8 @@ class _LanguageCoursePageState
                             child: Text(
                               course.language.languageName,
                               overflow: TextOverflow.ellipsis,
-                              style: AppTextStyles.s14w400primary()
-                                  .font16()
-                                  .secondary
-                                  .bold,
+                              style:
+                                  AppTextStyles.s14w400primary().font16().bold,
                             ),
                           ),
                           SizedBox(
@@ -198,8 +196,7 @@ class _LanguageCoursePageState
                       ),
                       Text(
                         "${S.current.level}: ${course.level.serverValue}",
-                        style:
-                            AppTextStyles.s14w400primary().font14().secondary,
+                        style: AppTextStyles.s14w400primary().font14(),
                       ),
                       SizedBox(
                         height: Dimens.d8.responsive(),
@@ -209,9 +206,7 @@ class _LanguageCoursePageState
                         children: [
                           Text(
                             course.learningType.learningTypeName,
-                            style: AppTextStyles.s14w400primary()
-                                .font14()
-                                .secondary,
+                            style: AppTextStyles.s14w400primary().font14(),
                           ),
                           course.learningType.icon.svg(
                             width: Dimens.d24.responsive(),
@@ -224,12 +219,12 @@ class _LanguageCoursePageState
                       ),
                       LinearProgressIndicator(
                         value: course.completionProgress(),
-                        color: FoundationColors.accent200,
+                        color: FoundationColors.primary500,
                         borderRadius: BorderRadius.circular(
                           Dimens.d8.responsive(),
                         ),
                         minHeight: Dimens.d4.responsive(),
-                        backgroundColor: FoundationColors.neutral50,
+                        backgroundColor: FoundationColors.neutral200,
                       )
                     ],
                   ),

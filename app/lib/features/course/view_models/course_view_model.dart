@@ -41,6 +41,26 @@ class CourseViewModel extends BaseViewModel<CourseViewModelData> {
     );
   }
 
+  void selectCategoryCourse(int index) async {
+    final category = viewModelData.categories[index];
+
+    final categoryCourse = viewModelData.categoryCourses
+        .where(
+          (element) =>
+              element.category.categoryId == category.categoryId &&
+              element.language == viewModelData.learningLanguage,
+        )
+        .toList();
+
+    await navigator.push(
+      AppRouteInfo.categoryCourseDetails(
+        language: viewModelData.learningLanguage,
+        category: category,
+        categoryCourses: categoryCourse,
+      ),
+    );
+  }
+
   void changeLearningLanguage(LearningLanguage learningLanguage) async {
     await runViewModelCatching(
       action: () async {

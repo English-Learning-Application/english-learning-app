@@ -16,6 +16,8 @@ import 'package:app/di/di.dart' as _i120;
 import 'package:app/features/ai_chat_bot/view_models/ai_chat_bot.dart' as _i709;
 import 'package:app/features/ai_chat_bot_details/view_model/ai_chat_bot_details.dart'
     as _i825;
+import 'package:app/features/category_course_details/view_models/category_course_details.dart'
+    as _i583;
 import 'package:app/features/community/view_model/community.dart' as _i15;
 import 'package:app/features/community_topic/view_model/community_topic.dart'
     as _i780;
@@ -92,6 +94,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
     gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
+    gh.factory<_i583.CategoryCourseDetailsViewModel>(
+        () => _i583.CategoryCourseDetailsViewModel());
     gh.lazySingleton<_i50.FlutterTts>(() => appModules.flutterTts);
     gh.lazySingleton<_i398.FirebaseAnalytics>(
         () => appModules.firebaseAnalytics);
@@ -187,15 +191,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i235.MatchingLearningViewModel>(() =>
         _i235.MatchingLearningViewModel(
             gh<_i182.MatchingLearningUpdateUseCase>()));
-    gh.lazySingleton<_i215.AppViewModel>(() => _i215.AppViewModel(
-          gh<_i182.SaveLanguageCodeUseCase>(),
-          gh<_i182.SaveThemeModeUseCase>(),
-          gh<_i182.GetLoggedInUserUseCase>(),
-          gh<_i182.GetCurrentPrefUserUseCase>(),
-          gh<_i473.RemotePushNotificationService>(),
-          gh<_i182.LogoutUseCase>(),
-          gh<_i182.GetAllSubscriptionUseCase>(),
-        ));
     gh.factory<_i129.ChatBotSubscriptionRouteGuard>(() =>
         _i129.ChatBotSubscriptionRouteGuard(
             gh<_i182.HasSubscriptionUseCase>()));
@@ -212,6 +207,16 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i437.ChatMessageDataMapper>(),
           gh<_i182.GetUsersDataUseCase>(),
           gh<_i182.InitiatePrivateChatSessionUseCase>(),
+        ));
+    gh.lazySingleton<_i215.AppViewModel>(() => _i215.AppViewModel(
+          gh<_i182.SaveLanguageCodeUseCase>(),
+          gh<_i182.SaveThemeModeUseCase>(),
+          gh<_i182.GetLoggedInUserUseCase>(),
+          gh<_i182.GetCurrentPrefUserUseCase>(),
+          gh<_i473.RemotePushNotificationService>(),
+          gh<_i182.LogoutUseCase>(),
+          gh<_i182.GetAllSubscriptionUseCase>(),
+          gh<_i182.DeleteFcmTokensUseCase>(),
         ));
     gh.factory<_i837.ValidateEmailViewModel>(() => _i837.ValidateEmailViewModel(
           gh<_i182.SendEmailVerificationUseCase>(),

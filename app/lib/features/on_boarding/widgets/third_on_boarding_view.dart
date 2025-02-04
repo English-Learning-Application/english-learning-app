@@ -8,44 +8,49 @@ class ThirdOnBoardingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CommonScaffold(
+      padding: EdgeInsets.zero,
       body: _buildBody(context),
     );
   }
 
   Widget _buildBody(BuildContext context) {
-    return SafeArea(
-      child: Column(
-        children: [
-          ClipPath(
+    return Column(
+      children: [
+        Expanded(
+          child: ClipPath(
             clipper: ThirdOnBoardingClipper(),
-            child: Assets.images.onboard03.image(
+            child: Assets.icons.icOnboarding3.svg(
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(height: 10),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: Dimens.d16.responsive(),
-            ),
-            child: Text(
-              S.current.trackYourProgress,
-              style: AppTextStyles.s14w400primary().font30().bold.primary50,
-            ),
+        ),
+        SizedBox(
+          height: Dimens.d10.responsive(),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: Dimens.d8.responsive(),
           ),
-          const Spacer(),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: Dimens.d16.responsive(),
-            ),
-            child: Text(
-              S.current.trackYourProgressDescription,
-              textAlign: TextAlign.center,
-              style: AppTextStyles.s14w400primary().font20(),
-            ),
+          child: Text(
+            S.current.trackYourProgress,
+            style: AppTextStyles.s14w400primary().font30().bold.primary50,
           ),
-        ],
-      ),
+        ),
+        SizedBox(
+          height: Dimens.d10.responsive(),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: Dimens.d8.responsive(),
+          ),
+          child: Text(
+            S.current.trackYourProgressDescription,
+            textAlign: TextAlign.center,
+            style: AppTextStyles.s14w400primary().font20(),
+          ),
+        ),
+      ],
     );
   }
 }

@@ -13,11 +13,13 @@ class AppNotification with _$AppNotification {
     @Default(AppNotification.defaultImage) String image,
     @Default(AppNotification.defaultTitle) String title,
     @Default(AppNotification.defaultMessage) String message,
+    @Default(AppNotification.defaultAction) String action,
   }) = _AppNotification;
 
   static const defaultNotificationId = '';
   static const defaultNotificationType = NotificationType.defaultValue;
   static const defaultImage = '';
   static const defaultTitle = '';
+  static const defaultAction = '';
   static const defaultMessage = '';
 }

@@ -8,46 +8,50 @@ class SecondOnBoardingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CommonScaffold(
+      padding: EdgeInsets.zero,
       body: _buildBody(context),
     );
   }
 
   Widget _buildBody(BuildContext context) {
-    return SafeArea(
-      child: Column(
-        children: [
-          ClipPath(
+    return Column(
+      children: [
+        Expanded(
+          child: ClipPath(
             clipper: SecondOnBoardingClipper(),
-            child: Assets.images.onboard02.image(
+            child: Assets.icons.icOnboarding2.svg(
               fit: BoxFit.cover,
             ),
           ),
-          SizedBox(
-            height: Dimens.d10.responsive(),
+        ),
+        SizedBox(
+          height: Dimens.d10.responsive(),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: Dimens.d8.responsive(),
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: Dimens.d16.responsive(),
-            ),
-            child: Text(
-              S.current.multiLanguage,
-              style: AppTextStyles.s14w400primary().font30().bold.primary50,
-            ),
+          child: Text(
+            S.current.multiLanguage,
+            textAlign: TextAlign.center,
+            style: AppTextStyles.s14w400primary().font30().bold.primary50,
           ),
-          const Spacer(),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: Dimens.d16.responsive(),
-            ),
-            child: Text(
-              S.current.multiLanguageDescription,
-              textAlign: TextAlign.center,
-              style: AppTextStyles.s14w400primary().font20(),
-            ),
+        ),
+        SizedBox(
+          height: Dimens.d10.responsive(),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: Dimens.d8.responsive(),
           ),
-        ],
-      ),
+          child: Text(
+            S.current.multiLanguageDescription,
+            textAlign: TextAlign.center,
+            style: AppTextStyles.s14w400primary().font20(),
+          ),
+        ),
+      ],
     );
   }
 }

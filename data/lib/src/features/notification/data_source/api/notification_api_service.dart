@@ -15,4 +15,16 @@ class NotificationApiDataSource {
       body: {'fcmToken': token},
     );
   }
+
+  Future<void> deleteFcmTokens({
+    required List<String> fcmTokens,
+  }) async {
+    await _authAppServerApiClient.request(
+      method: RestApiMethod.post,
+      path: NotificationEndpoints.deleteFcmTokens,
+      body: {
+        'fcmTokens': fcmTokens,
+      },
+    );
+  }
 }

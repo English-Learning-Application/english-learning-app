@@ -21,6 +21,7 @@ mixin _$AppNotification {
   String get image => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get message => throw _privateConstructorUsedError;
+  String get action => throw _privateConstructorUsedError;
 
   /// Create a copy of AppNotification
   /// with the given fields replaced by the non-null parameter values.
@@ -40,7 +41,8 @@ abstract class $AppNotificationCopyWith<$Res> {
       NotificationType notificationType,
       String image,
       String title,
-      String message});
+      String message,
+      String action});
 }
 
 /// @nodoc
@@ -63,6 +65,7 @@ class _$AppNotificationCopyWithImpl<$Res, $Val extends AppNotification>
     Object? image = null,
     Object? title = null,
     Object? message = null,
+    Object? action = null,
   }) {
     return _then(_value.copyWith(
       notificationId: null == notificationId
@@ -85,6 +88,10 @@ class _$AppNotificationCopyWithImpl<$Res, $Val extends AppNotification>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+      action: null == action
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -102,7 +109,8 @@ abstract class _$$AppNotificationImplCopyWith<$Res>
       NotificationType notificationType,
       String image,
       String title,
-      String message});
+      String message,
+      String action});
 }
 
 /// @nodoc
@@ -123,6 +131,7 @@ class __$$AppNotificationImplCopyWithImpl<$Res>
     Object? image = null,
     Object? title = null,
     Object? message = null,
+    Object? action = null,
   }) {
     return _then(_$AppNotificationImpl(
       notificationId: null == notificationId
@@ -145,6 +154,10 @@ class __$$AppNotificationImplCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+      action: null == action
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -157,7 +170,8 @@ class _$AppNotificationImpl implements _AppNotification {
       this.notificationType = AppNotification.defaultNotificationType,
       this.image = AppNotification.defaultImage,
       this.title = AppNotification.defaultTitle,
-      this.message = AppNotification.defaultMessage});
+      this.message = AppNotification.defaultMessage,
+      this.action = AppNotification.defaultAction});
 
   @override
   @JsonKey()
@@ -174,10 +188,13 @@ class _$AppNotificationImpl implements _AppNotification {
   @override
   @JsonKey()
   final String message;
+  @override
+  @JsonKey()
+  final String action;
 
   @override
   String toString() {
-    return 'AppNotification(notificationId: $notificationId, notificationType: $notificationType, image: $image, title: $title, message: $message)';
+    return 'AppNotification(notificationId: $notificationId, notificationType: $notificationType, image: $image, title: $title, message: $message, action: $action)';
   }
 
   @override
@@ -191,12 +208,13 @@ class _$AppNotificationImpl implements _AppNotification {
                 other.notificationType == notificationType) &&
             (identical(other.image, image) || other.image == image) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.action, action) || other.action == action));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, notificationId, notificationType, image, title, message);
+  int get hashCode => Object.hash(runtimeType, notificationId, notificationType,
+      image, title, message, action);
 
   /// Create a copy of AppNotification
   /// with the given fields replaced by the non-null parameter values.
@@ -214,7 +232,8 @@ abstract class _AppNotification implements AppNotification {
       final NotificationType notificationType,
       final String image,
       final String title,
-      final String message}) = _$AppNotificationImpl;
+      final String message,
+      final String action}) = _$AppNotificationImpl;
 
   @override
   String get notificationId;
@@ -226,6 +245,8 @@ abstract class _AppNotification implements AppNotification {
   String get title;
   @override
   String get message;
+  @override
+  String get action;
 
   /// Create a copy of AppNotification
   /// with the given fields replaced by the non-null parameter values.

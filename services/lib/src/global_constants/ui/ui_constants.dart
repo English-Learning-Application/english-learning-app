@@ -1,5 +1,6 @@
-import 'package:flutter/services.dart';
 import 'package:design/design.dart';
+import 'package:flutter/material.dart%20';
+import 'package:flutter/services.dart';
 
 class UIConstants {
   const UIConstants._();
@@ -25,8 +26,10 @@ class UIConstants {
   ];
 
   static const systemUIOverlay = SystemUiOverlayStyle(
-    statusBarBrightness: Brightness.light,
-    statusBarColor: FoundationColors.primary100,
+    systemNavigationBarContrastEnforced: false,
+    statusBarColor: Colors.transparent,
+    systemNavigationBarColor: Colors.transparent,
+    systemNavigationBarDividerColor: Colors.transparent,
   );
 
   static const textFieldTextStyleHeight = 1.3;

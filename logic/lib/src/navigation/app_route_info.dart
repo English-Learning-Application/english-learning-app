@@ -63,4 +63,9 @@ class AppRouteInfo with _$AppRouteInfo {
     required ChatSession chatSession,
     required User receiver,
   }) = _PrivateChat;
+  const factory AppRouteInfo.categoryCourseDetails({
+    required LearningLanguage language,
+    required Category category,
+    required List<CategoryCourse> categoryCourses,
+  }) = _CategoryCourseDetails;
 }

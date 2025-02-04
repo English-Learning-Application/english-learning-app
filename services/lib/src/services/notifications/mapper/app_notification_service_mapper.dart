@@ -1,6 +1,8 @@
-import 'package:logic/logic.dart';
+import 'dart:convert';
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:injectable/injectable.dart';
+import 'package:logic/logic.dart';
 
 import '../../../../services.dart';
 
@@ -18,7 +20,9 @@ class AppNotificationServiceMapper
       notificationId: data?.messageId ?? AppNotification.defaultNotificationId,
       image: AppNotification.defaultImage,
       title: data?.notification?.title ?? AppNotification.defaultTitle,
-      message: data?.notification?.body ?? AppNotification.defaultMessage,
+      message: (jsonDecode(data?.notification?.body ?? '{}')
+              as Map<String, dynamic>?)?["message"] ??
+          AppNotification.defaultMessage,
       notificationType: _appNotificationTypeServiceMapper.mapToOutput(
         data?.messageType,
       ),

@@ -150,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thông tin học tập"),
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Ngôn ngữ học"),
+        "lessons": MessageLookupByLibrary.simpleMessage("Bài học"),
         "level": MessageLookupByLibrary.simpleMessage("Cấp độ"),
         "listenAndMatch":
             MessageLookupByLibrary.simpleMessage("Nghe và kết hợp"),

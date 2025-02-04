@@ -9,6 +9,7 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
   final RemotePushNotificationService _remotePushNotificationService;
   final LogoutUseCase _logoutUseCase;
   final GetAllSubscriptionUseCase _getAllSubscriptionUseCase;
+  final DeleteFcmTokensUseCase _deleteFcmTokensUseCase;
 
   AppViewModel(
     this._saveLanguageCodeUseCase,
@@ -18,6 +19,7 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
     this._remotePushNotificationService,
     this._logoutUseCase,
     this._getAllSubscriptionUseCase,
+    this._deleteFcmTokensUseCase,
   ) : super(const AppViewModelData());
 
   FutureOr<void> appLanguageChanged(
@@ -167,11 +169,14 @@ class AppViewModel extends BaseViewModel<AppViewModelData> {
   Future<void> logoutUser() async {
     await runViewModelCatching(
       action: () async {
+        await _deleteFcmTokensUseCase.execute(const DeleteFcmTokensInput());
         await _logoutUseCase.execute(const LogoutInput());
-        updateData(viewModelData.copyWith(
-          isLoggedIn: false,
-          currentUser: User.empty,
-        ));
+        updateData(
+          viewModelData.copyWith(
+            isLoggedIn: false,
+            currentUser: User.empty,
+          ),
+        );
       },
     );
   }

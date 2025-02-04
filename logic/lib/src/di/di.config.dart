@@ -63,6 +63,8 @@ import 'package:logic/src/features/language_course/use_case/get_language_courses
     as _i408;
 import 'package:logic/src/features/language_course/use_case/get_language_courses_by_language_use_case.dart'
     as _i244;
+import 'package:logic/src/features/notification/usecase/delete_fcm_tokens_use_case.dart'
+    as _i366;
 import 'package:logic/src/features/notification/usecase/register_fcm_token_use_case.dart'
     as _i119;
 import 'package:logic/src/features/profile/use_case/send_email_verification_use_case.dart'
@@ -133,14 +135,16 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i323.UsernameRegistrationUseCase>(() =>
         _i323.UsernameRegistrationUseCase(
             gh<_i182.AuthenticationRepository>()));
-    gh.factory<_i813.GetChatBotSessionsUseCase>(
-        () => _i813.GetChatBotSessionsUseCase(gh<_i182.AiChatBotRepository>()));
     gh.factory<_i855.CreateNewChatBotSessionUseCase>(() =>
         _i855.CreateNewChatBotSessionUseCase(gh<_i182.AiChatBotRepository>()));
-    gh.factory<_i956.GetChatBotMessagesUseCase>(
-        () => _i956.GetChatBotMessagesUseCase(gh<_i182.AiChatBotRepository>()));
     gh.factory<_i876.DeleteChatSessionUseCase>(
         () => _i876.DeleteChatSessionUseCase(gh<_i182.AiChatBotRepository>()));
+    gh.factory<_i956.GetChatBotMessagesUseCase>(
+        () => _i956.GetChatBotMessagesUseCase(gh<_i182.AiChatBotRepository>()));
+    gh.factory<_i813.GetChatBotSessionsUseCase>(
+        () => _i813.GetChatBotSessionsUseCase(gh<_i182.AiChatBotRepository>()));
+    gh.factory<_i366.DeleteFcmTokensUseCase>(
+        () => _i366.DeleteFcmTokensUseCase(gh<_i182.NotificationRepository>()));
     gh.factory<_i1006.FacebookLoginUseCase>(() => _i1006.FacebookLoginUseCase(
           gh<_i182.AuthenticationRepository>(),
           gh<_i182.AppNavigator>(),
@@ -152,22 +156,22 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i245.VerifyPhoneOtpUseCase>(
         () => _i245.VerifyPhoneOtpUseCase(gh<_i182.ProfileRepository>()));
-    gh.factory<_i767.GetCommunityTopicsUseCase>(
-        () => _i767.GetCommunityTopicsUseCase(gh<_i182.CommunityRepository>()));
-    gh.factory<_i179.GetSessionsByTopicUseCase>(
-        () => _i179.GetSessionsByTopicUseCase(gh<_i182.CommunityRepository>()));
-    gh.factory<_i608.GetPrivateSessionsUseCase>(
-        () => _i608.GetPrivateSessionsUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i239.CreateCommunityChatSessionUseCase>(() =>
         _i239.CreateCommunityChatSessionUseCase(
             gh<_i182.CommunityRepository>()));
+    gh.factory<_i767.GetCommunityTopicsUseCase>(
+        () => _i767.GetCommunityTopicsUseCase(gh<_i182.CommunityRepository>()));
+    gh.factory<_i608.GetPrivateSessionsUseCase>(
+        () => _i608.GetPrivateSessionsUseCase(gh<_i182.CommunityRepository>()));
+    gh.factory<_i179.GetSessionsByTopicUseCase>(
+        () => _i179.GetSessionsByTopicUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i444.GetSessionMessagesUseCase>(
         () => _i444.GetSessionMessagesUseCase(gh<_i182.CommunityRepository>()));
-    gh.factory<_i1022.JoinChatSessionUseCase>(
-        () => _i1022.JoinChatSessionUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i144.InitiatePrivateChatSessionUseCase>(() =>
         _i144.InitiatePrivateChatSessionUseCase(
             gh<_i182.CommunityRepository>()));
+    gh.factory<_i1022.JoinChatSessionUseCase>(
+        () => _i1022.JoinChatSessionUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i845.CreateSubscriptionPaymentUseCase>(() =>
         _i845.CreateSubscriptionPaymentUseCase(
             gh<_i182.SubscriptionRepository>()));
@@ -183,6 +187,8 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i162.GetInitialAppDataUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i217.GetPhoneImagesUseCase>(
         () => _i217.GetPhoneImagesUseCase(gh<_i182.AppRepository>()));
+    gh.factory<_i246.GetUsersDataUseCase>(
+        () => _i246.GetUsersDataUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i281.GetUsersUseCase>(
         () => _i281.GetUsersUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i688.IsLoggedInUseCase>(
@@ -193,8 +199,6 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i783.SaveThemeModeUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i732.TrackConnectivityUseCase>(
         () => _i732.TrackConnectivityUseCase(gh<_i182.AppRepository>()));
-    gh.factory<_i246.GetUsersDataUseCase>(
-        () => _i246.GetUsersDataUseCase(gh<_i182.AppRepository>()));
     gh.factory<_i119.RegisterFcmTokenUseCase>(
         () => _i119.RegisterFcmTokenUseCase(
               gh<_i182.NotificationRepository>(),

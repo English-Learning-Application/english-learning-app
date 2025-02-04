@@ -150,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "learningInfo": MessageLookupByLibrary.simpleMessage("Learning info"),
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Learning language"),
+        "lessons": MessageLookupByLibrary.simpleMessage("Lessons"),
         "level": MessageLookupByLibrary.simpleMessage("Level"),
         "listenAndMatch":
             MessageLookupByLibrary.simpleMessage("Listen and match"),

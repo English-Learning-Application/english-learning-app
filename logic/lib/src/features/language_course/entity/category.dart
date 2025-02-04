@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:services/services.dart';
 
 part 'category.freezed.dart';
 
@@ -32,4 +33,6 @@ class Category with _$Category {
   static const defaultImageUrl = '';
   static const DateTime? defaultCreatedAt = null;
   static const DateTime? defaultUpdatedAt = null;
+
+  String get categoryImage => "${UrlConstants.appMediaBaseUrl}$imageUrl";
 }

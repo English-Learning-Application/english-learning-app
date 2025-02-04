@@ -46,8 +46,6 @@ class CommunityViewModel extends BaseViewModel<CommunityViewModelData> {
             )
                 .then(
               (output) {
-                print(
-                    "private.chat.length: ${output.friendChatSessions.length}");
                 updateData(
                   viewModelData.copyWith(
                     friendChatSessions: output.friendChatSessions,

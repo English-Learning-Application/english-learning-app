@@ -27,12 +27,26 @@ class LanguageLevelCard extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           color: isSelected
-              ? AppColors.current.primaryColor
+              ? AppColors.current.primaryColor.withValues(alpha: 0.8)
               : AppColors.current.backgroundColor,
           borderRadius: BorderRadius.circular(Dimens.d24.responsive()),
-          border: Border.all(
-            color: AppColors.current.primaryColor,
-            width: Dimens.d1.responsive(),
+          border: Border(
+            top: BorderSide(
+              color: AppColors.current.primaryColor,
+              width: Dimens.d1.responsive(),
+            ),
+            bottom: BorderSide(
+              color: AppColors.current.primaryColor,
+              width: Dimens.d3.responsive(),
+            ),
+            left: BorderSide(
+              color: AppColors.current.primaryColor,
+              width: Dimens.d1.responsive(),
+            ),
+            right: BorderSide(
+              color: AppColors.current.primaryColor,
+              width: Dimens.d1.responsive(),
+            ),
           ),
         ),
         child: Center(

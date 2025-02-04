@@ -9,4 +9,5 @@ class SharedPreferencesKeys {
   static const String languageCode = 'LANGUAGE_CODE';
   static const String isFirstLogin = 'IS_FIRST_TIME';
   static const String isFirstLaunchApp = 'IS_FIRST_LAUNCH_APP';
+  static const String deviceFcmTokens = 'DEVICE_FCM_TOKENS';
 }

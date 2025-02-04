@@ -80,6 +80,12 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
         chatSession: chatSession,
         receiver: receiver,
       ),
+      categoryCourseDetails: (language ,category, categoryCourses) =>
+          CategoryCourseDetailsRoute(
+            language: language,
+        category: category,
+        categoryCourses: categoryCourses,
+      ),
     );
   }
 }

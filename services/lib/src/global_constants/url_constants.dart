@@ -14,7 +14,12 @@ class UrlConstants {
   }
 
   static String get appMediaBaseUrl {
-    return 'https://english-learning-bucket.s3.ap-southeast-2.amazonaws.com';
+    return switch (EnvConstants.flavor) {
+      Flavor.develop =>
+        'https://english-learning-bucket.s3.ap-southeast-2.amazonaws.com',
+      Flavor.production =>
+        'https://english-learning-bucket.s3.ap-southeast-2.amazonaws.com',
+    };
   }
 
   static String get appBaseUrlSocket {

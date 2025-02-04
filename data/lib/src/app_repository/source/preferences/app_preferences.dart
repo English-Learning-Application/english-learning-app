@@ -97,6 +97,25 @@ class AppPreferences with LogMixin {
     );
   }
 
+  Future<void> saveDeviceFcmToken(String fcmToken) async {
+    final deviceFcmTokens = _sharedPreferences
+            .getStringList(SharedPreferencesKeys.deviceFcmTokens) ??
+        [];
+    deviceFcmTokens.add(fcmToken);
+    await _sharedPreferences.setStringList(
+        SharedPreferencesKeys.deviceFcmTokens, deviceFcmTokens);
+  }
+
+  Future<List<String>> getDeviceFcmTokens() async {
+    return _sharedPreferences
+            .getStringList(SharedPreferencesKeys.deviceFcmTokens) ??
+        [];
+  }
+
+  Future<void> clearDeviceFcmTokens() async {
+    await _sharedPreferences.remove(SharedPreferencesKeys.deviceFcmTokens);
+  }
+
   Future<void> saveRefreshToken(String refreshToken) async {
     await _encryptedSharedPreferences.setString(
       SharedPreferencesKeys.refreshToken,

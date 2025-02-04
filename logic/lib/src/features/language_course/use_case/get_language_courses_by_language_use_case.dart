@@ -45,11 +45,9 @@ class GetLanguageCoursesByLanguageUseCase extends BaseFutureUseCase<
           int completedCount = 0;
 
           progress.flashCardProgress.map((e) {
-            print("E.COURSEId.print: ${e.courseId}");
             if (e.learningContentId ==
                     content.languageCourseLearningContentId &&
                 e.courseId == languageCourse.languageCourseId) {
-              print("Hitted Tai");
               completedCount++;
             }
           }).toList();
@@ -57,7 +55,6 @@ class GetLanguageCoursesByLanguageUseCase extends BaseFutureUseCase<
             if (e.learningContentId ==
                     content.languageCourseLearningContentId &&
                 e.courseId == languageCourse.languageCourseId) {
-              print("Hitted Tai");
               completedCount++;
             }
           }).toList();
@@ -66,7 +63,6 @@ class GetLanguageCoursesByLanguageUseCase extends BaseFutureUseCase<
             if (e.learningContentId ==
                     content.languageCourseLearningContentId &&
                 e.courseId == languageCourse.languageCourseId) {
-              print("Hitted Tai");
               completedCount++;
             }
           }).toList();
@@ -75,7 +71,6 @@ class GetLanguageCoursesByLanguageUseCase extends BaseFutureUseCase<
             if (e.learningContentId ==
                     content.languageCourseLearningContentId &&
                 e.courseId == languageCourse.languageCourseId) {
-              print("Hitted Tai");
               completedCount++;
             }
           }).toList();

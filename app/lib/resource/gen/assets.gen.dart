@@ -111,6 +111,15 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_message_question.svg
   SvgGenImage get icMessageQuestion => const SvgGenImage('assets/icons/ic_message_question.svg');
 
+  /// File path: assets/icons/ic_onboarding_1.svg
+  SvgGenImage get icOnboarding1 => const SvgGenImage('assets/icons/ic_onboarding_1.svg');
+
+  /// File path: assets/icons/ic_onboarding_2.svg
+  SvgGenImage get icOnboarding2 => const SvgGenImage('assets/icons/ic_onboarding_2.svg');
+
+  /// File path: assets/icons/ic_onboarding_3.svg
+  SvgGenImage get icOnboarding3 => const SvgGenImage('assets/icons/ic_onboarding_3.svg');
+
   /// File path: assets/icons/ic_play.svg
   SvgGenImage get icPlay => const SvgGenImage('assets/icons/ic_play.svg');
 
@@ -163,6 +172,9 @@ class $AssetsIconsGen {
         icListening,
         icMail,
         icMessageQuestion,
+        icOnboarding1,
+        icOnboarding2,
+        icOnboarding3,
         icPlay,
         icProfileCircle,
         icQuit,

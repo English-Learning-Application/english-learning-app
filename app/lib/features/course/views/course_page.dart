@@ -1,9 +1,6 @@
-import 'dart:math' as math;
-
 import 'package:app/app.dart';
 import 'package:app/features/course/view_models/course.dart';
 import 'package:auto_route/annotations.dart';
-import 'package:design/design.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
@@ -25,6 +22,9 @@ class _CoursePageState extends BasePageState<CoursePage, CourseViewModel> {
       body: Column(
         children: [
           _buildHeader(),
+          SizedBox(
+            height: Dimens.d16.responsive(),
+          ),
           Expanded(
             child: Selector<CourseViewModel, CourseViewModelData>(
               selector: (_, viewModel) => viewModel.viewModelData,
@@ -37,21 +37,9 @@ class _CoursePageState extends BasePageState<CoursePage, CourseViewModel> {
                 return ListView.separated(
                   itemBuilder: (_, index) {
                     final category = vmData.categories[index];
-                    final courses = vmData.categoryCourses
-                        .where(
-                          (element) =>
-                              element.category.categoryKey ==
-                              category.categoryKey,
-                        )
-                        .toList();
-                    final categoryName = switch (learningLanguage) {
-                      LearningLanguage.english => category.englishName,
-                      LearningLanguage.french => category.frenchName,
-                      LearningLanguage.vietnamese => category.vietnameseName,
-                    };
                     return _buildCategoryCourses(
-                      title: categoryName,
-                      courses: courses,
+                      index: index,
+                      category: category,
                       learningLanguage: learningLanguage,
                     );
                   },
@@ -135,109 +123,86 @@ class _CoursePageState extends BasePageState<CoursePage, CourseViewModel> {
   }
 
   Widget _buildCategoryCourses({
-    required String title,
-    required List<CategoryCourse> courses,
+    required int index,
+    required Category category,
     required LearningLanguage learningLanguage,
   }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          height: Dimens.d16.responsive(),
+    final categoryName = switch (learningLanguage) {
+      LearningLanguage.english => category.englishName,
+      LearningLanguage.french => category.frenchName,
+      LearningLanguage.vietnamese => category.vietnameseName,
+    };
+    final categoryDescription = switch (learningLanguage) {
+      LearningLanguage.english => category.englishDescription,
+      LearningLanguage.french => category.frenchDescription,
+      LearningLanguage.vietnamese => category.vietnameseDescription,
+    };
+    return GestureDetector(
+      onTap: () {
+        viewModel.selectCategoryCourse(index);
+      },
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: Dimens.d16.responsive(),
+          vertical: Dimens.d8.responsive(),
         ),
-        Text(
-          title,
-          style: AppTextStyles.s14w400primary().bold.font16(),
-        ),
-        SizedBox(
-          height: Dimens.d16.responsive(),
-        ),
-        SizedBox(
-          height: Dimens.d180.responsive(),
-          child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            itemCount: courses.length,
-            separatorBuilder: (_, __) {
-              return SizedBox(
-                width: Dimens.d8.responsive(),
-              );
-            },
-            itemBuilder: (_, index) {
-              final course = courses[index];
-              final courseName = switch (learningLanguage) {
-                LearningLanguage.english => course.englishName,
-                LearningLanguage.french => course.frenchName,
-                LearningLanguage.vietnamese => course.vietnameseName,
-              };
-              final percentage = math.Random().nextInt(100);
-              return Container(
-                width: Dimens.d120.responsive(),
-                padding: EdgeInsets.symmetric(
-                  horizontal: Dimens.d16.responsive(),
-                  vertical: Dimens.d8.responsive(),
-                ),
-                decoration: BoxDecoration(
-                  color: AppColors.current.primaryColor.withValues(alpha: 0.1),
-                  borderRadius: BorderRadius.circular(
-                    Dimens.d8.responsive(),
-                  ),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      courseName,
-                      style: AppTextStyles.s14w400primary().font14().bold,
-                    ),
-                    SizedBox(
-                      height: Dimens.d8.responsive(),
-                    ),
-                    SizedBox(
-                      width: Dimens.d80.responsive(),
-                      height: Dimens.d80.responsive(),
-                      child: Stack(
-                        fit: StackFit.expand,
-                        alignment: Alignment.center,
-                        children: [
-                          Positioned.fill(
-                            child: CircularProgressIndicator(
-                              value: percentage / 100,
-                              strokeWidth: Dimens.d2.responsive(),
-                              backgroundColor: FoundationColors.neutral50,
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              "$percentage%",
-                              style:
-                                  AppTextStyles.s14w400primary().font16().bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: Dimens.d8.responsive(),
-                    ),
-                    StandardButton(
-                      onPressed: () {},
-                      text: S.current.learn,
-                      innerGap: 0,
-                      trailingIconSize: 0,
-                      leadingIconSize: 0,
-                      textStyle: AppTextStyles.s14w400primary()
-                          .font12()
-                          .light
-                          .secondary,
-                      buttonSize: ButtonSize.small,
-                    ),
-                  ],
-                ),
-              );
-            },
+        decoration: BoxDecoration(
+          color: AppColors.current.primaryColor.withValues(alpha: 0.8),
+          borderRadius: BorderRadius.circular(
+            Dimens.d8.responsive(),
+          ),
+          border: Border(
+            left: BorderSide(
+              color: AppColors.current.primaryColor,
+              width: Dimens.d2.responsive(),
+            ),
+            right: BorderSide(
+              color: AppColors.current.primaryColor,
+              width: Dimens.d2.responsive(),
+            ),
+            top: BorderSide(
+              color: AppColors.current.primaryColor,
+              width: Dimens.d2.responsive(),
+            ),
+            bottom: BorderSide(
+              color: AppColors.current.primaryColor,
+              width: Dimens.d4.responsive(),
+            ),
           ),
         ),
-      ],
+        child: Row(
+          children: [
+            Flexible(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    categoryName,
+                    style:
+                        AppTextStyles.s14w400primary().bold.font16().secondary,
+                  ),
+                  SizedBox(
+                    height: Dimens.d8.responsive(),
+                  ),
+                  Text(
+                    categoryDescription,
+                    style: AppTextStyles.s14w400primary().font14().secondary,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              width: Dimens.d16.responsive(),
+            ),
+            ImagesProvider.networkImage(
+              imageUrl: category.categoryImage,
+              width: Dimens.d64.responsive(),
+              height: Dimens.d64.responsive(),
+              fit: BoxFit.fill,
+            ),
+          ],
+        ),
+      ),
     );
   }
 

@@ -26,6 +26,11 @@ Future<void> _runMyApp() async {
 
   FirebaseMessaging.onMessage.listen(
     (message) {
+      LogUtils.d(
+          'Got a message whilst in the foreground! ${message.notification?.title}');
+      LogUtils.d(
+          'Got a message whilst in the foreground! ${message.notification?.body}');
+      LogUtils.d('Got a message whilst in the foreground! ${message.data}');
       GetIt.instance<RemotePushNotificationService>()
           .onForegroundNotificationReceived(message);
     },
