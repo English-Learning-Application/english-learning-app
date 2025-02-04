@@ -112,6 +112,9 @@ class AppRouter extends $AppRouter {
                 AutoRoute(
                   page: CategoryCourseDetailsRoute.page,
                 ),
+                AutoRoute(
+                  page: CategoryCourseLessonRoute.page,
+                ),
               ],
             ),
             AutoRoute(

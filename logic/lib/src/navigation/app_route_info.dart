@@ -20,23 +20,23 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.flashCardLearning({
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
     required LearningLanguage learningLanguage,
-    required LanguageCourse languageCourse,
+    required String courseId,
   }) = _FlashCardLearning;
   const factory AppRouteInfo.quizLearning({
     required LearningLanguage learningLanguage,
     required List<LanguageCourseLearningContent> languageCourseLearningContents,
-    required LanguageCourse languageCourse,
+    required String courseId,
   }) = _QuizLearning;
   const factory AppRouteInfo.matchingLearning({
     required LearningLanguage learningLanguage,
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
-    required LanguageCourse languageCourse,
+    required String courseId,
     LearningType? learningType,
   }) = _MatchingLearning;
   const factory AppRouteInfo.pronunciationLearning({
     required LearningLanguage learningLanguage,
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
-    required LanguageCourse languageCourse,
+    required String courseId,
   }) = _PronunciationLearning;
   const factory AppRouteInfo.listeningLearning({
     required LearningLanguage learningLanguage,
@@ -68,4 +68,8 @@ class AppRouteInfo with _$AppRouteInfo {
     required Category category,
     required List<CategoryCourse> categoryCourses,
   }) = _CategoryCourseDetails;
+  const factory AppRouteInfo.categoryCourseLesson({
+    required CategoryCourse categoryCourse,
+    required List<LanguageCourseLearningContent> languageCourseLearningContents,
+  }) = _CategoryCourseLesson;
 }

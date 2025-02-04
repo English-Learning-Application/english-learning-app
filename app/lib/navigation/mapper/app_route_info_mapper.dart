@@ -19,38 +19,38 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       languageCourseDetails: (languageCourse) =>
           LanguageCourseDetailsRoute(languageCourse: languageCourse),
       flashCardLearning:
-          (languageCourseLearningContents, learningLanguage, languageCourse) =>
+          (languageCourseLearningContents, learningLanguage, courseId) =>
               FlashCardLearningRoute(
-        languageCourse: languageCourse,
+        courseId: courseId,
         languageCourseLearningContent: languageCourseLearningContents,
         learningLanguage: learningLanguage,
       ),
       quizLearning:
-          (learningLanguage, languageCourseLearningContents, languageCourse) =>
+          (learningLanguage, languageCourseLearningContents, courseId) =>
               QuizLearningRoute(
-        languageCourse: languageCourse,
+        courseId: courseId,
         learningLanguage: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContents,
       ),
       matchingLearning: (
         learningLanguage,
         languageCourseLearningContents,
-        languageCourse,
+        courseId,
         learningType,
       ) =>
           MatchingLearningRoute(
         learningLanguage: learningLanguage,
         languageCourseLearningContents: languageCourseLearningContents,
         learningType: learningType,
-        languageCourse: languageCourse,
+        courseId: courseId,
       ),
       pronunciationLearning: (
         learningLanguage,
         languageCourseLearningContent,
-        languageCourse,
+        courseId,
       ) =>
           PronunciationLearningRoute(
-        languageCourse: languageCourse,
+        courseId: courseId,
         learningLanguage: learningLanguage,
         languageCourseLearningContent: languageCourseLearningContent,
       ),
@@ -80,11 +80,16 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
         chatSession: chatSession,
         receiver: receiver,
       ),
-      categoryCourseDetails: (language ,category, categoryCourses) =>
+      categoryCourseDetails: (language, category, categoryCourses) =>
           CategoryCourseDetailsRoute(
-            language: language,
+        language: language,
         category: category,
         categoryCourses: categoryCourses,
+      ),
+      categoryCourseLesson: (categoryCourse, languageCourseLearningContents) =>
+          CategoryCourseLessonRoute(
+        categoryCourse: categoryCourse,
+        languageCourseLearningContent: languageCourseLearningContents,
       ),
     );
   }

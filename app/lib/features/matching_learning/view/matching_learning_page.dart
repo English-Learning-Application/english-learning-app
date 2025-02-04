@@ -16,10 +16,10 @@ class MatchingLearningPage extends StatefulWidget {
     required this.learningLanguage,
     required this.languageCourseLearningContents,
     this.learningType,
-    required this.languageCourse,
+    required this.courseId,
   });
 
-  final LanguageCourse languageCourse;
+  final String courseId;
   final LearningLanguage learningLanguage;
   final List<LanguageCourseLearningContent> languageCourseLearningContents;
   final LearningType? learningType;
@@ -63,7 +63,7 @@ class _MatchingLearningPageState
   @override
   void initViewModels() {
     viewModel.onInit(
-      courseId: widget.languageCourse.languageCourseId,
+      courseId: widget.courseId,
       languageCourseLearningContent: widget.languageCourseLearningContents,
       learningLanguage: widget.learningLanguage,
     );

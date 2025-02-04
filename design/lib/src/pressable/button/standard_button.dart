@@ -322,7 +322,7 @@ class StandardButton extends StatelessWidget {
           borderRadius: shape == BoxShape.circle
               ? null
               : BorderRadius.circular(
-                  borderRadius ?? Dimens.d32.responsive(),
+                  borderRadius ?? Dimens.d16.responsive(),
                 ),
           border: Border(
             top: BorderSide(
@@ -342,7 +342,7 @@ class StandardButton extends StatelessWidget {
               width: Dimens.d4.responsive(),
             ),
           ),
-          color: backgroundColor ?? _backgroundColor().withValues(alpha: 0.8),
+          color: backgroundColor ?? _backgroundColor(),
           shape: shape,
         ),
         height: height ?? _buttonHeight(),
@@ -452,9 +452,13 @@ class StandardButton extends StatelessWidget {
   Color _backgroundColor() {
     switch (buttonType) {
       case ButtonType.primary:
-        return FoundationColors.primary200;
+        return FoundationColors.primary200.withValues(
+          alpha: 0.8,
+        );
       case ButtonType.secondary:
-        return FoundationColors.secondary500;
+        return FoundationColors.secondary500.withValues(
+          alpha: 0.8,
+        );
       case ButtonType.tertiary:
       case ButtonType.ghost:
         return Colors.transparent;

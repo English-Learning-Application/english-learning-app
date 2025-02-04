@@ -18,6 +18,8 @@ import 'package:app/features/ai_chat_bot_details/view_model/ai_chat_bot_details.
     as _i825;
 import 'package:app/features/category_course_details/view_models/category_course_details.dart'
     as _i583;
+import 'package:app/features/category_course_lesson/view_model/category_course_lesson.dart'
+    as _i1024;
 import 'package:app/features/community/view_model/community.dart' as _i15;
 import 'package:app/features/community_topic/view_model/community_topic.dart'
     as _i780;
@@ -96,6 +98,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
     gh.factory<_i583.CategoryCourseDetailsViewModel>(
         () => _i583.CategoryCourseDetailsViewModel());
+    gh.factory<_i1024.CategoryCourseLessonViewModel>(
+        () => _i1024.CategoryCourseLessonViewModel());
     gh.lazySingleton<_i50.FlutterTts>(() => appModules.flutterTts);
     gh.lazySingleton<_i398.FirebaseAnalytics>(
         () => appModules.firebaseAnalytics);

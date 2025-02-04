@@ -44,8 +44,8 @@ class ChatBotInput extends StatelessWidget {
             child: Container(
               width: Dimens.d40.responsive(),
               height: Dimens.d40.responsive(),
-              decoration: BoxDecoration(
-                color: AppColors.current.backgroundColor,
+              decoration: const BoxDecoration(
+                color: FoundationColors.neutral50,
                 shape: BoxShape.circle,
               ),
               child: Center(

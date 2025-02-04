@@ -213,7 +213,7 @@ class _ListeningLearningPageState
                 onPressed: () async {
                   await navigator.push(
                     AppRouteInfo.pronunciationLearning(
-                      languageCourse: widget.languageCourse,
+                      courseId: widget.languageCourse.languageCourseId,
                       learningLanguage: viewModelData.learningLanguage,
                       languageCourseLearningContent: [
                         viewModelData.languageCourseLearningContent
@@ -234,7 +234,7 @@ class _ListeningLearningPageState
                 onPressed: () async {
                   await navigator.push(
                     AppRouteInfo.matchingLearning(
-                      languageCourse: widget.languageCourse,
+                      courseId: widget.languageCourse.languageCourseId,
                       learningLanguage: viewModelData.learningLanguage,
                       languageCourseLearningContent: [
                         viewModelData.languageCourseLearningContent

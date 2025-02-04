@@ -2,6 +2,7 @@ import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 import 'package:provider/provider.dart';
+
 import '../../../app.dart';
 
 class LoginViewWidget extends StatefulWidget {
@@ -54,9 +55,6 @@ class _LoginViewWidgetState extends State<LoginViewWidget> {
           StandardTextField(
             controller: _emailController,
             hint: S.current.emailHint,
-            borderRadius: BorderRadius.circular(
-              Dimens.d32.responsive(),
-            ),
           ),
           SizedBox(
             height: Dimens.d16.responsive(),
@@ -79,9 +77,6 @@ class _LoginViewWidgetState extends State<LoginViewWidget> {
                 controller: _passwordController,
                 hint: S.current.passwordHint,
                 obscureText: !vmData.isShowPassword,
-                borderRadius: BorderRadius.circular(
-                  Dimens.d32.responsive(),
-                ),
                 suffixIcon: GestureDetector(
                   onTap: () {
                     context.read<LoginViewModel>().setIsShowPassword(

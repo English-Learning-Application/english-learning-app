@@ -2,7 +2,6 @@ import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 import 'package:provider/provider.dart';
-import 'package:services/services.dart';
 
 import '../../../app.dart';
 
@@ -69,9 +68,6 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
           StandardTextField(
             controller: _usernameController,
             hint: S.current.usernameHint,
-            borderRadius: BorderRadius.circular(
-              Dimens.d32.responsive(),
-            ),
           ),
           SizedBox(
             height: Dimens.d16.responsive(),
@@ -86,9 +82,6 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
           StandardTextField(
             controller: _emailController,
             hint: S.current.emailHint,
-            borderRadius: BorderRadius.circular(
-              Dimens.d32.responsive(),
-            ),
           ),
           SizedBox(
             height: Dimens.d16.responsive(),
@@ -111,9 +104,6 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
                 controller: _passwordController,
                 hint: S.current.passwordHint,
                 obscureText: !vmData.isShowPassword,
-                borderRadius: BorderRadius.circular(
-                  Dimens.d32.responsive(),
-                ),
                 suffixIcon: GestureDetector(
                   onTap: () {
                     context.read<LoginViewModel>().setIsShowPassword(
@@ -163,9 +153,6 @@ class _RegistrationViewWidgetState extends State<RegistrationViewWidget> {
                 controller: _confirmPasswordController,
                 hint: S.current.passwordHint,
                 obscureText: !vmData.isShowPassword,
-                borderRadius: BorderRadius.circular(
-                  Dimens.d32.responsive(),
-                ),
                 suffixIcon: GestureDetector(
                   onTap: () {
                     context.read<LoginViewModel>().setIsShowPassword(

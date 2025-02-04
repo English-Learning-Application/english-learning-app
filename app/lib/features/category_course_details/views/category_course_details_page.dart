@@ -113,77 +113,91 @@ class _CategoryCourseDetailsPageState extends BasePageState<
                 ),
               ] else ...[
                 for (final course in vmData.categoryCourses) ...[
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.symmetric(
-                      horizontal: Dimens.d8.responsive(),
-                      vertical: Dimens.d8.responsive(),
-                    ),
-                    decoration: BoxDecoration(
-                      color: AppColors.current.backgroundColor,
-                      borderRadius: BorderRadius.circular(
-                        Dimens.d8.responsive(),
+                  GestureDetector(
+                    onTap: () async {
+                      await navigator.push(
+                        AppRouteInfo.categoryCourseLesson(
+                          categoryCourse: course,
+                          languageCourseLearningContents:
+                              course.languageCourseLearningContent,
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: Dimens.d8.responsive(),
+                        vertical: Dimens.d16.responsive(),
                       ),
-                      border: Border(
-                        top: BorderSide(
-                          color: AppColors.current.primaryColor,
-                          width: Dimens.d2.responsive(),
+                      decoration: BoxDecoration(
+                        color: AppColors.current.backgroundColor,
+                        borderRadius: BorderRadius.circular(
+                          Dimens.d16.responsive(),
                         ),
-                        left: BorderSide(
-                          color: AppColors.current.primaryColor,
-                          width: Dimens.d2.responsive(),
-                        ),
-                        right: BorderSide(
-                          color: AppColors.current.primaryColor,
-                          width: Dimens.d2.responsive(),
-                        ),
-                        bottom: BorderSide(
-                          color: AppColors.current.primaryColor,
-                          width: Dimens.d4.responsive(),
-                        ),
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Flexible(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                switch (learningLanguage) {
-                                  LearningLanguage.english =>
-                                    course.englishName,
-                                  LearningLanguage.vietnamese =>
-                                    course.vietnameseName,
-                                  LearningLanguage.french => course.frenchName,
-                                },
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: AppTextStyles.s14w400primary()
-                                    .font16()
-                                    .bold,
-                              ),
-                              SizedBox(
-                                height: Dimens.d8.responsive(),
-                              ),
-                              Text(
-                                "${course.languageCourseLearningContent.length} ${S.current.lessons.toLowerCase()}",
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: AppTextStyles.s14w400primary().font14(),
-                              ),
-                            ],
+                        border: Border(
+                          top: BorderSide(
+                            color: AppColors.current.primaryColor,
+                            width: Dimens.d2.responsive(),
+                          ),
+                          left: BorderSide(
+                            color: AppColors.current.primaryColor,
+                            width: Dimens.d2.responsive(),
+                          ),
+                          right: BorderSide(
+                            color: AppColors.current.primaryColor,
+                            width: Dimens.d2.responsive(),
+                          ),
+                          bottom: BorderSide(
+                            color: AppColors.current.primaryColor,
+                            width: Dimens.d4.responsive(),
                           ),
                         ),
-                        SizedBox(
-                          width: Dimens.d8.responsive(),
-                        ),
-                        learningLanguage.icon.svg(
-                          width: Dimens.d40.responsive(),
-                          height: Dimens.d40.responsive(),
-                        ),
-                      ],
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Flexible(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  switch (learningLanguage) {
+                                    LearningLanguage.english =>
+                                      course.englishName,
+                                    LearningLanguage.vietnamese =>
+                                      course.vietnameseName,
+                                    LearningLanguage.french =>
+                                      course.frenchName,
+                                  },
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: AppTextStyles.s14w400primary()
+                                      .font16()
+                                      .bold,
+                                ),
+                                SizedBox(
+                                  height: Dimens.d8.responsive(),
+                                ),
+                                Text(
+                                  "${course.languageCourseLearningContent.length} ${S.current.lessons.toLowerCase()}",
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style:
+                                      AppTextStyles.s14w400primary().font13(),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: Dimens.d8.responsive(),
+                          ),
+                          learningLanguage.icon.svg(
+                            width: Dimens.d32.responsive(),
+                            height: Dimens.d32.responsive(),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(

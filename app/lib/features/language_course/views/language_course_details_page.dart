@@ -245,7 +245,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.flashCardLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -286,7 +286,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.quizLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContents:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -327,7 +327,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.matchingLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -368,7 +368,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.pronunciationLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -427,7 +427,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.flashCardLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -468,7 +468,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.quizLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContents:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -509,7 +509,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.matchingLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -568,7 +568,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.flashCardLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -609,7 +609,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.quizLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContents:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -650,7 +650,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.matchingLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -691,7 +691,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.pronunciationLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -750,7 +750,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.flashCardLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -791,7 +791,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.quizLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContents:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -832,7 +832,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.matchingLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -873,7 +873,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.pronunciationLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -932,7 +932,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.flashCardLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,
@@ -973,7 +973,7 @@ extension on _LanguageCourseDetailsPageState {
                   final languageCourse = viewModel.viewModelData.languageCourse;
                   await navigator.push(
                     AppRouteInfo.pronunciationLearning(
-                      languageCourse: languageCourse,
+                      courseId: languageCourse.languageCourseId,
                       languageCourseLearningContent:
                           languageCourse.languageCourseLearningContents,
                       learningLanguage: languageCourse.language,

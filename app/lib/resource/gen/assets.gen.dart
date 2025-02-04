@@ -102,6 +102,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_home.svg
   SvgGenImage get icHome => const SvgGenImage('assets/icons/ic_home.svg');
 
+  /// File path: assets/icons/ic_learn.svg
+  SvgGenImage get icLearn => const SvgGenImage('assets/icons/ic_learn.svg');
+
   /// File path: assets/icons/ic_listening.svg
   SvgGenImage get icListening => const SvgGenImage('assets/icons/ic_listening.svg');
 
@@ -169,6 +172,7 @@ class $AssetsIconsGen {
         icGoogle,
         icGrammar,
         icHome,
+        icLearn,
         icListening,
         icMail,
         icMessageQuestion,

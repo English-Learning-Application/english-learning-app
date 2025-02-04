@@ -63,7 +63,7 @@ class FlashCardLearningViewModel
                   "${word.wordType.wordTypeName} - ${word.pronunciation}",
               backCardText: backCardText,
               backCardSubText: backCardSubText,
-              image: word.imageUrlItem,
+              image: word.imageUrl.isNotEmpty ? word.imageUrlItem : '',
               learningContentType: learningContentType,
               learningContentId: languageCourseLearningContentItem
                   .languageCourseLearningContentId,

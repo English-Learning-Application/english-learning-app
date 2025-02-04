@@ -109,10 +109,6 @@ class MatchingLearningViewModel
           idioms.shuffle();
           for (final idiom in idioms) {
             final appLanguage = appViewModel.viewModelData.languageCode;
-            final idiomName = switch (appLanguage) {
-              LanguageCode.en => idiom.englishIdiom,
-              LanguageCode.vi => idiom.vietnameseIdiom,
-            };
             final description = switch (appLanguage) {
               LanguageCode.en => idiom.englishIdiomMeaning,
               LanguageCode.vi => idiom.vietnameseIdiomMeaning,
@@ -122,7 +118,7 @@ class MatchingLearningViewModel
 
             final matchingLearningEntity = MatchingLearningEntity(
               id: idiom.idiomId,
-              hint: "$idiomName\n$description",
+              hint: description,
               targetTexts: originalIdiom,
               sourceTexts: tokenizedIdiom..shuffle(),
               learningContentType: content.learningContentType,
@@ -160,10 +156,6 @@ class MatchingLearningViewModel
           phrasalVerbs.shuffle();
           for (final phrasalVerb in phrasalVerbs) {
             final appLanguage = appViewModel.viewModelData.languageCode;
-            final phrasalVerbName = switch (appLanguage) {
-              LanguageCode.en => phrasalVerb.englishPhrasalVerb,
-              LanguageCode.vi => phrasalVerb.vietnamesePhrasalVerb,
-            };
             final description = switch (appLanguage) {
               LanguageCode.en => phrasalVerb.englishDescription,
               LanguageCode.vi => phrasalVerb.vietnameseDescription,
@@ -174,7 +166,7 @@ class MatchingLearningViewModel
 
             final matchingLearningEntity = MatchingLearningEntity(
               id: phrasalVerb.phrasalVerbId,
-              hint: "$phrasalVerbName\n$description",
+              hint: description,
               targetTexts: originalPhrasalVerb,
               sourceTexts: tokenizedPhrasalVerb..shuffle(),
               learningContentType: content.learningContentType,

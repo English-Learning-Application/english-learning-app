@@ -29,23 +29,23 @@ mixin _$AppRouteInfo {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -66,6 +66,9 @@ mixin _$AppRouteInfo {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,23 +83,23 @@ mixin _$AppRouteInfo {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -116,6 +119,9 @@ mixin _$AppRouteInfo {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -130,23 +136,23 @@ mixin _$AppRouteInfo {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -166,6 +172,9 @@ mixin _$AppRouteInfo {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -198,6 +207,7 @@ mixin _$AppRouteInfo {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -226,6 +236,7 @@ mixin _$AppRouteInfo {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -254,6 +265,7 @@ mixin _$AppRouteInfo {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -332,23 +344,23 @@ class _$LoginImpl implements _Login {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -369,6 +381,9 @@ class _$LoginImpl implements _Login {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return login();
   }
@@ -386,23 +401,23 @@ class _$LoginImpl implements _Login {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -422,6 +437,9 @@ class _$LoginImpl implements _Login {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return login?.call();
   }
@@ -439,23 +457,23 @@ class _$LoginImpl implements _Login {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -475,6 +493,9 @@ class _$LoginImpl implements _Login {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -513,6 +534,7 @@ class _$LoginImpl implements _Login {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return login(this);
   }
@@ -544,6 +566,7 @@ class _$LoginImpl implements _Login {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return login?.call(this);
   }
@@ -575,6 +598,7 @@ class _$LoginImpl implements _Login {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -639,23 +663,23 @@ class _$MainImpl implements _Main {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -676,6 +700,9 @@ class _$MainImpl implements _Main {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return main();
   }
@@ -693,23 +720,23 @@ class _$MainImpl implements _Main {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -729,6 +756,9 @@ class _$MainImpl implements _Main {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return main?.call();
   }
@@ -746,23 +776,23 @@ class _$MainImpl implements _Main {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -782,6 +812,9 @@ class _$MainImpl implements _Main {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -820,6 +853,7 @@ class _$MainImpl implements _Main {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return main(this);
   }
@@ -851,6 +885,7 @@ class _$MainImpl implements _Main {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return main?.call(this);
   }
@@ -882,6 +917,7 @@ class _$MainImpl implements _Main {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -947,23 +983,23 @@ class _$SplashImpl implements _Splash {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -984,6 +1020,9 @@ class _$SplashImpl implements _Splash {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return splash();
   }
@@ -1001,23 +1040,23 @@ class _$SplashImpl implements _Splash {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -1037,6 +1076,9 @@ class _$SplashImpl implements _Splash {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return splash?.call();
   }
@@ -1054,23 +1096,23 @@ class _$SplashImpl implements _Splash {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -1090,6 +1132,9 @@ class _$SplashImpl implements _Splash {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -1128,6 +1173,7 @@ class _$SplashImpl implements _Splash {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return splash(this);
   }
@@ -1159,6 +1205,7 @@ class _$SplashImpl implements _Splash {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return splash?.call(this);
   }
@@ -1190,6 +1237,7 @@ class _$SplashImpl implements _Splash {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -1255,23 +1303,23 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -1292,6 +1340,9 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return onBoarding();
   }
@@ -1309,23 +1360,23 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -1345,6 +1396,9 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return onBoarding?.call();
   }
@@ -1362,23 +1416,23 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -1398,6 +1452,9 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1436,6 +1493,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return onBoarding(this);
   }
@@ -1467,6 +1525,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return onBoarding?.call(this);
   }
@@ -1498,6 +1557,7 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1564,23 +1624,23 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -1601,6 +1661,9 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return completeRegistration();
   }
@@ -1618,23 +1681,23 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -1654,6 +1717,9 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return completeRegistration?.call();
   }
@@ -1671,23 +1737,23 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -1707,6 +1773,9 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -1745,6 +1814,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return completeRegistration(this);
   }
@@ -1776,6 +1846,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return completeRegistration?.call(this);
   }
@@ -1807,6 +1878,7 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -1901,23 +1973,23 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -1938,6 +2010,9 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return languageCourse(learningLanguage);
   }
@@ -1955,23 +2030,23 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -1991,6 +2066,9 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return languageCourse?.call(learningLanguage);
   }
@@ -2008,23 +2086,23 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -2044,6 +2122,9 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -2082,6 +2163,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return languageCourse(this);
   }
@@ -2113,6 +2195,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return languageCourse?.call(this);
   }
@@ -2144,6 +2227,7 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -2261,23 +2345,23 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -2298,6 +2382,9 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return languageCourseDetails(this.languageCourse);
   }
@@ -2315,23 +2402,23 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -2351,6 +2438,9 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return languageCourseDetails?.call(this.languageCourse);
   }
@@ -2368,23 +2458,23 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -2404,6 +2494,9 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -2442,6 +2535,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return languageCourseDetails(this);
   }
@@ -2473,6 +2567,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return languageCourseDetails?.call(this);
   }
@@ -2504,6 +2599,7 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -2536,9 +2632,7 @@ abstract class _$$FlashCardLearningImplCopyWith<$Res> {
   $Res call(
       {List<LanguageCourseLearningContent> languageCourseLearningContent,
       LearningLanguage learningLanguage,
-      LanguageCourse languageCourse});
-
-  $LanguageCourseCopyWith<$Res> get languageCourse;
+      String courseId});
 }
 
 /// @nodoc
@@ -2556,7 +2650,7 @@ class __$$FlashCardLearningImplCopyWithImpl<$Res>
   $Res call({
     Object? languageCourseLearningContent = null,
     Object? learningLanguage = null,
-    Object? languageCourse = null,
+    Object? courseId = null,
   }) {
     return _then(_$FlashCardLearningImpl(
       languageCourseLearningContent: null == languageCourseLearningContent
@@ -2567,21 +2661,11 @@ class __$$FlashCardLearningImplCopyWithImpl<$Res>
           ? _value.learningLanguage
           : learningLanguage // ignore: cast_nullable_to_non_nullable
               as LearningLanguage,
-      languageCourse: null == languageCourse
-          ? _value.languageCourse
-          : languageCourse // ignore: cast_nullable_to_non_nullable
-              as LanguageCourse,
+      courseId: null == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
-  }
-
-  /// Create a copy of AppRouteInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $LanguageCourseCopyWith<$Res> get languageCourse {
-    return $LanguageCourseCopyWith<$Res>(_value.languageCourse, (value) {
-      return _then(_value.copyWith(languageCourse: value));
-    });
   }
 }
 
@@ -2592,7 +2676,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
       {required final List<LanguageCourseLearningContent>
           languageCourseLearningContent,
       required this.learningLanguage,
-      required this.languageCourse})
+      required this.courseId})
       : _languageCourseLearningContent = languageCourseLearningContent;
 
   final List<LanguageCourseLearningContent> _languageCourseLearningContent;
@@ -2607,11 +2691,11 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
   @override
   final LearningLanguage learningLanguage;
   @override
-  final LanguageCourse languageCourse;
+  final String courseId;
 
   @override
   String toString() {
-    return 'AppRouteInfo.flashCardLearning(languageCourseLearningContent: $languageCourseLearningContent, learningLanguage: $learningLanguage, languageCourse: $languageCourse)';
+    return 'AppRouteInfo.flashCardLearning(languageCourseLearningContent: $languageCourseLearningContent, learningLanguage: $learningLanguage, courseId: $courseId)';
   }
 
   @override
@@ -2624,8 +2708,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
                 _languageCourseLearningContent) &&
             (identical(other.learningLanguage, learningLanguage) ||
                 other.learningLanguage == learningLanguage) &&
-            (identical(other.languageCourse, languageCourse) ||
-                other.languageCourse == languageCourse));
+            (identical(other.courseId, courseId) ||
+                other.courseId == courseId));
   }
 
   @override
@@ -2633,7 +2717,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
       runtimeType,
       const DeepCollectionEquality().hash(_languageCourseLearningContent),
       learningLanguage,
-      languageCourse);
+      courseId);
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -2658,23 +2742,23 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -2695,9 +2779,12 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return flashCardLearning(
-        languageCourseLearningContent, learningLanguage, this.languageCourse);
+        languageCourseLearningContent, learningLanguage, courseId);
   }
 
   @override
@@ -2713,23 +2800,23 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -2749,9 +2836,12 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return flashCardLearning?.call(
-        languageCourseLearningContent, learningLanguage, this.languageCourse);
+        languageCourseLearningContent, learningLanguage, courseId);
   }
 
   @override
@@ -2767,23 +2857,23 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -2803,11 +2893,14 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
       return flashCardLearning(
-          languageCourseLearningContent, learningLanguage, this.languageCourse);
+          languageCourseLearningContent, learningLanguage, courseId);
     }
     return orElse();
   }
@@ -2842,6 +2935,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return flashCardLearning(this);
   }
@@ -2873,6 +2967,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return flashCardLearning?.call(this);
   }
@@ -2904,6 +2999,7 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -2918,11 +3014,11 @@ abstract class _FlashCardLearning implements AppRouteInfo {
       {required final List<LanguageCourseLearningContent>
           languageCourseLearningContent,
       required final LearningLanguage learningLanguage,
-      required final LanguageCourse languageCourse}) = _$FlashCardLearningImpl;
+      required final String courseId}) = _$FlashCardLearningImpl;
 
   List<LanguageCourseLearningContent> get languageCourseLearningContent;
   LearningLanguage get learningLanguage;
-  LanguageCourse get languageCourse;
+  String get courseId;
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -2940,9 +3036,7 @@ abstract class _$$QuizLearningImplCopyWith<$Res> {
   $Res call(
       {LearningLanguage learningLanguage,
       List<LanguageCourseLearningContent> languageCourseLearningContents,
-      LanguageCourse languageCourse});
-
-  $LanguageCourseCopyWith<$Res> get languageCourse;
+      String courseId});
 }
 
 /// @nodoc
@@ -2960,7 +3054,7 @@ class __$$QuizLearningImplCopyWithImpl<$Res>
   $Res call({
     Object? learningLanguage = null,
     Object? languageCourseLearningContents = null,
-    Object? languageCourse = null,
+    Object? courseId = null,
   }) {
     return _then(_$QuizLearningImpl(
       learningLanguage: null == learningLanguage
@@ -2971,21 +3065,11 @@ class __$$QuizLearningImplCopyWithImpl<$Res>
           ? _value._languageCourseLearningContents
           : languageCourseLearningContents // ignore: cast_nullable_to_non_nullable
               as List<LanguageCourseLearningContent>,
-      languageCourse: null == languageCourse
-          ? _value.languageCourse
-          : languageCourse // ignore: cast_nullable_to_non_nullable
-              as LanguageCourse,
+      courseId: null == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
-  }
-
-  /// Create a copy of AppRouteInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $LanguageCourseCopyWith<$Res> get languageCourse {
-    return $LanguageCourseCopyWith<$Res>(_value.languageCourse, (value) {
-      return _then(_value.copyWith(languageCourse: value));
-    });
   }
 }
 
@@ -2996,7 +3080,7 @@ class _$QuizLearningImpl implements _QuizLearning {
       {required this.learningLanguage,
       required final List<LanguageCourseLearningContent>
           languageCourseLearningContents,
-      required this.languageCourse})
+      required this.courseId})
       : _languageCourseLearningContents = languageCourseLearningContents;
 
   @override
@@ -3011,11 +3095,11 @@ class _$QuizLearningImpl implements _QuizLearning {
   }
 
   @override
-  final LanguageCourse languageCourse;
+  final String courseId;
 
   @override
   String toString() {
-    return 'AppRouteInfo.quizLearning(learningLanguage: $learningLanguage, languageCourseLearningContents: $languageCourseLearningContents, languageCourse: $languageCourse)';
+    return 'AppRouteInfo.quizLearning(learningLanguage: $learningLanguage, languageCourseLearningContents: $languageCourseLearningContents, courseId: $courseId)';
   }
 
   @override
@@ -3028,8 +3112,8 @@ class _$QuizLearningImpl implements _QuizLearning {
             const DeepCollectionEquality().equals(
                 other._languageCourseLearningContents,
                 _languageCourseLearningContents) &&
-            (identical(other.languageCourse, languageCourse) ||
-                other.languageCourse == languageCourse));
+            (identical(other.courseId, courseId) ||
+                other.courseId == courseId));
   }
 
   @override
@@ -3037,7 +3121,7 @@ class _$QuizLearningImpl implements _QuizLearning {
       runtimeType,
       learningLanguage,
       const DeepCollectionEquality().hash(_languageCourseLearningContents),
-      languageCourse);
+      courseId);
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -3061,23 +3145,23 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -3098,9 +3182,12 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return quizLearning(
-        learningLanguage, languageCourseLearningContents, this.languageCourse);
+        learningLanguage, languageCourseLearningContents, courseId);
   }
 
   @override
@@ -3116,23 +3203,23 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -3152,9 +3239,12 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return quizLearning?.call(
-        learningLanguage, languageCourseLearningContents, this.languageCourse);
+        learningLanguage, languageCourseLearningContents, courseId);
   }
 
   @override
@@ -3170,23 +3260,23 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -3206,11 +3296,14 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
-      return quizLearning(learningLanguage, languageCourseLearningContents,
-          this.languageCourse);
+      return quizLearning(
+          learningLanguage, languageCourseLearningContents, courseId);
     }
     return orElse();
   }
@@ -3245,6 +3338,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return quizLearning(this);
   }
@@ -3276,6 +3370,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return quizLearning?.call(this);
   }
@@ -3307,6 +3402,7 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -3321,11 +3417,11 @@ abstract class _QuizLearning implements AppRouteInfo {
       {required final LearningLanguage learningLanguage,
       required final List<LanguageCourseLearningContent>
           languageCourseLearningContents,
-      required final LanguageCourse languageCourse}) = _$QuizLearningImpl;
+      required final String courseId}) = _$QuizLearningImpl;
 
   LearningLanguage get learningLanguage;
   List<LanguageCourseLearningContent> get languageCourseLearningContents;
-  LanguageCourse get languageCourse;
+  String get courseId;
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -3343,10 +3439,8 @@ abstract class _$$MatchingLearningImplCopyWith<$Res> {
   $Res call(
       {LearningLanguage learningLanguage,
       List<LanguageCourseLearningContent> languageCourseLearningContent,
-      LanguageCourse languageCourse,
+      String courseId,
       LearningType? learningType});
-
-  $LanguageCourseCopyWith<$Res> get languageCourse;
 }
 
 /// @nodoc
@@ -3364,7 +3458,7 @@ class __$$MatchingLearningImplCopyWithImpl<$Res>
   $Res call({
     Object? learningLanguage = null,
     Object? languageCourseLearningContent = null,
-    Object? languageCourse = null,
+    Object? courseId = null,
     Object? learningType = freezed,
   }) {
     return _then(_$MatchingLearningImpl(
@@ -3376,25 +3470,15 @@ class __$$MatchingLearningImplCopyWithImpl<$Res>
           ? _value._languageCourseLearningContent
           : languageCourseLearningContent // ignore: cast_nullable_to_non_nullable
               as List<LanguageCourseLearningContent>,
-      languageCourse: null == languageCourse
-          ? _value.languageCourse
-          : languageCourse // ignore: cast_nullable_to_non_nullable
-              as LanguageCourse,
+      courseId: null == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as String,
       learningType: freezed == learningType
           ? _value.learningType
           : learningType // ignore: cast_nullable_to_non_nullable
               as LearningType?,
     ));
-  }
-
-  /// Create a copy of AppRouteInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $LanguageCourseCopyWith<$Res> get languageCourse {
-    return $LanguageCourseCopyWith<$Res>(_value.languageCourse, (value) {
-      return _then(_value.copyWith(languageCourse: value));
-    });
   }
 }
 
@@ -3405,7 +3489,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
       {required this.learningLanguage,
       required final List<LanguageCourseLearningContent>
           languageCourseLearningContent,
-      required this.languageCourse,
+      required this.courseId,
       this.learningType})
       : _languageCourseLearningContent = languageCourseLearningContent;
 
@@ -3421,13 +3505,13 @@ class _$MatchingLearningImpl implements _MatchingLearning {
   }
 
   @override
-  final LanguageCourse languageCourse;
+  final String courseId;
   @override
   final LearningType? learningType;
 
   @override
   String toString() {
-    return 'AppRouteInfo.matchingLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, languageCourse: $languageCourse, learningType: $learningType)';
+    return 'AppRouteInfo.matchingLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, courseId: $courseId, learningType: $learningType)';
   }
 
   @override
@@ -3440,8 +3524,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
             const DeepCollectionEquality().equals(
                 other._languageCourseLearningContent,
                 _languageCourseLearningContent) &&
-            (identical(other.languageCourse, languageCourse) ||
-                other.languageCourse == languageCourse) &&
+            (identical(other.courseId, courseId) ||
+                other.courseId == courseId) &&
             (identical(other.learningType, learningType) ||
                 other.learningType == learningType));
   }
@@ -3451,7 +3535,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
       runtimeType,
       learningLanguage,
       const DeepCollectionEquality().hash(_languageCourseLearningContent),
-      languageCourse,
+      courseId,
       learningType);
 
   /// Create a copy of AppRouteInfo
@@ -3477,23 +3561,23 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -3514,9 +3598,12 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return matchingLearning(learningLanguage, languageCourseLearningContent,
-        this.languageCourse, learningType);
+        courseId, learningType);
   }
 
   @override
@@ -3532,23 +3619,23 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -3568,9 +3655,12 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return matchingLearning?.call(learningLanguage,
-        languageCourseLearningContent, this.languageCourse, learningType);
+        languageCourseLearningContent, courseId, learningType);
   }
 
   @override
@@ -3586,23 +3676,23 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -3622,11 +3712,14 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
       return matchingLearning(learningLanguage, languageCourseLearningContent,
-          this.languageCourse, learningType);
+          courseId, learningType);
     }
     return orElse();
   }
@@ -3661,6 +3754,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return matchingLearning(this);
   }
@@ -3692,6 +3786,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return matchingLearning?.call(this);
   }
@@ -3723,6 +3818,7 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
@@ -3737,12 +3833,12 @@ abstract class _MatchingLearning implements AppRouteInfo {
       {required final LearningLanguage learningLanguage,
       required final List<LanguageCourseLearningContent>
           languageCourseLearningContent,
-      required final LanguageCourse languageCourse,
+      required final String courseId,
       final LearningType? learningType}) = _$MatchingLearningImpl;
 
   LearningLanguage get learningLanguage;
   List<LanguageCourseLearningContent> get languageCourseLearningContent;
-  LanguageCourse get languageCourse;
+  String get courseId;
   LearningType? get learningType;
 
   /// Create a copy of AppRouteInfo
@@ -3762,9 +3858,7 @@ abstract class _$$PronunciationLearningImplCopyWith<$Res> {
   $Res call(
       {LearningLanguage learningLanguage,
       List<LanguageCourseLearningContent> languageCourseLearningContent,
-      LanguageCourse languageCourse});
-
-  $LanguageCourseCopyWith<$Res> get languageCourse;
+      String courseId});
 }
 
 /// @nodoc
@@ -3782,7 +3876,7 @@ class __$$PronunciationLearningImplCopyWithImpl<$Res>
   $Res call({
     Object? learningLanguage = null,
     Object? languageCourseLearningContent = null,
-    Object? languageCourse = null,
+    Object? courseId = null,
   }) {
     return _then(_$PronunciationLearningImpl(
       learningLanguage: null == learningLanguage
@@ -3793,21 +3887,11 @@ class __$$PronunciationLearningImplCopyWithImpl<$Res>
           ? _value._languageCourseLearningContent
           : languageCourseLearningContent // ignore: cast_nullable_to_non_nullable
               as List<LanguageCourseLearningContent>,
-      languageCourse: null == languageCourse
-          ? _value.languageCourse
-          : languageCourse // ignore: cast_nullable_to_non_nullable
-              as LanguageCourse,
+      courseId: null == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
-  }
-
-  /// Create a copy of AppRouteInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $LanguageCourseCopyWith<$Res> get languageCourse {
-    return $LanguageCourseCopyWith<$Res>(_value.languageCourse, (value) {
-      return _then(_value.copyWith(languageCourse: value));
-    });
   }
 }
 
@@ -3818,7 +3902,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
       {required this.learningLanguage,
       required final List<LanguageCourseLearningContent>
           languageCourseLearningContent,
-      required this.languageCourse})
+      required this.courseId})
       : _languageCourseLearningContent = languageCourseLearningContent;
 
   @override
@@ -3833,11 +3917,11 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
   }
 
   @override
-  final LanguageCourse languageCourse;
+  final String courseId;
 
   @override
   String toString() {
-    return 'AppRouteInfo.pronunciationLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, languageCourse: $languageCourse)';
+    return 'AppRouteInfo.pronunciationLearning(learningLanguage: $learningLanguage, languageCourseLearningContent: $languageCourseLearningContent, courseId: $courseId)';
   }
 
   @override
@@ -3850,8 +3934,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
             const DeepCollectionEquality().equals(
                 other._languageCourseLearningContent,
                 _languageCourseLearningContent) &&
-            (identical(other.languageCourse, languageCourse) ||
-                other.languageCourse == languageCourse));
+            (identical(other.courseId, courseId) ||
+                other.courseId == courseId));
   }
 
   @override
@@ -3859,7 +3943,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
       runtimeType,
       learningLanguage,
       const DeepCollectionEquality().hash(_languageCourseLearningContent),
-      languageCourse);
+      courseId);
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -3884,23 +3968,23 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -3921,9 +4005,12 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return pronunciationLearning(
-        learningLanguage, languageCourseLearningContent, this.languageCourse);
+        learningLanguage, languageCourseLearningContent, courseId);
   }
 
   @override
@@ -3939,23 +4026,23 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -3975,9 +4062,12 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return pronunciationLearning?.call(
-        learningLanguage, languageCourseLearningContent, this.languageCourse);
+        learningLanguage, languageCourseLearningContent, courseId);
   }
 
   @override
@@ -3993,23 +4083,23 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -4029,11 +4119,14 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
       return pronunciationLearning(
-          learningLanguage, languageCourseLearningContent, this.languageCourse);
+          learningLanguage, languageCourseLearningContent, courseId);
     }
     return orElse();
   }
@@ -4068,6 +4161,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return pronunciationLearning(this);
   }
@@ -4099,6 +4193,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return pronunciationLearning?.call(this);
   }
@@ -4130,6 +4225,7 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
@@ -4141,15 +4237,14 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
 
 abstract class _PronunciationLearning implements AppRouteInfo {
   const factory _PronunciationLearning(
-          {required final LearningLanguage learningLanguage,
-          required final List<LanguageCourseLearningContent>
-              languageCourseLearningContent,
-          required final LanguageCourse languageCourse}) =
-      _$PronunciationLearningImpl;
+      {required final LearningLanguage learningLanguage,
+      required final List<LanguageCourseLearningContent>
+          languageCourseLearningContent,
+      required final String courseId}) = _$PronunciationLearningImpl;
 
   LearningLanguage get learningLanguage;
   List<LanguageCourseLearningContent> get languageCourseLearningContent;
-  LanguageCourse get languageCourse;
+  String get courseId;
 
   /// Create a copy of AppRouteInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -4292,23 +4387,23 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -4329,6 +4424,9 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return listeningLearning(
         learningLanguage, languageCourseLearningContent, this.languageCourse);
@@ -4347,23 +4445,23 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -4383,6 +4481,9 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return listeningLearning?.call(
         learningLanguage, languageCourseLearningContent, this.languageCourse);
@@ -4401,23 +4502,23 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -4437,6 +4538,9 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -4476,6 +4580,7 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return listeningLearning(this);
   }
@@ -4507,6 +4612,7 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return listeningLearning?.call(this);
   }
@@ -4538,6 +4644,7 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -4617,23 +4724,23 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -4654,6 +4761,9 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return validateEmail();
   }
@@ -4671,23 +4781,23 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -4707,6 +4817,9 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return validateEmail?.call();
   }
@@ -4724,23 +4837,23 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -4760,6 +4873,9 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -4798,6 +4914,7 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return validateEmail(this);
   }
@@ -4829,6 +4946,7 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return validateEmail?.call(this);
   }
@@ -4860,6 +4978,7 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -4926,23 +5045,23 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -4963,6 +5082,9 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return validatePhoneNumber();
   }
@@ -4980,23 +5102,23 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -5016,6 +5138,9 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return validatePhoneNumber?.call();
   }
@@ -5033,23 +5158,23 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -5069,6 +5194,9 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -5107,6 +5235,7 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return validatePhoneNumber(this);
   }
@@ -5138,6 +5267,7 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return validatePhoneNumber?.call(this);
   }
@@ -5169,6 +5299,7 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -5234,23 +5365,23 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -5271,6 +5402,9 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return editProfile();
   }
@@ -5288,23 +5422,23 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -5324,6 +5458,9 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return editProfile?.call();
   }
@@ -5341,23 +5478,23 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -5377,6 +5514,9 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -5415,6 +5555,7 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return editProfile(this);
   }
@@ -5446,6 +5587,7 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return editProfile?.call(this);
   }
@@ -5477,6 +5619,7 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -5542,23 +5685,23 @@ class _$SubscriptionImpl implements _Subscription {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -5579,6 +5722,9 @@ class _$SubscriptionImpl implements _Subscription {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return subscription();
   }
@@ -5596,23 +5742,23 @@ class _$SubscriptionImpl implements _Subscription {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -5632,6 +5778,9 @@ class _$SubscriptionImpl implements _Subscription {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return subscription?.call();
   }
@@ -5649,23 +5798,23 @@ class _$SubscriptionImpl implements _Subscription {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -5685,6 +5834,9 @@ class _$SubscriptionImpl implements _Subscription {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (subscription != null) {
@@ -5723,6 +5875,7 @@ class _$SubscriptionImpl implements _Subscription {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return subscription(this);
   }
@@ -5754,6 +5907,7 @@ class _$SubscriptionImpl implements _Subscription {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return subscription?.call(this);
   }
@@ -5785,6 +5939,7 @@ class _$SubscriptionImpl implements _Subscription {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (subscription != null) {
@@ -5855,23 +6010,23 @@ class _$CommonFeatureRequiredSubscriptionImpl
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -5892,6 +6047,9 @@ class _$CommonFeatureRequiredSubscriptionImpl
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return commonFeatureRequiredSubscription();
   }
@@ -5909,23 +6067,23 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -5945,6 +6103,9 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return commonFeatureRequiredSubscription?.call();
   }
@@ -5962,23 +6123,23 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -5998,6 +6159,9 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (commonFeatureRequiredSubscription != null) {
@@ -6036,6 +6200,7 @@ class _$CommonFeatureRequiredSubscriptionImpl
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return commonFeatureRequiredSubscription(this);
   }
@@ -6067,6 +6232,7 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return commonFeatureRequiredSubscription?.call(this);
   }
@@ -6098,6 +6264,7 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (commonFeatureRequiredSubscription != null) {
@@ -6205,23 +6372,23 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -6242,6 +6409,9 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return aiChatBotDetails(chatSession);
   }
@@ -6259,23 +6429,23 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -6295,6 +6465,9 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return aiChatBotDetails?.call(chatSession);
   }
@@ -6312,23 +6485,23 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -6348,6 +6521,9 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (aiChatBotDetails != null) {
@@ -6386,6 +6562,7 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return aiChatBotDetails(this);
   }
@@ -6417,6 +6594,7 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return aiChatBotDetails?.call(this);
   }
@@ -6448,6 +6626,7 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (aiChatBotDetails != null) {
@@ -6522,23 +6701,23 @@ class _$CommunityImpl implements _Community {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -6559,6 +6738,9 @@ class _$CommunityImpl implements _Community {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return community();
   }
@@ -6576,23 +6758,23 @@ class _$CommunityImpl implements _Community {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -6612,6 +6794,9 @@ class _$CommunityImpl implements _Community {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return community?.call();
   }
@@ -6629,23 +6814,23 @@ class _$CommunityImpl implements _Community {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -6665,6 +6850,9 @@ class _$CommunityImpl implements _Community {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (community != null) {
@@ -6703,6 +6891,7 @@ class _$CommunityImpl implements _Community {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return community(this);
   }
@@ -6734,6 +6923,7 @@ class _$CommunityImpl implements _Community {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return community?.call(this);
   }
@@ -6765,6 +6955,7 @@ class _$CommunityImpl implements _Community {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (community != null) {
@@ -6871,23 +7062,23 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -6908,6 +7099,9 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return communityTopic(chatTopic);
   }
@@ -6925,23 +7119,23 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -6961,6 +7155,9 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return communityTopic?.call(chatTopic);
   }
@@ -6978,23 +7175,23 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -7014,6 +7211,9 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (communityTopic != null) {
@@ -7052,6 +7252,7 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return communityTopic(this);
   }
@@ -7083,6 +7284,7 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return communityTopic?.call(this);
   }
@@ -7114,6 +7316,7 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (communityTopic != null) {
@@ -7228,23 +7431,23 @@ class _$GroupChatImpl implements _GroupChat {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -7265,6 +7468,9 @@ class _$GroupChatImpl implements _GroupChat {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return groupChat(chatSession);
   }
@@ -7282,23 +7488,23 @@ class _$GroupChatImpl implements _GroupChat {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -7318,6 +7524,9 @@ class _$GroupChatImpl implements _GroupChat {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return groupChat?.call(chatSession);
   }
@@ -7335,23 +7544,23 @@ class _$GroupChatImpl implements _GroupChat {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -7371,6 +7580,9 @@ class _$GroupChatImpl implements _GroupChat {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (groupChat != null) {
@@ -7409,6 +7621,7 @@ class _$GroupChatImpl implements _GroupChat {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return groupChat(this);
   }
@@ -7440,6 +7653,7 @@ class _$GroupChatImpl implements _GroupChat {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return groupChat?.call(this);
   }
@@ -7471,6 +7685,7 @@ class _$GroupChatImpl implements _GroupChat {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (groupChat != null) {
@@ -7605,23 +7820,23 @@ class _$PrivateChatImpl implements _PrivateChat {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -7642,6 +7857,9 @@ class _$PrivateChatImpl implements _PrivateChat {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return privateChat(chatSession, receiver);
   }
@@ -7659,23 +7877,23 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -7695,6 +7913,9 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return privateChat?.call(chatSession, receiver);
   }
@@ -7712,23 +7933,23 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -7748,6 +7969,9 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (privateChat != null) {
@@ -7786,6 +8010,7 @@ class _$PrivateChatImpl implements _PrivateChat {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return privateChat(this);
   }
@@ -7817,6 +8042,7 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return privateChat?.call(this);
   }
@@ -7848,6 +8074,7 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (privateChat != null) {
@@ -7997,23 +8224,23 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     required TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)
+            String courseId)
         flashCardLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)
+            String courseId)
         quizLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)
         matchingLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)
+            String courseId)
         pronunciationLearning,
     required TResult Function(
             LearningLanguage learningLanguage,
@@ -8034,6 +8261,9 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     required TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)
         categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
   }) {
     return categoryCourseDetails(language, category, categoryCourses);
   }
@@ -8051,23 +8281,23 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult? Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult? Function(
             LearningLanguage learningLanguage,
@@ -8087,6 +8317,9 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult? Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
   }) {
     return categoryCourseDetails?.call(language, category, categoryCourses);
   }
@@ -8104,23 +8337,23 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult Function(
             List<LanguageCourseLearningContent> languageCourseLearningContent,
             LearningLanguage learningLanguage,
-            LanguageCourse languageCourse)?
+            String courseId)?
         flashCardLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContents,
-            LanguageCourse languageCourse)?
+            String courseId)?
         quizLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse,
+            String courseId,
             LearningType? learningType)?
         matchingLearning,
     TResult Function(
             LearningLanguage learningLanguage,
             List<LanguageCourseLearningContent> languageCourseLearningContent,
-            LanguageCourse languageCourse)?
+            String courseId)?
         pronunciationLearning,
     TResult Function(
             LearningLanguage learningLanguage,
@@ -8140,6 +8373,9 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult Function(LearningLanguage language, Category category,
             List<CategoryCourse> categoryCourses)?
         categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (categoryCourseDetails != null) {
@@ -8178,6 +8414,7 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     required TResult Function(_PrivateChat value) privateChat,
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
   }) {
     return categoryCourseDetails(this);
   }
@@ -8209,6 +8446,7 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult? Function(_GroupChat value)? groupChat,
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
   }) {
     return categoryCourseDetails?.call(this);
   }
@@ -8240,6 +8478,7 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult Function(_GroupChat value)? groupChat,
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     required TResult orElse(),
   }) {
     if (categoryCourseDetails != null) {
@@ -8264,5 +8503,404 @@ abstract class _CategoryCourseDetails implements AppRouteInfo {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryCourseDetailsImplCopyWith<_$CategoryCourseDetailsImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CategoryCourseLessonImplCopyWith<$Res> {
+  factory _$$CategoryCourseLessonImplCopyWith(_$CategoryCourseLessonImpl value,
+          $Res Function(_$CategoryCourseLessonImpl) then) =
+      __$$CategoryCourseLessonImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {CategoryCourse categoryCourse,
+      List<LanguageCourseLearningContent> languageCourseLearningContents});
+
+  $CategoryCourseCopyWith<$Res> get categoryCourse;
+}
+
+/// @nodoc
+class __$$CategoryCourseLessonImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$CategoryCourseLessonImpl>
+    implements _$$CategoryCourseLessonImplCopyWith<$Res> {
+  __$$CategoryCourseLessonImplCopyWithImpl(_$CategoryCourseLessonImpl _value,
+      $Res Function(_$CategoryCourseLessonImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? categoryCourse = null,
+    Object? languageCourseLearningContents = null,
+  }) {
+    return _then(_$CategoryCourseLessonImpl(
+      categoryCourse: null == categoryCourse
+          ? _value.categoryCourse
+          : categoryCourse // ignore: cast_nullable_to_non_nullable
+              as CategoryCourse,
+      languageCourseLearningContents: null == languageCourseLearningContents
+          ? _value._languageCourseLearningContents
+          : languageCourseLearningContents // ignore: cast_nullable_to_non_nullable
+              as List<LanguageCourseLearningContent>,
+    ));
+  }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CategoryCourseCopyWith<$Res> get categoryCourse {
+    return $CategoryCourseCopyWith<$Res>(_value.categoryCourse, (value) {
+      return _then(_value.copyWith(categoryCourse: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
+  const _$CategoryCourseLessonImpl(
+      {required this.categoryCourse,
+      required final List<LanguageCourseLearningContent>
+          languageCourseLearningContents})
+      : _languageCourseLearningContents = languageCourseLearningContents;
+
+  @override
+  final CategoryCourse categoryCourse;
+  final List<LanguageCourseLearningContent> _languageCourseLearningContents;
+  @override
+  List<LanguageCourseLearningContent> get languageCourseLearningContents {
+    if (_languageCourseLearningContents is EqualUnmodifiableListView)
+      return _languageCourseLearningContents;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_languageCourseLearningContents);
+  }
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.categoryCourseLesson(categoryCourse: $categoryCourse, languageCourseLearningContents: $languageCourseLearningContents)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CategoryCourseLessonImpl &&
+            (identical(other.categoryCourse, categoryCourse) ||
+                other.categoryCourse == categoryCourse) &&
+            const DeepCollectionEquality().equals(
+                other._languageCourseLearningContents,
+                _languageCourseLearningContents));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, categoryCourse,
+      const DeepCollectionEquality().hash(_languageCourseLearningContents));
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CategoryCourseLessonImplCopyWith<_$CategoryCourseLessonImpl>
+      get copyWith =>
+          __$$CategoryCourseLessonImplCopyWithImpl<_$CategoryCourseLessonImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+    required TResult Function(LearningLanguage learningLanguage) languageCourse,
+    required TResult Function(LanguageCourse languageCourse)
+        languageCourseDetails,
+    required TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)
+        flashCardLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)
+        quizLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)
+        matchingLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)
+        pronunciationLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
+        listeningLearning,
+    required TResult Function() validateEmail,
+    required TResult Function() validatePhoneNumber,
+    required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
+    required TResult Function(ChatSession chatSession) aiChatBotDetails,
+    required TResult Function() community,
+    required TResult Function(ChatTopic chatTopic) communityTopic,
+    required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
+    required TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)
+        categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
+  }) {
+    return categoryCourseLesson(categoryCourse, languageCourseLearningContents);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+    TResult? Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult? Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult? Function()? validateEmail,
+    TResult? Function()? validatePhoneNumber,
+    TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
+    TResult? Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult? Function()? community,
+    TResult? Function(ChatTopic chatTopic)? communityTopic,
+    TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult? Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+  }) {
+    return categoryCourseLesson?.call(
+        categoryCourse, languageCourseLearningContents);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    TResult Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult Function()? validateEmail,
+    TResult Function()? validatePhoneNumber,
+    TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
+    TResult Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult Function()? community,
+    TResult Function(ChatTopic chatTopic)? communityTopic,
+    TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+    required TResult orElse(),
+  }) {
+    if (categoryCourseLesson != null) {
+      return categoryCourseLesson(
+          categoryCourse, languageCourseLearningContents);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+    required TResult Function(_LanguageCourse value) languageCourse,
+    required TResult Function(_LanguageCourseDetails value)
+        languageCourseDetails,
+    required TResult Function(_FlashCardLearning value) flashCardLearning,
+    required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
+    required TResult Function(_PronunciationLearning value)
+        pronunciationLearning,
+    required TResult Function(_ListeningLearning value) listeningLearning,
+    required TResult Function(_ValidateEmail value) validateEmail,
+    required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
+    required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
+    required TResult Function(_AiChatBotDetails value) aiChatBotDetails,
+    required TResult Function(_Community value) community,
+    required TResult Function(_CommunityTopic value) communityTopic,
+    required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
+    required TResult Function(_CategoryCourseDetails value)
+        categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+  }) {
+    return categoryCourseLesson(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+    TResult? Function(_LanguageCourse value)? languageCourse,
+    TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult? Function(_FlashCardLearning value)? flashCardLearning,
+    TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
+    TResult? Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult? Function(_ListeningLearning value)? listeningLearning,
+    TResult? Function(_ValidateEmail value)? validateEmail,
+    TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult? Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult? Function(_Community value)? community,
+    TResult? Function(_CommunityTopic value)? communityTopic,
+    TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
+    TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+  }) {
+    return categoryCourseLesson?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    TResult Function(_LanguageCourse value)? languageCourse,
+    TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult Function(_FlashCardLearning value)? flashCardLearning,
+    TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
+    TResult Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult Function(_ListeningLearning value)? listeningLearning,
+    TResult Function(_ValidateEmail value)? validateEmail,
+    TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult Function(_Community value)? community,
+    TResult Function(_CommunityTopic value)? communityTopic,
+    TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
+    TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    required TResult orElse(),
+  }) {
+    if (categoryCourseLesson != null) {
+      return categoryCourseLesson(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CategoryCourseLesson implements AppRouteInfo {
+  const factory _CategoryCourseLesson(
+      {required final CategoryCourse categoryCourse,
+      required final List<LanguageCourseLearningContent>
+          languageCourseLearningContents}) = _$CategoryCourseLessonImpl;
+
+  CategoryCourse get categoryCourse;
+  List<LanguageCourseLearningContent> get languageCourseLearningContents;
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CategoryCourseLessonImplCopyWith<_$CategoryCourseLessonImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

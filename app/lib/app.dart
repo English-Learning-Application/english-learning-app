@@ -31,6 +31,7 @@ export 'exception_handler/exception_message_mapper.dart';
 export 'features/ai_chat_bot/view_models/ai_chat_bot.dart';
 export 'features/ai_chat_bot_details/view_model/ai_chat_bot_details.dart';
 export 'features/category_course_details/view_models/category_course_details.dart';
+export 'features/category_course_lesson/view_model/category_course_lesson.dart';
 export 'features/community/view_model/community.dart';
 export 'features/community_topic/view_model/community_topic.dart';
 export 'features/complete_registration/view_models/complete_registration.dart';

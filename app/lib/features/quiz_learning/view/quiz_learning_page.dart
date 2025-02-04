@@ -13,9 +13,9 @@ class QuizLearningPage extends StatefulWidget {
     super.key,
     required this.learningLanguage,
     required this.languageCourseLearningContent,
-    required this.languageCourse,
+    required this.courseId,
   });
-  final LanguageCourse languageCourse;
+  final String courseId;
   final LearningLanguage learningLanguage;
   final List<LanguageCourseLearningContent> languageCourseLearningContent;
 
@@ -107,6 +107,7 @@ class _QuizLearningPageState
                       },
                       child: Text(
                         currentQuizLearningEntity.question,
+                        textAlign: TextAlign.center,
                         style: AppTextStyles.s14w400primary().medium.font24(),
                       ),
                     ),
@@ -176,7 +177,7 @@ class _QuizLearningPageState
     viewModel.onInit(
       learningLanguage: widget.learningLanguage,
       languageCourseLearningContent: widget.languageCourseLearningContent,
-      courseId: widget.languageCourse.languageCourseId,
+      courseId: widget.courseId,
     );
   }
 

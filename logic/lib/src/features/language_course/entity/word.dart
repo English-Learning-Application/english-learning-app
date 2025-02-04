@@ -30,7 +30,5 @@ class Word with _$Word {
   static const DateTime? defaultCreatedAt = null;
   static const DateTime? defaultUpdatedAt = null;
 
-  String get imageUrlItem => imageUrl.isNotEmpty
-      ? "${UrlConstants.appMediaBaseUrl}$imageUrl"
-      : 'https://via.placeholder.com/150';
+  String get imageUrlItem => "${UrlConstants.appMediaBaseUrl}$imageUrl";
 }
