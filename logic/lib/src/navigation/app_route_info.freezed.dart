@@ -69,6 +69,8 @@ mixin _$AppRouteInfo {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -122,6 +124,8 @@ mixin _$AppRouteInfo {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -175,6 +179,8 @@ mixin _$AppRouteInfo {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -208,6 +214,8 @@ mixin _$AppRouteInfo {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -237,6 +245,8 @@ mixin _$AppRouteInfo {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -266,6 +276,8 @@ mixin _$AppRouteInfo {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -384,6 +396,8 @@ class _$LoginImpl implements _Login {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return login();
   }
@@ -440,6 +454,8 @@ class _$LoginImpl implements _Login {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return login?.call();
   }
@@ -496,6 +512,8 @@ class _$LoginImpl implements _Login {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -535,6 +553,8 @@ class _$LoginImpl implements _Login {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return login(this);
   }
@@ -567,6 +587,8 @@ class _$LoginImpl implements _Login {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return login?.call(this);
   }
@@ -599,6 +621,8 @@ class _$LoginImpl implements _Login {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -703,6 +727,8 @@ class _$MainImpl implements _Main {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return main();
   }
@@ -759,6 +785,8 @@ class _$MainImpl implements _Main {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return main?.call();
   }
@@ -815,6 +843,8 @@ class _$MainImpl implements _Main {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -854,6 +884,8 @@ class _$MainImpl implements _Main {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return main(this);
   }
@@ -886,6 +918,8 @@ class _$MainImpl implements _Main {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return main?.call(this);
   }
@@ -918,6 +952,8 @@ class _$MainImpl implements _Main {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -1023,6 +1059,8 @@ class _$SplashImpl implements _Splash {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return splash();
   }
@@ -1079,6 +1117,8 @@ class _$SplashImpl implements _Splash {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return splash?.call();
   }
@@ -1135,6 +1175,8 @@ class _$SplashImpl implements _Splash {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -1174,6 +1216,8 @@ class _$SplashImpl implements _Splash {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return splash(this);
   }
@@ -1206,6 +1250,8 @@ class _$SplashImpl implements _Splash {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return splash?.call(this);
   }
@@ -1238,6 +1284,8 @@ class _$SplashImpl implements _Splash {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -1343,6 +1391,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return onBoarding();
   }
@@ -1399,6 +1449,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return onBoarding?.call();
   }
@@ -1455,6 +1507,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1494,6 +1548,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return onBoarding(this);
   }
@@ -1526,6 +1582,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return onBoarding?.call(this);
   }
@@ -1558,6 +1616,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1664,6 +1724,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return completeRegistration();
   }
@@ -1720,6 +1782,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return completeRegistration?.call();
   }
@@ -1776,6 +1840,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -1815,6 +1881,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return completeRegistration(this);
   }
@@ -1847,6 +1915,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return completeRegistration?.call(this);
   }
@@ -1879,6 +1949,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -2013,6 +2085,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return languageCourse(learningLanguage);
   }
@@ -2069,6 +2143,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return languageCourse?.call(learningLanguage);
   }
@@ -2125,6 +2201,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -2164,6 +2242,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return languageCourse(this);
   }
@@ -2196,6 +2276,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return languageCourse?.call(this);
   }
@@ -2228,6 +2310,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -2385,6 +2469,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return languageCourseDetails(this.languageCourse);
   }
@@ -2441,6 +2527,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return languageCourseDetails?.call(this.languageCourse);
   }
@@ -2497,6 +2585,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -2536,6 +2626,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return languageCourseDetails(this);
   }
@@ -2568,6 +2660,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return languageCourseDetails?.call(this);
   }
@@ -2600,6 +2694,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -2782,6 +2878,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return flashCardLearning(
         languageCourseLearningContent, learningLanguage, courseId);
@@ -2839,6 +2937,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return flashCardLearning?.call(
         languageCourseLearningContent, learningLanguage, courseId);
@@ -2896,6 +2996,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -2936,6 +3038,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return flashCardLearning(this);
   }
@@ -2968,6 +3072,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return flashCardLearning?.call(this);
   }
@@ -3000,6 +3106,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -3185,6 +3293,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return quizLearning(
         learningLanguage, languageCourseLearningContents, courseId);
@@ -3242,6 +3352,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return quizLearning?.call(
         learningLanguage, languageCourseLearningContents, courseId);
@@ -3299,6 +3411,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -3339,6 +3453,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return quizLearning(this);
   }
@@ -3371,6 +3487,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return quizLearning?.call(this);
   }
@@ -3403,6 +3521,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -3601,6 +3721,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return matchingLearning(learningLanguage, languageCourseLearningContent,
         courseId, learningType);
@@ -3658,6 +3780,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return matchingLearning?.call(learningLanguage,
         languageCourseLearningContent, courseId, learningType);
@@ -3715,6 +3839,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
@@ -3755,6 +3881,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return matchingLearning(this);
   }
@@ -3787,6 +3915,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return matchingLearning?.call(this);
   }
@@ -3819,6 +3949,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
@@ -4008,6 +4140,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return pronunciationLearning(
         learningLanguage, languageCourseLearningContent, courseId);
@@ -4065,6 +4199,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return pronunciationLearning?.call(
         learningLanguage, languageCourseLearningContent, courseId);
@@ -4122,6 +4258,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
@@ -4162,6 +4300,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return pronunciationLearning(this);
   }
@@ -4194,6 +4334,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return pronunciationLearning?.call(this);
   }
@@ -4226,6 +4368,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
@@ -4427,6 +4571,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return listeningLearning(
         learningLanguage, languageCourseLearningContent, this.languageCourse);
@@ -4484,6 +4630,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return listeningLearning?.call(
         learningLanguage, languageCourseLearningContent, this.languageCourse);
@@ -4541,6 +4689,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -4581,6 +4731,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return listeningLearning(this);
   }
@@ -4613,6 +4765,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return listeningLearning?.call(this);
   }
@@ -4645,6 +4799,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -4764,6 +4920,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return validateEmail();
   }
@@ -4820,6 +4978,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return validateEmail?.call();
   }
@@ -4876,6 +5036,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -4915,6 +5077,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return validateEmail(this);
   }
@@ -4947,6 +5111,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return validateEmail?.call(this);
   }
@@ -4979,6 +5145,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -5085,6 +5253,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return validatePhoneNumber();
   }
@@ -5141,6 +5311,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return validatePhoneNumber?.call();
   }
@@ -5197,6 +5369,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -5236,6 +5410,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return validatePhoneNumber(this);
   }
@@ -5268,6 +5444,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return validatePhoneNumber?.call(this);
   }
@@ -5300,6 +5478,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -5405,6 +5585,8 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return editProfile();
   }
@@ -5461,6 +5643,8 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return editProfile?.call();
   }
@@ -5517,6 +5701,8 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -5556,6 +5742,8 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return editProfile(this);
   }
@@ -5588,6 +5776,8 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return editProfile?.call(this);
   }
@@ -5620,6 +5810,8 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -5725,6 +5917,8 @@ class _$SubscriptionImpl implements _Subscription {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return subscription();
   }
@@ -5781,6 +5975,8 @@ class _$SubscriptionImpl implements _Subscription {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return subscription?.call();
   }
@@ -5837,6 +6033,8 @@ class _$SubscriptionImpl implements _Subscription {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (subscription != null) {
@@ -5876,6 +6074,8 @@ class _$SubscriptionImpl implements _Subscription {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return subscription(this);
   }
@@ -5908,6 +6108,8 @@ class _$SubscriptionImpl implements _Subscription {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return subscription?.call(this);
   }
@@ -5940,6 +6142,8 @@ class _$SubscriptionImpl implements _Subscription {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (subscription != null) {
@@ -6050,6 +6254,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return commonFeatureRequiredSubscription();
   }
@@ -6106,6 +6312,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return commonFeatureRequiredSubscription?.call();
   }
@@ -6162,6 +6370,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (commonFeatureRequiredSubscription != null) {
@@ -6201,6 +6411,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return commonFeatureRequiredSubscription(this);
   }
@@ -6233,6 +6445,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return commonFeatureRequiredSubscription?.call(this);
   }
@@ -6265,6 +6479,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (commonFeatureRequiredSubscription != null) {
@@ -6412,6 +6628,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return aiChatBotDetails(chatSession);
   }
@@ -6468,6 +6686,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return aiChatBotDetails?.call(chatSession);
   }
@@ -6524,6 +6744,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (aiChatBotDetails != null) {
@@ -6563,6 +6785,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return aiChatBotDetails(this);
   }
@@ -6595,6 +6819,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return aiChatBotDetails?.call(this);
   }
@@ -6627,6 +6853,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (aiChatBotDetails != null) {
@@ -6741,6 +6969,8 @@ class _$CommunityImpl implements _Community {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return community();
   }
@@ -6797,6 +7027,8 @@ class _$CommunityImpl implements _Community {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return community?.call();
   }
@@ -6853,6 +7085,8 @@ class _$CommunityImpl implements _Community {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (community != null) {
@@ -6892,6 +7126,8 @@ class _$CommunityImpl implements _Community {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return community(this);
   }
@@ -6924,6 +7160,8 @@ class _$CommunityImpl implements _Community {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return community?.call(this);
   }
@@ -6956,6 +7194,8 @@ class _$CommunityImpl implements _Community {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (community != null) {
@@ -7102,6 +7342,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return communityTopic(chatTopic);
   }
@@ -7158,6 +7400,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return communityTopic?.call(chatTopic);
   }
@@ -7214,6 +7458,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (communityTopic != null) {
@@ -7253,6 +7499,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return communityTopic(this);
   }
@@ -7285,6 +7533,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return communityTopic?.call(this);
   }
@@ -7317,6 +7567,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (communityTopic != null) {
@@ -7471,6 +7723,8 @@ class _$GroupChatImpl implements _GroupChat {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return groupChat(chatSession);
   }
@@ -7527,6 +7781,8 @@ class _$GroupChatImpl implements _GroupChat {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return groupChat?.call(chatSession);
   }
@@ -7583,6 +7839,8 @@ class _$GroupChatImpl implements _GroupChat {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (groupChat != null) {
@@ -7622,6 +7880,8 @@ class _$GroupChatImpl implements _GroupChat {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return groupChat(this);
   }
@@ -7654,6 +7914,8 @@ class _$GroupChatImpl implements _GroupChat {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return groupChat?.call(this);
   }
@@ -7686,6 +7948,8 @@ class _$GroupChatImpl implements _GroupChat {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (groupChat != null) {
@@ -7860,6 +8124,8 @@ class _$PrivateChatImpl implements _PrivateChat {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return privateChat(chatSession, receiver);
   }
@@ -7916,6 +8182,8 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return privateChat?.call(chatSession, receiver);
   }
@@ -7972,6 +8240,8 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (privateChat != null) {
@@ -8011,6 +8281,8 @@ class _$PrivateChatImpl implements _PrivateChat {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return privateChat(this);
   }
@@ -8043,6 +8315,8 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return privateChat?.call(this);
   }
@@ -8075,6 +8349,8 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (privateChat != null) {
@@ -8264,6 +8540,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return categoryCourseDetails(language, category, categoryCourses);
   }
@@ -8320,6 +8598,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return categoryCourseDetails?.call(language, category, categoryCourses);
   }
@@ -8376,6 +8656,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (categoryCourseDetails != null) {
@@ -8415,6 +8697,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return categoryCourseDetails(this);
   }
@@ -8447,6 +8731,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return categoryCourseDetails?.call(this);
   }
@@ -8479,6 +8765,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (categoryCourseDetails != null) {
@@ -8663,6 +8951,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
     required TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)
         categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
   }) {
     return categoryCourseLesson(categoryCourse, languageCourseLearningContents);
   }
@@ -8719,6 +9009,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
     TResult? Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
   }) {
     return categoryCourseLesson?.call(
         categoryCourse, languageCourseLearningContents);
@@ -8776,6 +9068,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
     TResult Function(CategoryCourse categoryCourse,
             List<LanguageCourseLearningContent> languageCourseLearningContents)?
         categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
     required TResult orElse(),
   }) {
     if (categoryCourseLesson != null) {
@@ -8816,6 +9110,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
     required TResult Function(_CategoryCourseDetails value)
         categoryCourseDetails,
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
   }) {
     return categoryCourseLesson(this);
   }
@@ -8848,6 +9144,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
     TResult? Function(_PrivateChat value)? privateChat,
     TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
   }) {
     return categoryCourseLesson?.call(this);
   }
@@ -8880,6 +9178,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
     TResult Function(_PrivateChat value)? privateChat,
     TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
     required TResult orElse(),
   }) {
     if (categoryCourseLesson != null) {
@@ -8903,4 +9203,719 @@ abstract class _CategoryCourseLesson implements AppRouteInfo {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryCourseLessonImplCopyWith<_$CategoryCourseLessonImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$TodoDetailsImplCopyWith<$Res> {
+  factory _$$TodoDetailsImplCopyWith(
+          _$TodoDetailsImpl value, $Res Function(_$TodoDetailsImpl) then) =
+      __$$TodoDetailsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserTodo? todo});
+
+  $UserTodoCopyWith<$Res>? get todo;
+}
+
+/// @nodoc
+class __$$TodoDetailsImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$TodoDetailsImpl>
+    implements _$$TodoDetailsImplCopyWith<$Res> {
+  __$$TodoDetailsImplCopyWithImpl(
+      _$TodoDetailsImpl _value, $Res Function(_$TodoDetailsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? todo = freezed,
+  }) {
+    return _then(_$TodoDetailsImpl(
+      todo: freezed == todo
+          ? _value.todo
+          : todo // ignore: cast_nullable_to_non_nullable
+              as UserTodo?,
+    ));
+  }
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UserTodoCopyWith<$Res>? get todo {
+    if (_value.todo == null) {
+      return null;
+    }
+
+    return $UserTodoCopyWith<$Res>(_value.todo!, (value) {
+      return _then(_value.copyWith(todo: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$TodoDetailsImpl implements _TodoDetails {
+  const _$TodoDetailsImpl({this.todo});
+
+  @override
+  final UserTodo? todo;
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.todoDetails(todo: $todo)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TodoDetailsImpl &&
+            (identical(other.todo, todo) || other.todo == todo));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, todo);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TodoDetailsImplCopyWith<_$TodoDetailsImpl> get copyWith =>
+      __$$TodoDetailsImplCopyWithImpl<_$TodoDetailsImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+    required TResult Function(LearningLanguage learningLanguage) languageCourse,
+    required TResult Function(LanguageCourse languageCourse)
+        languageCourseDetails,
+    required TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)
+        flashCardLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)
+        quizLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)
+        matchingLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)
+        pronunciationLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
+        listeningLearning,
+    required TResult Function() validateEmail,
+    required TResult Function() validatePhoneNumber,
+    required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
+    required TResult Function(ChatSession chatSession) aiChatBotDetails,
+    required TResult Function() community,
+    required TResult Function(ChatTopic chatTopic) communityTopic,
+    required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
+    required TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)
+        categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
+  }) {
+    return todoDetails(todo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+    TResult? Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult? Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult? Function()? validateEmail,
+    TResult? Function()? validatePhoneNumber,
+    TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
+    TResult? Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult? Function()? community,
+    TResult? Function(ChatTopic chatTopic)? communityTopic,
+    TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult? Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
+  }) {
+    return todoDetails?.call(todo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    TResult Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult Function()? validateEmail,
+    TResult Function()? validatePhoneNumber,
+    TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
+    TResult Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult Function()? community,
+    TResult Function(ChatTopic chatTopic)? communityTopic,
+    TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
+    required TResult orElse(),
+  }) {
+    if (todoDetails != null) {
+      return todoDetails(todo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+    required TResult Function(_LanguageCourse value) languageCourse,
+    required TResult Function(_LanguageCourseDetails value)
+        languageCourseDetails,
+    required TResult Function(_FlashCardLearning value) flashCardLearning,
+    required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
+    required TResult Function(_PronunciationLearning value)
+        pronunciationLearning,
+    required TResult Function(_ListeningLearning value) listeningLearning,
+    required TResult Function(_ValidateEmail value) validateEmail,
+    required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
+    required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
+    required TResult Function(_AiChatBotDetails value) aiChatBotDetails,
+    required TResult Function(_Community value) community,
+    required TResult Function(_CommunityTopic value) communityTopic,
+    required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
+    required TResult Function(_CategoryCourseDetails value)
+        categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
+  }) {
+    return todoDetails(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+    TResult? Function(_LanguageCourse value)? languageCourse,
+    TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult? Function(_FlashCardLearning value)? flashCardLearning,
+    TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
+    TResult? Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult? Function(_ListeningLearning value)? listeningLearning,
+    TResult? Function(_ValidateEmail value)? validateEmail,
+    TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult? Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult? Function(_Community value)? community,
+    TResult? Function(_CommunityTopic value)? communityTopic,
+    TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
+    TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
+  }) {
+    return todoDetails?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    TResult Function(_LanguageCourse value)? languageCourse,
+    TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult Function(_FlashCardLearning value)? flashCardLearning,
+    TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
+    TResult Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult Function(_ListeningLearning value)? listeningLearning,
+    TResult Function(_ValidateEmail value)? validateEmail,
+    TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult Function(_Community value)? community,
+    TResult Function(_CommunityTopic value)? communityTopic,
+    TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
+    TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
+    required TResult orElse(),
+  }) {
+    if (todoDetails != null) {
+      return todoDetails(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _TodoDetails implements AppRouteInfo {
+  const factory _TodoDetails({final UserTodo? todo}) = _$TodoDetailsImpl;
+
+  UserTodo? get todo;
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TodoDetailsImplCopyWith<_$TodoDetailsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AchievementImplCopyWith<$Res> {
+  factory _$$AchievementImplCopyWith(
+          _$AchievementImpl value, $Res Function(_$AchievementImpl) then) =
+      __$$AchievementImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AchievementImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$AchievementImpl>
+    implements _$$AchievementImplCopyWith<$Res> {
+  __$$AchievementImplCopyWithImpl(
+      _$AchievementImpl _value, $Res Function(_$AchievementImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AchievementImpl implements _Achievement {
+  const _$AchievementImpl();
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.achievement()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AchievementImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+    required TResult Function(LearningLanguage learningLanguage) languageCourse,
+    required TResult Function(LanguageCourse languageCourse)
+        languageCourseDetails,
+    required TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)
+        flashCardLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)
+        quizLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)
+        matchingLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)
+        pronunciationLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
+        listeningLearning,
+    required TResult Function() validateEmail,
+    required TResult Function() validatePhoneNumber,
+    required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
+    required TResult Function(ChatSession chatSession) aiChatBotDetails,
+    required TResult Function() community,
+    required TResult Function(ChatTopic chatTopic) communityTopic,
+    required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
+    required TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)
+        categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
+  }) {
+    return achievement();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+    TResult? Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult? Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult? Function()? validateEmail,
+    TResult? Function()? validatePhoneNumber,
+    TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
+    TResult? Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult? Function()? community,
+    TResult? Function(ChatTopic chatTopic)? communityTopic,
+    TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult? Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
+  }) {
+    return achievement?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    TResult Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult Function()? validateEmail,
+    TResult Function()? validatePhoneNumber,
+    TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
+    TResult Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult Function()? community,
+    TResult Function(ChatTopic chatTopic)? communityTopic,
+    TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
+    required TResult orElse(),
+  }) {
+    if (achievement != null) {
+      return achievement();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+    required TResult Function(_LanguageCourse value) languageCourse,
+    required TResult Function(_LanguageCourseDetails value)
+        languageCourseDetails,
+    required TResult Function(_FlashCardLearning value) flashCardLearning,
+    required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
+    required TResult Function(_PronunciationLearning value)
+        pronunciationLearning,
+    required TResult Function(_ListeningLearning value) listeningLearning,
+    required TResult Function(_ValidateEmail value) validateEmail,
+    required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
+    required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
+    required TResult Function(_AiChatBotDetails value) aiChatBotDetails,
+    required TResult Function(_Community value) community,
+    required TResult Function(_CommunityTopic value) communityTopic,
+    required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
+    required TResult Function(_CategoryCourseDetails value)
+        categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
+  }) {
+    return achievement(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+    TResult? Function(_LanguageCourse value)? languageCourse,
+    TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult? Function(_FlashCardLearning value)? flashCardLearning,
+    TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
+    TResult? Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult? Function(_ListeningLearning value)? listeningLearning,
+    TResult? Function(_ValidateEmail value)? validateEmail,
+    TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult? Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult? Function(_Community value)? community,
+    TResult? Function(_CommunityTopic value)? communityTopic,
+    TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
+    TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
+  }) {
+    return achievement?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    TResult Function(_LanguageCourse value)? languageCourse,
+    TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult Function(_FlashCardLearning value)? flashCardLearning,
+    TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
+    TResult Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult Function(_ListeningLearning value)? listeningLearning,
+    TResult Function(_ValidateEmail value)? validateEmail,
+    TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult Function(_Community value)? community,
+    TResult Function(_CommunityTopic value)? communityTopic,
+    TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
+    TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
+    required TResult orElse(),
+  }) {
+    if (achievement != null) {
+      return achievement(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Achievement implements AppRouteInfo {
+  const factory _Achievement() = _$AchievementImpl;
 }

@@ -20,6 +20,7 @@ class AppNavigatorImpl extends AppNavigator with LogMixin {
     HomeTabRoute(),
     CourseTabRoute(),
     AiChatTabRoute(),
+    TodoTabRoute(),
     ProfileTabRoute(),
   ];
 

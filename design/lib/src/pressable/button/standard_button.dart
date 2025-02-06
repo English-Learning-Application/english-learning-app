@@ -424,6 +424,7 @@ class StandardButton extends StatelessWidget {
   Color _textColor() {
     switch (buttonType) {
       case ButtonType.primary:
+      case ButtonType.danger:
       case ButtonType.secondary:
       case ButtonType.tertiary:
       case ButtonType.disabled:
@@ -446,6 +447,8 @@ class StandardButton extends StatelessWidget {
         return FoundationColors.neutral50;
       case ButtonType.disabled:
         return FoundationColors.neutral500;
+      case ButtonType.danger:
+        return FoundationColors.error500;
     }
   }
 
@@ -466,6 +469,8 @@ class StandardButton extends StatelessWidget {
         return FoundationColors.neutral50;
       case ButtonType.disabled:
         return FoundationColors.neutral500;
+      case ButtonType.danger:
+        return FoundationColors.error800;
     }
   }
 }
@@ -480,6 +485,7 @@ enum ButtonType {
   primary,
   secondary,
   tertiary,
+  danger,
   quaternary,
   ghost,
   disabled,

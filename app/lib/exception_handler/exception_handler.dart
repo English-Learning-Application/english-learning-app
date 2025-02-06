@@ -1,5 +1,5 @@
-import 'package:logic/logic.dart';
 import 'package:localization/localization.dart';
+import 'package:logic/logic.dart';
 import 'package:services/services.dart';
 
 class ExceptionHandler {
@@ -23,13 +23,8 @@ class ExceptionHandler {
         final exception = appExceptionWrapper.appException as RemoteException;
         switch (exception.kind) {
           case RemoteExceptionKind.refreshTokenFailed:
-            await _showErrorDialog(
-              isRefreshTokenFailed: true,
-              message: message,
-              onPressed: Func0(
-                () => appNavigator.pop(),
-              ),
-            );
+            listener.onRefreshTokenFailed();
+            break;
           case RemoteExceptionKind.noInternet:
           case RemoteExceptionKind.timeout:
             await _showErrorDialogWithRetry(

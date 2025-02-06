@@ -58,6 +58,13 @@ class _MainPageState extends BasePageState<MainPage, MainViewModel> {
               label: S.current.aiChatbot,
             ),
             NavigationDestination(
+              icon: Assets.icons.icTodo.svg(
+                width: Dimens.d24.responsive(),
+                height: Dimens.d24.responsive(),
+              ),
+              label: S.current.todoText,
+            ),
+            NavigationDestination(
               icon: Assets.icons.icProfileCircle.svg(
                 width: Dimens.d24.responsive(),
                 height: Dimens.d24.responsive(),

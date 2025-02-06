@@ -66,6 +66,12 @@ import 'package:data/src/base/middleware/header_interceptor.dart' as _i77;
 import 'package:data/src/base/middleware/refresh_token_interceptor.dart'
     as _i193;
 import 'package:data/src/di/di.dart' as _i102;
+import 'package:data/src/features/achievement/data_source/achievement_api_service.dart'
+    as _i763;
+import 'package:data/src/features/achievement/mapper/api_achievement_data_mapper.dart'
+    as _i136;
+import 'package:data/src/features/achievement/repository/achievement_repository_impl.dart'
+    as _i244;
 import 'package:data/src/features/authentication/data_source/api/authentication_api_data_source.dart'
     as _i920;
 import 'package:data/src/features/authentication/repository/authentication_repository_impl.dart'
@@ -154,6 +160,12 @@ import 'package:data/src/features/subscriptions/mapper/api_user_subscription_dat
     as _i397;
 import 'package:data/src/features/subscriptions/repository/subscription_repository_impl.dart'
     as _i809;
+import 'package:data/src/features/todo/data_source/todo_api_service.dart'
+    as _i557;
+import 'package:data/src/features/todo/mapper/api_user_todo_data_mapper.dart'
+    as _i468;
+import 'package:data/src/features/todo/repository/todo_repository_impl.dart'
+    as _i728;
 import 'package:dio_cache_interceptor/dio_cache_interceptor.dart' as _i695;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
@@ -250,6 +262,10 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i414.ApiBenefitDataMapper>(() => _i414.ApiBenefitDataMapper());
     gh.factory<_i397.ApiUserSubscriptionDataMapper>(
         () => _i397.ApiUserSubscriptionDataMapper());
+    gh.factory<_i468.ApiUserTodoDataMapper>(
+        () => _i468.ApiUserTodoDataMapper());
+    gh.factory<_i136.ApiAchievementDataMapper>(
+        () => _i136.ApiAchievementDataMapper());
     gh.lazySingleton<_i665.AppAssetsService>(
         () => const _i665.AppAssetsService());
     gh.factory<_i77.HeaderInterceptor>(
@@ -363,6 +379,10 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i891.ProfileApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i702.SubscriptionApiDataSource>(() =>
         _i702.SubscriptionApiDataSource(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i557.TodoApiService>(
+        () => _i557.TodoApiService(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i763.AchievementApiService>(
+        () => _i763.AchievementApiService(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i182.LanguageCourseRepository>(
         () => _i725.LanguageCourseRepositoryImpl(
               gh<_i437.LanguageCourseApiDataSource>(),
@@ -406,6 +426,11 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.ApiChatSessionDataMapper>(),
               gh<_i437.ChatMessageDataMapper>(),
             ));
+    gh.lazySingleton<_i182.AchievementRepository>(
+        () => _i244.AchievementRepositoryImpl(
+              gh<_i763.AchievementApiService>(),
+              gh<_i136.ApiAchievementDataMapper>(),
+            ));
     gh.lazySingleton<_i182.AuthenticationRepository>(
         () => _i322.AuthenticationRepositoryImpl(
               gh<_i920.AuthenticationApiDataSource>(),
@@ -427,6 +452,10 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.SubscriptionApiDataSource>(),
               gh<_i437.ApiSubscriptionDataMapper>(),
             ));
+    gh.lazySingleton<_i182.TodoRepository>(() => _i728.TodoRepositoryImpl(
+          gh<_i437.TodoApiService>(),
+          gh<_i437.ApiUserTodoDataMapper>(),
+        ));
     return this;
   }
 }

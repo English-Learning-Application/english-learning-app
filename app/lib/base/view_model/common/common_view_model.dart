@@ -3,10 +3,12 @@ part of 'common.dart';
 @Injectable()
 class CommonViewModel extends BaseViewModel<CommonViewModelData> {
   final LogoutUseCase _logoutUseCase;
+  final DeleteFcmTokensUseCase _deleteFcmTokensUseCase;
   final TrackConnectivityUseCase _trackConnectivityUseCase;
   CommonViewModel(
     this._logoutUseCase,
     this._trackConnectivityUseCase,
+    this._deleteFcmTokensUseCase,
   ) : super(const CommonViewModelData()) {
     _trackConnectivityUseCase.execute(const TrackConnectivityInput()).listen(
       (output) {
@@ -41,19 +43,17 @@ class CommonViewModel extends BaseViewModel<CommonViewModelData> {
   void onForceLogoutButtonPressed() async {
     await runViewModelCatching(
       action: () async {
+        await _deleteFcmTokensUseCase.execute(const DeleteFcmTokensInput());
         await _logoutUseCase.execute(const LogoutInput());
+        appViewModel.updateData(
+          appViewModel.viewModelData.copyWith(
+            isLoggedIn: false,
+            currentUser: User.empty,
+          ),
+        );
       },
     );
   }
-
-  // return runBlocCatching(
-  //   action: () async {
-  //     await _logoutUseCase.execute(
-  //       const LogoutInput(),
-  //     );
-  //     appBloc.add(const AppLoggedOut());
-  //   },
-  // );
 
   void onConnectivityChanged(bool isConnected) {
     viewModelData = viewModelData.copyWith(

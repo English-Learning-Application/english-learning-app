@@ -8,8 +8,12 @@ part 'get_category_courses_by_language_use_case.freezed.dart';
 class GetCategoryCoursesByLanguageUseCase extends BaseFutureUseCase<
     GetCategoryCoursesByLanguageInput, GetCategoryCoursesByLanguageOutput> {
   final LanguageCourseRepository _languageCourseRepository;
+  final ExerciseRepository _exerciseRepository;
 
-  const GetCategoryCoursesByLanguageUseCase(this._languageCourseRepository);
+  const GetCategoryCoursesByLanguageUseCase(
+    this._languageCourseRepository,
+    this._exerciseRepository,
+  );
 
   @override
   Future<GetCategoryCoursesByLanguageOutput> buildUseCase(
@@ -20,7 +24,60 @@ class GetCategoryCoursesByLanguageUseCase extends BaseFutureUseCase<
       language: input.language,
     );
 
-    return GetCategoryCoursesByLanguageOutput(categoryCourses: categoryCourses);
+    final courseIdsList =
+        categoryCourses.map((e) => e.categoryCourseId).toList();
+    if (courseIdsList.isNotEmpty) {
+      print('courseIdsList.isNotEmpty $courseIdsList');
+      final progress = await _exerciseRepository.getLearningProgress(
+        courseIds: courseIdsList,
+      );
+      print('progression result: $progress');
+      final updatedCategoryCourses = categoryCourses.map((categoryCourse) {
+        final updatedContents =
+            categoryCourse.languageCourseLearningContent.map((content) {
+          final contentSize = content.words.length +
+              content.expressions.length +
+              content.idioms.length +
+              content.sentences.length +
+              content.phrasalVerbs.length +
+              content.tenses.length +
+              content.phonetics.length;
+
+          int completedCount = 0;
+
+          progress.flashCardProgress.map((e) {
+            if (e.learningContentId ==
+                    content.languageCourseLearningContentId &&
+                e.courseId == categoryCourse.categoryCourseId) {
+              completedCount++;
+            }
+          }).toList();
+          progress.quizProgress.map((e) {
+            if (e.learningContentId ==
+                    content.languageCourseLearningContentId &&
+                e.courseId == categoryCourse.categoryCourseId) {
+              completedCount++;
+            }
+          }).toList();
+
+          return content.copyWith(
+            progress: (completedCount / contentSize) * 100,
+          );
+        }).toList();
+
+        return categoryCourse.copyWith(
+          languageCourseLearningContent: updatedContents,
+        );
+      }).toList();
+
+      return GetCategoryCoursesByLanguageOutput(
+        categoryCourses: updatedCategoryCourses,
+      );
+    }
+
+    return GetCategoryCoursesByLanguageOutput(
+      categoryCourses: categoryCourses,
+    );
   }
 }
 

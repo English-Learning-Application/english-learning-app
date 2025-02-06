@@ -63,6 +63,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_arrow_left.svg
   SvgGenImage get icArrowLeft => const SvgGenImage('assets/icons/ic_arrow_left.svg');
 
+  /// File path: assets/icons/ic_avatar_1.svg
+  SvgGenImage get icAvatar1 => const SvgGenImage('assets/icons/ic_avatar_1.svg');
+
+  /// File path: assets/icons/ic_avatar_2.svg
+  SvgGenImage get icAvatar2 => const SvgGenImage('assets/icons/ic_avatar_2.svg');
+
+  /// File path: assets/icons/ic_avatar_3.svg
+  SvgGenImage get icAvatar3 => const SvgGenImage('assets/icons/ic_avatar_3.svg');
+
+  /// File path: assets/icons/ic_avatar_4.svg
+  SvgGenImage get icAvatar4 => const SvgGenImage('assets/icons/ic_avatar_4.svg');
+
   /// File path: assets/icons/ic_book_square.svg
   SvgGenImage get icBookSquare => const SvgGenImage('assets/icons/ic_book_square.svg');
 
@@ -144,6 +156,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_speaking.svg
   SvgGenImage get icSpeaking => const SvgGenImage('assets/icons/ic_speaking.svg');
 
+  /// File path: assets/icons/ic_todo.svg
+  SvgGenImage get icTodo => const SvgGenImage('assets/icons/ic_todo.svg');
+
   /// File path: assets/icons/ic_vietnam.svg
   SvgGenImage get icVietnam => const SvgGenImage('assets/icons/ic_vietnam.svg');
 
@@ -159,6 +174,10 @@ class $AssetsIconsGen {
   /// List of all assets
   List<SvgGenImage> get values => [
         icArrowLeft,
+        icAvatar1,
+        icAvatar2,
+        icAvatar3,
+        icAvatar4,
         icBookSquare,
         icClose,
         icCommunity,
@@ -186,6 +205,7 @@ class $AssetsIconsGen {
         icSadFace,
         icSend,
         icSpeaking,
+        icTodo,
         icVietnam,
         icVietnamLandmark,
         icVocabulary,
@@ -224,14 +244,20 @@ class $AssetsImagesGen {
 class $AssetsLottieGen {
   const $AssetsLottieGen();
 
+  /// File path: assets/lottie/lottie_add.json
+  LottieGenImage get lottieAdd => const LottieGenImage('assets/lottie/lottie_add.json');
+
   /// File path: assets/lottie/lottie_loading.json
   LottieGenImage get lottieLoading => const LottieGenImage('assets/lottie/lottie_loading.json');
 
   /// File path: assets/lottie/lottie_success.json
   LottieGenImage get lottieSuccess => const LottieGenImage('assets/lottie/lottie_success.json');
 
+  /// File path: assets/lottie/lottie_todo.json
+  LottieGenImage get lottieTodo => const LottieGenImage('assets/lottie/lottie_todo.json');
+
   /// List of all assets
-  List<LottieGenImage> get values => [lottieLoading, lottieSuccess];
+  List<LottieGenImage> get values => [lottieAdd, lottieLoading, lottieSuccess, lottieTodo];
 }
 
 class Assets {

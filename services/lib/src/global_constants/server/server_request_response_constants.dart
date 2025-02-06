@@ -8,6 +8,26 @@ class ServerRequestResponseConstants {
   static const bearer = 'Bearer';
   static const deviceId = 'X-Device-Id';
 
+  // To-do Type
+  static const general = 'GENERAL';
+  static const course = 'COURSE';
+  static const learnVocabulary = 'LEARN_VOCABULARY';
+  static const learnGrammar = 'LEARN_GRAMMAR';
+  static const learnSpeaking = 'LEARN_SPEAKING';
+  static const learnListening = 'LEARN_LISTENING';
+  static const learnReading = 'LEARN_READING';
+  static const learnWriting = 'LEARN_WRITING';
+  static const flashCardLearning = 'FLASH_CARD_LEARNING';
+  static const quizLearning = 'QUIZ_LEARNING';
+  static const matchingLearning = 'MATCHING_LEARNING';
+  static const pronunciationLearning = 'PRONUNCIATION_LEARNING';
+
+  // To-do priority
+  static const low = 'LOW';
+  static const medium = 'MEDIUM';
+  static const high = 'HIGH';
+  static const urgent = 'URGENT';
+
   // Chat Type
   static const aiBot = 'AI_BOT';
   static const privateChat = 'PRIVATE';

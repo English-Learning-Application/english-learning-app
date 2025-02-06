@@ -1,6 +1,7 @@
 import 'package:app/app.dart';
 import 'package:design/design.dart';
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 
 class StandardTextField extends StatelessWidget {
   const StandardTextField({
@@ -19,6 +20,8 @@ class StandardTextField extends StatelessWidget {
     this.onChanged,
     this.textInputAction = TextInputAction.next,
     this.border,
+    this.maxLines,
+    this.minLines,
   });
   final String? label;
   final String? hint;
@@ -30,6 +33,8 @@ class StandardTextField extends StatelessWidget {
   final Widget? prefixIcon;
   final bool obscureText;
   final TextStyle? style;
+  final int? maxLines;
+  final int? minLines;
   final TextStyle? hintStyle;
   final Function(String?)? onChanged;
   final TextInputAction textInputAction;
@@ -40,6 +45,8 @@ class StandardTextField extends StatelessWidget {
     return TextFormField(
       textInputAction: textInputAction,
       onChanged: onChanged,
+      minLines: minLines,
+      maxLines: maxLines ?? 1,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(
           vertical: Dimens.d16.responsive(),
@@ -83,6 +90,12 @@ class StandardTextField extends StatelessWidget {
       style: style ?? AppTextStyles.s14w400primary().font12().medium,
       obscureText: obscureText,
       controller: controller,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return S.current.fieldIsRequired;
+        }
+        return null;
+      },
     );
   }
 }

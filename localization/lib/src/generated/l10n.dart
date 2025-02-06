@@ -1909,6 +1909,316 @@ class S {
       args: [],
     );
   }
+
+  /// `To do`
+  String get todoText {
+    return Intl.message(
+      'To do',
+      name: 'todoText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create to do`
+  String get createTodo {
+    return Intl.message(
+      'Create to do',
+      name: 'createTodo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update to do`
+  String get updateTodo {
+    return Intl.message(
+      'Update to do',
+      name: 'updateTodo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To do title`
+  String get todoTitle {
+    return Intl.message(
+      'To do title',
+      name: 'todoTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To do description`
+  String get todoDescription {
+    return Intl.message(
+      'To do description',
+      name: 'todoDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To do type`
+  String get todoType {
+    return Intl.message(
+      'To do type',
+      name: 'todoType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To do priority`
+  String get todoPriority {
+    return Intl.message(
+      'To do priority',
+      name: 'todoPriority',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To do status`
+  String get todoStatus {
+    return Intl.message(
+      'To do status',
+      name: 'todoStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `General`
+  String get general {
+    return Intl.message(
+      'General',
+      name: 'general',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Course`
+  String get course {
+    return Intl.message(
+      'Course',
+      name: 'course',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn vocabulary`
+  String get learnVocabulary {
+    return Intl.message(
+      'Learn vocabulary',
+      name: 'learnVocabulary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn grammar`
+  String get learnGrammar {
+    return Intl.message(
+      'Learn grammar',
+      name: 'learnGrammar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn speaking`
+  String get learnSpeaking {
+    return Intl.message(
+      'Learn speaking',
+      name: 'learnSpeaking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn listening`
+  String get learnListening {
+    return Intl.message(
+      'Learn listening',
+      name: 'learnListening',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn reading`
+  String get learnReading {
+    return Intl.message(
+      'Learn reading',
+      name: 'learnReading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn writing`
+  String get learnWriting {
+    return Intl.message(
+      'Learn writing',
+      name: 'learnWriting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flashcard learning`
+  String get flashCardLearning {
+    return Intl.message(
+      'Flashcard learning',
+      name: 'flashCardLearning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quiz learning`
+  String get quizLearning {
+    return Intl.message(
+      'Quiz learning',
+      name: 'quizLearning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Matching learning`
+  String get matchingLearning {
+    return Intl.message(
+      'Matching learning',
+      name: 'matchingLearning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pronunciation learning`
+  String get pronunciationLearning {
+    return Intl.message(
+      'Pronunciation learning',
+      name: 'pronunciationLearning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Low`
+  String get lowPriority {
+    return Intl.message(
+      'Low',
+      name: 'lowPriority',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `High`
+  String get highPriority {
+    return Intl.message(
+      'High',
+      name: 'highPriority',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medium`
+  String get mediumPriority {
+    return Intl.message(
+      'Medium',
+      name: 'mediumPriority',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Urgent`
+  String get urgentPriority {
+    return Intl.message(
+      'Urgent',
+      name: 'urgentPriority',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This field is required`
+  String get fieldIsRequired {
+    return Intl.message(
+      'This field is required',
+      name: 'fieldIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get deleteTodo {
+    return Intl.message(
+      'Delete',
+      name: 'deleteTodo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Done`
+  String get doneTodo {
+    return Intl.message(
+      'Done',
+      name: 'doneTodo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Undone`
+  String get undoneTodo {
+    return Intl.message(
+      'Undone',
+      name: 'undoneTodo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have no to do, create one now`
+  String get todoIsEmptyText {
+    return Intl.message(
+      'You have no to do, create one now',
+      name: 'todoIsEmptyText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to delete this to do?`
+  String get todoDeleteConfirmation {
+    return Intl.message(
+      'Do you want to delete this to do?',
+      name: 'todoDeleteConfirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Achievement`
+  String get achievement {
+    return Intl.message(
+      'Achievement',
+      name: 'achievement',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

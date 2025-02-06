@@ -137,6 +137,19 @@ class AppRouter extends $AppRouter {
               ],
             ),
             AutoRoute(
+              page: TodoTabRoute.page,
+              maintainState: true,
+              children: [
+                AutoRoute(
+                  page: TodoRoute.page,
+                  initial: true,
+                ),
+                AutoRoute(
+                  page: TodoDetailsRoute.page,
+                ),
+              ],
+            ),
+            AutoRoute(
               page: ProfileTabRoute.page,
               maintainState: true,
               guards: [
@@ -198,7 +211,13 @@ class AppRouter extends $AppRouter {
             _routeGuard,
           ],
           page: ListeningLearningRoute.page,
-        )
+        ),
+        AutoRoute(
+          page: AchievementTrackerRoute.page,
+          guards: [
+            _routeGuard,
+          ],
+        ),
       ];
 }
 
@@ -220,6 +239,11 @@ class CourseTabPage extends AutoRouter {
 @RoutePage()
 class AiChatTabPage extends AutoRouter {
   const AiChatTabPage({super.key});
+}
+
+@RoutePage()
+class TodoTabPage extends AutoRouter {
+  const TodoTabPage({super.key});
 }
 
 @RoutePage()

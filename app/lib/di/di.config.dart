@@ -13,6 +13,8 @@ import 'package:app/app/view_model/app.dart' as _i215;
 import 'package:app/base/view_model/common/common.dart' as _i915;
 import 'package:app/base/web_socket/stomp_dart_service.dart' as _i591;
 import 'package:app/di/di.dart' as _i120;
+import 'package:app/features/achievement_tracker/view_model/achievement_tracker.dart'
+    as _i558;
 import 'package:app/features/ai_chat_bot/view_models/ai_chat_bot.dart' as _i709;
 import 'package:app/features/ai_chat_bot_details/view_model/ai_chat_bot_details.dart'
     as _i825;
@@ -55,6 +57,9 @@ import 'package:app/features/quiz_learning/view_model/quiz_learning.dart'
 import 'package:app/features/splash/view_models/splash.dart' as _i635;
 import 'package:app/features/subscription/view_model/subscription.dart'
     as _i407;
+import 'package:app/features/todo/view_model/todo.dart' as _i990;
+import 'package:app/features/todo_details/view_model/todo_details.dart'
+    as _i410;
 import 'package:app/features/validate_email/view_model/validate_email.dart'
     as _i837;
 import 'package:app/features/validate_phone_number/view_model/validate_phone_number.dart'
@@ -104,9 +109,10 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i398.FirebaseAnalytics>(
         () => appModules.firebaseAnalytics);
     gh.lazySingleton<_i656.AudioPlayer>(() => appModules.audioPlayer);
-    gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel(
-          gh<_i182.GetCommunityTopicsUseCase>(),
-          gh<_i182.GetSessionsByTopicUseCase>(),
+    gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(
+          gh<_i182.LogoutUseCase>(),
+          gh<_i182.TrackConnectivityUseCase>(),
+          gh<_i182.DeleteFcmTokensUseCase>(),
         ));
     gh.factory<_i513.RouteGuard>(() => _i513.RouteGuard(
           gh<_i182.IsLoggedInUseCase>(),
@@ -114,6 +120,9 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i96.QuizLearningViewModel>(() =>
         _i96.QuizLearningViewModel(gh<_i182.QuizLearningUpdateUseCase>()));
+    gh.factory<_i558.AchievementTrackerViewModel>(() =>
+        _i558.AchievementTrackerViewModel(
+            gh<_i182.GetAllAchievementUseCase>()));
     gh.factory<_i15.CommunityViewModel>(() => _i15.CommunityViewModel(
           gh<_i182.GetCommunityTopicsUseCase>(),
           gh<_i182.GetPrivateSessionsUseCase>(),
@@ -128,6 +137,10 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.GetInitialAppDataUseCase>(),
           gh<_i182.GetLoggedInUserUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),
+        ));
+    gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel(
+          gh<_i182.GetCommunityTopicsUseCase>(),
+          gh<_i182.GetUserSessionsByTopicUseCase>(),
         ));
     gh.factory<_i1032.PhotoBottomSheetViewModel>(
         () => _i1032.PhotoBottomSheetViewModel(
@@ -144,6 +157,10 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i347.EditProfileViewModel>(
         () => _i347.EditProfileViewModel(gh<_i182.UpdateUserProfileUseCase>()));
+    gh.factory<_i410.TodoDetailsViewModel>(() => _i410.TodoDetailsViewModel(
+          gh<_i182.CreateTodoUseCase>(),
+          gh<_i182.UpdateTodoUseCase>(),
+        ));
     gh.factory<_i117.LanguageCourseViewModel>(
         () => _i117.LanguageCourseViewModel(
               gh<_i182.GetLanguageCoursesByLanguageUseCase>(),
@@ -172,10 +189,6 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.ChatMessageDataMapper>(),
               gh<_i182.DeleteChatSessionUseCase>(),
             ));
-    gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(
-          gh<_i182.LogoutUseCase>(),
-          gh<_i182.TrackConnectivityUseCase>(),
-        ));
     gh.factory<_i407.SubscriptionViewModel>(() => _i407.SubscriptionViewModel(
           gh<_i182.GetAllSubscriptionUseCase>(),
           gh<_i182.CreateSubscriptionPaymentUseCase>(),
@@ -195,6 +208,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i235.MatchingLearningViewModel>(() =>
         _i235.MatchingLearningViewModel(
             gh<_i182.MatchingLearningUpdateUseCase>()));
+    gh.factory<_i990.TodoViewModel>(() => _i990.TodoViewModel(
+          gh<_i182.GetAllTodosUseCase>(),
+          gh<_i182.DeleteTodoUseCase>(),
+          gh<_i182.UpdateTodoUseCase>(),
+        ));
     gh.factory<_i129.ChatBotSubscriptionRouteGuard>(() =>
         _i129.ChatBotSubscriptionRouteGuard(
             gh<_i182.HasSubscriptionUseCase>()));

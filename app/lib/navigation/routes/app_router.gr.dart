@@ -9,85 +9,95 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:app/common_view/common_feature_required_subscription_page.dart'
-    as _i6;
-import 'package:app/features/ai_chat_bot/views/ai_chat_bot_page.dart' as _i2;
-import 'package:app/features/ai_chat_bot_details/view/ai_chat_bot_details_page.dart'
+    as _i7;
+import 'package:app/features/achievement_tracker/view/achievement_tracker_page.dart'
     as _i1;
+import 'package:app/features/ai_chat_bot/views/ai_chat_bot_page.dart' as _i3;
+import 'package:app/features/ai_chat_bot_details/view/ai_chat_bot_details_page.dart'
+    as _i2;
 import 'package:app/features/category_course_details/views/category_course_details_page.dart'
-    as _i4;
-import 'package:app/features/category_course_lesson/view/category_course_lesson_page.dart'
     as _i5;
-import 'package:app/features/community/view/community_page.dart' as _i7;
+import 'package:app/features/category_course_lesson/view/category_course_lesson_page.dart'
+    as _i6;
+import 'package:app/features/community/view/community_page.dart' as _i8;
 import 'package:app/features/community_topic/view/community_topic_page.dart'
-    as _i8;
-import 'package:app/features/complete_registration/views/complete_registration_page.dart'
     as _i9;
-import 'package:app/features/course/views/course_page.dart' as _i10;
-import 'package:app/features/edit_profile/view/edit_profile_page.dart' as _i11;
+import 'package:app/features/complete_registration/views/complete_registration_page.dart'
+    as _i10;
+import 'package:app/features/course/views/course_page.dart' as _i11;
+import 'package:app/features/edit_profile/view/edit_profile_page.dart' as _i12;
 import 'package:app/features/flash_card_learning/view/flash_card_learning_page.dart'
-    as _i12;
-import 'package:app/features/group_chat/view/group_chat_page.dart' as _i13;
-import 'package:app/features/home/views/home_page.dart' as _i14;
+    as _i13;
+import 'package:app/features/group_chat/view/group_chat_page.dart' as _i14;
+import 'package:app/features/home/views/home_page.dart' as _i15;
 import 'package:app/features/language_course/views/language_course_details_page.dart'
-    as _i15;
-import 'package:app/features/language_course/views/language_course_page.dart'
     as _i16;
-import 'package:app/features/listening_learning/view/listening_learning_page.dart'
+import 'package:app/features/language_course/views/language_course_page.dart'
     as _i17;
-import 'package:app/features/login/views/login_page.dart' as _i18;
-import 'package:app/features/main/views/main_page.dart' as _i19;
+import 'package:app/features/listening_learning/view/listening_learning_page.dart'
+    as _i18;
+import 'package:app/features/login/views/login_page.dart' as _i19;
+import 'package:app/features/main/views/main_page.dart' as _i20;
 import 'package:app/features/matching_learning/view/matching_learning_page.dart'
-    as _i20;
-import 'package:app/features/on_boarding/views/on_boarding_page.dart' as _i21;
-import 'package:app/features/private_chat/view/private_chat_page.dart' as _i22;
-import 'package:app/features/profile/views/profile_page.dart' as _i23;
+    as _i21;
+import 'package:app/features/on_boarding/views/on_boarding_page.dart' as _i22;
+import 'package:app/features/private_chat/view/private_chat_page.dart' as _i23;
+import 'package:app/features/profile/views/profile_page.dart' as _i24;
 import 'package:app/features/pronunciation_learning/view/pronunciation_learning_page.dart'
-    as _i24;
-import 'package:app/features/quiz_learning/view/quiz_learning_page.dart'
     as _i25;
-import 'package:app/features/splash/views/splash_page.dart' as _i26;
-import 'package:app/features/subscription/view/subscription_page.dart' as _i27;
+import 'package:app/features/quiz_learning/view/quiz_learning_page.dart'
+    as _i26;
+import 'package:app/features/splash/views/splash_page.dart' as _i27;
+import 'package:app/features/subscription/view/subscription_page.dart' as _i28;
+import 'package:app/features/todo/view/todo_page.dart' as _i30;
+import 'package:app/features/todo_details/view/todo_details_page.dart' as _i29;
 import 'package:app/features/validate_email/view/validate_email_page.dart'
-    as _i28;
+    as _i31;
 import 'package:app/features/validate_phone_number/view/validate_phone_number_page.dart'
-    as _i29;
-import 'package:app/navigation/routes/app_router.dart' as _i3;
-import 'package:auto_route/auto_route.dart' as _i30;
-import 'package:flutter/material.dart' as _i31;
-import 'package:logic/logic.dart' as _i32;
+    as _i32;
+import 'package:app/navigation/routes/app_router.dart' as _i4;
+import 'package:auto_route/auto_route.dart' as _i33;
+import 'package:flutter/material.dart' as _i34;
+import 'package:logic/logic.dart' as _i35;
 
-abstract class $AppRouter extends _i30.RootStackRouter {
+abstract class $AppRouter extends _i33.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i30.PageFactory> pagesMap = {
+  final Map<String, _i33.PageFactory> pagesMap = {
+    AchievementTrackerRoute.name: (routeData) {
+      return _i33.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i1.AchievementTrackerPage(),
+      );
+    },
     AiChatBotDetailsRoute.name: (routeData) {
       final args = routeData.argsAs<AiChatBotDetailsRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i1.AiChatBotDetailsPage(
+        child: _i2.AiChatBotDetailsPage(
           key: args.key,
           chatSession: args.chatSession,
         ),
       );
     },
     AiChatBotRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.AiChatBotPage(),
+        child: const _i3.AiChatBotPage(),
       );
     },
     AiChatTabRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.AiChatTabPage(),
+        child: const _i4.AiChatTabPage(),
       );
     },
     CategoryCourseDetailsRoute.name: (routeData) {
       final args = routeData.argsAs<CategoryCourseDetailsRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i4.CategoryCourseDetailsPage(
+        child: _i5.CategoryCourseDetailsPage(
           key: args.key,
           category: args.category,
           categoryCourses: args.categoryCourses,
@@ -97,9 +107,9 @@ abstract class $AppRouter extends _i30.RootStackRouter {
     },
     CategoryCourseLessonRoute.name: (routeData) {
       final args = routeData.argsAs<CategoryCourseLessonRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i5.CategoryCourseLessonPage(
+        child: _i6.CategoryCourseLessonPage(
           key: args.key,
           languageCourseLearningContent: args.languageCourseLearningContent,
           categoryCourse: args.categoryCourse,
@@ -107,64 +117,64 @@ abstract class $AppRouter extends _i30.RootStackRouter {
       );
     },
     CommonFeatureRequiredSubscriptionRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.CommonFeatureRequiredSubscriptionPage(),
+        child: const _i7.CommonFeatureRequiredSubscriptionPage(),
       );
     },
     CommunityFlowRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.CommunityFlowPage(),
+        child: const _i4.CommunityFlowPage(),
       );
     },
     CommunityRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.CommunityPage(),
+        child: const _i8.CommunityPage(),
       );
     },
     CommunityTopicRoute.name: (routeData) {
       final args = routeData.argsAs<CommunityTopicRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i8.CommunityTopicPage(
+        child: _i9.CommunityTopicPage(
           key: args.key,
           chatTopic: args.chatTopic,
         ),
       );
     },
     CompleteRegistrationRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.CompleteRegistrationPage(),
+        child: const _i10.CompleteRegistrationPage(),
       );
     },
     CourseRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.CoursePage(),
+        child: const _i11.CoursePage(),
       );
     },
     CourseTabRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.CourseTabPage(),
+        child: const _i4.CourseTabPage(),
       );
     },
     EditProfileRoute.name: (routeData) {
       final args = routeData.argsAs<EditProfileRouteArgs>(
           orElse: () => const EditProfileRouteArgs());
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i11.EditProfilePage(key: args.key),
+        child: _i12.EditProfilePage(key: args.key),
       );
     },
     FlashCardLearningRoute.name: (routeData) {
       final args = routeData.argsAs<FlashCardLearningRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i12.FlashCardLearningPage(
+        child: _i13.FlashCardLearningPage(
           key: args.key,
           courseId: args.courseId,
           languageCourseLearningContent: args.languageCourseLearningContent,
@@ -174,31 +184,31 @@ abstract class $AppRouter extends _i30.RootStackRouter {
     },
     GroupChatRoute.name: (routeData) {
       final args = routeData.argsAs<GroupChatRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i13.GroupChatPage(
+        child: _i14.GroupChatPage(
           key: args.key,
           chatSession: args.chatSession,
         ),
       );
     },
     HomeRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i14.HomePage(),
+        child: const _i15.HomePage(),
       );
     },
     HomeTabRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.HomeTabPage(),
+        child: const _i4.HomeTabPage(),
       );
     },
     LanguageCourseDetailsRoute.name: (routeData) {
       final args = routeData.argsAs<LanguageCourseDetailsRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i15.LanguageCourseDetailsPage(
+        child: _i16.LanguageCourseDetailsPage(
           key: args.key,
           languageCourse: args.languageCourse,
         ),
@@ -206,9 +216,9 @@ abstract class $AppRouter extends _i30.RootStackRouter {
     },
     LanguageCourseRoute.name: (routeData) {
       final args = routeData.argsAs<LanguageCourseRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i16.LanguageCoursePage(
+        child: _i17.LanguageCoursePage(
           key: args.key,
           language: args.language,
         ),
@@ -216,9 +226,9 @@ abstract class $AppRouter extends _i30.RootStackRouter {
     },
     ListeningLearningRoute.name: (routeData) {
       final args = routeData.argsAs<ListeningLearningRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i17.ListeningLearningPage(
+        child: _i18.ListeningLearningPage(
           key: args.key,
           language: args.language,
           languageCourseLearningContent: args.languageCourseLearningContent,
@@ -227,22 +237,22 @@ abstract class $AppRouter extends _i30.RootStackRouter {
       );
     },
     LoginRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i18.LoginPage(),
+        child: const _i19.LoginPage(),
       );
     },
     MainRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i19.MainPage(),
+        child: const _i20.MainPage(),
       );
     },
     MatchingLearningRoute.name: (routeData) {
       final args = routeData.argsAs<MatchingLearningRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i20.MatchingLearningPage(
+        child: _i21.MatchingLearningPage(
           key: args.key,
           learningLanguage: args.learningLanguage,
           languageCourseLearningContents: args.languageCourseLearningContents,
@@ -252,16 +262,16 @@ abstract class $AppRouter extends _i30.RootStackRouter {
       );
     },
     OnBoardingRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i21.OnBoardingPage(),
+        child: const _i22.OnBoardingPage(),
       );
     },
     PrivateChatRoute.name: (routeData) {
       final args = routeData.argsAs<PrivateChatRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i22.PrivateChatPage(
+        child: _i23.PrivateChatPage(
           key: args.key,
           chatSession: args.chatSession,
           receiver: args.receiver,
@@ -269,22 +279,22 @@ abstract class $AppRouter extends _i30.RootStackRouter {
       );
     },
     ProfileRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i23.ProfilePage(),
+        child: const _i24.ProfilePage(),
       );
     },
     ProfileTabRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.ProfileTabPage(),
+        child: const _i4.ProfileTabPage(),
       );
     },
     PronunciationLearningRoute.name: (routeData) {
       final args = routeData.argsAs<PronunciationLearningRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i24.PronunciationLearningPage(
+        child: _i25.PronunciationLearningPage(
           key: args.key,
           learningLanguage: args.learningLanguage,
           languageCourseLearningContent: args.languageCourseLearningContent,
@@ -294,9 +304,9 @@ abstract class $AppRouter extends _i30.RootStackRouter {
     },
     QuizLearningRoute.name: (routeData) {
       final args = routeData.argsAs<QuizLearningRouteArgs>();
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i25.QuizLearningPage(
+        child: _i26.QuizLearningPage(
           key: args.key,
           learningLanguage: args.learningLanguage,
           languageCourseLearningContent: args.languageCourseLearningContent,
@@ -305,40 +315,77 @@ abstract class $AppRouter extends _i30.RootStackRouter {
       );
     },
     SplashRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i26.SplashPage(),
+        child: const _i27.SplashPage(),
       );
     },
     SubscriptionRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i27.SubscriptionPage(),
+        child: const _i28.SubscriptionPage(),
+      );
+    },
+    TodoDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<TodoDetailsRouteArgs>(
+          orElse: () => const TodoDetailsRouteArgs());
+      return _i33.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i29.TodoDetailsPage(
+          key: args.key,
+          todo: args.todo,
+        ),
+      );
+    },
+    TodoRoute.name: (routeData) {
+      return _i33.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i30.TodoPage(),
+      );
+    },
+    TodoTabRoute.name: (routeData) {
+      return _i33.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i4.TodoTabPage(),
       );
     },
     ValidateEmailRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i28.ValidateEmailPage(),
+        child: const _i31.ValidateEmailPage(),
       );
     },
     ValidatePhoneNumberRoute.name: (routeData) {
-      return _i30.AutoRoutePage<dynamic>(
+      return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i29.ValidatePhoneNumberPage(),
+        child: const _i32.ValidatePhoneNumberPage(),
       );
     },
   };
 }
 
 /// generated route for
-/// [_i1.AiChatBotDetailsPage]
+/// [_i1.AchievementTrackerPage]
+class AchievementTrackerRoute extends _i33.PageRouteInfo<void> {
+  const AchievementTrackerRoute({List<_i33.PageRouteInfo>? children})
+      : super(
+          AchievementTrackerRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AchievementTrackerRoute';
+
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i2.AiChatBotDetailsPage]
 class AiChatBotDetailsRoute
-    extends _i30.PageRouteInfo<AiChatBotDetailsRouteArgs> {
+    extends _i33.PageRouteInfo<AiChatBotDetailsRouteArgs> {
   AiChatBotDetailsRoute({
-    _i31.Key? key,
-    required _i32.ChatSession chatSession,
-    List<_i30.PageRouteInfo>? children,
+    _i34.Key? key,
+    required _i35.ChatSession chatSession,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           AiChatBotDetailsRoute.name,
           args: AiChatBotDetailsRouteArgs(
@@ -350,8 +397,8 @@ class AiChatBotDetailsRoute
 
   static const String name = 'AiChatBotDetailsRoute';
 
-  static const _i30.PageInfo<AiChatBotDetailsRouteArgs> page =
-      _i30.PageInfo<AiChatBotDetailsRouteArgs>(name);
+  static const _i33.PageInfo<AiChatBotDetailsRouteArgs> page =
+      _i33.PageInfo<AiChatBotDetailsRouteArgs>(name);
 }
 
 class AiChatBotDetailsRouteArgs {
@@ -360,9 +407,9 @@ class AiChatBotDetailsRouteArgs {
     required this.chatSession,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.ChatSession chatSession;
+  final _i35.ChatSession chatSession;
 
   @override
   String toString() {
@@ -371,9 +418,9 @@ class AiChatBotDetailsRouteArgs {
 }
 
 /// generated route for
-/// [_i2.AiChatBotPage]
-class AiChatBotRoute extends _i30.PageRouteInfo<void> {
-  const AiChatBotRoute({List<_i30.PageRouteInfo>? children})
+/// [_i3.AiChatBotPage]
+class AiChatBotRoute extends _i33.PageRouteInfo<void> {
+  const AiChatBotRoute({List<_i33.PageRouteInfo>? children})
       : super(
           AiChatBotRoute.name,
           initialChildren: children,
@@ -381,13 +428,13 @@ class AiChatBotRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'AiChatBotRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.AiChatTabPage]
-class AiChatTabRoute extends _i30.PageRouteInfo<void> {
-  const AiChatTabRoute({List<_i30.PageRouteInfo>? children})
+/// [_i4.AiChatTabPage]
+class AiChatTabRoute extends _i33.PageRouteInfo<void> {
+  const AiChatTabRoute({List<_i33.PageRouteInfo>? children})
       : super(
           AiChatTabRoute.name,
           initialChildren: children,
@@ -395,19 +442,19 @@ class AiChatTabRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'AiChatTabRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i4.CategoryCourseDetailsPage]
+/// [_i5.CategoryCourseDetailsPage]
 class CategoryCourseDetailsRoute
-    extends _i30.PageRouteInfo<CategoryCourseDetailsRouteArgs> {
+    extends _i33.PageRouteInfo<CategoryCourseDetailsRouteArgs> {
   CategoryCourseDetailsRoute({
-    _i31.Key? key,
-    required _i32.Category category,
-    required List<_i32.CategoryCourse> categoryCourses,
-    required _i32.LearningLanguage language,
-    List<_i30.PageRouteInfo>? children,
+    _i34.Key? key,
+    required _i35.Category category,
+    required List<_i35.CategoryCourse> categoryCourses,
+    required _i35.LearningLanguage language,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           CategoryCourseDetailsRoute.name,
           args: CategoryCourseDetailsRouteArgs(
@@ -421,8 +468,8 @@ class CategoryCourseDetailsRoute
 
   static const String name = 'CategoryCourseDetailsRoute';
 
-  static const _i30.PageInfo<CategoryCourseDetailsRouteArgs> page =
-      _i30.PageInfo<CategoryCourseDetailsRouteArgs>(name);
+  static const _i33.PageInfo<CategoryCourseDetailsRouteArgs> page =
+      _i33.PageInfo<CategoryCourseDetailsRouteArgs>(name);
 }
 
 class CategoryCourseDetailsRouteArgs {
@@ -433,13 +480,13 @@ class CategoryCourseDetailsRouteArgs {
     required this.language,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.Category category;
+  final _i35.Category category;
 
-  final List<_i32.CategoryCourse> categoryCourses;
+  final List<_i35.CategoryCourse> categoryCourses;
 
-  final _i32.LearningLanguage language;
+  final _i35.LearningLanguage language;
 
   @override
   String toString() {
@@ -448,15 +495,15 @@ class CategoryCourseDetailsRouteArgs {
 }
 
 /// generated route for
-/// [_i5.CategoryCourseLessonPage]
+/// [_i6.CategoryCourseLessonPage]
 class CategoryCourseLessonRoute
-    extends _i30.PageRouteInfo<CategoryCourseLessonRouteArgs> {
+    extends _i33.PageRouteInfo<CategoryCourseLessonRouteArgs> {
   CategoryCourseLessonRoute({
-    _i31.Key? key,
-    required List<_i32.LanguageCourseLearningContent>
+    _i34.Key? key,
+    required List<_i35.LanguageCourseLearningContent>
         languageCourseLearningContent,
-    required _i32.CategoryCourse categoryCourse,
-    List<_i30.PageRouteInfo>? children,
+    required _i35.CategoryCourse categoryCourse,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           CategoryCourseLessonRoute.name,
           args: CategoryCourseLessonRouteArgs(
@@ -469,8 +516,8 @@ class CategoryCourseLessonRoute
 
   static const String name = 'CategoryCourseLessonRoute';
 
-  static const _i30.PageInfo<CategoryCourseLessonRouteArgs> page =
-      _i30.PageInfo<CategoryCourseLessonRouteArgs>(name);
+  static const _i33.PageInfo<CategoryCourseLessonRouteArgs> page =
+      _i33.PageInfo<CategoryCourseLessonRouteArgs>(name);
 }
 
 class CategoryCourseLessonRouteArgs {
@@ -480,11 +527,11 @@ class CategoryCourseLessonRouteArgs {
     required this.categoryCourse,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final List<_i32.LanguageCourseLearningContent> languageCourseLearningContent;
+  final List<_i35.LanguageCourseLearningContent> languageCourseLearningContent;
 
-  final _i32.CategoryCourse categoryCourse;
+  final _i35.CategoryCourse categoryCourse;
 
   @override
   String toString() {
@@ -493,10 +540,10 @@ class CategoryCourseLessonRouteArgs {
 }
 
 /// generated route for
-/// [_i6.CommonFeatureRequiredSubscriptionPage]
-class CommonFeatureRequiredSubscriptionRoute extends _i30.PageRouteInfo<void> {
+/// [_i7.CommonFeatureRequiredSubscriptionPage]
+class CommonFeatureRequiredSubscriptionRoute extends _i33.PageRouteInfo<void> {
   const CommonFeatureRequiredSubscriptionRoute(
-      {List<_i30.PageRouteInfo>? children})
+      {List<_i33.PageRouteInfo>? children})
       : super(
           CommonFeatureRequiredSubscriptionRoute.name,
           initialChildren: children,
@@ -504,13 +551,13 @@ class CommonFeatureRequiredSubscriptionRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'CommonFeatureRequiredSubscriptionRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.CommunityFlowPage]
-class CommunityFlowRoute extends _i30.PageRouteInfo<void> {
-  const CommunityFlowRoute({List<_i30.PageRouteInfo>? children})
+/// [_i4.CommunityFlowPage]
+class CommunityFlowRoute extends _i33.PageRouteInfo<void> {
+  const CommunityFlowRoute({List<_i33.PageRouteInfo>? children})
       : super(
           CommunityFlowRoute.name,
           initialChildren: children,
@@ -518,13 +565,13 @@ class CommunityFlowRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'CommunityFlowRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i7.CommunityPage]
-class CommunityRoute extends _i30.PageRouteInfo<void> {
-  const CommunityRoute({List<_i30.PageRouteInfo>? children})
+/// [_i8.CommunityPage]
+class CommunityRoute extends _i33.PageRouteInfo<void> {
+  const CommunityRoute({List<_i33.PageRouteInfo>? children})
       : super(
           CommunityRoute.name,
           initialChildren: children,
@@ -532,16 +579,16 @@ class CommunityRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'CommunityRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i8.CommunityTopicPage]
-class CommunityTopicRoute extends _i30.PageRouteInfo<CommunityTopicRouteArgs> {
+/// [_i9.CommunityTopicPage]
+class CommunityTopicRoute extends _i33.PageRouteInfo<CommunityTopicRouteArgs> {
   CommunityTopicRoute({
-    _i31.Key? key,
-    required _i32.ChatTopic chatTopic,
-    List<_i30.PageRouteInfo>? children,
+    _i34.Key? key,
+    required _i35.ChatTopic chatTopic,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           CommunityTopicRoute.name,
           args: CommunityTopicRouteArgs(
@@ -553,8 +600,8 @@ class CommunityTopicRoute extends _i30.PageRouteInfo<CommunityTopicRouteArgs> {
 
   static const String name = 'CommunityTopicRoute';
 
-  static const _i30.PageInfo<CommunityTopicRouteArgs> page =
-      _i30.PageInfo<CommunityTopicRouteArgs>(name);
+  static const _i33.PageInfo<CommunityTopicRouteArgs> page =
+      _i33.PageInfo<CommunityTopicRouteArgs>(name);
 }
 
 class CommunityTopicRouteArgs {
@@ -563,9 +610,9 @@ class CommunityTopicRouteArgs {
     required this.chatTopic,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.ChatTopic chatTopic;
+  final _i35.ChatTopic chatTopic;
 
   @override
   String toString() {
@@ -574,9 +621,9 @@ class CommunityTopicRouteArgs {
 }
 
 /// generated route for
-/// [_i9.CompleteRegistrationPage]
-class CompleteRegistrationRoute extends _i30.PageRouteInfo<void> {
-  const CompleteRegistrationRoute({List<_i30.PageRouteInfo>? children})
+/// [_i10.CompleteRegistrationPage]
+class CompleteRegistrationRoute extends _i33.PageRouteInfo<void> {
+  const CompleteRegistrationRoute({List<_i33.PageRouteInfo>? children})
       : super(
           CompleteRegistrationRoute.name,
           initialChildren: children,
@@ -584,13 +631,13 @@ class CompleteRegistrationRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'CompleteRegistrationRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i10.CoursePage]
-class CourseRoute extends _i30.PageRouteInfo<void> {
-  const CourseRoute({List<_i30.PageRouteInfo>? children})
+/// [_i11.CoursePage]
+class CourseRoute extends _i33.PageRouteInfo<void> {
+  const CourseRoute({List<_i33.PageRouteInfo>? children})
       : super(
           CourseRoute.name,
           initialChildren: children,
@@ -598,13 +645,13 @@ class CourseRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'CourseRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.CourseTabPage]
-class CourseTabRoute extends _i30.PageRouteInfo<void> {
-  const CourseTabRoute({List<_i30.PageRouteInfo>? children})
+/// [_i4.CourseTabPage]
+class CourseTabRoute extends _i33.PageRouteInfo<void> {
+  const CourseTabRoute({List<_i33.PageRouteInfo>? children})
       : super(
           CourseTabRoute.name,
           initialChildren: children,
@@ -612,15 +659,15 @@ class CourseTabRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'CourseTabRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i11.EditProfilePage]
-class EditProfileRoute extends _i30.PageRouteInfo<EditProfileRouteArgs> {
+/// [_i12.EditProfilePage]
+class EditProfileRoute extends _i33.PageRouteInfo<EditProfileRouteArgs> {
   EditProfileRoute({
     dynamic key,
-    List<_i30.PageRouteInfo>? children,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           EditProfileRoute.name,
           args: EditProfileRouteArgs(key: key),
@@ -629,8 +676,8 @@ class EditProfileRoute extends _i30.PageRouteInfo<EditProfileRouteArgs> {
 
   static const String name = 'EditProfileRoute';
 
-  static const _i30.PageInfo<EditProfileRouteArgs> page =
-      _i30.PageInfo<EditProfileRouteArgs>(name);
+  static const _i33.PageInfo<EditProfileRouteArgs> page =
+      _i33.PageInfo<EditProfileRouteArgs>(name);
 }
 
 class EditProfileRouteArgs {
@@ -645,16 +692,16 @@ class EditProfileRouteArgs {
 }
 
 /// generated route for
-/// [_i12.FlashCardLearningPage]
+/// [_i13.FlashCardLearningPage]
 class FlashCardLearningRoute
-    extends _i30.PageRouteInfo<FlashCardLearningRouteArgs> {
+    extends _i33.PageRouteInfo<FlashCardLearningRouteArgs> {
   FlashCardLearningRoute({
-    _i31.Key? key,
+    _i34.Key? key,
     required String courseId,
-    required List<_i32.LanguageCourseLearningContent>
+    required List<_i35.LanguageCourseLearningContent>
         languageCourseLearningContent,
-    _i32.LearningLanguage learningLanguage = _i32.LearningLanguage.english,
-    List<_i30.PageRouteInfo>? children,
+    _i35.LearningLanguage learningLanguage = _i35.LearningLanguage.english,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           FlashCardLearningRoute.name,
           args: FlashCardLearningRouteArgs(
@@ -668,8 +715,8 @@ class FlashCardLearningRoute
 
   static const String name = 'FlashCardLearningRoute';
 
-  static const _i30.PageInfo<FlashCardLearningRouteArgs> page =
-      _i30.PageInfo<FlashCardLearningRouteArgs>(name);
+  static const _i33.PageInfo<FlashCardLearningRouteArgs> page =
+      _i33.PageInfo<FlashCardLearningRouteArgs>(name);
 }
 
 class FlashCardLearningRouteArgs {
@@ -677,16 +724,16 @@ class FlashCardLearningRouteArgs {
     this.key,
     required this.courseId,
     required this.languageCourseLearningContent,
-    this.learningLanguage = _i32.LearningLanguage.english,
+    this.learningLanguage = _i35.LearningLanguage.english,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
   final String courseId;
 
-  final List<_i32.LanguageCourseLearningContent> languageCourseLearningContent;
+  final List<_i35.LanguageCourseLearningContent> languageCourseLearningContent;
 
-  final _i32.LearningLanguage learningLanguage;
+  final _i35.LearningLanguage learningLanguage;
 
   @override
   String toString() {
@@ -695,12 +742,12 @@ class FlashCardLearningRouteArgs {
 }
 
 /// generated route for
-/// [_i13.GroupChatPage]
-class GroupChatRoute extends _i30.PageRouteInfo<GroupChatRouteArgs> {
+/// [_i14.GroupChatPage]
+class GroupChatRoute extends _i33.PageRouteInfo<GroupChatRouteArgs> {
   GroupChatRoute({
-    _i31.Key? key,
-    required _i32.ChatSession chatSession,
-    List<_i30.PageRouteInfo>? children,
+    _i34.Key? key,
+    required _i35.ChatSession chatSession,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           GroupChatRoute.name,
           args: GroupChatRouteArgs(
@@ -712,8 +759,8 @@ class GroupChatRoute extends _i30.PageRouteInfo<GroupChatRouteArgs> {
 
   static const String name = 'GroupChatRoute';
 
-  static const _i30.PageInfo<GroupChatRouteArgs> page =
-      _i30.PageInfo<GroupChatRouteArgs>(name);
+  static const _i33.PageInfo<GroupChatRouteArgs> page =
+      _i33.PageInfo<GroupChatRouteArgs>(name);
 }
 
 class GroupChatRouteArgs {
@@ -722,9 +769,9 @@ class GroupChatRouteArgs {
     required this.chatSession,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.ChatSession chatSession;
+  final _i35.ChatSession chatSession;
 
   @override
   String toString() {
@@ -733,9 +780,9 @@ class GroupChatRouteArgs {
 }
 
 /// generated route for
-/// [_i14.HomePage]
-class HomeRoute extends _i30.PageRouteInfo<void> {
-  const HomeRoute({List<_i30.PageRouteInfo>? children})
+/// [_i15.HomePage]
+class HomeRoute extends _i33.PageRouteInfo<void> {
+  const HomeRoute({List<_i33.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
           initialChildren: children,
@@ -743,13 +790,13 @@ class HomeRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.HomeTabPage]
-class HomeTabRoute extends _i30.PageRouteInfo<void> {
-  const HomeTabRoute({List<_i30.PageRouteInfo>? children})
+/// [_i4.HomeTabPage]
+class HomeTabRoute extends _i33.PageRouteInfo<void> {
+  const HomeTabRoute({List<_i33.PageRouteInfo>? children})
       : super(
           HomeTabRoute.name,
           initialChildren: children,
@@ -757,17 +804,17 @@ class HomeTabRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'HomeTabRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i15.LanguageCourseDetailsPage]
+/// [_i16.LanguageCourseDetailsPage]
 class LanguageCourseDetailsRoute
-    extends _i30.PageRouteInfo<LanguageCourseDetailsRouteArgs> {
+    extends _i33.PageRouteInfo<LanguageCourseDetailsRouteArgs> {
   LanguageCourseDetailsRoute({
-    _i31.Key? key,
-    required _i32.LanguageCourse languageCourse,
-    List<_i30.PageRouteInfo>? children,
+    _i34.Key? key,
+    required _i35.LanguageCourse languageCourse,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           LanguageCourseDetailsRoute.name,
           args: LanguageCourseDetailsRouteArgs(
@@ -779,8 +826,8 @@ class LanguageCourseDetailsRoute
 
   static const String name = 'LanguageCourseDetailsRoute';
 
-  static const _i30.PageInfo<LanguageCourseDetailsRouteArgs> page =
-      _i30.PageInfo<LanguageCourseDetailsRouteArgs>(name);
+  static const _i33.PageInfo<LanguageCourseDetailsRouteArgs> page =
+      _i33.PageInfo<LanguageCourseDetailsRouteArgs>(name);
 }
 
 class LanguageCourseDetailsRouteArgs {
@@ -789,9 +836,9 @@ class LanguageCourseDetailsRouteArgs {
     required this.languageCourse,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.LanguageCourse languageCourse;
+  final _i35.LanguageCourse languageCourse;
 
   @override
   String toString() {
@@ -800,12 +847,12 @@ class LanguageCourseDetailsRouteArgs {
 }
 
 /// generated route for
-/// [_i16.LanguageCoursePage]
-class LanguageCourseRoute extends _i30.PageRouteInfo<LanguageCourseRouteArgs> {
+/// [_i17.LanguageCoursePage]
+class LanguageCourseRoute extends _i33.PageRouteInfo<LanguageCourseRouteArgs> {
   LanguageCourseRoute({
-    _i31.Key? key,
-    required _i32.LearningLanguage language,
-    List<_i30.PageRouteInfo>? children,
+    _i34.Key? key,
+    required _i35.LearningLanguage language,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           LanguageCourseRoute.name,
           args: LanguageCourseRouteArgs(
@@ -817,8 +864,8 @@ class LanguageCourseRoute extends _i30.PageRouteInfo<LanguageCourseRouteArgs> {
 
   static const String name = 'LanguageCourseRoute';
 
-  static const _i30.PageInfo<LanguageCourseRouteArgs> page =
-      _i30.PageInfo<LanguageCourseRouteArgs>(name);
+  static const _i33.PageInfo<LanguageCourseRouteArgs> page =
+      _i33.PageInfo<LanguageCourseRouteArgs>(name);
 }
 
 class LanguageCourseRouteArgs {
@@ -827,9 +874,9 @@ class LanguageCourseRouteArgs {
     required this.language,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.LearningLanguage language;
+  final _i35.LearningLanguage language;
 
   @override
   String toString() {
@@ -838,15 +885,15 @@ class LanguageCourseRouteArgs {
 }
 
 /// generated route for
-/// [_i17.ListeningLearningPage]
+/// [_i18.ListeningLearningPage]
 class ListeningLearningRoute
-    extends _i30.PageRouteInfo<ListeningLearningRouteArgs> {
+    extends _i33.PageRouteInfo<ListeningLearningRouteArgs> {
   ListeningLearningRoute({
-    _i31.Key? key,
-    required _i32.LearningLanguage language,
-    required _i32.LanguageCourseLearningContent languageCourseLearningContent,
-    required _i32.LanguageCourse languageCourse,
-    List<_i30.PageRouteInfo>? children,
+    _i34.Key? key,
+    required _i35.LearningLanguage language,
+    required _i35.LanguageCourseLearningContent languageCourseLearningContent,
+    required _i35.LanguageCourse languageCourse,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           ListeningLearningRoute.name,
           args: ListeningLearningRouteArgs(
@@ -860,8 +907,8 @@ class ListeningLearningRoute
 
   static const String name = 'ListeningLearningRoute';
 
-  static const _i30.PageInfo<ListeningLearningRouteArgs> page =
-      _i30.PageInfo<ListeningLearningRouteArgs>(name);
+  static const _i33.PageInfo<ListeningLearningRouteArgs> page =
+      _i33.PageInfo<ListeningLearningRouteArgs>(name);
 }
 
 class ListeningLearningRouteArgs {
@@ -872,13 +919,13 @@ class ListeningLearningRouteArgs {
     required this.languageCourse,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.LearningLanguage language;
+  final _i35.LearningLanguage language;
 
-  final _i32.LanguageCourseLearningContent languageCourseLearningContent;
+  final _i35.LanguageCourseLearningContent languageCourseLearningContent;
 
-  final _i32.LanguageCourse languageCourse;
+  final _i35.LanguageCourse languageCourse;
 
   @override
   String toString() {
@@ -887,9 +934,9 @@ class ListeningLearningRouteArgs {
 }
 
 /// generated route for
-/// [_i18.LoginPage]
-class LoginRoute extends _i30.PageRouteInfo<void> {
-  const LoginRoute({List<_i30.PageRouteInfo>? children})
+/// [_i19.LoginPage]
+class LoginRoute extends _i33.PageRouteInfo<void> {
+  const LoginRoute({List<_i33.PageRouteInfo>? children})
       : super(
           LoginRoute.name,
           initialChildren: children,
@@ -897,13 +944,13 @@ class LoginRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'LoginRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i19.MainPage]
-class MainRoute extends _i30.PageRouteInfo<void> {
-  const MainRoute({List<_i30.PageRouteInfo>? children})
+/// [_i20.MainPage]
+class MainRoute extends _i33.PageRouteInfo<void> {
+  const MainRoute({List<_i33.PageRouteInfo>? children})
       : super(
           MainRoute.name,
           initialChildren: children,
@@ -911,21 +958,21 @@ class MainRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'MainRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i20.MatchingLearningPage]
+/// [_i21.MatchingLearningPage]
 class MatchingLearningRoute
-    extends _i30.PageRouteInfo<MatchingLearningRouteArgs> {
+    extends _i33.PageRouteInfo<MatchingLearningRouteArgs> {
   MatchingLearningRoute({
-    _i31.Key? key,
-    required _i32.LearningLanguage learningLanguage,
-    required List<_i32.LanguageCourseLearningContent>
+    _i34.Key? key,
+    required _i35.LearningLanguage learningLanguage,
+    required List<_i35.LanguageCourseLearningContent>
         languageCourseLearningContents,
-    _i32.LearningType? learningType,
+    _i35.LearningType? learningType,
     required String courseId,
-    List<_i30.PageRouteInfo>? children,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           MatchingLearningRoute.name,
           args: MatchingLearningRouteArgs(
@@ -940,8 +987,8 @@ class MatchingLearningRoute
 
   static const String name = 'MatchingLearningRoute';
 
-  static const _i30.PageInfo<MatchingLearningRouteArgs> page =
-      _i30.PageInfo<MatchingLearningRouteArgs>(name);
+  static const _i33.PageInfo<MatchingLearningRouteArgs> page =
+      _i33.PageInfo<MatchingLearningRouteArgs>(name);
 }
 
 class MatchingLearningRouteArgs {
@@ -953,13 +1000,13 @@ class MatchingLearningRouteArgs {
     required this.courseId,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.LearningLanguage learningLanguage;
+  final _i35.LearningLanguage learningLanguage;
 
-  final List<_i32.LanguageCourseLearningContent> languageCourseLearningContents;
+  final List<_i35.LanguageCourseLearningContent> languageCourseLearningContents;
 
-  final _i32.LearningType? learningType;
+  final _i35.LearningType? learningType;
 
   final String courseId;
 
@@ -970,9 +1017,9 @@ class MatchingLearningRouteArgs {
 }
 
 /// generated route for
-/// [_i21.OnBoardingPage]
-class OnBoardingRoute extends _i30.PageRouteInfo<void> {
-  const OnBoardingRoute({List<_i30.PageRouteInfo>? children})
+/// [_i22.OnBoardingPage]
+class OnBoardingRoute extends _i33.PageRouteInfo<void> {
+  const OnBoardingRoute({List<_i33.PageRouteInfo>? children})
       : super(
           OnBoardingRoute.name,
           initialChildren: children,
@@ -980,17 +1027,17 @@ class OnBoardingRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'OnBoardingRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i22.PrivateChatPage]
-class PrivateChatRoute extends _i30.PageRouteInfo<PrivateChatRouteArgs> {
+/// [_i23.PrivateChatPage]
+class PrivateChatRoute extends _i33.PageRouteInfo<PrivateChatRouteArgs> {
   PrivateChatRoute({
-    _i31.Key? key,
-    required _i32.ChatSession chatSession,
-    required _i32.User receiver,
-    List<_i30.PageRouteInfo>? children,
+    _i34.Key? key,
+    required _i35.ChatSession chatSession,
+    required _i35.User receiver,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           PrivateChatRoute.name,
           args: PrivateChatRouteArgs(
@@ -1003,8 +1050,8 @@ class PrivateChatRoute extends _i30.PageRouteInfo<PrivateChatRouteArgs> {
 
   static const String name = 'PrivateChatRoute';
 
-  static const _i30.PageInfo<PrivateChatRouteArgs> page =
-      _i30.PageInfo<PrivateChatRouteArgs>(name);
+  static const _i33.PageInfo<PrivateChatRouteArgs> page =
+      _i33.PageInfo<PrivateChatRouteArgs>(name);
 }
 
 class PrivateChatRouteArgs {
@@ -1014,11 +1061,11 @@ class PrivateChatRouteArgs {
     required this.receiver,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.ChatSession chatSession;
+  final _i35.ChatSession chatSession;
 
-  final _i32.User receiver;
+  final _i35.User receiver;
 
   @override
   String toString() {
@@ -1027,9 +1074,9 @@ class PrivateChatRouteArgs {
 }
 
 /// generated route for
-/// [_i23.ProfilePage]
-class ProfileRoute extends _i30.PageRouteInfo<void> {
-  const ProfileRoute({List<_i30.PageRouteInfo>? children})
+/// [_i24.ProfilePage]
+class ProfileRoute extends _i33.PageRouteInfo<void> {
+  const ProfileRoute({List<_i33.PageRouteInfo>? children})
       : super(
           ProfileRoute.name,
           initialChildren: children,
@@ -1037,13 +1084,13 @@ class ProfileRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.ProfileTabPage]
-class ProfileTabRoute extends _i30.PageRouteInfo<void> {
-  const ProfileTabRoute({List<_i30.PageRouteInfo>? children})
+/// [_i4.ProfileTabPage]
+class ProfileTabRoute extends _i33.PageRouteInfo<void> {
+  const ProfileTabRoute({List<_i33.PageRouteInfo>? children})
       : super(
           ProfileTabRoute.name,
           initialChildren: children,
@@ -1051,20 +1098,20 @@ class ProfileTabRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'ProfileTabRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i24.PronunciationLearningPage]
+/// [_i25.PronunciationLearningPage]
 class PronunciationLearningRoute
-    extends _i30.PageRouteInfo<PronunciationLearningRouteArgs> {
+    extends _i33.PageRouteInfo<PronunciationLearningRouteArgs> {
   PronunciationLearningRoute({
-    _i31.Key? key,
-    required _i32.LearningLanguage learningLanguage,
-    required List<_i32.LanguageCourseLearningContent>
+    _i34.Key? key,
+    required _i35.LearningLanguage learningLanguage,
+    required List<_i35.LanguageCourseLearningContent>
         languageCourseLearningContent,
     required String courseId,
-    List<_i30.PageRouteInfo>? children,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           PronunciationLearningRoute.name,
           args: PronunciationLearningRouteArgs(
@@ -1078,8 +1125,8 @@ class PronunciationLearningRoute
 
   static const String name = 'PronunciationLearningRoute';
 
-  static const _i30.PageInfo<PronunciationLearningRouteArgs> page =
-      _i30.PageInfo<PronunciationLearningRouteArgs>(name);
+  static const _i33.PageInfo<PronunciationLearningRouteArgs> page =
+      _i33.PageInfo<PronunciationLearningRouteArgs>(name);
 }
 
 class PronunciationLearningRouteArgs {
@@ -1090,11 +1137,11 @@ class PronunciationLearningRouteArgs {
     required this.courseId,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.LearningLanguage learningLanguage;
+  final _i35.LearningLanguage learningLanguage;
 
-  final List<_i32.LanguageCourseLearningContent> languageCourseLearningContent;
+  final List<_i35.LanguageCourseLearningContent> languageCourseLearningContent;
 
   final String courseId;
 
@@ -1105,15 +1152,15 @@ class PronunciationLearningRouteArgs {
 }
 
 /// generated route for
-/// [_i25.QuizLearningPage]
-class QuizLearningRoute extends _i30.PageRouteInfo<QuizLearningRouteArgs> {
+/// [_i26.QuizLearningPage]
+class QuizLearningRoute extends _i33.PageRouteInfo<QuizLearningRouteArgs> {
   QuizLearningRoute({
-    _i31.Key? key,
-    required _i32.LearningLanguage learningLanguage,
-    required List<_i32.LanguageCourseLearningContent>
+    _i34.Key? key,
+    required _i35.LearningLanguage learningLanguage,
+    required List<_i35.LanguageCourseLearningContent>
         languageCourseLearningContent,
     required String courseId,
-    List<_i30.PageRouteInfo>? children,
+    List<_i33.PageRouteInfo>? children,
   }) : super(
           QuizLearningRoute.name,
           args: QuizLearningRouteArgs(
@@ -1127,8 +1174,8 @@ class QuizLearningRoute extends _i30.PageRouteInfo<QuizLearningRouteArgs> {
 
   static const String name = 'QuizLearningRoute';
 
-  static const _i30.PageInfo<QuizLearningRouteArgs> page =
-      _i30.PageInfo<QuizLearningRouteArgs>(name);
+  static const _i33.PageInfo<QuizLearningRouteArgs> page =
+      _i33.PageInfo<QuizLearningRouteArgs>(name);
 }
 
 class QuizLearningRouteArgs {
@@ -1139,11 +1186,11 @@ class QuizLearningRouteArgs {
     required this.courseId,
   });
 
-  final _i31.Key? key;
+  final _i34.Key? key;
 
-  final _i32.LearningLanguage learningLanguage;
+  final _i35.LearningLanguage learningLanguage;
 
-  final List<_i32.LanguageCourseLearningContent> languageCourseLearningContent;
+  final List<_i35.LanguageCourseLearningContent> languageCourseLearningContent;
 
   final String courseId;
 
@@ -1154,9 +1201,9 @@ class QuizLearningRouteArgs {
 }
 
 /// generated route for
-/// [_i26.SplashPage]
-class SplashRoute extends _i30.PageRouteInfo<void> {
-  const SplashRoute({List<_i30.PageRouteInfo>? children})
+/// [_i27.SplashPage]
+class SplashRoute extends _i33.PageRouteInfo<void> {
+  const SplashRoute({List<_i33.PageRouteInfo>? children})
       : super(
           SplashRoute.name,
           initialChildren: children,
@@ -1164,13 +1211,13 @@ class SplashRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'SplashRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i27.SubscriptionPage]
-class SubscriptionRoute extends _i30.PageRouteInfo<void> {
-  const SubscriptionRoute({List<_i30.PageRouteInfo>? children})
+/// [_i28.SubscriptionPage]
+class SubscriptionRoute extends _i33.PageRouteInfo<void> {
+  const SubscriptionRoute({List<_i33.PageRouteInfo>? children})
       : super(
           SubscriptionRoute.name,
           initialChildren: children,
@@ -1178,13 +1225,79 @@ class SubscriptionRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'SubscriptionRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i28.ValidateEmailPage]
-class ValidateEmailRoute extends _i30.PageRouteInfo<void> {
-  const ValidateEmailRoute({List<_i30.PageRouteInfo>? children})
+/// [_i29.TodoDetailsPage]
+class TodoDetailsRoute extends _i33.PageRouteInfo<TodoDetailsRouteArgs> {
+  TodoDetailsRoute({
+    _i34.Key? key,
+    _i35.UserTodo? todo,
+    List<_i33.PageRouteInfo>? children,
+  }) : super(
+          TodoDetailsRoute.name,
+          args: TodoDetailsRouteArgs(
+            key: key,
+            todo: todo,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'TodoDetailsRoute';
+
+  static const _i33.PageInfo<TodoDetailsRouteArgs> page =
+      _i33.PageInfo<TodoDetailsRouteArgs>(name);
+}
+
+class TodoDetailsRouteArgs {
+  const TodoDetailsRouteArgs({
+    this.key,
+    this.todo,
+  });
+
+  final _i34.Key? key;
+
+  final _i35.UserTodo? todo;
+
+  @override
+  String toString() {
+    return 'TodoDetailsRouteArgs{key: $key, todo: $todo}';
+  }
+}
+
+/// generated route for
+/// [_i30.TodoPage]
+class TodoRoute extends _i33.PageRouteInfo<void> {
+  const TodoRoute({List<_i33.PageRouteInfo>? children})
+      : super(
+          TodoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'TodoRoute';
+
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i4.TodoTabPage]
+class TodoTabRoute extends _i33.PageRouteInfo<void> {
+  const TodoTabRoute({List<_i33.PageRouteInfo>? children})
+      : super(
+          TodoTabRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'TodoTabRoute';
+
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i31.ValidateEmailPage]
+class ValidateEmailRoute extends _i33.PageRouteInfo<void> {
+  const ValidateEmailRoute({List<_i33.PageRouteInfo>? children})
       : super(
           ValidateEmailRoute.name,
           initialChildren: children,
@@ -1192,13 +1305,13 @@ class ValidateEmailRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'ValidateEmailRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i29.ValidatePhoneNumberPage]
-class ValidatePhoneNumberRoute extends _i30.PageRouteInfo<void> {
-  const ValidatePhoneNumberRoute({List<_i30.PageRouteInfo>? children})
+/// [_i32.ValidatePhoneNumberPage]
+class ValidatePhoneNumberRoute extends _i33.PageRouteInfo<void> {
+  const ValidatePhoneNumberRoute({List<_i33.PageRouteInfo>? children})
       : super(
           ValidatePhoneNumberRoute.name,
           initialChildren: children,
@@ -1206,5 +1319,5 @@ class ValidatePhoneNumberRoute extends _i30.PageRouteInfo<void> {
 
   static const String name = 'ValidatePhoneNumberRoute';
 
-  static const _i30.PageInfo<void> page = _i30.PageInfo<void>(name);
+  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
 }

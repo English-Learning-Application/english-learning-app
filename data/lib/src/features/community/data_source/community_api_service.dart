@@ -29,6 +29,18 @@ class CommunityApiService {
     );
   }
 
+  Future<ListResponse<ApiChatSessionData>?> getUserChatSessionsByTopic(
+    String chatTopicId,
+  ) async {
+    return await _authAppServerApiClient.request(
+      method: RestApiMethod.get,
+      path: '/communities/me/topics/$chatTopicId/sessions',
+      successResponseMapperType: SuccessResponseMapperType.listResponse,
+      decoder: (json) =>
+          ApiChatSessionData.fromJson(json as Map<String, dynamic>),
+    );
+  }
+
   Future<ListResponse<ApiChatSessionData>?> getPrivateChatSessions() async {
     return await _authAppServerApiClient.request(
       method: RestApiMethod.get,

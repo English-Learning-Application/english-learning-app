@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Truy cập trung tâm cộng đồng"),
         "accessToCommunityHubDesc": MessageLookupByLibrary.simpleMessage(
             "Kết nối với cộng đồng và nhận hỗ trợ từ người học khác"),
+        "achievement": MessageLookupByLibrary.simpleMessage("Thành tựu"),
         "adjective": MessageLookupByLibrary.simpleMessage("Tính từ"),
         "adverb": MessageLookupByLibrary.simpleMessage("Trạng từ"),
         "aiChatbot": MessageLookupByLibrary.simpleMessage("Trợ lý ảo"),
@@ -95,18 +96,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "congratulations": MessageLookupByLibrary.simpleMessage("Chúc mừng"),
         "conjunction": MessageLookupByLibrary.simpleMessage("Liên từ"),
         "correct": MessageLookupByLibrary.simpleMessage("Chính xác"),
+        "course": MessageLookupByLibrary.simpleMessage("Khóa học"),
         "courseWillBeAvailableSoon": MessageLookupByLibrary.simpleMessage(
             "Khóa học sẽ sớm được cập nhật"),
         "courses": MessageLookupByLibrary.simpleMessage("Khóa học"),
         "createNewSession":
             MessageLookupByLibrary.simpleMessage("Tạo phiên mới"),
         "createText": MessageLookupByLibrary.simpleMessage("Tạo"),
+        "createTodo": MessageLookupByLibrary.simpleMessage("Tạo to do"),
         "day": MessageLookupByLibrary.simpleMessage("Ngày"),
+        "deleteTodo": MessageLookupByLibrary.simpleMessage("Xóa"),
+        "doneTodo": MessageLookupByLibrary.simpleMessage("Hoàn thành"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Chỉnh sửa hồ sơ"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
         "english": MessageLookupByLibrary.simpleMessage("Tiếng Anh"),
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
         "expression": MessageLookupByLibrary.simpleMessage("Biểu cảm"),
+        "fieldIsRequired":
+            MessageLookupByLibrary.simpleMessage("Trường này là bắt buộc"),
+        "flashCardLearning":
+            MessageLookupByLibrary.simpleMessage("Học thẻ ghi nhớ"),
         "flashcard": MessageLookupByLibrary.simpleMessage("Thẻ ghi nhớ"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
@@ -114,12 +123,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "freePlanDescription": MessageLookupByLibrary.simpleMessage(
             "Truy cập cơ bản vào khóa học và tài nguyên"),
         "french": MessageLookupByLibrary.simpleMessage("Tiếng Pháp"),
+        "general": MessageLookupByLibrary.simpleMessage("Chung"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Bắt đầu"),
         "goldPlan": MessageLookupByLibrary.simpleMessage("Gói Vàng"),
         "goldPlanDescription": MessageLookupByLibrary.simpleMessage(
             "Truy cập thêm vào trung tâm cộng đồng, khóa học không giới hạn và gợi ý cá nhân"),
         "grammar": MessageLookupByLibrary.simpleMessage("Ngữ pháp"),
         "hasJoinedTheChat": m0,
+        "highPriority": MessageLookupByLibrary.simpleMessage("Cao"),
         "home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "idiom": MessageLookupByLibrary.simpleMessage("Thành ngữ"),
         "incorrect": MessageLookupByLibrary.simpleMessage("Sai"),
@@ -145,6 +156,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Học bất cứ nơi đâu, bất cứ lúc nào"),
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
             "Truy cập hàng ngàn khóa học, tài nguyên và tài liệu học tập mọi lúc mọi nơi."),
+        "learnGrammar": MessageLookupByLibrary.simpleMessage("Học ngữ pháp"),
+        "learnListening": MessageLookupByLibrary.simpleMessage("Học nghe"),
+        "learnReading": MessageLookupByLibrary.simpleMessage("Học đọc"),
+        "learnSpeaking": MessageLookupByLibrary.simpleMessage("Học nói"),
+        "learnVocabulary": MessageLookupByLibrary.simpleMessage("Học từ vựng"),
+        "learnWriting": MessageLookupByLibrary.simpleMessage("Học viết"),
         "learned": MessageLookupByLibrary.simpleMessage("Đã học"),
         "learningInfo":
             MessageLookupByLibrary.simpleMessage("Thông tin học tập"),
@@ -163,9 +180,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginTitle": MessageLookupByLibrary.simpleMessage(
             "Tất cả mọi thứ bạn cần đều có tại đây"),
         "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
+        "lowPriority": MessageLookupByLibrary.simpleMessage("Thấp"),
         "matching": MessageLookupByLibrary.simpleMessage("Kết hợp"),
+        "matchingLearning": MessageLookupByLibrary.simpleMessage("Học kết hợp"),
         "matchingLearningModeDescription": MessageLookupByLibrary.simpleMessage(
             "Kéo và thả từ để kết hợp theo thứ tự đúng"),
+        "mediumPriority": MessageLookupByLibrary.simpleMessage("Trung bình"),
         "messageSessionName":
             MessageLookupByLibrary.simpleMessage("Tên phiên trò chuyện"),
         "microphonePermissionDenied": MessageLookupByLibrary.simpleMessage(
@@ -224,8 +244,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Hồ sơ"),
         "pronoun": MessageLookupByLibrary.simpleMessage("Đại từ"),
         "pronunciation": MessageLookupByLibrary.simpleMessage("Phát âm"),
+        "pronunciationLearning":
+            MessageLookupByLibrary.simpleMessage("Học phát âm"),
         "purchase": MessageLookupByLibrary.simpleMessage("Mua"),
         "quiz": MessageLookupByLibrary.simpleMessage("Kiểm tra"),
+        "quizLearning": MessageLookupByLibrary.simpleMessage("Học kiểm tra"),
         "reading": MessageLookupByLibrary.simpleMessage("Đọc"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "registerDescription": MessageLookupByLibrary.simpleMessage(
@@ -257,15 +280,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "timeoutException":
             MessageLookupByLibrary.simpleMessage("Quá thời gian kết nối"),
         "toLearnToday": MessageLookupByLibrary.simpleMessage("để học hôm nay"),
+        "todoDeleteConfirmation": MessageLookupByLibrary.simpleMessage(
+            "Bạn có muốn xóa to do này không?"),
+        "todoDescription": MessageLookupByLibrary.simpleMessage("Mô tả to do"),
+        "todoIsEmptyText": MessageLookupByLibrary.simpleMessage(
+            "Bạn chưa có to do nào, hãy tạo một to do ngay bây giờ"),
+        "todoPriority":
+            MessageLookupByLibrary.simpleMessage("Mức độ ưu tiên to do"),
+        "todoStatus": MessageLookupByLibrary.simpleMessage("Trạng thái to do"),
+        "todoText": MessageLookupByLibrary.simpleMessage("To do"),
+        "todoTitle": MessageLookupByLibrary.simpleMessage("Tiêu đề to do"),
+        "todoType": MessageLookupByLibrary.simpleMessage("Loại to do"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token hết hạn"),
         "trackYourProgress":
             MessageLookupByLibrary.simpleMessage("Theo dõi tiến trình của bạn"),
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Theo dõi tiến trình của bạn và xem bạn đã đi được bao xa trên hành trình học tập của mình."),
         "travel": MessageLookupByLibrary.simpleMessage("Du lịch"),
+        "undoneTodo": MessageLookupByLibrary.simpleMessage("Chưa hoàn thành"),
         "unknownException": m2,
         "updateProfilePicture":
             MessageLookupByLibrary.simpleMessage("Cập nhật ảnh đại diện"),
+        "updateTodo": MessageLookupByLibrary.simpleMessage("Cập nhật to do"),
+        "urgentPriority": MessageLookupByLibrary.simpleMessage("Khẩn cấp"),
         "userInfo":
             MessageLookupByLibrary.simpleMessage("Thông tin người dùng"),
         "username": MessageLookupByLibrary.simpleMessage("Tên người dùng"),

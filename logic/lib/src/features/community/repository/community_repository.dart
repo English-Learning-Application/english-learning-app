@@ -5,6 +5,8 @@ abstract class CommunityRepository {
 
   Future<List<ChatSession>> getChatSessions(String chatTopicId);
 
+  Future<List<ChatSession>> getUserChatSessionsByTopic(String chatTopicId);
+
   Future<List<ChatSession>> getPrivateChatSessions();
 
   Future<ChatSession> createChatSession(

@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 import 'package:logic/logic.dart';
@@ -185,6 +186,20 @@ class _CategoryCourseDetailsPageState extends BasePageState<
                                   overflow: TextOverflow.ellipsis,
                                   style:
                                       AppTextStyles.s14w400primary().font13(),
+                                ),
+                                SizedBox(
+                                  height: Dimens.d8.responsive(),
+                                ),
+                                LinearProgressIndicator(
+                                  value: course.completionProgress(),
+                                  borderRadius: BorderRadius.circular(
+                                    Dimens.d8.responsive(),
+                                  ),
+                                  backgroundColor: FoundationColors.neutral100,
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                    AppColors.current.primaryColor
+                                        .withValues(alpha: 0.6),
+                                  ),
                                 ),
                               ],
                             ),

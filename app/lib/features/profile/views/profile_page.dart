@@ -278,6 +278,21 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
                     },
                   ),
                 ),
+                _buildProfileItem(
+                  title: S.current.subscription,
+                  value: GestureDetector(
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      size: Dimens.d16.responsive(),
+                      color: FoundationColors.neutral50,
+                    ),
+                    onTap: () async {
+                      await navigator.push(
+                        const AppRouteInfo.achievement(),
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
             SizedBox(

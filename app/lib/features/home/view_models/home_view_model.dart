@@ -3,10 +3,10 @@ part of 'home.dart';
 @Injectable()
 class HomeViewModel extends BaseViewModel<HomeViewModelData> {
   final GetCommunityTopicsUseCase _getCommunityTopicsUseCase;
-  final GetSessionsByTopicUseCase _getSessionsByTopicUseCase;
+  final GetUserSessionsByTopicUseCase _getUsersSessionsByTopicUseCase;
   HomeViewModel(
     this._getCommunityTopicsUseCase,
-    this._getSessionsByTopicUseCase,
+    this._getUsersSessionsByTopicUseCase,
   ) : super(const HomeViewModelData());
 
   void onInit() async {
@@ -19,8 +19,8 @@ class HomeViewModel extends BaseViewModel<HomeViewModelData> {
         await Future.forEach(
           communityTopicOutput.chatTopics,
           (topic) async {
-            final resp = await _getSessionsByTopicUseCase.execute(
-              GetSessionsByTopicInput(chatTopicId: topic.topicId),
+            final resp = await _getUsersSessionsByTopicUseCase.execute(
+              GetUserSessionsByTopicInput(chatTopicId: topic.topicId),
             );
 
             final currentChatSessions = [...viewModelData.chatSessions]

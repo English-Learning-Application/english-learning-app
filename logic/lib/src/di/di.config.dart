@@ -11,6 +11,8 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:logic/logic.dart' as _i182;
+import 'package:logic/src/features/achievement/use_case/get_all_achievement_use_case.dart'
+    as _i362;
 import 'package:logic/src/features/authentication/usecase/facebook_login_use_case.dart'
     as _i1006;
 import 'package:logic/src/features/authentication/usecase/get_logged_in_user_use_case.dart'
@@ -41,6 +43,8 @@ import 'package:logic/src/features/community/use_case/get_session_messages_use_c
     as _i444;
 import 'package:logic/src/features/community/use_case/get_sessions_by_topic_use_case.dart'
     as _i179;
+import 'package:logic/src/features/community/use_case/get_user_sessions_by_topic_use_case.dart'
+    as _i709;
 import 'package:logic/src/features/community/use_case/initiate_private_chat_session_use_case.dart'
     as _i144;
 import 'package:logic/src/features/community/use_case/join_chat_session_use_case.dart'
@@ -85,6 +89,14 @@ import 'package:logic/src/features/subscription/use_case/get_all_subscriptions_u
     as _i1054;
 import 'package:logic/src/features/subscription/use_case/swap_subscription_plan_use_case.dart'
     as _i1008;
+import 'package:logic/src/features/todo/use_case/create_todo_use_case.dart'
+    as _i12;
+import 'package:logic/src/features/todo/use_case/delete_todo_use_case.dart'
+    as _i504;
+import 'package:logic/src/features/todo/use_case/get_all_todos_use_case.dart'
+    as _i389;
+import 'package:logic/src/features/todo/use_case/update_todo_use_case.dart'
+    as _i32;
 import 'package:logic/src/usecase/check_permission_use_case.dart' as _i673;
 import 'package:logic/src/usecase/clear_current_user_data_use_case.dart'
     as _i900;
@@ -113,6 +125,16 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i673.CheckPermissionUseCase>(
         () => const _i673.CheckPermissionUseCase());
+    gh.factory<_i362.GetAllAchievementUseCase>(() =>
+        _i362.GetAllAchievementUseCase(gh<_i182.AchievementRepository>()));
+    gh.factory<_i389.GetAllTodosUseCase>(
+        () => _i389.GetAllTodosUseCase(gh<_i182.TodoRepository>()));
+    gh.factory<_i12.CreateTodoUseCase>(
+        () => _i12.CreateTodoUseCase(gh<_i182.TodoRepository>()));
+    gh.factory<_i504.DeleteTodoUseCase>(
+        () => _i504.DeleteTodoUseCase(gh<_i182.TodoRepository>()));
+    gh.factory<_i32.UpdateTodoUseCase>(
+        () => _i32.UpdateTodoUseCase(gh<_i182.TodoRepository>()));
     gh.factory<_i1051.HasSubscriptionUseCase>(
         () => _i1051.HasSubscriptionUseCase(
               gh<_i182.AppRepository>(),
@@ -120,9 +142,6 @@ extension GetItInjectableX on _i174.GetIt {
             ));
     gh.factory<_i738.GetCategoriesUseCase>(
         () => _i738.GetCategoriesUseCase(gh<_i182.LanguageCourseRepository>()));
-    gh.factory<_i314.GetCategoryCoursesByLanguageUseCase>(() =>
-        _i314.GetCategoryCoursesByLanguageUseCase(
-            gh<_i182.LanguageCourseRepository>()));
     gh.factory<_i106.GetLoggedInUserUseCase>(() =>
         _i106.GetLoggedInUserUseCase(gh<_i182.AuthenticationRepository>()));
     gh.factory<_i919.GoogleLoginUseCase>(
@@ -172,6 +191,8 @@ extension GetItInjectableX on _i174.GetIt {
             gh<_i182.CommunityRepository>()));
     gh.factory<_i1022.JoinChatSessionUseCase>(
         () => _i1022.JoinChatSessionUseCase(gh<_i182.CommunityRepository>()));
+    gh.factory<_i709.GetUserSessionsByTopicUseCase>(() =>
+        _i709.GetUserSessionsByTopicUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i845.CreateSubscriptionPaymentUseCase>(() =>
         _i845.CreateSubscriptionPaymentUseCase(
             gh<_i182.SubscriptionRepository>()));
@@ -215,6 +236,11 @@ extension GetItInjectableX on _i174.GetIt {
             gh<_i182.ExerciseRepository>()));
     gh.factory<_i918.QuizLearningUpdateUseCase>(
         () => _i918.QuizLearningUpdateUseCase(gh<_i182.ExerciseRepository>()));
+    gh.factory<_i314.GetCategoryCoursesByLanguageUseCase>(
+        () => _i314.GetCategoryCoursesByLanguageUseCase(
+              gh<_i182.LanguageCourseRepository>(),
+              gh<_i182.ExerciseRepository>(),
+            ));
     gh.factory<_i408.GetLanguageCoursesByLanguageAndLevelUseCase>(
         () => _i408.GetLanguageCoursesByLanguageAndLevelUseCase(
               gh<_i182.LanguageCourseRepository>(),

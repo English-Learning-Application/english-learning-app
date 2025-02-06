@@ -85,3 +85,7 @@ export 'resource/images_provider/images_provider.dart';
 export 'resource/styles/app_colors.dart';
 export 'resource/styles/app_text_styles.dart';
 export 'resource/styles/app_themes.dart';
+export 'features/todo/view_model/todo.dart';
+export 'features/todo_details/view_model/todo_details.dart';
+export 'features/achievement_tracker/view/achievement_tracker_page.dart';
+export 'features/achievement_tracker/view_model/achievement_tracker.dart';

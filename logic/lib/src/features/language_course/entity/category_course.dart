@@ -31,4 +31,15 @@ class CategoryCourse with _$CategoryCourse {
       defaultLanguageCourseLearningContent = [];
   static const DateTime? defaultCreatedAt = null;
   static const DateTime? defaultUpdatedAt = null;
+
+  double completionProgress() {
+    if (languageCourseLearningContent.isEmpty) {
+      return 0.0;
+    }
+    double progress = 0.0;
+    for (var content in languageCourseLearningContent) {
+      progress += content.progress;
+    }
+    return progress / languageCourseLearningContent.length;
+  }
 }

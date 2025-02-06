@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Access to community hub"),
         "accessToCommunityHubDesc": MessageLookupByLibrary.simpleMessage(
             "Connect with other learners and join communities to learn together"),
+        "achievement": MessageLookupByLibrary.simpleMessage("Achievement"),
         "adjective": MessageLookupByLibrary.simpleMessage("Adjective"),
         "adverb": MessageLookupByLibrary.simpleMessage("Adverb"),
         "aiChatbot": MessageLookupByLibrary.simpleMessage("AI Chatbot"),
@@ -96,18 +97,26 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Congratulations"),
         "conjunction": MessageLookupByLibrary.simpleMessage("Conjunction"),
         "correct": MessageLookupByLibrary.simpleMessage("Correct"),
+        "course": MessageLookupByLibrary.simpleMessage("Course"),
         "courseWillBeAvailableSoon": MessageLookupByLibrary.simpleMessage(
             "Course will be available soon"),
         "courses": MessageLookupByLibrary.simpleMessage("Courses"),
         "createNewSession":
             MessageLookupByLibrary.simpleMessage("Create new session"),
         "createText": MessageLookupByLibrary.simpleMessage("Create"),
+        "createTodo": MessageLookupByLibrary.simpleMessage("Create to do"),
         "day": MessageLookupByLibrary.simpleMessage("Day"),
+        "deleteTodo": MessageLookupByLibrary.simpleMessage("Delete"),
+        "doneTodo": MessageLookupByLibrary.simpleMessage("Done"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
         "expression": MessageLookupByLibrary.simpleMessage("Expression"),
+        "fieldIsRequired":
+            MessageLookupByLibrary.simpleMessage("This field is required"),
+        "flashCardLearning":
+            MessageLookupByLibrary.simpleMessage("Flashcard learning"),
         "flashcard": MessageLookupByLibrary.simpleMessage("Flashcard"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
@@ -115,12 +124,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "freePlanDescription": MessageLookupByLibrary.simpleMessage(
             "Basic access to courses and resources"),
         "french": MessageLookupByLibrary.simpleMessage("French"),
+        "general": MessageLookupByLibrary.simpleMessage("General"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "goldPlan": MessageLookupByLibrary.simpleMessage("Gold Plan"),
         "goldPlanDescription": MessageLookupByLibrary.simpleMessage(
             "Additional access to community hub, unlimited courses, and personalized recommendations"),
         "grammar": MessageLookupByLibrary.simpleMessage("Grammar"),
         "hasJoinedTheChat": m0,
+        "highPriority": MessageLookupByLibrary.simpleMessage("High"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "idiom": MessageLookupByLibrary.simpleMessage("Idiom"),
         "incorrect": MessageLookupByLibrary.simpleMessage("Incorrect"),
@@ -146,6 +157,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Learn anywhere, anytime"),
         "learnAnywhereDescription": MessageLookupByLibrary.simpleMessage(
             "Access thousands of courses, resources, and learning materials on the go."),
+        "learnGrammar": MessageLookupByLibrary.simpleMessage("Learn grammar"),
+        "learnListening":
+            MessageLookupByLibrary.simpleMessage("Learn listening"),
+        "learnReading": MessageLookupByLibrary.simpleMessage("Learn reading"),
+        "learnSpeaking": MessageLookupByLibrary.simpleMessage("Learn speaking"),
+        "learnVocabulary":
+            MessageLookupByLibrary.simpleMessage("Learn vocabulary"),
+        "learnWriting": MessageLookupByLibrary.simpleMessage("Learn writing"),
         "learned": MessageLookupByLibrary.simpleMessage("Learned"),
         "learningInfo": MessageLookupByLibrary.simpleMessage("Learning info"),
         "learningLanguage":
@@ -163,9 +182,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginTitle": MessageLookupByLibrary.simpleMessage(
             "Everything you need is in one place"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "lowPriority": MessageLookupByLibrary.simpleMessage("Low"),
         "matching": MessageLookupByLibrary.simpleMessage("Matching"),
+        "matchingLearning":
+            MessageLookupByLibrary.simpleMessage("Matching learning"),
         "matchingLearningModeDescription": MessageLookupByLibrary.simpleMessage(
             "Drag and drop the words to match the correct order"),
+        "mediumPriority": MessageLookupByLibrary.simpleMessage("Medium"),
         "messageSessionName":
             MessageLookupByLibrary.simpleMessage("Message session name"),
         "microphonePermissionDenied": MessageLookupByLibrary.simpleMessage(
@@ -224,8 +247,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "pronoun": MessageLookupByLibrary.simpleMessage("Pronoun"),
         "pronunciation": MessageLookupByLibrary.simpleMessage("Pronunciation"),
+        "pronunciationLearning":
+            MessageLookupByLibrary.simpleMessage("Pronunciation learning"),
         "purchase": MessageLookupByLibrary.simpleMessage("Purchase"),
         "quiz": MessageLookupByLibrary.simpleMessage("Quiz"),
+        "quizLearning": MessageLookupByLibrary.simpleMessage("Quiz learning"),
         "reading": MessageLookupByLibrary.simpleMessage("Reading"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registerDescription": MessageLookupByLibrary.simpleMessage(
@@ -256,15 +282,29 @@ class MessageLookup extends MessageLookupByLibrary {
                 "This feature is only available for premium users"),
         "timeoutException": MessageLookupByLibrary.simpleMessage("Timeout"),
         "toLearnToday": MessageLookupByLibrary.simpleMessage("to learn today"),
+        "todoDeleteConfirmation": MessageLookupByLibrary.simpleMessage(
+            "Do you want to delete this to do?"),
+        "todoDescription":
+            MessageLookupByLibrary.simpleMessage("To do description"),
+        "todoIsEmptyText": MessageLookupByLibrary.simpleMessage(
+            "You have no to do, create one now"),
+        "todoPriority": MessageLookupByLibrary.simpleMessage("To do priority"),
+        "todoStatus": MessageLookupByLibrary.simpleMessage("To do status"),
+        "todoText": MessageLookupByLibrary.simpleMessage("To do"),
+        "todoTitle": MessageLookupByLibrary.simpleMessage("To do title"),
+        "todoType": MessageLookupByLibrary.simpleMessage("To do type"),
         "tokenExpired": MessageLookupByLibrary.simpleMessage("Token expired"),
         "trackYourProgress":
             MessageLookupByLibrary.simpleMessage("Track your progress"),
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Track your progress and see how far you\'ve come on your learning journey."),
         "travel": MessageLookupByLibrary.simpleMessage("Travel"),
+        "undoneTodo": MessageLookupByLibrary.simpleMessage("Undone"),
         "unknownException": m2,
         "updateProfilePicture":
             MessageLookupByLibrary.simpleMessage("Update profile picture"),
+        "updateTodo": MessageLookupByLibrary.simpleMessage("Update to do"),
+        "urgentPriority": MessageLookupByLibrary.simpleMessage("Urgent"),
         "userInfo": MessageLookupByLibrary.simpleMessage("User info"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "usernameHint":

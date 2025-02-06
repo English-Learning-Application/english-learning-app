@@ -91,6 +91,8 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
         categoryCourse: categoryCourse,
         languageCourseLearningContent: languageCourseLearningContents,
       ),
+      todoDetails: (todo) => TodoDetailsRoute(todo: todo),
+      achievement: () => const AchievementTrackerRoute(),
     );
   }
 }

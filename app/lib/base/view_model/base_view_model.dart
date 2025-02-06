@@ -38,6 +38,7 @@ abstract class BaseViewModelDelegate<D extends BaseViewModelData>
     return appExceptionWrapper.exceptionCompleter?.future;
   }
 
+  @protected
   void updateData(D data) {
     viewModelData = data;
     notifyListeners();

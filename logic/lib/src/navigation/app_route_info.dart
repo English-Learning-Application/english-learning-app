@@ -72,4 +72,8 @@ class AppRouteInfo with _$AppRouteInfo {
     required CategoryCourse categoryCourse,
     required List<LanguageCourseLearningContent> languageCourseLearningContents,
   }) = _CategoryCourseLesson;
+  const factory AppRouteInfo.todoDetails({
+    UserTodo? todo,
+  }) = _TodoDetails;
+  const factory AppRouteInfo.achievement() = _Achievement;
 }

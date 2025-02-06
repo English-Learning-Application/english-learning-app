@@ -782,6 +782,122 @@ enum AppThemeType {
   final String serverValue;
 }
 
+enum TodoType {
+  general(ServerRequestResponseConstants.general),
+  course(ServerRequestResponseConstants.course),
+  learnVocabulary(ServerRequestResponseConstants.learnVocabulary),
+  learnGrammar(ServerRequestResponseConstants.learnGrammar),
+  learnSpeaking(ServerRequestResponseConstants.learnSpeaking),
+  learnListening(ServerRequestResponseConstants.learnListening),
+  learnReading(ServerRequestResponseConstants.learnReading),
+  learnWriting(ServerRequestResponseConstants.learnWriting),
+  flashCardLearning(ServerRequestResponseConstants.flashCardLearning),
+  quizLearning(ServerRequestResponseConstants.quizLearning),
+  matchingLearning(ServerRequestResponseConstants.matchingLearning),
+  pronunciationLearning(ServerRequestResponseConstants.pronunciationLearning);
+
+  const TodoType(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.general:
+        return TodoType.general;
+      case ServerRequestResponseConstants.course:
+        return TodoType.course;
+      case ServerRequestResponseConstants.learnVocabulary:
+        return TodoType.learnVocabulary;
+      case ServerRequestResponseConstants.learnGrammar:
+        return TodoType.learnGrammar;
+      case ServerRequestResponseConstants.learnSpeaking:
+        return TodoType.learnSpeaking;
+      case ServerRequestResponseConstants.learnListening:
+        return TodoType.learnListening;
+      case ServerRequestResponseConstants.learnReading:
+        return TodoType.learnReading;
+      case ServerRequestResponseConstants.learnWriting:
+        return TodoType.learnWriting;
+      case ServerRequestResponseConstants.flashCardLearning:
+        return TodoType.flashCardLearning;
+      case ServerRequestResponseConstants.quizLearning:
+        return TodoType.quizLearning;
+      case ServerRequestResponseConstants.matchingLearning:
+        return TodoType.matchingLearning;
+      case ServerRequestResponseConstants.pronunciationLearning:
+        return TodoType.pronunciationLearning;
+      default:
+        return TodoType.general;
+    }
+  }
+
+  String get todoTypeName {
+    switch (this) {
+      case TodoType.general:
+        return S.current.general;
+      case TodoType.course:
+        return S.current.course;
+      case TodoType.learnVocabulary:
+        return S.current.learnVocabulary;
+      case TodoType.learnGrammar:
+        return S.current.learnGrammar;
+      case TodoType.learnSpeaking:
+        return S.current.learnSpeaking;
+      case TodoType.learnListening:
+        return S.current.learnListening;
+      case TodoType.learnReading:
+        return S.current.learnReading;
+      case TodoType.learnWriting:
+        return S.current.learnWriting;
+      case TodoType.flashCardLearning:
+        return S.current.flashCardLearning;
+      case TodoType.quizLearning:
+        return S.current.quizLearning;
+      case TodoType.matchingLearning:
+        return S.current.matchingLearning;
+      case TodoType.pronunciationLearning:
+        return S.current.pronunciationLearning;
+    }
+  }
+}
+
+enum TodoPriority {
+  low(ServerRequestResponseConstants.low),
+  medium(ServerRequestResponseConstants.medium),
+  high(ServerRequestResponseConstants.high),
+  urgent(ServerRequestResponseConstants.urgent);
+
+  const TodoPriority(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.low:
+        return TodoPriority.low;
+      case ServerRequestResponseConstants.medium:
+        return TodoPriority.medium;
+      case ServerRequestResponseConstants.high:
+        return TodoPriority.high;
+      case ServerRequestResponseConstants.urgent:
+        return TodoPriority.urgent;
+      default:
+        return TodoPriority.low;
+    }
+  }
+
+  String get priorityName {
+    switch (this) {
+      case TodoPriority.low:
+        return S.current.lowPriority;
+      case TodoPriority.medium:
+        return S.current.mediumPriority;
+      case TodoPriority.high:
+        return S.current.highPriority;
+      case TodoPriority.urgent:
+        return S.current.urgentPriority;
+    }
+  }
+}
+
 enum LanguageLevel {
   all(ServerRequestResponseConstants.all),
   a1(ServerRequestResponseConstants.a1),
