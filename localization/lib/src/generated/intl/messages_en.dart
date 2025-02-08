@@ -55,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Cancellation"),
+        "changePasswordTooltip": MessageLookupByLibrary.simpleMessage(
+            "You can leave the old password field empty if you use using social login"),
         "chat": MessageLookupByLibrary.simpleMessage("Chat"),
         "chatBotRequired": MessageLookupByLibrary.simpleMessage(
             "AI chatbot subscription is required"),
@@ -110,6 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "doneTodo": MessageLookupByLibrary.simpleMessage("Done"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "emailOrPhone": MessageLookupByLibrary.simpleMessage("Email or phone"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
         "expression": MessageLookupByLibrary.simpleMessage("Expression"),
@@ -144,6 +147,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Password confirmation does not match"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Wrong date time format"),
+        "invalidEmailOrPhone": MessageLookupByLibrary.simpleMessage(
+            "Invalid email or phone number"),
+        "invalidOldPassword":
+            MessageLookupByLibrary.simpleMessage("Invalid old password"),
         "invalidPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Invalid phone number"),
         "invalidUserName":
@@ -204,6 +211,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nativeLanguage":
             MessageLookupByLibrary.simpleMessage("Native language"),
         "negativeTense": MessageLookupByLibrary.simpleMessage("Negative"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("New password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noFriendChatsFound":
             MessageLookupByLibrary.simpleMessage("No friend chats found"),
@@ -213,6 +221,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "none": MessageLookupByLibrary.simpleMessage("None"),
         "noun": MessageLookupByLibrary.simpleMessage("Noun"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "oldPassword": MessageLookupByLibrary.simpleMessage("Old password"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "parseException":
             MessageLookupByLibrary.simpleMessage("Parse Exception"),
@@ -258,6 +267,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Register to access all of our services"),
         "resendOtp": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resendOtpAt": m1,
+        "resetEmailDescription": MessageLookupByLibrary.simpleMessage(
+            "Reset your password by entering your email or phone number"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "resetPasswordInstruction": MessageLookupByLibrary.simpleMessage(
+            "Enter your new password and the OTP sent to your email or phone number to reset your password"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "score": MessageLookupByLibrary.simpleMessage("Score"),
         "selectLearningLanguage": MessageLookupByLibrary.simpleMessage(
@@ -299,6 +313,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Track your progress and see how far you\'ve come on your learning journey."),
         "travel": MessageLookupByLibrary.simpleMessage("Travel"),
+        "unauthorizedException":
+            MessageLookupByLibrary.simpleMessage("Unauthorized"),
         "undoneTodo": MessageLookupByLibrary.simpleMessage("Undone"),
         "unknownException": m2,
         "updateProfilePicture":

@@ -23,6 +23,10 @@ import 'package:logic/src/features/authentication/usecase/login_user_use_case.da
     as _i945;
 import 'package:logic/src/features/authentication/usecase/registration_completion_use_case.dart'
     as _i119;
+import 'package:logic/src/features/authentication/usecase/reset_password_request_use_case.dart'
+    as _i889;
+import 'package:logic/src/features/authentication/usecase/reset_password_use_case.dart'
+    as _i845;
 import 'package:logic/src/features/authentication/usecase/username_registration_use_case.dart'
     as _i323;
 import 'package:logic/src/features/community/use_case/create_community_chat_session_use_case.dart'
@@ -77,6 +81,8 @@ import 'package:logic/src/features/profile/use_case/send_phone_verification_use_
     as _i872;
 import 'package:logic/src/features/profile/use_case/update_user_avatar_use_case.dart'
     as _i1052;
+import 'package:logic/src/features/profile/use_case/update_user_password_use_case.dart'
+    as _i593;
 import 'package:logic/src/features/profile/use_case/update_user_profile_use_case.dart'
     as _i1020;
 import 'package:logic/src/features/profile/use_case/verify_email_otp_use_case.dart'
@@ -154,6 +160,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i323.UsernameRegistrationUseCase>(() =>
         _i323.UsernameRegistrationUseCase(
             gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i889.ResetPasswordRequestUseCase>(() =>
+        _i889.ResetPasswordRequestUseCase(
+            gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i845.ResetPasswordUseCase>(
+        () => _i845.ResetPasswordUseCase(gh<_i182.AuthenticationRepository>()));
     gh.factory<_i855.CreateNewChatBotSessionUseCase>(() =>
         _i855.CreateNewChatBotSessionUseCase(gh<_i182.AiChatBotRepository>()));
     gh.factory<_i876.DeleteChatSessionUseCase>(
@@ -261,6 +272,8 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i1020.UpdateUserProfileUseCase(gh<_i182.ProfileRepository>()));
     gh.factory<_i522.VerifyEmailOtpUseCase>(
         () => _i522.VerifyEmailOtpUseCase(gh<_i182.ProfileRepository>()));
+    gh.factory<_i593.UpdateUserPasswordUseCase>(
+        () => _i593.UpdateUserPasswordUseCase(gh<_i182.ProfileRepository>()));
     return this;
   }
 }

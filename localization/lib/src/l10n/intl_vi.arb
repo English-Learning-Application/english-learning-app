@@ -215,5 +215,15 @@
     "undoneTodo": "Chưa hoàn thành",
     "todoIsEmptyText": "Bạn chưa có to do nào, hãy tạo một to do ngay bây giờ",
     "todoDeleteConfirmation": "Bạn có muốn xóa to do này không?",
-    "achievement": "Thành tựu"
+    "achievement": "Thành tựu",
+    "unauthorizedException": "Lỗi không xác thực",
+    "resetPassword": "Đặt lại mật khẩu",
+    "oldPassword": "Mật khẩu cũ",
+    "newPassword": "Mật khẩu mới",
+    "invalidOldPassword": "Mật khẩu cũ không chính xác",
+    "changePasswordTooltip": "Bạn có thể để trống mật khẩu cũ nếu bạn đăng nhập bằng Google hoặc Facebook",
+    "emailOrPhone": "Email hoặc số điện thoại",
+    "resetEmailDescription": "Nhập email hoặc số điện thoại của bạn để đặt lại mật khẩu",
+    "invalidEmailOrPhone": "Email hoặc số điện thoại không hợp lệ",
+    "resetPasswordInstruction": "Bạn hãy nhập mật khẩu mới và mã OTP đã được gửi đến email hoặc số điện thoại của bạn để đặt lại mật khẩu"
 }

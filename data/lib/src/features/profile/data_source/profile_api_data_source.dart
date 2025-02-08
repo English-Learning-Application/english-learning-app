@@ -85,4 +85,21 @@ class ProfileApiDataSource {
       body: body,
     );
   }
+
+  Future<DataResponse<bool>?> updateUserPassword({
+    required String oldPassword,
+    required String newPassword,
+  }) async {
+    final body = {
+      'oldPassword': oldPassword,
+      'newPassword': newPassword,
+    };
+    return await _authAppServerApiClient.request(
+      method: RestApiMethod.put,
+      successResponseMapperType: SuccessResponseMapperType.dataResponse,
+      body: body,
+      path: '/profile/update-password',
+      decoder: (dynamic json) => json as bool,
+    );
+  }
 }

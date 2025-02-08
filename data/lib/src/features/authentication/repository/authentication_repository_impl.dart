@@ -116,4 +116,30 @@ class AuthenticationRepositoryImpl implements AuthenticationRepository {
 
     await saveUserPreference(_apiUserDataMapper.mapToEntity(resp?.data));
   }
+
+  @override
+  Future<void> resetPassword({
+    String email = '',
+    String phoneNumber = '',
+  }) async {
+    await _authenticationApiDataSource.resetPasswordRequest(
+      email: email,
+      phoneNumber: phoneNumber,
+    );
+  }
+
+  @override
+  Future<void> resetPasswordConfirmation({
+    String email = '',
+    String phoneNumber = '',
+    required String code,
+    required String newPassword,
+  }) async {
+    await _authenticationApiDataSource.resetPasswordConfirmation(
+      email: email,
+      phoneNumber: phoneNumber,
+      code: code,
+      newPassword: newPassword,
+    );
+  }
 }

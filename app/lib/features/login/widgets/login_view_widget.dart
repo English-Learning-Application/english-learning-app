@@ -1,6 +1,7 @@
 import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
+import 'package:logic/logic.dart';
 import 'package:provider/provider.dart';
 
 import '../../../app.dart';
@@ -110,9 +111,16 @@ class _LoginViewWidgetState extends State<LoginViewWidget> {
           ),
           Align(
             alignment: Alignment.centerRight,
-            child: Text(
-              S.current.forgotPassword,
-              style: AppTextStyles.s14w400primary().font12().bold.neutral900,
+            child: GestureDetector(
+              onTap: () {
+                context.read<AppNavigator>().push(
+                      const AppRouteInfo.resetPassword(),
+                    );
+              },
+              child: Text(
+                S.current.forgotPassword,
+                style: AppTextStyles.s14w400primary().font12().bold.neutral900,
+              ),
             ),
           ),
           SizedBox(

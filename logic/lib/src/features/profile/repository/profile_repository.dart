@@ -19,4 +19,9 @@ abstract class ProfileRepository {
     required LearningLanguage nativeLanguage,
     required List<LearningType> learningModes,
   });
+
+  Future<bool> updatePassword({
+    required String oldPassword,
+    required String newPassword,
+  });
 }

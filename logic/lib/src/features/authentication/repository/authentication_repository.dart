@@ -13,6 +13,18 @@ abstract class AuthenticationRepository {
     required List<LearningType> learningModes,
   });
 
+  Future<void> resetPassword({
+    String email = '',
+    String phoneNumber = '',
+  });
+
+  Future<void> resetPasswordConfirmation({
+    String email = '',
+    String phoneNumber = '',
+    required String code,
+    required String newPassword,
+  });
+
   Future<void> loginUser({
     required String email,
     required String password,

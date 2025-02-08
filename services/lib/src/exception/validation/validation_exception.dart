@@ -15,4 +15,6 @@ enum ValidationExceptionKind {
   invalidUsername,
   invalidDateTime,
   invalidConfirmationPassword,
+  invalidOldPassword,
+  invalidEmailOrPhoneNumber,
 }

@@ -89,3 +89,5 @@ export 'features/todo/view_model/todo.dart';
 export 'features/todo_details/view_model/todo_details.dart';
 export 'features/achievement_tracker/view/achievement_tracker_page.dart';
 export 'features/achievement_tracker/view_model/achievement_tracker.dart';
+export 'features/reset_password/view_model/reset_password.dart';
+export 'features/reset_password_confirmation/view_model/reset_password_confirmation.dart';

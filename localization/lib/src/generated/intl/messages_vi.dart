@@ -54,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Lỗi hủy"),
+        "changePasswordTooltip": MessageLookupByLibrary.simpleMessage(
+            "Bạn có thể để trống mật khẩu cũ nếu bạn đăng nhập bằng Google hoặc Facebook"),
         "chat": MessageLookupByLibrary.simpleMessage("Trò chuyện"),
         "chatBotRequired":
             MessageLookupByLibrary.simpleMessage("Yêu cầu đăng ký trợ lý ảo"),
@@ -109,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "doneTodo": MessageLookupByLibrary.simpleMessage("Hoàn thành"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Chỉnh sửa hồ sơ"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Nhập email của bạn"),
+        "emailOrPhone":
+            MessageLookupByLibrary.simpleMessage("Email hoặc số điện thoại"),
         "english": MessageLookupByLibrary.simpleMessage("Tiếng Anh"),
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
         "expression": MessageLookupByLibrary.simpleMessage("Biểu cảm"),
@@ -142,6 +146,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Mật khẩu xác nhận không khớp"),
         "invalidDateTime":
             MessageLookupByLibrary.simpleMessage("Định dạng ngày giờ sai"),
+        "invalidEmailOrPhone": MessageLookupByLibrary.simpleMessage(
+            "Email hoặc số điện thoại không hợp lệ"),
+        "invalidOldPassword":
+            MessageLookupByLibrary.simpleMessage("Mật khẩu cũ không chính xác"),
         "invalidPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Số điện thoại không hợp lệ"),
         "invalidUserName":
@@ -201,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nativeLanguage":
             MessageLookupByLibrary.simpleMessage("Ngôn ngữ mẹ đẻ"),
         "negativeTense": MessageLookupByLibrary.simpleMessage("Phủ định"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("Mật khẩu mới"),
         "next": MessageLookupByLibrary.simpleMessage("Tiếp theo"),
         "noFriendChatsFound": MessageLookupByLibrary.simpleMessage(
             "Không tìm thấy trò chuyện với bạn bè"),
@@ -211,6 +220,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "none": MessageLookupByLibrary.simpleMessage("Không có"),
         "noun": MessageLookupByLibrary.simpleMessage("Danh từ"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "oldPassword": MessageLookupByLibrary.simpleMessage("Mật khẩu cũ"),
         "or": MessageLookupByLibrary.simpleMessage("Hoặc"),
         "parseException": MessageLookupByLibrary.simpleMessage("Lỗi định dạng"),
         "participants": MessageLookupByLibrary.simpleMessage("Người tham gia"),
@@ -255,6 +265,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Đăng ký để truy cập tất cả các dịch vụ của chúng tôi"),
         "resendOtp": MessageLookupByLibrary.simpleMessage("Gửi lại mã OTP"),
         "resendOtpAt": m1,
+        "resetEmailDescription": MessageLookupByLibrary.simpleMessage(
+            "Nhập email hoặc số điện thoại của bạn để đặt lại mật khẩu"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("Đặt lại mật khẩu"),
+        "resetPasswordInstruction": MessageLookupByLibrary.simpleMessage(
+            "Bạn hãy nhập mật khẩu mới và mã OTP đã được gửi đến email hoặc số điện thoại của bạn để đặt lại mật khẩu"),
         "retry": MessageLookupByLibrary.simpleMessage("Thử lại"),
         "score": MessageLookupByLibrary.simpleMessage("Điểm"),
         "selectLearningLanguage":
@@ -297,6 +313,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "trackYourProgressDescription": MessageLookupByLibrary.simpleMessage(
             "Theo dõi tiến trình của bạn và xem bạn đã đi được bao xa trên hành trình học tập của mình."),
         "travel": MessageLookupByLibrary.simpleMessage("Du lịch"),
+        "unauthorizedException":
+            MessageLookupByLibrary.simpleMessage("Lỗi không xác thực"),
         "undoneTodo": MessageLookupByLibrary.simpleMessage("Chưa hoàn thành"),
         "unknownException": m2,
         "updateProfilePicture":

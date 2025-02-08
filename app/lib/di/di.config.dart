@@ -54,6 +54,10 @@ import 'package:app/features/pronunciation_learning/view_model/pronunciation_lea
     as _i143;
 import 'package:app/features/quiz_learning/view_model/quiz_learning.dart'
     as _i96;
+import 'package:app/features/reset_password/view_model/reset_password.dart'
+    as _i806;
+import 'package:app/features/reset_password_confirmation/view_model/reset_password_confirmation.dart'
+    as _i34;
 import 'package:app/features/splash/view_models/splash.dart' as _i635;
 import 'package:app/features/subscription/view_model/subscription.dart'
     as _i407;
@@ -100,7 +104,6 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i901.ListeningLearningViewModel());
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
-    gh.factory<_i238.ProfileViewModel>(() => _i238.ProfileViewModel());
     gh.factory<_i583.CategoryCourseDetailsViewModel>(
         () => _i583.CategoryCourseDetailsViewModel());
     gh.factory<_i1024.CategoryCourseLessonViewModel>(
@@ -109,11 +112,16 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i398.FirebaseAnalytics>(
         () => appModules.firebaseAnalytics);
     gh.lazySingleton<_i656.AudioPlayer>(() => appModules.audioPlayer);
+    gh.factory<_i34.ResetPasswordConfirmationViewModel>(() =>
+        _i34.ResetPasswordConfirmationViewModel(
+            gh<_i182.ResetPasswordUseCase>()));
     gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(
           gh<_i182.LogoutUseCase>(),
           gh<_i182.TrackConnectivityUseCase>(),
           gh<_i182.DeleteFcmTokensUseCase>(),
         ));
+    gh.factory<_i806.ResetPasswordViewModel>(() =>
+        _i806.ResetPasswordViewModel(gh<_i182.ResetPasswordRequestUseCase>()));
     gh.factory<_i513.RouteGuard>(() => _i513.RouteGuard(
           gh<_i182.IsLoggedInUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),
@@ -199,6 +207,8 @@ extension GetItInjectableX on _i174.GetIt {
             gh<_i182.RegistrationCompletionUseCase>()));
     gh.factory<_i725.LanguageCourseDetailsViewModel>(
         () => _i725.LanguageCourseDetailsViewModel(gh<_i50.FlutterTts>()));
+    gh.factory<_i238.ProfileViewModel>(
+        () => _i238.ProfileViewModel(gh<_i182.UpdateUserPasswordUseCase>()));
     gh.factory<_i143.PronunciationLearningViewModel>(
         () => _i143.PronunciationLearningViewModel(
               gh<_i182.CheckPermissionUseCase>(),

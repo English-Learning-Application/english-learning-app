@@ -11,7 +11,7 @@ class CommonErrorResponseMapper
     return ServerError(
       generalServerStatusCode: errorResponse?['status_code'] as int?,
       generalServerErrorId: errorResponse?['error_id'] as String?,
-      generalMessage: errorResponse?['error_id'] as String?,
+      generalMessage: errorResponse?['message'] as String?,
     );
   }
 }

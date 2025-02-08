@@ -183,6 +183,18 @@ class AppRouter extends $AppRouter {
           ],
         ),
         AutoRoute(
+          page: ResetPasswordFlowRoute.page,
+          children: [
+            AutoRoute(
+              page: ResetPasswordRoute.page,
+              initial: true,
+            ),
+            AutoRoute(
+              page: ResetPasswordConfirmationRoute.page,
+            ),
+          ],
+        ),
+        AutoRoute(
           guards: [
             _routeGuard,
           ],
@@ -249,4 +261,9 @@ class TodoTabPage extends AutoRouter {
 @RoutePage()
 class ProfileTabPage extends AutoRouter {
   const ProfileTabPage({super.key});
+}
+
+@RoutePage()
+class ResetPasswordFlowPage extends AutoRouter {
+  const ResetPasswordFlowPage({super.key});
 }

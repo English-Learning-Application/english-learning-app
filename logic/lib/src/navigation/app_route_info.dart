@@ -76,4 +76,8 @@ class AppRouteInfo with _$AppRouteInfo {
     UserTodo? todo,
   }) = _TodoDetails;
   const factory AppRouteInfo.achievement() = _Achievement;
+  const factory AppRouteInfo.resetPassword() = _ResetPassword;
+  const factory AppRouteInfo.resetPasswordConfirm({
+    required String emailOrPhoneNumber,
+}) = _ResetPasswordConfirm;
 }

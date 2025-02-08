@@ -93,6 +93,11 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       ),
       todoDetails: (todo) => TodoDetailsRoute(todo: todo),
       achievement: () => const AchievementTrackerRoute(),
+      resetPassword: () => const ResetPasswordFlowRoute(),
+      resetPasswordConfirm: (emailOrPhoneNumber) =>
+          ResetPasswordConfirmationRoute(
+        emailOrPhoneNumber: emailOrPhoneNumber,
+      ),
     );
   }
 }

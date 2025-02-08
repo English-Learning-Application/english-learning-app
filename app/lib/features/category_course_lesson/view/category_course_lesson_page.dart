@@ -97,362 +97,394 @@ class _CategoryCourseLessonPageState extends BasePageState<
           );
         }
         final learningContents = vmData.languageCourseLearningContents;
-        return ListView.separated(
-          itemBuilder: (_, index) {
-            final learningContent = learningContents[index];
-            final language = widget.categoryCourse.language;
-            switch (learningContent.learningContentType) {
-              case LearningContentType.word:
-                final words = learningContent.words;
-                return Column(
-                  spacing: Dimens.d8.responsive(),
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          LearningContentType.word.contentTypeName,
-                          style: AppTextStyles.s14w400primary().bold.font20(),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            _onStartLearning(
-                              [learningContent],
-                            );
-                          },
-                          child: Assets.icons.icLearn.svg(
-                            width: Dimens.d24.responsive(),
-                            height: Dimens.d24.responsive(),
-                            colorFilter: ColorFilter.mode(
-                              AppColors.current.primaryColor,
-                              BlendMode.srcIn,
-                            ),
+        return Column(
+          children: [
+            SizedBox(
+              height: Dimens.d8.responsive(),
+            ),
+            Expanded(
+              child: ListView.separated(
+                itemBuilder: (_, index) {
+                  final learningContent = learningContents[index];
+                  final language = widget.categoryCourse.language;
+                  switch (learningContent.learningContentType) {
+                    case LearningContentType.word:
+                      final words = learningContent.words;
+                      return Column(
+                        spacing: Dimens.d8.responsive(),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                LearningContentType.word.contentTypeName,
+                                style: AppTextStyles.s14w400primary()
+                                    .bold
+                                    .font20(),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  _onStartLearning(
+                                    [learningContent],
+                                  );
+                                },
+                                child: Assets.icons.icLearn.svg(
+                                  width: Dimens.d24.responsive(),
+                                  height: Dimens.d24.responsive(),
+                                  colorFilter: ColorFilter.mode(
+                                    AppColors.current.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
-                    ),
-                    ...words.map(
-                      (e) {
-                        final word = switch (language) {
-                          LearningLanguage.english => e.englishWord,
-                          LearningLanguage.vietnamese => e.vietnameseWord,
-                          LearningLanguage.french => e.frenchWord,
-                        };
-                        return WordCategoryLessonItem(
-                          word: word,
-                          pronunciation: e.pronunciation,
-                          typeOfWord: e.wordType.wordTypeName,
-                          learningLanguage: language,
-                        );
-                      },
-                    ),
-                  ],
-                );
-              case LearningContentType.expression:
-                final expressions = learningContent.expressions;
-                return Column(
-                  spacing: Dimens.d8.responsive(),
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          LearningContentType.expression.contentTypeName,
-                          style: AppTextStyles.s14w400primary().bold.font20(),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            _onStartLearning(
-                              [learningContent],
-                            );
-                          },
-                          child: Assets.icons.icLearn.svg(
-                            width: Dimens.d24.responsive(),
-                            height: Dimens.d24.responsive(),
-                            colorFilter: ColorFilter.mode(
-                              AppColors.current.primaryColor,
-                              BlendMode.srcIn,
-                            ),
+                          ...words.map(
+                            (e) {
+                              final word = switch (language) {
+                                LearningLanguage.english => e.englishWord,
+                                LearningLanguage.vietnamese => e.vietnameseWord,
+                                LearningLanguage.french => e.frenchWord,
+                              };
+                              return WordCategoryLessonItem(
+                                word: word,
+                                pronunciation: e.pronunciation,
+                                typeOfWord: e.wordType.wordTypeName,
+                                learningLanguage: language,
+                              );
+                            },
                           ),
-                        ),
-                      ],
-                    ),
-                    ...expressions.map(
-                      (e) {
-                        final expression = switch (language) {
-                          LearningLanguage.english => e.englishExpression,
-                          LearningLanguage.vietnamese => e.vietnameseExpression,
-                          LearningLanguage.french => e.frenchExpression,
-                        };
-                        return IdiomCategoryLessonItem(
-                          expression: expression,
-                          exampleUsage: e.exampleUsage,
-                          learningLanguage: language,
-                        );
-                      },
-                    ),
-                  ],
-                );
-              case LearningContentType.idiom:
-                final idioms = learningContent.idioms;
-                return Column(
-                  spacing: Dimens.d8.responsive(),
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          LearningContentType.idiom.contentTypeName,
-                          style: AppTextStyles.s14w400primary().bold.font20(),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            _onStartLearning(
-                              [learningContent],
-                            );
-                          },
-                          child: Assets.icons.icLearn.svg(
-                            width: Dimens.d24.responsive(),
-                            height: Dimens.d24.responsive(),
-                            colorFilter: ColorFilter.mode(
-                              AppColors.current.primaryColor,
-                              BlendMode.srcIn,
-                            ),
+                        ],
+                      );
+                    case LearningContentType.expression:
+                      final expressions = learningContent.expressions;
+                      return Column(
+                        spacing: Dimens.d8.responsive(),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                LearningContentType.expression.contentTypeName,
+                                style: AppTextStyles.s14w400primary()
+                                    .bold
+                                    .font20(),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  _onStartLearning(
+                                    [learningContent],
+                                  );
+                                },
+                                child: Assets.icons.icLearn.svg(
+                                  width: Dimens.d24.responsive(),
+                                  height: Dimens.d24.responsive(),
+                                  colorFilter: ColorFilter.mode(
+                                    AppColors.current.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
-                    ),
-                    ...idioms.map(
-                      (e) {
-                        final idiomText = switch (language) {
-                          LearningLanguage.english => e.englishIdiom,
-                          LearningLanguage.vietnamese => e.vietnameseIdiom,
-                          LearningLanguage.french => e.frenchIdiom,
-                        };
-                        return IdiomCategoryLessonItem(
-                          expression: idiomText,
-                          exampleUsage: e.exampleUsage,
-                          learningLanguage: language,
-                        );
-                      },
-                    ),
-                  ],
-                );
-              case LearningContentType.sentence:
-                final sentences = learningContent.sentences;
-                return Column(
-                  spacing: Dimens.d8.responsive(),
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          LearningContentType.sentence.contentTypeName,
-                          style: AppTextStyles.s14w400primary().bold.font20(),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            _onStartLearning(
-                              [learningContent],
-                            );
-                          },
-                          child: Assets.icons.icLearn.svg(
-                            width: Dimens.d24.responsive(),
-                            height: Dimens.d24.responsive(),
-                            colorFilter: ColorFilter.mode(
-                              AppColors.current.primaryColor,
-                              BlendMode.srcIn,
-                            ),
+                          ...expressions.map(
+                            (e) {
+                              final expression = switch (language) {
+                                LearningLanguage.english => e.englishExpression,
+                                LearningLanguage.vietnamese =>
+                                  e.vietnameseExpression,
+                                LearningLanguage.french => e.frenchExpression,
+                              };
+                              return IdiomCategoryLessonItem(
+                                expression: expression,
+                                exampleUsage: e.exampleUsage,
+                                learningLanguage: language,
+                              );
+                            },
                           ),
-                        ),
-                      ],
-                    ),
-                    ...sentences.map(
-                      (e) {
-                        final sentenceText = switch (language) {
-                          LearningLanguage.english => e.englishSentence,
-                          LearningLanguage.vietnamese => e.vietnameseSentence,
-                          LearningLanguage.french => e.frenchSentence,
-                        };
-                        final example =
-                            e.exampleUsage[language.serverValue.toLowerCase()];
-                        return SentenceCategoryLessonItem(
-                          sentenceText: sentenceText,
-                          example: example,
-                          learningLanguage: language,
-                        );
-                      },
-                    ),
-                  ],
-                );
-              case LearningContentType.phrasalVerb:
-                final phrasalVerbs = learningContent.phrasalVerbs;
-                return Column(
-                  spacing: Dimens.d8.responsive(),
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          LearningContentType.phrasalVerb.contentTypeName,
-                          style: AppTextStyles.s14w400primary().bold.font20(),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            _onStartLearning(
-                              [learningContent],
-                            );
-                          },
-                          child: Assets.icons.icLearn.svg(
-                            width: Dimens.d24.responsive(),
-                            height: Dimens.d24.responsive(),
-                            colorFilter: ColorFilter.mode(
-                              AppColors.current.primaryColor,
-                              BlendMode.srcIn,
-                            ),
+                        ],
+                      );
+                    case LearningContentType.idiom:
+                      final idioms = learningContent.idioms;
+                      return Column(
+                        spacing: Dimens.d8.responsive(),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                LearningContentType.idiom.contentTypeName,
+                                style: AppTextStyles.s14w400primary()
+                                    .bold
+                                    .font20(),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  _onStartLearning(
+                                    [learningContent],
+                                  );
+                                },
+                                child: Assets.icons.icLearn.svg(
+                                  width: Dimens.d24.responsive(),
+                                  height: Dimens.d24.responsive(),
+                                  colorFilter: ColorFilter.mode(
+                                    AppColors.current.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
-                    ),
-                    ...phrasalVerbs.map(
-                      (e) {
-                        final phrasalVerbText = switch (language) {
-                          LearningLanguage.english => e.englishPhrasalVerb,
-                          LearningLanguage.vietnamese =>
-                            e.vietnamesePhrasalVerb,
-                          LearningLanguage.french => e.frenchPhrasalVerb,
-                        };
-                        final phrasalVerbDescription = switch (language) {
-                          LearningLanguage.english => e.englishDescription,
-                          LearningLanguage.vietnamese =>
-                            e.vietnameseDescription,
-                          LearningLanguage.french => e.frenchDescription,
-                        };
-                        return PhrasalVerbCategoryLessonItem(
-                          phrasalVerb: phrasalVerbText,
-                          description: phrasalVerbDescription,
-                          learningLanguage: language,
-                        );
-                      },
-                    ),
-                  ],
-                );
-              case LearningContentType.tense:
-                final tenses = learningContent.tenses;
-                return Column(
-                  spacing: Dimens.d8.responsive(),
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          LearningContentType.tense.contentTypeName,
-                          style: AppTextStyles.s14w400primary().bold.font20(),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            _onStartLearning(
-                              [learningContent],
-                            );
-                          },
-                          child: Assets.icons.icLearn.svg(
-                            width: Dimens.d24.responsive(),
-                            height: Dimens.d24.responsive(),
-                            colorFilter: ColorFilter.mode(
-                              AppColors.current.primaryColor,
-                              BlendMode.srcIn,
-                            ),
+                          ...idioms.map(
+                            (e) {
+                              final idiomText = switch (language) {
+                                LearningLanguage.english => e.englishIdiom,
+                                LearningLanguage.vietnamese =>
+                                  e.vietnameseIdiom,
+                                LearningLanguage.french => e.frenchIdiom,
+                              };
+                              return IdiomCategoryLessonItem(
+                                expression: idiomText,
+                                exampleUsage: e.exampleUsage,
+                                learningLanguage: language,
+                              );
+                            },
                           ),
-                        ),
-                      ],
-                    ),
-                    ...tenses.map(
-                      (e) {
-                        final tenseName = switch (language) {
-                          LearningLanguage.english => e.englishTenseName,
-                          LearningLanguage.vietnamese => e.vietnameseTenseName,
-                          LearningLanguage.french => e.frenchTenseName,
-                        };
-                        final description = switch (language) {
-                          LearningLanguage.english => e.englishDescription,
-                          LearningLanguage.vietnamese =>
-                            e.vietnameseDescription,
-                          LearningLanguage.french => e.frenchDescription,
-                        };
-                        return TenseLessonItem(
-                          tenseName: tenseName,
-                          learningLanguage: language,
-                          tenseStructure: e.tenseRule,
-                          tenseDescription: description,
-                          tenseForms: e.tenseForms,
-                        );
-                      },
-                    ),
-                  ],
-                );
-              case LearningContentType.phonetics:
-                final phonetics = learningContent.phonetics;
-                return Column(
-                  spacing: Dimens.d8.responsive(),
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          LearningContentType.phonetics.contentTypeName,
-                          style: AppTextStyles.s14w400primary().bold.font20(),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            _onStartLearning(
-                              [learningContent],
-                            );
-                          },
-                          child: Assets.icons.icLearn.svg(
-                            width: Dimens.d24.responsive(),
-                            height: Dimens.d24.responsive(),
-                            colorFilter: ColorFilter.mode(
-                              AppColors.current.primaryColor,
-                              BlendMode.srcIn,
-                            ),
+                        ],
+                      );
+                    case LearningContentType.sentence:
+                      final sentences = learningContent.sentences;
+                      return Column(
+                        spacing: Dimens.d8.responsive(),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                LearningContentType.sentence.contentTypeName,
+                                style: AppTextStyles.s14w400primary()
+                                    .bold
+                                    .font20(),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  _onStartLearning(
+                                    [learningContent],
+                                  );
+                                },
+                                child: Assets.icons.icLearn.svg(
+                                  width: Dimens.d24.responsive(),
+                                  height: Dimens.d24.responsive(),
+                                  colorFilter: ColorFilter.mode(
+                                    AppColors.current.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
-                    ),
-                    ...phonetics.map(
-                      (e) {
-                        final phoneticText = e.phoneticSymbol;
-                        final phoneticSound = e.phoneticSound;
-                        final pronunciationGuide = switch (language) {
-                          LearningLanguage.english => e.englishPhoneticGuide,
-                          LearningLanguage.vietnamese =>
-                            e.vietnamesePhoneticGuide,
-                          LearningLanguage.french => e.frenchPhoneticGuide,
-                        };
+                          ...sentences.map(
+                            (e) {
+                              final sentenceText = switch (language) {
+                                LearningLanguage.english => e.englishSentence,
+                                LearningLanguage.vietnamese =>
+                                  e.vietnameseSentence,
+                                LearningLanguage.french => e.frenchSentence,
+                              };
+                              final example = e.exampleUsage[
+                                  language.serverValue.toLowerCase()];
+                              return SentenceCategoryLessonItem(
+                                sentenceText: sentenceText,
+                                example: example,
+                                learningLanguage: language,
+                              );
+                            },
+                          ),
+                        ],
+                      );
+                    case LearningContentType.phrasalVerb:
+                      final phrasalVerbs = learningContent.phrasalVerbs;
+                      return Column(
+                        spacing: Dimens.d8.responsive(),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                LearningContentType.phrasalVerb.contentTypeName,
+                                style: AppTextStyles.s14w400primary()
+                                    .bold
+                                    .font20(),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  _onStartLearning(
+                                    [learningContent],
+                                  );
+                                },
+                                child: Assets.icons.icLearn.svg(
+                                  width: Dimens.d24.responsive(),
+                                  height: Dimens.d24.responsive(),
+                                  colorFilter: ColorFilter.mode(
+                                    AppColors.current.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          ...phrasalVerbs.map(
+                            (e) {
+                              final phrasalVerbText = switch (language) {
+                                LearningLanguage.english =>
+                                  e.englishPhrasalVerb,
+                                LearningLanguage.vietnamese =>
+                                  e.vietnamesePhrasalVerb,
+                                LearningLanguage.french => e.frenchPhrasalVerb,
+                              };
+                              final phrasalVerbDescription = switch (language) {
+                                LearningLanguage.english =>
+                                  e.englishDescription,
+                                LearningLanguage.vietnamese =>
+                                  e.vietnameseDescription,
+                                LearningLanguage.french => e.frenchDescription,
+                              };
+                              return PhrasalVerbCategoryLessonItem(
+                                phrasalVerb: phrasalVerbText,
+                                description: phrasalVerbDescription,
+                                learningLanguage: language,
+                              );
+                            },
+                          ),
+                        ],
+                      );
+                    case LearningContentType.tense:
+                      final tenses = learningContent.tenses;
+                      return Column(
+                        spacing: Dimens.d8.responsive(),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                LearningContentType.tense.contentTypeName,
+                                style: AppTextStyles.s14w400primary()
+                                    .bold
+                                    .font20(),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  _onStartLearning(
+                                    [learningContent],
+                                  );
+                                },
+                                child: Assets.icons.icLearn.svg(
+                                  width: Dimens.d24.responsive(),
+                                  height: Dimens.d24.responsive(),
+                                  colorFilter: ColorFilter.mode(
+                                    AppColors.current.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          ...tenses.map(
+                            (e) {
+                              final tenseName = switch (language) {
+                                LearningLanguage.english => e.englishTenseName,
+                                LearningLanguage.vietnamese =>
+                                  e.vietnameseTenseName,
+                                LearningLanguage.french => e.frenchTenseName,
+                              };
+                              final description = switch (language) {
+                                LearningLanguage.english =>
+                                  e.englishDescription,
+                                LearningLanguage.vietnamese =>
+                                  e.vietnameseDescription,
+                                LearningLanguage.french => e.frenchDescription,
+                              };
+                              return TenseLessonItem(
+                                tenseName: tenseName,
+                                learningLanguage: language,
+                                tenseStructure: e.tenseRule,
+                                tenseDescription: description,
+                                tenseForms: e.tenseForms,
+                              );
+                            },
+                          ),
+                        ],
+                      );
+                    case LearningContentType.phonetics:
+                      final phonetics = learningContent.phonetics;
+                      return Column(
+                        spacing: Dimens.d8.responsive(),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                LearningContentType.phonetics.contentTypeName,
+                                style: AppTextStyles.s14w400primary()
+                                    .bold
+                                    .font20(),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  _onStartLearning(
+                                    [learningContent],
+                                  );
+                                },
+                                child: Assets.icons.icLearn.svg(
+                                  width: Dimens.d24.responsive(),
+                                  height: Dimens.d24.responsive(),
+                                  colorFilter: ColorFilter.mode(
+                                    AppColors.current.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          ...phonetics.map(
+                            (e) {
+                              final phoneticText = e.phoneticSymbol;
+                              final phoneticSound = e.phoneticSound;
+                              final pronunciationGuide = switch (language) {
+                                LearningLanguage.english =>
+                                  e.englishPhoneticGuide,
+                                LearningLanguage.vietnamese =>
+                                  e.vietnamesePhoneticGuide,
+                                LearningLanguage.french =>
+                                  e.frenchPhoneticGuide,
+                              };
 
-                        return PhoneticCategoryLessonItem(
-                          phonetic: phoneticText,
-                          phoneticSound: phoneticSound,
-                          pronunciationGuide: pronunciationGuide,
-                          learningLanguage: language,
-                        );
-                      },
-                    ),
-                  ],
-                );
-            }
-          },
-          separatorBuilder: (_, __) => SizedBox(
-            height: Dimens.d8.responsive(),
-          ),
-          itemCount: learningContents.length,
+                              return PhoneticCategoryLessonItem(
+                                phonetic: phoneticText,
+                                phoneticSound: phoneticSound,
+                                pronunciationGuide: pronunciationGuide,
+                                learningLanguage: language,
+                              );
+                            },
+                          ),
+                        ],
+                      );
+                  }
+                },
+                separatorBuilder: (_, __) => SizedBox(
+                  height: Dimens.d8.responsive(),
+                ),
+                itemCount: learningContents.length,
+              ),
+            ),
+          ],
         );
       },
       selector: (_, vm) => vm.viewModelData,

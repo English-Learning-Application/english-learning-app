@@ -60,4 +60,16 @@ class ProfileRepositoryImpl implements ProfileRepository {
       await _appPreferences.saveCurrentUser(resp!.data!);
     }
   }
+
+  @override
+  Future<bool> updatePassword({
+    required String oldPassword,
+    required String newPassword,
+  }) async {
+    final resp = await _profileApiDataSource.updateUserPassword(
+      oldPassword: oldPassword,
+      newPassword: newPassword,
+    );
+    return resp?.data ?? false;
+  }
 }

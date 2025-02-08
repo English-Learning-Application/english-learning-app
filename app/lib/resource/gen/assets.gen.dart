@@ -78,6 +78,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_book_square.svg
   SvgGenImage get icBookSquare => const SvgGenImage('assets/icons/ic_book_square.svg');
 
+  /// File path: assets/icons/ic_change_password_tooltip.svg
+  SvgGenImage get icChangePasswordTooltip => const SvgGenImage('assets/icons/ic_change_password_tooltip.svg');
+
   /// File path: assets/icons/ic_close.svg
   SvgGenImage get icClose => const SvgGenImage('assets/icons/ic_close.svg');
 
@@ -179,6 +182,7 @@ class $AssetsIconsGen {
         icAvatar3,
         icAvatar4,
         icBookSquare,
+        icChangePasswordTooltip,
         icClose,
         icCommunity,
         icEngland,

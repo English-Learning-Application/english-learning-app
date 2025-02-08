@@ -94,4 +94,36 @@ class AuthenticationApiDataSource {
       decoder: (json) => ApiTokenData.fromJson(json as Map<String, dynamic>),
     );
   }
+
+  Future<void> resetPasswordRequest({
+    required String email,
+    required String phoneNumber,
+  }) async {
+    await _nonAuthAppServerApiClient.request(
+      path: '/auth/forgot-password',
+      method: RestApiMethod.post,
+      body: {
+        'email': email.isEmpty ? null : email,
+        'phoneNumber': phoneNumber.isEmpty ? null : phoneNumber,
+      },
+    );
+  }
+
+  Future<void> resetPasswordConfirmation({
+    required String code,
+    required String newPassword,
+    required String email,
+    required String phoneNumber,
+  }) async {
+    await _nonAuthAppServerApiClient.request(
+      method: RestApiMethod.post,
+      path: '/auth/reset-password',
+      body: {
+        'otp': code,
+        'newPassword': newPassword,
+        'email': email.isEmpty ? null : email,
+        'phoneNumber': phoneNumber.isEmpty ? null : phoneNumber,
+      },
+    );
+  }
 }

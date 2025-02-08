@@ -25,6 +25,9 @@ class _TodoPageState extends BasePageState<TodoPage, TodoViewModel> {
       ),
       body: Column(
         children: [
+          SizedBox(
+            height: Dimens.d16.responsive(),
+          ),
           Selector<TodoViewModel, TodoViewModelData>(
             selector: (_, vm) => vm.viewModelData,
             shouldRebuild: (prev, next) => prev.type != next.type,

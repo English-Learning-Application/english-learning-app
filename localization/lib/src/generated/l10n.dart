@@ -2219,6 +2219,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Unauthorized`
+  String get unauthorizedException {
+    return Intl.message(
+      'Unauthorized',
+      name: 'unauthorizedException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Old password`
+  String get oldPassword {
+    return Intl.message(
+      'Old password',
+      name: 'oldPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New password`
+  String get newPassword {
+    return Intl.message(
+      'New password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid old password`
+  String get invalidOldPassword {
+    return Intl.message(
+      'Invalid old password',
+      name: 'invalidOldPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can leave the old password field empty if you use using social login`
+  String get changePasswordTooltip {
+    return Intl.message(
+      'You can leave the old password field empty if you use using social login',
+      name: 'changePasswordTooltip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email or phone`
+  String get emailOrPhone {
+    return Intl.message(
+      'Email or phone',
+      name: 'emailOrPhone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset your password by entering your email or phone number`
+  String get resetEmailDescription {
+    return Intl.message(
+      'Reset your password by entering your email or phone number',
+      name: 'resetEmailDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email or phone number`
+  String get invalidEmailOrPhone {
+    return Intl.message(
+      'Invalid email or phone number',
+      name: 'invalidEmailOrPhone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your new password and the OTP sent to your email or phone number to reset your password`
+  String get resetPasswordInstruction {
+    return Intl.message(
+      'Enter your new password and the OTP sent to your email or phone number to reset your password',
+      name: 'resetPasswordInstruction',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -71,6 +71,8 @@ mixin _$AppRouteInfo {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -126,6 +128,8 @@ mixin _$AppRouteInfo {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -181,6 +185,8 @@ mixin _$AppRouteInfo {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -216,6 +222,8 @@ mixin _$AppRouteInfo {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -247,6 +255,8 @@ mixin _$AppRouteInfo {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -278,6 +288,8 @@ mixin _$AppRouteInfo {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -398,6 +410,8 @@ class _$LoginImpl implements _Login {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return login();
   }
@@ -456,6 +470,8 @@ class _$LoginImpl implements _Login {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return login?.call();
   }
@@ -514,6 +530,8 @@ class _$LoginImpl implements _Login {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -555,6 +573,8 @@ class _$LoginImpl implements _Login {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return login(this);
   }
@@ -589,6 +609,8 @@ class _$LoginImpl implements _Login {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return login?.call(this);
   }
@@ -623,6 +645,8 @@ class _$LoginImpl implements _Login {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -729,6 +753,8 @@ class _$MainImpl implements _Main {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return main();
   }
@@ -787,6 +813,8 @@ class _$MainImpl implements _Main {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return main?.call();
   }
@@ -845,6 +873,8 @@ class _$MainImpl implements _Main {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -886,6 +916,8 @@ class _$MainImpl implements _Main {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return main(this);
   }
@@ -920,6 +952,8 @@ class _$MainImpl implements _Main {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return main?.call(this);
   }
@@ -954,6 +988,8 @@ class _$MainImpl implements _Main {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -1061,6 +1097,8 @@ class _$SplashImpl implements _Splash {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return splash();
   }
@@ -1119,6 +1157,8 @@ class _$SplashImpl implements _Splash {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return splash?.call();
   }
@@ -1177,6 +1217,8 @@ class _$SplashImpl implements _Splash {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -1218,6 +1260,8 @@ class _$SplashImpl implements _Splash {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return splash(this);
   }
@@ -1252,6 +1296,8 @@ class _$SplashImpl implements _Splash {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return splash?.call(this);
   }
@@ -1286,6 +1332,8 @@ class _$SplashImpl implements _Splash {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (splash != null) {
@@ -1393,6 +1441,8 @@ class _$OnBoardingImpl implements _OnBoarding {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return onBoarding();
   }
@@ -1451,6 +1501,8 @@ class _$OnBoardingImpl implements _OnBoarding {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return onBoarding?.call();
   }
@@ -1509,6 +1561,8 @@ class _$OnBoardingImpl implements _OnBoarding {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1550,6 +1604,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return onBoarding(this);
   }
@@ -1584,6 +1640,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return onBoarding?.call(this);
   }
@@ -1618,6 +1676,8 @@ class _$OnBoardingImpl implements _OnBoarding {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (onBoarding != null) {
@@ -1726,6 +1786,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return completeRegistration();
   }
@@ -1784,6 +1846,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return completeRegistration?.call();
   }
@@ -1842,6 +1906,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -1883,6 +1949,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return completeRegistration(this);
   }
@@ -1917,6 +1985,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return completeRegistration?.call(this);
   }
@@ -1951,6 +2021,8 @@ class _$CompleteRegistrationImpl implements _CompleteRegistration {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (completeRegistration != null) {
@@ -2087,6 +2159,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return languageCourse(learningLanguage);
   }
@@ -2145,6 +2219,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return languageCourse?.call(learningLanguage);
   }
@@ -2203,6 +2279,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -2244,6 +2322,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return languageCourse(this);
   }
@@ -2278,6 +2358,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return languageCourse?.call(this);
   }
@@ -2312,6 +2394,8 @@ class _$LanguageCourseImpl implements _LanguageCourse {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (languageCourse != null) {
@@ -2471,6 +2555,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return languageCourseDetails(this.languageCourse);
   }
@@ -2529,6 +2615,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return languageCourseDetails?.call(this.languageCourse);
   }
@@ -2587,6 +2675,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -2628,6 +2718,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return languageCourseDetails(this);
   }
@@ -2662,6 +2754,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return languageCourseDetails?.call(this);
   }
@@ -2696,6 +2790,8 @@ class _$LanguageCourseDetailsImpl implements _LanguageCourseDetails {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (languageCourseDetails != null) {
@@ -2880,6 +2976,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return flashCardLearning(
         languageCourseLearningContent, learningLanguage, courseId);
@@ -2939,6 +3037,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return flashCardLearning?.call(
         languageCourseLearningContent, learningLanguage, courseId);
@@ -2998,6 +3098,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -3040,6 +3142,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return flashCardLearning(this);
   }
@@ -3074,6 +3178,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return flashCardLearning?.call(this);
   }
@@ -3108,6 +3214,8 @@ class _$FlashCardLearningImpl implements _FlashCardLearning {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (flashCardLearning != null) {
@@ -3295,6 +3403,8 @@ class _$QuizLearningImpl implements _QuizLearning {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return quizLearning(
         learningLanguage, languageCourseLearningContents, courseId);
@@ -3354,6 +3464,8 @@ class _$QuizLearningImpl implements _QuizLearning {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return quizLearning?.call(
         learningLanguage, languageCourseLearningContents, courseId);
@@ -3413,6 +3525,8 @@ class _$QuizLearningImpl implements _QuizLearning {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -3455,6 +3569,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return quizLearning(this);
   }
@@ -3489,6 +3605,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return quizLearning?.call(this);
   }
@@ -3523,6 +3641,8 @@ class _$QuizLearningImpl implements _QuizLearning {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (quizLearning != null) {
@@ -3723,6 +3843,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return matchingLearning(learningLanguage, languageCourseLearningContent,
         courseId, learningType);
@@ -3782,6 +3904,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return matchingLearning?.call(learningLanguage,
         languageCourseLearningContent, courseId, learningType);
@@ -3841,6 +3965,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
@@ -3883,6 +4009,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return matchingLearning(this);
   }
@@ -3917,6 +4045,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return matchingLearning?.call(this);
   }
@@ -3951,6 +4081,8 @@ class _$MatchingLearningImpl implements _MatchingLearning {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (matchingLearning != null) {
@@ -4142,6 +4274,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return pronunciationLearning(
         learningLanguage, languageCourseLearningContent, courseId);
@@ -4201,6 +4335,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return pronunciationLearning?.call(
         learningLanguage, languageCourseLearningContent, courseId);
@@ -4260,6 +4396,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
@@ -4302,6 +4440,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return pronunciationLearning(this);
   }
@@ -4336,6 +4476,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return pronunciationLearning?.call(this);
   }
@@ -4370,6 +4512,8 @@ class _$PronunciationLearningImpl implements _PronunciationLearning {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (pronunciationLearning != null) {
@@ -4573,6 +4717,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return listeningLearning(
         learningLanguage, languageCourseLearningContent, this.languageCourse);
@@ -4632,6 +4778,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return listeningLearning?.call(
         learningLanguage, languageCourseLearningContent, this.languageCourse);
@@ -4691,6 +4839,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -4733,6 +4883,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return listeningLearning(this);
   }
@@ -4767,6 +4919,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return listeningLearning?.call(this);
   }
@@ -4801,6 +4955,8 @@ class _$ListeningLearningImpl implements _ListeningLearning {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (listeningLearning != null) {
@@ -4922,6 +5078,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return validateEmail();
   }
@@ -4980,6 +5138,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return validateEmail?.call();
   }
@@ -5038,6 +5198,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -5079,6 +5241,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return validateEmail(this);
   }
@@ -5113,6 +5277,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return validateEmail?.call(this);
   }
@@ -5147,6 +5313,8 @@ class _$ValidateEmailImpl implements _ValidateEmail {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (validateEmail != null) {
@@ -5255,6 +5423,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return validatePhoneNumber();
   }
@@ -5313,6 +5483,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return validatePhoneNumber?.call();
   }
@@ -5371,6 +5543,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -5412,6 +5586,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return validatePhoneNumber(this);
   }
@@ -5446,6 +5622,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return validatePhoneNumber?.call(this);
   }
@@ -5480,6 +5658,8 @@ class _$ValidatePhoneNumberImpl implements _ValidatePhoneNumber {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (validatePhoneNumber != null) {
@@ -5587,6 +5767,8 @@ class _$EditProfileImpl implements _EditProfile {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return editProfile();
   }
@@ -5645,6 +5827,8 @@ class _$EditProfileImpl implements _EditProfile {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return editProfile?.call();
   }
@@ -5703,6 +5887,8 @@ class _$EditProfileImpl implements _EditProfile {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -5744,6 +5930,8 @@ class _$EditProfileImpl implements _EditProfile {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return editProfile(this);
   }
@@ -5778,6 +5966,8 @@ class _$EditProfileImpl implements _EditProfile {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return editProfile?.call(this);
   }
@@ -5812,6 +6002,8 @@ class _$EditProfileImpl implements _EditProfile {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (editProfile != null) {
@@ -5919,6 +6111,8 @@ class _$SubscriptionImpl implements _Subscription {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return subscription();
   }
@@ -5977,6 +6171,8 @@ class _$SubscriptionImpl implements _Subscription {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return subscription?.call();
   }
@@ -6035,6 +6231,8 @@ class _$SubscriptionImpl implements _Subscription {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (subscription != null) {
@@ -6076,6 +6274,8 @@ class _$SubscriptionImpl implements _Subscription {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return subscription(this);
   }
@@ -6110,6 +6310,8 @@ class _$SubscriptionImpl implements _Subscription {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return subscription?.call(this);
   }
@@ -6144,6 +6346,8 @@ class _$SubscriptionImpl implements _Subscription {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (subscription != null) {
@@ -6256,6 +6460,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return commonFeatureRequiredSubscription();
   }
@@ -6314,6 +6520,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return commonFeatureRequiredSubscription?.call();
   }
@@ -6372,6 +6580,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (commonFeatureRequiredSubscription != null) {
@@ -6413,6 +6623,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return commonFeatureRequiredSubscription(this);
   }
@@ -6447,6 +6659,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return commonFeatureRequiredSubscription?.call(this);
   }
@@ -6481,6 +6695,8 @@ class _$CommonFeatureRequiredSubscriptionImpl
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (commonFeatureRequiredSubscription != null) {
@@ -6630,6 +6846,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return aiChatBotDetails(chatSession);
   }
@@ -6688,6 +6906,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return aiChatBotDetails?.call(chatSession);
   }
@@ -6746,6 +6966,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (aiChatBotDetails != null) {
@@ -6787,6 +7009,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return aiChatBotDetails(this);
   }
@@ -6821,6 +7045,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return aiChatBotDetails?.call(this);
   }
@@ -6855,6 +7081,8 @@ class _$AiChatBotDetailsImpl implements _AiChatBotDetails {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (aiChatBotDetails != null) {
@@ -6971,6 +7199,8 @@ class _$CommunityImpl implements _Community {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return community();
   }
@@ -7029,6 +7259,8 @@ class _$CommunityImpl implements _Community {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return community?.call();
   }
@@ -7087,6 +7319,8 @@ class _$CommunityImpl implements _Community {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (community != null) {
@@ -7128,6 +7362,8 @@ class _$CommunityImpl implements _Community {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return community(this);
   }
@@ -7162,6 +7398,8 @@ class _$CommunityImpl implements _Community {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return community?.call(this);
   }
@@ -7196,6 +7434,8 @@ class _$CommunityImpl implements _Community {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (community != null) {
@@ -7344,6 +7584,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return communityTopic(chatTopic);
   }
@@ -7402,6 +7644,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return communityTopic?.call(chatTopic);
   }
@@ -7460,6 +7704,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (communityTopic != null) {
@@ -7501,6 +7747,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return communityTopic(this);
   }
@@ -7535,6 +7783,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return communityTopic?.call(this);
   }
@@ -7569,6 +7819,8 @@ class _$CommunityTopicImpl implements _CommunityTopic {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (communityTopic != null) {
@@ -7725,6 +7977,8 @@ class _$GroupChatImpl implements _GroupChat {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return groupChat(chatSession);
   }
@@ -7783,6 +8037,8 @@ class _$GroupChatImpl implements _GroupChat {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return groupChat?.call(chatSession);
   }
@@ -7841,6 +8097,8 @@ class _$GroupChatImpl implements _GroupChat {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (groupChat != null) {
@@ -7882,6 +8140,8 @@ class _$GroupChatImpl implements _GroupChat {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return groupChat(this);
   }
@@ -7916,6 +8176,8 @@ class _$GroupChatImpl implements _GroupChat {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return groupChat?.call(this);
   }
@@ -7950,6 +8212,8 @@ class _$GroupChatImpl implements _GroupChat {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (groupChat != null) {
@@ -8126,6 +8390,8 @@ class _$PrivateChatImpl implements _PrivateChat {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return privateChat(chatSession, receiver);
   }
@@ -8184,6 +8450,8 @@ class _$PrivateChatImpl implements _PrivateChat {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return privateChat?.call(chatSession, receiver);
   }
@@ -8242,6 +8510,8 @@ class _$PrivateChatImpl implements _PrivateChat {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (privateChat != null) {
@@ -8283,6 +8553,8 @@ class _$PrivateChatImpl implements _PrivateChat {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return privateChat(this);
   }
@@ -8317,6 +8589,8 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return privateChat?.call(this);
   }
@@ -8351,6 +8625,8 @@ class _$PrivateChatImpl implements _PrivateChat {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (privateChat != null) {
@@ -8542,6 +8818,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return categoryCourseDetails(language, category, categoryCourses);
   }
@@ -8600,6 +8878,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return categoryCourseDetails?.call(language, category, categoryCourses);
   }
@@ -8658,6 +8938,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (categoryCourseDetails != null) {
@@ -8699,6 +8981,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return categoryCourseDetails(this);
   }
@@ -8733,6 +9017,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return categoryCourseDetails?.call(this);
   }
@@ -8767,6 +9053,8 @@ class _$CategoryCourseDetailsImpl implements _CategoryCourseDetails {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (categoryCourseDetails != null) {
@@ -8953,6 +9241,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return categoryCourseLesson(categoryCourse, languageCourseLearningContents);
   }
@@ -9011,6 +9301,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return categoryCourseLesson?.call(
         categoryCourse, languageCourseLearningContents);
@@ -9070,6 +9362,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (categoryCourseLesson != null) {
@@ -9112,6 +9406,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return categoryCourseLesson(this);
   }
@@ -9146,6 +9442,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return categoryCourseLesson?.call(this);
   }
@@ -9180,6 +9478,8 @@ class _$CategoryCourseLessonImpl implements _CategoryCourseLesson {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (categoryCourseLesson != null) {
@@ -9342,6 +9642,8 @@ class _$TodoDetailsImpl implements _TodoDetails {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return todoDetails(todo);
   }
@@ -9400,6 +9702,8 @@ class _$TodoDetailsImpl implements _TodoDetails {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return todoDetails?.call(todo);
   }
@@ -9458,6 +9762,8 @@ class _$TodoDetailsImpl implements _TodoDetails {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (todoDetails != null) {
@@ -9499,6 +9805,8 @@ class _$TodoDetailsImpl implements _TodoDetails {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return todoDetails(this);
   }
@@ -9533,6 +9841,8 @@ class _$TodoDetailsImpl implements _TodoDetails {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return todoDetails?.call(this);
   }
@@ -9567,6 +9877,8 @@ class _$TodoDetailsImpl implements _TodoDetails {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (todoDetails != null) {
@@ -9682,6 +9994,8 @@ class _$AchievementImpl implements _Achievement {
         categoryCourseLesson,
     required TResult Function(UserTodo? todo) todoDetails,
     required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
   }) {
     return achievement();
   }
@@ -9740,6 +10054,8 @@ class _$AchievementImpl implements _Achievement {
         categoryCourseLesson,
     TResult? Function(UserTodo? todo)? todoDetails,
     TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
   }) {
     return achievement?.call();
   }
@@ -9798,6 +10114,8 @@ class _$AchievementImpl implements _Achievement {
         categoryCourseLesson,
     TResult Function(UserTodo? todo)? todoDetails,
     TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (achievement != null) {
@@ -9839,6 +10157,8 @@ class _$AchievementImpl implements _Achievement {
     required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
     required TResult Function(_TodoDetails value) todoDetails,
     required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
   }) {
     return achievement(this);
   }
@@ -9873,6 +10193,8 @@ class _$AchievementImpl implements _Achievement {
     TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult? Function(_TodoDetails value)? todoDetails,
     TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
   }) {
     return achievement?.call(this);
   }
@@ -9907,6 +10229,8 @@ class _$AchievementImpl implements _Achievement {
     TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
     TResult Function(_TodoDetails value)? todoDetails,
     TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
     required TResult orElse(),
   }) {
     if (achievement != null) {
@@ -9918,4 +10242,731 @@ class _$AchievementImpl implements _Achievement {
 
 abstract class _Achievement implements AppRouteInfo {
   const factory _Achievement() = _$AchievementImpl;
+}
+
+/// @nodoc
+abstract class _$$ResetPasswordImplCopyWith<$Res> {
+  factory _$$ResetPasswordImplCopyWith(
+          _$ResetPasswordImpl value, $Res Function(_$ResetPasswordImpl) then) =
+      __$$ResetPasswordImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ResetPasswordImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$ResetPasswordImpl>
+    implements _$$ResetPasswordImplCopyWith<$Res> {
+  __$$ResetPasswordImplCopyWithImpl(
+      _$ResetPasswordImpl _value, $Res Function(_$ResetPasswordImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ResetPasswordImpl implements _ResetPassword {
+  const _$ResetPasswordImpl();
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.resetPassword()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ResetPasswordImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+    required TResult Function(LearningLanguage learningLanguage) languageCourse,
+    required TResult Function(LanguageCourse languageCourse)
+        languageCourseDetails,
+    required TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)
+        flashCardLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)
+        quizLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)
+        matchingLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)
+        pronunciationLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
+        listeningLearning,
+    required TResult Function() validateEmail,
+    required TResult Function() validatePhoneNumber,
+    required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
+    required TResult Function(ChatSession chatSession) aiChatBotDetails,
+    required TResult Function() community,
+    required TResult Function(ChatTopic chatTopic) communityTopic,
+    required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
+    required TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)
+        categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
+  }) {
+    return resetPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+    TResult? Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult? Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult? Function()? validateEmail,
+    TResult? Function()? validatePhoneNumber,
+    TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
+    TResult? Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult? Function()? community,
+    TResult? Function(ChatTopic chatTopic)? communityTopic,
+    TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult? Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
+  }) {
+    return resetPassword?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    TResult Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult Function()? validateEmail,
+    TResult Function()? validatePhoneNumber,
+    TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
+    TResult Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult Function()? community,
+    TResult Function(ChatTopic chatTopic)? communityTopic,
+    TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
+    required TResult orElse(),
+  }) {
+    if (resetPassword != null) {
+      return resetPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+    required TResult Function(_LanguageCourse value) languageCourse,
+    required TResult Function(_LanguageCourseDetails value)
+        languageCourseDetails,
+    required TResult Function(_FlashCardLearning value) flashCardLearning,
+    required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
+    required TResult Function(_PronunciationLearning value)
+        pronunciationLearning,
+    required TResult Function(_ListeningLearning value) listeningLearning,
+    required TResult Function(_ValidateEmail value) validateEmail,
+    required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
+    required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
+    required TResult Function(_AiChatBotDetails value) aiChatBotDetails,
+    required TResult Function(_Community value) community,
+    required TResult Function(_CommunityTopic value) communityTopic,
+    required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
+    required TResult Function(_CategoryCourseDetails value)
+        categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
+  }) {
+    return resetPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+    TResult? Function(_LanguageCourse value)? languageCourse,
+    TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult? Function(_FlashCardLearning value)? flashCardLearning,
+    TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
+    TResult? Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult? Function(_ListeningLearning value)? listeningLearning,
+    TResult? Function(_ValidateEmail value)? validateEmail,
+    TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult? Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult? Function(_Community value)? community,
+    TResult? Function(_CommunityTopic value)? communityTopic,
+    TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
+    TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
+  }) {
+    return resetPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    TResult Function(_LanguageCourse value)? languageCourse,
+    TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult Function(_FlashCardLearning value)? flashCardLearning,
+    TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
+    TResult Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult Function(_ListeningLearning value)? listeningLearning,
+    TResult Function(_ValidateEmail value)? validateEmail,
+    TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult Function(_Community value)? community,
+    TResult Function(_CommunityTopic value)? communityTopic,
+    TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
+    TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
+    required TResult orElse(),
+  }) {
+    if (resetPassword != null) {
+      return resetPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResetPassword implements AppRouteInfo {
+  const factory _ResetPassword() = _$ResetPasswordImpl;
+}
+
+/// @nodoc
+abstract class _$$ResetPasswordConfirmImplCopyWith<$Res> {
+  factory _$$ResetPasswordConfirmImplCopyWith(_$ResetPasswordConfirmImpl value,
+          $Res Function(_$ResetPasswordConfirmImpl) then) =
+      __$$ResetPasswordConfirmImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String emailOrPhoneNumber});
+}
+
+/// @nodoc
+class __$$ResetPasswordConfirmImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$ResetPasswordConfirmImpl>
+    implements _$$ResetPasswordConfirmImplCopyWith<$Res> {
+  __$$ResetPasswordConfirmImplCopyWithImpl(_$ResetPasswordConfirmImpl _value,
+      $Res Function(_$ResetPasswordConfirmImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? emailOrPhoneNumber = null,
+  }) {
+    return _then(_$ResetPasswordConfirmImpl(
+      emailOrPhoneNumber: null == emailOrPhoneNumber
+          ? _value.emailOrPhoneNumber
+          : emailOrPhoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ResetPasswordConfirmImpl implements _ResetPasswordConfirm {
+  const _$ResetPasswordConfirmImpl({required this.emailOrPhoneNumber});
+
+  @override
+  final String emailOrPhoneNumber;
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.resetPasswordConfirm(emailOrPhoneNumber: $emailOrPhoneNumber)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResetPasswordConfirmImpl &&
+            (identical(other.emailOrPhoneNumber, emailOrPhoneNumber) ||
+                other.emailOrPhoneNumber == emailOrPhoneNumber));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, emailOrPhoneNumber);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResetPasswordConfirmImplCopyWith<_$ResetPasswordConfirmImpl>
+      get copyWith =>
+          __$$ResetPasswordConfirmImplCopyWithImpl<_$ResetPasswordConfirmImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() splash,
+    required TResult Function() onBoarding,
+    required TResult Function() completeRegistration,
+    required TResult Function(LearningLanguage learningLanguage) languageCourse,
+    required TResult Function(LanguageCourse languageCourse)
+        languageCourseDetails,
+    required TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)
+        flashCardLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)
+        quizLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)
+        matchingLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)
+        pronunciationLearning,
+    required TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)
+        listeningLearning,
+    required TResult Function() validateEmail,
+    required TResult Function() validatePhoneNumber,
+    required TResult Function() editProfile,
+    required TResult Function() subscription,
+    required TResult Function() commonFeatureRequiredSubscription,
+    required TResult Function(ChatSession chatSession) aiChatBotDetails,
+    required TResult Function() community,
+    required TResult Function(ChatTopic chatTopic) communityTopic,
+    required TResult Function(ChatSession chatSession) groupChat,
+    required TResult Function(ChatSession chatSession, User receiver)
+        privateChat,
+    required TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)
+        categoryCourseDetails,
+    required TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)
+        categoryCourseLesson,
+    required TResult Function(UserTodo? todo) todoDetails,
+    required TResult Function() achievement,
+    required TResult Function() resetPassword,
+    required TResult Function(String emailOrPhoneNumber) resetPasswordConfirm,
+  }) {
+    return resetPasswordConfirm(emailOrPhoneNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? splash,
+    TResult? Function()? onBoarding,
+    TResult? Function()? completeRegistration,
+    TResult? Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult? Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult? Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult? Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult? Function()? validateEmail,
+    TResult? Function()? validatePhoneNumber,
+    TResult? Function()? editProfile,
+    TResult? Function()? subscription,
+    TResult? Function()? commonFeatureRequiredSubscription,
+    TResult? Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult? Function()? community,
+    TResult? Function(ChatTopic chatTopic)? communityTopic,
+    TResult? Function(ChatSession chatSession)? groupChat,
+    TResult? Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult? Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult? Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+    TResult? Function(UserTodo? todo)? todoDetails,
+    TResult? Function()? achievement,
+    TResult? Function()? resetPassword,
+    TResult? Function(String emailOrPhoneNumber)? resetPasswordConfirm,
+  }) {
+    return resetPasswordConfirm?.call(emailOrPhoneNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? splash,
+    TResult Function()? onBoarding,
+    TResult Function()? completeRegistration,
+    TResult Function(LearningLanguage learningLanguage)? languageCourse,
+    TResult Function(LanguageCourse languageCourse)? languageCourseDetails,
+    TResult Function(
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            LearningLanguage learningLanguage,
+            String courseId)?
+        flashCardLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContents,
+            String courseId)?
+        quizLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId,
+            LearningType? learningType)?
+        matchingLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            List<LanguageCourseLearningContent> languageCourseLearningContent,
+            String courseId)?
+        pronunciationLearning,
+    TResult Function(
+            LearningLanguage learningLanguage,
+            LanguageCourseLearningContent languageCourseLearningContent,
+            LanguageCourse languageCourse)?
+        listeningLearning,
+    TResult Function()? validateEmail,
+    TResult Function()? validatePhoneNumber,
+    TResult Function()? editProfile,
+    TResult Function()? subscription,
+    TResult Function()? commonFeatureRequiredSubscription,
+    TResult Function(ChatSession chatSession)? aiChatBotDetails,
+    TResult Function()? community,
+    TResult Function(ChatTopic chatTopic)? communityTopic,
+    TResult Function(ChatSession chatSession)? groupChat,
+    TResult Function(ChatSession chatSession, User receiver)? privateChat,
+    TResult Function(LearningLanguage language, Category category,
+            List<CategoryCourse> categoryCourses)?
+        categoryCourseDetails,
+    TResult Function(CategoryCourse categoryCourse,
+            List<LanguageCourseLearningContent> languageCourseLearningContents)?
+        categoryCourseLesson,
+    TResult Function(UserTodo? todo)? todoDetails,
+    TResult Function()? achievement,
+    TResult Function()? resetPassword,
+    TResult Function(String emailOrPhoneNumber)? resetPasswordConfirm,
+    required TResult orElse(),
+  }) {
+    if (resetPasswordConfirm != null) {
+      return resetPasswordConfirm(emailOrPhoneNumber);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Splash value) splash,
+    required TResult Function(_OnBoarding value) onBoarding,
+    required TResult Function(_CompleteRegistration value) completeRegistration,
+    required TResult Function(_LanguageCourse value) languageCourse,
+    required TResult Function(_LanguageCourseDetails value)
+        languageCourseDetails,
+    required TResult Function(_FlashCardLearning value) flashCardLearning,
+    required TResult Function(_QuizLearning value) quizLearning,
+    required TResult Function(_MatchingLearning value) matchingLearning,
+    required TResult Function(_PronunciationLearning value)
+        pronunciationLearning,
+    required TResult Function(_ListeningLearning value) listeningLearning,
+    required TResult Function(_ValidateEmail value) validateEmail,
+    required TResult Function(_ValidatePhoneNumber value) validatePhoneNumber,
+    required TResult Function(_EditProfile value) editProfile,
+    required TResult Function(_Subscription value) subscription,
+    required TResult Function(_CommonFeatureRequiredSubscription value)
+        commonFeatureRequiredSubscription,
+    required TResult Function(_AiChatBotDetails value) aiChatBotDetails,
+    required TResult Function(_Community value) community,
+    required TResult Function(_CommunityTopic value) communityTopic,
+    required TResult Function(_GroupChat value) groupChat,
+    required TResult Function(_PrivateChat value) privateChat,
+    required TResult Function(_CategoryCourseDetails value)
+        categoryCourseDetails,
+    required TResult Function(_CategoryCourseLesson value) categoryCourseLesson,
+    required TResult Function(_TodoDetails value) todoDetails,
+    required TResult Function(_Achievement value) achievement,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_ResetPasswordConfirm value) resetPasswordConfirm,
+  }) {
+    return resetPasswordConfirm(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Splash value)? splash,
+    TResult? Function(_OnBoarding value)? onBoarding,
+    TResult? Function(_CompleteRegistration value)? completeRegistration,
+    TResult? Function(_LanguageCourse value)? languageCourse,
+    TResult? Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult? Function(_FlashCardLearning value)? flashCardLearning,
+    TResult? Function(_QuizLearning value)? quizLearning,
+    TResult? Function(_MatchingLearning value)? matchingLearning,
+    TResult? Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult? Function(_ListeningLearning value)? listeningLearning,
+    TResult? Function(_ValidateEmail value)? validateEmail,
+    TResult? Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult? Function(_EditProfile value)? editProfile,
+    TResult? Function(_Subscription value)? subscription,
+    TResult? Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult? Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult? Function(_Community value)? community,
+    TResult? Function(_CommunityTopic value)? communityTopic,
+    TResult? Function(_GroupChat value)? groupChat,
+    TResult? Function(_PrivateChat value)? privateChat,
+    TResult? Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult? Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult? Function(_TodoDetails value)? todoDetails,
+    TResult? Function(_Achievement value)? achievement,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
+  }) {
+    return resetPasswordConfirm?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Splash value)? splash,
+    TResult Function(_OnBoarding value)? onBoarding,
+    TResult Function(_CompleteRegistration value)? completeRegistration,
+    TResult Function(_LanguageCourse value)? languageCourse,
+    TResult Function(_LanguageCourseDetails value)? languageCourseDetails,
+    TResult Function(_FlashCardLearning value)? flashCardLearning,
+    TResult Function(_QuizLearning value)? quizLearning,
+    TResult Function(_MatchingLearning value)? matchingLearning,
+    TResult Function(_PronunciationLearning value)? pronunciationLearning,
+    TResult Function(_ListeningLearning value)? listeningLearning,
+    TResult Function(_ValidateEmail value)? validateEmail,
+    TResult Function(_ValidatePhoneNumber value)? validatePhoneNumber,
+    TResult Function(_EditProfile value)? editProfile,
+    TResult Function(_Subscription value)? subscription,
+    TResult Function(_CommonFeatureRequiredSubscription value)?
+        commonFeatureRequiredSubscription,
+    TResult Function(_AiChatBotDetails value)? aiChatBotDetails,
+    TResult Function(_Community value)? community,
+    TResult Function(_CommunityTopic value)? communityTopic,
+    TResult Function(_GroupChat value)? groupChat,
+    TResult Function(_PrivateChat value)? privateChat,
+    TResult Function(_CategoryCourseDetails value)? categoryCourseDetails,
+    TResult Function(_CategoryCourseLesson value)? categoryCourseLesson,
+    TResult Function(_TodoDetails value)? todoDetails,
+    TResult Function(_Achievement value)? achievement,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_ResetPasswordConfirm value)? resetPasswordConfirm,
+    required TResult orElse(),
+  }) {
+    if (resetPasswordConfirm != null) {
+      return resetPasswordConfirm(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResetPasswordConfirm implements AppRouteInfo {
+  const factory _ResetPasswordConfirm(
+      {required final String emailOrPhoneNumber}) = _$ResetPasswordConfirmImpl;
+
+  String get emailOrPhoneNumber;
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResetPasswordConfirmImplCopyWith<_$ResetPasswordConfirmImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

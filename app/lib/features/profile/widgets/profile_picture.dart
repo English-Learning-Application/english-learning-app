@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 
@@ -30,19 +32,24 @@ class ProfilePicture extends StatelessWidget {
                 height: height ?? Dimens.d60.responsive(),
                 border: border,
               )
-            : CircularAvatar(
-                image: Assets.images.appIcon.image(
-                  width: Dimens.d60.responsive(),
-                  height: Dimens.d60.responsive(),
-                  fit: BoxFit.cover,
+            : Container(
+                width: Dimens.d60.responsive(),
+                height: Dimens.d60.responsive(),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: border,
                 ),
-                width: width ?? Dimens.d60.responsive(),
-                height: height ?? Dimens.d60.responsive(),
-                border: border,
+                child: Center(
+                  child: _randomAvatar.randomElement().svg(
+                        width: Dimens.d60.responsive(),
+                        height: Dimens.d60.responsive(),
+                        fit: BoxFit.cover,
+                      ),
+                ),
               ),
         Positioned(
           bottom: 0,
-          right: Dimens.d10.responsive(),
+          right: 0,
           child: InkWell(
             onTap: onPressed,
             child: Icon(
@@ -54,5 +61,18 @@ class ProfilePicture extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+final List<SvgGenImage> _randomAvatar = [
+  Assets.icons.icAvatar1,
+  Assets.icons.icAvatar2,
+  Assets.icons.icAvatar3,
+  Assets.icons.icAvatar4,
+];
+
+extension _RandomElement<T> on List<T> {
+  T randomElement() {
+    return this[Random().nextInt(length)];
   }
 }

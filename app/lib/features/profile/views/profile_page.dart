@@ -17,6 +17,180 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
+  late final TextEditingController _oldPassword = TextEditingController()
+    ..disposeBy(disposeBag);
+  late final TextEditingController _newPassword = TextEditingController()
+    ..disposeBy(disposeBag);
+  late final TextEditingController _confirmPassword = TextEditingController()
+    ..disposeBy(disposeBag);
+  void showChangePasswordDialog() async {
+    await navigator.showModalBottomSheet(
+      enableDrag: true,
+      isScrollControlled: true,
+      useRootNavigator: true,
+      AppPopupInfo.bottomSheet(
+        title: S.current.resetPassword,
+        child: ListenableProvider<ProfileViewModel>.value(
+          value: viewModel,
+          child: SizedBox(
+            width: double.infinity,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                Selector<ProfileViewModel, ProfileViewModelData>(
+                  selector: (_, viewModel) => viewModel.viewModelData,
+                  shouldRebuild: (prev, curr) {
+                    return prev.showOldPassword != curr.showOldPassword;
+                  },
+                  builder: (_, vmData, __) {
+                    return StandardTextField(
+                      obscureText: !vmData.showOldPassword,
+                      suffixIcon: GestureDetector(
+                        onTap: viewModel.toggleShowOldPassword,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Tooltip(
+                              margin: EdgeInsets.zero,
+                              padding: EdgeInsets.zero,
+                              message: S.current.changePasswordTooltip,
+                              child: Assets.icons.icChangePasswordTooltip.svg(
+                                width: Dimens.d60.responsive(),
+                                height: Dimens.d60.responsive(),
+                                colorFilter: ColorFilter.mode(
+                                  AppColors.current.primaryTextColor,
+                                  BlendMode.srcIn,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                right: Dimens.d8.responsive(),
+                              ),
+                              width: Dimens.d24.responsive(),
+                              height: Dimens.d24.responsive(),
+                              child: Center(
+                                child: vmData.showOldPassword
+                                    ? Assets.icons.icEyeClose.svg(
+                                        width: Dimens.d24.responsive(),
+                                        height: Dimens.d24.responsive(),
+                                      )
+                                    : Assets.icons.icEyeOpen.svg(
+                                        width: Dimens.d24.responsive(),
+                                        height: Dimens.d24.responsive(),
+                                      ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      controller: _oldPassword,
+                      hint: S.current.oldPassword,
+                    );
+                  },
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                Selector<ProfileViewModel, ProfileViewModelData>(
+                  selector: (_, viewModel) => viewModel.viewModelData,
+                  shouldRebuild: (prev, curr) {
+                    return prev.showNewPassword != curr.showNewPassword;
+                  },
+                  builder: (_, vmData, __) {
+                    return StandardTextField(
+                      obscureText: !vmData.showNewPassword,
+                      suffixIcon: GestureDetector(
+                        onTap: viewModel.toggleShowNewPassword,
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            right: Dimens.d8.responsive(),
+                          ),
+                          width: Dimens.d24.responsive(),
+                          height: Dimens.d24.responsive(),
+                          child: Center(
+                            child: vmData.showNewPassword
+                                ? Assets.icons.icEyeClose.svg(
+                                    width: Dimens.d24.responsive(),
+                                    height: Dimens.d24.responsive(),
+                                  )
+                                : Assets.icons.icEyeOpen.svg(
+                                    width: Dimens.d24.responsive(),
+                                    height: Dimens.d24.responsive(),
+                                  ),
+                          ),
+                        ),
+                      ),
+                      controller: _newPassword,
+                      hint: S.current.newPassword,
+                    );
+                  },
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                Selector<ProfileViewModel, ProfileViewModelData>(
+                  selector: (_, viewModel) => viewModel.viewModelData,
+                  shouldRebuild: (prev, curr) {
+                    return prev.showConfirmPassword != curr.showConfirmPassword;
+                  },
+                  builder: (_, vmData, __) {
+                    return StandardTextField(
+                      obscureText: !vmData.showConfirmPassword,
+                      suffixIcon: GestureDetector(
+                        onTap: viewModel.toggleShowConfirmPassword,
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            right: Dimens.d8.responsive(),
+                          ),
+                          width: Dimens.d24.responsive(),
+                          height: Dimens.d24.responsive(),
+                          child: Center(
+                            child: vmData.showConfirmPassword
+                                ? Assets.icons.icEyeClose.svg(
+                                    width: Dimens.d24.responsive(),
+                                    height: Dimens.d24.responsive(),
+                                  )
+                                : Assets.icons.icEyeOpen.svg(
+                                    width: Dimens.d24.responsive(),
+                                    height: Dimens.d24.responsive(),
+                                  ),
+                          ),
+                        ),
+                      ),
+                      controller: _confirmPassword,
+                      hint: S.current.confirmPassword,
+                    );
+                  },
+                ),
+                SizedBox(
+                  height: Dimens.d16.responsive(),
+                ),
+                StandardButton(
+                  text: S.current.resetPassword,
+                  buttonSize: ButtonSize.medium,
+                  onPressed: () {
+                    viewModel.updatePassword(
+                      oldPassword: _oldPassword.text,
+                      newPassword: _newPassword.text,
+                      confirmPassword: _confirmPassword.text,
+                    );
+                    _oldPassword.clear();
+                    _newPassword.clear();
+                    _confirmPassword.clear();
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget buildPage(BuildContext context) {
     return CommonScaffold(
@@ -155,6 +329,24 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
             ),
             _buildProfileContainer(
               items: [
+                GestureDetector(
+                  onTap: showChangePasswordDialog,
+                  child: _buildProfileItem(
+                    title: S.current.resetPassword,
+                    value: Icon(
+                      Icons.arrow_forward_ios,
+                      size: Dimens.d16.responsive(),
+                      color: FoundationColors.neutral50,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: Dimens.d16.responsive(),
+            ),
+            _buildProfileContainer(
+              items: [
                 Selector<AppViewModel, AppViewModelData>(
                   shouldRebuild: (prev, curr) {
                     return prev.currentUser != curr.currentUser;
@@ -184,29 +376,31 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
                         vmData.currentUser.phoneNumber.isEmpty;
                     final isPhoneNumberVerified =
                         vmData.currentUser.isPhoneNumberVerified;
-                    return _buildProfileItem(
-                      title: S.current.phoneNo,
-                      value: isPhoneNumberEmpty || !isPhoneNumberVerified
-                          ? GestureDetector(
-                              child: Icon(
+                    return GestureDetector(
+                      onTap: () async {
+                        if (isPhoneNumberEmpty || !isPhoneNumberVerified) {
+                          await navigator.push(
+                            const AppRouteInfo.validatePhoneNumber(),
+                          );
+                        }
+                      },
+                      child: _buildProfileItem(
+                        title: S.current.phoneNo,
+                        value: isPhoneNumberEmpty || !isPhoneNumberVerified
+                            ? Icon(
                                 Icons.arrow_forward_ios,
                                 size: Dimens.d16.responsive(),
                                 color: FoundationColors.neutral50,
+                              )
+                            : Text(
+                                vmData.currentUser.phoneNumber,
+                                textAlign: TextAlign.end,
+                                overflow: TextOverflow.ellipsis,
+                                style: AppTextStyles.s14w400primary()
+                                    .secondary
+                                    .font12(),
                               ),
-                              onTap: () async {
-                                await navigator.push(
-                                  const AppRouteInfo.validatePhoneNumber(),
-                                );
-                              },
-                            )
-                          : Text(
-                              vmData.currentUser.phoneNumber,
-                              textAlign: TextAlign.end,
-                              overflow: TextOverflow.ellipsis,
-                              style: AppTextStyles.s14w400primary()
-                                  .secondary
-                                  .font12(),
-                            ),
+                      ),
                     );
                   },
                   selector: (_, vm) => vm.viewModelData,
@@ -263,34 +457,34 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
             ),
             _buildProfileContainer(
               items: [
-                _buildProfileItem(
-                  title: S.current.subscription,
-                  value: GestureDetector(
-                    child: Icon(
+                GestureDetector(
+                  onTap: () async {
+                    await navigator.push(
+                      const AppRouteInfo.subscription(),
+                    );
+                  },
+                  child: _buildProfileItem(
+                    title: S.current.subscription,
+                    value: Icon(
                       Icons.arrow_forward_ios,
                       size: Dimens.d16.responsive(),
                       color: FoundationColors.neutral50,
                     ),
-                    onTap: () async {
-                      await navigator.push(
-                        const AppRouteInfo.subscription(),
-                      );
-                    },
                   ),
                 ),
-                _buildProfileItem(
-                  title: S.current.subscription,
-                  value: GestureDetector(
-                    child: Icon(
+                GestureDetector(
+                  onTap: () async {
+                    await navigator.push(
+                      const AppRouteInfo.achievement(),
+                    );
+                  },
+                  child: _buildProfileItem(
+                    title: S.current.achievement,
+                    value: Icon(
                       Icons.arrow_forward_ios,
                       size: Dimens.d16.responsive(),
                       color: FoundationColors.neutral50,
                     ),
-                    onTap: () async {
-                      await navigator.push(
-                        const AppRouteInfo.achievement(),
-                      );
-                    },
                   ),
                 ),
               ],
