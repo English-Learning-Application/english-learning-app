@@ -6,37 +6,46 @@ on:
   push:
     branches:
       - 'main'
+
 jobs:
   build:
     name: Upload apk to App Tester
     runs-on: ubuntu-latest
     steps:
-
       - uses: actions/checkout@v2
-      - name: set up JDK 17
+      - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
           java-version: 17
-      - name: build release
-        run: app/android/gradle assembleRelease
-      - name: upload artifact to Firebase App Distribution
+      - name: Grant execute permission to gradlew
+        run: chmod +x app/android/gradlew
+      - name: Build release
+        run: |
+          cd app/android
+          ./gradlew assembleRelease
+      - name: Upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
           appId: ${{secrets.FIREBASE_APP_ID}}
           token: ${{secrets.FIREBASE_TOKEN}}
           groups: testers
           file: app/android/app/build/outputs/apk/release/app-release-unsigned.apk
+
   apk:
     name: Generate APK
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.1
-      - name: set up JDK 17
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
           java-version: 17
+      - name: Grant execute permission to gradlew
+        run: chmod +x app/android/gradlew
       - name: Build debug APK
-        run: app/android/gradle assembleDebug --stacktrace
+        run: |
+          cd app/android
+          ./gradlew assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
