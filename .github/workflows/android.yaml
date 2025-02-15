@@ -26,12 +26,8 @@ jobs:
         run: flutter pub global activate melos
       - name: Install dependencies
         run: melos bootstrap
-      - name: Grant execute permission to gradlew
-        run: chmod +x ./app/android/gradlew
-      - name: Build release
-        run: |
-          cd app/android
-          ./gradlew assembleRelease
+      - name: Build APK
+        run: melos run build:apk
       - name: Upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
