@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: melos bootstrap
       - name: Grant execute permission to gradlew
-        run: chmod +x app/android/gradlew
+        run: chmod +x ./app/android/gradlew
       - name: Build release
         run: |
           cd app/android
