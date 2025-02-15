@@ -27,7 +27,9 @@ jobs:
       - name: Install dependencies
         run: melos bootstrap
       - name: Build APK
-        run: melos run build:apk
+        run: |
+          cd app
+          flutter build apk --release
       - name: Upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
