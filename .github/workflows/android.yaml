@@ -18,9 +18,7 @@ jobs:
         with:
           java-version: 17
       - name: build release
-        run: |
-          cd app/android
-          bash ./gradlew assembleRelease
+        run: bash app/android/gradlew assembleRelease
       - name: upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
@@ -38,9 +36,7 @@ jobs:
         with:
           java-version: 17
       - name: Build debug APK
-        run: |
-          cd app/android
-          bash ./gradlew assembleDebug --stacktrace
+        run: bash app/android/gradlew assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
