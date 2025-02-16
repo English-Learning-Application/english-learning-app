@@ -1,6 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:design/design.dart';
-import 'package:flutter/material.dart ';
+import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 import 'package:logic/logic.dart';
 import 'package:provider/provider.dart';
