@@ -28,6 +28,11 @@ jobs:
         run: |
           melos bootstrap
           melos force_build_all
+      - name: Recreate release-key.jks
+        run: |
+          echo "$KEY_BASE_64" | base64 --decode > app/android/release-key.jks
+        env:
+          JKS_BASE64: ${{ secrets.JKS_BASE64 }}
       - name: Build APK
         run: |
           cd app
