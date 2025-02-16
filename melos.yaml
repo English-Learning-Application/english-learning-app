@@ -27,3 +27,4 @@ scripts:
   force_build_data:
     run: dart pub global run melos exec --fail-fast --scope="*data*" --depends-on="build_runner" "flutter packages pub run build_runner build --delete-conflicting-outputs"
     description: build_runner watch data module.
+  format: "melos exec -- dart format ."

@@ -18,7 +18,8 @@ class AppInfo {
 
   Future<String> get deviceId async => DeviceUtils.getDeviceId();
 
-  Future<String> get appDirectoryPath async => getApplicationDocumentsDirectory().then((value) => value.path);
+  Future<String> get appDirectoryPath async =>
+      getApplicationDocumentsDirectory().then((value) => value.path);
 
   Future<void> init() async {
     _packageInfo = await PackageInfo.fromPlatform();

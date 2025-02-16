@@ -1,3 +1,3 @@
 abstract class BaseViewModelData {
-  const  BaseViewModelData();
+  const BaseViewModelData();
 }

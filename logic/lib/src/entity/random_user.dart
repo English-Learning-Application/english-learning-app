@@ -21,7 +21,6 @@ class RandomUser with _$RandomUser {
   static const DateTime? defaultBirthday = null;
   static const defaultGender = Gender.defaultValue;
   static const defaultNationality = '';
-
 }
 
 @freezed

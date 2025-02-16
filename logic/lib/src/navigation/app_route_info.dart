@@ -79,5 +79,5 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.resetPassword() = _ResetPassword;
   const factory AppRouteInfo.resetPasswordConfirm({
     required String emailOrPhoneNumber,
-}) = _ResetPasswordConfirm;
+  }) = _ResetPasswordConfirm;
 }

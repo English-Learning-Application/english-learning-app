@@ -127,8 +127,8 @@ class ApiLanguageCourseLearningContentDataMapper extends BaseDataMapper<
           LanguageCourseLearningContent.defaultEnglishTitle,
       vietnameseTitle: data?.vietnameseTitle ??
           LanguageCourseLearningContent.defaultVietnameseTitle,
-      frenchTitle: data?.frenchTitle ??
-          LanguageCourseLearningContent.defaultFrenchTitle,
+      frenchTitle:
+          data?.frenchTitle ?? LanguageCourseLearningContent.defaultFrenchTitle,
       createdAt: DateTimeUtils.tryParse(date: data?.createdAt),
       updatedAt: DateTimeUtils.tryParse(date: data?.updatedAt),
     );

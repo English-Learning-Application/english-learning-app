@@ -65,5 +65,4 @@ class DefaultFirebaseOptions {
     storageBucket: 'flutter-english-learning-app.firebasestorage.app',
     iosBundleId: 'com.tdtu.english',
   );
-
 }

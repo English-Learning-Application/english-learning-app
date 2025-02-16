@@ -13,7 +13,8 @@ class GetInitialAppDataUseCase
   const GetInitialAppDataUseCase(this._appRepository);
 
   @override
-  Future<GetInitialAppDataOutput> buildUseCase(GetInitialAppDataInput input)  async {
+  Future<GetInitialAppDataOutput> buildUseCase(
+      GetInitialAppDataInput input) async {
     final appTheme = _appRepository.appTheme;
     final isLoggedIn = _appRepository.isLoggedIn;
     final languageCode = _appRepository.languageCode;

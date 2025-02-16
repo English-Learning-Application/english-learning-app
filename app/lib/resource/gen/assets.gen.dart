@@ -54,59 +54,80 @@ class $AssetsFontsGen {
   String get manropeSemiBold => 'assets/fonts/Manrope-SemiBold.ttf';
 
   /// List of all assets
-  List<String> get values => [manropeBold, manropeExtraBold, manropeExtraLight, manropeLight, manropeMedium, manropeRegular, manropeSemiBold];
+  List<String> get values => [
+        manropeBold,
+        manropeExtraBold,
+        manropeExtraLight,
+        manropeLight,
+        manropeMedium,
+        manropeRegular,
+        manropeSemiBold
+      ];
 }
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   /// File path: assets/icons/ic_arrow_left.svg
-  SvgGenImage get icArrowLeft => const SvgGenImage('assets/icons/ic_arrow_left.svg');
+  SvgGenImage get icArrowLeft =>
+      const SvgGenImage('assets/icons/ic_arrow_left.svg');
 
   /// File path: assets/icons/ic_avatar_1.svg
-  SvgGenImage get icAvatar1 => const SvgGenImage('assets/icons/ic_avatar_1.svg');
+  SvgGenImage get icAvatar1 =>
+      const SvgGenImage('assets/icons/ic_avatar_1.svg');
 
   /// File path: assets/icons/ic_avatar_2.svg
-  SvgGenImage get icAvatar2 => const SvgGenImage('assets/icons/ic_avatar_2.svg');
+  SvgGenImage get icAvatar2 =>
+      const SvgGenImage('assets/icons/ic_avatar_2.svg');
 
   /// File path: assets/icons/ic_avatar_3.svg
-  SvgGenImage get icAvatar3 => const SvgGenImage('assets/icons/ic_avatar_3.svg');
+  SvgGenImage get icAvatar3 =>
+      const SvgGenImage('assets/icons/ic_avatar_3.svg');
 
   /// File path: assets/icons/ic_avatar_4.svg
-  SvgGenImage get icAvatar4 => const SvgGenImage('assets/icons/ic_avatar_4.svg');
+  SvgGenImage get icAvatar4 =>
+      const SvgGenImage('assets/icons/ic_avatar_4.svg');
 
   /// File path: assets/icons/ic_book_square.svg
-  SvgGenImage get icBookSquare => const SvgGenImage('assets/icons/ic_book_square.svg');
+  SvgGenImage get icBookSquare =>
+      const SvgGenImage('assets/icons/ic_book_square.svg');
 
   /// File path: assets/icons/ic_change_password_tooltip.svg
-  SvgGenImage get icChangePasswordTooltip => const SvgGenImage('assets/icons/ic_change_password_tooltip.svg');
+  SvgGenImage get icChangePasswordTooltip =>
+      const SvgGenImage('assets/icons/ic_change_password_tooltip.svg');
 
   /// File path: assets/icons/ic_close.svg
   SvgGenImage get icClose => const SvgGenImage('assets/icons/ic_close.svg');
 
   /// File path: assets/icons/ic_community.svg
-  SvgGenImage get icCommunity => const SvgGenImage('assets/icons/ic_community.svg');
+  SvgGenImage get icCommunity =>
+      const SvgGenImage('assets/icons/ic_community.svg');
 
   /// File path: assets/icons/ic_england.svg
   SvgGenImage get icEngland => const SvgGenImage('assets/icons/ic_england.svg');
 
   /// File path: assets/icons/ic_england_landmark.svg
-  SvgGenImage get icEnglandLandmark => const SvgGenImage('assets/icons/ic_england_landmark.svg');
+  SvgGenImage get icEnglandLandmark =>
+      const SvgGenImage('assets/icons/ic_england_landmark.svg');
 
   /// File path: assets/icons/ic_eye_close.svg
-  SvgGenImage get icEyeClose => const SvgGenImage('assets/icons/ic_eye_close.svg');
+  SvgGenImage get icEyeClose =>
+      const SvgGenImage('assets/icons/ic_eye_close.svg');
 
   /// File path: assets/icons/ic_eye_open.svg
-  SvgGenImage get icEyeOpen => const SvgGenImage('assets/icons/ic_eye_open.svg');
+  SvgGenImage get icEyeOpen =>
+      const SvgGenImage('assets/icons/ic_eye_open.svg');
 
   /// File path: assets/icons/ic_facebook.svg
-  SvgGenImage get icFacebook => const SvgGenImage('assets/icons/ic_facebook.svg');
+  SvgGenImage get icFacebook =>
+      const SvgGenImage('assets/icons/ic_facebook.svg');
 
   /// File path: assets/icons/ic_france.svg
   SvgGenImage get icFrance => const SvgGenImage('assets/icons/ic_france.svg');
 
   /// File path: assets/icons/ic_france_landmark.svg
-  SvgGenImage get icFranceLandmark => const SvgGenImage('assets/icons/ic_france_landmark.svg');
+  SvgGenImage get icFranceLandmark =>
+      const SvgGenImage('assets/icons/ic_france_landmark.svg');
 
   /// File path: assets/icons/ic_google.svg
   SvgGenImage get icGoogle => const SvgGenImage('assets/icons/ic_google.svg');
@@ -121,28 +142,34 @@ class $AssetsIconsGen {
   SvgGenImage get icLearn => const SvgGenImage('assets/icons/ic_learn.svg');
 
   /// File path: assets/icons/ic_listening.svg
-  SvgGenImage get icListening => const SvgGenImage('assets/icons/ic_listening.svg');
+  SvgGenImage get icListening =>
+      const SvgGenImage('assets/icons/ic_listening.svg');
 
   /// File path: assets/icons/ic_mail.svg
   SvgGenImage get icMail => const SvgGenImage('assets/icons/ic_mail.svg');
 
   /// File path: assets/icons/ic_message_question.svg
-  SvgGenImage get icMessageQuestion => const SvgGenImage('assets/icons/ic_message_question.svg');
+  SvgGenImage get icMessageQuestion =>
+      const SvgGenImage('assets/icons/ic_message_question.svg');
 
   /// File path: assets/icons/ic_onboarding_1.svg
-  SvgGenImage get icOnboarding1 => const SvgGenImage('assets/icons/ic_onboarding_1.svg');
+  SvgGenImage get icOnboarding1 =>
+      const SvgGenImage('assets/icons/ic_onboarding_1.svg');
 
   /// File path: assets/icons/ic_onboarding_2.svg
-  SvgGenImage get icOnboarding2 => const SvgGenImage('assets/icons/ic_onboarding_2.svg');
+  SvgGenImage get icOnboarding2 =>
+      const SvgGenImage('assets/icons/ic_onboarding_2.svg');
 
   /// File path: assets/icons/ic_onboarding_3.svg
-  SvgGenImage get icOnboarding3 => const SvgGenImage('assets/icons/ic_onboarding_3.svg');
+  SvgGenImage get icOnboarding3 =>
+      const SvgGenImage('assets/icons/ic_onboarding_3.svg');
 
   /// File path: assets/icons/ic_play.svg
   SvgGenImage get icPlay => const SvgGenImage('assets/icons/ic_play.svg');
 
   /// File path: assets/icons/ic_profile_circle.svg
-  SvgGenImage get icProfileCircle => const SvgGenImage('assets/icons/ic_profile_circle.svg');
+  SvgGenImage get icProfileCircle =>
+      const SvgGenImage('assets/icons/ic_profile_circle.svg');
 
   /// File path: assets/icons/ic_quit.svg
   SvgGenImage get icQuit => const SvgGenImage('assets/icons/ic_quit.svg');
@@ -151,13 +178,15 @@ class $AssetsIconsGen {
   SvgGenImage get icReading => const SvgGenImage('assets/icons/ic_reading.svg');
 
   /// File path: assets/icons/ic_sad_face.svg
-  SvgGenImage get icSadFace => const SvgGenImage('assets/icons/ic_sad_face.svg');
+  SvgGenImage get icSadFace =>
+      const SvgGenImage('assets/icons/ic_sad_face.svg');
 
   /// File path: assets/icons/ic_send.svg
   SvgGenImage get icSend => const SvgGenImage('assets/icons/ic_send.svg');
 
   /// File path: assets/icons/ic_speaking.svg
-  SvgGenImage get icSpeaking => const SvgGenImage('assets/icons/ic_speaking.svg');
+  SvgGenImage get icSpeaking =>
+      const SvgGenImage('assets/icons/ic_speaking.svg');
 
   /// File path: assets/icons/ic_todo.svg
   SvgGenImage get icTodo => const SvgGenImage('assets/icons/ic_todo.svg');
@@ -166,10 +195,12 @@ class $AssetsIconsGen {
   SvgGenImage get icVietnam => const SvgGenImage('assets/icons/ic_vietnam.svg');
 
   /// File path: assets/icons/ic_vietnam_landmark.svg
-  SvgGenImage get icVietnamLandmark => const SvgGenImage('assets/icons/ic_vietnam_landmark.svg');
+  SvgGenImage get icVietnamLandmark =>
+      const SvgGenImage('assets/icons/ic_vietnam_landmark.svg');
 
   /// File path: assets/icons/ic_vocabulary.svg
-  SvgGenImage get icVocabulary => const SvgGenImage('assets/icons/ic_vocabulary.svg');
+  SvgGenImage get icVocabulary =>
+      const SvgGenImage('assets/icons/ic_vocabulary.svg');
 
   /// File path: assets/icons/ic_writing.svg
   SvgGenImage get icWriting => const SvgGenImage('assets/icons/ic_writing.svg');
@@ -221,47 +252,67 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   /// File path: assets/images/app_icon.png
-  AssetGenImage get appIcon => const AssetGenImage('assets/images/app_icon.png');
+  AssetGenImage get appIcon =>
+      const AssetGenImage('assets/images/app_icon.png');
 
   /// File path: assets/images/onboard-01.png
-  AssetGenImage get onboard01 => const AssetGenImage('assets/images/onboard-01.png');
+  AssetGenImage get onboard01 =>
+      const AssetGenImage('assets/images/onboard-01.png');
 
   /// File path: assets/images/onboard-02.png
-  AssetGenImage get onboard02 => const AssetGenImage('assets/images/onboard-02.png');
+  AssetGenImage get onboard02 =>
+      const AssetGenImage('assets/images/onboard-02.png');
 
   /// File path: assets/images/onboard-03.png
-  AssetGenImage get onboard03 => const AssetGenImage('assets/images/onboard-03.png');
+  AssetGenImage get onboard03 =>
+      const AssetGenImage('assets/images/onboard-03.png');
 
   /// File path: assets/images/onboard-04.png
-  AssetGenImage get onboard04 => const AssetGenImage('assets/images/onboard-04.png');
+  AssetGenImage get onboard04 =>
+      const AssetGenImage('assets/images/onboard-04.png');
 
   /// File path: assets/images/phone_verification.png
-  AssetGenImage get phoneVerification => const AssetGenImage('assets/images/phone_verification.png');
+  AssetGenImage get phoneVerification =>
+      const AssetGenImage('assets/images/phone_verification.png');
 
   /// File path: assets/images/robot-assistant.png
-  AssetGenImage get robotAssistant => const AssetGenImage('assets/images/robot-assistant.png');
+  AssetGenImage get robotAssistant =>
+      const AssetGenImage('assets/images/robot-assistant.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [appIcon, onboard01, onboard02, onboard03, onboard04, phoneVerification, robotAssistant];
+  List<AssetGenImage> get values => [
+        appIcon,
+        onboard01,
+        onboard02,
+        onboard03,
+        onboard04,
+        phoneVerification,
+        robotAssistant
+      ];
 }
 
 class $AssetsLottieGen {
   const $AssetsLottieGen();
 
   /// File path: assets/lottie/lottie_add.json
-  LottieGenImage get lottieAdd => const LottieGenImage('assets/lottie/lottie_add.json');
+  LottieGenImage get lottieAdd =>
+      const LottieGenImage('assets/lottie/lottie_add.json');
 
   /// File path: assets/lottie/lottie_loading.json
-  LottieGenImage get lottieLoading => const LottieGenImage('assets/lottie/lottie_loading.json');
+  LottieGenImage get lottieLoading =>
+      const LottieGenImage('assets/lottie/lottie_loading.json');
 
   /// File path: assets/lottie/lottie_success.json
-  LottieGenImage get lottieSuccess => const LottieGenImage('assets/lottie/lottie_success.json');
+  LottieGenImage get lottieSuccess =>
+      const LottieGenImage('assets/lottie/lottie_success.json');
 
   /// File path: assets/lottie/lottie_todo.json
-  LottieGenImage get lottieTodo => const LottieGenImage('assets/lottie/lottie_todo.json');
+  LottieGenImage get lottieTodo =>
+      const LottieGenImage('assets/lottie/lottie_todo.json');
 
   /// List of all assets
-  List<LottieGenImage> get values => [lottieAdd, lottieLoading, lottieSuccess, lottieTodo];
+  List<LottieGenImage> get values =>
+      [lottieAdd, lottieLoading, lottieSuccess, lottieTodo];
 }
 
 class Assets {
@@ -420,7 +471,8 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      colorFilter: colorFilter ?? (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
+      colorFilter: colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );

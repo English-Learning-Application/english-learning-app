@@ -28,8 +28,7 @@ class ApiMessageUserDataMapper
       username: data?.username ?? MessageUser.defaultUsername,
       imageUrl: data?.imageUrl ?? MessageUser.defaultImageUrl,
       email: data?.email ?? MessageUser.defaultEmail,
-      externalId: data?.externalUserId
-          ?? MessageUser.defaultExternalId,
+      externalId: data?.externalUserId ?? MessageUser.defaultExternalId,
       phoneNumber: data?.phoneNumber ?? MessageUser.defaultPhoneNumber,
       createdAt: DateTimeUtils.tryParse(date: data?.createdAt ?? ''),
       updatedAt: DateTimeUtils.tryParse(date: data?.updatedAt ?? ''),

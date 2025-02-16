@@ -39,8 +39,10 @@ class SubscriptionViewModel extends BaseViewModel<SubscriptionViewModelData> {
     );
   }
 
-  Future<void> swapSubscription(
-      {required String subscriptionId, required String newSubscriptionId,}) async {
+  Future<void> swapSubscription({
+    required String subscriptionId,
+    required String newSubscriptionId,
+  }) async {
     await runViewModelCatching(
       action: () async {
         await _swapSubscriptionPlanUseCase.execute(

@@ -13,7 +13,7 @@ class PronunciationAssessment with _$PronunciationAssessment {
     )
     List<PronunciationWord> words,
     @Default(PronunciationAssessment.defaultPronunciationLearningId)
-        String pronunciationLearningId,
+    String pronunciationLearningId,
     @Default(PronunciationAssessment.defaultScore) int score,
     @Default(PronunciationAssessment.defaultPronunciationAccentPrediction)
     PronunciationAccentPrediction pronunciationAccentPrediction,

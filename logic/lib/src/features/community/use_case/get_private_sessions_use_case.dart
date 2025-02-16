@@ -12,7 +12,8 @@ class GetPrivateSessionsUseCase extends BaseFutureUseCase<
   const GetPrivateSessionsUseCase(this._communityRepository);
 
   @override
-  Future<GetPrivateSessionsOutput> buildUseCase(GetPrivateSessionsInput input) async {
+  Future<GetPrivateSessionsOutput> buildUseCase(
+      GetPrivateSessionsInput input) async {
     final resp = await _communityRepository.getPrivateChatSessions();
 
     return GetPrivateSessionsOutput(
