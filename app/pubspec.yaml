@@ -76,6 +76,7 @@ dependencies:
   webview_flutter: ^4.10.0
   stomp_dart_client: ^2.1.1
   firebase_messaging: ^15.2.1
+  firebase_crashlytics: ^4.3.2
 
 dev_dependencies:
   flutter_test:
