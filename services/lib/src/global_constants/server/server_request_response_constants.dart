@@ -8,6 +8,12 @@ class ServerRequestResponseConstants {
   static const bearer = 'Bearer';
   static const deviceId = 'X-Device-Id';
 
+  // Achievement Type
+  static const achievementFlashCard = 'FLASHCARD';
+  static const achievementQuiz = 'QUIZ';
+  static const achievementMatching = 'MATCHING';
+  static const achievementPronunciation = 'PRONUNCIATION';
+
   // Course Type
   static const categoryCourse = 'CATEGORY';
   static const languageCourse = 'LANGUAGE';

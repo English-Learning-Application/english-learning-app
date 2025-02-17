@@ -2349,6 +2349,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Flashcard`
+  String get flashCard {
+    return Intl.message(
+      'Flashcard',
+      name: 'flashCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learning Progression`
+  String get learningProgression {
+    return Intl.message(
+      'Learning Progression',
+      name: 'learningProgression',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have no in-progress courses`
+  String get noInProgressCourses {
+    return Intl.message(
+      'You have no in-progress courses',
+      name: 'noInProgressCourses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore courses`
+  String get exploreCourses {
+    return Intl.message(
+      'Explore courses',
+      name: 'exploreCourses',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

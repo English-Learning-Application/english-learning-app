@@ -139,9 +139,9 @@ class _CategoryCourseLessonPageState extends BasePageState<
                   switch (learningContent.learningContentType) {
                     case LearningContentType.word:
                       final words = learningContent.words;
-                      return Column(
-                        spacing: Dimens.d8.responsive(),
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      return ListView(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -176,11 +176,16 @@ class _CategoryCourseLessonPageState extends BasePageState<
                                 LearningLanguage.vietnamese => e.vietnameseWord,
                                 LearningLanguage.french => e.frenchWord,
                               };
-                              return WordCategoryLessonItem(
-                                word: word,
-                                pronunciation: e.pronunciation,
-                                typeOfWord: e.wordType.wordTypeName,
-                                learningLanguage: language,
+                              return Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: Dimens.d8.responsive(),
+                                ),
+                                child: WordCategoryLessonItem(
+                                  word: word,
+                                  pronunciation: e.pronunciation,
+                                  typeOfWord: e.wordType.wordTypeName,
+                                  learningLanguage: language,
+                                ),
                               );
                             },
                           ),
@@ -188,9 +193,9 @@ class _CategoryCourseLessonPageState extends BasePageState<
                       );
                     case LearningContentType.expression:
                       final expressions = learningContent.expressions;
-                      return Column(
-                        spacing: Dimens.d8.responsive(),
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      return ListView(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -226,10 +231,15 @@ class _CategoryCourseLessonPageState extends BasePageState<
                                   e.vietnameseExpression,
                                 LearningLanguage.french => e.frenchExpression,
                               };
-                              return IdiomCategoryLessonItem(
-                                expression: expression,
-                                exampleUsage: e.exampleUsage,
-                                learningLanguage: language,
+                              return Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: Dimens.d8.responsive(),
+                                ),
+                                child: IdiomCategoryLessonItem(
+                                  expression: expression,
+                                  exampleUsage: e.exampleUsage,
+                                  learningLanguage: language,
+                                ),
                               );
                             },
                           ),
@@ -237,9 +247,9 @@ class _CategoryCourseLessonPageState extends BasePageState<
                       );
                     case LearningContentType.idiom:
                       final idioms = learningContent.idioms;
-                      return Column(
-                        spacing: Dimens.d8.responsive(),
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      return ListView(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -275,10 +285,15 @@ class _CategoryCourseLessonPageState extends BasePageState<
                                   e.vietnameseIdiom,
                                 LearningLanguage.french => e.frenchIdiom,
                               };
-                              return IdiomCategoryLessonItem(
-                                expression: idiomText,
-                                exampleUsage: e.exampleUsage,
-                                learningLanguage: language,
+                              return Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: Dimens.d8.responsive(),
+                                ),
+                                child: IdiomCategoryLessonItem(
+                                  expression: idiomText,
+                                  exampleUsage: e.exampleUsage,
+                                  learningLanguage: language,
+                                ),
                               );
                             },
                           ),
@@ -286,9 +301,9 @@ class _CategoryCourseLessonPageState extends BasePageState<
                       );
                     case LearningContentType.sentence:
                       final sentences = learningContent.sentences;
-                      return Column(
-                        spacing: Dimens.d8.responsive(),
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      return ListView(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -326,10 +341,15 @@ class _CategoryCourseLessonPageState extends BasePageState<
                               };
                               final example = e.exampleUsage[
                                   language.serverValue.toLowerCase()];
-                              return SentenceCategoryLessonItem(
-                                sentenceText: sentenceText,
-                                example: example,
-                                learningLanguage: language,
+                              return Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: Dimens.d8.responsive(),
+                                ),
+                                child: SentenceCategoryLessonItem(
+                                  sentenceText: sentenceText,
+                                  example: example,
+                                  learningLanguage: language,
+                                ),
                               );
                             },
                           ),
@@ -337,9 +357,9 @@ class _CategoryCourseLessonPageState extends BasePageState<
                       );
                     case LearningContentType.phrasalVerb:
                       final phrasalVerbs = learningContent.phrasalVerbs;
-                      return Column(
-                        spacing: Dimens.d8.responsive(),
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      return ListView(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -383,10 +403,15 @@ class _CategoryCourseLessonPageState extends BasePageState<
                                   e.vietnameseDescription,
                                 LearningLanguage.french => e.frenchDescription,
                               };
-                              return PhrasalVerbCategoryLessonItem(
-                                phrasalVerb: phrasalVerbText,
-                                description: phrasalVerbDescription,
-                                learningLanguage: language,
+                              return Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: Dimens.d8.responsive(),
+                                ),
+                                child: PhrasalVerbCategoryLessonItem(
+                                  phrasalVerb: phrasalVerbText,
+                                  description: phrasalVerbDescription,
+                                  learningLanguage: language,
+                                ),
                               );
                             },
                           ),
@@ -394,9 +419,9 @@ class _CategoryCourseLessonPageState extends BasePageState<
                       );
                     case LearningContentType.tense:
                       final tenses = learningContent.tenses;
-                      return Column(
-                        spacing: Dimens.d8.responsive(),
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      return ListView(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -439,12 +464,17 @@ class _CategoryCourseLessonPageState extends BasePageState<
                                   e.vietnameseDescription,
                                 LearningLanguage.french => e.frenchDescription,
                               };
-                              return TenseLessonItem(
-                                tenseName: tenseName,
-                                learningLanguage: language,
-                                tenseStructure: e.tenseRule,
-                                tenseDescription: description,
-                                tenseForms: e.tenseForms,
+                              return Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: Dimens.d8.responsive(),
+                                ),
+                                child: TenseLessonItem(
+                                  tenseName: tenseName,
+                                  learningLanguage: language,
+                                  tenseStructure: e.tenseRule,
+                                  tenseDescription: description,
+                                  tenseForms: e.tenseForms,
+                                ),
                               );
                             },
                           ),
@@ -452,9 +482,9 @@ class _CategoryCourseLessonPageState extends BasePageState<
                       );
                     case LearningContentType.phonetics:
                       final phonetics = learningContent.phonetics;
-                      return Column(
-                        spacing: Dimens.d8.responsive(),
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      return ListView(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -495,11 +525,16 @@ class _CategoryCourseLessonPageState extends BasePageState<
                                   e.frenchPhoneticGuide,
                               };
 
-                              return PhoneticCategoryLessonItem(
-                                phonetic: phoneticText,
-                                phoneticSound: phoneticSound,
-                                pronunciationGuide: pronunciationGuide,
-                                learningLanguage: language,
+                              return Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: Dimens.d8.responsive(),
+                                ),
+                                child: PhoneticCategoryLessonItem(
+                                  phonetic: phoneticText,
+                                  phoneticSound: phoneticSound,
+                                  pronunciationGuide: pronunciationGuide,
+                                  learningLanguage: language,
+                                ),
                               );
                             },
                           ),

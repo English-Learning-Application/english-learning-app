@@ -12,6 +12,7 @@ class CourseCard extends StatefulWidget {
     this.child,
     this.padding,
     required this.onPressed,
+    this.border,
   });
 
   final Color color;
@@ -19,6 +20,7 @@ class CourseCard extends StatefulWidget {
   final Widget? child;
   final EdgeInsets? padding;
   final VoidCallback onPressed;
+  final Border? border;
 
   @override
   State<CourseCard> createState() => _CourseCardState();
@@ -53,26 +55,29 @@ class _CourseCardState extends State<CourseCard> {
         padding: widget.padding,
         decoration: BoxDecoration(
           color: widget.color,
-          border: Border(
-            top: BorderSide(
-              color: FoundationColors.primary600,
-              width: Dimens.d1.responsive(),
-            ),
-            left: BorderSide(
-              color: FoundationColors.primary600,
-              width: Dimens.d1.responsive(),
-            ),
-            right: BorderSide(
-              color: FoundationColors.primary600,
-              width:
-                  _isPressed ? Dimens.d1.responsive() : Dimens.d4.responsive(),
-            ),
-            bottom: BorderSide(
-              color: FoundationColors.primary600,
-              width:
-                  _isPressed ? Dimens.d1.responsive() : Dimens.d4.responsive(),
-            ),
-          ),
+          border: widget.border ??
+              Border(
+                top: BorderSide(
+                  color: FoundationColors.primary600,
+                  width: Dimens.d1.responsive(),
+                ),
+                left: BorderSide(
+                  color: FoundationColors.primary600,
+                  width: Dimens.d1.responsive(),
+                ),
+                right: BorderSide(
+                  color: FoundationColors.primary600,
+                  width: _isPressed
+                      ? Dimens.d1.responsive()
+                      : Dimens.d4.responsive(),
+                ),
+                bottom: BorderSide(
+                  color: FoundationColors.primary600,
+                  width: _isPressed
+                      ? Dimens.d1.responsive()
+                      : Dimens.d4.responsive(),
+                ),
+              ),
           borderRadius: BorderRadius.circular(
             widget.borderRadius ?? Dimens.d8.responsive(),
           ),

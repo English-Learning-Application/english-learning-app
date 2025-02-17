@@ -119,3 +119,4 @@ export 'src/features/bookmark/use_case/remove_bookmark_use_case.dart';
 export 'src/features/bookmark/use_case/is_course_bookmark_use_case.dart';
 export 'src/features/bookmark/entity/user_bookmark_course.dart';
 export 'src/features/bookmark/use_case/get_all_user_bookmark_courses_use_case.dart';
+export 'src/features/exercise/use_case/get_all_learning_progress_use_case.dart';

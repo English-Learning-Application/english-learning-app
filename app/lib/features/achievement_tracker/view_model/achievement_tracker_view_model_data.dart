@@ -4,6 +4,9 @@ part of 'achievement_tracker.dart';
 class AchievementTrackerViewModelData extends BaseViewModelData
     with _$AchievementTrackerViewModelData {
   const factory AchievementTrackerViewModelData({
+    @Default(<Achievement>[]) List<Achievement> originalAchievements,
     @Default(<Achievement>[]) List<Achievement> achievements,
+    @Default([]) List<AchievementType> achievementTypes,
+    AchievementType? selectedAchievementType,
   }) = _AchievementTrackerViewModelData;
 }

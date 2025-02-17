@@ -27,11 +27,9 @@ class GetCategoryCoursesByLanguageUseCase extends BaseFutureUseCase<
     final courseIdsList =
         categoryCourses.map((e) => e.categoryCourseId).toList();
     if (courseIdsList.isNotEmpty) {
-      print('courseIdsList.isNotEmpty $courseIdsList');
       final progress = await _exerciseRepository.getLearningProgress(
         courseIds: courseIdsList,
       );
-      print('progression result: $progress');
       final updatedCategoryCourses = categoryCourses.map((categoryCourse) {
         final updatedContents =
             categoryCourse.languageCourseLearningContent.map((content) {

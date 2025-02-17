@@ -17,6 +17,10 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$HomeViewModelData {
   List<ChatSession> get chatSessions => throw _privateConstructorUsedError;
+  List<LanguageCourse> get languageCourses =>
+      throw _privateConstructorUsedError;
+  List<CategoryCourse> get categoryCourses =>
+      throw _privateConstructorUsedError;
 
   /// Create a copy of HomeViewModelData
   /// with the given fields replaced by the non-null parameter values.
@@ -31,7 +35,10 @@ abstract class $HomeViewModelDataCopyWith<$Res> {
           HomeViewModelData value, $Res Function(HomeViewModelData) then) =
       _$HomeViewModelDataCopyWithImpl<$Res, HomeViewModelData>;
   @useResult
-  $Res call({List<ChatSession> chatSessions});
+  $Res call(
+      {List<ChatSession> chatSessions,
+      List<LanguageCourse> languageCourses,
+      List<CategoryCourse> categoryCourses});
 }
 
 /// @nodoc
@@ -50,12 +57,22 @@ class _$HomeViewModelDataCopyWithImpl<$Res, $Val extends HomeViewModelData>
   @override
   $Res call({
     Object? chatSessions = null,
+    Object? languageCourses = null,
+    Object? categoryCourses = null,
   }) {
     return _then(_value.copyWith(
       chatSessions: null == chatSessions
           ? _value.chatSessions
           : chatSessions // ignore: cast_nullable_to_non_nullable
               as List<ChatSession>,
+      languageCourses: null == languageCourses
+          ? _value.languageCourses
+          : languageCourses // ignore: cast_nullable_to_non_nullable
+              as List<LanguageCourse>,
+      categoryCourses: null == categoryCourses
+          ? _value.categoryCourses
+          : categoryCourses // ignore: cast_nullable_to_non_nullable
+              as List<CategoryCourse>,
     ) as $Val);
   }
 }
@@ -68,7 +85,10 @@ abstract class _$$HomeViewModelDataImplCopyWith<$Res>
       __$$HomeViewModelDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<ChatSession> chatSessions});
+  $Res call(
+      {List<ChatSession> chatSessions,
+      List<LanguageCourse> languageCourses,
+      List<CategoryCourse> categoryCourses});
 }
 
 /// @nodoc
@@ -85,12 +105,22 @@ class __$$HomeViewModelDataImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? chatSessions = null,
+    Object? languageCourses = null,
+    Object? categoryCourses = null,
   }) {
     return _then(_$HomeViewModelDataImpl(
       chatSessions: null == chatSessions
           ? _value._chatSessions
           : chatSessions // ignore: cast_nullable_to_non_nullable
               as List<ChatSession>,
+      languageCourses: null == languageCourses
+          ? _value._languageCourses
+          : languageCourses // ignore: cast_nullable_to_non_nullable
+              as List<LanguageCourse>,
+      categoryCourses: null == categoryCourses
+          ? _value._categoryCourses
+          : categoryCourses // ignore: cast_nullable_to_non_nullable
+              as List<CategoryCourse>,
     ));
   }
 }
@@ -99,8 +129,12 @@ class __$$HomeViewModelDataImplCopyWithImpl<$Res>
 
 class _$HomeViewModelDataImpl implements _HomeViewModelData {
   const _$HomeViewModelDataImpl(
-      {final List<ChatSession> chatSessions = const []})
-      : _chatSessions = chatSessions;
+      {final List<ChatSession> chatSessions = const [],
+      final List<LanguageCourse> languageCourses = const [],
+      final List<CategoryCourse> categoryCourses = const []})
+      : _chatSessions = chatSessions,
+        _languageCourses = languageCourses,
+        _categoryCourses = categoryCourses;
 
   final List<ChatSession> _chatSessions;
   @override
@@ -111,9 +145,27 @@ class _$HomeViewModelDataImpl implements _HomeViewModelData {
     return EqualUnmodifiableListView(_chatSessions);
   }
 
+  final List<LanguageCourse> _languageCourses;
+  @override
+  @JsonKey()
+  List<LanguageCourse> get languageCourses {
+    if (_languageCourses is EqualUnmodifiableListView) return _languageCourses;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_languageCourses);
+  }
+
+  final List<CategoryCourse> _categoryCourses;
+  @override
+  @JsonKey()
+  List<CategoryCourse> get categoryCourses {
+    if (_categoryCourses is EqualUnmodifiableListView) return _categoryCourses;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_categoryCourses);
+  }
+
   @override
   String toString() {
-    return 'HomeViewModelData(chatSessions: $chatSessions)';
+    return 'HomeViewModelData(chatSessions: $chatSessions, languageCourses: $languageCourses, categoryCourses: $categoryCourses)';
   }
 
   @override
@@ -122,12 +174,19 @@ class _$HomeViewModelDataImpl implements _HomeViewModelData {
         (other.runtimeType == runtimeType &&
             other is _$HomeViewModelDataImpl &&
             const DeepCollectionEquality()
-                .equals(other._chatSessions, _chatSessions));
+                .equals(other._chatSessions, _chatSessions) &&
+            const DeepCollectionEquality()
+                .equals(other._languageCourses, _languageCourses) &&
+            const DeepCollectionEquality()
+                .equals(other._categoryCourses, _categoryCourses));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_chatSessions));
+      runtimeType,
+      const DeepCollectionEquality().hash(_chatSessions),
+      const DeepCollectionEquality().hash(_languageCourses),
+      const DeepCollectionEquality().hash(_categoryCourses));
 
   /// Create a copy of HomeViewModelData
   /// with the given fields replaced by the non-null parameter values.
@@ -140,11 +199,17 @@ class _$HomeViewModelDataImpl implements _HomeViewModelData {
 }
 
 abstract class _HomeViewModelData implements HomeViewModelData {
-  const factory _HomeViewModelData({final List<ChatSession> chatSessions}) =
-      _$HomeViewModelDataImpl;
+  const factory _HomeViewModelData(
+      {final List<ChatSession> chatSessions,
+      final List<LanguageCourse> languageCourses,
+      final List<CategoryCourse> categoryCourses}) = _$HomeViewModelDataImpl;
 
   @override
   List<ChatSession> get chatSessions;
+  @override
+  List<LanguageCourse> get languageCourses;
+  @override
+  List<CategoryCourse> get categoryCourses;
 
   /// Create a copy of HomeViewModelData
   /// with the given fields replaced by the non-null parameter values.

@@ -47,6 +47,13 @@ class QuizLearning with _$QuizLearning {
     @Default(QuizLearning.defaultCourseId) String courseId,
     @Default(QuizLearning.defaultNumberOfCorrect) int numberOfCorrect,
     @Default(QuizLearning.defaultNumberOfIncorrect) int numberOfIncorrect,
+    @Default(Word()) Word? word,
+    @Default(PhrasalVerb()) PhrasalVerb? phrasalVerb,
+    @Default(Expression()) Expression? expression,
+    @Default(Idiom()) Idiom? idiom,
+    @Default(Sentence()) Sentence? sentence,
+    @Default(Phonetic()) Phonetic? phonetic,
+    @Default(Tense()) Tense? tense,
   }) = _QuizLearning;
 
   static const defaultQuizLearningId = '';

@@ -9,6 +9,44 @@ enum InitialAppRoute {
   home,
 }
 
+enum AchievementType {
+  flashCard(ServerRequestResponseConstants.achievementFlashCard),
+  quiz(ServerRequestResponseConstants.achievementQuiz),
+  matching(ServerRequestResponseConstants.achievementMatching),
+  pronunciation(ServerRequestResponseConstants.achievementPronunciation);
+
+  const AchievementType(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.achievementFlashCard:
+        return AchievementType.flashCard;
+      case ServerRequestResponseConstants.achievementQuiz:
+        return AchievementType.quiz;
+      case ServerRequestResponseConstants.achievementMatching:
+        return AchievementType.matching;
+      case ServerRequestResponseConstants.achievementPronunciation:
+        return AchievementType.pronunciation;
+      default:
+        return AchievementType.flashCard;
+    }
+  }
+
+  String get achievementTypeName {
+    switch (this) {
+      case AchievementType.flashCard:
+        return S.current.flashCard;
+      case AchievementType.quiz:
+        return S.current.quiz;
+      case AchievementType.matching:
+        return S.current.matching;
+      case AchievementType.pronunciation:
+        return S.current.pronunciation;
+    }
+  }
+}
+
 enum CourseType {
   language(ServerRequestResponseConstants.languageCourse),
   category(ServerRequestResponseConstants.categoryCourse);

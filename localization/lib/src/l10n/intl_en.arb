@@ -228,6 +228,10 @@
     "resetPasswordInstruction": "Enter your new password and the OTP sent to your email or phone number to reset your password",
     "clickToBookmarkCourse": "Click to bookmark/unbookmark this course",
     "bookmarkCourses": "Bookmark Courses",
-    "category": "Category"
+    "category": "Category",
+    "flashCard": "Flashcard",
+    "learningProgression": "Learning Progression",
+    "noInProgressCourses": "You have no in-progress courses",
+    "exploreCourses": "Explore courses"
 }
 

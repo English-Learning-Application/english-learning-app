@@ -48,6 +48,13 @@ class MatchingLearning with _$MatchingLearning {
     @Default(MatchingLearning.defaultCourseId) String courseId,
     @Default(MatchingLearning.defaultNumberOfCorrect) int numberOfCorrect,
     @Default(MatchingLearning.defaultNumberOfIncorrect) int numberOfIncorrect,
+    @Default(Word()) Word? word,
+    @Default(PhrasalVerb()) PhrasalVerb? phrasalVerb,
+    @Default(Expression()) Expression? expression,
+    @Default(Idiom()) Idiom? idiom,
+    @Default(Sentence()) Sentence? sentence,
+    @Default(Phonetic()) Phonetic? phonetic,
+    @Default(Tense()) Tense? tense,
   }) = _MatchingLearning;
 
   static const defaultMatchingLearningId = '';

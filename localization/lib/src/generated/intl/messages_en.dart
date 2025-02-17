@@ -120,9 +120,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailOrPhone": MessageLookupByLibrary.simpleMessage("Email or phone"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "error1": MessageLookupByLibrary.simpleMessage("Unidentified error"),
+        "exploreCourses":
+            MessageLookupByLibrary.simpleMessage("Explore courses"),
         "expression": MessageLookupByLibrary.simpleMessage("Expression"),
         "fieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
+        "flashCard": MessageLookupByLibrary.simpleMessage("Flashcard"),
         "flashCardLearning":
             MessageLookupByLibrary.simpleMessage("Flashcard learning"),
         "flashcard": MessageLookupByLibrary.simpleMessage("Flashcard"),
@@ -181,6 +184,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "learningInfo": MessageLookupByLibrary.simpleMessage("Learning info"),
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Learning language"),
+        "learningProgression":
+            MessageLookupByLibrary.simpleMessage("Learning Progression"),
         "lessons": MessageLookupByLibrary.simpleMessage("Lessons"),
         "level": MessageLookupByLibrary.simpleMessage("Level"),
         "listenAndMatch":
@@ -220,6 +225,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noFriendChatsFound":
             MessageLookupByLibrary.simpleMessage("No friend chats found"),
+        "noInProgressCourses": MessageLookupByLibrary.simpleMessage(
+            "You have no in-progress courses"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("No Internet"),
         "noUsername": MessageLookupByLibrary.simpleMessage("No username"),

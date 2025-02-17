@@ -152,85 +152,244 @@ class _HomePageState extends BasePageState<HomePage, HomeViewModel> {
         SizedBox(
           height: Dimens.d16.responsive(),
         ),
-        GridView.builder(
-          itemCount: 10,
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          scrollDirection: Axis.vertical,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: isMobile
-                ? 2
-                : isTablet
-                    ? 3
-                    : 4,
-            crossAxisSpacing: Dimens.d10.responsive(),
-            mainAxisSpacing: Dimens.d10.responsive(),
-            childAspectRatio: 0.9.responsive(),
-          ),
-          itemBuilder: (_, index) {
-            final language =
-                LearningLanguage.values[index % LearningLanguage.values.length];
-            return CourseCard(
-              borderRadius: Dimens.d8.responsive(),
-              color: FoundationColors.primary500,
-              padding: EdgeInsets.symmetric(
-                horizontal: Dimens.d16.responsive(),
-                vertical: Dimens.d8.responsive(),
-              ),
-              onPressed: () {},
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+        Selector<HomeViewModel, HomeViewModelData>(
+          shouldRebuild: (previous, next) =>
+              previous.languageCourses != next.languageCourses ||
+              previous.categoryCourses != next.categoryCourses,
+          selector: (_, vm) => vm.viewModelData,
+          builder: (_, vmData, __) {
+            final languageCourses = vmData.languageCourses;
+            final categoryCourses = vmData.categoryCourses;
+
+            if (languageCourses.isEmpty && categoryCourses.isEmpty) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          language.languageName,
-                          overflow: TextOverflow.ellipsis,
-                          style: AppTextStyles.s14w400primary()
-                              .font16()
-                              .secondary
-                              .bold,
-                        ),
-                      ),
-                      SizedBox(
-                        width: Dimens.d8.responsive(),
-                      ),
-                      language.icon.svg(
-                        width: Dimens.d24.responsive(),
-                        height: Dimens.d24.responsive(),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: Dimens.d8.responsive(),
-                  ),
                   Text(
-                    "${S.current.level}: A${index + 1}",
-                    style: AppTextStyles.s14w400primary().font14().secondary,
-                  ),
-                  SizedBox(
-                    height: Dimens.d8.responsive(),
-                  ),
-                  LearningType.values[index % LearningType.values.length].icon
-                      .svg(
-                    width: Dimens.d24.responsive(),
-                    height: Dimens.d24.responsive(),
+                    S.current.noInProgressCourses,
+                    textAlign: TextAlign.center,
+                    style: AppTextStyles.s14w400primary().font16().bold,
                   ),
                   SizedBox(
                     height: Dimens.d16.responsive(),
                   ),
-                  LinearProgressIndicator(
-                    value: (index + 1) / 10,
-                    color: FoundationColors.accent200,
-                    borderRadius: BorderRadius.circular(
-                      Dimens.d8.responsive(),
-                    ),
-                    minHeight: Dimens.d4.responsive(),
-                    backgroundColor: FoundationColors.neutral50,
-                  )
+                  StandardButton(
+                    buttonSize: ButtonSize.small,
+                    buttonType: ButtonType.secondary,
+                    innerGap: 0,
+                    leadingIconSize: 0,
+                    trailingIconSize: 0,
+                    text: S.current.exploreCourses,
+                    onPressed: () async {
+                      await navigator.push(
+                        const AppRouteInfo.languageCourse(
+                          learningLanguage: LearningLanguage.english,
+                        ),
+                      );
+                    },
+                  ),
                 ],
+              );
+            }
+
+            return GridView.builder(
+              itemCount: languageCourses.length + categoryCourses.length,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              scrollDirection: Axis.vertical,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: isMobile
+                    ? 2
+                    : isTablet
+                        ? 3
+                        : 4,
+                crossAxisSpacing: Dimens.d10.responsive(),
+                mainAxisSpacing: Dimens.d10.responsive(),
+                childAspectRatio: 0.75.responsive(),
               ),
+              itemBuilder: (_, index) {
+                if (index < languageCourses.length) {
+                  final course = languageCourses[index];
+                  final language = course.language;
+                  final courseLevel = course.level;
+                  final courseLearningType = course.learningType;
+                  return CourseCard(
+                    borderRadius: Dimens.d8.responsive(),
+                    color: FoundationColors.primary500,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: Dimens.d16.responsive(),
+                      vertical: Dimens.d8.responsive(),
+                    ),
+                    onPressed: () {
+                      navigator.push(
+                        AppRouteInfo.languageCourseDetails(
+                          languageCourse: course,
+                        ),
+                      );
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                language.languageName,
+                                overflow: TextOverflow.ellipsis,
+                                style: AppTextStyles.s14w400primary()
+                                    .font16()
+                                    .secondary
+                                    .bold,
+                              ),
+                            ),
+                            SizedBox(
+                              width: Dimens.d8.responsive(),
+                            ),
+                            course.language.icon.svg(
+                              width: Dimens.d24.responsive(),
+                              height: Dimens.d24.responsive(),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: Dimens.d8.responsive(),
+                        ),
+                        Text(
+                          "${S.current.level}: ${courseLevel.levelName}",
+                          style:
+                              AppTextStyles.s14w400primary().font14().secondary,
+                        ),
+                        SizedBox(
+                          height: Dimens.d8.responsive(),
+                        ),
+                        Text(
+                          courseLearningType.learningTypeName,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTextStyles.s14w400primary()
+                              .font12()
+                              .secondary
+                              .light,
+                        ),
+                        SizedBox(
+                          height: Dimens.d8.responsive(),
+                        ),
+                        courseLearningType.icon.svg(
+                          width: Dimens.d24.responsive(),
+                          height: Dimens.d24.responsive(),
+                        ),
+                        SizedBox(
+                          height: Dimens.d16.responsive(),
+                        ),
+                        LinearProgressIndicator(
+                          value: course.completionProgress(),
+                          color: FoundationColors.accent200,
+                          borderRadius: BorderRadius.circular(
+                            Dimens.d8.responsive(),
+                          ),
+                          minHeight: Dimens.d4.responsive(),
+                          backgroundColor: FoundationColors.neutral50,
+                        )
+                      ],
+                    ),
+                  );
+                } else {
+                  final course =
+                      categoryCourses[index - languageCourses.length];
+                  final language = course.language;
+                  final courseName = switch (language) {
+                    LearningLanguage.english => course.englishName,
+                    LearningLanguage.vietnamese => course.vietnameseName,
+                    LearningLanguage.french => course.frenchName,
+                  };
+                  final category = course.category;
+                  final categoryName = switch (language) {
+                    LearningLanguage.english => course.englishName,
+                    LearningLanguage.vietnamese => course.vietnameseName,
+                    LearningLanguage.french => course.frenchName,
+                  };
+                  return CourseCard(
+                    borderRadius: Dimens.d8.responsive(),
+                    color: FoundationColors.primary500,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: Dimens.d16.responsive(),
+                      vertical: Dimens.d8.responsive(),
+                    ),
+                    onPressed: () {
+                      navigator.push(
+                        AppRouteInfo.categoryCourseLesson(
+                          categoryCourse: course,
+                          languageCourseLearningContents:
+                              course.languageCourseLearningContent,
+                        ),
+                      );
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                course.language.languageName,
+                                overflow: TextOverflow.ellipsis,
+                                style: AppTextStyles.s14w400primary()
+                                    .font16()
+                                    .secondary
+                                    .bold,
+                              ),
+                            ),
+                            SizedBox(
+                              width: Dimens.d8.responsive(),
+                            ),
+                            course.language.icon.svg(
+                              width: Dimens.d24.responsive(),
+                              height: Dimens.d24.responsive(),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: Dimens.d8.responsive(),
+                        ),
+                        Text(
+                          courseName,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTextStyles.s14w400primary()
+                              .font14()
+                              .secondary
+                              .bold,
+                        ),
+                        SizedBox(
+                          height: Dimens.d8.responsive(),
+                        ),
+                        Text(
+                          categoryName,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTextStyles.s14w400primary()
+                              .font12()
+                              .secondary
+                              .light,
+                        ),
+                        SizedBox(
+                          height: Dimens.d8.responsive(),
+                        ),
+                        LinearProgressIndicator(
+                          value: course.completionProgress(),
+                          color: FoundationColors.accent200,
+                          borderRadius: BorderRadius.circular(
+                            Dimens.d8.responsive(),
+                          ),
+                          minHeight: Dimens.d4.responsive(),
+                          backgroundColor: FoundationColors.neutral50,
+                        )
+                      ],
+                    ),
+                  );
+                }
+              },
             );
           },
         ),

@@ -9,6 +9,14 @@ class ValidateEmailViewModel extends BaseViewModel<ValidateEmailViewModelData> {
     this._verifyEmailOtpUseCase,
   ) : super(const ValidateEmailViewModelData());
 
+  void init() async {
+    await runViewModelCatching(
+      action: () async {
+        await appViewModel.appRefreshUser(false);
+      },
+    );
+  }
+
   Future<void> sendEmailVerification() async {
     await runViewModelCatching(
       action: () async {

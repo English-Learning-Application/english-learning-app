@@ -18,7 +18,17 @@ class GetAllAchievementUseCase
       GetAllAchievementInput input) async {
     final resp = await _achievementRepository.getAchievements();
 
-    return GetAllAchievementOutput(achievements: resp);
+    final achievementTypes = resp
+        .map(
+          (e) => e.achievementType,
+        )
+        .toSet()
+        .toList();
+
+    return GetAllAchievementOutput(
+      achievements: resp,
+      achievementTypes: achievementTypes,
+    );
   }
 }
 
@@ -31,6 +41,7 @@ class GetAllAchievementInput extends BaseInput with _$GetAllAchievementInput {
 class GetAllAchievementOutput extends BaseOutput
     with _$GetAllAchievementOutput {
   const factory GetAllAchievementOutput({
+    required List<AchievementType> achievementTypes,
     required List<Achievement> achievements,
   }) = _GetAllAchievementOutput;
 }

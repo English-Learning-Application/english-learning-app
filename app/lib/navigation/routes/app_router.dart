@@ -231,6 +231,12 @@ class AppRouter extends $AppRouter {
           ],
         ),
         AutoRoute(
+          page: ProgressionRoute.page,
+          guards: [
+            _routeGuard,
+          ],
+        ),
+        AutoRoute(
           page: BookmarkCourseFlowRoute.page,
           guards: [
             _routeGuard,

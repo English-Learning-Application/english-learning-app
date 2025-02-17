@@ -52,6 +52,7 @@ import 'package:app/features/photo_bottom_sheet/view_model/photo_bottom_sheet.da
 import 'package:app/features/private_chat/view_model/private_chat.dart'
     as _i173;
 import 'package:app/features/profile/view_models/profile.dart' as _i238;
+import 'package:app/features/progression/view_model/progression.dart' as _i823;
 import 'package:app/features/pronunciation_learning/view_model/pronunciation_learning.dart'
     as _i143;
 import 'package:app/features/quiz_learning/view_model/quiz_learning.dart'
@@ -149,10 +150,8 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i182.GetLoggedInUserUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),
         ));
-    gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel(
-          gh<_i182.GetCommunityTopicsUseCase>(),
-          gh<_i182.GetUserSessionsByTopicUseCase>(),
-        ));
+    gh.factory<_i823.ProgressionViewModel>(() =>
+        _i823.ProgressionViewModel(gh<_i182.GetAllLearningProgressUseCase>()));
     gh.factory<_i1032.PhotoBottomSheetViewModel>(
         () => _i1032.PhotoBottomSheetViewModel(
               gh<_i182.GetPhoneImagesUseCase>(),
@@ -243,6 +242,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i965.CommunitySubscriptionRouteGuard>(() =>
         _i965.CommunitySubscriptionRouteGuard(
             gh<_i182.HasSubscriptionUseCase>()));
+    gh.factory<_i885.HomeViewModel>(() => _i885.HomeViewModel(
+          gh<_i182.GetCommunityTopicsUseCase>(),
+          gh<_i182.GetUserSessionsByTopicUseCase>(),
+          gh<_i182.GetAllLearningProgressUseCase>(),
+        ));
     gh.factory<_i366.CourseViewModel>(() => _i366.CourseViewModel(
           gh<_i182.GetCategoriesUseCase>(),
           gh<_i182.GetCategoryCoursesByLanguageUseCase>(),

@@ -99,6 +99,7 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
         emailOrPhoneNumber: emailOrPhoneNumber,
       ),
       bookmarkCourses: () => const BookmarkCourseFlowRoute(),
+      progression: () => const ProgressionRoute(),
     );
   }
 }

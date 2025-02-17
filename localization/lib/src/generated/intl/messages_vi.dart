@@ -120,9 +120,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email hoặc số điện thoại"),
         "english": MessageLookupByLibrary.simpleMessage("Tiếng Anh"),
         "error1": MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
+        "exploreCourses":
+            MessageLookupByLibrary.simpleMessage("Khám phá khóa học"),
         "expression": MessageLookupByLibrary.simpleMessage("Biểu cảm"),
         "fieldIsRequired":
             MessageLookupByLibrary.simpleMessage("Trường này là bắt buộc"),
+        "flashCard": MessageLookupByLibrary.simpleMessage("Thẻ ghi nhớ"),
         "flashCardLearning":
             MessageLookupByLibrary.simpleMessage("Học thẻ ghi nhớ"),
         "flashcard": MessageLookupByLibrary.simpleMessage("Thẻ ghi nhớ"),
@@ -180,6 +183,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thông tin học tập"),
         "learningLanguage":
             MessageLookupByLibrary.simpleMessage("Ngôn ngữ học"),
+        "learningProgression":
+            MessageLookupByLibrary.simpleMessage("Tiến trình học tập"),
         "lessons": MessageLookupByLibrary.simpleMessage("Bài học"),
         "level": MessageLookupByLibrary.simpleMessage("Cấp độ"),
         "listenAndMatch":
@@ -218,6 +223,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("Tiếp theo"),
         "noFriendChatsFound": MessageLookupByLibrary.simpleMessage(
             "Không tìm thấy trò chuyện với bạn bè"),
+        "noInProgressCourses": MessageLookupByLibrary.simpleMessage(
+            "Không có khóa học nào đang học"),
         "noInternetException":
             MessageLookupByLibrary.simpleMessage("Không có mạng"),
         "noUsername":

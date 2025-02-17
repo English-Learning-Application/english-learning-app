@@ -63,6 +63,8 @@ import 'package:logic/src/features/community/use_case/join_chat_session_use_case
     as _i1022;
 import 'package:logic/src/features/exercise/use_case/flash_card_learning_update_use_case.dart'
     as _i700;
+import 'package:logic/src/features/exercise/use_case/get_all_learning_progress_use_case.dart'
+    as _i765;
 import 'package:logic/src/features/exercise/use_case/matching_learning_update_use_case.dart'
     as _i37;
 import 'package:logic/src/features/exercise/use_case/pronunciation_assessment_use_case.dart'
@@ -255,6 +257,11 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i119.RegisterFcmTokenUseCase(
               gh<_i182.NotificationRepository>(),
               gh<_i182.AppRepository>(),
+            ));
+    gh.factory<_i765.GetAllLearningProgressUseCase>(
+        () => _i765.GetAllLearningProgressUseCase(
+              gh<_i182.ExerciseRepository>(),
+              gh<_i182.LanguageCourseRepository>(),
             ));
     gh.factory<_i700.FlashCardLearningUpdateUseCase>(() =>
         _i700.FlashCardLearningUpdateUseCase(gh<_i182.ExerciseRepository>()));

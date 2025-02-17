@@ -48,6 +48,13 @@ class PronunciationLearning with _$PronunciationLearning {
     @Default(PronunciationLearning.defaultCourseId) String courseId,
     @Default(PronunciationLearning.defaultPronunciationLearningContents)
     List<PronunciationAssessment> pronunciationLearningContents,
+    @Default(Word()) Word? word,
+    @Default(PhrasalVerb()) PhrasalVerb? phrasalVerb,
+    @Default(Expression()) Expression? expression,
+    @Default(Idiom()) Idiom? idiom,
+    @Default(Sentence()) Sentence? sentence,
+    @Default(Phonetic()) Phonetic? phonetic,
+    @Default(Tense()) Tense? tense,
   }) = _PronunciationLearning;
 
   static const defaultPronunciationLearningId = '';

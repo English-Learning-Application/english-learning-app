@@ -46,6 +46,13 @@ class FlashCardLearning with _$FlashCardLearning {
     @Default(FlashCardLearning.defaultCourseId) String courseId,
     @Default(FlashCardLearning.defaultNumberOfLearned) int numberOfLearned,
     @Default(FlashCardLearning.defaultNumberOfSkipped) int numberOfSkipped,
+    @Default(Word()) Word? word,
+    @Default(PhrasalVerb()) PhrasalVerb? phrasalVerb,
+    @Default(Expression()) Expression? expression,
+    @Default(Idiom()) Idiom? idiom,
+    @Default(Sentence()) Sentence? sentence,
+    @Default(Phonetic()) Phonetic? phonetic,
+    @Default(Tense()) Tense? tense,
   }) = _FlashCardLearning;
 
   static const defaultFlashCardLearningId = '';

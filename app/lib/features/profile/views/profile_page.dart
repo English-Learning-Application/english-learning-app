@@ -460,6 +460,21 @@ class _ProfilePageState extends BasePageState<ProfilePage, ProfileViewModel> {
                 GestureDetector(
                   onTap: () async {
                     await navigator.push(
+                      const AppRouteInfo.progression(),
+                    );
+                  },
+                  child: _buildProfileItem(
+                    title: S.current.learningProgression,
+                    value: Icon(
+                      Icons.arrow_forward_ios,
+                      size: Dimens.d16.responsive(),
+                      color: FoundationColors.neutral50,
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () async {
+                    await navigator.push(
                       const AppRouteInfo.subscription(),
                     );
                   },

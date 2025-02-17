@@ -17,10 +17,33 @@ class AchievementTrackerViewModel
 
         updateData(
           viewModelData.copyWith(
+            originalAchievements: resp.achievements,
             achievements: resp.achievements,
+            achievementTypes: resp.achievementTypes,
           ),
         );
       },
+    );
+  }
+
+  void selectAchievementType(AchievementType type) {
+    if (viewModelData.selectedAchievementType == type) {
+      final achievementList = [...viewModelData.originalAchievements];
+      updateData(
+        viewModelData.copyWith(
+          selectedAchievementType: null,
+          achievements: achievementList,
+        ),
+      );
+      return;
+    }
+    updateData(
+      viewModelData.copyWith(
+        selectedAchievementType: type,
+        achievements: viewModelData.originalAchievements
+            .where((element) => element.achievementType == type)
+            .toList(),
+      ),
     );
   }
 }

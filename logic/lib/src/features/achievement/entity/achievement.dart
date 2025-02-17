@@ -1,6 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:services/services.dart';
 
+import '../../../../logic.dart';
+
 part 'achievement.freezed.dart';
 
 @freezed
@@ -9,7 +11,7 @@ class Achievement with _$Achievement {
   const factory Achievement({
     @Default(Achievement.defaultAchievementId) String achievementId,
     @Default(Achievement.defaultAchievementKey) String achievementKey,
-    @Default(Achievement.defaultAchievementType) String achievementType,
+    @Default(Achievement.defaultAchievementType) AchievementType achievementType,
     @Default(Achievement.defaultAchievementThreshold) int threshold,
     @Default(Achievement.defaultEnglishName) String englishName,
     @Default(Achievement.defaultVietnameseName) String vietnameseName,
@@ -25,7 +27,8 @@ class Achievement with _$Achievement {
 
   static const defaultAchievementId = '';
   static const defaultAchievementKey = '';
-  static const defaultAchievementType = '';
+  static const AchievementType defaultAchievementType =
+      AchievementType.flashCard;
   static const defaultAchievementThreshold = 0;
   static const defaultEnglishName = '';
   static const defaultVietnameseName = '';

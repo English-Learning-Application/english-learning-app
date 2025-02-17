@@ -74,14 +74,15 @@ class _BookmarkCoursesPageState
                 itemBuilder: (_, bookmarkCategoryCourseIndex) {
                   final bookmarkedLanguageCourse =
                       bookmarkedLanguageCourses[bookmarkCategoryCourseIndex];
+                  final courseName =
+                      "${bookmarkedLanguageCourse.learningType.learningTypeName} - ${bookmarkedLanguageCourse.level.levelName}";
                   return BookmarkCourseItem(
                     onTap: () {
                       onLanguageCourseTap(bookmarkedLanguageCourse);
                     },
                     learningLanguage: bookmarkedLanguageCourse.language,
                     courseType: CourseType.language,
-                    courseName:
-                        bookmarkedLanguageCourse.learningType.learningTypeName,
+                    courseName: courseName,
                     progress: bookmarkedLanguageCourse.completionProgress(),
                   );
                 },

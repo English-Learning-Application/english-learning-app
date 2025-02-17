@@ -13,7 +13,7 @@ class ApiAchievementDataMapper
     return ApiAchievementData(
       achievementId: entity.achievementId,
       achievementKey: entity.achievementKey,
-      achievementType: entity.achievementType,
+      achievementType: entity.achievementType.serverValue,
       achievementThreshold: entity.threshold,
       englishName: entity.englishName,
       vietnameseName: entity.vietnameseName,
@@ -32,8 +32,7 @@ class ApiAchievementDataMapper
     return Achievement(
       achievementId: data?.achievementId ?? Achievement.defaultAchievementId,
       achievementKey: data?.achievementKey ?? Achievement.defaultAchievementKey,
-      achievementType:
-          data?.achievementType ?? Achievement.defaultAchievementType,
+      achievementType: AchievementType.fromServerValue(data?.achievementType),
       threshold:
           data?.achievementThreshold ?? Achievement.defaultAchievementThreshold,
       englishName: data?.englishName ?? Achievement.defaultEnglishName,
