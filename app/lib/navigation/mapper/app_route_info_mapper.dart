@@ -98,6 +98,7 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
           ResetPasswordConfirmationRoute(
         emailOrPhoneNumber: emailOrPhoneNumber,
       ),
+      bookmarkCourses: () => const BookmarkCourseFlowRoute(),
     );
   }
 }

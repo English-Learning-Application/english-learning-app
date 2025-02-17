@@ -9,6 +9,34 @@ enum InitialAppRoute {
   home,
 }
 
+enum CourseType {
+  language(ServerRequestResponseConstants.languageCourse),
+  category(ServerRequestResponseConstants.categoryCourse);
+
+  const CourseType(this.serverValue);
+  final String serverValue;
+
+  static fromServerValue(String? serverValue) {
+    switch (serverValue) {
+      case ServerRequestResponseConstants.languageCourse:
+        return CourseType.language;
+      case ServerRequestResponseConstants.categoryCourse:
+        return CourseType.category;
+      default:
+        return CourseType.language;
+    }
+  }
+
+  String get courseTypeName {
+    switch (this) {
+      case CourseType.language:
+        return S.current.language;
+      case CourseType.category:
+        return S.current.category;
+    }
+  }
+}
+
 enum LearningLanguage {
   english(ServerRequestResponseConstants.english),
   vietnamese(ServerRequestResponseConstants.vietnamese),

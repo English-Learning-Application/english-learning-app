@@ -91,3 +91,4 @@ export 'features/achievement_tracker/view/achievement_tracker_page.dart';
 export 'features/achievement_tracker/view_model/achievement_tracker.dart';
 export 'features/reset_password/view_model/reset_password.dart';
 export 'features/reset_password_confirmation/view_model/reset_password_confirmation.dart';
+export 'features/bookmark_courses/view_model/bookmark_courses.dart';

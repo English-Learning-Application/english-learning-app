@@ -2319,6 +2319,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Click to bookmark/unbookmark this course`
+  String get clickToBookmarkCourse {
+    return Intl.message(
+      'Click to bookmark/unbookmark this course',
+      name: 'clickToBookmarkCourse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bookmark Courses`
+  String get bookmarkCourses {
+    return Intl.message(
+      'Bookmark Courses',
+      name: 'bookmarkCourses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Category`
+  String get category {
+    return Intl.message(
+      'Category',
+      name: 'category',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

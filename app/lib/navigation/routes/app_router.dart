@@ -230,6 +230,27 @@ class AppRouter extends $AppRouter {
             _routeGuard,
           ],
         ),
+        AutoRoute(
+          page: BookmarkCourseFlowRoute.page,
+          guards: [
+            _routeGuard,
+          ],
+          children: [
+            AutoRoute(
+              page: BookmarkCoursesRoute.page,
+              initial: true,
+            ),
+            AutoRoute(
+              page: LanguageCourseRoute.page,
+            ),
+            AutoRoute(
+              page: LanguageCourseDetailsRoute.page,
+            ),
+            AutoRoute(
+              page: CategoryCourseLessonRoute.page,
+            ),
+          ],
+        ),
       ];
 }
 
@@ -266,4 +287,9 @@ class ProfileTabPage extends AutoRouter {
 @RoutePage()
 class ResetPasswordFlowPage extends AutoRouter {
   const ResetPasswordFlowPage({super.key});
+}
+
+@RoutePage()
+class BookmarkCourseFlowPage extends AutoRouter {
+  const BookmarkCourseFlowPage({super.key});
 }

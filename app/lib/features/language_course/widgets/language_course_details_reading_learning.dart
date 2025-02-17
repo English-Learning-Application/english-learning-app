@@ -23,6 +23,7 @@ class LanguageCourseDetailsReadingLearning extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
           height: Dimens.d16.responsive(),

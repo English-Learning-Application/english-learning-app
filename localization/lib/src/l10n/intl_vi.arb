@@ -225,5 +225,8 @@
     "emailOrPhone": "Email hoặc số điện thoại",
     "resetEmailDescription": "Nhập email hoặc số điện thoại của bạn để đặt lại mật khẩu",
     "invalidEmailOrPhone": "Email hoặc số điện thoại không hợp lệ",
-    "resetPasswordInstruction": "Bạn hãy nhập mật khẩu mới và mã OTP đã được gửi đến email hoặc số điện thoại của bạn để đặt lại mật khẩu"
+    "resetPasswordInstruction": "Bạn hãy nhập mật khẩu mới và mã OTP đã được gửi đến email hoặc số điện thoại của bạn để đặt lại mật khẩu",
+    "clickToBookmarkCourse": "Nhấn vào đây để đánh dấu khóa học",
+    "bookmarkCourses": "Khoá học đã đánh dấu",
+    "category": "Danh mục"
 }

@@ -80,4 +80,5 @@ class AppRouteInfo with _$AppRouteInfo {
   const factory AppRouteInfo.resetPasswordConfirm({
     required String emailOrPhoneNumber,
   }) = _ResetPasswordConfirm;
+  const factory AppRouteInfo.bookmarkCourses() = _BookmarkCourses;
 }

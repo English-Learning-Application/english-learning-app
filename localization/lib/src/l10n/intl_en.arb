@@ -225,6 +225,9 @@
     "emailOrPhone": "Email or phone",
     "resetEmailDescription": "Reset your password by entering your email or phone number",
     "invalidEmailOrPhone": "Invalid email or phone number",
-    "resetPasswordInstruction": "Enter your new password and the OTP sent to your email or phone number to reset your password"
+    "resetPasswordInstruction": "Enter your new password and the OTP sent to your email or phone number to reset your password",
+    "clickToBookmarkCourse": "Click to bookmark/unbookmark this course",
+    "bookmarkCourses": "Bookmark Courses",
+    "category": "Category"
 }
 

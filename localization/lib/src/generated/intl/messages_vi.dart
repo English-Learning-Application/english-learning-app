@@ -47,6 +47,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Quay lại khóa học"),
         "badCertificateException":
             MessageLookupByLibrary.simpleMessage("Lỗi bảo mật chứng chỉ"),
+        "bookmarkCourses":
+            MessageLookupByLibrary.simpleMessage("Khoá học đã đánh dấu"),
         "canChooseUpTo3LearningModes": MessageLookupByLibrary.simpleMessage(
             "Bạn có thể chọn tối đa 3 chế độ học tập"),
         "canNotConnectToHost": MessageLookupByLibrary.simpleMessage(
@@ -54,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Lỗi hủy"),
+        "category": MessageLookupByLibrary.simpleMessage("Danh mục"),
         "changePasswordTooltip": MessageLookupByLibrary.simpleMessage(
             "Bạn có thể để trống mật khẩu cũ nếu bạn đăng nhập bằng Google hoặc Facebook"),
         "chat": MessageLookupByLibrary.simpleMessage("Trò chuyện"),
@@ -75,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseTheLanguage":
             MessageLookupByLibrary.simpleMessage("Chọn ngôn ngữ"),
         "chooseWhat": MessageLookupByLibrary.simpleMessage("Chọn nội dung"),
+        "clickToBookmarkCourse": MessageLookupByLibrary.simpleMessage(
+            "Nhấn vào đây để đánh dấu khóa học"),
         "community": MessageLookupByLibrary.simpleMessage("Cộng đồng"),
         "communityHub":
             MessageLookupByLibrary.simpleMessage("Trung tâm cộng đồng"),

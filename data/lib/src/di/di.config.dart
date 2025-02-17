@@ -76,6 +76,12 @@ import 'package:data/src/features/authentication/data_source/api/authentication_
     as _i920;
 import 'package:data/src/features/authentication/repository/authentication_repository_impl.dart'
     as _i322;
+import 'package:data/src/features/bookmark/data_source/api/bookmark_api_data_source.dart'
+    as _i543;
+import 'package:data/src/features/bookmark/mapper/api_user_bookmarked_course_data_mapper.dart'
+    as _i932;
+import 'package:data/src/features/bookmark/repository/bookmark_repository_impl.dart'
+    as _i525;
 import 'package:data/src/features/community/data_source/chat_bot_api_service.dart'
     as _i787;
 import 'package:data/src/features/community/data_source/community_api_service.dart'
@@ -221,6 +227,8 @@ extension GetItInjectableX on _i174.GetIt {
       () => dataModule.getStore(),
       preResolve: true,
     );
+    gh.factory<_i136.ApiAchievementDataMapper>(
+        () => _i136.ApiAchievementDataMapper());
     gh.factory<_i897.ApiMessageUserDataMapper>(
         () => _i897.ApiMessageUserDataMapper());
     gh.factory<_i24.ApiFlashCardLearningInfoMapper>(
@@ -264,8 +272,8 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i397.ApiUserSubscriptionDataMapper());
     gh.factory<_i468.ApiUserTodoDataMapper>(
         () => _i468.ApiUserTodoDataMapper());
-    gh.factory<_i136.ApiAchievementDataMapper>(
-        () => _i136.ApiAchievementDataMapper());
+    gh.factory<_i932.ApiUserBookmarkedCourseDataMapper>(
+        () => _i932.ApiUserBookmarkedCourseDataMapper());
     gh.lazySingleton<_i665.AppAssetsService>(
         () => const _i665.AppAssetsService());
     gh.factory<_i77.HeaderInterceptor>(
@@ -365,6 +373,10 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.NonAuthAppServerApiClient>(),
               gh<_i437.AuthAppServerApiClient>(),
             ));
+    gh.lazySingleton<_i763.AchievementApiService>(
+        () => _i763.AchievementApiService(gh<_i437.AuthAppServerApiClient>()));
+    gh.lazySingleton<_i543.BookmarkApiDataSource>(
+        () => _i543.BookmarkApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i787.ChatBotApiService>(
         () => _i787.ChatBotApiService(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i539.CommunityApiService>(
@@ -381,8 +393,6 @@ extension GetItInjectableX on _i174.GetIt {
         _i702.SubscriptionApiDataSource(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i557.TodoApiService>(
         () => _i557.TodoApiService(gh<_i437.AuthAppServerApiClient>()));
-    gh.lazySingleton<_i763.AchievementApiService>(
-        () => _i763.AchievementApiService(gh<_i437.AuthAppServerApiClient>()));
     gh.lazySingleton<_i182.LanguageCourseRepository>(
         () => _i725.LanguageCourseRepositoryImpl(
               gh<_i437.LanguageCourseApiDataSource>(),
@@ -442,6 +452,11 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i437.AppPreferences>(),
           gh<_i437.ApiUserDataMapper>(),
         ));
+    gh.lazySingleton<_i182.BookmarkRepository>(
+        () => _i525.BookmarkRepositoryImpl(
+              gh<_i437.BookmarkApiDataSource>(),
+              gh<_i437.ApiUserBookmarkedCourseDataMapper>(),
+            ));
     gh.lazySingleton<_i182.NotificationRepository>(
         () => _i946.NotificationRepositoryImpl(
               gh<_i82.NotificationApiDataSource>(),

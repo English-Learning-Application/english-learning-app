@@ -48,6 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Back to courses"),
         "badCertificateException":
             MessageLookupByLibrary.simpleMessage("Bad Certificate"),
+        "bookmarkCourses":
+            MessageLookupByLibrary.simpleMessage("Bookmark Courses"),
         "canChooseUpTo3LearningModes": MessageLookupByLibrary.simpleMessage(
             "You can choose up to 3 learning modes"),
         "canNotConnectToHost":
@@ -55,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancellationException":
             MessageLookupByLibrary.simpleMessage("Cancellation"),
+        "category": MessageLookupByLibrary.simpleMessage("Category"),
         "changePasswordTooltip": MessageLookupByLibrary.simpleMessage(
             "You can leave the old password field empty if you use using social login"),
         "chat": MessageLookupByLibrary.simpleMessage("Chat"),
@@ -76,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseTheLanguage":
             MessageLookupByLibrary.simpleMessage("Choose the language"),
         "chooseWhat": MessageLookupByLibrary.simpleMessage("Choose what"),
+        "clickToBookmarkCourse": MessageLookupByLibrary.simpleMessage(
+            "Click to bookmark/unbookmark this course"),
         "community": MessageLookupByLibrary.simpleMessage("Community"),
         "communityHub": MessageLookupByLibrary.simpleMessage("Community Hub"),
         "communityHubIntro": MessageLookupByLibrary.simpleMessage(

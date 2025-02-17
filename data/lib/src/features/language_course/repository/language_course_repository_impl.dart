@@ -60,4 +60,24 @@ class LanguageCourseRepositoryImpl implements LanguageCourseRepository {
 
     return _apiCategoryMapper.mapToListEntities(response?.results);
   }
+
+  @override
+  Future<List<CategoryCourse>> getCategoryCoursesByIds(
+    List<String> categoryCourseIds,
+  ) async {
+    final resp = await _languageCourseApiDataSource
+        .getCategoryCoursesByIds(categoryCourseIds);
+
+    return _apiCategoryCourseMapper.mapToListEntities(resp?.results);
+  }
+
+  @override
+  Future<List<LanguageCourse>> getLanguageCoursesByIds(
+    List<String> languageCourseIds,
+  ) async {
+    final resp = await _languageCourseApiDataSource
+        .getLanguageCoursesByIds(languageCourseIds);
+
+    return _apiLanguageCourseDataMapper.mapToListEntities(resp?.results);
+  }
 }

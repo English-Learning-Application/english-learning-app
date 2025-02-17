@@ -7,5 +7,6 @@ class CategoryCourseLessonViewModelData extends BaseViewModelData
     @Default(CategoryCourse()) CategoryCourse categoryCourse,
     @Default([])
     List<LanguageCourseLearningContent> languageCourseLearningContents,
+    @Default(false) bool isBookmarked,
   }) = _CategoryCourseLessonViewModelData;
 }

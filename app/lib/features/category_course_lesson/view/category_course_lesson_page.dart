@@ -60,6 +60,35 @@ class _CategoryCourseLessonPageState extends BasePageState<
     return CommonScaffold(
       appBar: CommonAppBar(
         titleText: categoryCourseName,
+        trailingIconSize: Dimens.d24.responsive(),
+        trailing: Selector<CategoryCourseLessonViewModel,
+            CategoryCourseLessonViewModelData>(
+          builder: (_, vmData, __) {
+            return GestureDetector(
+              onTap: () {
+                if (vmData.isBookmarked) {
+                  viewModel.removeBookmarkCourse();
+                } else {
+                  viewModel.bookmarkCourse();
+                }
+              },
+              child: Tooltip(
+                message: S.current.clickToBookmarkCourse,
+                child: Icon(
+                  size: Dimens.d24.responsive(),
+                  vmData.isBookmarked
+                      ? Icons.bookmark_rounded
+                      : Icons.bookmark_border_rounded,
+                  color: AppColors.current.primaryColor,
+                ),
+              ),
+            );
+          },
+          selector: (_, vm) => vm.viewModelData,
+          shouldRebuild: (prev, next) {
+            return prev.isBookmarked != next.isBookmarked;
+          },
+        ),
       ),
       body: _buildBody(),
     );

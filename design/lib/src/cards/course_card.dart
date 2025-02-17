@@ -33,6 +33,9 @@ class _CourseCardState extends State<CourseCard> {
         widget.borderRadius ?? Dimens.d8.responsive(),
       ),
       onTap: () {
+        setState(() {
+          _isPressed = false;
+        });
         widget.onPressed();
       },
       onTapCancel: () {

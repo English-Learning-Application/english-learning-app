@@ -60,4 +60,34 @@ class LanguageCourseApiDataSource {
       decoder: (json) => ApiCategory.fromJson(json as Map<String, dynamic>),
     );
   }
+
+  Future<ListResponse<ApiCategoryCourseData>?> getCategoryCoursesByIds(
+    List<String> categoryCourseIds,
+  ) async {
+    return await _authAppServerApiClient.request(
+      method: RestApiMethod.get,
+      path: '/courses/categories/courses',
+      successResponseMapperType: SuccessResponseMapperType.listResponse,
+      queryParameters: {
+        'ids': categoryCourseIds.join(','),
+      },
+      decoder: (json) =>
+          ApiCategoryCourseData.fromJson(json as Map<String, dynamic>),
+    );
+  }
+
+  Future<ListResponse<ApiLanguageCourseData>?> getLanguageCoursesByIds(
+    List<String> languageCourseIds,
+  ) async {
+    return await _authAppServerApiClient.request(
+      method: RestApiMethod.get,
+      path: '/courses',
+      successResponseMapperType: SuccessResponseMapperType.listResponse,
+      queryParameters: {
+        'ids': languageCourseIds.join(','),
+      },
+      decoder: (json) =>
+          ApiLanguageCourseData.fromJson(json as Map<String, dynamic>),
+    );
+  }
 }

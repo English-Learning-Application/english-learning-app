@@ -18,6 +18,8 @@ import 'package:app/features/achievement_tracker/view_model/achievement_tracker.
 import 'package:app/features/ai_chat_bot/view_models/ai_chat_bot.dart' as _i709;
 import 'package:app/features/ai_chat_bot_details/view_model/ai_chat_bot_details.dart'
     as _i825;
+import 'package:app/features/bookmark_courses/view_model/bookmark_courses.dart'
+    as _i377;
 import 'package:app/features/category_course_details/view_models/category_course_details.dart'
     as _i583;
 import 'package:app/features/category_course_lesson/view_model/category_course_lesson.dart'
@@ -100,14 +102,12 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     final appModules = _$AppModules();
+    gh.factory<_i583.CategoryCourseDetailsViewModel>(
+        () => _i583.CategoryCourseDetailsViewModel());
     gh.factory<_i901.ListeningLearningViewModel>(
         () => _i901.ListeningLearningViewModel());
     gh.factory<_i93.MainViewModel>(() => _i93.MainViewModel());
     gh.factory<_i646.OnboardingViewModel>(() => _i646.OnboardingViewModel());
-    gh.factory<_i583.CategoryCourseDetailsViewModel>(
-        () => _i583.CategoryCourseDetailsViewModel());
-    gh.factory<_i1024.CategoryCourseLessonViewModel>(
-        () => _i1024.CategoryCourseLessonViewModel());
     gh.lazySingleton<_i50.FlutterTts>(() => appModules.flutterTts);
     gh.lazySingleton<_i398.FirebaseAnalytics>(
         () => appModules.firebaseAnalytics);
@@ -115,6 +115,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i34.ResetPasswordConfirmationViewModel>(() =>
         _i34.ResetPasswordConfirmationViewModel(
             gh<_i182.ResetPasswordUseCase>()));
+    gh.factory<_i377.BookmarkCoursesViewModel>(() =>
+        _i377.BookmarkCoursesViewModel(
+            gh<_i182.GetAllUserBookmarkCoursesUseCase>()));
     gh.factory<_i915.CommonViewModel>(() => _i915.CommonViewModel(
           gh<_i182.LogoutUseCase>(),
           gh<_i182.TrackConnectivityUseCase>(),
@@ -190,6 +193,12 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i137.StompDartService>(),
           gh<_i437.ChatMessageDataMapper>(),
         ));
+    gh.factory<_i1024.CategoryCourseLessonViewModel>(
+        () => _i1024.CategoryCourseLessonViewModel(
+              gh<_i182.BookmarkCourseUseCase>(),
+              gh<_i182.IsCourseBookmarkUseCase>(),
+              gh<_i182.RemoveBookmarkUseCase>(),
+            ));
     gh.factory<_i825.AiChatBotDetailsViewModel>(
         () => _i825.AiChatBotDetailsViewModel(
               gh<_i137.StompDartService>(),
@@ -205,8 +214,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i752.CompleteRegistrationViewModel>(() =>
         _i752.CompleteRegistrationViewModel(
             gh<_i182.RegistrationCompletionUseCase>()));
-    gh.factory<_i725.LanguageCourseDetailsViewModel>(
-        () => _i725.LanguageCourseDetailsViewModel(gh<_i50.FlutterTts>()));
     gh.factory<_i238.ProfileViewModel>(
         () => _i238.ProfileViewModel(gh<_i182.UpdateUserPasswordUseCase>()));
     gh.factory<_i143.PronunciationLearningViewModel>(
@@ -218,6 +225,13 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i235.MatchingLearningViewModel>(() =>
         _i235.MatchingLearningViewModel(
             gh<_i182.MatchingLearningUpdateUseCase>()));
+    gh.factory<_i725.LanguageCourseDetailsViewModel>(
+        () => _i725.LanguageCourseDetailsViewModel(
+              gh<_i50.FlutterTts>(),
+              gh<_i182.BookmarkCourseUseCase>(),
+              gh<_i182.IsCourseBookmarkUseCase>(),
+              gh<_i182.RemoveBookmarkUseCase>(),
+            ));
     gh.factory<_i990.TodoViewModel>(() => _i990.TodoViewModel(
           gh<_i182.GetAllTodosUseCase>(),
           gh<_i182.DeleteTodoUseCase>(),

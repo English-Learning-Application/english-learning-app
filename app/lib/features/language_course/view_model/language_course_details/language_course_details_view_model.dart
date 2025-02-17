@@ -4,16 +4,60 @@ part of 'language_course_details.dart';
 class LanguageCourseDetailsViewModel
     extends BaseViewModel<LanguageCourseDetailsViewModelData> {
   final FlutterTts _flutterTts;
+  final BookmarkCourseUseCase _bookmarkCourseUseCase;
+  final IsCourseBookmarkUseCase _isCourseBookmarkUseCase;
+  final RemoveBookmarkUseCase _removeBookmarkUseCase;
   LanguageCourseDetailsViewModel(
     this._flutterTts,
+    this._bookmarkCourseUseCase,
+    this._isCourseBookmarkUseCase,
+    this._removeBookmarkUseCase,
   ) : super(const LanguageCourseDetailsViewModelData());
 
-  void init(LanguageCourse languageCourse) {
-    updateData(
-      viewModelData.copyWith(
-        languageCourse: languageCourse,
-        learningType: languageCourse.learningType,
-      ),
+  void init(LanguageCourse languageCourse) async {
+    await runViewModelCatching(
+      action: () async {
+        final resp = await _isCourseBookmarkUseCase.execute(
+          IsCourseBookmarkInput(course: languageCourse),
+        );
+        updateData(
+          viewModelData.copyWith(
+            languageCourse: languageCourse,
+            learningType: languageCourse.learningType,
+            isBookmarked: resp.isBookmarked,
+          ),
+        );
+      },
+    );
+  }
+
+  void removeBookmarkCourse() async {
+    await runViewModelCatching(
+      action: () async {
+        await _removeBookmarkUseCase.execute(
+          RemoveBookmarkInput(course: viewModelData.languageCourse),
+        );
+        updateData(
+          viewModelData.copyWith(
+            isBookmarked: false,
+          ),
+        );
+      },
+    );
+  }
+
+  void bookmarkCourse() async {
+    await runViewModelCatching(
+      action: () async {
+        await _bookmarkCourseUseCase.execute(
+          BookmarkCourseInput(course: viewModelData.languageCourse),
+        );
+        updateData(
+          viewModelData.copyWith(
+            isBookmarked: true,
+          ),
+        );
+      },
     );
   }
 

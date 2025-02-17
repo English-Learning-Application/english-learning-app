@@ -7,5 +7,6 @@ class LanguageCourseDetailsViewModelData extends BaseViewModelData
   const factory LanguageCourseDetailsViewModelData({
     @Default(LanguageCourse()) LanguageCourse languageCourse,
     @Default(LearningType.vocabulary) LearningType learningType,
+    @Default(false) bool isBookmarked,
   }) = _LanguageCourseDetailsViewModelData;
 }

@@ -4,18 +4,62 @@ part of 'category_course_lesson.dart';
 class CategoryCourseLessonViewModel
     extends BaseViewModel<CategoryCourseLessonViewModelData> {
   final FlutterTts _flutterTts = GetIt.instance<FlutterTts>();
-  CategoryCourseLessonViewModel()
-      : super(const CategoryCourseLessonViewModelData());
+  final BookmarkCourseUseCase _bookmarkCourseUseCase;
+  final IsCourseBookmarkUseCase _isCourseBookmarkUseCase;
+  final RemoveBookmarkUseCase _removeBookmarkUseCase;
+  CategoryCourseLessonViewModel(
+    this._bookmarkCourseUseCase,
+    this._isCourseBookmarkUseCase,
+    this._removeBookmarkUseCase,
+  ) : super(const CategoryCourseLessonViewModelData());
 
   void onInit({
     required List<LanguageCourseLearningContent> languageCourseLearningContent,
     required CategoryCourse categoryCourse,
-  }) {
-    updateData(
-      viewModelData.copyWith(
-        languageCourseLearningContents: languageCourseLearningContent,
-        categoryCourse: categoryCourse,
-      ),
+  }) async {
+    await runViewModelCatching(
+      action: () async {
+        final resp = await _isCourseBookmarkUseCase.execute(
+          IsCourseBookmarkInput(categoryCourse: categoryCourse),
+        );
+        updateData(
+          viewModelData.copyWith(
+            languageCourseLearningContents: languageCourseLearningContent,
+            categoryCourse: categoryCourse,
+            isBookmarked: resp.isBookmarked,
+          ),
+        );
+      },
+    );
+  }
+
+  void removeBookmarkCourse() async {
+    await runViewModelCatching(
+      action: () async {
+        await _removeBookmarkUseCase.execute(
+          RemoveBookmarkInput(categoryCourse: viewModelData.categoryCourse),
+        );
+        updateData(
+          viewModelData.copyWith(
+            isBookmarked: false,
+          ),
+        );
+      },
+    );
+  }
+
+  void bookmarkCourse() async {
+    await runViewModelCatching(
+      action: () async {
+        await _bookmarkCourseUseCase.execute(
+          BookmarkCourseInput(categoryCourse: viewModelData.categoryCourse),
+        );
+        updateData(
+          viewModelData.copyWith(
+            isBookmarked: true,
+          ),
+        );
+      },
     );
   }
 

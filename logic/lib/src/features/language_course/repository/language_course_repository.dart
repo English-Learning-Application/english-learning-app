@@ -16,4 +16,12 @@ abstract class LanguageCourseRepository {
   });
 
   Future<List<Category>> getCategories();
+
+  Future<List<CategoryCourse>> getCategoryCoursesByIds(
+    List<String> categoryCourseIds,
+  );
+
+  Future<List<LanguageCourse>> getLanguageCoursesByIds(
+    List<String> languageCourseIds,
+  );
 }

@@ -29,6 +29,14 @@ import 'package:logic/src/features/authentication/usecase/reset_password_use_cas
     as _i845;
 import 'package:logic/src/features/authentication/usecase/username_registration_use_case.dart'
     as _i323;
+import 'package:logic/src/features/bookmark/use_case/bookmark_course_use_case.dart'
+    as _i74;
+import 'package:logic/src/features/bookmark/use_case/get_all_user_bookmark_courses_use_case.dart'
+    as _i1031;
+import 'package:logic/src/features/bookmark/use_case/is_course_bookmark_use_case.dart'
+    as _i116;
+import 'package:logic/src/features/bookmark/use_case/remove_bookmark_use_case.dart'
+    as _i807;
 import 'package:logic/src/features/community/use_case/create_community_chat_session_use_case.dart'
     as _i239;
 import 'package:logic/src/features/community/use_case/create_new_chat_bot_session_use_case.dart'
@@ -133,12 +141,12 @@ extension GetItInjectableX on _i174.GetIt {
         () => const _i673.CheckPermissionUseCase());
     gh.factory<_i362.GetAllAchievementUseCase>(() =>
         _i362.GetAllAchievementUseCase(gh<_i182.AchievementRepository>()));
-    gh.factory<_i389.GetAllTodosUseCase>(
-        () => _i389.GetAllTodosUseCase(gh<_i182.TodoRepository>()));
     gh.factory<_i12.CreateTodoUseCase>(
         () => _i12.CreateTodoUseCase(gh<_i182.TodoRepository>()));
     gh.factory<_i504.DeleteTodoUseCase>(
         () => _i504.DeleteTodoUseCase(gh<_i182.TodoRepository>()));
+    gh.factory<_i389.GetAllTodosUseCase>(
+        () => _i389.GetAllTodosUseCase(gh<_i182.TodoRepository>()));
     gh.factory<_i32.UpdateTodoUseCase>(
         () => _i32.UpdateTodoUseCase(gh<_i182.TodoRepository>()));
     gh.factory<_i1051.HasSubscriptionUseCase>(
@@ -157,14 +165,20 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i119.RegistrationCompletionUseCase>(() =>
         _i119.RegistrationCompletionUseCase(
             gh<_i182.AuthenticationRepository>()));
-    gh.factory<_i323.UsernameRegistrationUseCase>(() =>
-        _i323.UsernameRegistrationUseCase(
-            gh<_i182.AuthenticationRepository>()));
     gh.factory<_i889.ResetPasswordRequestUseCase>(() =>
         _i889.ResetPasswordRequestUseCase(
             gh<_i182.AuthenticationRepository>()));
     gh.factory<_i845.ResetPasswordUseCase>(
         () => _i845.ResetPasswordUseCase(gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i323.UsernameRegistrationUseCase>(() =>
+        _i323.UsernameRegistrationUseCase(
+            gh<_i182.AuthenticationRepository>()));
+    gh.factory<_i1031.GetAllUserBookmarkCoursesUseCase>(
+        () => _i1031.GetAllUserBookmarkCoursesUseCase(
+              gh<_i182.BookmarkRepository>(),
+              gh<_i182.LanguageCourseRepository>(),
+              gh<_i182.ExerciseRepository>(),
+            ));
     gh.factory<_i855.CreateNewChatBotSessionUseCase>(() =>
         _i855.CreateNewChatBotSessionUseCase(gh<_i182.AiChatBotRepository>()));
     gh.factory<_i876.DeleteChatSessionUseCase>(
@@ -173,6 +187,12 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i956.GetChatBotMessagesUseCase(gh<_i182.AiChatBotRepository>()));
     gh.factory<_i813.GetChatBotSessionsUseCase>(
         () => _i813.GetChatBotSessionsUseCase(gh<_i182.AiChatBotRepository>()));
+    gh.factory<_i74.BookmarkCourseUseCase>(
+        () => _i74.BookmarkCourseUseCase(gh<_i182.BookmarkRepository>()));
+    gh.factory<_i807.RemoveBookmarkUseCase>(
+        () => _i807.RemoveBookmarkUseCase(gh<_i182.BookmarkRepository>()));
+    gh.factory<_i116.IsCourseBookmarkUseCase>(
+        () => _i116.IsCourseBookmarkUseCase(gh<_i182.BookmarkRepository>()));
     gh.factory<_i366.DeleteFcmTokensUseCase>(
         () => _i366.DeleteFcmTokensUseCase(gh<_i182.NotificationRepository>()));
     gh.factory<_i1006.FacebookLoginUseCase>(() => _i1006.FacebookLoginUseCase(
@@ -197,13 +217,13 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i179.GetSessionsByTopicUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i444.GetSessionMessagesUseCase>(
         () => _i444.GetSessionMessagesUseCase(gh<_i182.CommunityRepository>()));
+    gh.factory<_i709.GetUserSessionsByTopicUseCase>(() =>
+        _i709.GetUserSessionsByTopicUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i144.InitiatePrivateChatSessionUseCase>(() =>
         _i144.InitiatePrivateChatSessionUseCase(
             gh<_i182.CommunityRepository>()));
     gh.factory<_i1022.JoinChatSessionUseCase>(
         () => _i1022.JoinChatSessionUseCase(gh<_i182.CommunityRepository>()));
-    gh.factory<_i709.GetUserSessionsByTopicUseCase>(() =>
-        _i709.GetUserSessionsByTopicUseCase(gh<_i182.CommunityRepository>()));
     gh.factory<_i845.CreateSubscriptionPaymentUseCase>(() =>
         _i845.CreateSubscriptionPaymentUseCase(
             gh<_i182.SubscriptionRepository>()));
@@ -268,12 +288,12 @@ extension GetItInjectableX on _i174.GetIt {
         _i872.SendPhoneVerificationUseCase(gh<_i182.ProfileRepository>()));
     gh.factory<_i1052.UpdateUserAvatarUseCase>(
         () => _i1052.UpdateUserAvatarUseCase(gh<_i182.ProfileRepository>()));
+    gh.factory<_i593.UpdateUserPasswordUseCase>(
+        () => _i593.UpdateUserPasswordUseCase(gh<_i182.ProfileRepository>()));
     gh.factory<_i1020.UpdateUserProfileUseCase>(
         () => _i1020.UpdateUserProfileUseCase(gh<_i182.ProfileRepository>()));
     gh.factory<_i522.VerifyEmailOtpUseCase>(
         () => _i522.VerifyEmailOtpUseCase(gh<_i182.ProfileRepository>()));
-    gh.factory<_i593.UpdateUserPasswordUseCase>(
-        () => _i593.UpdateUserPasswordUseCase(gh<_i182.ProfileRepository>()));
     return this;
   }
 }

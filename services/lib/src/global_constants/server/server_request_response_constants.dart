@@ -8,6 +8,10 @@ class ServerRequestResponseConstants {
   static const bearer = 'Bearer';
   static const deviceId = 'X-Device-Id';
 
+  // Course Type
+  static const categoryCourse = 'CATEGORY';
+  static const languageCourse = 'LANGUAGE';
+
   // To-do Type
   static const general = 'GENERAL';
   static const course = 'COURSE';
