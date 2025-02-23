@@ -80,7 +80,7 @@ class LanguageCourseApiDataSource {
     List<String> languageCourseIds,
   ) async {
     return await _authAppServerApiClient.request(
-      method: RestApiMethod.get,
+      method: RestApiMethod.post,
       path: '/courses/all/search',
       successResponseMapperType: SuccessResponseMapperType.listResponse,
       queryParameters: {
