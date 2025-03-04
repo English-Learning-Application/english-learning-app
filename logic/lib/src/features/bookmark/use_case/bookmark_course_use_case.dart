@@ -14,6 +14,9 @@ class BookmarkCourseUseCase
   @override
   Future<BookmarkCourseOutput> buildUseCase(BookmarkCourseInput input) async {
     if (input.course.languageCourseId.isNotEmpty) {
+      _bookmarkRepository.saveToLocalLanguageCourse(
+        languageCourse: input.course,
+      );
       await _bookmarkRepository.bookmarkCourse(
         courseId: input.course.languageCourseId,
         courseType: CourseType.language,

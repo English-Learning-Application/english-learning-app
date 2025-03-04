@@ -79,11 +79,649 @@
           "targetId": "1:3672040623727277922"
         }
       ]
+    },
+    {
+      "id": "3:895316721939474678",
+      "lastPropertyId": "11:819508791689290626",
+      "name": "LocalCourseLearningContentData",
+      "properties": [
+        {
+          "id": "1:5249399843548682888",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3459190510713407193",
+          "name": "languageCourseLearningContentId",
+          "type": 9
+        },
+        {
+          "id": "3:8361505748138564700",
+          "name": "learningContentType",
+          "type": 9
+        },
+        {
+          "id": "4:7903504993345924684",
+          "name": "englishTitle",
+          "type": 9
+        },
+        {
+          "id": "5:8959613823099557316",
+          "name": "vietnameseTitle",
+          "type": 9
+        },
+        {
+          "id": "6:4016784722581656630",
+          "name": "frenchTitle",
+          "type": 9
+        },
+        {
+          "id": "7:5761338611574849331",
+          "name": "englishDescription",
+          "type": 9
+        },
+        {
+          "id": "8:8571216650587101749",
+          "name": "vietnameseDescription",
+          "type": 9
+        },
+        {
+          "id": "9:6899635378428544381",
+          "name": "frenchDescription",
+          "type": 9
+        },
+        {
+          "id": "10:8997617073932429789",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "11:819508791689290626",
+          "name": "updatedAt",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "2:1508888289533975238",
+          "name": "words",
+          "targetId": "12:6183458400034383904"
+        },
+        {
+          "id": "3:3305848673196369547",
+          "name": "expressions",
+          "targetId": "4:5275574373543711872"
+        },
+        {
+          "id": "4:1596568368282769186",
+          "name": "idioms",
+          "targetId": "5:8634069843011185283"
+        },
+        {
+          "id": "5:3920695651412592418",
+          "name": "sentences",
+          "targetId": "9:2177906232773265707"
+        },
+        {
+          "id": "6:2482932798138722109",
+          "name": "phrasalVerbs",
+          "targetId": "8:2415332168017870157"
+        },
+        {
+          "id": "7:7484277981382448082",
+          "name": "tenses",
+          "targetId": "10:1942075439372932900"
+        },
+        {
+          "id": "8:5673810165037096415",
+          "name": "phonetics",
+          "targetId": "7:4798099327502658918"
+        }
+      ]
+    },
+    {
+      "id": "4:5275574373543711872",
+      "lastPropertyId": "8:6414809764987137746",
+      "name": "LocalExpressionData",
+      "properties": [
+        {
+          "id": "1:3241037714507576636",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3099279360324249406",
+          "name": "expressionId",
+          "type": 9
+        },
+        {
+          "id": "3:3611548045935256948",
+          "name": "englishExpression",
+          "type": 9
+        },
+        {
+          "id": "4:7835828777091953702",
+          "name": "vietnameseExpression",
+          "type": 9
+        },
+        {
+          "id": "5:7615135673225648735",
+          "name": "frenchExpression",
+          "type": 9
+        },
+        {
+          "id": "6:6808500323421987292",
+          "name": "exampleUsage",
+          "type": 9
+        },
+        {
+          "id": "7:8621091119165456949",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "8:6414809764987137746",
+          "name": "updatedAt",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:8634069843011185283",
+      "lastPropertyId": "11:9038354994414286886",
+      "name": "LocalIdiomData",
+      "properties": [
+        {
+          "id": "1:5691227329970884200",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6939217769185165002",
+          "name": "idiomId",
+          "type": 9
+        },
+        {
+          "id": "3:5893721347764601927",
+          "name": "englishIdiom",
+          "type": 9
+        },
+        {
+          "id": "4:6062085605045415081",
+          "name": "vietnameseIdiom",
+          "type": 9
+        },
+        {
+          "id": "5:7082951500427462585",
+          "name": "frenchIdiom",
+          "type": 9
+        },
+        {
+          "id": "6:640224025887409136",
+          "name": "englishIdiomMeaning",
+          "type": 9
+        },
+        {
+          "id": "7:1929206228173385639",
+          "name": "vietnameseIdiomMeaning",
+          "type": 9
+        },
+        {
+          "id": "8:1898516228425231660",
+          "name": "frenchIdiomMeaning",
+          "type": 9
+        },
+        {
+          "id": "9:3631331934123857391",
+          "name": "exampleUsage",
+          "type": 9
+        },
+        {
+          "id": "10:2497750072235000315",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "11:9038354994414286886",
+          "name": "updatedAt",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:729391093864648635",
+      "lastPropertyId": "8:7376776703944142455",
+      "name": "LocalLanguageCourseData",
+      "properties": [
+        {
+          "id": "1:4559379868371807696",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1420625280194104815",
+          "name": "learningLanguage",
+          "type": 9
+        },
+        {
+          "id": "3:7319515731518616061",
+          "name": "languageLevel",
+          "type": 9
+        },
+        {
+          "id": "4:2633693450938998295",
+          "name": "learningType",
+          "type": 9
+        },
+        {
+          "id": "5:1068377654821525956",
+          "name": "requiredSubscription",
+          "type": 1
+        },
+        {
+          "id": "6:1511043672779272314",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "7:1654875410870333843",
+          "name": "updatedAt",
+          "type": 9
+        },
+        {
+          "id": "8:7376776703944142455",
+          "name": "languageCourseId",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "9:9102756320201513532",
+          "name": "courseLearningContents",
+          "targetId": "3:895316721939474678"
+        }
+      ]
+    },
+    {
+      "id": "7:4798099327502658918",
+      "lastPropertyId": "10:4019033963554612058",
+      "name": "LocalPhoneticData",
+      "properties": [
+        {
+          "id": "1:3545606675065969269",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4274746659127715528",
+          "name": "phoneticId",
+          "type": 9
+        },
+        {
+          "id": "3:6089360266298165552",
+          "name": "phoneticSymbol",
+          "type": 9
+        },
+        {
+          "id": "4:3061612711010618469",
+          "name": "phoneticSound",
+          "type": 9
+        },
+        {
+          "id": "5:2721663302214009693",
+          "name": "englishPhoneticGuide",
+          "type": 9
+        },
+        {
+          "id": "6:1297152470053864865",
+          "name": "vietnamesePhoneticGuide",
+          "type": 9
+        },
+        {
+          "id": "7:1269708416031983180",
+          "name": "frenchPhoneticGuide",
+          "type": 9
+        },
+        {
+          "id": "8:3203934724045522949",
+          "name": "exampleUsage",
+          "type": 9
+        },
+        {
+          "id": "9:4560552849097245456",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "10:4019033963554612058",
+          "name": "updatedAt",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:2415332168017870157",
+      "lastPropertyId": "11:447605412091664563",
+      "name": "LocalPhrasalVerbData",
+      "properties": [
+        {
+          "id": "1:4538242852335132871",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7908835001077586565",
+          "name": "phrasalVerbId",
+          "type": 9
+        },
+        {
+          "id": "3:7629757053870541310",
+          "name": "englishPhrasalVerb",
+          "type": 9
+        },
+        {
+          "id": "4:2076295031556871330",
+          "name": "vietnamesePhrasalVerb",
+          "type": 9
+        },
+        {
+          "id": "5:3461454940323004010",
+          "name": "frenchPhrasalVerb",
+          "type": 9
+        },
+        {
+          "id": "6:4399112230854810584",
+          "name": "englishDescription",
+          "type": 9
+        },
+        {
+          "id": "7:5343789939921428017",
+          "name": "vietnameseDescription",
+          "type": 9
+        },
+        {
+          "id": "8:5158031969122625308",
+          "name": "frenchDescription",
+          "type": 9
+        },
+        {
+          "id": "9:2401645473678832504",
+          "name": "exampleUsage",
+          "type": 9
+        },
+        {
+          "id": "10:916122662836774755",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "11:447605412091664563",
+          "name": "updatedAt",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "9:2177906232773265707",
+      "lastPropertyId": "8:8835634690855813756",
+      "name": "LocalSentenceData",
+      "properties": [
+        {
+          "id": "1:1963197195730981543",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5436125630047734275",
+          "name": "sentenceId",
+          "type": 9
+        },
+        {
+          "id": "3:8337476878038536096",
+          "name": "englishSentence",
+          "type": 9
+        },
+        {
+          "id": "4:4007712652668931562",
+          "name": "vietnameseSentence",
+          "type": 9
+        },
+        {
+          "id": "5:183319715620314394",
+          "name": "frenchSentence",
+          "type": 9
+        },
+        {
+          "id": "6:8834735278359990208",
+          "name": "exampleUsage",
+          "type": 9
+        },
+        {
+          "id": "7:4352160884239909065",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "8:8835634690855813756",
+          "name": "updatedAt",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "10:1942075439372932900",
+      "lastPropertyId": "12:3855481118913842300",
+      "name": "LocalTenseData",
+      "properties": [
+        {
+          "id": "1:2131797099839801942",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1586633954013662809",
+          "name": "tenseId",
+          "type": 9
+        },
+        {
+          "id": "3:6004373672053541929",
+          "name": "englishTenseName",
+          "type": 9
+        },
+        {
+          "id": "4:9161973050644830722",
+          "name": "vietnameseTenseName",
+          "type": 9
+        },
+        {
+          "id": "5:8519667065488211047",
+          "name": "frenchTenseName",
+          "type": 9
+        },
+        {
+          "id": "6:5775957271957135160",
+          "name": "englishDescription",
+          "type": 9
+        },
+        {
+          "id": "7:1650769941702403743",
+          "name": "vietnameseDescription",
+          "type": 9
+        },
+        {
+          "id": "8:1919502103205489071",
+          "name": "frenchDescription",
+          "type": 9
+        },
+        {
+          "id": "9:1152757162109344222",
+          "name": "tenseRule",
+          "type": 9
+        },
+        {
+          "id": "10:8008063596511654193",
+          "name": "tenseExample",
+          "type": 9
+        },
+        {
+          "id": "11:7566811108962262854",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "12:3855481118913842300",
+          "name": "updatedAt",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "10:6257633846208579883",
+          "name": "tenseForms",
+          "targetId": "11:8678135700879048393"
+        }
+      ]
+    },
+    {
+      "id": "11:8678135700879048393",
+      "lastPropertyId": "11:5515779798887886716",
+      "name": "LocalTenseFormData",
+      "properties": [
+        {
+          "id": "1:4815839372429846481",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2825178290021181228",
+          "name": "tenseFormId",
+          "type": 9
+        },
+        {
+          "id": "3:5250380197372115695",
+          "name": "tenseFormSubject",
+          "type": 9
+        },
+        {
+          "id": "4:6465247423626171417",
+          "name": "tenseFormPositiveRule",
+          "type": 9
+        },
+        {
+          "id": "5:3980147782010916908",
+          "name": "tenseFormNegativeRule",
+          "type": 9
+        },
+        {
+          "id": "6:3235668697179711781",
+          "name": "tenseFormQuestionRule",
+          "type": 9
+        },
+        {
+          "id": "7:514925721815962982",
+          "name": "tenseFormPositiveExample",
+          "type": 9
+        },
+        {
+          "id": "8:5523903918083366479",
+          "name": "tenseFormNegativeExample",
+          "type": 9
+        },
+        {
+          "id": "9:7339497389693227207",
+          "name": "tenseFormQuestionExample",
+          "type": 9
+        },
+        {
+          "id": "10:9100049649592743017",
+          "name": "tenseFormCreatedAt",
+          "type": 9
+        },
+        {
+          "id": "11:5515779798887886716",
+          "name": "tenseFormUpdatedAt",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "12:6183458400034383904",
+      "lastPropertyId": "10:6631267214135397424",
+      "name": "LocalWordData",
+      "properties": [
+        {
+          "id": "1:760495203601208289",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5429783497365816577",
+          "name": "wordId",
+          "type": 9
+        },
+        {
+          "id": "3:8770957519155765790",
+          "name": "englishWord",
+          "type": 9
+        },
+        {
+          "id": "4:1113624854303563903",
+          "name": "vietnameseWord",
+          "type": 9
+        },
+        {
+          "id": "5:8858359718669085486",
+          "name": "frenchWord",
+          "type": 9
+        },
+        {
+          "id": "6:8343037362575778210",
+          "name": "wordType",
+          "type": 9
+        },
+        {
+          "id": "7:2483323918146004064",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "8:1128107208888650396",
+          "name": "pronunciation",
+          "type": 9
+        },
+        {
+          "id": "9:3312778264282587026",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "10:6631267214135397424",
+          "name": "updatedAt",
+          "type": 9
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "2:2237696338784524511",
+  "lastEntityId": "12:6183458400034383904",
   "lastIndexId": "1:1332288571790052002",
-  "lastRelationId": "1:1987275612854619647",
+  "lastRelationId": "10:6257633846208579883",
   "lastSequenceId": "0:0",
   "modelVersion": 5,
   "modelVersionParserMinimum": 5,

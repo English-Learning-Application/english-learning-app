@@ -70,6 +70,8 @@ import 'package:data/src/features/achievement/data_source/achievement_api_servic
     as _i763;
 import 'package:data/src/features/achievement/mapper/api_achievement_data_mapper.dart'
     as _i136;
+import 'package:data/src/features/achievement/mapper/api_user_achievement_data_mapper.dart'
+    as _i384;
 import 'package:data/src/features/achievement/repository/achievement_repository_impl.dart'
     as _i244;
 import 'package:data/src/features/authentication/data_source/api/authentication_api_data_source.dart'
@@ -78,6 +80,26 @@ import 'package:data/src/features/authentication/repository/authentication_repos
     as _i322;
 import 'package:data/src/features/bookmark/data_source/api/bookmark_api_data_source.dart'
     as _i543;
+import 'package:data/src/features/bookmark/data_source/database/bookmark_local_data_source.dart'
+    as _i951;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_course_learning_content_data_mapper.dart'
+    as _i870;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_expression_data_mapper.dart'
+    as _i658;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_idiom_data_mapper.dart'
+    as _i388;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_language_course_data_mapper.dart'
+    as _i364;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_phonetic_data_mapper.dart'
+    as _i77;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_phrasal_verb_data_mapper.dart'
+    as _i1014;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_sentence_data_mapper.dart'
+    as _i29;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_tense_data_mapper.dart'
+    as _i811;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_word_data_mapper.dart'
+    as _i546;
 import 'package:data/src/features/bookmark/mapper/api_user_bookmarked_course_data_mapper.dart'
     as _i932;
 import 'package:data/src/features/bookmark/repository/bookmark_repository_impl.dart'
@@ -274,6 +296,20 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i468.ApiUserTodoDataMapper());
     gh.factory<_i932.ApiUserBookmarkedCourseDataMapper>(
         () => _i932.ApiUserBookmarkedCourseDataMapper());
+    gh.factory<_i384.ApiUserAchievementDataMapper>(
+        () => _i384.ApiUserAchievementDataMapper());
+    gh.factory<_i658.LocalExpressionDataMapper>(
+        () => _i658.LocalExpressionDataMapper());
+    gh.factory<_i388.LocalIdiomDataMapper>(() => _i388.LocalIdiomDataMapper());
+    gh.factory<_i77.LocalPhoneticDataMapper>(
+        () => _i77.LocalPhoneticDataMapper());
+    gh.factory<_i1014.LocalPhrasalVerbDataMapper>(
+        () => _i1014.LocalPhrasalVerbDataMapper());
+    gh.factory<_i29.LocalSentenceDataMapper>(
+        () => _i29.LocalSentenceDataMapper());
+    gh.factory<_i811.LocalTenseFormDataMapper>(
+        () => _i811.LocalTenseFormDataMapper());
+    gh.factory<_i546.LocalWordDataMapper>(() => _i546.LocalWordDataMapper());
     gh.lazySingleton<_i665.AppAssetsService>(
         () => const _i665.AppAssetsService());
     gh.factory<_i77.HeaderInterceptor>(
@@ -312,6 +348,10 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.ApiMatchingLearningMapper>(),
               gh<_i437.ApiPronunciationLearningMapper>(),
             ));
+    gh.factory<_i811.LocalTenseDataMapper>(
+        () => _i811.LocalTenseDataMapper(gh<_i811.LocalTenseFormDataMapper>()));
+    gh.lazySingleton<_i951.BookmarkLocalDataSource>(
+        () => _i951.BookmarkLocalDataSource(gh<_i1034.Store>()));
     gh.lazySingleton<_i936.NonAuthAppServerApiClient>(
         () => _i936.NonAuthAppServerApiClient(gh<_i437.HeaderInterceptor>()));
     gh.factory<_i1028.ApiUserDataMapper>(() => _i1028.ApiUserDataMapper(
@@ -321,10 +361,20 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.lazySingleton<_i906.RandomUserApiClient>(
         () => _i906.RandomUserApiClient(gh<_i695.DioCacheInterceptor>()));
+    gh.factory<_i870.LocalCourseLearningContentDataMapper>(
+        () => _i870.LocalCourseLearningContentDataMapper(
+              gh<_i658.LocalExpressionDataMapper>(),
+              gh<_i546.LocalWordDataMapper>(),
+              gh<_i388.LocalIdiomDataMapper>(),
+              gh<_i1014.LocalPhrasalVerbDataMapper>(),
+              gh<_i77.LocalPhoneticDataMapper>(),
+              gh<_i811.LocalTenseDataMapper>(),
+              gh<_i29.LocalSentenceDataMapper>(),
+            ));
     gh.lazySingleton<_i6.AppDatabase>(
         () => _i6.AppDatabase(gh<_i1034.Store>()));
     gh.lazySingleton<_i806.LanguageCourseDatabaseLocal>(
-        () => _i806.LanguageCourseDatabaseLocal(gh<_i465.Store>()));
+        () => _i806.LanguageCourseDatabaseLocal(gh<_i1034.Store>()));
     gh.factory<_i414.ApiSubscriptionDataMapper>(() =>
         _i414.ApiSubscriptionDataMapper(gh<_i414.ApiBenefitDataMapper>()));
     gh.factory<_i643.ApiCategoryCourseMapper>(
@@ -339,6 +389,9 @@ extension GetItInjectableX on _i174.GetIt {
             ));
     gh.factory<_i30.AccessTokenInterceptor>(
         () => _i30.AccessTokenInterceptor(gh<_i437.AppPreferences>()));
+    gh.factory<_i364.LocalLanguageCourseDataMapper>(() =>
+        _i364.LocalLanguageCourseDataMapper(
+            gh<_i870.LocalCourseLearningContentDataMapper>()));
     gh.factory<_i616.ApiLanguageCourseDataMapper>(() =>
         _i616.ApiLanguageCourseDataMapper(
             gh<_i616.ApiLanguageCourseLearningContentDataMapper>()));
@@ -415,6 +468,12 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.ChatMessageDataMapper>(),
               gh<_i437.ApiMessageUserDataMapper>(),
             ));
+    gh.lazySingleton<_i182.AchievementRepository>(
+        () => _i244.AchievementRepositoryImpl(
+              gh<_i763.AchievementApiService>(),
+              gh<_i437.ApiUserAchievementDataMapper>(),
+              gh<_i437.ApiAchievementDataMapper>(),
+            ));
     gh.lazySingleton<_i182.ExerciseRepository>(
         () => _i91.ExerciseRepositoryImpl(
               gh<_i437.ApiFlashCardLearningInfoMapper>(),
@@ -429,17 +488,19 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.ApiLearningProgressMapper>(),
               gh<_i437.ExerciseApiDataSource>(),
             ));
+    gh.lazySingleton<_i182.BookmarkRepository>(
+        () => _i525.BookmarkRepositoryImpl(
+              gh<_i437.BookmarkApiDataSource>(),
+              gh<_i437.ApiUserBookmarkedCourseDataMapper>(),
+              gh<_i951.BookmarkLocalDataSource>(),
+              gh<_i364.LocalLanguageCourseDataMapper>(),
+            ));
     gh.lazySingleton<_i182.CommunityRepository>(
         () => _i111.CommunityRepositoryImpl(
               gh<_i437.CommunityApiService>(),
               gh<_i437.ApiChatTopicDataMapper>(),
               gh<_i437.ApiChatSessionDataMapper>(),
               gh<_i437.ChatMessageDataMapper>(),
-            ));
-    gh.lazySingleton<_i182.AchievementRepository>(
-        () => _i244.AchievementRepositoryImpl(
-              gh<_i763.AchievementApiService>(),
-              gh<_i136.ApiAchievementDataMapper>(),
             ));
     gh.lazySingleton<_i182.AuthenticationRepository>(
         () => _i322.AuthenticationRepositoryImpl(
@@ -452,11 +513,6 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i437.AppPreferences>(),
           gh<_i437.ApiUserDataMapper>(),
         ));
-    gh.lazySingleton<_i182.BookmarkRepository>(
-        () => _i525.BookmarkRepositoryImpl(
-              gh<_i437.BookmarkApiDataSource>(),
-              gh<_i437.ApiUserBookmarkedCourseDataMapper>(),
-            ));
     gh.lazySingleton<_i182.NotificationRepository>(
         () => _i946.NotificationRepositoryImpl(
               gh<_i82.NotificationApiDataSource>(),

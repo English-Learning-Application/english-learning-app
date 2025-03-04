@@ -126,15 +126,17 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i806.ResetPasswordViewModel>(() =>
         _i806.ResetPasswordViewModel(gh<_i182.ResetPasswordRequestUseCase>()));
+    gh.factory<_i558.AchievementTrackerViewModel>(
+        () => _i558.AchievementTrackerViewModel(
+              gh<_i182.GetAllAchievementUseCase>(),
+              gh<_i182.GetAllUserAchievementUseCase>(),
+            ));
     gh.factory<_i513.RouteGuard>(() => _i513.RouteGuard(
           gh<_i182.IsLoggedInUseCase>(),
           gh<_i182.GetCurrentPrefUserUseCase>(),
         ));
     gh.factory<_i96.QuizLearningViewModel>(() =>
         _i96.QuizLearningViewModel(gh<_i182.QuizLearningUpdateUseCase>()));
-    gh.factory<_i558.AchievementTrackerViewModel>(() =>
-        _i558.AchievementTrackerViewModel(
-            gh<_i182.GetAllAchievementUseCase>()));
     gh.factory<_i15.CommunityViewModel>(() => _i15.CommunityViewModel(
           gh<_i182.GetCommunityTopicsUseCase>(),
           gh<_i182.GetPrivateSessionsUseCase>(),

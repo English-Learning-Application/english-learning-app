@@ -4,22 +4,45 @@ part of 'achievement_tracker.dart';
 class AchievementTrackerViewModel
     extends BaseViewModel<AchievementTrackerViewModelData> {
   final GetAllAchievementUseCase _getAchievementsUseCase;
+  final GetAllUserAchievementUseCase _getUserAchievementsUseCase;
 
-  AchievementTrackerViewModel(this._getAchievementsUseCase)
-      : super(const AchievementTrackerViewModelData());
+  AchievementTrackerViewModel(
+    this._getAchievementsUseCase,
+    this._getUserAchievementsUseCase,
+  ) : super(const AchievementTrackerViewModelData());
 
   void init() async {
     await runViewModelCatching(
       action: () async {
-        final resp = await _getAchievementsUseCase.buildUseCase(
-          const GetAllAchievementInput(),
+        var achievements = <Achievement>[];
+        var userAchievements = <UserAchievement>[];
+        var achievementTypes = <AchievementType>[];
+        await Future.wait(
+          [
+            _getAchievementsUseCase
+                .buildUseCase(
+              const GetAllAchievementInput(),
+            )
+                .then((output) {
+              achievements.addAll(output.achievements);
+              achievementTypes.addAll(output.achievementTypes);
+            }),
+            _getUserAchievementsUseCase
+                .buildUseCase(
+              const GetAllUserAchievementInput(),
+            )
+                .then((output) {
+              userAchievements.addAll(output.userAchievements);
+            }),
+          ],
         );
 
         updateData(
           viewModelData.copyWith(
-            originalAchievements: resp.achievements,
-            achievements: resp.achievements,
-            achievementTypes: resp.achievementTypes,
+            originalAchievements: achievements,
+            achievements: achievements,
+            achievementTypes: achievementTypes,
+            userAchievements: userAchievements,
           ),
         );
       },

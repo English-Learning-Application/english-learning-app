@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
+import 'package:objectbox/objectbox.dart';
 
 import '../../../../../data.dart';
-import '../../../../app_repository/source/database/objectbox/objectbox.g.dart';
 
 @LazySingleton()
 class LanguageCourseDatabaseLocal {

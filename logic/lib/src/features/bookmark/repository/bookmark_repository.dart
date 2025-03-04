@@ -11,6 +11,12 @@ abstract class BookmarkRepository {
     required CourseType courseType,
   });
 
+  void saveToLocalLanguageCourse({
+    required LanguageCourse languageCourse,
+  });
+
+  List<LanguageCourse> getLocalLanguageCourse();
+
   Future<bool> getBookmarkCourse({
     required String courseId,
   });

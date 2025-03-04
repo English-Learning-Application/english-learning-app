@@ -16,4 +16,14 @@ class AchievementApiService {
           ApiAchievementData.fromJson(json as Map<String, dynamic>),
     );
   }
+
+  Future<ListResponse<ApiUserAchievementData>?> getUserAchievements() async {
+    return await _authAppServerApiClient.request(
+      method: RestApiMethod.get,
+      path: '/user-achievement/all',
+      successResponseMapperType: SuccessResponseMapperType.listResponse,
+      decoder: (json) =>
+          ApiUserAchievementData.fromJson(json as Map<String, dynamic>),
+    );
+  }
 }

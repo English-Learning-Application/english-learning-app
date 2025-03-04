@@ -13,6 +13,8 @@ import 'package:injectable/injectable.dart' as _i526;
 import 'package:logic/logic.dart' as _i182;
 import 'package:logic/src/features/achievement/use_case/get_all_achievement_use_case.dart'
     as _i362;
+import 'package:logic/src/features/achievement/use_case/get_all_user_achievement_use_case.dart'
+    as _i149;
 import 'package:logic/src/features/authentication/usecase/facebook_login_use_case.dart'
     as _i1006;
 import 'package:logic/src/features/authentication/usecase/get_logged_in_user_use_case.dart'
@@ -143,6 +145,8 @@ extension GetItInjectableX on _i174.GetIt {
         () => const _i673.CheckPermissionUseCase());
     gh.factory<_i362.GetAllAchievementUseCase>(() =>
         _i362.GetAllAchievementUseCase(gh<_i182.AchievementRepository>()));
+    gh.factory<_i149.GetAllUserAchievementUseCase>(() =>
+        _i149.GetAllUserAchievementUseCase(gh<_i182.AchievementRepository>()));
     gh.factory<_i12.CreateTodoUseCase>(
         () => _i12.CreateTodoUseCase(gh<_i182.TodoRepository>()));
     gh.factory<_i504.DeleteTodoUseCase>(

@@ -16,6 +16,15 @@ import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
 
 import '../../../../../src/app_repository/source/database/model/local_image_url_data.dart';
 import '../../../../../src/app_repository/source/database/model/local_user_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_course_learning_content_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_expression_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_idiom_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_language_course_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_phonetic_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_phrasal_verb_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_sentence_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_tense_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_word_data.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
 
@@ -94,6 +103,635 @@ final _entities = <obx_int.ModelEntity>[
             name: 'photos',
             targetId: const obx_int.IdUid(1, 3672040623727277922))
       ],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(3, 895316721939474678),
+      name: 'LocalCourseLearningContentData',
+      lastPropertyId: const obx_int.IdUid(11, 819508791689290626),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 5249399843548682888),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 3459190510713407193),
+            name: 'languageCourseLearningContentId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 8361505748138564700),
+            name: 'learningContentType',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 7903504993345924684),
+            name: 'englishTitle',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 8959613823099557316),
+            name: 'vietnameseTitle',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 4016784722581656630),
+            name: 'frenchTitle',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 5761338611574849331),
+            name: 'englishDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 8571216650587101749),
+            name: 'vietnameseDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 6899635378428544381),
+            name: 'frenchDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(10, 8997617073932429789),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(11, 819508791689290626),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(2, 1508888289533975238),
+            name: 'words',
+            targetId: const obx_int.IdUid(12, 6183458400034383904)),
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(3, 3305848673196369547),
+            name: 'expressions',
+            targetId: const obx_int.IdUid(4, 5275574373543711872)),
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(4, 1596568368282769186),
+            name: 'idioms',
+            targetId: const obx_int.IdUid(5, 8634069843011185283)),
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(5, 3920695651412592418),
+            name: 'sentences',
+            targetId: const obx_int.IdUid(9, 2177906232773265707)),
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(6, 2482932798138722109),
+            name: 'phrasalVerbs',
+            targetId: const obx_int.IdUid(8, 2415332168017870157)),
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(7, 7484277981382448082),
+            name: 'tenses',
+            targetId: const obx_int.IdUid(10, 1942075439372932900)),
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(8, 5673810165037096415),
+            name: 'phonetics',
+            targetId: const obx_int.IdUid(7, 4798099327502658918))
+      ],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(4, 5275574373543711872),
+      name: 'LocalExpressionData',
+      lastPropertyId: const obx_int.IdUid(8, 6414809764987137746),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 3241037714507576636),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 3099279360324249406),
+            name: 'expressionId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 3611548045935256948),
+            name: 'englishExpression',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 7835828777091953702),
+            name: 'vietnameseExpression',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 7615135673225648735),
+            name: 'frenchExpression',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 6808500323421987292),
+            name: 'exampleUsage',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 8621091119165456949),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 6414809764987137746),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(5, 8634069843011185283),
+      name: 'LocalIdiomData',
+      lastPropertyId: const obx_int.IdUid(11, 9038354994414286886),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 5691227329970884200),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 6939217769185165002),
+            name: 'idiomId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 5893721347764601927),
+            name: 'englishIdiom',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 6062085605045415081),
+            name: 'vietnameseIdiom',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 7082951500427462585),
+            name: 'frenchIdiom',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 640224025887409136),
+            name: 'englishIdiomMeaning',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 1929206228173385639),
+            name: 'vietnameseIdiomMeaning',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 1898516228425231660),
+            name: 'frenchIdiomMeaning',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 3631331934123857391),
+            name: 'exampleUsage',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(10, 2497750072235000315),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(11, 9038354994414286886),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(6, 729391093864648635),
+      name: 'LocalLanguageCourseData',
+      lastPropertyId: const obx_int.IdUid(8, 7376776703944142455),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 4559379868371807696),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 1420625280194104815),
+            name: 'learningLanguage',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 7319515731518616061),
+            name: 'languageLevel',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 2633693450938998295),
+            name: 'learningType',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 1068377654821525956),
+            name: 'requiredSubscription',
+            type: 1,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 1511043672779272314),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 1654875410870333843),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 7376776703944142455),
+            name: 'languageCourseId',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(9, 9102756320201513532),
+            name: 'courseLearningContents',
+            targetId: const obx_int.IdUid(3, 895316721939474678))
+      ],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(7, 4798099327502658918),
+      name: 'LocalPhoneticData',
+      lastPropertyId: const obx_int.IdUid(10, 4019033963554612058),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 3545606675065969269),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 4274746659127715528),
+            name: 'phoneticId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 6089360266298165552),
+            name: 'phoneticSymbol',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 3061612711010618469),
+            name: 'phoneticSound',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 2721663302214009693),
+            name: 'englishPhoneticGuide',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 1297152470053864865),
+            name: 'vietnamesePhoneticGuide',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 1269708416031983180),
+            name: 'frenchPhoneticGuide',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 3203934724045522949),
+            name: 'exampleUsage',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 4560552849097245456),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(10, 4019033963554612058),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(8, 2415332168017870157),
+      name: 'LocalPhrasalVerbData',
+      lastPropertyId: const obx_int.IdUid(11, 447605412091664563),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 4538242852335132871),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 7908835001077586565),
+            name: 'phrasalVerbId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 7629757053870541310),
+            name: 'englishPhrasalVerb',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 2076295031556871330),
+            name: 'vietnamesePhrasalVerb',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 3461454940323004010),
+            name: 'frenchPhrasalVerb',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 4399112230854810584),
+            name: 'englishDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 5343789939921428017),
+            name: 'vietnameseDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 5158031969122625308),
+            name: 'frenchDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 2401645473678832504),
+            name: 'exampleUsage',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(10, 916122662836774755),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(11, 447605412091664563),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(9, 2177906232773265707),
+      name: 'LocalSentenceData',
+      lastPropertyId: const obx_int.IdUid(8, 8835634690855813756),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 1963197195730981543),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 5436125630047734275),
+            name: 'sentenceId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 8337476878038536096),
+            name: 'englishSentence',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 4007712652668931562),
+            name: 'vietnameseSentence',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 183319715620314394),
+            name: 'frenchSentence',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 8834735278359990208),
+            name: 'exampleUsage',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 4352160884239909065),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 8835634690855813756),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(10, 1942075439372932900),
+      name: 'LocalTenseData',
+      lastPropertyId: const obx_int.IdUid(12, 3855481118913842300),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 2131797099839801942),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 1586633954013662809),
+            name: 'tenseId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 6004373672053541929),
+            name: 'englishTenseName',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 9161973050644830722),
+            name: 'vietnameseTenseName',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 8519667065488211047),
+            name: 'frenchTenseName',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 5775957271957135160),
+            name: 'englishDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 1650769941702403743),
+            name: 'vietnameseDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 1919502103205489071),
+            name: 'frenchDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 1152757162109344222),
+            name: 'tenseRule',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(10, 8008063596511654193),
+            name: 'tenseExample',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(11, 7566811108962262854),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(12, 3855481118913842300),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(10, 6257633846208579883),
+            name: 'tenseForms',
+            targetId: const obx_int.IdUid(11, 8678135700879048393))
+      ],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(11, 8678135700879048393),
+      name: 'LocalTenseFormData',
+      lastPropertyId: const obx_int.IdUid(11, 5515779798887886716),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 4815839372429846481),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 2825178290021181228),
+            name: 'tenseFormId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 5250380197372115695),
+            name: 'tenseFormSubject',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 6465247423626171417),
+            name: 'tenseFormPositiveRule',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 3980147782010916908),
+            name: 'tenseFormNegativeRule',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 3235668697179711781),
+            name: 'tenseFormQuestionRule',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 514925721815962982),
+            name: 'tenseFormPositiveExample',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 5523903918083366479),
+            name: 'tenseFormNegativeExample',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 7339497389693227207),
+            name: 'tenseFormQuestionExample',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(10, 9100049649592743017),
+            name: 'tenseFormCreatedAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(11, 5515779798887886716),
+            name: 'tenseFormUpdatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(12, 6183458400034383904),
+      name: 'LocalWordData',
+      lastPropertyId: const obx_int.IdUid(10, 6631267214135397424),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 760495203601208289),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 5429783497365816577),
+            name: 'wordId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 8770957519155765790),
+            name: 'englishWord',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 1113624854303563903),
+            name: 'vietnameseWord',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 8858359718669085486),
+            name: 'frenchWord',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 8343037362575778210),
+            name: 'wordType',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 2483323918146004064),
+            name: 'imageUrl',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 1128107208888650396),
+            name: 'pronunciation',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 3312778264282587026),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(10, 6631267214135397424),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[],
       backlinks: <obx_int.ModelBacklink>[])
 ];
 
@@ -132,9 +770,9 @@ Future<obx.Store> openStore(
 obx_int.ModelDefinition getObjectBoxModel() {
   final model = obx_int.ModelInfo(
       entities: _entities,
-      lastEntityId: const obx_int.IdUid(2, 2237696338784524511),
+      lastEntityId: const obx_int.IdUid(12, 6183458400034383904),
       lastIndexId: const obx_int.IdUid(1, 1332288571790052002),
-      lastRelationId: const obx_int.IdUid(1, 1987275612854619647),
+      lastRelationId: const obx_int.IdUid(10, 6257633846208579883),
       lastSequenceId: const obx_int.IdUid(0, 0),
       retiredEntityUids: const [],
       retiredIndexUids: const [],
@@ -237,6 +875,1015 @@ obx_int.ModelDefinition getObjectBoxModel() {
           obx_int.InternalToManyAccess.setRelInfo<LocalUserData>(object.photos,
               store, obx_int.RelInfo<LocalUserData>.toMany(1, object.id!));
           return object;
+        }),
+    LocalCourseLearningContentData: obx_int.EntityDefinition<
+            LocalCourseLearningContentData>(
+        model: _entities[2],
+        toOneRelations: (LocalCourseLearningContentData object) => [],
+        toManyRelations: (LocalCourseLearningContentData object) => {
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  2, object.id!): object.words,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  3, object.id!): object.expressions,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  4, object.id!): object.idioms,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  5, object.id!): object.sentences,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  6, object.id!): object.phrasalVerbs,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  7, object.id!): object.tenses,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  8, object.id!): object.phonetics
+            },
+        getId: (LocalCourseLearningContentData object) => object.id,
+        setId: (LocalCourseLearningContentData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalCourseLearningContentData object, fb.Builder fbb) {
+          final languageCourseLearningContentIdOffset =
+              object.languageCourseLearningContentId == null
+                  ? null
+                  : fbb.writeString(object.languageCourseLearningContentId!);
+          final learningContentTypeOffset = object.learningContentType == null
+              ? null
+              : fbb.writeString(object.learningContentType!);
+          final englishTitleOffset = object.englishTitle == null
+              ? null
+              : fbb.writeString(object.englishTitle!);
+          final vietnameseTitleOffset = object.vietnameseTitle == null
+              ? null
+              : fbb.writeString(object.vietnameseTitle!);
+          final frenchTitleOffset = object.frenchTitle == null
+              ? null
+              : fbb.writeString(object.frenchTitle!);
+          final englishDescriptionOffset = object.englishDescription == null
+              ? null
+              : fbb.writeString(object.englishDescription!);
+          final vietnameseDescriptionOffset =
+              object.vietnameseDescription == null
+                  ? null
+                  : fbb.writeString(object.vietnameseDescription!);
+          final frenchDescriptionOffset = object.frenchDescription == null
+              ? null
+              : fbb.writeString(object.frenchDescription!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(12);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, languageCourseLearningContentIdOffset);
+          fbb.addOffset(2, learningContentTypeOffset);
+          fbb.addOffset(3, englishTitleOffset);
+          fbb.addOffset(4, vietnameseTitleOffset);
+          fbb.addOffset(5, frenchTitleOffset);
+          fbb.addOffset(6, englishDescriptionOffset);
+          fbb.addOffset(7, vietnameseDescriptionOffset);
+          fbb.addOffset(8, frenchDescriptionOffset);
+          fbb.addOffset(9, createdAtOffset);
+          fbb.addOffset(10, updatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final languageCourseLearningContentIdParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 6);
+          final learningContentTypeParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final englishTitleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final vietnameseTitleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final frenchTitleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14);
+          final englishDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 16);
+          final vietnameseDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 18);
+          final frenchDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 20);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 22);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 24);
+          final object = LocalCourseLearningContentData(
+              id: idParam,
+              languageCourseLearningContentId:
+                  languageCourseLearningContentIdParam,
+              learningContentType: learningContentTypeParam,
+              englishTitle: englishTitleParam,
+              vietnameseTitle: vietnameseTitleParam,
+              frenchTitle: frenchTitleParam,
+              englishDescription: englishDescriptionParam,
+              vietnameseDescription: vietnameseDescriptionParam,
+              frenchDescription: frenchDescriptionParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+          obx_int.InternalToManyAccess.setRelInfo<
+                  LocalCourseLearningContentData>(
+              object.words,
+              store,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  2, object.id!));
+          obx_int.InternalToManyAccess.setRelInfo<
+                  LocalCourseLearningContentData>(
+              object.expressions,
+              store,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  3, object.id!));
+          obx_int.InternalToManyAccess.setRelInfo<
+                  LocalCourseLearningContentData>(
+              object.idioms,
+              store,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  4, object.id!));
+          obx_int.InternalToManyAccess.setRelInfo<
+                  LocalCourseLearningContentData>(
+              object.sentences,
+              store,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  5, object.id!));
+          obx_int.InternalToManyAccess.setRelInfo<
+                  LocalCourseLearningContentData>(
+              object.phrasalVerbs,
+              store,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  6, object.id!));
+          obx_int.InternalToManyAccess.setRelInfo<
+                  LocalCourseLearningContentData>(
+              object.tenses,
+              store,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  7, object.id!));
+          obx_int.InternalToManyAccess.setRelInfo<
+                  LocalCourseLearningContentData>(
+              object.phonetics,
+              store,
+              obx_int.RelInfo<LocalCourseLearningContentData>.toMany(
+                  8, object.id!));
+          return object;
+        }),
+    LocalExpressionData: obx_int.EntityDefinition<LocalExpressionData>(
+        model: _entities[3],
+        toOneRelations: (LocalExpressionData object) => [],
+        toManyRelations: (LocalExpressionData object) => {},
+        getId: (LocalExpressionData object) => object.id,
+        setId: (LocalExpressionData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalExpressionData object, fb.Builder fbb) {
+          final expressionIdOffset = object.expressionId == null
+              ? null
+              : fbb.writeString(object.expressionId!);
+          final englishExpressionOffset = object.englishExpression == null
+              ? null
+              : fbb.writeString(object.englishExpression!);
+          final vietnameseExpressionOffset = object.vietnameseExpression == null
+              ? null
+              : fbb.writeString(object.vietnameseExpression!);
+          final frenchExpressionOffset = object.frenchExpression == null
+              ? null
+              : fbb.writeString(object.frenchExpression!);
+          final exampleUsageOffset = object.exampleUsage == null
+              ? null
+              : fbb.writeString(object.exampleUsage!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(9);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, expressionIdOffset);
+          fbb.addOffset(2, englishExpressionOffset);
+          fbb.addOffset(3, vietnameseExpressionOffset);
+          fbb.addOffset(4, frenchExpressionOffset);
+          fbb.addOffset(5, exampleUsageOffset);
+          fbb.addOffset(6, createdAtOffset);
+          fbb.addOffset(7, updatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final expressionIdParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 6);
+          final englishExpressionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final vietnameseExpressionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final frenchExpressionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final exampleUsageParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 16);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 18);
+          final object = LocalExpressionData(
+              id: idParam,
+              expressionId: expressionIdParam,
+              englishExpression: englishExpressionParam,
+              vietnameseExpression: vietnameseExpressionParam,
+              frenchExpression: frenchExpressionParam,
+              exampleUsage: exampleUsageParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+
+          return object;
+        }),
+    LocalIdiomData: obx_int.EntityDefinition<LocalIdiomData>(
+        model: _entities[4],
+        toOneRelations: (LocalIdiomData object) => [],
+        toManyRelations: (LocalIdiomData object) => {},
+        getId: (LocalIdiomData object) => object.id,
+        setId: (LocalIdiomData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalIdiomData object, fb.Builder fbb) {
+          final idiomIdOffset =
+              object.idiomId == null ? null : fbb.writeString(object.idiomId!);
+          final englishIdiomOffset = object.englishIdiom == null
+              ? null
+              : fbb.writeString(object.englishIdiom!);
+          final vietnameseIdiomOffset = object.vietnameseIdiom == null
+              ? null
+              : fbb.writeString(object.vietnameseIdiom!);
+          final frenchIdiomOffset = object.frenchIdiom == null
+              ? null
+              : fbb.writeString(object.frenchIdiom!);
+          final englishIdiomMeaningOffset = object.englishIdiomMeaning == null
+              ? null
+              : fbb.writeString(object.englishIdiomMeaning!);
+          final vietnameseIdiomMeaningOffset =
+              object.vietnameseIdiomMeaning == null
+                  ? null
+                  : fbb.writeString(object.vietnameseIdiomMeaning!);
+          final frenchIdiomMeaningOffset = object.frenchIdiomMeaning == null
+              ? null
+              : fbb.writeString(object.frenchIdiomMeaning!);
+          final exampleUsageOffset = object.exampleUsage == null
+              ? null
+              : fbb.writeString(object.exampleUsage!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(12);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, idiomIdOffset);
+          fbb.addOffset(2, englishIdiomOffset);
+          fbb.addOffset(3, vietnameseIdiomOffset);
+          fbb.addOffset(4, frenchIdiomOffset);
+          fbb.addOffset(5, englishIdiomMeaningOffset);
+          fbb.addOffset(6, vietnameseIdiomMeaningOffset);
+          fbb.addOffset(7, frenchIdiomMeaningOffset);
+          fbb.addOffset(8, exampleUsageOffset);
+          fbb.addOffset(9, createdAtOffset);
+          fbb.addOffset(10, updatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final idiomIdParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 6);
+          final englishIdiomParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final vietnameseIdiomParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final frenchIdiomParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final englishIdiomMeaningParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14);
+          final vietnameseIdiomMeaningParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 16);
+          final frenchIdiomMeaningParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 18);
+          final exampleUsageParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 20);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 22);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 24);
+          final object = LocalIdiomData(
+              id: idParam,
+              idiomId: idiomIdParam,
+              englishIdiom: englishIdiomParam,
+              vietnameseIdiom: vietnameseIdiomParam,
+              frenchIdiom: frenchIdiomParam,
+              englishIdiomMeaning: englishIdiomMeaningParam,
+              vietnameseIdiomMeaning: vietnameseIdiomMeaningParam,
+              frenchIdiomMeaning: frenchIdiomMeaningParam,
+              exampleUsage: exampleUsageParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+
+          return object;
+        }),
+    LocalLanguageCourseData: obx_int.EntityDefinition<LocalLanguageCourseData>(
+        model: _entities[5],
+        toOneRelations: (LocalLanguageCourseData object) => [],
+        toManyRelations: (LocalLanguageCourseData object) => {
+              obx_int.RelInfo<LocalLanguageCourseData>.toMany(9, object.id!):
+                  object.courseLearningContents
+            },
+        getId: (LocalLanguageCourseData object) => object.id,
+        setId: (LocalLanguageCourseData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalLanguageCourseData object, fb.Builder fbb) {
+          final learningLanguageOffset = object.learningLanguage == null
+              ? null
+              : fbb.writeString(object.learningLanguage!);
+          final languageLevelOffset = object.languageLevel == null
+              ? null
+              : fbb.writeString(object.languageLevel!);
+          final learningTypeOffset = object.learningType == null
+              ? null
+              : fbb.writeString(object.learningType!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          final languageCourseIdOffset = object.languageCourseId == null
+              ? null
+              : fbb.writeString(object.languageCourseId!);
+          fbb.startTable(9);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, learningLanguageOffset);
+          fbb.addOffset(2, languageLevelOffset);
+          fbb.addOffset(3, learningTypeOffset);
+          fbb.addBool(4, object.requiredSubscription);
+          fbb.addOffset(5, createdAtOffset);
+          fbb.addOffset(6, updatedAtOffset);
+          fbb.addOffset(7, languageCourseIdOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final learningLanguageParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 6);
+          final languageLevelParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final learningTypeParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final requiredSubscriptionParam =
+              const fb.BoolReader().vTableGetNullable(buffer, rootOffset, 12);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 14);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 16);
+          final languageCourseIdParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 18);
+          final object = LocalLanguageCourseData(
+              id: idParam,
+              learningLanguage: learningLanguageParam,
+              languageLevel: languageLevelParam,
+              learningType: learningTypeParam,
+              requiredSubscription: requiredSubscriptionParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam,
+              languageCourseId: languageCourseIdParam);
+          obx_int.InternalToManyAccess.setRelInfo<LocalLanguageCourseData>(
+              object.courseLearningContents,
+              store,
+              obx_int.RelInfo<LocalLanguageCourseData>.toMany(9, object.id!));
+          return object;
+        }),
+    LocalPhoneticData: obx_int.EntityDefinition<LocalPhoneticData>(
+        model: _entities[6],
+        toOneRelations: (LocalPhoneticData object) => [],
+        toManyRelations: (LocalPhoneticData object) => {},
+        getId: (LocalPhoneticData object) => object.id,
+        setId: (LocalPhoneticData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalPhoneticData object, fb.Builder fbb) {
+          final phoneticIdOffset = object.phoneticId == null
+              ? null
+              : fbb.writeString(object.phoneticId!);
+          final phoneticSymbolOffset = object.phoneticSymbol == null
+              ? null
+              : fbb.writeString(object.phoneticSymbol!);
+          final phoneticSoundOffset = object.phoneticSound == null
+              ? null
+              : fbb.writeString(object.phoneticSound!);
+          final englishPhoneticGuideOffset = object.englishPhoneticGuide == null
+              ? null
+              : fbb.writeString(object.englishPhoneticGuide!);
+          final vietnamesePhoneticGuideOffset =
+              object.vietnamesePhoneticGuide == null
+                  ? null
+                  : fbb.writeString(object.vietnamesePhoneticGuide!);
+          final frenchPhoneticGuideOffset = object.frenchPhoneticGuide == null
+              ? null
+              : fbb.writeString(object.frenchPhoneticGuide!);
+          final exampleUsageOffset = object.exampleUsage == null
+              ? null
+              : fbb.writeString(object.exampleUsage!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(11);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, phoneticIdOffset);
+          fbb.addOffset(2, phoneticSymbolOffset);
+          fbb.addOffset(3, phoneticSoundOffset);
+          fbb.addOffset(4, englishPhoneticGuideOffset);
+          fbb.addOffset(5, vietnamesePhoneticGuideOffset);
+          fbb.addOffset(6, frenchPhoneticGuideOffset);
+          fbb.addOffset(7, exampleUsageOffset);
+          fbb.addOffset(8, createdAtOffset);
+          fbb.addOffset(9, updatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final phoneticIdParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 6);
+          final phoneticSymbolParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final phoneticSoundParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final englishPhoneticGuideParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final vietnamesePhoneticGuideParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14);
+          final frenchPhoneticGuideParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 16);
+          final exampleUsageParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 18);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 20);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 22);
+          final object = LocalPhoneticData(
+              id: idParam,
+              phoneticId: phoneticIdParam,
+              phoneticSymbol: phoneticSymbolParam,
+              phoneticSound: phoneticSoundParam,
+              englishPhoneticGuide: englishPhoneticGuideParam,
+              vietnamesePhoneticGuide: vietnamesePhoneticGuideParam,
+              frenchPhoneticGuide: frenchPhoneticGuideParam,
+              exampleUsage: exampleUsageParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+
+          return object;
+        }),
+    LocalPhrasalVerbData: obx_int.EntityDefinition<LocalPhrasalVerbData>(
+        model: _entities[7],
+        toOneRelations: (LocalPhrasalVerbData object) => [],
+        toManyRelations: (LocalPhrasalVerbData object) => {},
+        getId: (LocalPhrasalVerbData object) => object.id,
+        setId: (LocalPhrasalVerbData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalPhrasalVerbData object, fb.Builder fbb) {
+          final phrasalVerbIdOffset = object.phrasalVerbId == null
+              ? null
+              : fbb.writeString(object.phrasalVerbId!);
+          final englishPhrasalVerbOffset = object.englishPhrasalVerb == null
+              ? null
+              : fbb.writeString(object.englishPhrasalVerb!);
+          final vietnamesePhrasalVerbOffset =
+              object.vietnamesePhrasalVerb == null
+                  ? null
+                  : fbb.writeString(object.vietnamesePhrasalVerb!);
+          final frenchPhrasalVerbOffset = object.frenchPhrasalVerb == null
+              ? null
+              : fbb.writeString(object.frenchPhrasalVerb!);
+          final englishDescriptionOffset = object.englishDescription == null
+              ? null
+              : fbb.writeString(object.englishDescription!);
+          final vietnameseDescriptionOffset =
+              object.vietnameseDescription == null
+                  ? null
+                  : fbb.writeString(object.vietnameseDescription!);
+          final frenchDescriptionOffset = object.frenchDescription == null
+              ? null
+              : fbb.writeString(object.frenchDescription!);
+          final exampleUsageOffset = object.exampleUsage == null
+              ? null
+              : fbb.writeString(object.exampleUsage!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(12);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, phrasalVerbIdOffset);
+          fbb.addOffset(2, englishPhrasalVerbOffset);
+          fbb.addOffset(3, vietnamesePhrasalVerbOffset);
+          fbb.addOffset(4, frenchPhrasalVerbOffset);
+          fbb.addOffset(5, englishDescriptionOffset);
+          fbb.addOffset(6, vietnameseDescriptionOffset);
+          fbb.addOffset(7, frenchDescriptionOffset);
+          fbb.addOffset(8, exampleUsageOffset);
+          fbb.addOffset(9, createdAtOffset);
+          fbb.addOffset(10, updatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final phrasalVerbIdParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 6);
+          final englishPhrasalVerbParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final vietnamesePhrasalVerbParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final frenchPhrasalVerbParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final englishDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14);
+          final vietnameseDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 16);
+          final frenchDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 18);
+          final exampleUsageParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 20);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 22);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 24);
+          final object = LocalPhrasalVerbData(
+              id: idParam,
+              phrasalVerbId: phrasalVerbIdParam,
+              englishPhrasalVerb: englishPhrasalVerbParam,
+              vietnamesePhrasalVerb: vietnamesePhrasalVerbParam,
+              frenchPhrasalVerb: frenchPhrasalVerbParam,
+              englishDescription: englishDescriptionParam,
+              vietnameseDescription: vietnameseDescriptionParam,
+              frenchDescription: frenchDescriptionParam,
+              exampleUsage: exampleUsageParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+
+          return object;
+        }),
+    LocalSentenceData: obx_int.EntityDefinition<LocalSentenceData>(
+        model: _entities[8],
+        toOneRelations: (LocalSentenceData object) => [],
+        toManyRelations: (LocalSentenceData object) => {},
+        getId: (LocalSentenceData object) => object.id,
+        setId: (LocalSentenceData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalSentenceData object, fb.Builder fbb) {
+          final sentenceIdOffset = object.sentenceId == null
+              ? null
+              : fbb.writeString(object.sentenceId!);
+          final englishSentenceOffset = object.englishSentence == null
+              ? null
+              : fbb.writeString(object.englishSentence!);
+          final vietnameseSentenceOffset = object.vietnameseSentence == null
+              ? null
+              : fbb.writeString(object.vietnameseSentence!);
+          final frenchSentenceOffset = object.frenchSentence == null
+              ? null
+              : fbb.writeString(object.frenchSentence!);
+          final exampleUsageOffset = object.exampleUsage == null
+              ? null
+              : fbb.writeString(object.exampleUsage!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(9);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, sentenceIdOffset);
+          fbb.addOffset(2, englishSentenceOffset);
+          fbb.addOffset(3, vietnameseSentenceOffset);
+          fbb.addOffset(4, frenchSentenceOffset);
+          fbb.addOffset(5, exampleUsageOffset);
+          fbb.addOffset(6, createdAtOffset);
+          fbb.addOffset(7, updatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final sentenceIdParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 6);
+          final englishSentenceParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final vietnameseSentenceParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final frenchSentenceParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final exampleUsageParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 16);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 18);
+          final object = LocalSentenceData(
+              id: idParam,
+              sentenceId: sentenceIdParam,
+              englishSentence: englishSentenceParam,
+              vietnameseSentence: vietnameseSentenceParam,
+              frenchSentence: frenchSentenceParam,
+              exampleUsage: exampleUsageParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+
+          return object;
+        }),
+    LocalTenseData: obx_int.EntityDefinition<LocalTenseData>(
+        model: _entities[9],
+        toOneRelations: (LocalTenseData object) => [],
+        toManyRelations: (LocalTenseData object) => {
+              obx_int.RelInfo<LocalTenseData>.toMany(10, object.id!):
+                  object.tenseForms
+            },
+        getId: (LocalTenseData object) => object.id,
+        setId: (LocalTenseData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalTenseData object, fb.Builder fbb) {
+          final tenseIdOffset =
+              object.tenseId == null ? null : fbb.writeString(object.tenseId!);
+          final englishTenseNameOffset = object.englishTenseName == null
+              ? null
+              : fbb.writeString(object.englishTenseName!);
+          final vietnameseTenseNameOffset = object.vietnameseTenseName == null
+              ? null
+              : fbb.writeString(object.vietnameseTenseName!);
+          final frenchTenseNameOffset = object.frenchTenseName == null
+              ? null
+              : fbb.writeString(object.frenchTenseName!);
+          final englishDescriptionOffset = object.englishDescription == null
+              ? null
+              : fbb.writeString(object.englishDescription!);
+          final vietnameseDescriptionOffset =
+              object.vietnameseDescription == null
+                  ? null
+                  : fbb.writeString(object.vietnameseDescription!);
+          final frenchDescriptionOffset = object.frenchDescription == null
+              ? null
+              : fbb.writeString(object.frenchDescription!);
+          final tenseRuleOffset = object.tenseRule == null
+              ? null
+              : fbb.writeString(object.tenseRule!);
+          final tenseExampleOffset = object.tenseExample == null
+              ? null
+              : fbb.writeString(object.tenseExample!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(13);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, tenseIdOffset);
+          fbb.addOffset(2, englishTenseNameOffset);
+          fbb.addOffset(3, vietnameseTenseNameOffset);
+          fbb.addOffset(4, frenchTenseNameOffset);
+          fbb.addOffset(5, englishDescriptionOffset);
+          fbb.addOffset(6, vietnameseDescriptionOffset);
+          fbb.addOffset(7, frenchDescriptionOffset);
+          fbb.addOffset(8, tenseRuleOffset);
+          fbb.addOffset(9, tenseExampleOffset);
+          fbb.addOffset(10, createdAtOffset);
+          fbb.addOffset(11, updatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final tenseIdParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 6);
+          final englishTenseNameParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final vietnameseTenseNameParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final frenchTenseNameParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final englishDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14);
+          final vietnameseDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 16);
+          final frenchDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 18);
+          final tenseRuleParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 20);
+          final tenseExampleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 22);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 24);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 26);
+          final object = LocalTenseData(
+              id: idParam,
+              tenseId: tenseIdParam,
+              englishTenseName: englishTenseNameParam,
+              vietnameseTenseName: vietnameseTenseNameParam,
+              frenchTenseName: frenchTenseNameParam,
+              englishDescription: englishDescriptionParam,
+              vietnameseDescription: vietnameseDescriptionParam,
+              frenchDescription: frenchDescriptionParam,
+              tenseRule: tenseRuleParam,
+              tenseExample: tenseExampleParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+          obx_int.InternalToManyAccess.setRelInfo<LocalTenseData>(
+              object.tenseForms,
+              store,
+              obx_int.RelInfo<LocalTenseData>.toMany(10, object.id!));
+          return object;
+        }),
+    LocalTenseFormData: obx_int.EntityDefinition<LocalTenseFormData>(
+        model: _entities[10],
+        toOneRelations: (LocalTenseFormData object) => [],
+        toManyRelations: (LocalTenseFormData object) => {},
+        getId: (LocalTenseFormData object) => object.id,
+        setId: (LocalTenseFormData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalTenseFormData object, fb.Builder fbb) {
+          final tenseFormIdOffset = object.tenseFormId == null
+              ? null
+              : fbb.writeString(object.tenseFormId!);
+          final tenseFormSubjectOffset = object.tenseFormSubject == null
+              ? null
+              : fbb.writeString(object.tenseFormSubject!);
+          final tenseFormPositiveRuleOffset =
+              object.tenseFormPositiveRule == null
+                  ? null
+                  : fbb.writeString(object.tenseFormPositiveRule!);
+          final tenseFormNegativeRuleOffset =
+              object.tenseFormNegativeRule == null
+                  ? null
+                  : fbb.writeString(object.tenseFormNegativeRule!);
+          final tenseFormQuestionRuleOffset =
+              object.tenseFormQuestionRule == null
+                  ? null
+                  : fbb.writeString(object.tenseFormQuestionRule!);
+          final tenseFormPositiveExampleOffset =
+              object.tenseFormPositiveExample == null
+                  ? null
+                  : fbb.writeString(object.tenseFormPositiveExample!);
+          final tenseFormNegativeExampleOffset =
+              object.tenseFormNegativeExample == null
+                  ? null
+                  : fbb.writeString(object.tenseFormNegativeExample!);
+          final tenseFormQuestionExampleOffset =
+              object.tenseFormQuestionExample == null
+                  ? null
+                  : fbb.writeString(object.tenseFormQuestionExample!);
+          final tenseFormCreatedAtOffset = object.tenseFormCreatedAt == null
+              ? null
+              : fbb.writeString(object.tenseFormCreatedAt!);
+          final tenseFormUpdatedAtOffset = object.tenseFormUpdatedAt == null
+              ? null
+              : fbb.writeString(object.tenseFormUpdatedAt!);
+          fbb.startTable(12);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, tenseFormIdOffset);
+          fbb.addOffset(2, tenseFormSubjectOffset);
+          fbb.addOffset(3, tenseFormPositiveRuleOffset);
+          fbb.addOffset(4, tenseFormNegativeRuleOffset);
+          fbb.addOffset(5, tenseFormQuestionRuleOffset);
+          fbb.addOffset(6, tenseFormPositiveExampleOffset);
+          fbb.addOffset(7, tenseFormNegativeExampleOffset);
+          fbb.addOffset(8, tenseFormQuestionExampleOffset);
+          fbb.addOffset(9, tenseFormCreatedAtOffset);
+          fbb.addOffset(10, tenseFormUpdatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final tenseFormIdParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 6);
+          final tenseFormSubjectParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final tenseFormPositiveRuleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final tenseFormNegativeRuleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final tenseFormQuestionRuleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14);
+          final tenseFormPositiveExampleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 16);
+          final tenseFormNegativeExampleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 18);
+          final tenseFormQuestionExampleParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 20);
+          final tenseFormCreatedAtParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 22);
+          final tenseFormUpdatedAtParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 24);
+          final object = LocalTenseFormData(
+              id: idParam,
+              tenseFormId: tenseFormIdParam,
+              tenseFormSubject: tenseFormSubjectParam,
+              tenseFormPositiveRule: tenseFormPositiveRuleParam,
+              tenseFormNegativeRule: tenseFormNegativeRuleParam,
+              tenseFormQuestionRule: tenseFormQuestionRuleParam,
+              tenseFormPositiveExample: tenseFormPositiveExampleParam,
+              tenseFormNegativeExample: tenseFormNegativeExampleParam,
+              tenseFormQuestionExample: tenseFormQuestionExampleParam,
+              tenseFormCreatedAt: tenseFormCreatedAtParam,
+              tenseFormUpdatedAt: tenseFormUpdatedAtParam);
+
+          return object;
+        }),
+    LocalWordData: obx_int.EntityDefinition<LocalWordData>(
+        model: _entities[11],
+        toOneRelations: (LocalWordData object) => [],
+        toManyRelations: (LocalWordData object) => {},
+        getId: (LocalWordData object) => object.id,
+        setId: (LocalWordData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalWordData object, fb.Builder fbb) {
+          final wordIdOffset =
+              object.wordId == null ? null : fbb.writeString(object.wordId!);
+          final englishWordOffset = object.englishWord == null
+              ? null
+              : fbb.writeString(object.englishWord!);
+          final vietnameseWordOffset = object.vietnameseWord == null
+              ? null
+              : fbb.writeString(object.vietnameseWord!);
+          final frenchWordOffset = object.frenchWord == null
+              ? null
+              : fbb.writeString(object.frenchWord!);
+          final wordTypeOffset = object.wordType == null
+              ? null
+              : fbb.writeString(object.wordType!);
+          final imageUrlOffset = object.imageUrl == null
+              ? null
+              : fbb.writeString(object.imageUrl!);
+          final pronunciationOffset = object.pronunciation == null
+              ? null
+              : fbb.writeString(object.pronunciation!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(11);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, wordIdOffset);
+          fbb.addOffset(2, englishWordOffset);
+          fbb.addOffset(3, vietnameseWordOffset);
+          fbb.addOffset(4, frenchWordOffset);
+          fbb.addOffset(5, wordTypeOffset);
+          fbb.addOffset(6, imageUrlOffset);
+          fbb.addOffset(7, pronunciationOffset);
+          fbb.addOffset(8, createdAtOffset);
+          fbb.addOffset(9, updatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final wordIdParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 6);
+          final englishWordParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final vietnameseWordParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final frenchWordParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 12);
+          final wordTypeParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 14);
+          final imageUrlParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 16);
+          final pronunciationParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 18);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 20);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 22);
+          final object = LocalWordData(
+              id: idParam,
+              wordId: wordIdParam,
+              englishWord: englishWordParam,
+              vietnameseWord: vietnameseWordParam,
+              frenchWord: frenchWordParam,
+              wordType: wordTypeParam,
+              imageUrl: imageUrlParam,
+              pronunciation: pronunciationParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+
+          return object;
         })
   };
 
@@ -293,4 +1940,492 @@ class LocalUserData_ {
   static final photos =
       obx.QueryRelationToMany<LocalUserData, LocalImageUrlData>(
           _entities[1].relations[0]);
+}
+
+/// [LocalCourseLearningContentData] entity fields to define ObjectBox queries.
+class LocalCourseLearningContentData_ {
+  /// See [LocalCourseLearningContentData.id].
+  static final id = obx.QueryIntegerProperty<LocalCourseLearningContentData>(
+      _entities[2].properties[0]);
+
+  /// See [LocalCourseLearningContentData.languageCourseLearningContentId].
+  static final languageCourseLearningContentId =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[1]);
+
+  /// See [LocalCourseLearningContentData.learningContentType].
+  static final learningContentType =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[2]);
+
+  /// See [LocalCourseLearningContentData.englishTitle].
+  static final englishTitle =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[3]);
+
+  /// See [LocalCourseLearningContentData.vietnameseTitle].
+  static final vietnameseTitle =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[4]);
+
+  /// See [LocalCourseLearningContentData.frenchTitle].
+  static final frenchTitle =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[5]);
+
+  /// See [LocalCourseLearningContentData.englishDescription].
+  static final englishDescription =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[6]);
+
+  /// See [LocalCourseLearningContentData.vietnameseDescription].
+  static final vietnameseDescription =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[7]);
+
+  /// See [LocalCourseLearningContentData.frenchDescription].
+  static final frenchDescription =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[8]);
+
+  /// See [LocalCourseLearningContentData.createdAt].
+  static final createdAt =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[9]);
+
+  /// See [LocalCourseLearningContentData.updatedAt].
+  static final updatedAt =
+      obx.QueryStringProperty<LocalCourseLearningContentData>(
+          _entities[2].properties[10]);
+
+  /// see [LocalCourseLearningContentData.words]
+  static final words =
+      obx.QueryRelationToMany<LocalCourseLearningContentData, LocalWordData>(
+          _entities[2].relations[0]);
+
+  /// see [LocalCourseLearningContentData.expressions]
+  static final expressions = obx.QueryRelationToMany<
+      LocalCourseLearningContentData,
+      LocalExpressionData>(_entities[2].relations[1]);
+
+  /// see [LocalCourseLearningContentData.idioms]
+  static final idioms =
+      obx.QueryRelationToMany<LocalCourseLearningContentData, LocalIdiomData>(
+          _entities[2].relations[2]);
+
+  /// see [LocalCourseLearningContentData.sentences]
+  static final sentences = obx.QueryRelationToMany<
+      LocalCourseLearningContentData,
+      LocalSentenceData>(_entities[2].relations[3]);
+
+  /// see [LocalCourseLearningContentData.phrasalVerbs]
+  static final phrasalVerbs = obx.QueryRelationToMany<
+      LocalCourseLearningContentData,
+      LocalPhrasalVerbData>(_entities[2].relations[4]);
+
+  /// see [LocalCourseLearningContentData.tenses]
+  static final tenses =
+      obx.QueryRelationToMany<LocalCourseLearningContentData, LocalTenseData>(
+          _entities[2].relations[5]);
+
+  /// see [LocalCourseLearningContentData.phonetics]
+  static final phonetics = obx.QueryRelationToMany<
+      LocalCourseLearningContentData,
+      LocalPhoneticData>(_entities[2].relations[6]);
+}
+
+/// [LocalExpressionData] entity fields to define ObjectBox queries.
+class LocalExpressionData_ {
+  /// See [LocalExpressionData.id].
+  static final id =
+      obx.QueryIntegerProperty<LocalExpressionData>(_entities[3].properties[0]);
+
+  /// See [LocalExpressionData.expressionId].
+  static final expressionId =
+      obx.QueryStringProperty<LocalExpressionData>(_entities[3].properties[1]);
+
+  /// See [LocalExpressionData.englishExpression].
+  static final englishExpression =
+      obx.QueryStringProperty<LocalExpressionData>(_entities[3].properties[2]);
+
+  /// See [LocalExpressionData.vietnameseExpression].
+  static final vietnameseExpression =
+      obx.QueryStringProperty<LocalExpressionData>(_entities[3].properties[3]);
+
+  /// See [LocalExpressionData.frenchExpression].
+  static final frenchExpression =
+      obx.QueryStringProperty<LocalExpressionData>(_entities[3].properties[4]);
+
+  /// See [LocalExpressionData.exampleUsage].
+  static final exampleUsage =
+      obx.QueryStringProperty<LocalExpressionData>(_entities[3].properties[5]);
+
+  /// See [LocalExpressionData.createdAt].
+  static final createdAt =
+      obx.QueryStringProperty<LocalExpressionData>(_entities[3].properties[6]);
+
+  /// See [LocalExpressionData.updatedAt].
+  static final updatedAt =
+      obx.QueryStringProperty<LocalExpressionData>(_entities[3].properties[7]);
+}
+
+/// [LocalIdiomData] entity fields to define ObjectBox queries.
+class LocalIdiomData_ {
+  /// See [LocalIdiomData.id].
+  static final id =
+      obx.QueryIntegerProperty<LocalIdiomData>(_entities[4].properties[0]);
+
+  /// See [LocalIdiomData.idiomId].
+  static final idiomId =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[1]);
+
+  /// See [LocalIdiomData.englishIdiom].
+  static final englishIdiom =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[2]);
+
+  /// See [LocalIdiomData.vietnameseIdiom].
+  static final vietnameseIdiom =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[3]);
+
+  /// See [LocalIdiomData.frenchIdiom].
+  static final frenchIdiom =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[4]);
+
+  /// See [LocalIdiomData.englishIdiomMeaning].
+  static final englishIdiomMeaning =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[5]);
+
+  /// See [LocalIdiomData.vietnameseIdiomMeaning].
+  static final vietnameseIdiomMeaning =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[6]);
+
+  /// See [LocalIdiomData.frenchIdiomMeaning].
+  static final frenchIdiomMeaning =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[7]);
+
+  /// See [LocalIdiomData.exampleUsage].
+  static final exampleUsage =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[8]);
+
+  /// See [LocalIdiomData.createdAt].
+  static final createdAt =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[9]);
+
+  /// See [LocalIdiomData.updatedAt].
+  static final updatedAt =
+      obx.QueryStringProperty<LocalIdiomData>(_entities[4].properties[10]);
+}
+
+/// [LocalLanguageCourseData] entity fields to define ObjectBox queries.
+class LocalLanguageCourseData_ {
+  /// See [LocalLanguageCourseData.id].
+  static final id = obx.QueryIntegerProperty<LocalLanguageCourseData>(
+      _entities[5].properties[0]);
+
+  /// See [LocalLanguageCourseData.learningLanguage].
+  static final learningLanguage =
+      obx.QueryStringProperty<LocalLanguageCourseData>(
+          _entities[5].properties[1]);
+
+  /// See [LocalLanguageCourseData.languageLevel].
+  static final languageLevel = obx.QueryStringProperty<LocalLanguageCourseData>(
+      _entities[5].properties[2]);
+
+  /// See [LocalLanguageCourseData.learningType].
+  static final learningType = obx.QueryStringProperty<LocalLanguageCourseData>(
+      _entities[5].properties[3]);
+
+  /// See [LocalLanguageCourseData.requiredSubscription].
+  static final requiredSubscription =
+      obx.QueryBooleanProperty<LocalLanguageCourseData>(
+          _entities[5].properties[4]);
+
+  /// See [LocalLanguageCourseData.createdAt].
+  static final createdAt = obx.QueryStringProperty<LocalLanguageCourseData>(
+      _entities[5].properties[5]);
+
+  /// See [LocalLanguageCourseData.updatedAt].
+  static final updatedAt = obx.QueryStringProperty<LocalLanguageCourseData>(
+      _entities[5].properties[6]);
+
+  /// See [LocalLanguageCourseData.languageCourseId].
+  static final languageCourseId =
+      obx.QueryStringProperty<LocalLanguageCourseData>(
+          _entities[5].properties[7]);
+
+  /// see [LocalLanguageCourseData.courseLearningContents]
+  static final courseLearningContents = obx.QueryRelationToMany<
+      LocalLanguageCourseData,
+      LocalCourseLearningContentData>(_entities[5].relations[0]);
+}
+
+/// [LocalPhoneticData] entity fields to define ObjectBox queries.
+class LocalPhoneticData_ {
+  /// See [LocalPhoneticData.id].
+  static final id =
+      obx.QueryIntegerProperty<LocalPhoneticData>(_entities[6].properties[0]);
+
+  /// See [LocalPhoneticData.phoneticId].
+  static final phoneticId =
+      obx.QueryStringProperty<LocalPhoneticData>(_entities[6].properties[1]);
+
+  /// See [LocalPhoneticData.phoneticSymbol].
+  static final phoneticSymbol =
+      obx.QueryStringProperty<LocalPhoneticData>(_entities[6].properties[2]);
+
+  /// See [LocalPhoneticData.phoneticSound].
+  static final phoneticSound =
+      obx.QueryStringProperty<LocalPhoneticData>(_entities[6].properties[3]);
+
+  /// See [LocalPhoneticData.englishPhoneticGuide].
+  static final englishPhoneticGuide =
+      obx.QueryStringProperty<LocalPhoneticData>(_entities[6].properties[4]);
+
+  /// See [LocalPhoneticData.vietnamesePhoneticGuide].
+  static final vietnamesePhoneticGuide =
+      obx.QueryStringProperty<LocalPhoneticData>(_entities[6].properties[5]);
+
+  /// See [LocalPhoneticData.frenchPhoneticGuide].
+  static final frenchPhoneticGuide =
+      obx.QueryStringProperty<LocalPhoneticData>(_entities[6].properties[6]);
+
+  /// See [LocalPhoneticData.exampleUsage].
+  static final exampleUsage =
+      obx.QueryStringProperty<LocalPhoneticData>(_entities[6].properties[7]);
+
+  /// See [LocalPhoneticData.createdAt].
+  static final createdAt =
+      obx.QueryStringProperty<LocalPhoneticData>(_entities[6].properties[8]);
+
+  /// See [LocalPhoneticData.updatedAt].
+  static final updatedAt =
+      obx.QueryStringProperty<LocalPhoneticData>(_entities[6].properties[9]);
+}
+
+/// [LocalPhrasalVerbData] entity fields to define ObjectBox queries.
+class LocalPhrasalVerbData_ {
+  /// See [LocalPhrasalVerbData.id].
+  static final id = obx.QueryIntegerProperty<LocalPhrasalVerbData>(
+      _entities[7].properties[0]);
+
+  /// See [LocalPhrasalVerbData.phrasalVerbId].
+  static final phrasalVerbId =
+      obx.QueryStringProperty<LocalPhrasalVerbData>(_entities[7].properties[1]);
+
+  /// See [LocalPhrasalVerbData.englishPhrasalVerb].
+  static final englishPhrasalVerb =
+      obx.QueryStringProperty<LocalPhrasalVerbData>(_entities[7].properties[2]);
+
+  /// See [LocalPhrasalVerbData.vietnamesePhrasalVerb].
+  static final vietnamesePhrasalVerb =
+      obx.QueryStringProperty<LocalPhrasalVerbData>(_entities[7].properties[3]);
+
+  /// See [LocalPhrasalVerbData.frenchPhrasalVerb].
+  static final frenchPhrasalVerb =
+      obx.QueryStringProperty<LocalPhrasalVerbData>(_entities[7].properties[4]);
+
+  /// See [LocalPhrasalVerbData.englishDescription].
+  static final englishDescription =
+      obx.QueryStringProperty<LocalPhrasalVerbData>(_entities[7].properties[5]);
+
+  /// See [LocalPhrasalVerbData.vietnameseDescription].
+  static final vietnameseDescription =
+      obx.QueryStringProperty<LocalPhrasalVerbData>(_entities[7].properties[6]);
+
+  /// See [LocalPhrasalVerbData.frenchDescription].
+  static final frenchDescription =
+      obx.QueryStringProperty<LocalPhrasalVerbData>(_entities[7].properties[7]);
+
+  /// See [LocalPhrasalVerbData.exampleUsage].
+  static final exampleUsage =
+      obx.QueryStringProperty<LocalPhrasalVerbData>(_entities[7].properties[8]);
+
+  /// See [LocalPhrasalVerbData.createdAt].
+  static final createdAt =
+      obx.QueryStringProperty<LocalPhrasalVerbData>(_entities[7].properties[9]);
+
+  /// See [LocalPhrasalVerbData.updatedAt].
+  static final updatedAt = obx.QueryStringProperty<LocalPhrasalVerbData>(
+      _entities[7].properties[10]);
+}
+
+/// [LocalSentenceData] entity fields to define ObjectBox queries.
+class LocalSentenceData_ {
+  /// See [LocalSentenceData.id].
+  static final id =
+      obx.QueryIntegerProperty<LocalSentenceData>(_entities[8].properties[0]);
+
+  /// See [LocalSentenceData.sentenceId].
+  static final sentenceId =
+      obx.QueryStringProperty<LocalSentenceData>(_entities[8].properties[1]);
+
+  /// See [LocalSentenceData.englishSentence].
+  static final englishSentence =
+      obx.QueryStringProperty<LocalSentenceData>(_entities[8].properties[2]);
+
+  /// See [LocalSentenceData.vietnameseSentence].
+  static final vietnameseSentence =
+      obx.QueryStringProperty<LocalSentenceData>(_entities[8].properties[3]);
+
+  /// See [LocalSentenceData.frenchSentence].
+  static final frenchSentence =
+      obx.QueryStringProperty<LocalSentenceData>(_entities[8].properties[4]);
+
+  /// See [LocalSentenceData.exampleUsage].
+  static final exampleUsage =
+      obx.QueryStringProperty<LocalSentenceData>(_entities[8].properties[5]);
+
+  /// See [LocalSentenceData.createdAt].
+  static final createdAt =
+      obx.QueryStringProperty<LocalSentenceData>(_entities[8].properties[6]);
+
+  /// See [LocalSentenceData.updatedAt].
+  static final updatedAt =
+      obx.QueryStringProperty<LocalSentenceData>(_entities[8].properties[7]);
+}
+
+/// [LocalTenseData] entity fields to define ObjectBox queries.
+class LocalTenseData_ {
+  /// See [LocalTenseData.id].
+  static final id =
+      obx.QueryIntegerProperty<LocalTenseData>(_entities[9].properties[0]);
+
+  /// See [LocalTenseData.tenseId].
+  static final tenseId =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[1]);
+
+  /// See [LocalTenseData.englishTenseName].
+  static final englishTenseName =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[2]);
+
+  /// See [LocalTenseData.vietnameseTenseName].
+  static final vietnameseTenseName =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[3]);
+
+  /// See [LocalTenseData.frenchTenseName].
+  static final frenchTenseName =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[4]);
+
+  /// See [LocalTenseData.englishDescription].
+  static final englishDescription =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[5]);
+
+  /// See [LocalTenseData.vietnameseDescription].
+  static final vietnameseDescription =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[6]);
+
+  /// See [LocalTenseData.frenchDescription].
+  static final frenchDescription =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[7]);
+
+  /// See [LocalTenseData.tenseRule].
+  static final tenseRule =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[8]);
+
+  /// See [LocalTenseData.tenseExample].
+  static final tenseExample =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[9]);
+
+  /// See [LocalTenseData.createdAt].
+  static final createdAt =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[10]);
+
+  /// See [LocalTenseData.updatedAt].
+  static final updatedAt =
+      obx.QueryStringProperty<LocalTenseData>(_entities[9].properties[11]);
+
+  /// see [LocalTenseData.tenseForms]
+  static final tenseForms =
+      obx.QueryRelationToMany<LocalTenseData, LocalTenseFormData>(
+          _entities[9].relations[0]);
+}
+
+/// [LocalTenseFormData] entity fields to define ObjectBox queries.
+class LocalTenseFormData_ {
+  /// See [LocalTenseFormData.id].
+  static final id =
+      obx.QueryIntegerProperty<LocalTenseFormData>(_entities[10].properties[0]);
+
+  /// See [LocalTenseFormData.tenseFormId].
+  static final tenseFormId =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[1]);
+
+  /// See [LocalTenseFormData.tenseFormSubject].
+  static final tenseFormSubject =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[2]);
+
+  /// See [LocalTenseFormData.tenseFormPositiveRule].
+  static final tenseFormPositiveRule =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[3]);
+
+  /// See [LocalTenseFormData.tenseFormNegativeRule].
+  static final tenseFormNegativeRule =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[4]);
+
+  /// See [LocalTenseFormData.tenseFormQuestionRule].
+  static final tenseFormQuestionRule =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[5]);
+
+  /// See [LocalTenseFormData.tenseFormPositiveExample].
+  static final tenseFormPositiveExample =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[6]);
+
+  /// See [LocalTenseFormData.tenseFormNegativeExample].
+  static final tenseFormNegativeExample =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[7]);
+
+  /// See [LocalTenseFormData.tenseFormQuestionExample].
+  static final tenseFormQuestionExample =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[8]);
+
+  /// See [LocalTenseFormData.tenseFormCreatedAt].
+  static final tenseFormCreatedAt =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[9]);
+
+  /// See [LocalTenseFormData.tenseFormUpdatedAt].
+  static final tenseFormUpdatedAt =
+      obx.QueryStringProperty<LocalTenseFormData>(_entities[10].properties[10]);
+}
+
+/// [LocalWordData] entity fields to define ObjectBox queries.
+class LocalWordData_ {
+  /// See [LocalWordData.id].
+  static final id =
+      obx.QueryIntegerProperty<LocalWordData>(_entities[11].properties[0]);
+
+  /// See [LocalWordData.wordId].
+  static final wordId =
+      obx.QueryStringProperty<LocalWordData>(_entities[11].properties[1]);
+
+  /// See [LocalWordData.englishWord].
+  static final englishWord =
+      obx.QueryStringProperty<LocalWordData>(_entities[11].properties[2]);
+
+  /// See [LocalWordData.vietnameseWord].
+  static final vietnameseWord =
+      obx.QueryStringProperty<LocalWordData>(_entities[11].properties[3]);
+
+  /// See [LocalWordData.frenchWord].
+  static final frenchWord =
+      obx.QueryStringProperty<LocalWordData>(_entities[11].properties[4]);
+
+  /// See [LocalWordData.wordType].
+  static final wordType =
+      obx.QueryStringProperty<LocalWordData>(_entities[11].properties[5]);
+
+  /// See [LocalWordData.imageUrl].
+  static final imageUrl =
+      obx.QueryStringProperty<LocalWordData>(_entities[11].properties[6]);
+
+  /// See [LocalWordData.pronunciation].
+  static final pronunciation =
+      obx.QueryStringProperty<LocalWordData>(_entities[11].properties[7]);
+
+  /// See [LocalWordData.createdAt].
+  static final createdAt =
+      obx.QueryStringProperty<LocalWordData>(_entities[11].properties[8]);
+
+  /// See [LocalWordData.updatedAt].
+  static final updatedAt =
+      obx.QueryStringProperty<LocalWordData>(_entities[11].properties[9]);
 }

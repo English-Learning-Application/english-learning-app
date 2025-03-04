@@ -7,6 +7,7 @@ class AchievementTrackerViewModelData extends BaseViewModelData
     @Default(<Achievement>[]) List<Achievement> originalAchievements,
     @Default(<Achievement>[]) List<Achievement> achievements,
     @Default([]) List<AchievementType> achievementTypes,
+    @Default([]) List<UserAchievement> userAchievements,
     AchievementType? selectedAchievementType,
   }) = _AchievementTrackerViewModelData;
 }

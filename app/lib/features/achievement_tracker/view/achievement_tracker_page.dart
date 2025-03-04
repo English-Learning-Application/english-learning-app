@@ -84,6 +84,7 @@ class _AchievementTrackerPageState
     return Selector<AchievementTrackerViewModel,
         AchievementTrackerViewModelData>(
       builder: (_, vmData, __) {
+        final userAchievements = vmData.userAchievements;
         return ListView.separated(
           separatorBuilder: (context, index) => SizedBox(
             height: Dimens.d8.responsive(),
@@ -110,7 +111,8 @@ class _AchievementTrackerPageState
                   achievementName: achievementName,
                   achievementDescription: achievementDescription,
                   achievementIcon: achievement.mediaUrl,
-                  isAchieved: true,
+                  isAchieved: userAchievements.any((element) =>
+                      element.achievementId == achievement.achievementId),
                 );
               },
             );
@@ -118,7 +120,9 @@ class _AchievementTrackerPageState
         );
       },
       selector: (_, viewModel) => viewModel.viewModelData,
-      shouldRebuild: (prev, next) => prev.achievements != next.achievements,
+      shouldRebuild: (prev, next) =>
+          prev.achievements != next.achievements ||
+          prev.userAchievements != next.userAchievements,
     );
   }
 
