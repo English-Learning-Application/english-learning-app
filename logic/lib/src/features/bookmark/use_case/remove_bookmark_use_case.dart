@@ -14,11 +14,15 @@ class RemoveBookmarkUseCase
   @override
   Future<RemoveBookmarkOutput> buildUseCase(RemoveBookmarkInput input) async {
     if (input.course.languageCourseId.isNotEmpty) {
+      _bookmarkRepository
+          .deleteLocalLanguageCourse(input.course.languageCourseId);
       await _bookmarkRepository.removeBookmarkCourse(
         courseId: input.course.languageCourseId,
         courseType: CourseType.language,
       );
     } else {
+      _bookmarkRepository
+          .deleteLocalCategoryCourse(input.categoryCourse.categoryCourseId);
       await _bookmarkRepository.removeBookmarkCourse(
         courseId: input.categoryCourse.categoryCourseId,
         courseType: CourseType.category,

@@ -22,6 +22,9 @@ class BookmarkCourseUseCase
         courseType: CourseType.language,
       );
     } else {
+      _bookmarkRepository.saveToLocalCategoryCourse(
+        categoryCourse: input.categoryCourse,
+      );
       await _bookmarkRepository.bookmarkCourse(
         courseId: input.categoryCourse.categoryCourseId,
         courseType: CourseType.category,

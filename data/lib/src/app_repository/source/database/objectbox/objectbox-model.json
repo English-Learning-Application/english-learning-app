@@ -717,11 +717,143 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "13:5117682214947176359",
+      "lastPropertyId": "9:4301367715259915898",
+      "name": "LocalCategoryCourseData",
+      "properties": [
+        {
+          "id": "1:8681824669066355243",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7732929806170294070",
+          "name": "categoryCourseId",
+          "type": 9
+        },
+        {
+          "id": "3:5636320986013959732",
+          "name": "language",
+          "type": 9
+        },
+        {
+          "id": "4:305988893934838856",
+          "name": "englishName",
+          "type": 9
+        },
+        {
+          "id": "5:680678529637370716",
+          "name": "vietnameseName",
+          "type": 9
+        },
+        {
+          "id": "6:8300825513307770619",
+          "name": "frenchName",
+          "type": 9
+        },
+        {
+          "id": "7:7323499331511660495",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "8:5503606858186520844",
+          "name": "updatedAt",
+          "type": 9
+        },
+        {
+          "id": "9:4301367715259915898",
+          "name": "categoryId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:3369566178039825605",
+          "relationTarget": "LocalCategoryData"
+        }
+      ],
+      "relations": [
+        {
+          "id": "11:114506053425171002",
+          "name": "languageCourseLearningContent",
+          "targetId": "3:895316721939474678"
+        }
+      ]
+    },
+    {
+      "id": "14:5219554571198554662",
+      "lastPropertyId": "12:617040055031449996",
+      "name": "LocalCategoryData",
+      "properties": [
+        {
+          "id": "1:9190022716998656082",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3240991880617696336",
+          "name": "categoryId",
+          "type": 9
+        },
+        {
+          "id": "3:6390668511179004874",
+          "name": "categoryKey",
+          "type": 9
+        },
+        {
+          "id": "4:5999827220111268376",
+          "name": "englishName",
+          "type": 9
+        },
+        {
+          "id": "5:4883339646260107573",
+          "name": "vietnameseName",
+          "type": 9
+        },
+        {
+          "id": "6:4834607386002596967",
+          "name": "frenchName",
+          "type": 9
+        },
+        {
+          "id": "7:6964540455521538223",
+          "name": "englishDescription",
+          "type": 9
+        },
+        {
+          "id": "8:1601553135118613733",
+          "name": "vietnameseDescription",
+          "type": 9
+        },
+        {
+          "id": "9:8031124704060775720",
+          "name": "frenchDescription",
+          "type": 9
+        },
+        {
+          "id": "10:7163709006974794291",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "11:7135819763063356443",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "12:617040055031449996",
+          "name": "updatedAt",
+          "type": 9
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "12:6183458400034383904",
-  "lastIndexId": "1:1332288571790052002",
-  "lastRelationId": "10:6257633846208579883",
+  "lastEntityId": "14:5219554571198554662",
+  "lastIndexId": "2:3369566178039825605",
+  "lastRelationId": "11:114506053425171002",
   "lastSequenceId": "0:0",
   "modelVersion": 5,
   "modelVersionParserMinimum": 5,

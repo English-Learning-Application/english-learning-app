@@ -179,12 +179,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i323.UsernameRegistrationUseCase>(() =>
         _i323.UsernameRegistrationUseCase(
             gh<_i182.AuthenticationRepository>()));
-    gh.factory<_i1031.GetAllUserBookmarkCoursesUseCase>(
-        () => _i1031.GetAllUserBookmarkCoursesUseCase(
-              gh<_i182.BookmarkRepository>(),
-              gh<_i182.LanguageCourseRepository>(),
-              gh<_i182.ExerciseRepository>(),
-            ));
     gh.factory<_i855.CreateNewChatBotSessionUseCase>(() =>
         _i855.CreateNewChatBotSessionUseCase(gh<_i182.AiChatBotRepository>()));
     gh.factory<_i876.DeleteChatSessionUseCase>(
@@ -305,6 +299,13 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i1020.UpdateUserProfileUseCase(gh<_i182.ProfileRepository>()));
     gh.factory<_i522.VerifyEmailOtpUseCase>(
         () => _i522.VerifyEmailOtpUseCase(gh<_i182.ProfileRepository>()));
+    gh.factory<_i1031.GetAllUserBookmarkCoursesUseCase>(
+        () => _i1031.GetAllUserBookmarkCoursesUseCase(
+              gh<_i182.BookmarkRepository>(),
+              gh<_i182.LanguageCourseRepository>(),
+              gh<_i182.ExerciseRepository>(),
+              gh<_i182.TrackConnectivityUseCase>(),
+            ));
     return this;
   }
 }

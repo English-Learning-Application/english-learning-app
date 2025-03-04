@@ -82,6 +82,10 @@ import 'package:data/src/features/bookmark/data_source/api/bookmark_api_data_sou
     as _i543;
 import 'package:data/src/features/bookmark/data_source/database/bookmark_local_data_source.dart'
     as _i951;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_category_course_data_mapper.dart'
+    as _i384;
+import 'package:data/src/features/bookmark/data_source/database/mapper/local_category_data_mapper.dart'
+    as _i677;
 import 'package:data/src/features/bookmark/data_source/database/mapper/local_course_learning_content_data_mapper.dart'
     as _i870;
 import 'package:data/src/features/bookmark/data_source/database/mapper/local_expression_data_mapper.dart'
@@ -310,6 +314,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i811.LocalTenseFormDataMapper>(
         () => _i811.LocalTenseFormDataMapper());
     gh.factory<_i546.LocalWordDataMapper>(() => _i546.LocalWordDataMapper());
+    gh.factory<_i677.LocalCategoryDataMapper>(
+        () => _i677.LocalCategoryDataMapper());
     gh.lazySingleton<_i665.AppAssetsService>(
         () => const _i665.AppAssetsService());
     gh.factory<_i77.HeaderInterceptor>(
@@ -381,6 +387,11 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i643.ApiCategoryCourseMapper(
               gh<_i437.ApiLanguageCourseLearningContentDataMapper>(),
               gh<_i437.ApiCategoryMapper>(),
+            ));
+    gh.factory<_i384.LocalCategoryCourseDataMapper>(
+        () => _i384.LocalCategoryCourseDataMapper(
+              gh<_i677.LocalCategoryDataMapper>(),
+              gh<_i870.LocalCourseLearningContentDataMapper>(),
             ));
     gh.factory<_i758.ApiChatSessionDataMapper>(
         () => _i758.ApiChatSessionDataMapper(
@@ -488,13 +499,6 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i437.ApiLearningProgressMapper>(),
               gh<_i437.ExerciseApiDataSource>(),
             ));
-    gh.lazySingleton<_i182.BookmarkRepository>(
-        () => _i525.BookmarkRepositoryImpl(
-              gh<_i437.BookmarkApiDataSource>(),
-              gh<_i437.ApiUserBookmarkedCourseDataMapper>(),
-              gh<_i951.BookmarkLocalDataSource>(),
-              gh<_i364.LocalLanguageCourseDataMapper>(),
-            ));
     gh.lazySingleton<_i182.CommunityRepository>(
         () => _i111.CommunityRepositoryImpl(
               gh<_i437.CommunityApiService>(),
@@ -522,6 +526,14 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i809.SubscriptionRepositoryImpl(
               gh<_i437.SubscriptionApiDataSource>(),
               gh<_i437.ApiSubscriptionDataMapper>(),
+            ));
+    gh.lazySingleton<_i182.BookmarkRepository>(
+        () => _i525.BookmarkRepositoryImpl(
+              gh<_i437.BookmarkApiDataSource>(),
+              gh<_i437.ApiUserBookmarkedCourseDataMapper>(),
+              gh<_i951.BookmarkLocalDataSource>(),
+              gh<_i364.LocalLanguageCourseDataMapper>(),
+              gh<_i384.LocalCategoryCourseDataMapper>(),
             ));
     gh.lazySingleton<_i182.TodoRepository>(() => _i728.TodoRepositoryImpl(
           gh<_i437.TodoApiService>(),

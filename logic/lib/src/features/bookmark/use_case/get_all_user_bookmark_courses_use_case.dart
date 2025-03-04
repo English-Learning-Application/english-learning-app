@@ -10,17 +10,33 @@ class GetAllUserBookmarkCoursesUseCase extends BaseFutureUseCase<
   final BookmarkRepository _bookmarkRepository;
   final LanguageCourseRepository _languageCourseRepository;
   final ExerciseRepository _exerciseRepository;
+  final TrackConnectivityUseCase _trackConnectivityUseCase;
 
   const GetAllUserBookmarkCoursesUseCase(
     this._bookmarkRepository,
     this._languageCourseRepository,
     this._exerciseRepository,
+    this._trackConnectivityUseCase,
   );
 
   @override
   Future<GetAllUserBookmarkCoursesOutput> buildUseCase(
     GetAllUserBookmarkCoursesInput input,
   ) async {
+    final connectivityStream = _trackConnectivityUseCase.buildUseCase(
+      const TrackConnectivityInput(),
+    );
+
+    if ((await connectivityStream.first).isConnected == false) {
+      final localCategoryCourses = _bookmarkRepository.getLocalCategoryCourse();
+      final localLanguageCourses = _bookmarkRepository.getLocalLanguageCourse();
+
+      return GetAllUserBookmarkCoursesOutput(
+        languageCourses: localLanguageCourses,
+        categoryCourses: localCategoryCourses,
+      );
+    }
+
     final userBookmarkedCourses =
         await _bookmarkRepository.getUserBookmarkedCourses();
     if (userBookmarkedCourses.isEmpty) {

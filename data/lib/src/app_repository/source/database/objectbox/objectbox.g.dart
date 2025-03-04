@@ -16,6 +16,7 @@ import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
 
 import '../../../../../src/app_repository/source/database/model/local_image_url_data.dart';
 import '../../../../../src/app_repository/source/database/model/local_user_data.dart';
+import '../../../../../src/features/bookmark/data_source/database/model/local_category_course_data.dart';
 import '../../../../../src/features/bookmark/data_source/database/model/local_course_learning_content_data.dart';
 import '../../../../../src/features/bookmark/data_source/database/model/local_expression_data.dart';
 import '../../../../../src/features/bookmark/data_source/database/model/local_idiom_data.dart';
@@ -732,6 +733,136 @@ final _entities = <obx_int.ModelEntity>[
             flags: 0)
       ],
       relations: <obx_int.ModelRelation>[],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(13, 5117682214947176359),
+      name: 'LocalCategoryCourseData',
+      lastPropertyId: const obx_int.IdUid(9, 4301367715259915898),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 8681824669066355243),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 7732929806170294070),
+            name: 'categoryCourseId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 5636320986013959732),
+            name: 'language',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 305988893934838856),
+            name: 'englishName',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 680678529637370716),
+            name: 'vietnameseName',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 8300825513307770619),
+            name: 'frenchName',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 7323499331511660495),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 5503606858186520844),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 4301367715259915898),
+            name: 'categoryId',
+            type: 11,
+            flags: 520,
+            indexId: const obx_int.IdUid(2, 3369566178039825605),
+            relationTarget: 'LocalCategoryData')
+      ],
+      relations: <obx_int.ModelRelation>[
+        obx_int.ModelRelation(
+            id: const obx_int.IdUid(11, 114506053425171002),
+            name: 'languageCourseLearningContent',
+            targetId: const obx_int.IdUid(3, 895316721939474678))
+      ],
+      backlinks: <obx_int.ModelBacklink>[]),
+  obx_int.ModelEntity(
+      id: const obx_int.IdUid(14, 5219554571198554662),
+      name: 'LocalCategoryData',
+      lastPropertyId: const obx_int.IdUid(12, 617040055031449996),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 9190022716998656082),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 3240991880617696336),
+            name: 'categoryId',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 6390668511179004874),
+            name: 'categoryKey',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 5999827220111268376),
+            name: 'englishName',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 4883339646260107573),
+            name: 'vietnameseName',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 4834607386002596967),
+            name: 'frenchName',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 6964540455521538223),
+            name: 'englishDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 1601553135118613733),
+            name: 'vietnameseDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 8031124704060775720),
+            name: 'frenchDescription',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(10, 7163709006974794291),
+            name: 'imageUrl',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(11, 7135819763063356443),
+            name: 'createdAt',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(12, 617040055031449996),
+            name: 'updatedAt',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[],
       backlinks: <obx_int.ModelBacklink>[])
 ];
 
@@ -770,9 +901,9 @@ Future<obx.Store> openStore(
 obx_int.ModelDefinition getObjectBoxModel() {
   final model = obx_int.ModelInfo(
       entities: _entities,
-      lastEntityId: const obx_int.IdUid(12, 6183458400034383904),
-      lastIndexId: const obx_int.IdUid(1, 1332288571790052002),
-      lastRelationId: const obx_int.IdUid(10, 6257633846208579883),
+      lastEntityId: const obx_int.IdUid(14, 5219554571198554662),
+      lastIndexId: const obx_int.IdUid(2, 3369566178039825605),
+      lastRelationId: const obx_int.IdUid(11, 114506053425171002),
       lastSequenceId: const obx_int.IdUid(0, 0),
       retiredEntityUids: const [],
       retiredIndexUids: const [],
@@ -1884,6 +2015,200 @@ obx_int.ModelDefinition getObjectBoxModel() {
               updatedAt: updatedAtParam);
 
           return object;
+        }),
+    LocalCategoryCourseData: obx_int.EntityDefinition<LocalCategoryCourseData>(
+        model: _entities[12],
+        toOneRelations: (LocalCategoryCourseData object) => [object.category],
+        toManyRelations: (LocalCategoryCourseData object) => {
+              obx_int.RelInfo<LocalCategoryCourseData>.toMany(11, object.id!):
+                  object.languageCourseLearningContent
+            },
+        getId: (LocalCategoryCourseData object) => object.id,
+        setId: (LocalCategoryCourseData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalCategoryCourseData object, fb.Builder fbb) {
+          final categoryCourseIdOffset = object.categoryCourseId == null
+              ? null
+              : fbb.writeString(object.categoryCourseId!);
+          final languageOffset = object.language == null
+              ? null
+              : fbb.writeString(object.language!);
+          final englishNameOffset = object.englishName == null
+              ? null
+              : fbb.writeString(object.englishName!);
+          final vietnameseNameOffset = object.vietnameseName == null
+              ? null
+              : fbb.writeString(object.vietnameseName!);
+          final frenchNameOffset = object.frenchName == null
+              ? null
+              : fbb.writeString(object.frenchName!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(10);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, categoryCourseIdOffset);
+          fbb.addOffset(2, languageOffset);
+          fbb.addOffset(3, englishNameOffset);
+          fbb.addOffset(4, vietnameseNameOffset);
+          fbb.addOffset(5, frenchNameOffset);
+          fbb.addOffset(6, createdAtOffset);
+          fbb.addOffset(7, updatedAtOffset);
+          fbb.addInt64(8, object.category.targetId);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final categoryCourseIdParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 6);
+          final languageParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 8);
+          final englishNameParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final vietnameseNameParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final frenchNameParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 14);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 16);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 18);
+          final object = LocalCategoryCourseData(
+              id: idParam,
+              categoryCourseId: categoryCourseIdParam,
+              language: languageParam,
+              englishName: englishNameParam,
+              vietnameseName: vietnameseNameParam,
+              frenchName: frenchNameParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+          object.category.targetId =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 20, 0);
+          object.category.attach(store);
+          obx_int.InternalToManyAccess.setRelInfo<LocalCategoryCourseData>(
+              object.languageCourseLearningContent,
+              store,
+              obx_int.RelInfo<LocalCategoryCourseData>.toMany(11, object.id!));
+          return object;
+        }),
+    LocalCategoryData: obx_int.EntityDefinition<LocalCategoryData>(
+        model: _entities[13],
+        toOneRelations: (LocalCategoryData object) => [],
+        toManyRelations: (LocalCategoryData object) => {},
+        getId: (LocalCategoryData object) => object.id,
+        setId: (LocalCategoryData object, int id) {
+          object.id = id;
+        },
+        objectToFB: (LocalCategoryData object, fb.Builder fbb) {
+          final categoryIdOffset = object.categoryId == null
+              ? null
+              : fbb.writeString(object.categoryId!);
+          final categoryKeyOffset = object.categoryKey == null
+              ? null
+              : fbb.writeString(object.categoryKey!);
+          final englishNameOffset = object.englishName == null
+              ? null
+              : fbb.writeString(object.englishName!);
+          final vietnameseNameOffset = object.vietnameseName == null
+              ? null
+              : fbb.writeString(object.vietnameseName!);
+          final frenchNameOffset = object.frenchName == null
+              ? null
+              : fbb.writeString(object.frenchName!);
+          final englishDescriptionOffset = object.englishDescription == null
+              ? null
+              : fbb.writeString(object.englishDescription!);
+          final vietnameseDescriptionOffset =
+              object.vietnameseDescription == null
+                  ? null
+                  : fbb.writeString(object.vietnameseDescription!);
+          final frenchDescriptionOffset = object.frenchDescription == null
+              ? null
+              : fbb.writeString(object.frenchDescription!);
+          final imageUrlOffset = object.imageUrl == null
+              ? null
+              : fbb.writeString(object.imageUrl!);
+          final createdAtOffset = object.createdAt == null
+              ? null
+              : fbb.writeString(object.createdAt!);
+          final updatedAtOffset = object.updatedAt == null
+              ? null
+              : fbb.writeString(object.updatedAt!);
+          fbb.startTable(13);
+          fbb.addInt64(0, object.id ?? 0);
+          fbb.addOffset(1, categoryIdOffset);
+          fbb.addOffset(2, categoryKeyOffset);
+          fbb.addOffset(3, englishNameOffset);
+          fbb.addOffset(4, vietnameseNameOffset);
+          fbb.addOffset(5, frenchNameOffset);
+          fbb.addOffset(6, englishDescriptionOffset);
+          fbb.addOffset(7, vietnameseDescriptionOffset);
+          fbb.addOffset(8, frenchDescriptionOffset);
+          fbb.addOffset(9, imageUrlOffset);
+          fbb.addOffset(10, createdAtOffset);
+          fbb.addOffset(11, updatedAtOffset);
+          fbb.finish(fbb.endTable());
+          return object.id ?? 0;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 4);
+          final categoryIdParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 6);
+          final categoryKeyParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8);
+          final englishNameParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 10);
+          final vietnameseNameParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12);
+          final frenchNameParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 14);
+          final englishDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 16);
+          final vietnameseDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 18);
+          final frenchDescriptionParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 20);
+          final imageUrlParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 22);
+          final createdAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 24);
+          final updatedAtParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 26);
+          final object = LocalCategoryData(
+              id: idParam,
+              categoryId: categoryIdParam,
+              categoryKey: categoryKeyParam,
+              englishName: englishNameParam,
+              vietnameseName: vietnameseNameParam,
+              frenchName: frenchNameParam,
+              englishDescription: englishDescriptionParam,
+              vietnameseDescription: vietnameseDescriptionParam,
+              frenchDescription: frenchDescriptionParam,
+              imageUrl: imageUrlParam,
+              createdAt: createdAtParam,
+              updatedAt: updatedAtParam);
+
+          return object;
         })
   };
 
@@ -2428,4 +2753,102 @@ class LocalWordData_ {
   /// See [LocalWordData.updatedAt].
   static final updatedAt =
       obx.QueryStringProperty<LocalWordData>(_entities[11].properties[9]);
+}
+
+/// [LocalCategoryCourseData] entity fields to define ObjectBox queries.
+class LocalCategoryCourseData_ {
+  /// See [LocalCategoryCourseData.id].
+  static final id = obx.QueryIntegerProperty<LocalCategoryCourseData>(
+      _entities[12].properties[0]);
+
+  /// See [LocalCategoryCourseData.categoryCourseId].
+  static final categoryCourseId =
+      obx.QueryStringProperty<LocalCategoryCourseData>(
+          _entities[12].properties[1]);
+
+  /// See [LocalCategoryCourseData.language].
+  static final language = obx.QueryStringProperty<LocalCategoryCourseData>(
+      _entities[12].properties[2]);
+
+  /// See [LocalCategoryCourseData.englishName].
+  static final englishName = obx.QueryStringProperty<LocalCategoryCourseData>(
+      _entities[12].properties[3]);
+
+  /// See [LocalCategoryCourseData.vietnameseName].
+  static final vietnameseName =
+      obx.QueryStringProperty<LocalCategoryCourseData>(
+          _entities[12].properties[4]);
+
+  /// See [LocalCategoryCourseData.frenchName].
+  static final frenchName = obx.QueryStringProperty<LocalCategoryCourseData>(
+      _entities[12].properties[5]);
+
+  /// See [LocalCategoryCourseData.createdAt].
+  static final createdAt = obx.QueryStringProperty<LocalCategoryCourseData>(
+      _entities[12].properties[6]);
+
+  /// See [LocalCategoryCourseData.updatedAt].
+  static final updatedAt = obx.QueryStringProperty<LocalCategoryCourseData>(
+      _entities[12].properties[7]);
+
+  /// See [LocalCategoryCourseData.category].
+  static final category =
+      obx.QueryRelationToOne<LocalCategoryCourseData, LocalCategoryData>(
+          _entities[12].properties[8]);
+
+  /// see [LocalCategoryCourseData.languageCourseLearningContent]
+  static final languageCourseLearningContent = obx.QueryRelationToMany<
+      LocalCategoryCourseData,
+      LocalCourseLearningContentData>(_entities[12].relations[0]);
+}
+
+/// [LocalCategoryData] entity fields to define ObjectBox queries.
+class LocalCategoryData_ {
+  /// See [LocalCategoryData.id].
+  static final id =
+      obx.QueryIntegerProperty<LocalCategoryData>(_entities[13].properties[0]);
+
+  /// See [LocalCategoryData.categoryId].
+  static final categoryId =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[1]);
+
+  /// See [LocalCategoryData.categoryKey].
+  static final categoryKey =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[2]);
+
+  /// See [LocalCategoryData.englishName].
+  static final englishName =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[3]);
+
+  /// See [LocalCategoryData.vietnameseName].
+  static final vietnameseName =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[4]);
+
+  /// See [LocalCategoryData.frenchName].
+  static final frenchName =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[5]);
+
+  /// See [LocalCategoryData.englishDescription].
+  static final englishDescription =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[6]);
+
+  /// See [LocalCategoryData.vietnameseDescription].
+  static final vietnameseDescription =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[7]);
+
+  /// See [LocalCategoryData.frenchDescription].
+  static final frenchDescription =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[8]);
+
+  /// See [LocalCategoryData.imageUrl].
+  static final imageUrl =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[9]);
+
+  /// See [LocalCategoryData.createdAt].
+  static final createdAt =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[10]);
+
+  /// See [LocalCategoryData.updatedAt].
+  static final updatedAt =
+      obx.QueryStringProperty<LocalCategoryData>(_entities[13].properties[11]);
 }

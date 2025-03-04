@@ -3,6 +3,7 @@ import 'package:injectable/injectable.dart';
 import 'package:logic/logic.dart';
 
 import '../data_source/database/bookmark_local_data_source.dart';
+import '../data_source/database/mapper/local_category_course_data_mapper.dart';
 import '../data_source/database/mapper/local_language_course_data_mapper.dart';
 
 @LazySingleton(as: BookmarkRepository)
@@ -11,12 +12,14 @@ class BookmarkRepositoryImpl implements BookmarkRepository {
   final ApiUserBookmarkedCourseDataMapper _apiUserBookmarkedCourseDataMapper;
   final BookmarkLocalDataSource _bookmarkLocalDataSource;
   final LocalLanguageCourseDataMapper _localLanguageCourseDataMapper;
+  final LocalCategoryCourseDataMapper _localCategoryCourseDataMapper;
 
   const BookmarkRepositoryImpl(
     this._bookmarkApiDataSource,
     this._apiUserBookmarkedCourseDataMapper,
     this._bookmarkLocalDataSource,
     this._localLanguageCourseDataMapper,
+    this._localCategoryCourseDataMapper,
   );
 
   @override
@@ -72,5 +75,33 @@ class BookmarkRepositoryImpl implements BookmarkRepository {
         _localLanguageCourseDataMapper.mapToData(languageCourse);
 
     _bookmarkLocalDataSource.saveToLocalLanguageCourse(localLanguageCourseData);
+  }
+
+  @override
+  void deleteLocalLanguageCourse(String languageCourseId) {
+    _bookmarkLocalDataSource.deleteLocalLanguageCourse(languageCourseId);
+  }
+
+  @override
+  void deleteLocalCategoryCourse(String categoryCourseId) {
+    _bookmarkLocalDataSource.deleteLocalCategoryCourse(categoryCourseId);
+  }
+
+  @override
+  List<CategoryCourse> getLocalCategoryCourse() {
+    final localCategoryCourseData =
+        _bookmarkLocalDataSource.getLocalCategoryCourse();
+
+    return _localCategoryCourseDataMapper.mapToListEntities(
+      localCategoryCourseData,
+    );
+  }
+
+  @override
+  void saveToLocalCategoryCourse({required CategoryCourse categoryCourse}) {
+    final localCategoryCourseData =
+        _localCategoryCourseDataMapper.mapToData(categoryCourse);
+
+    _bookmarkLocalDataSource.saveToLocalCategoryCourse(localCategoryCourseData);
   }
 }
